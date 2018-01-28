@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": ["es6", "es7", "DOM"]
+  }
+}

@@ -1,0 +1,21 @@
+IMG=sphinx-themes:base
+
+build:
+	docker build -t $(IMG) .
+
+run:
+	docker run --rm \
+		-v `pwd`:/volume \
+		$(IMG) /tmp/build.sh $(PKG_NAME) $(THEME)
+	sudo chown -R $(USER) html
+
+	python scripts/db.py
+	cd js && npm run build -p
+
+jsbuild:
+	cd js && npm run build -p
+
+dev:
+	docker run -it --rm \
+		-v `pwd`:/volume \
+		$(IMG) bash
