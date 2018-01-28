@@ -12,9 +12,9 @@ bw_sphinxtheme,can_not,old
 cakephp_theme,completed,config change
 cakephpsphinx,skip,
 caktus-sphinx-theme,completed,import
-sphinx-catalystcloud-theme,completed,perfect
-cloud_sptheme,,
-sphinx-corlab-theme,,
+sphinx-catalystcloud-theme,completed,import
+cloud_sptheme,completed,perfect
+sphinx-corlab-theme,completed,wrong import name
 craftercms-sphinx-theme,,
 crate-docs-theme,,
 lsst-dd-rtd-theme,,
