@@ -6,6 +6,7 @@ export default class Theme extends Component<any, any> {
     render() {
       const theme = this.props.theme;
       const src = `html/${theme.pkg_name}/${theme.theme}/screenshot.png`;
+      const pypi = theme.url;
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
 
       return (
@@ -16,7 +17,9 @@ export default class Theme extends Component<any, any> {
             <Card.Subtitle>{ theme.theme }</Card.Subtitle>
           </Card.Primary>
           <Card.MediaItem src={ src } x="3" />
-          <Button dense><a className="mx-auto" href={ sample }>sample</a></Button>
+          <Button dense>
+               <a className="mx-auto" href={ sample }>sample</a>    /    <a className="mx-auto" href={ pypi }>pypi</a>
+          </Button>
         </Card>
       </div>
         )

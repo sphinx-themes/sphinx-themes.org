@@ -1663,6 +1663,7 @@ var Theme = /** @class */ (function (_super) {
     Theme.prototype.render = function () {
         var theme = this.props.theme;
         var src = "html/" + theme.pkg_name + "/" + theme.theme + "/screenshot.png";
+        var pypi = theme.url;
         var sample = "html/" + theme.pkg_name + "/" + theme.theme + "/index.html";
         return (preact_1.h("div", { className: "col-md-4 p-3" },
             preact_1.h(Card_1.default, null,
@@ -1671,7 +1672,9 @@ var Theme = /** @class */ (function (_super) {
                     preact_1.h(Card_1.default.Subtitle, null, theme.theme)),
                 preact_1.h(Card_1.default.MediaItem, { src: src, x: "3" }),
                 preact_1.h(Button_1.default, { dense: true },
-                    preact_1.h("a", { className: "mx-auto", href: sample }, "sample")))));
+                    preact_1.h("a", { className: "mx-auto", href: sample }, "sample"),
+                    "    /    ",
+                    preact_1.h("a", { className: "mx-auto", href: pypi }, "pypi")))));
     };
     return Theme;
 }(preact_1.Component));
