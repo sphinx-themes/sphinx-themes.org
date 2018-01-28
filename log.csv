@@ -1,2 +1,8 @@
+sphinx-3dr-theme,can_not,npm required
+agoraplex.themes.sphinx,completed,import
+allanc-sphinx,completed,sphinxjp.themes.trstyle is required
 editorial-sphinx-theme,not_yet,can not use
 stanford_theme,completed,need import
+astropy-sphinx-theme,completed,
+sphinx-better-theme,completed,import
+sphinx-boost,completed,import
