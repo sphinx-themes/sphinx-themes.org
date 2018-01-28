@@ -45,10 +45,10 @@ sphinx-kr-theme,,
 sphinx-md-theme,,
 mdn-sphinx-theme,,
 mkdocs-nature,,
-sphinx-modern-theme,,
-mozilla-sphinx-theme,,
-msmb_theme,,
-murray,,
+sphinx-modern-theme,completed,import
+mozilla-sphinx-theme,completed,config change
+msmb_theme,completed,sphinx_rtd_theme required
+murray,completed,import
 sphinx-nameko-mw-theme,,
 sphinx-nameko-theme,,
 sphinx-naps-theme,,
@@ -108,7 +108,7 @@ sphinxjp.themes.tinkerturquoisesinglecolumn,,
 sphinxjp.themes.trstyle,,
 sphinxtheme.plone,,
 sphinxtrap,,
-stanford-theme,,
+stanford-theme,completed,
 stsci_sphinx_theme,,
 t3SphinxThemeRtd,,
 tibas.tt,,
