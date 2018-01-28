@@ -8,6 +8,7 @@ run:
 		-v `pwd`:/volume \
 		$(IMG) /tmp/build.sh $(PKG_NAME) $(THEME)
 	sudo chown -R $(USER) html
+	chmod -R ugo+r html
 
 	python scripts/db.py
 	cd js && npm run build -p
