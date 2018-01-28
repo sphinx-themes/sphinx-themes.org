@@ -19,3 +19,7 @@ dev:
 	docker run -it --rm \
 		-v `pwd`:/volume \
 		$(IMG) bash
+
+
+upload:
+	rsync --exclude .git --exclude js/node_modules -auvz --delete . -e ssh sphinx-themes.org:www/sphinx-themes
