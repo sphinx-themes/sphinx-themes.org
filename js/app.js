@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1090,7 +1090,7 @@ var preact = {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ripple__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ripple__ = __webpack_require__(10);
 
 
 
@@ -1517,15 +1517,68 @@ function getNormalizedEventCoords(ev, pageOffset, clientRect) {
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Icon___ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__themeUtils_generateThemeClass__ = __webpack_require__(15);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var preact_1 = __webpack_require__(0);
-var main_1 = __webpack_require__(6);
-preact_1.render(preact_1.h(main_1.default, null), document.querySelector("#root"));
 
+
+
+
+
+/**
+ *  @prop dense = false
+ *  @prop raised = false
+ *  @prop compact = false
+ *  @prop disabled = false
+ *  @prop unelevated = false
+ *  @prop stroked = false
+ */
+class Button extends __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__["a" /* default */] {
+  constructor() {
+    super();
+    this.componentName = "button";
+    this._mdcProps = ["dense", "raised", "compact", "unelevated", "stroked"];
+    this.themeProps = ["primary", "secondary"];
+  }
+  componentDidMount() {
+    super.attachRipple();
+  }
+  materialDom(props) {
+    const ButtonElement = props.href ? "a" : "button";
+    let className = "";
+    this.themeProps.forEach(themeProp => {
+      if (themeProp in props && props[themeProp] !== false) className += Object(__WEBPACK_IMPORTED_MODULE_3__themeUtils_generateThemeClass__["a" /* default */])(themeProp) + " ";
+    });
+
+    return Object(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+      ButtonElement,
+      _extends({
+        className: className,
+        ref: control => {
+          this.control = control;
+        }
+      }, props),
+      this.props.children
+    );
+  }
+}
+
+class ButtonIcon extends __WEBPACK_IMPORTED_MODULE_2__Icon___["a" /* default */] {
+  constructor() {
+    super();
+    this.componentName = "button__icon";
+  }
+}
+
+Button.Icon = ButtonIcon;
+/* harmony default export */ __webpack_exports__["default"] = (Button);
 
 /***/ }),
 /* 6 */
@@ -1533,41 +1586,10 @@ preact_1.render(preact_1.h(main_1.default, null), document.querySelector("#root"
 
 "use strict";
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var preact_1 = __webpack_require__(0);
-var theme_1 = __webpack_require__(7);
-var top_bar_1 = __webpack_require__(16);
-exports.default = function (_) { return (preact_1.h("div", null,
-    preact_1.h(top_bar_1.default, null),
-    preact_1.h(Themes, null))); };
-var Themes = /** @class */ (function (_super) {
-    __extends(Themes, _super);
-    function Themes() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Themes.prototype.render = function () {
-        var data = __webpack_require__(17);
-        var themes = [];
-        for (var _i = 0, _a = data; _i < _a.length; _i++) {
-            var theme = _a[_i];
-            themes.push(preact_1.h(theme_1.default, { theme: theme }));
-        }
-        console.log(themes);
-        return (preact_1.h("main", { role: "main", className: "container" },
-            preact_1.h("div", { className: "row" }, themes)));
-    };
-    return Themes;
-}(preact_1.Component));
+var main_1 = __webpack_require__(7);
+preact_1.render(preact_1.h(main_1.default, null), document.querySelector("#root"));
 
 
 /***/ }),
@@ -1588,7 +1610,51 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var preact_1 = __webpack_require__(0);
-var Card_1 = __webpack_require__(8);
+var theme_1 = __webpack_require__(8);
+var top_bar_1 = __webpack_require__(16);
+exports.default = function (_) { return (preact_1.h("div", null,
+    preact_1.h(top_bar_1.default, null),
+    preact_1.h(Themes, null))); };
+var Themes = /** @class */ (function (_super) {
+    __extends(Themes, _super);
+    function Themes() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Themes.prototype.render = function () {
+        var data = __webpack_require__(17);
+        var themes = [];
+        for (var _i = 0, _a = data; _i < _a.length; _i++) {
+            var theme = _a[_i];
+            themes.push(preact_1.h(theme_1.default, { theme: theme }));
+        }
+        console.log(themes);
+        return (preact_1.h("main", { role: "main", className: "container-fluid" },
+            preact_1.h("div", { className: "row" }, themes)));
+    };
+    return Themes;
+}(preact_1.Component));
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(0);
+var Card_1 = __webpack_require__(9);
+var Button_1 = __webpack_require__(5);
 var Theme = /** @class */ (function (_super) {
     __extends(Theme, _super);
     function Theme() {
@@ -1598,13 +1664,14 @@ var Theme = /** @class */ (function (_super) {
         var theme = this.props.theme;
         var src = "html/" + theme.pkg_name + "/" + theme.theme + "/screenshot.png";
         var sample = "html/" + theme.pkg_name + "/" + theme.theme + "/index.html";
-        return (preact_1.h("div", { className: "col-md-4" },
+        return (preact_1.h("div", { className: "col-md-4 p-3" },
             preact_1.h(Card_1.default, null,
                 preact_1.h(Card_1.default.Primary, null,
                     preact_1.h(Card_1.default.Title, { large: true }, theme.pkg_name),
                     preact_1.h(Card_1.default.Subtitle, null, theme.theme)),
-                preact_1.h(Card_1.default.MediaItem, { src: src, x: "1dot5" }),
-                preact_1.h("a", { href: sample }, "sample"))));
+                preact_1.h(Card_1.default.MediaItem, { src: src, x: "3" }),
+                preact_1.h(Button_1.default, { dense: true },
+                    preact_1.h("a", { className: "mx-auto", href: sample }, "sample")))));
     };
     return Theme;
 }(preact_1.Component));
@@ -1612,14 +1679,14 @@ exports.default = Theme;
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Button__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Button__ = __webpack_require__(5);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -1677,7 +1744,7 @@ class CardMedia extends CardSection {
   }
 }
 
-class CardAction extends __WEBPACK_IMPORTED_MODULE_2__Button__["a" /* default */] {
+class CardAction extends __WEBPACK_IMPORTED_MODULE_2__Button__["default"] {
   constructor() {
     super();
     this.componentName = "card__action";
@@ -1761,15 +1828,15 @@ Card.MediaItem = CardMediaItem;
 /* harmony default export */ __webpack_exports__["default"] = (Card);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCRipple; });
 /* unused harmony export RippleCapableSurface */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__material_base_component__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__material_base_component__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__adapter__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util__ = __webpack_require__(4);
 /* unused harmony reexport MDCRippleFoundation */
 /* unused harmony reexport util */
@@ -1924,7 +1991,7 @@ RippleCapableSurface.prototype.disabled;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2057,13 +2124,13 @@ class MDCComponent {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__material_base_foundation__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__adapter__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util__ = __webpack_require__(4);
 /**
  * @license
@@ -2604,7 +2671,7 @@ class MDCRippleFoundation extends __WEBPACK_IMPORTED_MODULE_0__material_base_fou
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2658,70 +2725,6 @@ const numbers = {
 
 
 
-
-/***/ }),
-/* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Icon___ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__themeUtils_generateThemeClass__ = __webpack_require__(15);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-
-
-
-
-
-/**
- *  @prop dense = false
- *  @prop raised = false
- *  @prop compact = false
- *  @prop disabled = false
- *  @prop unelevated = false
- *  @prop stroked = false
- */
-class Button extends __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__["a" /* default */] {
-  constructor() {
-    super();
-    this.componentName = "button";
-    this._mdcProps = ["dense", "raised", "compact", "unelevated", "stroked"];
-    this.themeProps = ["primary", "secondary"];
-  }
-  componentDidMount() {
-    super.attachRipple();
-  }
-  materialDom(props) {
-    const ButtonElement = props.href ? "a" : "button";
-    let className = "";
-    this.themeProps.forEach(themeProp => {
-      if (themeProp in props && props[themeProp] !== false) className += Object(__WEBPACK_IMPORTED_MODULE_3__themeUtils_generateThemeClass__["a" /* default */])(themeProp) + " ";
-    });
-
-    return Object(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-      ButtonElement,
-      _extends({
-        className: className,
-        ref: control => {
-          this.control = control;
-        }
-      }, props),
-      this.props.children
-    );
-  }
-}
-
-class ButtonIcon extends __WEBPACK_IMPORTED_MODULE_2__Icon___["a" /* default */] {
-  constructor() {
-    super();
-    this.componentName = "button__icon";
-  }
-}
-
-Button.Icon = ButtonIcon;
-/* harmony default export */ __webpack_exports__["a"] = (Button);
 
 /***/ }),
 /* 14 */
@@ -2790,19 +2793,11 @@ var TopBar = /** @class */ (function (_super) {
     }
     TopBar.prototype.render = function () {
         return (preact_1.h("nav", { className: "navbar navbar-expand-md navbar-dark bg-dark mb-4" },
-            preact_1.h("a", { className: "navbar-brand", href: "#" }, "Sphinx Themes"),
-            preact_1.h("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarCollapse", "aria-controls": "navbarCollapse", "aria-expanded": "false", "aria-label": "Toggle navigation" },
-                preact_1.h("span", { className: "navbar-toggler-icon" })),
+            preact_1.h("a", { className: "navbar-brand", href: "https://sphinx-themes.org" }, "Sphinx Themes"),
             preact_1.h("div", { className: "collapse navbar-collapse", id: "navbarCollapse" },
                 preact_1.h("ul", { className: "navbar-nav mr-auto" },
-                    preact_1.h("li", { className: "nav-item active" },
-                        preact_1.h("a", { className: "nav-link", href: "#" },
-                            "Home ",
-                            preact_1.h("span", { className: "sr-only" }, "(current)"))),
                     preact_1.h("li", { className: "nav-item" },
-                        preact_1.h("a", { className: "nav-link", href: "#" }, "Link")),
-                    preact_1.h("li", { className: "nav-item" },
-                        preact_1.h("a", { className: "nav-link disabled", href: "#" }, "Disabled"))))));
+                        preact_1.h("a", { className: "nav-link", href: "https://github.com/sphinx-themes/sphinx-themes.org" }, "GitHub"))))));
     };
     return TopBar;
 }(preact_1.Component));

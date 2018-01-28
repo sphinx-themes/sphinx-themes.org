@@ -24,7 +24,7 @@ class Themes extends Component<any, any> {
       console.log(themes);
 
       return (
-      <main role="main" className="container">
+      <main role="main" className="container-fluid">
         <div className="row">
           {themes}
         </div>
