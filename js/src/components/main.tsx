@@ -14,14 +14,30 @@ export default _ => (
 )
 
 
+
 class Themes extends Component<any, any> {
+
+  sort(data) {
+      return data.sort((n1,n2) => {
+          if (n1.pkg_name > n2.pkg_name) {
+              return 1;
+          }
+          if (n1.pkg_name < n2.pkg_name) {
+              return -1;
+          }
+          return 0;
+      });
+  }
+
+
   render() {
       const data = require('../../../data/data.json');
+      const sorted = this.sort(data);
+
       let themes = [] ;
-      for ( const theme of (data as Array<any>) ) {
+      for ( const theme of (sorted as Array<any>) ) {
          themes.push(<Theme theme={theme} />)
       }
-      console.log(themes);
 
       return (
       <main role="main" className="container-fluid">
