@@ -9,6 +9,9 @@ export default class Theme extends Component<any, any> {
       const pypi = theme.url;
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
 
+      const imgStyle = {'width': 800, 'height': 600}
+
+
       return (
       <div className="col-md-4 p-3">
         <Card>
@@ -16,7 +19,7 @@ export default class Theme extends Component<any, any> {
             <Card.Title large={ true }>{ theme.pkg_name }</Card.Title>
             <Card.Subtitle>{ theme.theme }</Card.Subtitle>
           </Card.Primary>
-          <Card.MediaItem src={ src } x="3" />
+          <Card.MediaItem src={ src } style={imgStyle} x="3" />
           <Button dense>
                <a className="mx-auto" href={ sample }>sample</a>    /    <a className="mx-auto" href={ pypi }>pypi</a>
           </Button>

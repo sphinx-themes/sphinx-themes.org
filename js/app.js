@@ -1676,12 +1676,13 @@ var Theme = /** @class */ (function (_super) {
         var src = "html/" + theme.pkg_name + "/" + theme.theme + "/screenshot.png";
         var pypi = theme.url;
         var sample = "html/" + theme.pkg_name + "/" + theme.theme + "/index.html";
+        var imgStyle = { 'width': 800, 'height': 600 };
         return (preact_1.h("div", { className: "col-md-4 p-3" },
             preact_1.h(Card_1.default, null,
                 preact_1.h(Card_1.default.Primary, null,
                     preact_1.h(Card_1.default.Title, { large: true }, theme.pkg_name),
                     preact_1.h(Card_1.default.Subtitle, null, theme.theme)),
-                preact_1.h(Card_1.default.MediaItem, { src: src, x: "3" }),
+                preact_1.h(Card_1.default.MediaItem, { src: src, style: imgStyle, x: "3" }),
                 preact_1.h(Button_1.default, { dense: true },
                     preact_1.h("a", { className: "mx-auto", href: sample }, "sample"),
                     "    /    ",
