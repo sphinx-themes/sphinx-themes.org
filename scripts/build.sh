@@ -15,9 +15,12 @@ if [ ! -d ${ROOT}/src/$PKG_NAME/${THEME} ]; then
     cp -rp ${ROOT}/template ${ROOT}/src/$PKG_NAME/${THEME}
 
     echo "html_theme = '${THEME}'" >> ${ROOT}/src/$PKG_NAME/${THEME}/conf.py
-    IMPORT=`echo $PKG_NAME | tr "-" "_" `
-    echo "import ${IMPORT}" >> ${ROOT}/src/$PKG_NAME/${THEME}/conf.py
-    echo "html_theme_path = [$IMPORT.get_html_theme_path()]" >> ${ROOT}/src/$PKG_NAME/${THEME}/conf.py
+
+    if [ ! -z $IMPORT ]; then
+       I=`echo $PKG_NAME | tr "-" "_" `
+       echo "import ${I}" >> ${ROOT}/src/$PKG_NAME/${THEME}/conf.py
+       echo "html_theme_path = [$I.get_html_theme_path()]" >> ${ROOT}/src/$PKG_NAME/${THEME}/conf.py
+    fi
 fi
 
 # edit conf.py manually if needed.
