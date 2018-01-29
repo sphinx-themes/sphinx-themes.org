@@ -1,0 +1,125 @@
+@import url("basic.css");
+#content .section, #content section {width: auto; float: none;}
+p.h1 {  
+    font-family: Impact, "Arial black","DejaVu Sans", Arial, Helvetica , sans-serif;
+    font-size: 27px;
+    color: black;
+    line-height: 32px; letter-spacing: .08em; 
+    padding-top: 29px; padding-bottom: 6px;
+    text-transform: uppercase; 
+}
+p.h1 a {text-decoration: none; background: none;}
+p.h1 a:hover { color: #ae0010; }
+h1 {
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 38px;
+    padding-bottom: 6px;
+    padding-top: 7px;
+    text-transform: none;
+ }
+h2 {
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size:18px;
+    letter-spacing:1px;
+    line-height:22px;
+    padding-bottom:0;
+    margin-bottom:0;
+    margin: 30px 35px 8px 0;
+}
+.content h3 { 
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 15px; letter-spacing: 0;
+   line-height: 19px; 
+}
+
+.content h4 { font-weight: bold; font-size: 13px; line-height: 15px; margin-top: 10px; }
+h5 { color: #000; font-weight: bold; font-size: 13px;}
+
+
+abbr, acronym {border: none;}
+
+
+
+.headerlink {font-size: 0.5em; padding-left: 0.1em; line-height: 0.5em; top: -1em; position: relative;}
+
+.admonition-title {font-weight: bold;}
+p.rubric {color: #000; font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold; font-size: 15px; margin-bottom: 0;
+     line-height: 19px; padding-bottom:0;}
+.footnote .label {background: none;}
+.pagination {margin-top: 40px;}
+
+#main-navigation > ul { float: left; position: relative; 
+                        z-index: 3000; top: 0; height: 20px;
+                        margin-right: 0; padding: 0 8px 4px 0px;
+                        background: none;}
+#main-navigation .toctree-l1{ list-style-type: none; position: relative; display: inline; float: left; z-index: 2000;}
+#main-navigation .toctree-l1:hover { border-bottom: 1px solid #fff; border-color: #fff; background-color: #7e000c; margin-bottom: -1px;} /* bug FF4 */
+#main-navigation .toctree-l1.current, #main-navigation .toctree-l1.current:hover { border-color: #fff; background-color: #000; }
+
+#main-navigation .toctree-l1 > ul {position: absolute; left: -999em; top: 24px;
+                                   z-index: 900; width: 320px; 
+                                   padding: 12px 0 4px 0; 
+                                   background: #fff none;
+                                   border: 1px solid #000; border-top: none;
+                                   list-style-type: none;
+                                   line-height: 18px;
+                                   }
+                                 
+#main-navigation .toctree-l1 > ul.visible {left: 0; }
+
+#main-navigation .toctree-l1 { margin-bottom:1px;}
+#main-navigation .toctree-l1 li {border: none; }
+#main-navigation .toctree-l1 li:hover {background: none;}
+#main-navigation .toctree-l1 li.current a { color: #fff; background-color: #000;}
+#main-navigation .toctree-l1 li a { padding-left: 7px; display: block; color: #000; font-weight: bold; }
+#main-navigation .toctree-l1 li ul a { color: #000; font-weight: normal; }
+#main-navigation .toctree-l1 li ul {margin-bottom: 12px;}
+#main-navigation .toctree-l1 li a:hover { color: #000; background-color: #cfd0ca;}
+
+
+
+.tree > ul { margin-bottom: 40px; font-weight: bold; }
+.tree li {list-style-type: none; }
+.tree .toctree-l1 {border-bottom: 1px solid #fff;
+                   border-top: 1px solid transparent; /* MSIE 6... */
+                   background-color: #ae0010;}
+.tree .toctree-l2 {border-top: 1px solid #a3a3a3; border-bottom: none; }
+.tree .toctree-l2:first-child { border-top: 1px solid #fff;}
+
+                 
+.tree .toctree-l1 > a { color: #fff;}
+.tree .toctree-l1 .expandable-hitarea{ background-position: 0 -1px; }
+.tree .toctree-l1 .collapsable-hitarea{ background-position: -16px -1px;}
+                 
+.tree .toctree-l1 ul .expandable-hitarea{ background-position: -32px -1px;}
+.tree .toctree-l1 ul .collapsable-hitarea {background-position: -48px -1px;}
+.tree .toctree-l1 .hitarea, .tree .toctree-l1 a { left: 0; position: relative;}
+
+.tree .toctree-l1 a { width: 302px; }
+.tree .toctree-l2 .hitarea, .tree .toctree-l2 a { left: 14px; }
+.tree li.toctree-l2 a { width: 288px; }
+.tree .toctree-l3 .hitarea, .tree .toctree-l3 a { left: 28px; }
+.tree li.toctree-l3 a { width: 274px; }
+.tree .toctree-l4 .hitarea, .tree .toctree-l4 a { left: 42px; }
+.tree li.toctree-l4 a { width: 260px; }
+.tree .toctree-l5 .hitarea, .tree .toctree-l5 a { left: 56px; }
+.tree li.toctree-l5 a { width: 246px; }
+.tree .toctree-l6 .hitarea, .tree .toctree-l6 a { left: 70px; }
+.tree li.toctree-l6 a { width: 232px; }
+.tree .toctree-l7 .hitarea, .tree .toctree-l7 a { left: 84px; }
+.tree li.toctree-l7 a { width: 218px; }
+
+pre {
+border: 1px solid #ccc;
+border-radius: 2px;
+background-color: #f8f8f8;
+padding: 4px;
+}
+

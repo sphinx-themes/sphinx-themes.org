@@ -1,0 +1,10 @@
+
+.sphinx-top-bar ul {
+  list-style-type: none;
+  padding-left: 1.25rem;
+  margin-left: 0;
+}
+
+div.highlight pre {
+  margin-bottom: 1.25rem;
+}

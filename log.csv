@@ -15,23 +15,23 @@ caktus-sphinx-theme,completed,import
 sphinx-catalystcloud-theme,completed,import
 cloud_sptheme,completed,perfect
 sphinx-corlab-theme,completed,wrong import name
-craftercms-sphinx-theme,,
-crate-docs-theme,,
-lsst-dd-rtd-theme,,
+craftercms-sphinx-theme,can_not,npm required
+crate-docs-theme,completed,suffix changed
+lsst-dd-rtd-theme,completed,import
 djangochurch-docs-theme,,
-python-docs-theme,,
-sphinx-docs-theme,,
-editorial-sphinx-theme,,
-edx-sphinx-theme,,
-epfl-sphinx-theme,,
+python-docs-theme,can_not,theme_path unknown
+sphinx-docs-theme,,bernardomg.tox-test-command is required
+editorial-sphinx-theme,can_not,npm required
+edx-sphinx-theme,completed, conf.py required
+epfl-sphinx-theme,completed,conf.py required
 Flask-Sphinx-Themes,completed,perfect
-sphinx-fossasia-theme,,
-foundation-sphinx-theme,,
-sphinx-foundation-theme,,
-gjtheme,,
-sphinx-glpi-theme,,
-groundwork-sphinx-theme,,
-sphinx-guillotina-theme,,
+sphinx-fossasia-theme,completed,perfect
+foundation-sphinx-theme,completed,conf.py required
+sphinx-foundation-theme,completed,import but not list
+gjtheme,skip,
+sphinx-glpi-theme,completed, import but not list
+groundwork-sphinx-theme,completed,perfect
+sphinx-guillotina-theme,completed,conf.py required
 guzzle_sphinx_theme,,
 hachibee-sphinx-theme,,
 hbp-sphinx-theme,,

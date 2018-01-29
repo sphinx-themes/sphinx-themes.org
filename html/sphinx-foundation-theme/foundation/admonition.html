@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admonitions &#8212; Sphinx-Themes template 1 documentation</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/foundation-sites/default.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/foundation-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/what-input/what-input.min.js"></script>
+    <script type="text/javascript" src="_static/foundation-sites/foundation.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Basic Specification" href="basic.html" /> 
+  </head>
+  <body>
+
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu sphinx-top-bar" data-responsive-menu="drilldown medium-dropdown">
+      <li class="menu-text"><a href="index.html">Sphinx-Themes template</a></li>
+      <li class="menu-text"></li>
+      <li>
+        <a role="button"
+           id="dTopbarSiteToc"
+           data-toggle="dropdown"
+           data-target="#"
+           href="index.html">&nbsp; Site</b></a>
+        <ul class="vertical"
+            role="menu"
+            aria-labelledby="dTopbarSiteToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic.html">Basic Specification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic.html#list">List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#bullet-lists">Bullet lists:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#enumerated-lists">Enumerated lists:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#definition-lists">Definition lists:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#field-lists">Field lists:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#option-lists-for-listing-command-line-options">Option lists, for listing command-line options:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basic.html#literal-blocks">Literal blocks:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic.html#block-quotes">Block quotes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic.html#simple-table">Simple Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic.html#citation">Citation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Admonitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#admonition">admonition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caution">caution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#danger">danger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#error">error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hint">hint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important">important</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note">note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tip">tip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#warning">warning</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+      </li>
+      <li>
+        <a role="button"
+           id="dTopbarPageToc"
+           data-toggle="dropdown"
+           data-target="#"
+           href="#">&nbsp; Page</a>
+        <ul class="vertical"
+            role="menu"
+            aria-labelledby="dTopbarPageToc"><ul>
+<li><a class="reference internal" href="#">Admonitions</a><ul>
+<li><a class="reference internal" href="#admonition">admonition</a></li>
+<li><a class="reference internal" href="#caution">caution</a></li>
+<li><a class="reference internal" href="#danger">danger</a></li>
+<li><a class="reference internal" href="#error">error</a></li>
+<li><a class="reference internal" href="#hint">hint</a></li>
+<li><a class="reference internal" href="#important">important</a></li>
+<li><a class="reference internal" href="#note">note</a></li>
+<li><a class="reference internal" href="#tip">tip</a></li>
+<li><a class="reference internal" href="#warning">warning</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+      </li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu sphinx-top-bar" data-responsive-menu="drilldown medium-dropdown">
+        <li class="pagination-previous">
+          <a href="basic.html" title="Previous Topic: Basic Specification">
+            <span class="show-for-large">Basic Specification</span>
+          </a>
+        </li>
+        <li><form action="search.html" method="get">
+          <input type="text" name="q" class="form-control" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+    <div id="content" class="small-8 large-9 columns">
+      
+  <div class="section" id="admonitions">
+<h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="admonition">
+<h2>admonition<a class="headerlink" href="#admonition" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-neque-porro-quisquam admonition">
+<p class="first admonition-title">Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="caution">
+<h2>caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="danger">
+<h2>danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="error">
+<h2>error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h2>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="hint">
+<h2>hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h2>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="important">
+<h2>important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="note">
+<h2>note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="tip">
+<h2>tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="warning">
+<h2>warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+</div></br>
+<div class="row">
+  <div class="small-8 large-9 columns">
+    <nav class="related" role="navigation" aria-label="related navigation">
+      <ul class="breadcrumbs">
+        <li class="nav-item nav-item-0"><a href="index.html">Sphinx-Themes template 1 documentation</a></li> 
+      </ul>
+    </nav>
+  </div>
+  <div class="small-4 large-3 columns">
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      <li style="margin-right: 10px">
+        <a href="genindex.html" title="General Index"
+           accesskey="I">index</a>
+        </li>
+      <li >
+        <a href="basic.html" title="Basic Specification"
+           accesskey="P">previous</a>
+        </li>
+    </ul>
+  </div>
+</div>
+<div class="top-bar row column">
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, sphinx-themes.org.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
+</div>
+    <script> $(document).foundation() </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@import "nature.css";
+@import "pastanaga.css";
+
+body {
+  padding-top: 105px;
+}
+body > .ui.container {
+  margin-top: 10em;
+}
+.ui.container > h1 {
+  font-size: 3em;
+  text-align: center;
+  font-weight: normal;
+}
+.ui.container > h2.dividing.header {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 4em 0em 3em;
+}
+.ui.table {
+  table-layout: fixed;
+}
+.webpage.header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 7.5em;
+  background: #F5F5F6;
+  align-items: center;
+  padding: 0 50px;
+  p {
+    padding: 0 50px;
+    font-size: 1.4em;
+    margin-top: 15px;
+  }
+  img{
+        width: 120px;
+  }
+}
+
+
+#top-menu{
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+
+div.sphinxsidebar{
+  font-size: 1em;
+}
+
+div.body {
+  font-size: 1.1em;
+}
+
+div.sphinxsidebar input[type=text] {
+    margin-left: 0;
+}
+
+.search .ui.action.input{
+  margin-left: 20px;
+}
+
+
+#search-input {
+  width: 100%;
+}
+
+
+#search-results h2 {
+  margin: 30px 10px;
+}
+
+
+div.documentwrapper {
+    padding-right: 15px;
+}

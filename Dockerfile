@@ -17,6 +17,8 @@ RUN mkdir /noto && \
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 
+RUN pip3 install --upgrade setuptools pip
+
 ADD scripts/build.sh /tmp/build.sh
 WORKDIR /tmp
 

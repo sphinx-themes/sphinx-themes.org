@@ -6,9 +6,11 @@ ROOT="/volume"
 
 PKG_NAME=$1
 THEME=$2
+IMPORT=$3
 
 
 pip3 install $PKG_NAME
+
 
 if [ ! -d ${ROOT}/src/$PKG_NAME/${THEME} ]; then
     mkdir -p ${ROOT}/src/$PKG_NAME
