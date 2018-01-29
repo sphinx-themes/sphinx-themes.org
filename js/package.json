@@ -26,7 +26,7 @@
     "stylesheet-decorator": "^1.4.1"
   },
   "scripts": {
-    "build": "webpack -w",
+    "build": "webpack",
     "prod": "webpack -p"
   },
   "homepage": "https://shirou.github.com/sphinx-themes"
