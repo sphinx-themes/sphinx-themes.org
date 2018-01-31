@@ -32,14 +32,14 @@ gjtheme,skip,
 sphinx-glpi-theme,completed, import but not list
 groundwork-sphinx-theme,completed,perfect
 sphinx-guillotina-theme,completed,conf.py required
-guzzle_sphinx_theme,,
-hachibee-sphinx-theme,,
-hbp-sphinx-theme,,
-insegel,,
-sphinx-ioam-theme,,
-itcase-sphinx-theme,,
-jupyter-sphinx-theme,,
-klink,,
+guzzle_sphinx_theme,completed,import
+hachibee-sphinx-theme,completed,import
+hbp-sphinx-theme,completed,import
+insegel,completed,perfect
+sphinx-ioam-theme,completed,perfect
+itcase-sphinx-theme,skip,ASCII Codec problem
+jupyter-sphinx-theme,completed,original import
+klink,skip,pip install broken
 kotti_docs_theme,,
 sphinx-kr-theme,,
 sphinx-md-theme,,
