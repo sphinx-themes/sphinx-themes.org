@@ -8,10 +8,10 @@ Sphinx Theme collections.
 How to contribute
 ---------------------------
 
-When you find new theme in PyPI?
+When you find new theme in PyPI
 ````````````````````````````````````````````````
 
-Please file an issue. Update is currenly by hands.
+Please file an issue. Currently, themes are updated by hands only.
 
 How to add new Theme
 ````````````````````````
@@ -29,7 +29,7 @@ Requirements: Docker
 6. git commit
 7. make PR
 
-package name and theme name is sometimes different. You'd better to read before run.
+Package name and theme name is sometimes different. You'd better read the homepage before to run.
 
 
 License
