@@ -40,19 +40,19 @@ sphinx-ioam-theme,completed,perfect
 itcase-sphinx-theme,skip,ASCII Codec problem
 jupyter-sphinx-theme,completed,original import
 klink,skip,pip install broken
-kotti_docs_theme,,
-sphinx-kr-theme,,
-sphinx-md-theme,,
-mdn-sphinx-theme,,
-mkdocs-nature,,
+kotti_docs_theme,completed,import
+sphinx-kr-theme,completed,perfect
+sphinx-md-theme,skip,build failed by TypeError
+mdn-sphinx-theme,skip, deperecated
+mkdocs-nature,completed,perfect
 sphinx-modern-theme,completed,import
 mozilla-sphinx-theme,completed,config change
 msmb_theme,completed,sphinx_rtd_theme required
 murray,completed,import
-sphinx-nameko-mw-theme,,
-sphinx-nameko-theme,,
-sphinx-naps-theme,,
-oe-sphinx-theme,,
+sphinx-nameko-mw-theme,completed,import
+sphinx-nameko-theme,completed,import
+sphinx-naps-theme,skip,
+oe-sphinx-theme,completed,import
 ovs-sphinx-theme,,
 sphinx-pdj-theme,,
 pietroalbini-sphinx-themes,,

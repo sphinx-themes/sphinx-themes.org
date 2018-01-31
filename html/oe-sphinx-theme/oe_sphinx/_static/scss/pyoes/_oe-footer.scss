@@ -1,0 +1,20 @@
+
+// fix for sticky footer
+.container { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -131px; }
+#footerContainer { height: 86px;}
+.push { height: 131px; }
+
+footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple;}
+footer#footer-bottom .inner nav ul{margin:1em 0;padding-left:1.4em}
+footer#footer-bottom .inner nav > ul{float:$default-float;width:25%;}
+footer#footer-bottom .inner nav ul li {list-style-type:none}
+footer#footer-bottom .inner nav ul li a{display:block;line-height:1em;padding:0.4em 0;font-size:0.875em;}
+footer#footer-bottom .inner nav ul li a:hover{color:$black;}
+footer#footer-bottom .inner nav ul li a.active{color:$dark-purple;}
+footer#footer-bottom .inner article img{margin:auto 0 auto auto;display:block;}
+footer#footer-bottom .inner nav ul.lang-switch li{float:$default-float;margin-right:0.5em;font-size:0.875em;}
+footer#footer-bottom .inner .mailtolink {background-color: $dark-purple; color: white; padding: 8px 16px;}
+
+.iwgf2-site-info-header h2 {
+  color: $white !important;
+}

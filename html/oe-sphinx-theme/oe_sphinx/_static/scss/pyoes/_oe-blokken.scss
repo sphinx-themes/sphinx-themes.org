@@ -1,0 +1,117 @@
+
+//
+// OE blokken  (nieuws, downloads, social , nieuwsbrief, evenementen)
+//
+
+
+.fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;}
+.fl-block .field {border-bottom:1px solid $mid-gray;overflow:hidden;background-color:$white;position:relative;padding:1.6em 1.2em 1.2em 1.2em;}
+.fl-block .field p {margin:0;font-size:$switch-font-size-med;padding:0 0 20px 0}
+
+.fl-block .field img {height:105px;overflow: hidden}
+.fl-block .field.full {padding:0px 0 ;}
+.fl-block .field.full > a {display:block;padding:1.6em 1.4em 1.6em 1.4em;color:#5e5e5e;}
+.fl-block .field.full a:hover{display:block;background-color:$white-gray;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;text-decoration: none; }
+
+
+.fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 { text-transform: uppercase;font-family: $font-family-medium-serif;}
+.fl-block .field.full a:hover h5 {text-decoration: underline;}
+
+.fl-block .block-text {border: 1px solid #e3e3e3 !important;border-top: none !important;}
+
+
+.time-block  {display: block;margin:0.6em 0 0 0;font-size:0.8em}
+
+//inventaris result list 
+.result figure {width:150px;background:#fff;border:1px solid $light-gray;text-align:center;float:none;}
+.result img {min-height:auto;height:150px;}
+
+
+
+// flanders-block-large home
+/*
+.fl-block-largeimage {text-align:center}
+.fl-block-largeimage img {margin:10px 0;width:180px;height:180px}
+.fl-block-largeimage a h5 {text-transform: uppercase}
+.fl-block-largeimage a:hover h5 {text-decoration: underline}
+.fl-block-largeimage .posted {line-height:1em;color:$silver;margin-top:-0.5em;}
+*/
+
+// vertical position list 
+.fl-block-largeimage  {margin-bottom:30px;text-align:center;}
+.fl-block-largeimage div {text-align:center}
+.fl-block-largeimage h5 {line-height:20px}
+.fl-block-largeimage h5:hover {text-decoration: underline !important}
+.fl-block-largeimage a span {color:$gray;}
+
+
+// flanders-block-more link
+.fl-block .field a.more,.fl-block .field a.fa,.fl-block .field i.fa {float:$opposite-direction;text-decoration:none;}
+.fl-block .field a.more:hover{text-decoration:underline;}
+.fl-block .field a.more {font-family: $font-family-medium-serif;color:$dark-purple}
+.fl-block .field a.fa {margin-top:2em;}
+.fl-block .field:last-child {border:none;padding-bottom:1.6em;}
+.fl-block .field figure {float:$default-float;overflow:hidden;display:inline-block;margin:0.4em 1.5em 0.8em 0;padding:0;}
+
+
+.fl-block .block-date {text-transform: uppercase;border:none;background-color:$dark-purple;padding:0.75em 1.5em 0.65em;color:$white;}
+.fl-block .field.block-date i {float:none;margin-right:0.4em;}
+.fl-block .field.block-image {border-bottom:0;}
+.fl-block .field.block-image img {width:100%;display:block;}
+
+
+
+/* -- RSS newsfeed-- */
+
+.fl-block .field.full.rss a {padding:0.8em 1.4em 0.4em 1.4em;}
+.fl-block .field.full.rss a h5 {margin-right:1.8em;}
+.fl-block .field.full.rss a .posted { position: absolute;right:1.2em;font-size:$switch-font-size-sml;line-height:1em;
+  color:$silver;top:50%;margin-top:-0.5em;}
+
+
+
+/* -- titles -- */
+
+.fl-block.style-1 .block-title, .fl-block.style-2 .block-title, .fl-block.style-3 .block-title { background-color:$dark-purple;margin:0;color:$white !important;font-size:$switch-font-size-med}
+.fl-block.style-3 .block-title {background-color:$fresh-blue; color:$white !important}
+
+.fl-block.style-1 .block-title.naked, .fl-block.style-2 .block-title.naked {color:$dark-purple !important}
+.fl-block.style-1 a, .fl-block.style-2 a, .fl-block.style-3 a {color:$white;display:block}
+
+.fl-block .block-title, .fl-block .block-title.naked { background-color:$dark-purple;text-transform: uppercase; letter-spacing:1px;border:none; margin-top:-1px;padding:0.9em 1.4em 0.8em 1.2em;}
+
+.fl-block .block-title.naked { background-color:$white !important;color:$dark-purple !important;padding:0;}
+
+.block-text h3 a { color:$dark-purple !important;margin:-8px 0 0 0;letter-spacing:-1px}
+.block-text h3 a:hover { text-decoration:underline !important }
+
+
+/* -- social -- */
+
+.fl-block .field.social i.fa {float:none;margin:0 1em 0 0.4em;display:inline-block;line-height:1em;font-size:1.6em}
+.fl-block .fl-block{border-right:1px solid $mid-gray;border-bottom:1px solid $mid-gray ;}
+.fl-block .field.social > a{font-weight:400;}
+.fl-block .field.social > a:hover{text-decoration: none;}
+
+.fl-block .field.social.twitter > a{color:$soc-twitter;}
+.fl-block .field.social.facebook > a{color:$soc-facebook;}
+.fl-block .field.social.mail > a{color:$soc-mail;}
+.fl-block .field.social.linkedin > a{color:$soc-linkedin;}
+
+.coloredbg {background-color:$light-purple !important; color:$white}
+.coloredbg h3 a {color:$white !important}
+
+
+// panel actoren front end search
+.actoren-idcard {padding:0;background:$white;border:1px solid $mid-gray;}
+.actoren-idcard a {display:block;min-height:78px}
+.actoren-idcard a:hover {background:$white-gray;display:block;min-height:78px;}
+.actoren-idcard h3 {font-size:1em; margin:0;padding:15px 0 0 0;}
+
+.actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
+.actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
+
+
+
+
+

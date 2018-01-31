@@ -1,0 +1,32 @@
+/* table inventaris article */
+
+table {width:100%;margin:20px 0}
+table th {width:150px}
+
+
+/* base table layout */
+
+table {max-width: 100%;border-collapse: collapse;border-spacing: 0;}
+.table {width:100%;margin-bottom:18px;}
+.table th, .table td {padding: 8px;line-height: 18px;text-align: left;vertical-align: top;border-top: 1px solid $gray;}
+
+.table thead th {vertical-align: bottom;}
+.table thead:first-child tr th, .table thead:first-child tr td {border-top: 0;}
+.table tbody + tbody {border-top: 2px solid $gray;}
+.table tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th{background-color: $light-gray;}
+//.table tbody tr:hover td, .table tbody tr:hover th {background-color: $body-bg;}
+
+.table.border tbody tr td, .table.border tr th{border-right: 1px solid $gray;} 
+.table.border tbody tr td:last-child{border-right:1px solid $gray;} 
+
+/* Right align numbers */
+
+.table.border tr td,.table.border tr th{text-align:right;} 
+.table.border tr td:first-child,.table.border tr th:first-child{text-align:left;} 
+
+
+
+.table-app {width:100%;margin:20px 0 10px 0}
+.table-app th:first-child { width:20px}
+.table-app th:last-child { width:20px}
+.table-app td:last-child i { margin: 0 10px 0 0;}

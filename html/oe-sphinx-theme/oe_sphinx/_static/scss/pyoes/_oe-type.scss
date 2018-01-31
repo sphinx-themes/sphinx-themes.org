@@ -1,0 +1,41 @@
+
+
+
+@font-face {
+  font-family: "Flanders Art Sans Light";
+  src: url("../fonts/FlandersArtSans-Light.eot");
+  src: url("../fonts/FlandersArtSans-Light.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/FlandersArtSans-Light.woff") format("woff"),
+  url("../fonts/FlandersArtSans-Light.ttf")  format("truetype"); 
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: "Flanders Art Sans";
+  src: url("../fonts/FlandersArtSans-Regular.eot");
+  src: url("../fonts/FlandersArtSans-Regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/FlandersArtSans-Regular.woff") format("woff"),
+  url("../fonts/FlandersArtSans-Regular.ttf")  format("truetype");
+      
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: "Flanders Art Sans Medium";
+  src: url("../fonts/FlandersArtSans-Medium.eot");
+  src: url("../fonts/FlandersArtSans-Medium.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/FlandersArtSans-Medium.woff") format("woff"),
+  url("../fonts/FlandersArtSans-Medium.ttf")  format("truetype");
+      
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+.demo-light{font-family: "Flanders Art Sans Light";}
+.demo-regular{font-family: "Flanders Art Sans";}
+.demo-medium{font-family: "Flanders Art Sans Medium";}
+

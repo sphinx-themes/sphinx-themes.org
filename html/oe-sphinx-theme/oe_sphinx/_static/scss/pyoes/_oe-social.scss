@@ -1,0 +1,26 @@
+//
+// OE social buttons on page 
+//
+
+ul.socialbox {list-style:none;padding:0;margin-bottom:1em;position:relative;}
+ul.socialbox:after {content: " ";visibility: hidden;display: block;height: 0;clear: both;}
+ul.socialbox > li{float:left;display:block;margin-right:0.4em;line-height:0;}
+ul.socialbox > li > a,ul.socialbox > li > span,ul.socialbox li i{ display:inline-block;line-height:2.4em;height:2.4em;padding:0 0.8em;overflow:hidden;color:$white;text-decoration:none}
+ul.socialbox li i{padding:0;display:inline;float:none;} 
+ul.socialbox li a:hover{text-decoration: none;}
+
+
+/* background colors */
+ul.socialbox > li.facebook > a{background-color:$soc-facebook;}
+ul.socialbox > li.facebook > a:hover{background-color:$soc-facebook_hover;}
+ul.socialbox > li.twitter > a{background-color:$soc-twitter;}
+ul.socialbox > li.twitter > a:hover{background-color:$soc-twitter_hover;}
+ul.socialbox > li.linkedin > a{background-color:$soc-linkedin;}
+ul.socialbox > li.linkedin > a:hover{background-color:$soc-linkedin_hover }
+ul.socialbox > li.mail > a{background-color:$soc-mail;}
+ul.socialbox > li.mail > a:hover{background-color:$soc-mail_hover;}
+ul.socialbox > li.print > a{background-color:$jumbo ;}
+ul.socialbox > li.print > a:hover{background-color:#6e6e6e;}
+ul.socialbox li li.linkedin a,ul.socialbox li li.linkedin a i{color:$soc-linkedin;}
+ul.socialbox li li.mail a,ul.socialbox li li.mail a i{color:$soc-mail;}
+ul.socialbox li li.print a,ul.socialbox li li.print a i{color:$jumbo;}

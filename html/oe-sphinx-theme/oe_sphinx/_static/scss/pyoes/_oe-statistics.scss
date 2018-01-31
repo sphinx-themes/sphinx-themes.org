@@ -1,0 +1,42 @@
+
+//
+// OE custom CLASSES statistics circle
+//
+
+
+.circle { 
+margin: 0 auto 15px auto;
+border-radius: 50%;
+width:150px;
+position: relative;
+background-color: $light-gray ;
+}
+
+.circle:before {
+content: "";
+display: block;
+padding-top: 100%;
+}
+
+.circle-inner {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+text-align: center;
+}
+
+.score-text {
+margin: auto;
+position: absolute;
+top: -60px;
+left: 0;
+bottom: 0;
+right: 0;
+height: 1em;
+line-height: 1em;
+font-size: 1em;
+}
+
+.score-text h3 { font-size: 2.5em;}
