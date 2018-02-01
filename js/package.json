@@ -14,7 +14,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "5.0.1",
     "eslint-plugin-react": "~7.0.1",
-    "preact-material-components": "^1.3.5",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0"
@@ -22,7 +21,6 @@
   "dependencies": {
     "preact": "^8.2.7",
     "http-decorator": "^1.0.10",
-    "material-ui": "^0.19.4",
     "stylesheet-decorator": "^1.4.1"
   },
   "scripts": {

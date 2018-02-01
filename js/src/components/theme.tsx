@@ -1,6 +1,4 @@
 import { h, Component } from "preact";
-import Card from 'preact-material-components/Card';
-import Button from 'preact-material-components/Button';
 
 export default class Theme extends Component<any, any> {
     render() {
@@ -9,21 +7,24 @@ export default class Theme extends Component<any, any> {
       const pypi = theme.url;
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
 
-      const imgStyle = {'width': 800, 'height': 600}
-
+      let name = theme.pkg_name;
+      if (name === "default") {
+          name = `default (${theme.theme})`;
+      }
 
       return (
       <div className="col-md-4 p-3">
-        <Card>
-          <Card.Primary>
-            <Card.Title large={ true }>{ theme.pkg_name }</Card.Title>
-            <Card.Subtitle>{ theme.theme }</Card.Subtitle>
-          </Card.Primary>
-          <Card.MediaItem src={ src } style={imgStyle} x="3" />
-          <Button dense>
-               <a className="mx-auto" href={ sample }>sample</a>    /    <a className="mx-auto" href={ pypi }>pypi</a>
-          </Button>
-        </Card>
+        <div className="card">
+          <h5 className="card-header">{ name }</h5>
+          <div className="card-body">
+            <img className="card-img-top" src={ src }
+                 alt="theme screen shot" />
+          </div>
+          <div className="card-footer text-center">
+            <a className="card-link" href={ sample }>sample</a>
+            <a className="card-link" href={ pypi }>pypi</a>
+          </div>
+        </div>
       </div>
         )
     }
