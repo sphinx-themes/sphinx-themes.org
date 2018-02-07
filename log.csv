@@ -62,17 +62,17 @@ quark-sphinx-theme,completed,import
 sphinx-readable-theme,failed,ascii
 sphinx-redactor-theme,completed,import
 renga-sphinx-theme,completed,config change
-sphinxcontrib-rextheme,,
-rtcat-sphinx-theme,,
-stsci-rtd-theme,,
-sphinxtheme-simple,,
-solar-theme,,
-sphinx-susiai-theme,,
-sphinx-theme,,
-zerovm-sphinx-theme,,
-sphinx-typlog-theme,,
-yummy-sphinx-theme,,
-sunpy-sphinx-theme,,
+sphinxcontrib-rextheme,completed, perfect
+rtcat-sphinx-theme,completed,import
+stsci-rtd-theme,completed,import
+sphinxtheme-simple,completed,import sphinxtheme-simple required
+solar-theme,completed,config change
+sphinx-susiai-theme,completed,perfect
+sphinx-theme,completed,import-multiple themes
+zerovm-sphinx-theme,completed,import
+sphinx-typlog-theme,completed,import config change
+yummy-sphinx-theme,completed,perfect
+sunpy-sphinx-theme,completed,import config change
 sphinx.plonetheme,,
 sphinx.themes.plone,,
 sphinx_adc_theme,,

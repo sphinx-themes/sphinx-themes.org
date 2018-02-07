@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SUSI AI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto:300,400">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '',
+      VERSION:     '1',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true,
+      SOURCELINK_SUFFIX: '.txt'
+    };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="stylesheet" href="_static/susi.css"/>
+  </head>
+  <body class="susi-font">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">
+        <img src="_static/susi-logo.png" class="susi-logo"/>
+      </span>
+      <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="http://blog.fossasia.org/?s=susi">Blog</a>
+          <a class="mdl-navigation__link" href="http://chat.susi.ai/team">Team</a>
+          <a class="mdl-navigation__link" href="http://chat.susi.ai/support">Support</a>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon search-icon" for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <form action="search.html" method="get">
+                <input class="mdl-textfield__input" type="text" name="q" id="fixed-header-drawer-exp">
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="http://blog.fossasia.org/?s=susi">Blog</a>
+        <a class="mdl-navigation__link" href="http://chat.susi.ai/team">Team</a>
+        <a class="mdl-navigation__link" href="http://chat.susi.ai/support">Support</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content content">
+      <div class="page-content">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Admonitions</a><ul>
+<li><a class="reference internal" href="#admonition">admonition</a></li>
+<li><a class="reference internal" href="#caution">caution</a></li>
+<li><a class="reference internal" href="#danger">danger</a></li>
+<li><a class="reference internal" href="#error">error</a></li>
+<li><a class="reference internal" href="#hint">hint</a></li>
+<li><a class="reference internal" href="#important">important</a></li>
+<li><a class="reference internal" href="#note">note</a></li>
+<li><a class="reference internal" href="#tip">tip</a></li>
+<li><a class="reference internal" href="#warning">warning</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="basic.html"
+                        title="previous chapter">Basic Specification</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/admonition.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+          </div>
+          <div class="mdl-cell mdl-cell--9-col documentation">
+  <div class="section" id="admonitions">
+<h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="admonition">
+<h2>admonition<a class="headerlink" href="#admonition" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-neque-porro-quisquam admonition">
+<p class="first admonition-title">Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="caution">
+<h2>caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="danger">
+<h2>danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="error">
+<h2>error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h2>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="hint">
+<h2>hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h2>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="important">
+<h2>important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="note">
+<h2>note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="tip">
+<h2>tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+<div class="section" id="warning">
+<h2>warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Neque porro quisquam</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">
+          <img src="_static/susi-logo-footer.svg" class="footer-logo"/>
+        </div>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="http://blog.fossasia.org/?s=susi">Blog</a></li>
+          <li><a href="http://github.com/fossasia/susi_server">Code</a></li>
+        </ul>
+      </div>
+      <div class="mdl-mini-footer__right-section">
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="http://blog.fossasia.org/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  </body>
+</html>

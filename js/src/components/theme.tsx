@@ -7,6 +7,7 @@ export default class Theme extends Component<any, any> {
             "default",
             "PSphinxTheme",
             "pylons-sphinx-themes",
+            "sphinx-themes",
         ]
 
         return mpkgs.includes(name);

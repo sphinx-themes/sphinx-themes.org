@@ -1,0 +1,333 @@
+
+/* Basic styles and fonts */
+
+@import url("basic.css");
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic|Ubuntu+Mono:400,700,400italic,700italic);
+
+body {
+  position: relative;
+  font-family: 'Ubuntu', 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2em 0 0;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+pre,
+tt,
+code,
+kbd,
+samp,
+div.body dl.class >dt,
+div.body dl.method >dt,
+div.body dl.attribute >dt,
+div.body dl.function >dt,
+div.body dl.classmethod >dt,
+div.body dl.exception >dt {
+  font-family: 'Ubuntu Mono', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', 'Menlo', 'Lucida Console', monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+
+
+/* Header bar */
+
+div.header-wrapper {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  height: 2em;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  box-shadow: 1px 1px 2px #e6e6e6;
+}
+
+div.header {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 120%;
+}
+
+div.header a {
+  color: #3366aa;
+}
+
+div.header a:hover {
+  color: #ff1800;
+}
+
+div.header a.disabled {
+  color: #cccccc;
+  cursor: default;
+}
+
+div.header >ul.path {
+  float: left;
+  margin: 0 0 0 1.2em;
+  padding: 0;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+div.header >ul.path >li {
+  display: inline-block;
+  margin: 2px 0 0;
+  padding: 0;
+}
+
+div.header >ul.path strong {
+  font-weight: 400;
+}
+
+div.header >ul.related {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+div.header >ul.related >li {
+  float: right;
+  margin: 2px 0 0;
+  padding: 0;
+  border-left: 1px solid #e6e6e6;
+  list-style-type: none;
+}
+
+div.header >ul.related >li >a {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0.5em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+
+
+/* Page content */
+
+div.content-wrapper {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.content a {
+  color: #3366AA;
+}
+
+div.content a:hover {
+  color: #FF1800;
+}
+
+
+
+/* Sidebar */
+
+div.sidebar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 273px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+div.sidebar {
+  width: 100%;
+  margin: 0;
+  padding: 3em 0;
+  float: none;
+  border: none;
+  background-color: inherit;
+}
+
+div.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.sidebar li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #cccccc;
+}
+
+div.sidebar >ul {
+  margin: 0 0 0 1.5em;
+}
+
+div.sidebar li.active {
+  list-style-type: disc;
+}
+
+div.sidebar a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+/* Body */
+
+div.body-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 637px;
+  padding: 0 0 2em;
+}
+
+div.body :target {
+  padding-top: 2em;
+  margin-top: -2em;
+}
+
+div.body div.highlight {
+  background: none;
+}
+
+div.body dt:target {
+  background: none;
+}
+
+div.body h1 {
+  font-size: 190%;
+}
+
+div.body h2 {
+  font-size: 160%;
+}
+
+div.body h3 {
+  font-size: 130%;
+}
+
+div.body h4 {
+  font-size: 100%;
+}
+
+div.body h5 {
+  font-size: 95%;
+}
+
+div.body h6 {
+  font-size: 90%;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+  margin: 1.5em 0 0 0;
+  padding: 0;
+  clear: both;
+}
+
+div.body p,
+div.body ul,
+div.body ol,
+div.body dl,
+div.body table,
+div.body pre {
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+div.body li {
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+div.body li >ul {
+  margin: 0.5em 0;
+}
+
+div.body dt {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+
+div.body dd {
+  margin: 0.1em 0 0 0;
+  padding: 0 0 0 2em;
+}
+
+div.body dd >p:first-child {
+  margin: 0.5em 0;
+}
+
+div.body dd >p {
+  margin: 1em 0 0 0;
+}
+
+div.body pre {
+  line-height: 1.2;
+  padding: 1em;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+}
+
+
+
+/* Small screen */
+
+@media (max-width: 980px) {
+
+div.header {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: auto;
+}
+
+div.header >ul.related {
+  display: none;
+}
+
+div.content-wrapper {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: auto;
+}
+
+div.sidebar-wrapper {
+  display: none;
+}
+
+div.body-wrapper {
+  position: static;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+}
+
+
