@@ -1,6 +1,18 @@
 import { h, Component } from "preact";
 
 export default class Theme extends Component<any, any> {
+
+    has_multiple_themes(name) {
+        const mpkgs = [
+            "default",
+            "PSphinxTheme",
+            "pylons-sphinx-themes",
+        ]
+
+        return mpkgs.includes(name);
+    }
+
+
     render() {
       const theme = this.props.theme;
       const src = `html/${theme.pkg_name}/${theme.theme}/screenshot.png`;
@@ -8,8 +20,8 @@ export default class Theme extends Component<any, any> {
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
 
       let name = theme.pkg_name;
-      if (name === "default") {
-          name = `default (${theme.theme})`;
+      if (this.has_multiple_themes(name)) {
+          name = `${theme.pkg_name} (${theme.theme})`;
       }
 
       return (

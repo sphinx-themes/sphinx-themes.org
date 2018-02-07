@@ -1,0 +1,270 @@
+/*
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif||Noto+Sans|Droid+Sans+Mono);
+*/
+
+
+/**********************************************************************************************************************************************************
+ * Noto Serif
+ **********************************************************************************************************************************************************/
+@font-face {
+   font-family: 'Noto Serif';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      local('Noto Serif'),
+      local('NotoSerif'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/eCpfeMZI7q4jLksXVRWPQ1QlYEbsez9cZjKsNMjLOwM.eot */
+      url('fonts/Noto_Serif_400.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/eCpfeMZI7q4jLksXVRWPQxsxEYwM7FgeyaSgU71cLG0.woff */
+      url('fonts/Noto_Serif_400.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/eCpfeMZI7q4jLksXVRWPQy3USBnSvpkopQaUR-2r7iU.ttf */
+      url('fonts/Noto_Serif_400.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=eCpfeMZI7q4jLksXVRWPQ6WUboTb-jS2tyCOQMtm97g#NotoSerif */
+      url('fonts/Noto_Serif_400.svg#NotoSerif') format('svg');
+}
+@font-face {
+   font-family: 'Noto Serif';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      local('Noto Serif Bold'),
+      local('NotoSerif-Bold'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/lJAvZoKA5NttpPc9yc6lPWzklk6MJbhg7BmBP42CjCQ.eot */
+      url('fonts/Noto_Serif_700.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/lJAvZoKA5NttpPc9yc6lPQFhaRv2pGgT5Kf0An0s4MM.woff */
+      url('fonts/Noto_Serif_700.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/lJAvZoKA5NttpPc9yc6lPfEr6Hm6RMS0v1dtXsGir4g.ttf */
+      url('fonts/Noto_Serif_700.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=lJAvZoKA5NttpPc9yc6lPT9QLNJZUvW8xv4RpDkyVDQ#NotoSerif */
+      url('fonts/Noto_Serif_700.svg#NotoSerif') format('svg');
+}
+@font-face {
+   font-family: 'Noto Serif';
+   font-style: italic;
+   font-weight: 400;
+   src:
+      local('Noto Serif Italic'),
+      local('NotoSerif-Italic'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/HQXBIwLHsOJCNEQeX9kNz3Z2MAKAc2x4R1uOSeegc5U.eot */
+      url('fonts/Noto_Serif_400italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/HQXBIwLHsOJCNEQeX9kNz3hCUOGz7vYGh680lGh-uXM.woff */
+      url('fonts/Noto_Serif_400italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/HQXBIwLHsOJCNEQeX9kNz4nF5uFdDttMLvmWuJdhhgs.ttf */
+      url('fonts/Noto_Serif_400italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=HQXBIwLHsOJCNEQeX9kNz1lIn5tFQcqMuf-jhyJP0ps#NotoSerif */
+      url('fonts/Noto_Serif_400italic.svg#NotoSerif') format('svg');
+}
+@font-face {
+   font-family: 'Noto Serif';
+   font-style: italic;
+   font-weight: 700;
+   src:
+      local('Noto Serif Bold Italic'),
+      local('NotoSerif-BoldItalic'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/Wreg0Be4tcFGM2t6VWytvGmsoyWrDyoltQVIP7q_RGg.eot */
+      url('fonts/Noto_Serif_700italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/Wreg0Be4tcFGM2t6VWytvHl4twXkwp3_u9ZoePkT564.woff */
+      url('fonts/Noto_Serif_700italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notoserif/v3/Wreg0Be4tcFGM2t6VWytvH06qf9KHRHwsVx7iw5MXmY.ttf */
+      url('fonts/Noto_Serif_700italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=Wreg0Be4tcFGM2t6VWytvAay50PuN8loMJ9QAXsTs7U#NotoSerif */
+      url('fonts/Noto_Serif_700italic.svg#NotoSerif') format('svg');
+}
+
+
+/**********************************************************************************************************************************************************
+ * Noto Sans
+ **********************************************************************************************************************************************************/
+@font-face {
+   font-family: 'Noto Sans';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      local('Noto Sans'),
+      local('NotoSans'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/LeFlHvsZjXu2c3ZRgBq9nPY6323mHUZFJMgTvxaG2iE.eot */
+      url('fonts/Noto_Sans_400.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/LeFlHvsZjXu2c3ZRgBq9nD8E0i7KZn-EPnyo3HZu7kw.woff */
+      url('fonts/Noto_Sans_400.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/LeFlHvsZjXu2c3ZRgBq9nKCWcynf_cDxXwCLxiixG1c.ttf */
+      url('fonts/Noto_Sans_400.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=LeFlHvsZjXu2c3ZRgBq9nJbd9NUM7myrQQz30yPaGQ4#NotoSans */
+      url('fonts/Noto_Sans_400.svg#NotoSans') format('svg');
+}
+@font-face {
+   font-family: 'Noto Sans';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      local('Noto Sans Bold'),
+      local('NotoSans-Bold'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/PIbvSEyHEdL91QLOQRnZ13Z2MAKAc2x4R1uOSeegc5U.eot */
+      url('fonts/Noto_Sans_700.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/PIbvSEyHEdL91QLOQRnZ13hCUOGz7vYGh680lGh-uXM.woff */
+      url('fonts/Noto_Sans_700.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/PIbvSEyHEdL91QLOQRnZ14nF5uFdDttMLvmWuJdhhgs.ttf */
+      url('fonts/Noto_Sans_700.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=PIbvSEyHEdL91QLOQRnZ11lIn5tFQcqMuf-jhyJP0ps#NotoSans */
+      url('fonts/Noto_Sans_700.svg#NotoSans') format('svg');
+}
+@font-face {
+   font-family: 'Noto Sans';
+   font-style: italic;
+   font-weight: 400;
+   src:
+      local('Noto Sans Italic'),
+      local('NotoSans-Italic'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/ByLA_FLEa-16SpQuTcQn4GfQcKutQXcIrRfyR5jdjY8.eot */
+      url('fonts/Noto_Sans_400italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/ByLA_FLEa-16SpQuTcQn4IbN6UDyHWBl620a-IRfuBk.woff */
+      url('fonts/Noto_Sans_400italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/ByLA_FLEa-16SpQuTcQn4J0EAVxt0G0biEntp43Qt6E.ttf */
+      url('fonts/Noto_Sans_400italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=ByLA_FLEa-16SpQuTcQn4HNsigHlcrQGNV8nkUSFQfc#NotoSans */
+      url('fonts/Noto_Sans_400italic.svg#NotoSans') format('svg');
+}
+@font-face {
+   font-family: 'Noto Sans';
+   font-style: italic;
+   font-weight: 700;
+   src:
+      local('Noto Sans Bold Italic'),
+      local('NotoSans-BoldItalic'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/9Z3uUWMRR7crzm1TjRicDrFt29aCHKT7otDW9l62Aag.eot */
+      url('fonts/Noto_Sans_700italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/9Z3uUWMRR7crzm1TjRicDjqR_3kx9_hJXbbyU8S6IN0.woff */
+      url('fonts/Noto_Sans_700italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/notosans/v5/9Z3uUWMRR7crzm1TjRicDp_TkvowlIOtbR7ePgFOpF4.ttf */
+      url('fonts/Noto_Sans_700italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=9Z3uUWMRR7crzm1TjRicDntNmQEE9wZ6UZlmiISB1pg#NotoSans */
+      url('fonts/Noto_Sans_700italic.svg#NotoSans') format('svg');
+}
+
+
+/**********************************************************************************************************************************************************
+ * Droid Sans Mono
+ **********************************************************************************************************************************************************/
+@font-face {
+   font-family: 'Droid Sans Mono';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      local('Droid Sans Mono'),
+      local('DroidSansMono'),
+      /* from http://fonts.gstatic.com/s/droidsansmono/v6/ns-m2xQYezAtqh7ai59hJTwtzT4qNq-faudv5qbO9-U.eot */
+      url('fonts/Droid_Sans_Mono_400.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/droidsansmono/v6/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff */
+      url('fonts/Droid_Sans_Mono_400.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/droidsansmono/v6/ns-m2xQYezAtqh7ai59hJYW_AySPyikQrZReizgrnuw.ttf */
+      url('fonts/Droid_Sans_Mono_400.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=ns-m2xQYezAtqh7ai59hJaCLXEu0wbeKjKdJPgQe1G4#DroidSansMono */
+      url('fonts/Droid_Sans_Mono_400.svg#DroidSansMono') format('svg');
+}
+
+
+/**********************************************************************************************************************************************************
+ * Source Code Pro
+ **********************************************************************************************************************************************************/
+@font-face {
+   font-family: 'Source Code Pro';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      local('Source Code Pro'),
+      local('SourceCodePro-Regular'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/mrl8jkM18OlOQN8JLgasD90tugusXa58UbOrParLRF0.eot */
+      url('Source_Code_Pro_400.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff */
+      url('Source_Code_Pro_400.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/mrl8jkM18OlOQN8JLgasD9zbP97U9sKh0jjxbPbfOKg.ttf */
+      url('Source_Code_Pro_400.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=mrl8jkM18OlOQN8JLgasDwDX0QHsyBtvFGhCuXSMYhM#SourceCodePro */
+      url('Source_Code_Pro_400.svg#SourceCodePro') format('svg');
+}
+@font-face {
+   font-family: 'Source Code Pro';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      local('Source Code Pro Bold'),
+      local('SourceCodePro-Bold'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqVV89XnfCtb1fhQGOlhyqi8.eot */
+      url('Source_Code_Pro_700.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqVkQc6VGVFSmCnC_l7QZG60.woff */
+      url('Source_Code_Pro_700.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqbsbIrGiHa6JIepkyt5c0A0.ttf */
+      url('Source_Code_Pro_700.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=leqv3v-yTsJNC7nFznSMqToOxVUo1xdF11_PvoexWN4#SourceCodePro */
+      url('Source_Code_Pro_700.svg#SourceCodePro') format('svg');
+}
+
+
+/**********************************************************************************************************************************************************
+ * Noticia Text
+ **********************************************************************************************************************************************************/
+@font-face {
+   font-family: 'Noticia Text';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      local('Noticia Text'),
+      local('NoticiaText-Regular'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/wdyV6x3eKpdeUPQ7BJ5uUHZ2MAKAc2x4R1uOSeegc5U.eot */
+      url('Noticia_Text_400.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/wdyV6x3eKpdeUPQ7BJ5uUHhCUOGz7vYGh680lGh-uXM.woff */
+      url('Noticia_Text_400.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/wdyV6x3eKpdeUPQ7BJ5uUInF5uFdDttMLvmWuJdhhgs.ttf */
+      url('Noticia_Text_400.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=wdyV6x3eKpdeUPQ7BJ5uUFlIn5tFQcqMuf-jhyJP0ps#NoticiaText */
+      url('Noticia_Text_400.svg#NoticiaText') format('svg');
+}
+@font-face {
+   font-family: 'Noticia Text';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      local('Noticia Text Bold'),
+      local('NoticiaText-Bold'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/pEko-RqEtp45bE2P80AAKWmsoyWrDyoltQVIP7q_RGg.eot */
+      url('Noticia_Text_700.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/pEko-RqEtp45bE2P80AAKXl4twXkwp3_u9ZoePkT564.woff */
+      url('Noticia_Text_700.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/pEko-RqEtp45bE2P80AAKX06qf9KHRHwsVx7iw5MXmY.ttf */
+      url('Noticia_Text_700.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=pEko-RqEtp45bE2P80AAKQay50PuN8loMJ9QAXsTs7U#NoticiaText */
+      url('Noticia_Text_700.svg#NoticiaText') format('svg');
+}
+@font-face {
+   font-family: 'Noticia Text';
+   font-style: italic;
+   font-weight: 400;
+   src:
+      local('Noticia Text Italic'),
+      local('NoticiaText-Italic'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/dAuxVpkYE_Q_IwIm6elsKDoGYR7Z3iWH66EXnaJoKgg.eot */
+      url('Noticia_Text_400italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/dAuxVpkYE_Q_IwIm6elsKHpumDtkw9GHrrDfd7ZnWpU.woff */
+      url('Noticia_Text_400italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/dAuxVpkYE_Q_IwIm6elsKCtfYakCkPqOMDce0h_3gD8.ttf */
+      url('Noticia_Text_400italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=dAuxVpkYE_Q_IwIm6elsKH2UFnxWCzsMUZbVj2XRF5M#NoticiaText */
+      url('Noticia_Text_400italic.svg#NoticiaText') format('svg');
+}
+@font-face {
+   font-family: 'Noticia Text';
+   font-style: italic;
+   font-weight: 700;
+   src:
+      local('Noticia Text Bold Italic'),
+      local('NoticiaText-BoldItalic'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/-rQ7V8ARjf28_b7kRa0Juiy7jlJQNiTiB3-MejPw_5E.eot */
+      url('Noticia_Text_700italic.eot?#iefix') format('embedded-opentype'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/-rQ7V8ARjf28_b7kRa0Jur0qgHI2SEqiJszC-CVc3gY.woff */
+      url('Noticia_Text_700italic.woff') format('woff'),
+      /* from http://fonts.gstatic.com/s/noticiatext/v5/-rQ7V8ARjf28_b7kRa0JuixQL91WRy8t8mPvAX_dIgA.ttf */
+      url('Noticia_Text_700italic.ttf') format('truetype'),
+      /* from http://themes.googleusercontent.com/licensed/font?kit=-rQ7V8ARjf28_b7kRa0JuuiOBN1C42tFdXFKJTGlCXo#NoticiaText */
+      url('Noticia_Text_700italic.svg#NoticiaText') format('svg');
+}
+
+

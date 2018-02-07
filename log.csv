@@ -53,15 +53,15 @@ sphinx-nameko-mw-theme,completed,import
 sphinx-nameko-theme,completed,import
 sphinx-naps-theme,skip,
 oe-sphinx-theme,completed,import
-ovs-sphinx-theme,,
-sphinx-pdj-theme,,
-pietroalbini-sphinx-themes,,
-PSphinxTheme,,
-pylons-sphinx-themes,,
-quark-sphinx-theme,,
-sphinx-readable-theme,,
-sphinx-redactor-theme,,
-renga-sphinx-theme,,
+ovs-sphinx-theme,completed,import
+sphinx-pdj-theme,completed,import
+pietroalbini-sphinx-themes,completed,import
+PSphinxTheme,completed,config change-multiple themes
+pylons-sphinx-themes,completed,import-multiple themes
+quark-sphinx-theme,completed,import
+sphinx-readable-theme,failed,ascii
+sphinx-redactor-theme,completed,import
+renga-sphinx-theme,completed,config change
 sphinxcontrib-rextheme,,
 rtcat-sphinx-theme,,
 stsci-rtd-theme,,

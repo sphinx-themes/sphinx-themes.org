@@ -1,0 +1,34 @@
+a {
+    color: #004dc2;
+}
+
+h1, h2, h3, h4, h5, h6,
+div.admonition p.admonition-title {
+    font-family: "DejaVu";
+}
+
+div.buildthedocs-warning, div.accent-color-bar {
+    background: #004dc2;
+}
+
+
+/** NIGHT THEME **/
+
+body.night a {
+    color: #5c9dff;
+}
+
+
+/** PYGMENTS STUFF **/
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kt, .highlight .nt, .highlight .ow {
+    color: #004dc2;
+}
+
+body.night .highlight .k, .body.night highlight .kc, .body.night highlight .kd,
+body.night .highlight .kn, body.night .highlight .kp,
+body.night .highlight .kr, body.night .highlight .kt,
+body.night .highlight .nt, body.night .highlight .ow {
+    color: #5c9dff;
+}
