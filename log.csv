@@ -73,12 +73,12 @@ zerovm-sphinx-theme,completed,import
 sphinx-typlog-theme,completed,import config change
 yummy-sphinx-theme,completed,perfect
 sunpy-sphinx-theme,completed,import config change
-sphinx.plonetheme,,
-sphinx.themes.plone,,
-sphinx_adc_theme,,
-sphinx_bernard_theme,,
-sphinx_drove_theme,,
-sphinx_hand_theme,,
+sphinx.plonetheme,failed,themecore is required
+sphinx.themes.plone,failed,some
+sphinx_adc_theme,completed,import
+sphinx_bernard_theme,completed,import
+sphinx_drove_theme,completed,import
+sphinx_hand_theme,completed,import
 sphinx_html5_basic_theme,,
 sphinx_julia_theme,,
 sphinx_materialdesign_theme,,
