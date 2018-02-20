@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/*
+**	ドキュメント本体用のスタイルシート
+*/
+
+/* @group general */
+div#document {
+	color: #444;
+}
+
+div#document p {
+	margin-bottom: 1em;
+}
+
+/* section headers */
+div#document h1{
+	font-size: 2em;
+	font-weight: bold;
+	color: #444;
+	margin-bottom: 0.5em;
+}
+div#document h2,
+div#document h3,
+div#document h4,
+div#document h5,
+div#document h6 {
+	font-weight: 400;
+	border-bottom: 1px dotted #CCC;
+	color: #656565;
+	margin-bottom: 0.5em;
+}
+
+div#document h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	border-bottom: 3px solid #CCC;
+}
+
+div#document h3 {
+	font-size: 1.2em;
+}
+
+div#document h4 {
+	font-size: 1.1em;
+}
+
+div#document h5, 
+div#document h6 {
+	font-size: 1.0em;
+}
+
+div#document a.headerlink:link {
+	display: none;
+}
+
+div#document a.headerlink:hover {
+	margin-left: 0.5em;
+	color: #999;
+	text-decoration: none;
+}
+
+div#document ul {
+	list-style-type: disc;
+	list-style-position: outside;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+div#document div.section {
+	margin-bottom: 1.5em;
+}
+
+.problematic {
+	background-color: #EEE;
+	padding: 0.2em;
+}
+
+dl {
+	margin: 0.5em 0;
+}
+
+dl > dt {
+	font-weight: bold;
+}
+
+dl > dd {
+	text-indent: 1em;
+}
+
+div#document img {
+	margin: 15px;
+}
+
+div#document .figure {
+	text-align: center;
+	margin: 10px;
+	background-color: #eee;
+	padding: 0.5em 1em;
+}
+div#document .figure img {
+	margin: 5px;
+}
+div#document .figure p.caption {
+	margin: 0 5px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0;
+}
+div#document .figure div {
+	text-align: left;
+}
+
+/* @end general */
+
+/* 目次 */
+div#document ul li.toctree-l1 {
+	list-style: none;
+}
+
+div#document ul li.toctree-l1 > a {
+	font-weight: bold;
+}
+
+div#document ul ul {
+	margin-left: 2em;
+}
+
+/* @group linkstyle */
+div#document a:link {
+	color: #416d8d;
+	text-decoration: underline;
+}
+
+div#document a:hover {
+	color: #2c74ff;
+	text-decoration: underline;
+}
+
+div#document a:visited {
+	color: #416d8d;
+}
+
+div#document a:active {
+	color: #2c74ff;
+	text-decoration: underline;
+}
+/* @end */
+/* @group note */
+
+/* TODO: 背景にアイコンを入れる -> ノート、警告、参考 */
+div#document div.admonition {
+	font-size: 90%;	
+}
+
+div#document div.admonition > p.admonition-title {
+	color: #FFF;
+	padding-left: 0.5em;
+	margin: 0;
+	border-ight-color: 1px solid #AAA;
+}
+
+div#document div.admonition > p.last {
+	background-color: #FFF;
+	margin: 0;
+	border-right: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+	border-left: 1px solid #EEE;
+	padding: 0.5em;
+}
+
+/* 参考 */
+div#document div.admonition.seealso p.admonition-title{
+	background-color: #8ebbe1;
+} 
+
+/* ノート */
+div#document div.admonition.note p.admonition-title{
+	background-color: #ebe460;
+} 
+
+/* 警告 */
+div#document div.admonition.warning p.admonition-title{
+	background-color: #aa4936;
+}
+/* @end */
+/* @group 脚注 */
+div#document p.rubric {
+	color: #;
+}
+
+div#document table.footnote {
+	font-size: 90%;
+}
+/* @end */
+
+/* @group table */
+div#document table.docutils {
+	margin: 1em;
+	border-right: 1px solid #AAA;
+}
+
+div#document table.docutils > caption {
+	font-weight: bold;
+	background-color: #666;
+	margin: 0;
+	color: #FFF;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+div#document table.docutils td,
+div#document table.docutils th {
+	padding: 5px;
+	border-left: 1px solid #AAA;
+}
+/* @end */
+
+/* @group search */
+/* search.html */
+div#document fieldset.search {
+	border: none;
+	width: 226px;
+	margin: 30px 0;
+	border: 1px solid #999;
+}
+
+div#document fieldset.search input.hint {
+	width: 190px;
+	height: 20px;
+	padding: 3px;
+	color: #555;
+	font-size: 1.2em;
+	border: none;
+}
+
+div#document fieldset.search button.button {
+	width: 26px;
+	height: 27px;
+	text-indent: -9999px;
+	border: none;
+}
+/* @end */
+
+/* @group hatena */
+/* hatena bookmark */
+div#document a.hatena-bookmark-count img {
+	margin: 0 4px;
+}
+/* hatena star */
+div#document .hatena-star-star-container img.hatena-star-star {
+	margin: 3px 0;
+}
+/* @end */
+

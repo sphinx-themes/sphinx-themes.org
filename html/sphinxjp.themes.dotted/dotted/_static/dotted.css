@@ -1,0 +1,523 @@
+/*
+ * dotted.css
+ * ~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- dotted style theme. 
+ *
+ * This theme was created by referring to Haiku.
+ * Thanks to the authors of Haiku theme which gave me great inspiration.
+ *
+ * :copyright: Copyright 2011 by Sphinx-users.jp, see AUTHORS.
+ * :license: MIT, see LICENSE for details.
+ *
+ */
+
+@import url("basic.css");
+
+/* -- page layout ----------------------------------------------------------- */
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    line-height: 1.5;
+    margin: auto;
+    padding: 0px;
+    background: #FFF url(bg_dotted.png);
+    font-family: "Trebuchet MS", Tahoma, Helvetica, Arial, San-serif;
+    min-width: 59em;
+    max-width: 70em;
+    color: #333333;
+}
+
+div.footer {
+    padding: 8px;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* -- link colors and text decoration --------------------------------------- */
+
+a:link {
+    /* color: #895b8a; */
+    color: #915c8b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    /* color: #895b8a; */
+    color: #915c8b;
+    font-weight: bold;
+    text-decoration: none;    
+}
+
+a:hover, a:active {
+    color: #a7ce38;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* -- Some headers act as anchors, don't give them a hover effect ----------- */
+
+h1 a:hover, a:active {
+    text-decoration: none;    
+}
+
+h2 a:hover, a:active {
+    text-decoration: none;    
+}
+
+h3 a:hover, a:active {
+    text-decoration: none;    
+}
+
+h4 a:hover, a:active {
+    text-decoration: none;    
+}
+
+a.headerlink {
+    padding-left: 5px;
+}
+
+a.headerlink:hover, a.headerlink:visited {
+    color: #a7ce38;
+}
+
+/* -- basic text elements --------------------------------------------------- */
+
+div.wrapper {
+    border: solid 1px #DDD;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 2px #666;
+    -khtml-box-shadow: 0px 1px 2px #666;
+    -moz-box-shadow: 0px 1px 2px #666;
+    margin: 20px 0px 20px 0px;
+    padding: 20px 40px 50px 40px;
+    background: #FFFCFF;
+}
+
+div.documentwrapper {
+   width: 100%;
+}
+
+div.bodywrapper {
+   margin: 0;
+}
+
+div.body { 
+    font-size: 0.9em;
+}
+
+div.clearer {
+    clear: both;
+}
+
+/* -- heading and navigation ------------------------------------------------ */
+
+div.header {
+    border: solid 1px #DDD;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    -khtml-border-radius: 0px 0px 4px 4px;
+    -moz-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+    -webkit-box-shadow: 0px 1px 2px #666;
+    -khtml-box-shadow: 0px 1px 2px #666;
+    -moz-box-shadow: 0px 1px 2px #666;
+}
+
+div.header-top {
+    -webkit-box-shadow: 0px 1px 1px #fff inset;
+    -khtml-box-shadow: 0px 1px 1px #fff inset;
+    -moz-box-shadow: 0px 1px 1px #fff inset;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 85px;
+    background: #F1F1F1;
+    background: linear-gradient(top, #F1F1F1, #FFFFFF);
+    background: -moz-linear-gradient(top, #F1F1F1, #FFFFFF);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F1F1F1), to(#FFFFFF));
+    border-bottom: 1px solid #e7e7eb;
+    padding: 0 40px;
+}
+
+div.header-top h1 {
+    font-size: 1.6em;
+    font-wieght: normal;
+    letter-spacing: 1px;
+    color: #0c3762;
+    border: 0;
+    margin: 0;
+    padding-top: 15px;
+}
+
+div.header-top h1 a {
+    font-decoration: normal;
+    color: #0c3762;
+}
+
+div.header-top h2 {
+    font-size: 1.3em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaa;
+    border: 0;
+    margin-top: -3px;
+    padding: 0;
+}
+
+div.header-top img.rightlogo {
+    float: right;
+}
+
+div.title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #0c3762;
+    border-bottom: dotted thin #e0e0e0;
+    margin-bottom: 25px;
+}
+
+div.topnav {
+    border-top: 1px solid #ffffff;
+    background: #F2F2F2;
+    background: linear-gradient(top, #F2F2F2, #E2E2E2);
+    background: -moz-linear-gradient(top, #F2F2F2, #E2E2E2);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#E2E2E2));
+}
+
+div.topnav p {
+    margin-top: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 0.8em;
+    height: 28px;
+}
+
+div.topnav p a {
+    line-height: 28px;
+}
+
+div.topnav div.globaltoc {
+    border: solid 1px #DDD;
+    position: absolute;
+    -webkit-border-radius: 0 0 4px 4px;
+    -khtml-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0px 1px 3px #666;
+    -khtml-box-shadow: 0px 1px 3px #666;
+    -moz-box-shadow: 0px 1px 3px #666;
+    background: #F2F2F2;
+    background: linear-gradient(top, #F2F2F2, #E2E2E2);
+    background: -moz-linear-gradient(top, #F2F2F2, #E2E2E2);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#E2E2E2));
+}
+
+div.globaltoc ul {
+    padding: 0 1.8em;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    display: none;
+}
+
+div.globaltoc ul li a {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.bottomnav {
+/*  background: #F2F2F2; */
+}
+
+div.bottomnav p {
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+a.uplink {
+    font-weight: normal;
+}
+
+
+/* -- contents box ---------------------------------------------------------- */
+
+table.index {
+    margin: 0px 0px 30px 30px;
+    padding: 1px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #e0e0e0;
+}
+
+table.index tf.heading {
+    background-color: #e0e0e0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+table.index tr.index {
+    background-color: #eeeeee;
+}
+
+table.index td {
+    padding: 5px 20px;
+}
+
+table.index a:link, table.index a:visited {
+    font-weight: normal;
+    text-decoration: none;
+    color: #dc3c01;
+}
+
+table.index a:hover, table.index a:active {
+    text-decoration: underline;
+    color: #ff4500;
+}
+
+
+/* -- dotted styles and layout -------------------------------------------- */
+
+/* Rounded corner boxes */
+/* Common declarations */
+div.admonition {
+    background: #eaedf7;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #dcdcdc;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+div.danger, div.error {
+    background: #f6bfbc;
+/*  background: linear-gradient(top, #f6bfbc, #f6bfbc 60%, #fff);
+    background: -moz-linear-gradient(top, #f6bfbc, #f6bfbc 60%, #fff);
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#f6bfbc), color-stop(0.6, #f6bfbc), to(#fff));
+    padding: 10px 15px 10px 80px; */
+    min-height: 42px;
+}
+
+div.warning, div.caution, div.attention {
+    background: #fce2c4;
+/*  background: linear-gradient(top, #fce2c4, #fce2c4 60%, #fff);
+    background: -moz-linear-gradient(top, #fce2c4, #fce2c4 60%, #fff);
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#fce2c4), color-stop(0.6, #fce2c4), to(#fff));
+    padding: 10px 15px 10px 80px; */
+    min-height: 42px;
+}
+
+div.note, div.important {
+    background: #fffbc6;
+/*  background: linear-gradient(top, #fffbc6, #fffbc6 60%, #fff);
+    background: -moz-linear-gradient(top, #fffbc6, #fffbc6 60%, #fff);
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#fffbc6), color-stop(0.6, #fffbc6), to(#fff));
+    padding: 10px 15px 10px 80px; */
+    min-height: 42px;
+}
+
+div.hint, div.tip {
+    background: #e4ffde;
+/*  background: linear-gradient(top, #e4ffde, #e4ffde 60%, #fff);
+    background: -moz-linear-gradient(top, #e4ffde, #e4ffde 60%, #fff);
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#e4ffde), color-stop(0.6, #e4ffde), to(#fff));
+    padding: 10px 15px 10px 80px; */
+    min-height: 42px;
+}
+
+div.seealso {
+    background: #eaf4fc;
+/*  background: linear-gradient(top, #eaf4fc, #eaf4fc 60%, #fff);
+    background: -moz-linear-gradient(top, #eaf4fc, #eaf4fc 60%, #fff);
+    background: -webkit-gradient(linear, left top, left bottom,
+                                 from(#eaf4fc), color-stop(0.6, #eaf4fc), to(#fff)); */
+    min-height: 42px;
+}
+
+
+/* -- more layout styles ---------------------------------------------------- */
+
+h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333333;
+    border-bottom: dotted thin #e0e0e0;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #333333;
+    border-bottom: dotted thin #e0e0e0;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #333333;
+    margin-top: 30px;
+}
+
+h4 {
+    font-size: 1.0em;
+    font-weight: normal;
+    color: #333333;
+    margin-top: 30px;
+}
+
+p {
+    text-align: justify;
+}
+
+p.last {
+    margin-bottom: 0;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ul {
+/*  padding-left: 5px; */
+    margin-top: 3px;
+}
+
+li {
+    line-height: 1.3;
+}
+
+div.body ul > li {
+/*  -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent url(bullet_orange.png) no-repeat scroll left 0.45em;
+    list-style-image: none;
+    list-style-type: none;
+    padding: 0 0 0 1.666em; */
+    margin-bottom: 3px;
+}
+
+td {
+    vertical-align: top;
+}
+
+tt {
+    background-color: #E2E2E2;
+    font-size: 1.0em;
+    font-family: monospace;
+}
+
+pre {
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #0c3762;
+    margin: 0 0 12px 0;
+    padding: 0.8em;
+    background-color: #F0F0F0;
+    line-height: 1.25em;
+}
+
+.highlight {
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+div.linenodiv {
+    margin-top: 2px;
+}
+
+div.linenodiv pre {
+    padding: 0.8em 0;
+}
+
+table.docutils thead {
+    background: #F2F2F2;
+    background: linear-gradient(top, #F2F2F2, #fff);
+    background: -moz-linear-gradient(top, #F2F2F2, #fff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#fff));
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* -- printer only pretty stuff ----- */
+@media print {
+    .noprint {
+        display: none;
+    }
+    /* for acronyms we want their definitions inlined at print time */
+    acronym[title]:after {
+        font-size: small;
+        content: " (" attr(title) ")";
+        font-style: italic;
+    }
+    /* and not have mozilla dotted underline */
+    acronym {
+        border:none;
+    }
+    div.topnav, div.bottomnav, div.header, table.index {
+        display: none;
+    }
+    div.body {
+        margin: 0px;
+        padding: 0px;
+    }
+    html {
+        background: #FFF;
+    }
+}
+
+.viewcode-back {
+    font-family: 
+}
+
+div.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+    margin: -1px -12px;
+    padding: 0 12px;
+}
+
+/* -- end ------------------------------------------------------------------- */
+/* vi: set ts=4 sw=4 ft=css: */

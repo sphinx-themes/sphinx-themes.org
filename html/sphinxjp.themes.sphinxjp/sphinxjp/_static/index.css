@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+div#showcase {
+	margin: 0;
+	padding: 1em;
+	background-color: #273437;
+	min-height: 400px;
+	border-bottom: 1px solid #111;
+}
+
+div#showcase > div {
+	float: left;
+}
+
+div#showcase > div#showLeft {
+	width: 20%;
+}
+
+div#showcase > div#showMid {
+	width: 60%;
+}
+
+div#showcase > div#showRight {
+	width: 20%;
+}

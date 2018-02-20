@@ -8,7 +8,6 @@ PKG_NAME=$1
 THEME=$2
 IMPORT=$3
 
-
 pip3 install $PKG_NAME
 
 

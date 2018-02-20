@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+pre {
+	margin:1em;
+	padding: 1em;
+	border-top: 1px solid #E4E4E4;
+	border-left: 1px solid #E4E4E4;
+	border-right: 1px solid #F3F3F3;
+	border-bottom: 1px solid #F3F3F3;
+	background-color: #f6f9fb;
+	font-family: "Courier New", Courier, mono;
+	font-size: 0.9em;
+}
+
+.literal {
+	background-color: #F1F1F1;
+	padding: 0.3em;
+	border-bottom: 1px dashed #b4b4b4;
+	font-style: italic;
+}

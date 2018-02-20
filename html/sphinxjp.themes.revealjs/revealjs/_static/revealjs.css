@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.reveal tt.code span.pre {
+    font-family: monospace;
+}

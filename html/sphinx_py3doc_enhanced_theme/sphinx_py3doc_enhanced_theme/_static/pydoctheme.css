@@ -1,0 +1,443 @@
+@import url("classic.css");
+a tt {
+    font-weight: normal;
+}
+body {
+    background-color: white;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+div.related {
+    margin-bottom: 1.2em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ccc;
+    margin-top: 0.5em;
+    overflow: auto;
+    width: 100%
+}
+div.related:first-child {
+    border-bottom: 0;
+}
+
+div.related a:hover {
+    color: #0095C4;
+}
+
+div.sphinxsidebar {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    line-height: 130%;
+    font-size: smaller;
+    position: relative;
+}
+div.sphinxsidebarwrapper {
+    position: relative;
+}
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    margin-top: 1.5em;
+}
+div.sphinxsidebarwrapper h3:first-child {
+    margin-top: 0.2em;
+}
+
+div.sphinxsidebarwrapper > ul > li > ul > li {
+    margin-bottom: 0.4em;
+}
+
+div.sphinxsidebar a:hover {
+    color: #0095C4;
+}
+
+div.sphinxsidebar input {
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    border: 1px solid #999999;
+    font-size: smaller;
+    border-radius: 3px;
+}
+
+div.sphinxsidebar input[type=text] {
+    max-width: 150px;
+}
+
+div.body {
+    padding: 0 0 0 1.2em;
+}
+
+div.body p {
+    line-height: 140%;
+}
+div.body p, div.body dd, div.body li {
+    text-align: left;
+}
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+    margin: 0;
+    border: 0;
+    padding: 0.3em 0;
+}
+
+div.body hr {
+    border: 0;
+    background-color: #ccc;
+    height: 1px;
+}
+
+div.body pre {
+    border-radius: 3px;
+    border: 1px solid #ac9;
+}
+
+div.body div.admonition, div.body div.impl-detail {
+    border-radius: 3px;
+}
+
+div.body div.impl-detail > p {
+    margin: 0;
+}
+
+div.body div.seealso {
+    border: 1px solid #dddd66;
+}
+
+div.body a {
+    color: #00608f;
+}
+
+div.body a:visited {
+    color: #30306f;
+}
+
+div.body a:hover {
+    color: #00B0E4;
+}
+
+div.body .section:target > h1,
+div.body .section:target > h2,
+div.body .section:target > h3,
+div.body .section:target > h4,
+div.body .section:target > h5,
+dt:target,
+p:target,
+div.body span:target + h1,
+div.body span:target + h2,
+div.body span:target + h3,
+div.body span:target + h4,
+div.body span:target + h5 {
+    color: #000;
+    background: #f1c40f;
+    border-radius: 4px;
+    padding-left: 10px;
+    margin-left: -10px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.6);
+}
+p:target {
+    margin-left: inherit;
+}
+
+
+tt, pre {
+    font-family: monospace, sans-serif;
+    font-size: 96.5%;
+}
+
+div.body tt {
+    border-radius: 3px;
+}
+div.body code.descname,
+div.body tt.descname {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+div.body code.descclassname {
+    font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code {
+    font-weight: normal;
+}
+
+div.body tt.xref, div.body a tt {
+    font-weight: normal;
+}
+
+.deprecated {
+    border-radius: 3px;
+}
+
+table.docutils {
+    border: 1px solid #ddd;
+    min-width: 20%;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table.docutils td, table.docutils th {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+table p, table li {
+    text-align: left;
+}
+table td p:last-child {
+    margin-bottom: 0;
+}
+
+table.docutils th {
+    background-color: #eee;
+    padding: 0.3em 0.5em;
+}
+
+table.docutils td {
+    background-color: white;
+    padding: 0.3em 0.5em;
+}
+
+table.footnote, table.footnote td {
+    border: 0;
+}
+
+div.footer {
+    line-height: 150%;
+    margin-top: -2em;
+    text-align: right;
+    width: auto;
+    margin-right: 10px;
+}
+
+div.footer a:hover {
+    color: #0095C4;
+}
+
+.refcount {
+    color: #060;
+}
+
+.stableabi {
+    color: #229;
+}
+
+div.sphinxsidebar,
+.related a {
+    font-family: 'Myriad Pro', 'Trebuchet Ms', 'Segoe UI', sans-serif;
+}
+pre, code, tt {
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New', monospace;
+}
+
+div.body pre {
+    border: 1px solid #ddd;
+    background-color: #fffdfd;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
+div.viewcode-block:target {
+    background-color: #FFF4E6;
+}
+.toctree-l1 {
+    font-size: 115%;
+    padding: 3px 5px;
+    margin: 5px 0;
+}
+.toctree-l1.current {
+    background: white;
+    border-radius: 5px;
+}
+.toctree-l1.current * {
+}
+.toctree-l1 li {
+    list-style: circle;
+}
+.toctree-l1.current > a:first-child,
+.toctree-l2.current > a:first-child,
+.toctree-l3.current > a:first-child {
+    font-weight: bold;
+}
+.toctree-l2.current,
+.toctree-l3.current {
+    list-style: disc;
+}
+.toctree-l2.current,
+.toctree-l2.current * {
+    color: #000;
+}
+pre, table, img {
+    box-shadow: 1px 1px 3px #efefef;
+}
+.sphinxsidebar {
+    box-shadow: 0px 0px 2px #999;
+}
+img, div.figure {
+    box-shadow: 1px 1px 6px #ccc;
+    margin: 5px auto 7px auto;
+    display: block;
+    max-width: 100%;
+}
+img:active {
+    max-width: inherit;
+}
+div.figure p.caption {
+    text-align: center;
+}
+img.math {
+    box-shadow: none;
+    margin: 0;
+    display: inline-block;
+}
+div.figure img,
+p > img,
+li > img {
+    display: inline-block;
+    box-shadow: none;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    
+    text-shadow: 1px 1px 2px #ddd;
+    
+    font-weight: bold;
+    color: #333;
+}
+code, tt {
+    background: none;
+    
+    text-shadow: 1px 1px 2px #ddd;
+    font-weight: bold;
+    
+}
+
+
+div.sphinxsidebarwrapper > ul > li > ul > li {
+    margin: 0.4em 0 0 0;
+}
+div.related {
+    line-height: normal;
+}
+div.related li.responsive-menu {
+    display: none;
+    margin-right: 5px;
+}
+div.related li.responsive-menu a {
+    font-size: 200%;
+    background: #00B0E4;
+    color: white;
+    border-radius: 3px;
+    padding: 0 4px;
+}
+div.related li.responsive-menu a:hover {
+    text-decoration: none;
+    color: #30306f;
+}
+div.related li {
+    vertical-align: middle;
+}
+div.related:first-child li.right {
+    display: none;
+}
+div.related ul {
+    padding: 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    div.related:first-child li.responsive-menu {
+        display: inline-block;
+    }
+    div.related:nth-child(3) li {
+        display: none;
+    }
+    div.related:nth-child(3) li.right {
+        display: inline-block;
+    }
+    div.related:nth-child(3) {
+        height: 5ex;
+    }
+    div.sphinxsidebar {
+        margin: 0;
+        width: 100%;
+        border-top: 2px solid #777;
+    }
+    div.bodywrapper {
+        margin: 0;
+    }
+    div.body {
+        padding: 0;
+    }
+    #sidebarbutton {
+        display: none;
+    }
+    div.sphinxsidebarwrapper {
+        position: inherit;
+    }
+}
+.odd-headings .row-odd td, .odd-headings .row-odd th {
+    font-weight: bold;
+    background: #eee;
+}
+.highlights {
+    font-size: 135%;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+}
+.highlight  {
+    /* seems there some nasty rules in pygments.css, that shouldn't set any background! */
+    background: inherit !important;
+}
+/* correct argument descriptions for reference sections */
+.field-body li > p:first-of-type {
+    display: inline-block;
+}
+.field-body li > p {
+    margin: 1ex 0;
+}
+
+div.badge a {
+    overflow: hidden;
+    text-indent: -100px;
+    position: absolute;
+    right: -50px;
+    top: 40px;
+    display: block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 230px;
+    height: 33px;
+}
+div.badge img {
+    box-shadow: none;
+    margin: 0;
+    border: 0;
+    width: 149px;
+    height: 149px;
+}
+.badge {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 149px;
+    height: 149px;
+}
+

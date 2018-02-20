@@ -79,40 +79,40 @@ sphinx_adc_theme,completed,import
 sphinx_bernard_theme,completed,import
 sphinx_drove_theme,completed,import
 sphinx_hand_theme,completed,import
-sphinx_html5_basic_theme,,
-sphinx_julia_theme,,
-sphinx_materialdesign_theme,,
-sphinx_minoo_theme,,
-sphinx_molview_theme,,
-sphinx_ops_theme,,
-sphinx_py3doc_enhanced_theme,,
-sphinx_rtd_theme,,
-sphinx_seznam_theme,,
-sphinx_theme_pd,,
-sphinxbootstrap4theme,,
-sphinxjp.themes.basicstrap,,
-sphinxjp.themes.dotted,,
-sphinxjp.themes.gopher,,
-sphinxjp.themes.htmlslide,,
-sphinxjp.themes.impressjs,,
-sphinxjp.themes.revealjs,,
-sphinxjp.themes.s6,,
-sphinxjp.themes.sphinxjp,,
-sphinxjp.themes.tinkeralizarin,,
-sphinxjp.themes.tinkerbelizehole,,
-sphinxjp.themes.tinkerbelizeholesidebar,,
-sphinxjp.themes.tinkerdahlia,,
-sphinxjp.themes.tinkerpress,,
-sphinxjp.themes.tinkerturquoise,,
-sphinxjp.themes.tinkerturquoisesinglecolumn,,
-sphinxjp.themes.trstyle,,
-sphinxtheme.plone,,
-sphinxtrap,,
+sphinx_html5_basic_theme,skipped,
+sphinx_julia_theme,skipped,repository missing
+sphinx_materialdesign_theme,completed,perfect
+sphinx_minoo_theme,completed,import
+sphinx_molview_theme,skipped,repository missing
+sphinx_ops_theme,completed,import
+sphinx_py3doc_enhanced_theme,completed,import
+sphinx_rtd_theme,completed,perfect
+sphinx_seznam_theme,broken,repository missing
+sphinx_theme_pd,completed,import
+sphinxbootstrap4theme,completed,import config change
+sphinxjp.themes.basicstrap,completed,perfect
+sphinxjp.themes.dotted,completed,perfect
+sphinxjp.themes.gopher,completed,perfect
+sphinxjp.themes.htmlslide,completed,perfect
+sphinxjp.themes.impressjs,broken,1.7 broken
+sphinxjp.themes.revealjs,completed,1.7 broken
+sphinxjp.themes.s6,completed,1.7 broken
+sphinxjp.themes.sphinxjp,completed,perfect
+sphinxjp.themes.tinkeralizarin,skipped, for tinkerer
+sphinxjp.themes.tinkerbelizehole,skipped, for tinkerer
+sphinxjp.themes.tinkerbelizeholesidebar,skipped, for tinkerer
+sphinxjp.themes.tinkerdahlia,skipped, for tinkerer
+sphinxjp.themes.tinkerpress,skipped, for tinkerer
+sphinxjp.themes.tinkerturquoise,skipped, for tinkerer
+sphinxjp.themes.tinkerturquoisesinglecolumn,skipped, for tinkerer
+sphinxjp.themes.trstyle,completed,perfect
+sphinxtheme.plone,skipped,pip install failed on python3
+sphinxtrap,broken, No module named 'HTMLParser'
 stanford-theme,completed,
-stsci_sphinx_theme,,
-t3SphinxThemeRtd,,
-tibas.tt,,
-tl.pkg,,
-ushahidi_sphinx_rtd_theme,,
-wild_sphinx_theme,,
-wuxi,,
+stsci_sphinx_theme,skipped,use stsci_rtd_theme
+t3SphinxThemeRtd,completed,import
+tibas.tt,completed,import config change
+tl.pkg,skipped,not workd
+ushahidi_sphinx_rtd_theme,skipped,repository missing
+wild_sphinx_theme,completed,import config change
+wuxi,skipped, repository missing

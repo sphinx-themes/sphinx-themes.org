@@ -1,0 +1,293 @@
+/*
+ * s6.css
+ * ~~~~~~~~
+ *
+ * Sphinx stylesheet -- s6 presentation theme.
+ *
+ * :copyright: Copyright 2011 by Takayuki SHIMIZUKAWA, see AUTHORS.txt .
+ * :license: MIT, see LICENSE.txt for details.
+ *
+ */
+
+@import url("basic.css");
+
+/* -- body styles ----------------------------------------------------------- */
+
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+div.related,
+a.headerlink {
+	display: none;
+}
+#searchbox {
+	visibility: hidden;
+}
+
+div.header a {
+	text-decoration: none;
+	height: 100em;
+	display: block;
+}
+div.header a:hover {
+	color: orange;
+}
+
+div.footer {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	right: 0;
+	background-color: gray;
+	color: black;
+	font-size: 130%;
+	padding: 0.2em;
+}
+div.footer a {
+	color: orange;
+	text-decoration: none;
+}
+div.footer:hover {
+	font-size: 200%;
+	background-color: black;
+	color: white;
+	border: 0 solid gray;
+	border-width: 0.1em 0 0 0.2em;
+}
+div.footer:hover a {
+	color: blue;
+}
+div.footer span.hidden {
+	display: none;
+}
+div.footer:hover span.hidden {
+	display: inline;
+}
+
+div.related {
+	display: none;
+}
+#searchbox {
+	visibility: hidden;
+}
+
+div.documentwrapper {
+	margin: 0;
+	position: absolute;
+	z-index: 10;
+}
+
+div.bodywrapper {
+	margin: 0;
+	z-index: 0;
+}
+
+div.sphinxsidebar {
+	background-color: #11303D;
+	position: fixed;
+	left: 0;
+	margin: 0;
+	height: 800px;
+	z-index: 0;
+}
+
+div.sphinxsidebar:hover {
+	z-index: 100;
+}
+
+div.navigation-area-top,
+div.navigation-area-bottom {
+    background-color: transparent;
+    z-index: 110;
+    text-align: center;
+}
+div.navigation-area-top span,
+div.navigation-area-bottom span {
+    visibility: hidden;
+}
+
+div.navigation-area-left,
+div.navigation-area-right {
+    background-color: transparent;
+    z-index: 100;
+}
+
+div.navigation-area-left {
+    text-align: left;
+}
+
+div.navigation-area-right {
+    text-align: right;
+}
+
+div.navigation-area-left span,
+div.navigation-area-right span {
+    color: gray;
+    font-size: 200%;
+}
+
+div.navigation-area-left:hover span,
+div.navigation-area-right:hover span {
+    visibility: visible;
+    color: red;
+}
+
+/* hover navigation: ugly view...
+div.navigation-area-top:hover,
+div.navigation-area-bottom:hover,
+div.navigation-area-left:hover,
+div.navigation-area-right:hover {
+    text-align: center;
+    background-color: black;
+    opacity: 0.3;
+}
+
+div.navigation-area-top:hover span,
+div.navigation-area-bottom:hover span,
+div.navigation-area-left:hover span,
+div.navigation-area-right:hover span {
+    visibility: visible;
+    color: white;
+    font-size: 400%;
+}
+*/
+
+/* ------ s6 styles -----------*/
+
+.s6.sphinx h1 {
+    font-size: 275%;
+}
+
+.s6.sphinx h2,
+.s6.sphinx h3 {
+    padding: 2% 3%;
+}
+
+.s6.sphinx .page.default > h2 {
+    margin: 0;
+}
+
+.s6.sphinx .page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    line-height: 1.0em;
+}
+
+.s6.sphinx .page pre {
+    padding: 5px;
+    background-color: #eeffcc;
+    color: #333333;
+    line-height: 120%;
+    border: 1px solid #ac9;
+    border-left: none;
+    border-right: none;
+    font-size: 70%;
+}
+
+.s6.sphinx .page dd {
+    margin-left: 1em;
+}
+
+.s6.sphinx .page ol {
+    padding-left: 1.5em;
+}
+
+.s6.sphinx .page .figure img {
+    width: 100%;
+}
+
+.s6.sphinx .page strong {
+    font-weight: bold;
+    font-size: 120%;
+    color: #f66;
+}
+
+.s6.sphinx .page strong.command {
+    color: #0ff;
+}
+
+
+/* ------ s6 color thema -----------*/
+
+.s6.sphinx {
+    background-color: white;
+    color: black;
+}
+
+.s6.sphinx a {
+    color: blue;
+}
+
+.s6.sphinx h2,
+.s6.sphinx h3 {
+    color: white;
+    background-image: url(title_bg.gif);
+}
+
+.s6.sphinx .page {
+    background-image: url(background.png);
+}
+
+.s6.sphinx .page.default > pre {
+    border-top-color: #666;
+    border-bottom-color: #666;
+    background-color: black;
+}
+
+.s6.sphinx .page.default > pre > strong {
+    color: red;
+    font-weight: bold;
+}
+
+.s6.sphinx .index.page > .inner.s6 {
+    background: transparent;
+}
+
+.s6.sphinx .index.page > .inner.s6 > .page {
+    background: transparent;
+}
+
+.s6.sphinx .index.page > .inner.s6 > .page > .wrapper.selected {
+    background: blue;
+}
+
+.s6.sphinx .index.page pre {
+    overflow: hidden;
+}
+
+.s6.sphinx .index {
+    background-color: gray;
+}
+
+/* ------ s6 print style --------*/
+
+@media print{
+.s6{
+  top:0 !IMPORTANT;
+  left:0 !IMPORTANT;
+  width:180mm !IMPORTANT;
+  height:265mm !IMPORTANT;
+}
+
+.s6.sphinx .index.page .inner.s6 .page .wrapper{
+  width:47% !IMPORTANT;
+  height:32% !IMPORTANT;
+  font-size:40%;
+  line-height:1.2;
+}}
+
+

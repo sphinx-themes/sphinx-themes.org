@@ -1,0 +1,360 @@
+/*
+Base styles
+*/
+
+body {
+    display: none;
+    color: rgb(117, 117, 117);
+    background-color: #fafafa;
+    font-size: 100%;
+    font-family: Roboto, 'Noto Sans Japanese';
+}
+
+.mdl-layout__content:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, blockquote, span.mdl-layout-title,
+a.download > code.download {
+    font-family: Roboto, 'Noto Sans Japanese';
+}
+
+.headerlink {
+    color: #fafafa;
+}
+
+.brand {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-content {
+    padding: 30px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+Material Icons
+*/
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*
+ * CodeBlock Styles
+ */
+pre {
+    background: rgba(0, 0, 0, 0.05);
+    color: #455A64;
+    padding: 16px 32px;
+    width: auto;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+pre:hover {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+pre:hover:before {
+    padding: 8px 16px;
+    content: attr(click-to-copy);
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: relative;
+    float: right;
+    top: -8px;
+    right: -24px;
+    background: rgb(200, 200, 200);
+    font-family: Roboto, 'Noto Sans Japanese';
+    font-size: 100%;
+}
+
+/*
+ * Quotation Block Styles
+ */
+blockquote:after {
+    content: "" !important;
+}
+
+blockquote:before {
+    content: "" !important;
+}
+
+/*
+ * Admonition Styles
+ */
+div.admonition {
+    padding: 16px 32px;
+    margin-bottom: 14px;
+}
+
+div.admonition > p.admonition-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.admonition > p.admonition-title > i.material-icons {
+    position: relative;
+    margin-right: 5px;
+    top: 5px;
+}
+
+div.admonition.note,
+div.admonition.hint {
+    border-left: 4px solid rgb(0, 188, 212);
+    background-color: rgba(0, 188, 212, 0.1);
+}
+
+div.admonition.note > p.admonition-title,
+div.admonition.hint > p.admonition-title {
+    color: rgb(0, 188, 212);
+}
+
+div.admonition.warning {
+    border-left: 4px solid rgb(255, 193, 7);
+    background-color: rgba(255,193,7,0.1);
+}
+
+div.admonition.warning > p.admonition-title {
+    color: rgb(255, 193, 7);
+}
+
+div.admonition.tip,
+div.admonition.important {
+    border-left: 4px solid rgb(139, 195, 74);
+    background-color: rgba(139, 195, 74,0.1);
+}
+
+div.admonition.tip > p.admonition-title,
+div.admonition.important > p.admonition-title {
+    color: rgb(139, 195, 74);
+}
+
+
+div.admonition.error,
+div.admonition.caution,
+div.admonition.danger{
+    border-left: 4px solid rgb(244, 67, 54);
+    background-color: rgba(244, 67, 54,0.1);
+}
+
+div.admonition.error > p.admonition-title,
+div.admonition.caution > p.admonition-title,
+div.admonition.danger > p.admonition-title {
+    color: rgb(244, 67, 54);
+}
+
+/*
+ * Header Styles
+ */
+div.mdl-layout__header-row a.mdl-navigation__link > i.material-icons.navigation-link-icon {
+    position: relative;
+    top: -2px;
+}
+
+nav.breadcrumb > a.mdl-navigation__link {
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+div.mdl-layout__header-row.header-links {
+    background: rgba(255,255,255,0.4);
+}
+
+/*
+ * Drawer Styles
+ */
+header.mdl-layout__drawer {
+    background-color: #fff;
+}
+
+header.mdl-layout__drawer > span.mdl-layout-title {
+    font-weight: bold;
+    text-align: right;
+    padding: 0 10px;
+    margin: 16px 0 8px 0;
+    line-height: 32px;
+}
+
+header.mdl-layout__drawer > span.mdl-layout-title > a.brand {
+    font-weight: bold;
+}
+
+header.mdl-layout__drawer > span.mdl-layout-title > a.brand > img.logo {
+    max-width: 200px;
+}
+
+header.mdl-layout__drawer > span.mdl-layout-title.toc {
+    font-size: 16px;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation {
+    padding-top: 0;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation ul a.mdl-navigation__link {
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation ul a.current {
+    font-weight: bold;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation > ul > li > ul > li > a {
+    padding-left: 16px !important;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation > ul > li > ul > li > ul > li > a {
+    padding-left: 24px !important;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation > ul > li > ul > li > ul > li > ul> li > a {
+    padding-left: 32px !important;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation a > i.material-icons {
+    float: right;
+}
+
+header.mdl-layout__drawer > nav.mdl-navigation p.caption {
+    padding-left: 8px;
+    margin: 8px 0;
+}
+
+
+div.mdl-layout__drawer-button > i.material-icons {
+    position: relative;
+    top: 12px;
+}
+
+/*
+ * Footer Styles
+ */
+footer.mdl-mini-footer > div.mdl-mini-footer__left-section {
+    margin-bottom: 20px;
+}
+
+/*
+ * Download Link Styles
+ */
+a.download > i.material-icons {
+    position: relative;
+    top: 5px;
+}
+
+a.download {
+    text-decoration: none;
+}
+
+/*
+ * Pagenation Block Styles
+ */
+.pagenation {
+    width: 100%;
+    margin-top: 80px;
+    min-height: 40px;
+}
+#button-next {
+    float: right;
+}
+
+ /*
+  * Search Styles
+  */
+ul.search span.highlighted {
+    font-weight: bold;
+}
+
+ul.search > li {
+    margin-bottom: 24px;
+}
+
+/*
+ *  Toctree andContents Directive Styles
+ */
+.toctree-wrapper,
+.contents.topic {
+    border-left: 5px solid;
+}
+
+.toctree-wrapper > p.caption,
+.contents.topic > p.topic-title {
+    color: rgb(117, 117, 117);
+    font-size: 14px;
+    padding-left: 14px;
+}
+
+.toctree-wrapper ul,
+.contents.topic ul{
+    padding-left: 14px;
+    list-style: none;
+    line-height: 30px;
+}
+
+.toctree-wrapper a,
+.contents.topic a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.toctree-wrapper > ul > li > a,
+.contents.topic > ul > li > a {
+    font-size: 20px;
+}
+
+/*
+ *  Figure Directive Styles
+ */
+img {
+   margin: 14px 0px;
+}
+
+/*
+ *  Table Styles
+ */
+table {
+   margin: 14px 0px;
+   table-layout: fixed;
+   max-width: 100%;
+}
+
+table td {
+    white-space: normal;
+    overflow-wrap: break-word;
+}

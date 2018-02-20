@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,SAAS;EACP,OAAO,EAAE,GAAG",
+"sources": ["../../../sass/t3more.sass"],
+"names": [],
+"file": "t3more.css"
+}
