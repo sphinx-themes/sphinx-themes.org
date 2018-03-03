@@ -1187,6 +1187,7 @@ var Theme = /** @class */ (function (_super) {
         var src = "html/" + theme.pkg_name + "/" + theme.theme + "/screenshot.png";
         var pypi = theme.url;
         var sample = "html/" + theme.pkg_name + "/" + theme.theme + "/index.html";
+        var conf = "src/" + theme.pkg_name + "/" + theme.theme + "/conf.py";
         var name = theme.pkg_name;
         if (this.has_multiple_themes(name)) {
             name = theme.pkg_name + " (" + theme.theme + ")";
@@ -1198,7 +1199,8 @@ var Theme = /** @class */ (function (_super) {
                     preact_1.h("img", { className: "card-img-top", src: src, alt: "theme screen shot" })),
                 preact_1.h("div", { className: "card-footer text-center" },
                     preact_1.h("a", { className: "card-link", href: sample }, "sample"),
-                    preact_1.h("a", { className: "card-link", href: pypi }, "pypi")))));
+                    preact_1.h("a", { className: "card-link", href: pypi }, "pypi"),
+                    preact_1.h("a", { className: "card-link", href: conf }, "conf.py")))));
     };
     return Theme;
 }(preact_1.Component));

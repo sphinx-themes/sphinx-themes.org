@@ -19,6 +19,7 @@ export default class Theme extends Component<any, any> {
       const src = `html/${theme.pkg_name}/${theme.theme}/screenshot.png`;
       const pypi = theme.url;
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
+      const conf = `src/${theme.pkg_name}/${theme.theme}/conf.py`;
 
       let name = theme.pkg_name;
       if (this.has_multiple_themes(name)) {
@@ -36,6 +37,7 @@ export default class Theme extends Component<any, any> {
           <div className="card-footer text-center">
             <a className="card-link" href={ sample }>sample</a>
             <a className="card-link" href={ pypi }>pypi</a>
+            <a className="card-link" href={ conf }>conf.py</a>
           </div>
         </div>
       </div>
