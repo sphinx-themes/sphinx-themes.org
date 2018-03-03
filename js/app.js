@@ -1235,6 +1235,12 @@ var TopBar = /** @class */ (function (_super) {
             preact_1.h("a", { className: "navbar-brand", href: "https://sphinx-themes.org" }, "Sphinx Themes"),
             preact_1.h("div", { className: "collapse navbar-collapse", id: "navbarCollapse" },
                 preact_1.h("ul", { className: "navbar-nav mr-auto" },
+                    preact_1.h("li", { className: "nav-item dropdown" },
+                        preact_1.h("a", { className: "nav-link dropdown-toggle", href: "#", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" }, "Theme"),
+                        preact_1.h("div", { className: "dropdown-menu", "aria-labelledby": "navbarDropdown" },
+                            preact_1.h("a", { className: "dropdown-item", href: "http://www.sphinx-doc.org/en/master/theming.html" }, "How to use "),
+                            preact_1.h("a", { className: "dropdown-item", href: "http://www.sphinx-doc.org/en/master/theming.html#creating-themes" }, "How to create"),
+                            preact_1.h("a", { className: "dropdown-item", href: "http://www.sphinx-doc.org/en/master/theming.html#distribute-your-theme-as-a-python-package" }, "How to upload"))),
                     preact_1.h("li", { className: "nav-item" },
                         preact_1.h("a", { className: "nav-link", href: "https://github.com/sphinx-themes/sphinx-themes.org" }, "GitHub"))))));
     };
