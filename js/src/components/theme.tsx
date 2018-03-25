@@ -31,8 +31,10 @@ export default class Theme extends Component<any, any> {
         <div className="card">
           <h5 className="card-header">{ name }</h5>
           <div className="card-body">
-            <img className="card-img-top" src={ src }
-                 alt="theme screen shot" />
+            <a href={ sample }>
+              <img className="card-img-top" src={ src }
+              alt="theme screen shot" />
+            </a>
           </div>
           <div className="card-footer text-center">
             <a className="card-link" href={ sample }>sample</a>
