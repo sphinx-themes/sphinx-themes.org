@@ -116,3 +116,21 @@ tl.pkg,skipped,not workd
 ushahidi_sphinx_rtd_theme,skipped,repository missing
 wild_sphinx_theme,completed,import config change
 wuxi,skipped, repository missing
+
+
+sphinx-theme,completed,
+sphinx-opnfv-theme,completed,
+sphinx-rigado-theme,completed,
+renku-sphinx-theme,completed,
+sphinx-ustack-theme,completed,
+sphinx_press_theme,completed,
+sphinx-bulma-theme
+topos-theme
+python-docs-theme
+sponge-docs-theme
+logilab-sphinx-themes
+f5-sphinx-theme
+divio-docs-theme
+karma_sphinx_theme
+sphinx-pynpoint-theme
+ckanext-pgda-gt-theme

@@ -1,0 +1,89 @@
+/*!
+ * Copyright 2017 - Swiss Data Science Center (SDSC)
+ * A partnership between École Polytechnique Fédérale de Lausanne (EPFL) and
+ * Eidgenössische Technische Hochschule Zürich (ETHZ).
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    font-weight: 400;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5 {
+    font-weight: 600;
+    color: #242060;
+}
+
+::selection {
+    background: #1abc9c;
+    color: #fff;
+}
+
+div.sphinxsidebarwrapper p.logo {
+    text-align: left;
+}
+
+.renku {
+    font-size: 120%;
+    color: #659825;
+    font-weight: 600;
+}
+
+div.sphinxsidebarwrapper a {
+    color: #242060;
+}
+
+a:hover,
+div.sphinxsidebar a:hover,
+div.sphinxsidebar a.current {
+    color: #659825;
+}
+
+.git-ribbon {
+    background: #659825;
+    overflow: hidden;
+    /* top left corner */
+    position: absolute;
+    right: -3em;
+    top: 2.5em;
+    /* 45 deg ccw rotation */
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    /* shadow */
+    -moz-box-shadow: 0 0 1em #888;
+    -webkit-box-shadow: 0 0 1em #888;
+}
+
+.git-ribbon a {
+    border: 1px solid #7DBE30;
+    color: #fff!important;
+    display: block;
+    font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+    margin: 0.05em 0 0.075em 0;
+    padding: 0.5em 3.5em;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    text-shadow: 0 0 0.5em #444;
+}
+
+@media screen and (max-width: 875px) {
+    div.sphinxsidebar {
+        background: #cae7a5;
+    }
+}
