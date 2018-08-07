@@ -19,7 +19,6 @@ craftercms-sphinx-theme,can_not,npm required
 crate-docs-theme,completed,suffix changed
 lsst-dd-rtd-theme,completed,import
 djangochurch-docs-theme,,
-python-docs-theme,can_not,theme_path unknown
 sphinx-docs-theme,,bernardomg.tox-test-command is required
 editorial-sphinx-theme,can_not,npm required
 edx-sphinx-theme,completed, conf.py required
@@ -124,11 +123,11 @@ sphinx-rigado-theme,completed,
 renku-sphinx-theme,completed,
 sphinx-ustack-theme,completed,
 sphinx_press_theme,completed,
-sphinx-bulma-theme
-topos-theme
-python-docs-theme
-sponge-docs-theme
-logilab-sphinx-themes
+sphinx-bulma-theme,completed,
+topos-theme,completed,
+python-docs-theme,completed,
+sponge-docs-theme,completed,
+logilab-sphinx-themes,completed
 f5-sphinx-theme
 divio-docs-theme
 karma_sphinx_theme

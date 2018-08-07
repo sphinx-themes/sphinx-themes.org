@@ -1,0 +1,383 @@
+body {
+    background: #eee;
+    display: grid;
+    font-family: 'Raleway', sans-serif;
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    grid-template-columns: auto;
+    margin: 0;
+}
+
+@media (min-width: 1130px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+        grid-template-columns: auto 300px;
+        grid-template-rows: 75px auto 150px;
+    }
+
+    .nav-sections {
+        padding-right: 25px;
+    }
+
+    .nav-sections li {
+        float: left;
+        margin-bottom: 10px;
+        margin-left: 25px;
+    }
+
+    .nav {
+        padding-top: 30px
+    }
+
+    .header {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer {
+        border-top: 1px solid #e18a07;
+    }
+
+}
+
+a {
+    color: #e18a07;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s ease-in-out 0s;
+
+}
+
+a:before {
+    background-color: #e18a07;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left:0;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 0;
+}
+
+a:hover:before {
+    width: 100%;
+}
+
+#site-name:before {
+    bottom: 20px;
+}
+
+.main {
+    background: white;
+    box-shadow: 0 0 3px #888;
+}
+
+.header {
+    background: white;
+    border-bottom: 1px solid #e18a07;
+    grid-area: header;
+}
+
+.nav-sections li {
+    list-style: none
+}
+
+.header sub {
+    color: #e18a07;
+    font-size: 10pt;
+    margin-left: 5px;
+}
+
+.header h2 {
+    margin: 0;
+    color: black;
+    padding: 20px;
+}
+
+.headerlink {
+    display: none;
+}
+
+.content {
+    grid-area: main;
+    margin-left: 15px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* -- Main Content  -- */
+.section {
+    padding-bottom: 20px;
+    line-height: 1.4;
+}
+
+.section h1,
+.section h2,
+.section h3 {
+    padding: 10px;
+}
+
+.section h4,
+.section h5,
+.section h6 {
+    margin: 25px 20px;
+}
+
+.section ul,
+.section ol,
+.highlight {
+    margin: 10px 20px;
+}
+
+.section li {
+    margin: 5px 10px;
+}
+
+.section p {
+    margin: 20px;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+/* -- Sidebar -- */
+.nav {
+    grid-area: sidebar;
+    background: white;
+    border-left: 1px solid #e18a07;
+}
+
+.nav ul {
+    padding: 0;
+}
+
+.nav-header {
+    padding: 10px 5px;
+    margin-top: 0;
+}
+
+/* -- TocTree -- */
+.nav li,
+.nav .toctree-l1,
+.nav .toctree-l2 {
+    list-style: none;
+    padding: 5px 15px;
+}
+
+.nav .toctree-l1.current {
+}
+
+.nav .reference,
+.nav .toctree-l1 a,
+.nav .toctree-l2 a {
+}
+
+/* -- Footer -- */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    background: white;
+}
+
+.footer a {
+}
+
+/* -- Admonitions -- */
+.admonition {
+    border: 1px solid black;
+    border-left: 5px solid #e18a07;
+    margin: 25px 20px;
+}
+
+.admonition-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.admonition .last {
+    text-align: right;
+}
+
+.admonition.error {
+    border-left: 5px solid #cc0000;
+}
+
+.admonition code.literal span.pre {
+}
+
+/* -- Inline Code -- */
+code.literal {
+}
+
+code.literal span.pre {
+    font-size: 16px;
+}
+
+/*-- Glossary -- */
+dl.glossary {
+    margin: 20px;
+}
+
+dl.glossary dt {
+    margin-top: 15px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+/*-- Figures --*/
+div.figure {
+    margin: 20px;
+}
+
+div.figure img {
+    border: solid 1px #ddd;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.caption {
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+/*-- Tables --*/
+table {
+    margin: 20px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: solid 1px black;
+}
+
+tbody tr.row-odd {
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+}
+
+tbody tr {
+    padding: 5px;
+}
+
+th, td {
+    border: none;
+}
+
+/*-- Autodoc --*/
+dl.class,
+dl.module,
+dl.function,
+dl.attribute {
+    font-size: 16px;
+}
+
+dl.class {
+    margin-left: 25px;
+    margin-bottom: 75px;
+}
+
+dl.function dt,
+dl.class dt {
+    margin: 10px 0;
+    margin-left: 10px;
+    border-bottom: solid 1px black;
+}
+
+dl.function em,
+dl.class em {
+    font-style: normal;
+    color: #e18a07;
+}
+
+dl.function p,
+dl.class p {
+    margin: 20px 0;
+}
+
+dl.method > dt:before {
+    content:"method ";
+    color: #e18a07;
+}
+
+dl.attribute > dt:before {
+    content:"attribute ";
+    color: #e18a07;
+}
+
+dl.function > dt:before {
+    content: "function ";
+    color: #e18a07;
+}
+
+dl > dt > a {
+    float: right;
+}
+
+tr.field {
+    text-align: left;
+}
+
+/* -- Misc Markup --*/
+.versionadded,
+.versionmodified {
+    text-decoration: underline;
+}
+
+/* -- Source Listinings -- */
+.main > .highlight {
+    border-left: double 4px #666;
+    margin: 20px;
+    padding-left: 5px;
+}
+
+.highlight,
+.highlight {
+    padding-left: 5px;
+    border: 1px solid black;
+    border-left: 5px solid #5eba7d;
+    color: black;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+/* -- With Line Numbers -- */
+
+table.highlighttable {
+    border: solid 1px black;
+    border-left: 5px solid #5eba7d;
+    width: 95%;
+}
+
+td.code div.highlight {
+    margin:0;
+    border: none;
+}
+
+td.linenos {
+    border-right: solid 1px #ddd;
+    text-align: center;
+}
+
+div.linenodiv {
+    margin-right: -5px;
+}
