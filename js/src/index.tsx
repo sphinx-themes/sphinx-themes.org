@@ -1,4 +1,5 @@
-import { h, render } from "preact";
-import Main from "./components/main";
+import { h, render } from 'preact';
 
-render(<Main />, document.querySelector("#root"));
+import App from './components/app';
+
+render(<App />, document.querySelector("#root"));

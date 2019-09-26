@@ -1,8 +1,8 @@
-import { h, Component } from "preact";
+import { h } from 'preact';
 
-export default class Theme extends Component<any, any> {
+const Theme = ({theme}) => {
 
-    has_multiple_themes(name) {
+    const has_multiple_themes = (name) => {
         const mpkgs = [
             "default",
             "PSphinxTheme",
@@ -11,18 +11,16 @@ export default class Theme extends Component<any, any> {
         ]
 
         return mpkgs.includes(name);
-    }
+    };
 
 
-    render() {
-      const theme = this.props.theme;
       const src = `html/${theme.pkg_name}/${theme.theme}/screenshot.png`;
       const pypi = theme.url;
       const sample = `html/${theme.pkg_name}/${theme.theme}/index.html`;
       const conf = `src/${theme.pkg_name}/${theme.theme}/conf.py`;
 
       let name = theme.pkg_name;
-      if (this.has_multiple_themes(name)) {
+      if (has_multiple_themes(name)) {
           name = `${theme.pkg_name} (${theme.theme})`;
       }
 
@@ -43,6 +41,7 @@ export default class Theme extends Component<any, any> {
           </div>
         </div>
       </div>
-        )
-    }
+        );
 }
+
+export default Theme;

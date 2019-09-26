@@ -14,7 +14,8 @@ run:
 	cd js && npm run build -p
 
 jsbuild:
-	cd js && npm run build -p
+	cd js && npm run build
+	mv js/dist/* .
 
 dev:
 	docker run -it --rm \

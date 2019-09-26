@@ -1,8 +1,7 @@
-import { h, Component } from "preact";
+import { h } from 'preact';
 
-export default class TopBar extends Component<any, any> {
-  render() {
-      return (
+const TopBar = () => {
+  return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <a className="navbar-brand" href="https://sphinx-themes.org">Sphinx Themes</a>
       <div className="collapse navbar-collapse" id="navbarCollapse">
@@ -23,6 +22,7 @@ export default class TopBar extends Component<any, any> {
         </ul>
       </div>
     </nav>
-    )
-  }
+  )
 }
+
+export default TopBar;
