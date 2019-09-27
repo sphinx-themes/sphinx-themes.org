@@ -10,12 +10,12 @@ run:
 	sudo chown -R $(USER) html
 	chmod -R ugo+r html
 
-	python scripts/db.py
-	cd js && npm run build -p
+	python3 scripts/db.py
+	make jsbuild
 
 jsbuild:
 	cd js && npm run build
-	mv js/dist/* .
+	/bin/rm -f *.js *.map *.css index.html && mv js/dist/* .
 
 dev:
 	docker run -it --rm \

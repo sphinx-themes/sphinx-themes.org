@@ -1,8 +1,7 @@
-From ubuntu:16.04
+From ubuntu:18.04
 
-RUN apt update
-
-RUN apt install -y python3-pip unzip udev chromium-browser ttf-freefont wget vim-tiny
+RUN apt update && \
+    apt-get install -y python3-pip unzip udev chromium-browser fonts-freefont-ttf wget vim-tiny
 
 RUN mkdir /noto && \
     cd /noto && \

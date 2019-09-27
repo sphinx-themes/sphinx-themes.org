@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic Specification &#8212; Sphinx-Themes template 1 documentation</title>
+    <link rel="stylesheet" href="_static/celery.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Admonitions" href="admonition.html" />
+    <link rel="prev" title="Welcome to Sphinx-Themes template’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="admonition.html" title="Admonitions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Sphinx-Themes template’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Sphinx-Themes template 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="basic-specification">
+<h1>Basic Specification<a class="headerlink" href="#basic-specification" title="Permalink to this headline">¶</a></h1>
+<p>Paragraphs contain text and may contain inline markup: <em>emphasis</em>, <strong>strong emphasis</strong>, <cite>interpreted text</cite>, <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, standalone hyperlinks (<a class="reference external" href="http://www.python.org">http://www.python.org</a>), external hyperlinks (<a class="reference external" href="http://www.python.org">Python</a>), internal cross-references (<a class="reference internal" href="#example">example</a>), footnote references (<a class="footnote-reference brackets" href="#id3" id="id1">1</a>), citation references (<a class="reference internal" href="#cit2002" id="id2"><span>[CIT2002]</span></a>), substitution references (), and <span class="target" id="inline-internal-targets">inline internal targets</span>.</p>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bullet-lists">
+<h3>Bullet lists:<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>This is a bullet list.</p></li>
+<li><p>Bullets can be “*”, “+”, or “-“.</p></li>
+</ul>
+</div>
+<div class="section" id="enumerated-lists">
+<h3>Enumerated lists:<a class="headerlink" href="#enumerated-lists" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>This is an enumerated list.</p></li>
+<li><p>Enumerators may be arabic numbers, letters, or roman
+numerals.</p></li>
+</ol>
+</div>
+<div class="section" id="definition-lists">
+<h3>Definition lists:<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>what</dt><dd><p>Definition lists associate a term with a definition.</p>
+</dd>
+<dt>how</dt><dd><p>The term is a one-line phrase, and the definition is one
+or more paragraphs or body elements, indented relative to
+the term.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="field-lists">
+<h3>Field lists:<a class="headerlink" href="#field-lists" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">what</dt>
+<dd class="field-odd"><p>Field lists map field names to field bodies, like
+database records.  They are often part of an extension
+syntax.</p>
+</dd>
+<dt class="field-even">how</dt>
+<dd class="field-even"><p>The field marker is a colon, the field name, and a
+colon.</p>
+<p>The field body may contain one or more body elements,
+indented relative to the field marker.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="option-lists-for-listing-command-line-options">
+<h3>Option lists, for listing command-line options:<a class="headerlink" href="#option-lists-for-listing-command-line-options" title="Permalink to this headline">¶</a></h3>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments
+and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="literal-blocks">
+<h2>Literal blocks:<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>if literal_block:</dt><dd><p>text = ‘is left as-is’
+spaces_and_linebreaks = ‘are preserved’
+markup_processing = None</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="block-quotes">
+<h2>Block quotes:<a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This theory, that is mine, is mine.</p>
+<p class="attribution">—Anne Elk (Miss)</p>
+</div></blockquote>
+</div>
+<div class="section" id="simple-table">
+<h2>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header row, column 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1, column 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="2"><p>Cells may span columns</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>A footnote contains body elements, consistently
+indented by at least 3 spaces.</p>
+</dd>
+</dl>
+<dl class="citation">
+<dt class="label" id="cit2002"><span class="brackets"><a class="fn-backref" href="#id2">CIT2002</a></span></dt>
+<dd><p>Just like a footnote, except the label is
+textual.</p>
+</dd>
+</dl>
+<dl class="function">
+<dt>
+<code class="sig-name descname">module=xml.xslt class=Processor</code></dt>
+<dd></dd></dl>
+
+<p id="example">The “_example” target above points to this paragraph.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Basic Specification</a><ul>
+<li><a class="reference internal" href="#list">List</a><ul>
+<li><a class="reference internal" href="#bullet-lists">Bullet lists:</a></li>
+<li><a class="reference internal" href="#enumerated-lists">Enumerated lists:</a></li>
+<li><a class="reference internal" href="#definition-lists">Definition lists:</a></li>
+<li><a class="reference internal" href="#field-lists">Field lists:</a></li>
+<li><a class="reference internal" href="#option-lists-for-listing-command-line-options">Option lists, for listing command-line options:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#literal-blocks">Literal blocks:</a></li>
+<li><a class="reference internal" href="#block-quotes">Block quotes:</a></li>
+<li><a class="reference internal" href="#simple-table">Simple Table</a></li>
+<li><a class="reference internal" href="#citation">Citation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Sphinx-Themes template’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="admonition.html"
+                        title="next chapter">Admonitions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/basic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="admonition.html" title="Admonitions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Sphinx-Themes template’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Sphinx-Themes template 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, sphinx-themes.org.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
