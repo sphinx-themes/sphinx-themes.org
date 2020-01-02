@@ -11,10 +11,10 @@ run:
 	chmod -R ugo+r html
 
 	python scripts/db.py
-	cd js && npm run build -p
+	cd js && npm install && npm run build -p
 
 jsbuild:
-	cd js && npm run build
+	cd js && npm install && npm run build
 	mv js/dist/* .
 
 dev:
