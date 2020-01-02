@@ -27,13 +27,13 @@ Requirements:
 1. Fork the sphinx-themes.org repository
 2. Clone your fork::
 
-    $ git clone
+    $ git clone https://github.com/<your-username>/sphinx-themes.org
 
 3. Create a new branch for your new theme::
 
     $ git checkout -b "Add <pypi-pkg-name-of-theme>"
 
-4. Build the docker container (this may take more than 20min)::
+4. Build the docker container (this may take a long time)::
 
     $ make build
 
@@ -41,7 +41,7 @@ Requirements:
 
     $ PKG_NAME=<pypi-pkg-name-of-theme> THEME=<sphinx-theme-name> make build run
 
-   **Note:** ``<pypi-pkg-name-of-theme>`` and ``<sphinx-theme-name>`` are sometimes different. Read the packages documentation.
+   **Note:** ``<pypi-pkg-name-of-theme>`` and ``<sphinx-theme-name>`` are sometimes different. Make sure to read the theme's documentation.
 
    * ``<pypi-pkg-name-of-theme>`` is the name you use to install the package (``pip install <pypi-pkg-name-of-theme>``)
    * ``<sphinx-theme-name>`` is the name you use in your sphinx ``conf.py`` (:python:`html_theme = '<sphinx-theme-name>'`)
