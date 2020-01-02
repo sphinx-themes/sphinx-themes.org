@@ -15,7 +15,7 @@ run:
 
 jsbuild:
 	cd js && npm install && npm run build
-	mv js/dist/* .
+	/bin/rm -f *.js *.map *.css index.html && mv js/dist/* .
 
 dev:
 	docker run -it --rm \
