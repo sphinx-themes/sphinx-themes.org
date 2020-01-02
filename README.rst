@@ -10,10 +10,13 @@ Sphinx Theme collections.
 How to contribute
 ---------------------------
 
-When you find new theme on PyPI, please file an issue.
+When you find new theme on PyPI_, please `file an issue`_.
 Currently, themes are updated by hands only.
 
-How to add new Theme
+.. _file an issue: https://github.com/sphinx-themes/sphinx-themes.org/issues
+.. _PyPI: https://pypi.org
+
+How to add a new theme
 ````````````````````````
 
 .. role:: python(code)
@@ -62,4 +65,4 @@ Requirements:
 License
 -------------
 
-BSD License (same as Sphinx)
+BSD License (same as ``Sphinx``)
