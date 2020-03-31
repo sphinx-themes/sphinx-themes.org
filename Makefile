@@ -10,11 +10,11 @@ run:
 	sudo chown -R $(USER) html
 	chmod -R ugo+r html
 
-	python scripts/db.py
+	python3 scripts/db.py
 	cd js && npm install && npm run build -p
 
 jsbuild:
-	cd js && npm install && npm run build
+	cd js && npm install && npm run build -p
 	/bin/rm -f *.js *.map *.css index.html && mv js/dist/* .
 
 dev:
