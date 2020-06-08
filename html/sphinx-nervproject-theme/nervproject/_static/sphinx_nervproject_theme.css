@@ -1,0 +1,64 @@
+/*
+ *
+ * Defines default styles specific to Sphinx Press,
+ * on top of VuePress styles
+ *
+ */
+
+ /* FONTS FOR THE CODE - will fall back to monospace if unavailable */
+
+@font-face {
+    font-family: Hack;
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/hack/Hack-Regular.ttf");
+}
+
+@font-face {
+    font-family: Hack;
+    font-weight: bold;
+    font-style: normal;
+    src: url("fonts/hack/Hack-Bold.ttf");
+}
+
+@font-face {
+    font-family: Hack;
+    font-weight: bold;
+    font-style: italic;
+    src: url("fonts/hack/Hack-Bold-Italic.ttf");
+}
+
+@font-face {
+    font-family: Hack;
+    font-weight: normal;
+    font-style: italic;
+    src: url("fonts/hack/Hack-Regular-Italic.ttf");
+}
+
+@font-face {
+    font-family: Luciole;
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/luciole/Luciole-Regular.ttf");
+}
+
+@font-face {
+    font-family: Luciole;
+    font-weight: bold;
+    font-style: normal;
+    src: url("fonts/luciole/Luciole-Bold.ttf");
+}
+
+@font-face {
+    font-family: Luciole;
+    font-weight: bold;
+    font-style: italic;
+    src: url("fonts/luciole/Luciole-Bold-Italic.ttf");
+}
+
+@font-face {
+    font-family: Luciole;
+    font-weight: normal;
+    font-style: italic;
+    src: url("fonts/luciole/Luciole-Regular-Italic.ttf");
+}
