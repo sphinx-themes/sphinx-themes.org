@@ -34,7 +34,7 @@ Requirements:
 
 3. Create a new branch for your new theme::
 
-    $ git checkout -b "Add <pypi-pkg-name-of-theme>"
+    $ git checkout -b <pypi-pkg-name-of-theme>
 
 4. Build the docker container (this may take a long time)::
 
