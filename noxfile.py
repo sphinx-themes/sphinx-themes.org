@@ -5,8 +5,6 @@ from pathlib import Path
 
 import nox
 
-TO_RENDER = Path("build") / "to-render.json"
-
 
 def _load_themes():
     try:
@@ -33,27 +31,26 @@ def _prepare_destination(destination):
     (destination / "sample-sites").mkdir()
 
 
-def _build_theme(session, theme):
-    session.log(f"----- Working on {theme.display} -----")
-
-    # Render the documentation
-    TO_RENDER.write_text(repr(vars(theme)))
+def _generate_docs(session):
     session.run(
         "python",
         "tools/render-theme.py",
         silent=session.interactive,  # Be silent if local, be loud if CI
     )
-    TO_RENDER.remove()
 
+
+def _generate_preview(session, theme):
     # Generate the preview
     session.run(
-        "python", "tools/generate-preview.py", f"build/{theme.name}/index.html", theme.name,
+        "python",
+        "tools/generate-preview.py",
+        f"build/{theme.name}/index.html",
+        theme.name,
         silent=session.interactive,  # Be silent if local, be loud if CI
     )
 
 
-
-def _copy_theme(session, theme, destination):
+def _copy_theme_assets(session, theme, destination):
     session.log("copy <theme files>")
     screenshot_file = f"{theme.name}.jpg"
 
@@ -62,8 +59,7 @@ def _copy_theme(session, theme, destination):
         destination / "preview-images" / screenshot_file,
     )
     shutil.move(
-        str(Path("build") / theme.name),
-        str(destination / "sample-sites" / theme.name)
+        str(Path("build") / theme.name), str(destination / "sample-sites" / theme.name)
     )
 
 
@@ -72,18 +68,45 @@ def publish(session):
     session.notify("render-themes")
     session.notify("render-index")
 
+
 @nox.session(name="render-themes")
 def render_themes(session):
     session.install("virtualenv", "selenium", "pillow")
 
+    # Prepare output directories
     destination = Path("public")
     _prepare_destination(destination)
 
-    # Generate *all* the things
+    build = Path("build")
+    to_render = build / "to-render.json"
+    if build.exists():
+        shutil.rmtree(build)
+    build.mkdir()
+
+    # Load the list of themes
     themes = _load_themes()
+
+    # Generate documentation using every theme
+    failed = []
     for theme in themes:
-        _build_theme(session, theme)
-        _copy_theme(session, theme, destination)
+        session.log(f"----- Working on {theme.display} -----")
+
+        to_render.write_text(repr(vars(theme)))
+        try:
+            _generate_docs(session)
+        except Exception:
+            failed.append(theme)
+            continue
+        to_render.unlink()
+
+        _generate_preview(session, theme)
+        _copy_theme_assets(session, theme, destination)
+
+    if failed:
+        message = "Failed to render using:\n- " + "\n- ".join(
+            theme.name for theme in failed
+        )
+        session.error(message)
 
 
 @nox.session(name="render-index")
