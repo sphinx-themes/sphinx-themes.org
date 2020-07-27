@@ -38,7 +38,6 @@ def _generate_docs(session):
     session.run(
         "python",
         "tools/render-theme.py",
-        silent=session.interactive,  # Be silent if local, be loud if CI
     )
 
 
@@ -49,7 +48,6 @@ def _generate_preview(session, theme):
         "tools/generate-preview.py",
         f"build/{theme.name}/index.html",
         theme.name,
-        silent=session.interactive,  # Be silent if local, be loud if CI
     )
 
 
