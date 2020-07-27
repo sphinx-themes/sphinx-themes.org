@@ -3,16 +3,20 @@ from pathlib import Path
 
 
 def sort_key(theme):
-    if theme["pypi"] is not None:
-        return theme["pypi"]
+    if theme["pypi"] is None:
+        # Get alabaster first.
+        if theme["config"] == "alabaster":
+            return ""
+        # All other builtin themes go at the end.
+        #     "~" is *last* in sort order for `string.printables`.
+        return "~" + theme["display"]
 
-    # Get alabaster on top.
-    if theme["config"] == "alabaster":
-        return ""
+    # Get Sphinx-RTD-theme second.
+    if theme["pypi"] == "sphinx-rtd-theme":
+        return "1"
 
-    # All other builtin themes go at the end.
-    #     "~" is *last* in sort order for `string.printables`.
-    return "~" + theme["display"]
+    # Third party themes in the middle.
+    return theme["pypi"]
 
 
 def main():
@@ -24,7 +28,7 @@ def main():
     data["themes"].sort(key=sort_key)
 
     with path.open("w") as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, sort_keys=True, indent=2)
         f.write("\n")
 
 

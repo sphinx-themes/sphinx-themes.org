@@ -1,59 +1,59 @@
 {
   "themes": [
     {
-      "pypi": null,
       "config": "alabaster",
-      "display": "Alabaster"
+      "display": "Alabaster",
+      "pypi": null
     },
     {
-      "pypi": "sphinx-rtd-theme",
+      "config": "sphinx_rtd_theme",
       "display": "Read the Docs Sphinx Theme",
-      "config": "sphinx_rtd_theme"
+      "pypi": "sphinx-rtd-theme"
     },
     {
-      "pypi": null,
       "config": "agogo",
-      "display": "agogo"
+      "display": "agogo",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "bizstyle",
-      "display": "bizstyle"
+      "display": "bizstyle",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "classic",
-      "display": "classic"
+      "display": "classic",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "haiku",
-      "display": "haiku"
+      "display": "haiku",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "nature",
-      "display": "nature"
+      "display": "nature",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "pyramid",
-      "display": "pyramid"
+      "display": "pyramid",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "scrolls",
-      "display": "scrolls"
+      "display": "scrolls",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "sphinxdoc",
-      "display": "sphinxdoc"
+      "display": "sphinxdoc",
+      "pypi": null
     },
     {
-      "pypi": null,
       "config": "traditional",
-      "display": "traditional"
+      "display": "traditional",
+      "pypi": null
     }
   ]
 }
