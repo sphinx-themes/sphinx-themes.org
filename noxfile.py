@@ -96,4 +96,4 @@ def render_themes(session):
 @nox.session(name="render-index")
 def render_index(session):
     session.install("jinja2")
-    session.run("python", "tools/generate-index.py")
+    session.run("python", "tools/render-index.py")

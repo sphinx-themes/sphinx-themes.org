@@ -21,5 +21,6 @@ def main():
     contents = template.render(themes=load_themes())
     DESTINATION_FILE.write_text(contents)
 
+
 if __name__ == "__main__":
     main()
