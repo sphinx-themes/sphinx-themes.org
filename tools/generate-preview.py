@@ -44,12 +44,15 @@ def main():
         driver.get(file)
 
         for name, (width, height) in SIZES.items():
-            driver.set_window_size(width, height - 75)
+            real_size = width, height - 75  # allow for a "top bar" in the window
+            driver.set_window_size(*real_size)
 
             screen = driver.get_screenshot_as_png()
 
             # Convert to RGB image
             screenshots[name] = _as_rgb_image(io.BytesIO(screen))
+            # Accommodate for a 2x screen.
+            screenshots[name] = screenshots[name].resize(real_size)
             # screenshots[name].save(str(destination / f"{name}.png"), "PNG")
 
     # Generate the final preview as a 95% JPEG
