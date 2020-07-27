@@ -20,5 +20,6 @@ def main():
         json.dump(data, f, indent=2)
         f.write("\n")
 
+
 if __name__ == "__main__":
     main()

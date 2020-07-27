@@ -74,7 +74,12 @@ def render(theme):
     _patch_conf_file(theme)
 
     session.run(
-        "sphinx-build", "-v", "-b", "html", "sample-docs", str(Path("build") / theme.name),
+        "sphinx-build",
+        "-v",
+        "-b",
+        "html",
+        "sample-docs",
+        str(Path("build") / theme.name),
     )
 
 

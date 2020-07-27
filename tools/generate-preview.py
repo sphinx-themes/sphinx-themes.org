@@ -22,7 +22,7 @@ OFFSETS = {
 
 
 def _as_rgb_image(png_stream):
-    return Image.open(png_stream).convert('RGB')
+    return Image.open(png_stream).convert("RGB")
 
 
 def main():
@@ -52,7 +52,6 @@ def main():
             screenshots[name] = _as_rgb_image(io.BytesIO(screen))
             # screenshots[name].save(str(destination / f"{name}.png"), "PNG")
 
-
     # Generate the final preview as a 95% JPEG
     template_file = Path(".") / "src" / "template.png"
     final_file = destination / f"{destination_name}.jpg"
@@ -71,7 +70,8 @@ def main():
         final_image.thumbnail(resize_to)
 
         # Save it!
-        final_image.save(final_file, 'JPEG', optimize=True, quality=80)
+        final_image.save(final_file, "JPEG", optimize=True, quality=80)
+
 
 if __name__ == "__main__":
     main()
