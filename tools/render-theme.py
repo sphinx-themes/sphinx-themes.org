@@ -139,4 +139,5 @@ if __name__ == "__main__":
     try:
         render(theme)
     except subprocess.SubprocessError:
+        print(CONF_PY_FILE.read_text())
         sys.exit(1)
