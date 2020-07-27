@@ -1,0 +1,16 @@
+{
+  "themes": [
+    {
+      "pypi": "alabaster",
+      "display": "Alabaster (default theme)",
+      "config": "alabaster",
+      "options": {}
+    },
+    {
+      "pypi": "sphinx-rtd-theme",
+      "display": "Read the Docs Sphinx Theme",
+      "config": "sphinx_rtd_theme",
+      "options": {}
+    }
+  ]
+}

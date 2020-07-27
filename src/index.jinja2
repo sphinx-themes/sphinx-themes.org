@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphinx Themes Previews</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <style>
+      .s-very-rounded {
+        border-radius: 0.5rem;
+      }
+      .s-very-rounded > :last-child {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar bg-primary">
+      <section class="navbar-section">
+      </section>
+      <section class="navbar-section">
+        <a href="https://github.com/pradyunsg/sphinx-themes"
+           class="text-gray float-right btn btn-link">GitHub</a>
+      </section>
+    </nav>
+    <header class="hero text-center bg-primary">
+      <h2>Sphinx Themes</h2>
+      <h6>A gallery of documentation themes</h6>
+    </header>
+    <main>
+      <div class="container">
+        <div class="columns">
+          {% for theme in themes %}
+          <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-6 col-4 pt-2">
+            <div class="card s-very-rounded">
+              <div class="card-header">
+                <div class="card-title text-center h5">{{ theme.display }}</div>
+              </div>
+              <div class="card-image"><img class="img-responsive"
+                  src="preview-images/{{ theme.pypi }}.jpg" alt="{{ theme.display }} Preview">
+              </div>
+              <div class="card-footer bg-secondary">
+                <a class="btn btn-primary" href="sample-sites/{{ theme.pypi }}/">Demo</a>
+                <a class="float-right btn btn-link" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        ...
+      </div>
+    </footer>
+  </body>
+
+</html>

@@ -1,0 +1,7 @@
+# Generated Files
+/build
+/screenshots
+/public
+
+# Python stuff
+__pycache__
