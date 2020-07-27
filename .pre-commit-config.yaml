@@ -29,5 +29,7 @@ repos:
   - id: sort-json
     name: Sort theme.json
     language: python
+    pass_filenames: false
+    types: []
     always_run: true
     entry: python tools/sort-json.py
