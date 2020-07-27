@@ -3,9 +3,16 @@ from pathlib import Path
 
 
 def sort_key(theme):
-    one = theme["pypi"] or ""
-    two = theme["config"]
-    return one.lower(), two.lower()
+    if theme["pypi"] is not None:
+        return theme["pypi"]
+
+    # Get alabaster on top.
+    if theme["config"] == "alabaster":
+        return ""
+
+    # All other builtin themes go at the end.
+    #     "~" is *last* in sort order for `string.printables`.
+    return "~" + theme["display"]
 
 
 def main():

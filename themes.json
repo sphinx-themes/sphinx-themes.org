@@ -2,14 +2,20 @@
   "themes": [
     {
       "pypi": null,
-      "config": "agogo",
-      "display": "agogo",
+      "config": "alabaster",
+      "display": "Alabaster",
+      "options": {}
+    },
+    {
+      "pypi": "sphinx-rtd-theme",
+      "display": "Read the Docs Sphinx Theme",
+      "config": "sphinx_rtd_theme",
       "options": {}
     },
     {
       "pypi": null,
-      "config": "alabaster",
-      "display": "Alabaster (default theme)",
+      "config": "agogo",
+      "display": "agogo",
       "options": {}
     },
     {
@@ -58,12 +64,6 @@
       "pypi": null,
       "config": "traditional",
       "display": "traditional",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-rtd-theme",
-      "display": "Read the Docs Sphinx Theme",
-      "config": "sphinx_rtd_theme",
       "options": {}
     }
   ]
