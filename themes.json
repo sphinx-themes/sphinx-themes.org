@@ -14,12 +14,6 @@
     },
     {
       "pypi": null,
-      "config": "alabaster",
-      "display": "alabaster",
-      "options": {}
-    },
-    {
-      "pypi": null,
       "config": "bizstyle",
       "display": "bizstyle",
       "options": {}
