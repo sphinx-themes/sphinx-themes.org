@@ -17,6 +17,7 @@ def _load_themes():
 
     themes = []
     for theme in data["themes"]:
+        theme["name"] = theme["pypi"] or ("default-" + theme["config"])
         themes.append(SimpleNamespace(**theme))
     return themes
 
@@ -46,7 +47,7 @@ def _build_theme(session, theme):
 
     # Generate the preview
     session.run(
-        "python", "tools/generate-preview.py", "build/index.html", theme.pypi,
+        "python", "tools/generate-preview.py", f"build/{theme.name}/index.html", theme.name,
         silent=session.interactive,  # Be silent if local, be loud if CI
     )
 
@@ -54,13 +55,16 @@ def _build_theme(session, theme):
 
 def _copy_theme(session, theme, destination):
     session.log("copy <theme files>")
-    screenshot_file = f"{theme.pypi}.jpg"
+    screenshot_file = f"{theme.name}.jpg"
 
     shutil.move(
         Path("screenshots") / screenshot_file,
         destination / "preview-images" / screenshot_file,
     )
-    shutil.move(Path("build") / theme.pypi, destination / "sample-sites" / theme.pypi)
+    shutil.move(
+        str(Path("build") / theme.name),
+        str(destination / "sample-sites" / theme.name)
+    )
 
 
 @nox.session(python=False)

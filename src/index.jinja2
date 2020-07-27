@@ -40,11 +40,13 @@
                 <div class="card-title text-center h5">{{ theme.display }}</div>
               </div>
               <div class="card-image"><img class="img-responsive"
-                  src="preview-images/{{ theme.pypi }}.jpg" alt="{{ theme.display }} Preview">
+                  src="preview-images/{{ theme.name }}.jpg" alt="{{ theme.display }} Preview">
               </div>
               <div class="card-footer bg-secondary">
-                <a class="btn btn-primary" href="sample-sites/{{ theme.pypi }}/">Demo</a>
+                <a class="btn btn-primary" href="sample-sites/{{ theme.name }}/">Demo</a>
+                {% if theme.pypi %}
                 <a class="float-right btn btn-link" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>
+                {% endif %}
               </div>
             </div>
           </div>

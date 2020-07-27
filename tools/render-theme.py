@@ -66,12 +66,15 @@ def _patch_conf_file(theme):
 
 
 def render(theme):
-    session = Session(theme.pypi)
-    session.install("sphinx", theme.pypi)
+    session = Session(theme.name)
+    session.install("sphinx")
+    if theme.pypi is not None:
+        session.install(theme.pypi)
+
     _patch_conf_file(theme)
 
     session.run(
-        "sphinx-build", "-v", "-b", "html", "sample-docs", str(Path("build") / theme.pypi),
+        "sphinx-build", "-v", "-b", "html", "sample-docs", str(Path("build") / theme.name),
     )
 
 
