@@ -3,7 +3,7 @@
     {
       "config": "alabaster",
       "display": "Alabaster",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "sphinx_rtd_theme",
@@ -13,47 +13,47 @@
     {
       "config": "agogo",
       "display": "agogo",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "bizstyle",
       "display": "bizstyle",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "classic",
       "display": "classic",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "haiku",
       "display": "haiku",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "nature",
       "display": "nature",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "pyramid",
       "display": "pyramid",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "scrolls",
       "display": "scrolls",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "sphinxdoc",
       "display": "sphinxdoc",
-      "pypi": null
+      "pypi": "sphinx"
     },
     {
       "config": "traditional",
       "display": "traditional",
-      "pypi": null
+      "pypi": "sphinx"
     }
   ]
 }

@@ -113,7 +113,7 @@ def _patch_conf_file(theme):
 def render(theme):
     session = Session(theme.name)
     session.install("sphinx")
-    if theme.pypi is not None:
+    if theme.pypi != "sphinx":
         session.install(theme.pypi)
 
     _patch_conf_file(theme)

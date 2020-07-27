@@ -43,7 +43,7 @@
                 <div class="card-title h5">{{ theme.display }}
                 </div>
                 <div class="card-subtitle text-gray">
-                  {% if theme.pypi %}
+                  {% if theme.pypi != "sphinx" %}
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>)
                   {% elif theme.config == "alabaster" %}
                   Default theme

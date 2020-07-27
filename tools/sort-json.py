@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 def sort_key(theme):
-    if theme["pypi"] is None:
+    if theme["pypi"] == "sphinx":
         # Get alabaster first.
         if theme["config"] == "alabaster":
             return ""

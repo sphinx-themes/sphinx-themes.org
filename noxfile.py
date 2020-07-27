@@ -15,7 +15,10 @@ def _load_themes():
 
     themes = []
     for theme in data["themes"]:
-        theme["name"] = theme["pypi"] or ("default-" + theme["config"])
+        if theme["pypi"] == "sphinx":
+            theme["name"] = "default-" + theme["config"]
+        else:
+            theme["name"] = theme["pypi"]
         themes.append(SimpleNamespace(**theme))
     return themes
 
