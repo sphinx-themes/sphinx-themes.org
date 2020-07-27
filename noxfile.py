@@ -1,7 +1,7 @@
 import json
 import shutil
-from types import SimpleNamespace
 from pathlib import Path
+from types import SimpleNamespace
 
 import nox
 
@@ -35,10 +35,7 @@ def _prepare_destination(destination):
 
 
 def _generate_docs(session):
-    session.run(
-        "python",
-        "tools/render-theme.py",
-    )
+    session.run("python", "tools/render-theme.py")
 
 
 def _generate_preview(session, theme):
@@ -60,7 +57,7 @@ def _copy_theme_assets(session, theme, destination):
         destination / "preview-images" / screenshot_file,
     )
     shutil.move(
-        str(Path("build") / theme.name), str(destination / "sample-sites" / theme.name)
+        str(Path("build") / theme.name), str(destination / "sample-sites" / theme.name),
     )
 
 

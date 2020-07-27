@@ -6,7 +6,6 @@ from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
 # Size of the viewport
 SIZES = {
     "desktop": (1920, 1080),

@@ -1,14 +1,13 @@
 """Render sample-docs/ with theme described in build/to-render.json
 """
 
-from pathlib import Path
 import os
-import sys
 import shutil
 import subprocess
+import sys
+from pathlib import Path
 
 import virtualenv
-
 
 TO_RENDER = Path("build") / "to-render.json"
 CONF_PY_FILE = Path("sample-docs") / "conf.py"
@@ -104,7 +103,7 @@ def _patch_conf_file(theme):
 
     # Find the marker we replace after.
     index = lines.index("# !! MARKER !!\n")
-    lines[index+1:] = config_lines
+    lines[index + 1 :] = config_lines
 
     with CONF_PY_FILE.open("w") as f:
         f.writelines(lines)
