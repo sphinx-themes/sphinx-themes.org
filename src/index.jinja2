@@ -7,13 +7,7 @@
     <title>Sphinx Themes Previews</title>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <style>
-      .s-very-rounded {
-        border-radius: 0.5rem;
-      }
-      .s-very-rounded > :last-child {
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-      }
+    .card {border: 0; border-bottom: 1px solid #EEEEEE;}
     </style>
   </head>
 
@@ -33,30 +27,35 @@
     <main>
       <div class="container">
         <div class="columns">
-          {% for theme in themes %}
-          <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-6 col-4 pt-2">
-            <div class="card s-very-rounded">
-              <div class="card-header">
-                <div class="card-title text-center h5">{{ theme.display }}</div>
-              </div>
+          {% for theme in themes -%}
+          <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-6 col-6 pt-2">
+            <div class="card mb-2">
               <div class="card-image"><img class="img-responsive"
                   src="preview-images/{{ theme.name }}.jpg" alt="{{ theme.display }} Preview">
               </div>
-              <div class="card-footer bg-secondary">
-                <a class="btn btn-primary" href="sample-sites/{{ theme.name }}/">Demo</a>
-                {% if theme.pypi %}
-                <a class="float-right btn btn-link" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>
-                {% endif %}
+              <div class="card-header">
+                <div class="card-title h5">{{ theme.display }}
+                </div>
+                <div class="card-subtitle text-gray">
+                  {% if theme.pypi %}
+                  Third-party theme (<a class="text-muted" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>)
+                  {% elif theme.config == "alabaster" %}
+                  Default theme
+                  {% else %}
+                  Builtin theme
+                  {% endif %}
+                  <a class="text-primary float-right" href="sample-sites/{{ theme.name }}/">Demo</a>
+                </div>
               </div>
             </div>
           </div>
-          {% endfor %}
+          {%- endfor %}
         </div>
       </div>
     </main>
     <footer>
-      <div class="container">
-        ...
+      <div class="container mt-2 bg-gray text-center">
+        <div class="copyright p-2">Copyright &copy; 2020 Pradyun Gedam</div>
       </div>
     </footer>
   </body>
