@@ -41,7 +41,7 @@ In cases where additional values must be set in `conf.py`, you can use a JSON ob
     "_extensions": ["sphinx_tabs"],
     "my_theme_colors": "['blue', 'indigo']",
     "my_theme_number": "1",
-    "html_context": "{'executable': sys.executable}",
+    "html_context": "{'executable': sys.executable}"
   },
   "display": "Read the Docs Sphinx Theme",
   "pypi": "sphinx-rtd-theme"
