@@ -11,6 +11,20 @@
       "pypi": "sphinx-rtd-theme"
     },
     {
+      "config": {
+        "_extensions": [
+          "edx_theme"
+        ],
+        "_imports": [
+          "edx_theme"
+        ],
+        "html_theme": "edx_theme",
+        "html_theme_path": "[edx_theme.get_html_theme_path()]"
+      },
+      "display": "edx-sphinx-theme",
+      "pypi": "edx-sphinx-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
