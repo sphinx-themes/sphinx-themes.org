@@ -7,7 +7,14 @@
     <title>Sphinx Themes Previews</title>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <style>
-    .card {border: 0; border-bottom: 1px solid #EEEEEE;}
+    .card {
+      border-bottom: 0;
+      border-top: 0;
+      border-width: 0.05rem;
+      border-style: solid;
+      border-image: linear-gradient(to top, #f1f3f5, white 75%) 1 100%;
+      }
+    .divider {margin: 0;}
     </style>
   </head>
 
@@ -28,7 +35,7 @@
         <div class="columns">
           {% for theme in themes -%}
           <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-6 col-6 pt-2">
-            <div class="card mb-2">
+            <div class="card">
               <div class="card-image"><img class="img-responsive"
                   src="preview-images/{{ theme.name }}.jpg" alt="{{ theme.display }} Preview">
               </div>
@@ -47,6 +54,7 @@
                 </div>
               </div>
             </div>
+            <div class="divider"></div>
           </div>
           {%- endfor %}
         </div>
