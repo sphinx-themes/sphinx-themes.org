@@ -5,6 +5,8 @@ from pathlib import Path
 
 import nox
 
+TO_RENDER = Path("build") / "to-render.json"
+
 
 def _load_themes():
     try:
@@ -32,28 +34,15 @@ def _prepare_destination(destination):
 
 def _build_theme(session, theme):
     session.log(f"----- Working on {theme.display} -----")
-    session.install(theme.pypi)
 
-    # Patch the theme details.
-    with open("sample-docs/conf.py") as f:
-        lines = f.readlines()
-
-    for i, line in enumerate(lines[:]):
-        if line.startswith("html_theme = "):
-            line = f"html_theme = {theme.config!r}\n"
-        elif line.startswith("html_theme_options = "):
-            line = f"html_theme_options = {theme.options!r}\n"
-
-        lines[i] = line
-
-    with open("sample-docs/conf.py", "w") as f:
-        f.writelines(lines)
-
-    # Generate the documentation
+    # Render the documentation
+    TO_RENDER.write_text(repr(vars(theme)))
     session.run(
-        "sphinx-build", "-v", "-b", "html", "sample-docs", "build",
+        "python",
+        "tools/render-theme.py",
         silent=session.interactive,  # Be silent if local, be loud if CI
     )
+    TO_RENDER.remove()
 
     # Generate the preview
     session.run(
@@ -71,7 +60,7 @@ def _copy_theme(session, theme, destination):
         Path("screenshots") / screenshot_file,
         destination / "preview-images" / screenshot_file,
     )
-    shutil.move(Path("build"), destination / "sample-sites" / theme.pypi)
+    shutil.move(Path("build") / theme.pypi, destination / "sample-sites" / theme.pypi)
 
 
 @nox.session(python=False)
@@ -81,7 +70,7 @@ def publish(session):
 
 @nox.session(name="render-themes")
 def render_themes(session):
-    session.install("sphinx", "selenium", "pillow")
+    session.install("virtualenv", "selenium", "pillow")
 
     destination = Path("public")
     _prepare_destination(destination)

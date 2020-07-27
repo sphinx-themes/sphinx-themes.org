@@ -2,6 +2,7 @@
 /build
 /screenshots
 /public
+/.venv
 
 # Python stuff
 __pycache__
