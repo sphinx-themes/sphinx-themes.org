@@ -16,7 +16,7 @@ def sort_key(theme):
         return "1"
 
     # Third party themes in the middle.
-    return theme["pypi"]
+    return theme["pypi"].lower()
 
 
 def main():
