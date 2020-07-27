@@ -104,10 +104,10 @@ def render_themes(session):
         _copy_theme_assets(session, theme, destination)
 
     if failed:
-        message = "Failed to render using:\n- " + "\n- ".join(
-            theme.name for theme in failed
-        )
-        session.error(message)
+        parts = ["Failed to render using:"]
+        for theme in failed:
+            parts.append(f"- {theme.name}")
+        session.error("\n".join(parts))
 
 
 @nox.session(name="render-index")
