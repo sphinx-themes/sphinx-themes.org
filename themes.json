@@ -1,705 +1,75 @@
 {
   "themes": [
     {
-      "pypi": "agoraplex.themes.sphinx",
-      "config": "agoraplex",
-      "display": "agoraplex",
-      "options": {}
-    },
-    {
-      "pypi": "alabaster",
-      "display": "Alabaster (default theme)",
-      "config": "alabaster",
-      "options": {}
-    },
-    {
-      "pypi": "allanc-sphinx",
-      "config": "yeen",
-      "display": "yeen",
-      "options": {}
-    },
-    {
-      "pypi": "astropy-sphinx-theme",
-      "config": "bootstrap-astropy",
-      "display": "bootstrap-astropy",
-      "options": {}
-    },
-    {
-      "pypi": "cakephp_theme",
-      "config": "cakephp_theme",
-      "display": "cakephp_theme",
-      "options": {}
-    },
-    {
-      "pypi": "caktus-sphinx-theme",
-      "config": "caktus",
-      "display": "caktus",
-      "options": {}
-    },
-    {
-      "pypi": "cloud_sptheme",
-      "config": "cloud",
-      "display": "cloud",
-      "options": {}
-    },
-    {
-      "pypi": "crate-docs-theme",
-      "config": "crate",
-      "display": "crate",
-      "options": {}
-    },
-    {
-      "pypi": "default",
-      "config": "bizstyle",
-      "display": "bizstyle",
-      "options": {}
-    },
-    {
-      "pypi": "default",
-      "config": "haiku",
-      "display": "haiku",
-      "options": {}
-    },
-    {
-      "pypi": "default",
-      "config": "nature",
-      "display": "nature",
-      "options": {}
-    },
-    {
-      "pypi": "default",
+      "pypi": null,
       "config": "agogo",
       "display": "agogo",
       "options": {}
     },
     {
-      "pypi": "default",
+      "pypi": null,
+      "config": "alabaster",
+      "display": "Alabaster (default theme)",
+      "options": {}
+    },
+    {
+      "pypi": null,
       "config": "alabaster",
       "display": "alabaster",
       "options": {}
     },
     {
-      "pypi": "default",
-      "config": "pyramid",
-      "display": "pyramid",
+      "pypi": null,
+      "config": "bizstyle",
+      "display": "bizstyle",
       "options": {}
     },
     {
-      "pypi": "default",
+      "pypi": null,
       "config": "classic",
       "display": "classic",
       "options": {}
     },
     {
-      "pypi": "default",
-      "config": "traditional",
-      "display": "traditional",
+      "pypi": null,
+      "config": "haiku",
+      "display": "haiku",
       "options": {}
     },
     {
-      "pypi": "default",
-      "config": "scrolls",
-      "display": "scrolls",
-      "options": {}
-    },
-    {
-      "pypi": "default",
-      "config": "sphinxdoc",
-      "display": "sphinxdoc",
-      "options": {}
-    },
-    {
-      "pypi": "edx-sphinx-theme",
-      "config": "edx_theme",
-      "display": "edx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "epfl-sphinx-theme",
-      "config": "epfl",
-      "display": "epfl",
-      "options": {}
-    },
-    {
-      "pypi": "f5-sphinx-theme",
-      "config": "f5_sphinx_theme",
-      "display": "f5_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "Flask-Sphinx-Themes",
-      "config": "flask",
-      "display": "flask",
-      "options": {}
-    },
-    {
-      "pypi": "foundation-sphinx-theme",
-      "config": "foundation_sphinx_theme",
-      "display": "foundation_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "groundwork-sphinx-theme",
-      "config": "groundwork",
-      "display": "groundwork",
-      "options": {}
-    },
-    {
-      "pypi": "guzzle_sphinx_theme",
-      "config": "guzzle_sphinx_theme",
-      "display": "guzzle_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "hachibee-sphinx-theme",
-      "config": "hachibee",
-      "display": "hachibee",
-      "options": {}
-    },
-    {
-      "pypi": "hbp-sphinx-theme",
-      "config": "hbp_sphinx_theme",
-      "display": "hbp_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "insegel",
-      "config": "insegel",
-      "display": "insegel",
-      "options": {}
-    },
-    {
-      "pypi": "jupyter-sphinx-theme",
-      "config": "jupyter-sphinx-thembe",
-      "display": "jupyter-sphinx-thembe",
-      "options": {}
-    },
-    {
-      "pypi": "karma_sphinx_theme",
-      "config": "karma_sphinx_theme",
-      "display": "karma_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "kotti_docs_theme",
-      "config": "kotti_docs_theme",
-      "display": "kotti_docs_theme",
-      "options": {}
-    },
-    {
-      "pypi": "logilab-sphinx-themes",
-      "config": "logilab",
-      "display": "logilab",
-      "options": {}
-    },
-    {
-      "pypi": "lsst-dd-rtd-theme",
-      "config": "lsst_dd_rtd_theme",
-      "display": "lsst_dd_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "lsst-sphinx-bootstrap-theme",
-      "config": "lsst_sphinx_bootstrap_theme",
-      "display": "lsst_sphinx_bootstrap_theme",
-      "options": {}
-    },
-    {
-      "pypi": "mkdocs-nature",
+      "pypi": null,
       "config": "nature",
       "display": "nature",
       "options": {}
     },
     {
-      "pypi": "mozilla-sphinx-theme",
-      "config": "mozilla",
-      "display": "mozilla",
-      "options": {}
-    },
-    {
-      "pypi": "msmb_theme",
-      "config": "msmb_theme",
-      "display": "msmb_theme",
-      "options": {}
-    },
-    {
-      "pypi": "murray",
-      "config": "murray",
-      "display": "murray",
-      "options": {}
-    },
-    {
-      "pypi": "oe-sphinx-theme",
-      "config": "oe_sphinx",
-      "display": "oe_sphinx",
-      "options": {}
-    },
-    {
-      "pypi": "ovs-sphinx-theme",
-      "config": "ovs",
-      "display": "ovs",
-      "options": {}
-    },
-    {
-      "pypi": "pietroalbini-sphinx-themes",
-      "config": "pietroalbini",
-      "display": "pietroalbini",
-      "options": {}
-    },
-    {
-      "pypi": "PSphinxTheme",
-      "config": "p-greenblue",
-      "display": "p-greenblue",
-      "options": {}
-    },
-    {
-      "pypi": "PSphinxTheme",
-      "config": "p-green",
-      "display": "p-green",
-      "options": {}
-    },
-    {
-      "pypi": "PSphinxTheme",
-      "config": "p-main_theme",
-      "display": "p-main_theme",
-      "options": {}
-    },
-    {
-      "pypi": "PSphinxTheme",
-      "config": "p-greycreme",
-      "display": "p-greycreme",
-      "options": {}
-    },
-    {
-      "pypi": "PSphinxTheme",
-      "config": "p-red",
-      "display": "p-red",
-      "options": {}
-    },
-    {
-      "pypi": "pylons-sphinx-themes",
-      "config": "pylonsfw",
-      "display": "pylonsfw",
-      "options": {}
-    },
-    {
-      "pypi": "pylons-sphinx-themes",
+      "pypi": null,
       "config": "pyramid",
       "display": "pyramid",
       "options": {}
     },
     {
-      "pypi": "pylons-sphinx-themes",
-      "config": "pylons",
-      "display": "pylons",
+      "pypi": null,
+      "config": "scrolls",
+      "display": "scrolls",
       "options": {}
     },
     {
-      "pypi": "python-docs-theme",
-      "config": "python_docs_theme",
-      "display": "python_docs_theme",
+      "pypi": null,
+      "config": "sphinxdoc",
+      "display": "sphinxdoc",
       "options": {}
     },
     {
-      "pypi": "quark-sphinx-theme",
-      "config": "quark",
-      "display": "quark",
-      "options": {}
-    },
-    {
-      "pypi": "renga-sphinx-theme",
-      "config": "renga",
-      "display": "renga",
-      "options": {}
-    },
-    {
-      "pypi": "renku-sphinx-theme",
-      "config": "renku",
-      "display": "renku",
-      "options": {}
-    },
-    {
-      "pypi": "romnnn_sphinx_press_theme",
-      "config": "press",
-      "display": "press",
-      "options": {}
-    },
-    {
-      "pypi": "rtcat-sphinx-theme",
-      "config": "rtcat_sphinx_theme",
-      "display": "rtcat_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "solar-theme",
-      "config": "solar_theme",
-      "display": "solar_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-better-theme",
-      "config": "better",
-      "display": "better",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-boost",
-      "config": "boost",
-      "display": "boost",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-bootstrap-theme",
-      "config": "bootstrap",
-      "display": "bootstrap",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-bulma-theme",
-      "config": "bulma",
-      "display": "bulma",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-catalystcloud-theme",
-      "config": "sphinx_catalystcloud_theme",
-      "display": "sphinx_catalystcloud_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-corlab-theme",
-      "config": "corlab_theme",
-      "display": "corlab_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-fossasia-theme",
-      "config": "sphinx_fossasia_theme",
-      "display": "sphinx_fossasia_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-foundation-theme",
-      "config": "foundation",
-      "display": "foundation",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-glpi-theme",
-      "config": "glpi",
-      "display": "glpi",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-guillotina-theme",
-      "config": "guillotina",
-      "display": "guillotina",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-ioam-theme",
-      "config": "sphinx_ioam_theme",
-      "display": "sphinx_ioam_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-kr-theme",
-      "config": "kr",
-      "display": "kr",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-material",
-      "config": "sphinx_material",
-      "display": "sphinx_material",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-modern-theme",
-      "config": "sphinx_modern_theme",
-      "display": "sphinx_modern_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-nameko-mw-theme",
-      "config": "nameko-mw",
-      "display": "nameko-mw",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-nameko-theme",
-      "config": "nameko",
-      "display": "nameko",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-nervproject-theme",
-      "config": "nervproject",
-      "display": "nervproject",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-opnfv-theme",
-      "config": "opnfv",
-      "display": "opnfv",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-pdj-theme",
-      "config": "sphinx_pdj_theme",
-      "display": "sphinx_pdj_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-press-theme",
-      "config": "press",
-      "display": "press",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-redactor-theme",
-      "config": "sphinx_redactor_theme",
-      "display": "sphinx_redactor_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-rigado-theme",
-      "config": "sphinx_rigado_theme",
-      "display": "sphinx_rigado_theme",
+      "pypi": null,
+      "config": "traditional",
+      "display": "traditional",
       "options": {}
     },
     {
       "pypi": "sphinx-rtd-theme",
       "display": "Read the Docs Sphinx Theme",
       "config": "sphinx_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-susiai-theme",
-      "config": "sphinx_susiai_theme",
-      "display": "sphinx_susiai_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-theme",
-      "config": "neo_rtd_theme",
-      "display": "neo_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-theme",
-      "config": "stanford_theme",
-      "display": "stanford_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-typlog-theme",
-      "config": "sphinx_typlog_theme",
-      "display": "sphinx_typlog_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-typo3-theme",
-      "config": "sphinx_typo3_theme",
-      "display": "sphinx_typo3_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx-ustack-theme",
-      "config": "sphinx_ustack_theme",
-      "display": "sphinx_ustack_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_adc_theme",
-      "config": "sphinx_adc_theme",
-      "display": "sphinx_adc_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_bernard_theme",
-      "config": "sphinx_bernard_theme",
-      "display": "sphinx_bernard_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_celery",
-      "config": "sphinx_celery",
-      "display": "sphinx_celery",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_drove_theme",
-      "config": "sphinx_drove_theme",
-      "display": "sphinx_drove_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_hand_theme",
-      "config": "sphinx_hand_theme",
-      "display": "sphinx_hand_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_materialdesign_theme",
-      "config": "sphinx_materialdesign_theme",
-      "display": "sphinx_materialdesign_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_minoo_theme",
-      "config": "sphinx_minoo_theme",
-      "display": "sphinx_minoo_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_ops_theme",
-      "config": "sphinx_ops_theme",
-      "display": "sphinx_ops_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_py3doc_enhanced_theme",
-      "config": "sphinx_py3doc_enhanced_theme",
-      "display": "sphinx_py3doc_enhanced_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_rtd_theme",
-      "config": "sphinx_rtd_theme",
-      "display": "sphinx_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_sizzle_theme",
-      "config": "sizzle",
-      "display": "sizzle",
-      "options": {}
-    },
-    {
-      "pypi": "sphinx_theme_pd",
-      "config": "sphinx_theme_pd",
-      "display": "sphinx_theme_pd",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxbootstrap4theme",
-      "config": "sphinxbootstrap4theme",
-      "display": "sphinxbootstrap4theme",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxcontrib-rextheme",
-      "config": "rex",
-      "display": "rex",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.basicstrap",
-      "config": "basicstrap",
-      "display": "basicstrap",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.dotted",
-      "config": "dotted",
-      "display": "dotted",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.gopher",
-      "config": "gopher",
-      "display": "gopher",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.htmlslide",
-      "config": "htmlslide",
-      "display": "htmlslide",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.revealjs",
-      "config": "revealjs",
-      "display": "revealjs",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.s6",
-      "config": "s6",
-      "display": "s6",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.sphinxjp",
-      "config": "sphinxjp",
-      "display": "sphinxjp",
-      "options": {}
-    },
-    {
-      "pypi": "sphinxjp.themes.trstyle",
-      "config": "trstyle",
-      "display": "trstyle",
-      "options": {}
-    },
-    {
-      "pypi": "sponge-docs-theme",
-      "config": "sphinx_rtd_theme",
-      "display": "sphinx_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "stanford-theme",
-      "config": "stanford_theme",
-      "display": "stanford_theme",
-      "options": {}
-    },
-    {
-      "pypi": "stsci-rtd-theme",
-      "config": "stsci_rtd_theme",
-      "display": "stsci_rtd_theme",
-      "options": {}
-    },
-    {
-      "pypi": "sunpy-sphinx-theme",
-      "config": "sunpy",
-      "display": "sunpy",
-      "options": {}
-    },
-    {
-      "pypi": "t3SphinxThemeRtd",
-      "config": "t3SphinxThemeRtd",
-      "display": "t3SphinxThemeRtd",
-      "options": {}
-    },
-    {
-      "pypi": "tibas.tt",
-      "config": "tt",
-      "display": "tt",
-      "options": {}
-    },
-    {
-      "pypi": "topos-theme",
-      "config": "topos-theme",
-      "display": "topos-theme",
-      "options": {}
-    },
-    {
-      "pypi": "wild_sphinx_theme",
-      "config": "wild",
-      "display": "wild",
-      "options": {}
-    },
-    {
-      "pypi": "yummy-sphinx-theme",
-      "config": "yummy_sphinx_theme",
-      "display": "yummy_sphinx_theme",
-      "options": {}
-    },
-    {
-      "pypi": "zerovm-sphinx-theme",
-      "config": "zerovm",
-      "display": "zerovm",
       "options": {}
     }
   ]
