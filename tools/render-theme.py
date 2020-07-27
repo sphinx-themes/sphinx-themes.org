@@ -29,7 +29,7 @@ class Session:
         self.bin_paths = [self.virtualenv / "bin"]
 
         log(f"Creating virtualenv for {name} in {self.virtualenv}")
-        virtualenv.cli_run([str(self.virtualenv), "--clear"])
+        virtualenv.cli_run([str(self.virtualenv)])
 
     def install(self, *args, **kwargs):
         self.run("pip", "install", *args, **kwargs)
