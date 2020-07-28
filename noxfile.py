@@ -4,7 +4,14 @@ import sys
 import nox
 
 sys.path.insert(0, "")
-from src.helpers import BUILD_PATH, PUBLIC_PATH, RENDER_INFO_FILE, load_themes
+from src.helpers import (
+    BUILD_PATH,
+    PUBLIC_PATH,
+    RENDER_INFO_FILE,
+    IsolatedEnvironment,
+    load_themes,
+    patch_sample_docs_for,
+)
 
 
 def _prepare_output_directory(destination):
@@ -19,11 +26,13 @@ def _prepare_output_directory(destination):
 
 
 def _generate_docs(session, theme):
-    RENDER_INFO_FILE.write_text(repr(vars(theme)))
-    try:
-        session.run("python", "tools/render-theme.py", theme.name, silent=True)
-    finally:
-        RENDER_INFO_FILE.unlink()
+    env = IsolatedEnvironment(theme.name)
+    env.install("sphinx", theme.pypi)
+
+    patch_sample_docs_for(theme)
+    env.run(
+        "sphinx-build", "-v", "-b", "html", "sample-docs", str(BUILD_PATH / theme.name),
+    )
 
     shutil.move(
         str(BUILD_PATH / theme.name), str(PUBLIC_PATH / "sample-sites" / theme.name),
@@ -72,7 +81,6 @@ def render_sample_sites(session):
     _prepare_output_directory(PUBLIC_PATH)
     _prepare_output_directory(BUILD_PATH)
 
-    session.install("virtualenv")
     with_every_theme(session, _generate_docs, "Render")
 
 
