@@ -6,11 +6,12 @@ This is imported by noxfile.py and the scripts it invokes.
 import json
 import os
 import shutil
+import logging
 import subprocess
 from pathlib import Path
 from types import SimpleNamespace
 
-import virtualenv
+logger = logging.getLogger("venv")
 
 # Special directories and files
 ROOT = Path(__file__).parent.parent.resolve()
@@ -56,25 +57,31 @@ class IsolatedEnvironment:
         self.path = VENV_PATH / name
         self.bin_paths = [self.path / "bin"]
 
-        self.log(f"Creating virtualenv for {name} in {self.path}")
-        virtualenv.cli_run([str(self.path)])
-
     def log(self, message):
-        print(f"> {message}")
+        logger.info(message)
 
     def install(self, *args, **kwargs):
-        self.run("pip", "install", *args, **kwargs)
+        self.run("pip", "install", *args, **kwargs, silent=True)
 
-    def run(self, *args):
+    def run(self, *args, silent=False, external=False):
         assert args
         self.log(" ".join(args))
 
-        # Get the right executable
         path_location = os.pathsep.join(map(str, self.bin_paths))
         executable_path = shutil.which(args[0], path=path_location)
 
         command = (executable_path,) + args[1:]
-        subprocess.run(command, stderr=subprocess.STDOUT, check=True)
+
+        try:
+            subprocess.run(command, capture_output=silent, check=True)
+        except subprocess.CalledProcessError as e:
+            if silent:
+                print("Exited with exit code:", e.returncode)
+                print(" stdout ".center(80, "-"))
+                print(e.stdout.decode().strip("\n") or "<nothing>")
+                print(" stderr ".center(80, "-"))
+                print(e.stderr.decode().strip("\n") or "<nothing>")
+            raise
 
 
 def _theme_config_to_source_lines(config):

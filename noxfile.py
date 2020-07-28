@@ -1,5 +1,6 @@
 import shutil
 import sys
+import subprocess
 
 import nox
 
@@ -26,12 +27,26 @@ def _prepare_output_directory(destination):
 
 
 def _generate_docs(session, theme):
-    env = IsolatedEnvironment(theme.name)
-    env.install("sphinx", theme.pypi)
+    session.log(f" {theme.name} ".center(80, "-"))
 
+    # Setup the isolated environment
+    env = IsolatedEnvironment(theme.name)
+    session.run("virtualenv", str(env.path), silent=True)
+
+    # Install required packages
+    packages = sorted({"sphinx", theme.pypi})  # prevents duplication
+    env.install(*packages)
+
+    # Run sphinx
     patch_sample_docs_for(theme)
     env.run(
-        "sphinx-build", "-v", "-b", "html", "sample-docs", str(BUILD_PATH / theme.name),
+        "sphinx-build",
+        "-v",
+        "-b",
+        "html",
+        "sample-docs",
+        str(BUILD_PATH / theme.name),
+        silent=True,
     )
 
     shutil.move(
@@ -58,7 +73,7 @@ def with_every_theme(session, function, message):
     for theme in themes:
         try:
             function(session, theme)
-        except Exception:
+        except subprocess.CalledProcessError:
             failed.append(theme)
             continue
 
@@ -76,7 +91,7 @@ def publish(session):
     session.notify("render-index")
 
 
-@nox.session(name="render-sample-sites")
+@nox.session(name="render-sample-sites", python=False)
 def render_sample_sites(session):
     _prepare_output_directory(PUBLIC_PATH)
     _prepare_output_directory(BUILD_PATH)
