@@ -129,10 +129,12 @@ def render(theme):
 
 if __name__ == "__main__":
     import ast
+    import sys
     from types import SimpleNamespace
 
     di = ast.literal_eval(TO_RENDER.read_text())
     assert isinstance(di, dict)
+    assert di["name"] == sys.argv[1]
 
     theme = SimpleNamespace(**di)
     try:

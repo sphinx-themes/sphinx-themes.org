@@ -5,6 +5,9 @@ from types import SimpleNamespace
 
 import nox
 
+PUBLIC_PATH = Path("public")
+BUILD_PATH = Path("build")
+
 
 def _load_themes():
     try:
@@ -23,7 +26,7 @@ def _load_themes():
     return themes
 
 
-def _prepare_destination(destination):
+def _prepare_output_directory(destination):
     # Clean up existing stuff
     if destination.exists():
         shutil.rmtree(destination)
@@ -34,8 +37,18 @@ def _prepare_destination(destination):
     (destination / "sample-sites").mkdir()
 
 
-def _generate_docs(session):
-    session.run("python", "tools/render-theme.py")
+def _generate_docs(session, theme):
+    to_render = BUILD_PATH / "to-render.json"
+
+    to_render.write_text(repr(vars(theme)))
+    try:
+        session.run("python", "tools/render-theme.py", theme.name, silent=True)
+    finally:
+        to_render.unlink()
+
+    shutil.move(
+        str(BUILD_PATH / theme.name), str(PUBLIC_PATH / "sample-sites" / theme.name),
+    )
 
 
 def _generate_preview(session, theme):
@@ -43,68 +56,59 @@ def _generate_preview(session, theme):
     session.run(
         "python",
         "tools/generate-preview.py",
-        f"build/{theme.name}/index.html",
+        str(BUILD_PATH / theme.name / "index.html"),
         theme.name,
+        silent=True,
     )
 
-
-def _copy_theme_assets(session, theme, destination):
-    session.log("copy <theme files>")
     screenshot_file = f"{theme.name}.jpg"
-
     shutil.move(
         Path("screenshots") / screenshot_file,
-        destination / "preview-images" / screenshot_file,
+        PUBLIC_PATH / "preview-images" / screenshot_file,
     )
-    shutil.move(
-        str(Path("build") / theme.name), str(destination / "sample-sites" / theme.name),
-    )
+
+
+def with_every_theme(session, function, message):
+    """Nice little helper, to make looping through all the themes easier.
+    """
+    themes = _load_themes()
+    failed = []
+    for theme in themes:
+        try:
+            function(session, theme)
+        except Exception:
+            failed.append(theme)
+            continue
+
+    if failed:
+        parts = [f"Failed to {message.lower()} for:"]
+        for theme in failed:
+            parts.append(f"- {theme.name}")
+        session.error("\n".join(parts))
 
 
 @nox.session(python=False)
 def publish(session):
-    session.notify("render-themes")
+    session.notify("render-sample-sites")
+    session.notify("generate-previews")
     session.notify("render-index")
 
 
-@nox.session(name="render-themes")
-def render_themes(session):
-    session.install("virtualenv", "selenium", "pillow")
+@nox.session(name="render-sample-sites")
+def render_sample_sites(session):
+    _prepare_output_directory(PUBLIC_PATH)
+    _prepare_output_directory(BUILD_PATH)
 
-    # Prepare output directories
-    destination = Path("public")
-    _prepare_destination(destination)
+    session.install("virtualenv")
+    with_every_theme(session, _generate_docs, "Render")
 
-    build = Path("build")
-    to_render = build / "to-render.json"
-    if build.exists():
-        shutil.rmtree(build)
-    build.mkdir()
 
-    # Load the list of themes
-    themes = _load_themes()
+@nox.session(name="generate-previews")
+def generate_previews(session):
+    assert BUILD_PATH.exists(), "Did you run 'render-sample-sites' yet?"
 
-    # Generate documentation using every theme
-    failed = []
-    for theme in themes:
-        session.log(f"----- Working on {theme.display} -----")
-
-        to_render.write_text(repr(vars(theme)))
-        try:
-            _generate_docs(session)
-        except Exception:
-            failed.append(theme)
-            continue
-        to_render.unlink()
-
-        _generate_preview(session, theme)
-        _copy_theme_assets(session, theme, destination)
-
-    if failed:
-        parts = ["Failed to render using:"]
-        for theme in failed:
-            parts.append(f"- {theme.name}")
-        session.error("\n".join(parts))
+    session.install("selenium", "pillow")
+    with_every_theme(session, _generate_preview, "Generate preview")
 
 
 @nox.session(name="render-index")
