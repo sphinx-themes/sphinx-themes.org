@@ -46,6 +46,18 @@
       "pypi": "lsst-dd-rtd-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "os",
+          "mozilla_sphinx_theme"
+        ],
+        "html_theme": "mozilla",
+        "html_theme_path": "[os.path.dirname(mozilla_sphinx_theme.__file__)]"
+      },
+      "display": "Mozilla's sandstone theme",
+      "pypi": "mozilla-sphinx-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
