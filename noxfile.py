@@ -54,17 +54,6 @@ def _generate_docs(session, theme):
     )
 
 
-def _generate_preview(session, theme):
-    # Generate the preview
-    session.run(
-        "python",
-        "tools/generate-preview.py",
-        str(BUILD_PATH / theme.name / "index.html"),
-        theme.name,
-        silent=True,
-    )
-
-
 def with_every_theme(session, function, message):
     """Nice little helper, to make looping through all the themes easier.
     """
@@ -103,8 +92,16 @@ def render_sample_sites(session):
 def generate_previews(session):
     assert BUILD_PATH.exists(), "Did you run 'render-sample-sites' yet?"
 
+    def _call_script(session, theme):
+        session.run(
+            "python",
+            "tools/generate-preview.py",
+            str(BUILD_PATH / theme.name / "index.html"),
+            theme.name,
+        )
+
     session.install("selenium", "pillow")
-    with_every_theme(session, _generate_preview, "Generate preview")
+    with_every_theme(session, _call_script, "Generate preview")
 
     shutil.move(BUILD_PATH / "preview-images", PUBLIC_PATH / "preview-images")
 
