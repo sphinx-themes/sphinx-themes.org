@@ -134,7 +134,7 @@ if __name__ == "__main__":
 
     di = ast.literal_eval(TO_RENDER.read_text())
     assert isinstance(di, dict)
-    assert di["name"] == sys.argv[1]
+    assert di["name"] == sys.argv[1]  # check that file contents match invocation
 
     theme = SimpleNamespace(**di)
     try:
