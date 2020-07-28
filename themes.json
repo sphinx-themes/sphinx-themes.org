@@ -30,6 +30,11 @@
       "pypi": "insegel"
     },
     {
+      "config": "logilab",
+      "display": "Logilab",
+      "pypi": "logilab-sphinx-themes"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
