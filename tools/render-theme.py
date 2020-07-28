@@ -10,50 +10,13 @@ from pathlib import Path
 import virtualenv
 
 sys.path.insert(0, "")
-from src.helpers import CONF_PY_FILE, RENDER_INFO_FILE
+from src.helpers import CONF_PY_FILE, RENDER_INFO_FILE, IsolatedEnvironment
 
 
-def log(message):
-    print(f"> {message}")
-
-
-class Session:
-    """Mimic nox's session object!
-    """
-
-    def __init__(self, name):
-        super().__init__()
-        self.name = name
-        self.virtualenv = Path(".venv") / name
-        self.bin_paths = [self.virtualenv / "bin"]
-
-        log(f"Creating virtualenv for {name} in {self.virtualenv}")
-        virtualenv.cli_run([str(self.virtualenv)])
-
-    def install(self, *args, **kwargs):
-        self.run("pip", "install", *args, **kwargs)
-
-    def run(self, *args):
-        assert args
-        log(" ".join(args))
-
-        # Get the right executable
-        path_location = os.pathsep.join(map(str, self.bin_paths))
-        executable_path = shutil.which(args[0], path=path_location)
-
-        command = (executable_path,) + args[1:]
-        subprocess.run(command, stderr=subprocess.STDOUT, check=True)
-
-
-#
-# Actual logic
-#
 def _config_to_lines(config):
     """
-
-    This is where there's a lot of complexity in this module. We allow
-    theme.config to either be a string (mapping directly to html_theme) or
-    to be a dictionary.
+    We allow theme.config to either be a string (mapping directly to html_theme)
+    or to be a dictionary.
 
     There are 3 special keys:
     - _imports: a list of names, converted to "import name" statements.
@@ -110,14 +73,12 @@ def _patch_conf_file(theme):
 
 
 def render(theme):
-    session = Session(theme.name)
-    session.install("sphinx")
-    if theme.pypi != "sphinx":
-        session.install(theme.pypi)
+    env = IsolatedEnvironment(theme.name)
+    env.install("sphinx", theme.pypi)
 
     _patch_conf_file(theme)
 
-    session.run(
+    env.run(
         "sphinx-build",
         "-v",
         "-b",
