@@ -126,14 +126,14 @@ sphinx-bulma-theme,completed,
 topos-theme,completed,
 python-docs-theme,completed,
 sponge-docs-theme,completed,
-logilab-sphinx-themes,completed
+logilab-sphinx-themes,completed,
 f5-sphinx-theme,completed,
 divio-docs-theme,skipped,unknown theme
 karma_sphinx_theme,completed,
 ckanext-pgda-gt-theme,skipped,unknown theme
-sphinx-typlog-theme, completed
-sphinx_celery, completed
-sphinx-typo3-theme, completed
-sphinx-nervproject-theme, completed
-sphinx-material, completed
-sphinx-sizzle-theme, completed
+sphinx-typlog-theme, completed,
+sphinx_celery, completed,
+sphinx-typo3-theme, completed,
+sphinx-nervproject-theme, completed,
+sphinx-material, completed,
+sphinx-sizzle-theme, completed,
