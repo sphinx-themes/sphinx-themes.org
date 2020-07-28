@@ -25,6 +25,11 @@
       "pypi": "edx-sphinx-theme"
     },
     {
+      "config": "insegel",
+      "display": "insegel",
+      "pypi": "insegel"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
