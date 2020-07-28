@@ -63,6 +63,11 @@
       "pypi": "python-docs-theme"
     },
     {
+      "config": "sphinx_typo3_theme",
+      "display": "TYPO3 theme for docs.typo3.org",
+      "pypi": "sphinx-typo3-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
