@@ -68,6 +68,11 @@
       "pypi": "sphinx-bernard-theme"
     },
     {
+      "config": "sphinx_celery",
+      "display": "Celery Theme",
+      "pypi": "sphinx-celery"
+    },
+    {
       "config": "sphinx_typo3_theme",
       "display": "TYPO3 theme for docs.typo3.org",
       "pypi": "sphinx-typo3-theme"
