@@ -78,6 +78,11 @@
       "pypi": "sphinx-typo3-theme"
     },
     {
+      "config": "press",
+      "display": "press",
+      "pypi": "sphinx_press_theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
