@@ -9,8 +9,8 @@ from pathlib import Path
 
 import virtualenv
 
-TO_RENDER = Path("build") / "to-render.json"
-CONF_PY_FILE = Path("sample-docs") / "conf.py"
+sys.path.insert(0, "")
+from src.helpers import CONF_PY_FILE, RENDER_INFO_FILE
 
 
 def log(message):
@@ -132,7 +132,7 @@ if __name__ == "__main__":
     import sys
     from types import SimpleNamespace
 
-    di = ast.literal_eval(TO_RENDER.read_text())
+    di = ast.literal_eval(RENDER_INFO_FILE.read_text())
     assert isinstance(di, dict)
     assert di["name"] == sys.argv[1]  # check that file contents match invocation
 

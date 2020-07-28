@@ -1,29 +1,10 @@
-import json
 import shutil
-from pathlib import Path
-from types import SimpleNamespace
+import sys
 
 import nox
 
-PUBLIC_PATH = Path("public")
-BUILD_PATH = Path("build")
-
-
-def _load_themes():
-    try:
-        with open("themes.json") as f:
-            data = json.load(f)
-    except Exception as e:
-        raise Exception("Could not load themes.json") from e
-
-    themes = []
-    for theme in data["themes"]:
-        if theme["pypi"] == "sphinx":
-            theme["name"] = "default-" + theme["config"]
-        else:
-            theme["name"] = theme["pypi"]
-        themes.append(SimpleNamespace(**theme))
-    return themes
+sys.path.insert(0, "")
+from src.helpers import BUILD_PATH, PUBLIC_PATH, RENDER_INFO_FILE, load_themes
 
 
 def _prepare_output_directory(destination):
@@ -38,13 +19,11 @@ def _prepare_output_directory(destination):
 
 
 def _generate_docs(session, theme):
-    to_render = BUILD_PATH / "to-render.json"
-
-    to_render.write_text(repr(vars(theme)))
+    RENDER_INFO_FILE.write_text(repr(vars(theme)))
     try:
         session.run("python", "tools/render-theme.py", theme.name, silent=True)
     finally:
-        to_render.unlink()
+        RENDER_INFO_FILE.unlink()
 
     shutil.move(
         str(BUILD_PATH / theme.name), str(PUBLIC_PATH / "sample-sites" / theme.name),
@@ -65,7 +44,7 @@ def _generate_preview(session, theme):
 def with_every_theme(session, function, message):
     """Nice little helper, to make looping through all the themes easier.
     """
-    themes = _load_themes()
+    themes = load_themes()
     failed = []
     for theme in themes:
         try:
