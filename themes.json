@@ -63,7 +63,11 @@
       "pypi": "python-docs-theme"
     },
     {
-      "config": "sphinx_bernard_theme",
+      "config": {
+        "_imports": ["sphinx_bernard_theme"],
+        "html_theme": "sphinx_bernard_theme",
+        "html_theme_path": "[sphinx_bernard_theme.get_html_theme_path()]"
+      },
       "display": "bernardphp.com theme",
       "pypi": "sphinx-bernard-theme"
     },
