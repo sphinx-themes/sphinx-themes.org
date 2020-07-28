@@ -7,7 +7,7 @@
     },
     {
       "config": "sphinx_rtd_theme",
-      "display": "Read the Docs Sphinx Theme",
+      "display": "Read the Docs Theme",
       "pypi": "sphinx-rtd-theme"
     },
     {
@@ -42,7 +42,7 @@
         "html_theme": "lsst_dd_rtd_theme",
         "html_theme_path": "[lsst_dd_rtd_theme.get_html_theme_path()]"
       },
-      "display": "LSST Design Documents Sphinx Theme",
+      "display": "LSST Design Documents Theme",
       "pypi": "lsst-dd-rtd-theme"
     },
     {
