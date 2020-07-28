@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+    - uses: pre-commit/action@v2.0.0
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+
+    # pip caching
+    - name: Locate pip's cache
+      id: pip-cache
+      run: echo "::set-output name=dir::$(pip cache dir)"
+
+    - name: Persist cache across runs
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.pip-cache.outputs.dir }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    # Actual stuff
+    - name: Upgrade pip
+      run: pip install --upgrade pip
+    - name: Install nox
+      run: pip install nox
+    - name: Render all sample sites
+      run: nox -s render-sample-sites
