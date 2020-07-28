@@ -58,6 +58,11 @@
       "pypi": "mozilla-sphinx-theme"
     },
     {
+      "config": "python_docs_theme",
+      "display": "Python Documentation Theme",
+      "pypi": "python-docs-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
