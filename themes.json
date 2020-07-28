@@ -35,6 +35,17 @@
       "pypi": "logilab-sphinx-themes"
     },
     {
+      "config": {
+        "_imports": [
+          "lsst_dd_rtd_theme"
+        ],
+        "html_theme": "lsst_dd_rtd_theme",
+        "html_theme_path": "[lsst_dd_rtd_theme.get_html_theme_path()]"
+      },
+      "display": "LSST Design Documents Sphinx Theme",
+      "pypi": "lsst-dd-rtd-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
