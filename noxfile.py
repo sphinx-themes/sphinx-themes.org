@@ -61,12 +61,6 @@ def _generate_preview(session, theme):
         silent=True,
     )
 
-    screenshot_file = f"{theme.name}.jpg"
-    shutil.move(
-        Path("screenshots") / screenshot_file,
-        PUBLIC_PATH / "preview-images" / screenshot_file,
-    )
-
 
 def with_every_theme(session, function, message):
     """Nice little helper, to make looping through all the themes easier.
@@ -109,6 +103,8 @@ def generate_previews(session):
 
     session.install("selenium", "pillow")
     with_every_theme(session, _generate_preview, "Generate preview")
+
+    shutil.move(BUILD_PATH / "preview-images", PUBLIC_PATH / "preview-images")
 
 
 @nox.session(name="render-index")

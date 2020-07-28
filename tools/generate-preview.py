@@ -28,7 +28,7 @@ def main():
     file = Path(sys.argv[1]).resolve().as_uri()
     destination_name = sys.argv[2]
 
-    destination = Path(".") / "screenshots"
+    destination = Path("build") / "preview-images"
     if not destination.exists():
         destination.mkdir()
 
