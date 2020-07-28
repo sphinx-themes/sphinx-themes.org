@@ -75,3 +75,63 @@ class IsolatedEnvironment:
 
         command = (executable_path,) + args[1:]
         subprocess.run(command, stderr=subprocess.STDOUT, check=True)
+
+
+def _theme_config_to_source_lines(config):
+    """Convert themes.json "config" keys into lines for conf.py
+
+    `config` can either be a string or a dictionary. When it is a string, it
+    maps to a dictionary with "html_theme" key.
+
+    There are 3 special keys in the dictionary form:
+    - _imports: a list of names, converted to "import name" statements.
+    - _extensions: a list of names, appended to "extensions" list.
+    - html_theme: name, automatically quoted in the final file.
+
+    The rest of the dictionary are transformed and added into the file as-is.
+    In other words, { "key": "value" } becomes a line "key = value" in the
+    conf.py file.
+    """
+    if isinstance(config, str):
+        config = {"html_theme": config}
+
+    # Convert config into lines.
+    config_lines = []
+
+    # Imports
+    imports = config.pop("_imports", [])
+    for module in imports:
+        config_lines.append(f"import {module}\n")
+
+    # Extensions
+    extensions = config.pop("_extensions", [])
+    for ext in extensions:
+        config_lines.append(f'extensions.append("{ext}")\n')
+
+    # Theme
+    html_theme = config.pop("html_theme")
+    assert html_theme is not None, "really need html_theme to be provided via config"
+    config_lines.append(f'html_theme = "{html_theme}"\n')
+
+    # Everything else
+    for key, value in config.items():
+        config_lines.append(f"{key} = {value}\n")
+
+    return config_lines
+
+
+def patch_sample_docs_for(theme):
+    """Patch the configuration file for this theme.
+    """
+    config_lines = _theme_config_to_source_lines(theme.config)
+
+    # Actually manipulate the file.
+    with CONF_PY_FILE.open() as f:
+        lines = f.readlines()
+
+    # Find the marker we replace after.
+    index = lines.index("# !! MARKER !!\n")
+    lines[index + 1 :] = config_lines
+
+    with CONF_PY_FILE.open("w") as f:
+        f.writelines(lines)
