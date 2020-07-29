@@ -1,4 +1,4 @@
-# <sphinx-themes.org>
+# [sphinx-themes.org](https://sphinx-themes.org)
 
 Showcase for [Sphinx] documentation themes (HTML).
 
