@@ -4,9 +4,9 @@ This is imported by noxfile.py and the scripts it invokes.
 """
 
 import json
+import logging
 import os
 import shutil
-import logging
 import subprocess
 from pathlib import Path
 from types import SimpleNamespace
