@@ -4,7 +4,7 @@
 import sys
 
 sys.path.insert(0, "")
-from src.helpers import PUBLIC_PATH, ROOT, load_themes
+from src.helpers import BUILD_PATH, ROOT, load_themes
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 
     rendered = template.render(themes=load_themes())
 
-    destination_file = PUBLIC_PATH / "index.html"
+    destination_file = BUILD_PATH / "index.html"
     destination_file.write_text(rendered)
 
 

@@ -110,6 +110,7 @@ def generate_previews(session):
 def render_index(session):
     session.install("jinja2")
     session.run("python", "tools/render-index.py")
+    shutil.move(str(BUILD_PATH / "index.html"), str(PUBLIC_PATH / "index.html"))
 
 
 @nox.session
