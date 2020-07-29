@@ -46,24 +46,16 @@ jobs:
     - name: Generate preview screenshots
       run: nox -s generate-previews  # do the slow thing last.
 
-    # Upload for access (and publishing!)
+    # Publish!
+    - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.event.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: public/
+
+    # Upload for access!
     - uses: actions/upload-artifact@v2
       with:
         name: generated-site
         path: public/
-
-  publish:
-    runs-on: ubuntu-latest
-    needs: build
-    # Only run on push events to master
-    if: github.event_name == 'push' && github.event.ref == 'refs/heads/master'
-    steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: generated-site
-          path: site/
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site/
