@@ -89,6 +89,8 @@ $ nox -s publish -- sphinx-rtd-theme
 
 Generates the site in `public/`, while only generating assets (sample-site and preview-image) for the given theme name(s). Multiple theme names can be passed after the `--`. This is useful when adding one or more new themes, to ensure that the configuration is correct.
 
+> If you use this command, make sure to not include sample-docs/conf.py changes in any commits you make.
+
 ```sh
 $ nox -s lint
 ```
