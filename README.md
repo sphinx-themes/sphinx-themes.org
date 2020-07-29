@@ -1,6 +1,6 @@
 # [sphinx-themes.org](https://sphinx-themes.org)
 
-Showcase for [Sphinx] documentation themes (HTML).
+A showcase for [Sphinx] documentation themes
 
 ## Contributing
 
