@@ -7,6 +7,7 @@ import nox
 sys.path.insert(0, "")
 from src.helpers import (
     BUILD_PATH,
+    CONF_PY_FILE,
     PUBLIC_PATH,
     RENDER_INFO_FILE,
     IsolatedEnvironment,
@@ -51,6 +52,9 @@ def _generate_docs(session, theme):
 
     shutil.move(
         str(BUILD_PATH / theme.name), str(PUBLIC_PATH / "sample-sites" / theme.name),
+    )
+    shutil.copy(
+        str(CONF_PY_FILE), str(PUBLIC_PATH / "sample-sites" / theme.name),
     )
 
 
