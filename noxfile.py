@@ -90,18 +90,10 @@ def render_sample_sites(session):
 
 @nox.session(name="generate-previews")
 def generate_previews(session):
-    assert BUILD_PATH.exists(), "Did you run 'render-sample-sites' yet?"
+    assert PUBLIC_PATH.exists(), "Did you run 'render-sample-sites' yet?"
 
-    def _call_script(session, theme):
-        session.run(
-            "python",
-            "tools/generate-preview.py",
-            str(BUILD_PATH / theme.name / "index.html"),
-            theme.name,
-        )
-
-    session.install("selenium", "pillow")
-    with_every_theme(session, _call_script, "Generate preview")
+    session.install("selenium", "pillow", "colorama")
+    session.run("python", "tools/generate-previews.py")
 
     source = BUILD_PATH / "preview-images"
     destination = PUBLIC_PATH / "preview-images"

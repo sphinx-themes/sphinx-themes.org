@@ -18,6 +18,8 @@ ROOT = Path(__file__).parent.parent.resolve()
 VENV_PATH = ROOT / ".venv"
 THEMES_FILE = ROOT / "themes.json"
 
+TEMPLATE_IMAGE_FILE = ROOT / "src" / "template.png"
+
 BUILD_PATH = ROOT / "build"
 RENDER_INFO_FILE = BUILD_PATH / "to-render.json"
 
