@@ -41,17 +41,21 @@
                   src="preview-images/{{ theme.name }}.jpg" alt="{{ theme.display }} Preview">
               </div>
               <div class="card-header">
-                <div class="card-title h5">{{ theme.display }}
+                <div class="card-title">
+                  <span class="h5">{{ theme.display }}</span>
                 </div>
                 <div class="card-subtitle text-gray">
-                  {% if theme.pypi != "sphinx" %}
-                  Third-party theme (<a class="text-muted" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>)
-                  {% elif theme.config == "alabaster" %}
-                  Default theme
-                  {% else %}
-                  Builtin theme
-                  {% endif %}
-                  <a class="text-primary float-right" href="sample-sites/{{ theme.name }}/">Demo</a>
+                  {% if theme.pypi != "sphinx" -%}
+                  Third-party theme (<a class="text-muted" href="https://pypi.org/project/{{ theme.pypi }}">PyPI page</a>,
+                  {% elif theme.config == "alabaster" -%}
+                  Default theme (
+                  {%- else -%}
+                  Builtin theme (
+                  {%- endif -%}
+                  <a class="text-muted" href="sample-sites/{{ theme.name }}/conf.py">conf.py</a>)
+                  <span class="float-right">
+                    <a class="text-primary" href="sample-sites/{{ theme.name }}/">Preview</a>
+                  </span>
                 </div>
               </div>
             </div>
