@@ -57,7 +57,7 @@ def _generate_docs(session, theme):
 def with_every_theme(session, function, message):
     """Nice little helper, to make looping through all the themes easier.
     """
-    themes = load_themes()
+    themes = load_themes(*session.posargs)
     failed = []
     for theme in themes:
         try:
@@ -93,7 +93,7 @@ def generate_previews(session):
     assert PUBLIC_PATH.exists(), "Did you run 'render-sample-sites' yet?"
 
     session.install("selenium", "pillow", "colorama")
-    session.run("python", "tools/generate-previews.py")
+    session.run("python", "tools/generate-previews.py", *session.posargs)
 
     source = BUILD_PATH / "preview-images"
     destination = PUBLIC_PATH / "preview-images"

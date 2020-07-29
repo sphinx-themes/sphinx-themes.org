@@ -78,7 +78,7 @@ def save_preview(name, screenshots, image):
 
 
 def main():
-    all_themes = load_themes()
+    all_themes = load_themes(*sys.argv[1:])
     browser = get_browser()
     template_image = get_template_image()
 

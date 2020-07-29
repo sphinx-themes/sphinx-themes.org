@@ -27,7 +27,7 @@ PUBLIC_PATH = ROOT / "public"
 CONF_PY_FILE = ROOT / "sample-docs" / "conf.py"
 
 
-def load_themes():
+def load_themes(*specific_allowed_names):
     try:
         with THEMES_FILE.open() as f:
             data = json.load(f)
@@ -37,7 +37,9 @@ def load_themes():
     themes = []
     for theme in data["themes"]:
         theme["name"] = get_theme_name(theme)
-        themes.append(SimpleNamespace(**theme))
+        if not specific_allowed_names or theme["name"] in specific_allowed_names:
+            themes.append(SimpleNamespace(**theme))
+
     return themes
 
 
