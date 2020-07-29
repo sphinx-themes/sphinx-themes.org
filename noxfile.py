@@ -110,3 +110,9 @@ def generate_previews(session):
 def render_index(session):
     session.install("jinja2")
     session.run("python", "tools/render-index.py")
+
+
+@nox.session
+def lint(session):
+    session.install("pre-commit")
+    session.run("pre-commit", "run", "--all-files")
