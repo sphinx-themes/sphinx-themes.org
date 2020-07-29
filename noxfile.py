@@ -103,7 +103,11 @@ def generate_previews(session):
     session.install("selenium", "pillow")
     with_every_theme(session, _call_script, "Generate preview")
 
-    shutil.move(str(BUILD_PATH / "preview-images"), str(PUBLIC_PATH))
+    source = BUILD_PATH / "preview-images"
+    destination = PUBLIC_PATH / "preview-images"
+    for file in source.iterdir():
+        assert file.is_file(), repr(file)
+        shutil.move(str(file), str(destination / file.name))
 
 
 @nox.session(name="render-index")
