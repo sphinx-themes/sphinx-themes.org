@@ -8,8 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 sys.path.insert(0, "")
-from src.helpers import BUILD_PATH, PUBLIC_PATH, ROOT, load_themes, TEMPLATE_IMAGE_FILE
-
+from src.helpers import BUILD_PATH, PUBLIC_PATH, ROOT, TEMPLATE_IMAGE_FILE, load_themes
 
 RESIZE_FACTOR = 2  # How much smaller to make the template image
 QUALITY = 80  # Determines degree of compression in generated JPEGs
