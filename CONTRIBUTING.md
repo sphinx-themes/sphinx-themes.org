@@ -109,7 +109,7 @@ Runs the linters and formats all the files in the repository. This uses [`pre-co
   - Install the required packages.
   - Run `tools/generate-previews.py`
     - Creates a selenium driver for Google Chrome.
-    - For every theme:
+    - For every theme (in parallel):
       - Open the generated sample site's root.
       - Take screenshots for various resolutions.
       - Place the screenshots appropriately in `src/template.png`
