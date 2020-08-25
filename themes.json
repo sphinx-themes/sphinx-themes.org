@@ -42,6 +42,11 @@
       "pypi": "edx-sphinx-theme"
     },
     {
+      "config": "flask",
+      "display": "Flask",
+      "pypi": "flask-sphinx-themes"
+    },
+    {
       "config": "insegel",
       "display": "insegel",
       "pypi": "insegel"
