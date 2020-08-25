@@ -17,6 +17,18 @@
     },
     {
       "config": {
+        "_imports": [
+          "caktus_theme"
+        ],
+        "html_sidebars": "caktus_theme.default_sidebars()",
+        "html_theme": "caktus",
+        "html_theme_path": "[caktus_theme.get_theme_dir()]"
+      },
+      "display": "Caktus",
+      "pypi": "caktus-sphinx-theme"
+    },
+    {
+      "config": {
         "_extensions": [
           "edx_theme"
         ],
