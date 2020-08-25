@@ -1,0 +1,151 @@
+{
+  "themes": [
+    {
+      "config": "alabaster",
+      "display": "Alabaster",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "sphinx_rtd_theme",
+      "display": "Read the Docs Theme",
+      "pypi": "sphinx-rtd-theme"
+    },
+    {
+      "config": {
+        "_extensions": [
+          "edx_theme"
+        ],
+        "_imports": [
+          "edx_theme"
+        ],
+        "html_theme": "edx_theme",
+        "html_theme_path": "[edx_theme.get_html_theme_path()]"
+      },
+      "display": "edx-sphinx-theme",
+      "pypi": "edx-sphinx-theme"
+    },
+    {
+      "config": "insegel",
+      "display": "insegel",
+      "pypi": "insegel"
+    },
+    {
+      "config": "logilab",
+      "display": "Logilab",
+      "pypi": "logilab-sphinx-themes"
+    },
+    {
+      "config": {
+        "_imports": [
+          "lsst_dd_rtd_theme"
+        ],
+        "html_theme": "lsst_dd_rtd_theme",
+        "html_theme_path": "[lsst_dd_rtd_theme.get_html_theme_path()]"
+      },
+      "display": "LSST Design Documents Theme",
+      "pypi": "lsst-dd-rtd-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "os",
+          "mozilla_sphinx_theme"
+        ],
+        "html_theme": "mozilla",
+        "html_theme_path": "[os.path.dirname(mozilla_sphinx_theme.__file__)]"
+      },
+      "display": "Mozilla's sandstone theme",
+      "pypi": "mozilla-sphinx-theme"
+    },
+    {
+      "config": "python_docs_theme",
+      "display": "Python Documentation Theme",
+      "pypi": "python-docs-theme"
+    },
+    {
+      "config": {
+        "_extensions": [
+          "sphinx_ansible_theme.ext.pygments_lexer"
+        ],
+        "highlight_language": "'YAML+Jinja'",
+        "html_context": "{'display_github': True, 'github_user': 'pradyunsg', 'github_repo': 'sphinx-themes', 'github_version': 'master/sample-docs/', 'github_root_dir': 'master/src', 'current_version': 'latest', 'latest_version': 'latest', 'available_versions': ('latest', ), 'css_files': (), }",
+        "html_theme": "sphinx_ansible_theme",
+        "html_theme_options": "{'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }",
+        "pygments_style": "'sphinx'"
+      },
+      "display": "Reusable Ansible Theme",
+      "pypi": "sphinx-ansible-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_bernard_theme"
+        ],
+        "html_theme": "sphinx_bernard_theme",
+        "html_theme_path": "[sphinx_bernard_theme.get_html_theme_path()]"
+      },
+      "display": "bernardphp.com theme",
+      "pypi": "sphinx-bernard-theme"
+    },
+    {
+      "config": "sphinx_celery",
+      "display": "Celery Theme",
+      "pypi": "sphinx-celery"
+    },
+    {
+      "config": "sphinx_typo3_theme",
+      "display": "TYPO3 theme for docs.typo3.org",
+      "pypi": "sphinx-typo3-theme"
+    },
+    {
+      "config": "press",
+      "display": "press",
+      "pypi": "sphinx_press_theme"
+    },
+    {
+      "config": "agogo",
+      "display": "agogo",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "bizstyle",
+      "display": "bizstyle",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "classic",
+      "display": "classic",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "haiku",
+      "display": "haiku",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "nature",
+      "display": "nature",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "pyramid",
+      "display": "pyramid",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "scrolls",
+      "display": "scrolls",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "sphinxdoc",
+      "display": "sphinxdoc",
+      "pypi": "sphinx"
+    },
+    {
+      "config": "traditional",
+      "display": "traditional",
+      "pypi": "sphinx"
+    }
+  ]
+}

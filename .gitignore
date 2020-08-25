@@ -1,3 +1,7 @@
-js/node_modules
-venv
-js/.cache
+# Generated Files
+/build
+/public
+/.venv
+
+# Python stuff
+__pycache__

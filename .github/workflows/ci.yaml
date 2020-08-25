@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+    - uses: pre-commit/action@v2.0.0
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+
+    # pip caching
+    - name: Locate pip's cache
+      id: pip-cache
+      run: echo "::set-output name=dir::$(pip cache dir)"
+
+    - name: Persist cache across runs
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.pip-cache.outputs.dir }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    # Install runtime dependencies
+    - name: Upgrade pip
+      run: pip install --upgrade pip
+    - name: Install nox
+      run: pip install nox
+
+    # Render entire site
+    - name: Render all sample sites
+      run: nox -s render-sample-sites
+    - name: Render index page
+      run: nox -s render-index
+    - name: Generate preview screenshots
+      run: nox -s generate-previews  # do the slow thing last.
+
+    # Publish!
+    - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.event.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: public/
+
+    # Upload for access!
+    - uses: actions/upload-artifact@v2
+      with:
+        name: generated-site
+        path: public/
