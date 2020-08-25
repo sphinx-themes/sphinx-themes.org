@@ -99,10 +99,11 @@ Runs the linters and formats all the files in the repository. This uses [`pre-co
 `nox -s publish` generates the various parts of the website as follows:
 
 - `nox -s render-sample-sites`: Generate the sample site.
-  - For every theme:
-    - Create an isolated virtualenv in `.venv` and install sphinx + theme's PyPI package.
-    - Patch `sample-docs/conf.py` according to what's needed for the theme.
-    - Call `sphinx-build` to render the documentation using given theme.
+  - Run `tools/render-sample-sites.py`
+    - For every theme (in parallel):
+      - Create an isolated virtualenv in `.venv` and install sphinx.
+      - Generate a `conf.py` for rendering documentation using this theme.
+      - Call `sphinx-build` to render the documentation using given theme.
 
 - `nox -s generate-previews`: Generate the preview images.
   - Install the required packages.
