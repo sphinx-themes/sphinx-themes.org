@@ -40,6 +40,8 @@ def load_themes(*specific_allowed_names):
         if not specific_allowed_names or theme["name"] in specific_allowed_names:
             themes.append(SimpleNamespace(**theme))
 
+    if not themes:
+        raise Exception("No themes match given names.")
     return themes
 
 
