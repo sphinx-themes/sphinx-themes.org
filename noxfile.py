@@ -7,12 +7,11 @@ import nox
 sys.path.insert(0, "")
 from src.helpers import (
     BUILD_PATH,
-    CONF_PY_FILE,
     PUBLIC_PATH,
     RENDER_INFO_FILE,
     IsolatedEnvironment,
+    generate_sphinx_config_for,
     load_themes,
-    patch_sample_docs_for,
 )
 
 
@@ -38,24 +37,25 @@ def _generate_docs(session, theme):
     packages = sorted({"sphinx", theme.pypi})  # prevents duplication
     env.install(*packages)
 
+    build_location = BUILD_PATH / "sample-sites" / theme.name
+    destination = PUBLIC_PATH / "sample-sites" / theme.name
+    if build_location.exists():
+        shutil.rmtree(build_location)
+    build_location.mkdir(parents=True)
+
     # Run sphinx
-    patch_sample_docs_for(theme)
+    generate_sphinx_config_for(theme, at=build_location)
     env.run(
         "sphinx-build",
         "-v",
-        "-b",
-        "html",
+        "-b=html",
+        f"-c={build_location}",
         "sample-docs",
-        str(BUILD_PATH / theme.name),
+        str(build_location),
         silent=True,
     )
 
-    shutil.move(
-        str(BUILD_PATH / theme.name), str(PUBLIC_PATH / "sample-sites" / theme.name),
-    )
-    shutil.copy(
-        str(CONF_PY_FILE), str(PUBLIC_PATH / "sample-sites" / theme.name),
-    )
+    shutil.move(str(build_location), str(destination))
 
 
 def with_every_theme(session, function, message):

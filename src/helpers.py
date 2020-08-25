@@ -24,7 +24,7 @@ BUILD_PATH = ROOT / "build"
 RENDER_INFO_FILE = BUILD_PATH / "to-render.json"
 
 PUBLIC_PATH = ROOT / "public"
-CONF_PY_FILE = ROOT / "sample-docs" / "conf.py"
+CONF_PY_TEMPLATE = ROOT / "sample-docs" / "conf.py.template"
 
 
 def load_themes(*specific_allowed_names):
@@ -131,18 +131,17 @@ def _theme_config_to_source_lines(config):
     return config_lines
 
 
-def patch_sample_docs_for(theme):
-    """Patch the configuration file for this theme.
+def generate_sphinx_config_for(theme):
+    """Generate the Sphinx configuration file for this theme.
     """
     config_lines = _theme_config_to_source_lines(theme.config)
 
-    # Actually manipulate the file.
-    with CONF_PY_FILE.open() as f:
+    with CONF_PY_TEMPLATE.open() as f:
         lines = f.readlines()
 
-    # Find the marker we replace after.
-    index = lines.index("# !! MARKER !!\n")
-    lines[index + 1 :] = config_lines
+    replace_from = lines.index("# !! MARKER !!\n") + 1  # Find the marker we replace.
+    lines[replace_from:] = config_lines
 
-    with CONF_PY_FILE.open("w") as f:
+    destination = BUILD_PATH / theme.name / "conf.py"
+    with destination.open("w") as f:
         f.writelines(lines)
