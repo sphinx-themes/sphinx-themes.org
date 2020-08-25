@@ -11,6 +11,11 @@
       "pypi": "sphinx-rtd-theme"
     },
     {
+      "config": "bootstrap-astropy",
+      "display": "astropy-sphinx-theme",
+      "pypi": "astropy-sphinx-theme"
+    },
+    {
       "config": {
         "_extensions": [
           "edx_theme"
