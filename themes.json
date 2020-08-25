@@ -47,6 +47,18 @@
       "pypi": "flask-sphinx-themes"
     },
     {
+      "config": {
+        "_imports": [
+          "guzzle_sphinx_theme"
+        ],
+        "html_theme": "guzzle_sphinx_theme",
+        "html_theme_path": "guzzle_sphinx_theme.html_theme_path()",
+        "html_translator_class": "'guzzle_sphinx_theme.HTMLTranslator'"
+      },
+      "display": "guzzle-sphinx-theme",
+      "pypi": "guzzle-sphinx-theme"
+    },
+    {
       "config": "insegel",
       "display": "insegel",
       "pypi": "insegel"
