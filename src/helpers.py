@@ -14,7 +14,7 @@ from types import SimpleNamespace
 logger = logging.getLogger("venv")
 
 # Special directories and files
-ROOT = Path(__file__).parent.parent.resolve()
+ROOT = Path(__file__).parent.parent.relative_to(Path(".").resolve())
 VENV_PATH = ROOT / ".venv"
 THEMES_FILE = ROOT / "themes.json"
 
@@ -24,7 +24,7 @@ BUILD_PATH = ROOT / "build"
 RENDER_INFO_FILE = BUILD_PATH / "to-render.json"
 
 PUBLIC_PATH = ROOT / "public"
-CONF_PY_FILE = ROOT / "sample-docs" / "conf.py"
+CONF_PY_TEMPLATE = ROOT / "sample-docs" / "conf.py.template"
 
 
 def load_themes(*specific_allowed_names):
@@ -40,6 +40,8 @@ def load_themes(*specific_allowed_names):
         if not specific_allowed_names or theme["name"] in specific_allowed_names:
             themes.append(SimpleNamespace(**theme))
 
+    if not themes:
+        raise Exception("No themes match given names.")
     return themes
 
 
@@ -61,13 +63,20 @@ class IsolatedEnvironment:
         self.path = VENV_PATH / name
         self.bin_paths = [self.path / "bin"]
 
+    def create(self, *, delete=False):
+        if self.path.exists() and not delete:
+            assert all(path.exists() for path in self.bin_paths)
+            return
+
+        subprocess.check_output(["virtualenv", str(self.path)])
+
     def log(self, message):
         logger.info(message)
 
     def install(self, *args, **kwargs):
-        self.run("pip", "install", *args, **kwargs, silent=True)
+        self.run("pip", "install", *args, **kwargs)
 
-    def run(self, *args, silent=False, external=False):
+    def run(self, *args, external=False):
         assert args
         self.log(" ".join(args))
 
@@ -77,14 +86,16 @@ class IsolatedEnvironment:
         command = (executable_path,) + args[1:]
 
         try:
-            subprocess.run(command, capture_output=silent, check=True)
+            subprocess.run(command, capture_output=True, check=True)
         except subprocess.CalledProcessError as e:
-            if silent:
-                print("Exited with exit code:", e.returncode)
-                print(" stdout ".center(80, "-"))
-                print(e.stdout.decode().strip("\n") or "<nothing>")
-                print(" stderr ".center(80, "-"))
-                print(e.stderr.decode().strip("\n") or "<nothing>")
+            print(" stdout ".center(80, "-"))
+            print(e.stdout.decode().strip("\n") or "<nothing>")
+            print(" stderr ".center(80, "-"))
+            print(e.stderr.decode().strip("\n") or "<nothing>")
+            print(" Error occurred ".center(80, "-"))
+            print("Command:", " ".join(command))
+            print("Exited with exit code:", e.returncode)
+            print("-" * 80)
             raise
 
 
@@ -131,18 +142,16 @@ def _theme_config_to_source_lines(config):
     return config_lines
 
 
-def patch_sample_docs_for(theme):
-    """Patch the configuration file for this theme.
+def generate_sphinx_config_for(theme, *, at):
+    """Generate the Sphinx configuration file for this theme.
     """
     config_lines = _theme_config_to_source_lines(theme.config)
 
-    # Actually manipulate the file.
-    with CONF_PY_FILE.open() as f:
+    with CONF_PY_TEMPLATE.open() as f:
         lines = f.readlines()
 
-    # Find the marker we replace after.
-    index = lines.index("# !! MARKER !!\n")
-    lines[index + 1 :] = config_lines
+    replace_from = lines.index("# !! MARKER !!\n") + 1  # Find the marker we replace.
+    lines[replace_from:] = config_lines
 
-    with CONF_PY_FILE.open("w") as f:
+    with (at / "conf.py").open("w") as f:
         f.writelines(lines)

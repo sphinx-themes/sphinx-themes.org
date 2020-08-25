@@ -98,7 +98,7 @@ def worker(theme):
     browser = _THREAD_LOCAL.browser
     template_image = _THREAD_LOCAL.template_image
 
-    page = (PUBLIC_PATH / "sample-sites" / theme.name / "index.html").as_uri()
+    page = (PUBLIC_PATH / "sample-sites" / theme.name / "index.html").resolve().as_uri()
 
     browser.get(page)
     screenshots = take_screenshots(browser)
