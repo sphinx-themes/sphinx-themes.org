@@ -14,7 +14,7 @@ from types import SimpleNamespace
 logger = logging.getLogger("venv")
 
 # Special directories and files
-ROOT = Path(__file__).parent.parent.resolve()
+ROOT = Path(__file__).parent.parent.relative_to(Path(".").resolve())
 VENV_PATH = ROOT / ".venv"
 THEMES_FILE = ROOT / "themes.json"
 
@@ -142,7 +142,7 @@ def _theme_config_to_source_lines(config):
     return config_lines
 
 
-def generate_sphinx_config_for(theme):
+def generate_sphinx_config_for(theme, *, at):
     """Generate the Sphinx configuration file for this theme.
     """
     config_lines = _theme_config_to_source_lines(theme.config)
@@ -153,6 +153,5 @@ def generate_sphinx_config_for(theme):
     replace_from = lines.index("# !! MARKER !!\n") + 1  # Find the marker we replace.
     lines[replace_from:] = config_lines
 
-    destination = BUILD_PATH / theme.name / "conf.py"
-    with destination.open("w") as f:
+    with (at / "conf.py").open("w") as f:
         f.writelines(lines)
