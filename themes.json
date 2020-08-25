@@ -47,6 +47,11 @@
       "pypi": "flask-sphinx-themes"
     },
     {
+      "config": "groundwork",
+      "display": "groundwork-sphinx-theme",
+      "pypi": "groundwork-sphinx-theme"
+    },
+    {
       "config": {
         "_imports": [
           "guzzle_sphinx_theme"
