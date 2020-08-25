@@ -1,0 +1,1065 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lists &amp; Tables &mdash; Sphinx Themes Sample  documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://pradyunsg.me/sphinx-themes/demo/lists_tables.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/ansible.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API documentation and generated content" href="api.html" />
+    <link rel="prev" title="Paragraph Level Markup" href="demo.html" /> <!---- extra head elements for Ansible beyond RTD Sphinx Theme --->
+<script type="text/javascript" src="//www.redhat.com/dtm.js"></script>
+<!-- <meta class="swiftype" name="published_at" data-type="date" content="2017-12-13" /> -->
+<meta class="swiftype" name="version" data-type="string" content="">
+
+<!-- Google Tag Manager Data Layer -->
+<script>
+ dataLayer = [];
+</script>
+<!-- End Google Tag Manager Data Layer -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script> 
+</head>
+
+<body class="wy-body-for-nav">
+   <!---- extra body elements for Ansible beyond RTD Sphinx Theme --->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSB293" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PSB293');</script>
+<!-- End Google Tag Manager -->
+
+  <div class="DocSite-globalNav ansibleNav">
+      <ul>
+          <li><a href="https://www.ansible.com/ansiblefest" target="_blank">AnsibleFest</a></li>
+          <li><a href="https://www.ansible.com/tower" target="_blank">Products</a></li>
+          <li><a href="https://www.ansible.com/community" target="_blank">Community</a></li>
+          <li><a href="https://www.ansible.com/webinars-training" target="_blank">Webinars & Training</a></li>
+          <li><a href="https://www.ansible.com/blog" target="_blank">Blog</a></li>
+      </ul>
+  </div>
+
+<a class="DocSite-nav" href="/" style="padding-bottom: 30px;">
+
+  <img class="DocSiteNav-logo"
+    src="../_static/images/logo_invert.png"
+    alt="Ansible Logo">
+  <div class="DocSiteNav-title">Sphinx Themes Sample  documentation</div>
+</a> 
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5bbdbf" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sphinx Themes Sample
+          
+
+          
+          </a>
+
+          
+            
+            <!--- Based on https://github.com/rtfd/sphinx_rtd_theme/pull/438/files -->
+
+<div class="version">
+  
+    <div class="version-dropdown">
+      <select class="version-list" id="version-list" onchange="javascript:location.href = this.value;">
+        <script> x = document.getElementById("version-list"); </script>
+        
+          <script>
+            current_url = window.location.href;
+            option = document.createElement("option");
+            option.text = "latest";
+            if ( "latest" == "latest" ) {
+              option.selected = true;
+            }
+            if (current_url.search("latest") > -1) {
+              option.value = current_url.replace("latest","latest");
+            } else {
+              option.value = current_url.replace("latest","latest");
+            }
+            x.add(option);
+          </script>
+        
+      </select>
+    </div>
+  
+</div>
+            
+
+          
+<div role="search">
+<!--  <form id="rtd-search-form" class="wy-form" action="../search.html" -->
+  <form id="rtd-search-form" class="wy-form"  method="get">
+    <input type="text" class="st-default-search-input" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Demo Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Structural Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#document-section">Document Section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#document-subsection">Document Subsection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html#structural-elements-2">Structural Elements 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Document Section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#id2">Document Subsection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Paragraph Level Markup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#inline-markup">Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#math">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#meta">Meta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#blocks">Blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#literal-blocks">Literal Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#line-blocks">Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#block-quotes">Block Quotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#doctest-blocks">Doctest Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#code-blocks">Code Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#sidebar">Sidebar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#code-with-sidebar">Code with Sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#footnotes">Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#citations">Citations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#glossary">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#targets">Targets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#directives">Directives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#centered-text">Centered text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#images-figures">Images &amp; Figures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#admonitions">Admonitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#topics-sidebars-and-rubrics">Topics, Sidebars, and Rubrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#target-footnotes">Target Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#replacement-text">Replacement Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#compound-paragraph">Compound Paragraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html#download-links">Download Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lists &amp; Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enumerated-lists">Enumerated Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definition-lists">Definition Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-lists">Option Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-list">Field list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bullet-lists">Bullet Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlists">Hlists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numbered-list">Numbered List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grid-tables">Grid Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-tables">List Tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API documentation and generated content</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-test_py_module.test"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_py_module</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#c-api">C++ API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#javascript-api">JavaScript API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#generated-index">Generated Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#optional-parameter-args">Optional parameter args</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#data">Data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="long.html">Long Sticky Nav</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-1">Example Menu 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-2">Example Menu 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-3">Example Menu 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-4">Example Menu 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-5">Example Menu 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-6">Example Menu 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-7">Example Menu 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-8">Example Menu 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-9">Example Menu 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-10">Example Menu 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-11">Example Menu 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-12">Example Menu 12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-13">Example Menu 13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-14">Example Menu 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-15">Example Menu 15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-16">Example Menu 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-17">Example Menu 17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-18">Example Menu 18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-19">Example Menu 19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-menu-20">Example Menu 20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-submenu-1">Example Submenu 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="long.html#submenu-1">Submenu 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#submenu-2">Submenu 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#submenu-3">Submenu 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#submenu-4">Submenu 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#submenu-5">Submenu 5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="long.html#example-submenu-2">Example Submenu 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="long.html#id2">Submenu 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#id4">Submenu 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#id6">Submenu 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#id7">Submenu 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="long.html#id8">Submenu 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+        
+      </div>
+    </nav>
+  </div>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sphinx Themes Sample</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lists &amp; Tables</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- Ansible-specific additions for modules etc -->
+                
+                  <a href="https://github.com/pradyunsg/sphinx-themes/edit/master/sample-docs/demo/lists_tables.rst?description=%23%23%23%23%23%20SUMMARY%0A%3C!---%20Your%20description%20here%20--%3E%0A%0A%0A%23%23%23%23%23%20ISSUE%20TYPE%0A-%20Docs%20Pull%20Request%0A%0A%2Blabel:%20docsite_pr" class="fa fa-github"> Edit on GitHub</a>
+                
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <!--- Based on sphinx versionwarning extension. Extension currently only works on READTHEDOCS -->
+  <script>
+    // Create a banner if we're not on the official docs site
+    if (location.host == "docs.testing.ansible.com") {
+      document.write('<div id="testing_banner_id" class="admonition important">');
+      para = document.createElement('p');
+      banner_text=document.createTextNode("This is a testing site. For the official docs go to https://docs.ansible.com/");
+      para.appendChild(banner_text);
+      element = document.getElementById('testing_banner_id');
+      element.appendChild(para);
+      document.write('</div>');
+    }
+
+    // Create a banner if we're not the latest version
+    current_url = window.location.href;
+    if ((current_url.search("latest") > -1) || (current_url.search("/latest/") > -1)) {
+     // no banner for latest release
+    } else if (current_url.search("devel") > -1) {
+      document.write('<div id="banner_id" class="admonition caution">');
+      para = document.createElement('p');
+      banner_text=document.createTextNode("You are reading the *devel* version of the Ansible documentation - most module documentation is currently missing as the modules have moved to collections. Until docs catches up to this change, use the version selection to the left if you want module documentation or the latest stable release version. The *devel* version is not guaranteed stable.");
+      para.appendChild(banner_text);
+      element = document.getElementById('banner_id');
+      element.appendChild(para);
+      document.write('</div>');
+    } else {
+      document.write('<div id="banner_id" class="admonition caution">');
+      para = document.createElement('p');
+      banner_text=document.createTextNode("You are reading an older version of the documentation. Use the version selection to the left if you want the latest stable released version.");
+      para.appendChild(banner_text);
+      element = document.getElementById('banner_id');
+      element.appendChild(para);
+      document.write('</div>');
+    }
+  </script>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lists-tables">
+<h1><a class="toc-backref" href="#id17">Lists &amp; Tables</a><a class="headerlink" href="#lists-tables" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#lists-tables" id="id17">Lists &amp; Tables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#lists" id="id18">Lists</a></p>
+<ul>
+<li><p><a class="reference internal" href="#enumerated-lists" id="id19">Enumerated Lists</a></p></li>
+<li><p><a class="reference internal" href="#definition-lists" id="id20">Definition Lists</a></p></li>
+<li><p><a class="reference internal" href="#option-lists" id="id21">Option Lists</a></p></li>
+<li><p><a class="reference internal" href="#field-list" id="id22">Field list</a></p></li>
+<li><p><a class="reference internal" href="#bullet-lists" id="id23">Bullet Lists</a></p>
+<ul>
+<li><p><a class="reference internal" href="#simple" id="id24">Simple</a></p></li>
+<li><p><a class="reference internal" href="#complex" id="id25">Complex</a></p></li>
+<li><p><a class="reference internal" href="#second-list-level" id="id26">Second list level</a></p>
+<ul>
+<li><p><a class="reference internal" href="#but-deeper-down-the-rabbit-hole" id="id27">But deeper down the rabbit hole</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hlists" id="id28">Hlists</a></p></li>
+<li><p><a class="reference internal" href="#numbered-list" id="id29">Numbered List</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tables" id="id30">Tables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#grid-tables" id="id31">Grid Tables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#giant-tables" id="id32">Giant Tables</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#list-tables" id="id33">List Tables</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="lists">
+<h2><a class="toc-backref" href="#id18">Lists</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enumerated-lists">
+<h3><a class="toc-backref" href="#id19">Enumerated Lists</a><a class="headerlink" href="#enumerated-lists" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Arabic numerals.</p>
+<ol class="loweralpha simple">
+<li><p>lower alpha)</p>
+<ol class="lowerroman simple">
+<li><p>(lower roman)</p>
+<ol class="upperalpha simple">
+<li><p>upper alpha.</p>
+<ol class="upperroman simple">
+<li><p>upper roman)</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Lists that don’t start at 1:</p>
+<ol class="arabic simple" start="3">
+<li><p>Three</p></li>
+<li><p>Four</p></li>
+</ol>
+<ol class="upperalpha simple" start="3">
+<li><p>C</p></li>
+<li><p>D</p></li>
+</ol>
+<ol class="lowerroman simple" start="3">
+<li><p>iii</p></li>
+<li><p>iv</p></li>
+</ol>
+</li>
+<li><p>List items may also be auto-enumerated.</p></li>
+</ol>
+</div>
+<div class="section" id="definition-lists">
+<h3><a class="toc-backref" href="#id20">Definition Lists</a><a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+<dt>Term<span class="classifier">classifier</span></dt><dd><p>Definition paragraph 1.</p>
+<p>Definition paragraph 2.</p>
+</dd>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+<p>I have no clue why the definition list below is classified as a different style
+of definition list than the one above.</p>
+<dl class="simple">
+<dt>Is it the spaces in the term?</dt><dd><p>Maybe it was the multiple line paragraph
+in the line below that caused this?</p>
+</dd>
+<dt>Is it the paragraph above the list maybe?</dt><dd><p>I guess a lot of these lists don’t have leading paragraphs?</p>
+</dd>
+<dt>Is it everything all at once?</dt><dd><p>Who knows?!</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="option-lists">
+<h3><a class="toc-backref" href="#id21">Option Lists</a><a class="headerlink" href="#option-lists" title="Permalink to this headline">¶</a></h3>
+<p>For listing command-line options:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments
+and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">--very-long-option</span></kbd></dt>
+<dd><p>The description can also start on the next line.</p>
+<p>The description may contain multiple body elements,
+regardless of where it starts.</p>
+</dd>
+<dt><kbd><span class="option">-x</span>, <span class="option">-y</span>, <span class="option">-z</span></kbd></dt>
+<dd><p>Multiple options are an “option group”.</p>
+</dd>
+<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
+<dd><p>Commonly-seen: short &amp; long options.</p>
+</dd>
+<dt><kbd><span class="option">-1 <var>file</var></span>, <span class="option">--one=<var>file</var></span>, <span class="option">--two <var>file</var></span></kbd></dt>
+<dd><p>Multiple options with arguments.</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+<p>There must be at least two spaces between the option and the description.</p>
+</div>
+<div class="section" id="field-list">
+<h3><a class="toc-backref" href="#id22">Field list</a><a class="headerlink" href="#field-list" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>David Goodger</p>
+</dd>
+<dt class="field-even">Address</dt>
+<dd class="field-even"><p>123 Example Street
+Example, EX  Canada
+A1B 2C3</p>
+</dd>
+<dt class="field-odd">Contact</dt>
+<dd class="field-odd"><p><a class="reference external" href="mailto:docutils-develop&#37;&#52;&#48;lists&#46;sourceforge&#46;net">docutils-develop<span>&#64;</span>lists<span>&#46;</span>sourceforge<span>&#46;</span>net</a></p>
+</dd>
+<dt class="field-even">Authors</dt>
+<dd class="field-even"><p>Me; Myself; I</p>
+</dd>
+<dt class="field-odd">organization</dt>
+<dd class="field-odd"><p>humankind</p>
+</dd>
+<dt class="field-even">date</dt>
+<dd class="field-even"><p>$Date: 2012-01-03 19:23:53 +0000 (Tue, 03 Jan 2012) $</p>
+</dd>
+<dt class="field-odd">status</dt>
+<dd class="field-odd"><p>This is a “work in progress”</p>
+</dd>
+<dt class="field-even">revision</dt>
+<dd class="field-even"><p>$Revision: 7302 $</p>
+</dd>
+<dt class="field-odd">version</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+<dt class="field-even">copyright</dt>
+<dd class="field-even"><p>This document has been placed in the public domain. You
+may do with it as you wish. You may copy, modify,
+redistribute, reattribute, sell, buy, rent, lease,
+destroy, or improve it, quote it at length, excerpt,
+incorporate, collate, fold, staple, or mutilate it, or do
+anything else to it that your or anyone else’s heart
+desires.</p>
+</dd>
+<dt class="field-odd">field name</dt>
+<dd class="field-odd"><p>This is a generic bibliographic field.</p>
+</dd>
+<dt class="field-even">field name 2</dt>
+<dd class="field-even"><p>Generic bibliographic fields may contain multiple body elements.</p>
+<p>Like this.</p>
+</dd>
+<dt class="field-odd">Dedication</dt>
+<dd class="field-odd"><p>For Docutils users &amp; co-developers.</p>
+</dd>
+<dt class="field-even">abstract</dt>
+<dd class="field-even"><p>This document is a demonstration of the reStructuredText markup
+language, containing examples of all basic reStructuredText
+constructs and many advanced constructs.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="bullet-lists">
+<h3><a class="toc-backref" href="#id23">Bullet Lists</a><a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="simple">
+<h4><a class="toc-backref" href="#id24">Simple</a><a class="headerlink" href="#simple" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>A simple list.</p></li>
+<li><p>There are no margins between list items.</p></li>
+<li><p>Simple lists do not contain multiple paragraphs. That’s a complex list.</p></li>
+<li><p>In the case of a nested list</p>
+<ul>
+<li><p>There are no margins between elements</p>
+<ul>
+<li><p>Still no margins</p>
+<ul>
+<li><p>Still no margins</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="complex">
+<h4><a class="toc-backref" href="#id25">Complex</a><a class="headerlink" href="#complex" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>A bullet list</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p></li>
+</ul>
+</li>
+<li><p>Item 2.</p>
+<p>Paragraph 2 of item 2.</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p>
+<ul>
+<li><p>Third level.</p></li>
+<li><p>Item 2.</p></li>
+</ul>
+</li>
+<li><p>Nested item 3.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="second-list-level">
+<h4><a class="toc-backref" href="#id26">Second list level</a><a class="headerlink" href="#second-list-level" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>here is a list in a second-level section.</p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p>here is an inner bullet <code class="docutils literal notranslate"><span class="pre">oh</span></code></p>
+<ul>
+<li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<p>heh heh. child. try to beat this embed:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+
+    <span class="s2">&quot;&quot;&quot;Docstring for class Foo.</span>
+
+<span class="s2">    This text tests for the formatting of docstrings generated from output</span>
+<span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ul>
+</li>
+<li><p>and another. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+</ul>
+</li>
+<li><p>how about an admonition?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note nested in a list.</p>
+</div>
+</li>
+<li><p>and hehe</p></li>
+</ul>
+<div class="section" id="but-deeper-down-the-rabbit-hole">
+<h5><a class="toc-backref" href="#id27">But deeper down the rabbit hole</a><a class="headerlink" href="#but-deeper-down-the-rabbit-hole" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>I kept saying that, “deeper down the rabbit hole”. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p>I cackle at night <a class="reference external" href="http://www.yahoo.com">yahoo</a>.</p></li>
+</ul>
+</li>
+<li><p>I’m so lonely here in GZ <code class="docutils literal notranslate"><span class="pre">guangzhou</span></code></p></li>
+<li><p>A man of python destiny, hopes and dreams. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a> <code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destiny</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="hlists">
+<h3><a class="toc-backref" href="#id28">Hlists</a><a class="headerlink" href="#hlists" title="Permalink to this headline">¶</a></h3>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>First item</p></li>
+<li><p>Second item</p></li>
+<li><p>Third item</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Forth item</p></li>
+<li><p>Fifth item</p></li>
+<li><p>Sixths item</p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Hlist with images</p>
+<table class="hlist"><tr><td><ul>
+<li><div class="figure align-default" id="id11">
+<img alt="../_images/yi_jing_01_chien.jpg" src="../_images/yi_jing_01_chien.jpg" />
+<p class="caption"><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+</ul>
+</td><td><ul>
+<li><div class="figure align-default" id="id12">
+<img alt="../_images/yi_jing_01_chien.jpg" src="../_images/yi_jing_01_chien.jpg" />
+<p class="caption"><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+</ul>
+</td></tr></table>
+</div>
+<div class="section" id="numbered-list">
+<h3><a class="toc-backref" href="#id29">Numbered List</a><a class="headerlink" href="#numbered-list" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>One,</p></li>
+<li><p>Two.</p></li>
+<li><p>Three with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed feugiat sagittis neque quis eleifend. Duis rutrum lectus sit amet mattis suscipit.</p></li>
+</ol>
+<ul class="simple">
+<li><ol class="upperalpha simple">
+<li><p>Using bullets and letters. (A)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Using bullets and letters. (B)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="3">
+<li><p>Using bullets and letters. (C)</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tables">
+<h2><a class="toc-backref" href="#id30">Tables</a><a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="grid-tables">
+<h3><a class="toc-backref" href="#id31">Grid Tables</a><a class="headerlink" href="#grid-tables" title="Permalink to this headline">¶</a></h3>
+<p>Here’s a grid table followed by a simple table:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header row, column 1
+(header rows optional)</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1, column 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="3"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td colspan="2" rowspan="2"><ul class="simple">
+<li><p>Table cells</p></li>
+<li><p>contain</p></li>
+<li><p>body elements.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 5</p></td>
+<td colspan="2"><p>Cells may also be
+empty: <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="giant-tables">
+<h4><a class="toc-backref" href="#id32">Giant Tables</a><a class="headerlink" href="#giant-tables" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="list-tables">
+<h3><a class="toc-backref" href="#id33">List Tables</a><a class="headerlink" href="#list-tables" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default" id="id13">
+<caption><span class="caption-text">List tables can have captions like this one.</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>List table</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Stub Row 1</p></th>
+<td><p>Row 1</p></td>
+<td><p>Column 2</p></td>
+<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Stub Row 2</p></th>
+<td><p>Row 2</p></td>
+<td><p>Column 2</p></td>
+<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 3</p></th>
+<td><p>Row 3</p></td>
+<td><p>Column 2</p></td>
+<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">This is a list table with images in it.</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-default" id="id15">
+<img alt="../_images/yi_jing_01_chien.jpg" src="../_images/yi_jing_01_chien.jpg" />
+<p class="caption"><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id16">
+<img alt="../_images/yi_jing_01_chien.jpg" src="../_images/yi_jing_01_chien.jpg" />
+<p class="caption"><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API documentation and generated content"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="demo.html" class="btn btn-neutral" title="Paragraph Level Markup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Pradyun Gedam
+
+    </p>
+  </div>
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+  using a
+  <a href="https://pypi.org/project/sphinx-ansible-theme/">theme</a>
+  created by <a href="https://github.com/ansible-community">Ansible
+  Project and Contributors</a>. 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script>
+
+  
+  
+    
+   <!-- extra footer elements for Ansible beyond RTD Sphinx Theme --->
+<!-- begin analytics -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+      (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+      n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/330046.js';
+      e.parentNode.insertBefore(n, e);
+      })(document, "script", "hs-analytics",300000);
+</script>
+<!-- end analytics -->
+<script type="text/javascript">
+if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pageBottom)) {
+  _satellite.pageBottom();
+}
+</script> 
+
+</body>
+</html>
