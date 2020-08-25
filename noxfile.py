@@ -103,7 +103,7 @@ def generate_previews(session):
     destination = PUBLIC_PATH / "preview-images"
     for file in source.iterdir():
         assert file.is_file(), repr(file)
-        shutil.move(str(file), str(destination / file.name))
+        shutil.copy(str(file), str(destination / file.name))
 
 
 @nox.session(name="render-index")
