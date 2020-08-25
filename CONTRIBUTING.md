@@ -82,7 +82,6 @@ $ nox -s publish
 
 Generates the entire site in `public/`. The generated site is meant to be viewed using an HTTP server. You can use Python's `http.server` module to create such a server locally using `python -m http.server -d public`. This should make it possible to view the generated website at <localhost:8000>.
 
-
 ```sh
 $ nox -s publish -- sphinx-rtd-theme
 ```
