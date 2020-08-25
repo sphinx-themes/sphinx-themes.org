@@ -15,10 +15,13 @@ from src.helpers import (
 )
 
 
-def _prepare_output_directory(destination):
+def _prepare_output_directory(destination, *, delete=True):
     # Clean up existing stuff
     if destination.exists():
-        shutil.rmtree(destination)
+        if delete:
+            shutil.rmtree(destination)
+        else:
+            return
 
     # Make the barebones skeleton
     destination.mkdir()
@@ -87,7 +90,7 @@ def publish(session):
 @nox.session(name="render-sample-sites", python=False)
 def render_sample_sites(session):
     _prepare_output_directory(PUBLIC_PATH)
-    _prepare_output_directory(BUILD_PATH)
+    _prepare_output_directory(BUILD_PATH, delete=False)
 
     with_every_theme(session, _generate_docs, "Render")
 
