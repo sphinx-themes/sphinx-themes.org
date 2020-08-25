@@ -20,7 +20,8 @@ extensions = [
 
 # -- Options for HTML output -------------------------------------------------
 
-# NOTE: All the lines after this marker, are modified during generation.
+# NOTE: All the lines are after this are the theme-specific ones. These are
+#       written as part of the site generation pipeline for this project.
 # !! MARKER !!
 import sphinx_bernard_theme
 html_theme = "sphinx_bernard_theme"
