@@ -72,9 +72,9 @@ class IsolatedEnvironment:
         logger.info(message)
 
     def install(self, *args, **kwargs):
-        self.run("pip", "install", *args, **kwargs, silent=True)
+        self.run("pip", "install", *args, **kwargs)
 
-    def run(self, *args, silent=False, external=False):
+    def run(self, *args, external=False):
         assert args
         self.log(" ".join(args))
 
@@ -84,14 +84,16 @@ class IsolatedEnvironment:
         command = (executable_path,) + args[1:]
 
         try:
-            subprocess.run(command, capture_output=silent, check=True)
+            subprocess.run(command, capture_output=True, check=True)
         except subprocess.CalledProcessError as e:
-            if silent:
-                print("Exited with exit code:", e.returncode)
-                print(" stdout ".center(80, "-"))
-                print(e.stdout.decode().strip("\n") or "<nothing>")
-                print(" stderr ".center(80, "-"))
-                print(e.stderr.decode().strip("\n") or "<nothing>")
+            print(" stdout ".center(80, "-"))
+            print(e.stdout.decode().strip("\n") or "<nothing>")
+            print(" stderr ".center(80, "-"))
+            print(e.stderr.decode().strip("\n") or "<nothing>")
+            print(" Error occurred ".center(80, "-"))
+            print("Command:", " ".join(command))
+            print("Exited with exit code:", e.returncode)
+            print("-" * 80)
             raise
 
 
