@@ -1,6 +1,8 @@
 import io
 import sys
+from multiprocessing.dummy import Pool
 from pathlib import Path
+from threading import local
 
 import colorama
 from PIL import Image
@@ -27,6 +29,9 @@ OFFSETS = {
 }
 
 
+# --------------------------------------------------------------------------------------
+# Implementation helpers
+# --------------------------------------------------------------------------------------
 def _as_rgb_image(png_stream):
     return Image.open(png_stream).convert("RGB")
 
@@ -77,27 +82,40 @@ def save_preview(name, screenshots, image):
     image.save(str(final_file), "JPEG", optimize=True, quality=QUALITY)
 
 
+# --------------------------------------------------------------------------------------
+# Main logic
+# --------------------------------------------------------------------------------------
+_THREAD_LOCAL = local()
+
+
+def prepare_worker():
+    _THREAD_LOCAL.browser = get_browser()
+    _THREAD_LOCAL.template_image = get_template_image()
+
+
+def worker(theme):
+    print(f"Working on: {theme.name}")
+    browser = _THREAD_LOCAL.browser
+    template_image = _THREAD_LOCAL.template_image
+
+    page = (PUBLIC_PATH / "sample-sites" / theme.name / "index.html").as_uri()
+
+    browser.get(page)
+    screenshots = take_screenshots(browser)
+    save_preview(theme.name, screenshots, template_image.copy())
+
+    return theme.name
+
+
 def main():
     all_themes = load_themes(*sys.argv[1:])
-    browser = get_browser()
-    template_image = get_template_image()
 
-    with browser:
-        for theme in all_themes:
-            print(theme.name)
+    pool = Pool(initializer=prepare_worker)
+    for name in pool.imap_unordered(worker, all_themes):
+        print(f" Generated: {name}")
 
-            print("  opening sample site", end="... ", flush=True)
-            browser_file = PUBLIC_PATH / "sample-sites" / theme.name / "index.html"
-            browser.get(browser_file.as_uri())
-            print("done!")
-
-            print("  taking screenshots", end="... ", flush=True)
-            screenshots = take_screenshots(browser)
-            print("done!")
-
-            print("  generating preview image", end="... ", flush=True)
-            save_preview(theme.name, screenshots, template_image.copy())
-            print("done!")
+    pool.close()
+    pool.join()
 
 
 if __name__ == "__main__":
