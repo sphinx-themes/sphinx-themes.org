@@ -29,57 +29,6 @@ def _prepare_output_directory(destination, *, delete=True):
     (destination / "sample-sites").mkdir()
 
 
-def _generate_docs(session, theme):
-    session.log(f" {theme.name} ".center(80, "-"))
-
-    # Setup the isolated environment
-    env = IsolatedEnvironment(theme.name)
-    session.run("virtualenv", str(env.path), silent=True)
-
-    # Install required packages
-    packages = sorted({"sphinx", theme.pypi})  # prevents duplication
-    env.install(*packages)
-
-    build_location = BUILD_PATH / "sample-sites" / theme.name
-    destination = PUBLIC_PATH / "sample-sites" / theme.name
-    if build_location.exists():
-        shutil.rmtree(build_location)
-    build_location.mkdir(parents=True)
-
-    # Run sphinx
-    generate_sphinx_config_for(theme, at=build_location)
-    env.run(
-        "sphinx-build",
-        "-v",
-        "-b=html",
-        f"-c={build_location}",
-        "sample-docs",
-        str(build_location),
-        silent=True,
-    )
-
-    shutil.move(str(build_location), str(destination))
-
-
-def with_every_theme(session, function, message):
-    """Nice little helper, to make looping through all the themes easier.
-    """
-    themes = load_themes(*session.posargs)
-    failed = []
-    for theme in themes:
-        try:
-            function(session, theme)
-        except subprocess.CalledProcessError:
-            failed.append(theme)
-            continue
-
-    if failed:
-        parts = [f"Failed to {message.lower()} for:"]
-        for theme in failed:
-            parts.append(f"- {theme.name}")
-        session.error("\n".join(parts))
-
-
 @nox.session(python=False)
 def publish(session):
     session.notify("render-sample-sites")
@@ -92,7 +41,12 @@ def render_sample_sites(session):
     _prepare_output_directory(PUBLIC_PATH)
     _prepare_output_directory(BUILD_PATH, delete=False)
 
-    with_every_theme(session, _generate_docs, "Render")
+    session.run("python", "tools/render-sample-sites.py", *session.posargs)
+    shutil.copytree(
+        str(BUILD_PATH / "sample-sites"),
+        str(PUBLIC_PATH / "sample-sites"),
+        dirs_exist_ok=True,
+    )
 
 
 @nox.session(name="generate-previews")

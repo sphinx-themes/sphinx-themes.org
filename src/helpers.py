@@ -61,6 +61,13 @@ class IsolatedEnvironment:
         self.path = VENV_PATH / name
         self.bin_paths = [self.path / "bin"]
 
+    def create(self, *, delete=False):
+        if self.path.exists() and not delete:
+            assert all(path.exists() for path in self.bin_paths)
+            return
+
+        subprocess.check_output(["virtualenv", str(self.path)])
+
     def log(self, message):
         logger.info(message)
 
