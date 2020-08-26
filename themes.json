@@ -11,6 +11,23 @@
       "pypi": "sphinx-rtd-theme"
     },
     {
+      "config": "bootstrap-astropy",
+      "display": "astropy-sphinx-theme",
+      "pypi": "astropy-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "caktus_theme"
+        ],
+        "html_sidebars": "caktus_theme.default_sidebars()",
+        "html_theme": "caktus",
+        "html_theme_path": "[caktus_theme.get_theme_dir()]"
+      },
+      "display": "Caktus",
+      "pypi": "caktus-sphinx-theme"
+    },
+    {
       "config": {
         "_extensions": [
           "edx_theme"
@@ -23,6 +40,28 @@
       },
       "display": "edx-sphinx-theme",
       "pypi": "edx-sphinx-theme"
+    },
+    {
+      "config": "flask",
+      "display": "Flask",
+      "pypi": "flask-sphinx-themes"
+    },
+    {
+      "config": "groundwork",
+      "display": "groundwork-sphinx-theme",
+      "pypi": "groundwork-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "guzzle_sphinx_theme"
+        ],
+        "html_theme": "guzzle_sphinx_theme",
+        "html_theme_path": "guzzle_sphinx_theme.html_theme_path()",
+        "html_translator_class": "'guzzle_sphinx_theme.HTMLTranslator'"
+      },
+      "display": "guzzle-sphinx-theme",
+      "pypi": "guzzle-sphinx-theme"
     },
     {
       "config": "insegel",
