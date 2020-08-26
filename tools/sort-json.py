@@ -1,5 +1,12 @@
 import json
+import re
 from pathlib import Path
+
+_canonicalize_regex = re.compile(r"[-_.]+")
+
+
+def canonicalize_name(name):
+    return _canonicalize_regex.sub("-", name).lower()
 
 
 def sort_key(theme):
@@ -16,7 +23,7 @@ def sort_key(theme):
         return "1"
 
     # Third party themes in the middle.
-    return theme["pypi"].lower()
+    return canonicalize_name(theme["pypi"])
 
 
 def main():
