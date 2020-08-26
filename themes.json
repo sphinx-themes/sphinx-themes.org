@@ -98,6 +98,11 @@
       "pypi": "sphinx-typo3-theme"
     },
     {
+      "config": "sphinx_documatt_theme",
+      "display": "Documatt Theme",
+      "pypi": "sphinx_documatt_theme"
+    },
+    {
       "config": "press",
       "display": "press",
       "pypi": "sphinx_press_theme"
