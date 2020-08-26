@@ -10,6 +10,9 @@ def canonicalize_name(name):
 
 
 def sort_key(theme):
+    # Normalize names
+    theme["pypi"] = canonicalize_name(theme["pypi"])
+
     if theme["pypi"] == "sphinx":
         # Get alabaster first.
         if theme["config"] == "alabaster":
@@ -23,7 +26,7 @@ def sort_key(theme):
         return "1"
 
     # Third party themes in the middle.
-    return canonicalize_name(theme["pypi"])
+    return theme["pypi"]
 
 
 def main():

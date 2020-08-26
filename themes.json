@@ -134,12 +134,12 @@
     {
       "config": "sphinx_documatt_theme",
       "display": "Documatt Theme",
-      "pypi": "sphinx_documatt_theme"
+      "pypi": "sphinx-documatt-theme"
     },
     {
       "config": "press",
       "display": "press",
-      "pypi": "sphinx_press_theme"
+      "pypi": "sphinx-press-theme"
     },
     {
       "config": "sphinx_typlog_theme",
