@@ -9,24 +9,30 @@ def canonicalize_name(name):
     return _canonicalize_regex.sub("-", name).lower()
 
 
+def _get_index_or_default(li, value, *, default):
+    try:
+        return li.index(value)
+    except ValueError:
+        return default
+
+
 def sort_key(theme):
     # Normalize names
     theme["pypi"] = canonicalize_name(theme["pypi"])
 
+    # Determine the "rank" of a theme. Approximately ordered as:
+    # - featured
+    # - third-party themes
+    # - default themes
+    featured = ["alabaster", "sphinx-rtd-theme"]
     if theme["pypi"] == "sphinx":
-        # Get alabaster first.
-        if theme["config"] == "alabaster":
-            return ""
-        # All other builtin themes go at the end.
-        #     "~" is *last* in sort order for `string.printables`.
-        return "~" + theme["display"]
+        rank = _get_index_or_default(
+            featured, theme["config"], default=len(featured) + 1
+        )
+    else:
+        rank = _get_index_or_default(featured, theme["pypi"], default=len(featured))
 
-    # Get Sphinx-RTD-theme second.
-    if theme["pypi"] == "sphinx-rtd-theme":
-        return "1"
-
-    # Third party themes in the middle.
-    return theme["pypi"]
+    return (rank, theme["pypi"])
 
 
 def main():
