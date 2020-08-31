@@ -70,7 +70,7 @@ def render_index(session):
     shutil.copy(str(BUILD_PATH / "index.html"), str(PUBLIC_PATH / "index.html"))
 
 
-@nox.session
+@nox.session(reuse_venv=True)
 def lint(session):
     session.install("pre-commit")
     session.run("pre-commit", "run", "--all-files")
