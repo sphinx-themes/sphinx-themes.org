@@ -14,11 +14,18 @@
       margin-top: 0.5rem;
       border-bottom: 0;
       border-top: 0;
-      border-width: 0.05rem;
+      border-width: 1px;
       border-style: solid;
       border-image: linear-gradient(to top, #DDDDEE, white 75%) 1 100%;
     }
-    .divider {margin: 0; border-top: 0.05rem solid #DDDDEE;}
+    .divider {
+      margin: 0;
+      border-top: 1px solid #DDDDEE;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
     </style>
   </head>
 
@@ -39,13 +46,13 @@
       <div class="container">
         <div class="columns">
           <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-alabaster">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-alabaster.jpg" alt="Alabaster Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Alabaster</span>
+                  <a class="h5" href="#theme-default-alabaster">Alabaster</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Default theme (<a class="text-muted" href="sample-sites/default-alabaster/conf.py">conf.py</a>)
@@ -57,13 +64,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-rtd-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-rtd-theme.jpg" alt="Read the Docs Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Read the Docs Theme</span>
+                  <a class="h5" href="#theme-sphinx-rtd-theme">Read the Docs Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-rtd-theme">PyPI page</a>,
@@ -76,13 +83,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-astropy-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/astropy-sphinx-theme.jpg" alt="astropy-sphinx-theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">astropy-sphinx-theme</span>
+                  <a class="h5" href="#theme-astropy-sphinx-theme">astropy-sphinx-theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/astropy-sphinx-theme">PyPI page</a>,
@@ -95,13 +102,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-caktus-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/caktus-sphinx-theme.jpg" alt="Caktus Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Caktus</span>
+                  <a class="h5" href="#theme-caktus-sphinx-theme">Caktus</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/caktus-sphinx-theme">PyPI page</a>,
@@ -114,13 +121,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-edx-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/edx-sphinx-theme.jpg" alt="edx-sphinx-theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">edx-sphinx-theme</span>
+                  <a class="h5" href="#theme-edx-sphinx-theme">edx-sphinx-theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/edx-sphinx-theme">PyPI page</a>,
@@ -133,13 +140,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-flask-sphinx-themes">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/flask-sphinx-themes.jpg" alt="Flask Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Flask</span>
+                  <a class="h5" href="#theme-flask-sphinx-themes">Flask</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/flask-sphinx-themes">PyPI page</a>,
@@ -152,13 +159,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-groundwork-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/groundwork-sphinx-theme.jpg" alt="groundwork-sphinx-theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">groundwork-sphinx-theme</span>
+                  <a class="h5" href="#theme-groundwork-sphinx-theme">groundwork-sphinx-theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/groundwork-sphinx-theme">PyPI page</a>,
@@ -171,13 +178,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-guzzle-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/guzzle-sphinx-theme.jpg" alt="guzzle-sphinx-theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">guzzle-sphinx-theme</span>
+                  <a class="h5" href="#theme-guzzle-sphinx-theme">guzzle-sphinx-theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/guzzle-sphinx-theme">PyPI page</a>,
@@ -190,13 +197,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-insegel">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/insegel.jpg" alt="insegel Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">insegel</span>
+                  <a class="h5" href="#theme-insegel">insegel</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/insegel">PyPI page</a>,
@@ -209,13 +216,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-logilab-sphinx-themes">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/logilab-sphinx-themes.jpg" alt="Logilab Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Logilab</span>
+                  <a class="h5" href="#theme-logilab-sphinx-themes">Logilab</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/logilab-sphinx-themes">PyPI page</a>,
@@ -228,13 +235,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-lsst-dd-rtd-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/lsst-dd-rtd-theme.jpg" alt="LSST Design Documents Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">LSST Design Documents Theme</span>
+                  <a class="h5" href="#theme-lsst-dd-rtd-theme">LSST Design Documents Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/lsst-dd-rtd-theme">PyPI page</a>,
@@ -247,13 +254,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-mozilla-sphinx-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/mozilla-sphinx-theme.jpg" alt="Mozilla's sandstone theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Mozilla's sandstone theme</span>
+                  <a class="h5" href="#theme-mozilla-sphinx-theme">Mozilla's sandstone theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/mozilla-sphinx-theme">PyPI page</a>,
@@ -266,13 +273,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-python-docs-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/python-docs-theme.jpg" alt="Python Documentation Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Python Documentation Theme</span>
+                  <a class="h5" href="#theme-python-docs-theme">Python Documentation Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/python-docs-theme">PyPI page</a>,
@@ -285,13 +292,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-ansible-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-ansible-theme.jpg" alt="Reusable Ansible Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Reusable Ansible Theme</span>
+                  <a class="h5" href="#theme-sphinx-ansible-theme">Reusable Ansible Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-ansible-theme">PyPI page</a>,
@@ -304,13 +311,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-bernard-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-bernard-theme.jpg" alt="bernardphp.com theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">bernardphp.com theme</span>
+                  <a class="h5" href="#theme-sphinx-bernard-theme">bernardphp.com theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-bernard-theme">PyPI page</a>,
@@ -323,13 +330,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-celery">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-celery.jpg" alt="Celery Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Celery Theme</span>
+                  <a class="h5" href="#theme-sphinx-celery">Celery Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-celery">PyPI page</a>,
@@ -342,13 +349,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-documatt-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-documatt-theme.jpg" alt="Documatt Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Documatt Theme</span>
+                  <a class="h5" href="#theme-sphinx-documatt-theme">Documatt Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-documatt-theme">PyPI page</a>,
@@ -361,13 +368,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-press-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-press-theme.jpg" alt="press Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">press</span>
+                  <a class="h5" href="#theme-sphinx-press-theme">press</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-press-theme">PyPI page</a>,
@@ -380,13 +387,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-typlog-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-typlog-theme.jpg" alt="Sphinx Typlog Theme Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">Sphinx Typlog Theme</span>
+                  <a class="h5" href="#theme-sphinx-typlog-theme">Sphinx Typlog Theme</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-typlog-theme">PyPI page</a>,
@@ -399,13 +406,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-sphinx-typo3-theme">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/sphinx-typo3-theme.jpg" alt="TYPO3 theme for docs.typo3.org Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">TYPO3 theme for docs.typo3.org</span>
+                  <a class="h5" href="#theme-sphinx-typo3-theme">TYPO3 theme for docs.typo3.org</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Third-party theme (<a class="text-muted" href="https://pypi.org/project/sphinx-typo3-theme">PyPI page</a>,
@@ -418,13 +425,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-agogo">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-agogo.jpg" alt="agogo Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">agogo</span>
+                  <a class="h5" href="#theme-default-agogo">agogo</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-agogo/conf.py">conf.py</a>)
@@ -436,13 +443,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-bizstyle">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-bizstyle.jpg" alt="bizstyle Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">bizstyle</span>
+                  <a class="h5" href="#theme-default-bizstyle">bizstyle</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-bizstyle/conf.py">conf.py</a>)
@@ -454,13 +461,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-classic">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-classic.jpg" alt="classic Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">classic</span>
+                  <a class="h5" href="#theme-default-classic">classic</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-classic/conf.py">conf.py</a>)
@@ -472,13 +479,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-haiku">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-haiku.jpg" alt="haiku Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">haiku</span>
+                  <a class="h5" href="#theme-default-haiku">haiku</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-haiku/conf.py">conf.py</a>)
@@ -490,13 +497,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-nature">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-nature.jpg" alt="nature Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">nature</span>
+                  <a class="h5" href="#theme-default-nature">nature</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-nature/conf.py">conf.py</a>)
@@ -508,13 +515,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-pyramid">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-pyramid.jpg" alt="pyramid Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">pyramid</span>
+                  <a class="h5" href="#theme-default-pyramid">pyramid</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-pyramid/conf.py">conf.py</a>)
@@ -526,13 +533,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-scrolls">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-scrolls.jpg" alt="scrolls Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">scrolls</span>
+                  <a class="h5" href="#theme-default-scrolls">scrolls</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-scrolls/conf.py">conf.py</a>)
@@ -544,13 +551,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-sphinxdoc">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-sphinxdoc.jpg" alt="sphinxdoc Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">sphinxdoc</span>
+                  <a class="h5" href="#theme-default-sphinxdoc">sphinxdoc</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-sphinxdoc/conf.py">conf.py</a>)
@@ -562,13 +569,13 @@
             </div>
             <div class="divider"></div>
           </div><div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-default-traditional">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/default-traditional.jpg" alt="traditional Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">traditional</span>
+                  <a class="h5" href="#theme-default-traditional">traditional</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   Builtin theme (<a class="text-muted" href="sample-sites/default-traditional/conf.py">conf.py</a>)
