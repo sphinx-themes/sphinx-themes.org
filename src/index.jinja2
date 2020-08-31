@@ -14,11 +14,18 @@
       margin-top: 0.5rem;
       border-bottom: 0;
       border-top: 0;
-      border-width: 0.05rem;
+      border-width: 1px;
       border-style: solid;
       border-image: linear-gradient(to top, #DDDDEE, white 75%) 1 100%;
     }
-    .divider {margin: 0; border-top: 0.05rem solid #DDDDEE;}
+    .divider {
+      margin: 0;
+      border-top: 1px solid #DDDDEE;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
     </style>
   </head>
 
@@ -40,13 +47,13 @@
         <div class="columns">
           {% for theme in themes -%}
           <div class="column col-sm-12 col-md-10 col-mx-auto col-xl-8 col-6 pt-2">
-            <div class="card">
+            <div class="card" id="theme-{{ theme.name }}">
               <div class="card-image"><img class="img-responsive text-center"
                   src="preview-images/{{ theme.name }}.jpg" alt="{{ theme.display }} Preview">
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <span class="h5">{{ theme.display }}</span>
+                  <a class="h5" href="#theme-{{ theme.name }}">{{ theme.display }}</a>
                 </div>
                 <div class="card-subtitle text-gray">
                   {% if theme.pypi != "sphinx" -%}
