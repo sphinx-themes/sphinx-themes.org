@@ -11,6 +11,11 @@
       "pypi": "sphinx-rtd-theme"
     },
     {
+      "config": "furo",
+      "display": "Furo",
+      "pypi": "furo"
+    },
+    {
       "config": "bootstrap-astropy",
       "display": "astropy-sphinx-theme",
       "pypi": "astropy-sphinx-theme"
