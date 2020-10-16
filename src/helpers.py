@@ -86,7 +86,7 @@ class IsolatedEnvironment:
         command = (executable_path,) + args[1:]
 
         try:
-            subprocess.run(command, env=env, capture_output=False, check=True)
+            subprocess.run(command, env=env, capture_output=True, check=True)
         except subprocess.CalledProcessError as e:
             print(" stdout ".center(80, "-"))
             print(e.stdout.decode().strip("\n") or "<nothing>")
