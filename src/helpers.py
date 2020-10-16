@@ -24,7 +24,7 @@ BUILD_PATH = ROOT / "build"
 RENDER_INFO_FILE = BUILD_PATH / "to-render.json"
 
 PUBLIC_PATH = ROOT / "public"
-CONF_PY_TEMPLATE = ROOT / "sample-docs" / "conf.py.template"
+CONF_PY_TEMPLATE = ROOT / "sample-docs" / "conf.template.py"
 
 
 def load_themes(*specific_allowed_names):
@@ -76,7 +76,7 @@ class IsolatedEnvironment:
     def install(self, *args, **kwargs):
         self.run("pip", "install", *args, **kwargs)
 
-    def run(self, *args, external=False):
+    def run(self, *args, external=False, env={}):
         assert args
         self.log(" ".join(args))
 
@@ -86,7 +86,7 @@ class IsolatedEnvironment:
         command = (executable_path,) + args[1:]
 
         try:
-            subprocess.run(command, capture_output=True, check=True)
+            subprocess.run(command, env=env, capture_output=False, check=True)
         except subprocess.CalledProcessError as e:
             print(" stdout ".center(80, "-"))
             print(e.stdout.decode().strip("\n") or "<nothing>")

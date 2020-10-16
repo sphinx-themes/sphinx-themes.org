@@ -41,6 +41,7 @@ def worker(theme):
             f"-c={build_location}",
             "sample-docs",
             str(build_location),
+            env={"SAMPLE_DOCS_LOCATION": "sample-docs"},
         )
     except Exception as e:
         return (theme.name, e)

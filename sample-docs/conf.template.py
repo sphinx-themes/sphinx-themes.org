@@ -1,8 +1,8 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "demo"))
-
+sys.path.append(os.path.join(os.environ["SAMPLE_DOCS_LOCATION"], "demo"))
+print("", sys.path[-1], "", sep="\n"+"-"*80+"\n")
 
 # -- Project information -----------------------------------------------------
 
