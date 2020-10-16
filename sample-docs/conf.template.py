@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.environ["SAMPLE_DOCS_LOCATION"], "demo"))
-print("", sys.path[-1], "", sep="\n"+"-"*80+"\n")
+print("", sys.path[-1], "", sep="\n" + "-" * 80 + "\n")
 
 # -- Project information -----------------------------------------------------
 
