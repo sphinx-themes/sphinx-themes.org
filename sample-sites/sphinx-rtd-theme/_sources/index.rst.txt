@@ -2,21 +2,49 @@
 Sample Sphinx Documentation
 ===========================
 
-This is the very important first line describing your project.
+This is a *very* rudimentary sample page for Sphinx based documentation.
 
-The rest of the pages in this sample documentation contains all the elements
-that might reasonably be a part of Sphinx documentation. Feel free to look at
-the demo below.
+In case you're looking for a lot of fairly extensive pages, that stretch the
+theme in as many reasonable ways as possible, consider scrolling right to the
+end of this page and looking at the Demo Documentation below.
 
-Example Level 2 heading
-=======================
+Quick Inline Markup Demo
+========================
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eaque suscipit
-porro quibusdam, possimus soluta eos accusantium, quo illo itaque dolorem, id
-tenetur? Voluptatem molestiae odio nisi quas, ad molestias?
+Inline markup in reStructuredText is pretty powerful. You can have *emphasis*,
+**strong emphasis**, ``inline literals``, external hyperlinks with embedded
+URIs (`Python web site <http://www.python.org>`__) standalone hyperlinks
+(http://www.python.org), footnote references [1]_ and so much more. Sometimes,
+you even have some |problematic| text that doesn't do the right things but
+Sphinx still builds your page.
+
+Often, you'll have multiple paragraphs of text in your documentation, possibly
+an explanation how stuff works. Here are some explicit interpreted text roles:
+a PEP reference (:PEP:`287`); a :sub:`subscript`; a :sup:`superscript`; and
+explicit roles for :emphasis:`standard` :strong:`inline` :literal:`markup`.
 
 .. note::
     You may want to know what admonitions look like.
+
+.. important::
+    I just wanted to interrupt your very relevant insight, to assert my
+    importance.
+
+Or, maybe, you want to present a code block to the user.
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 6,9
+
+    """Just a small code example"""
+
+    class Demo:
+        def __init__(self):
+            super().__init__()
+            self.ready = True
+
+        def how_ready_are_we(self) -> str:
+            return "very" if self.ready else "not at all"
 
 .. toctree::
     :maxdepth: 2

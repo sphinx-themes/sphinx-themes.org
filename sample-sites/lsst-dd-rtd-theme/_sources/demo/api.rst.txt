@@ -2,8 +2,6 @@
 API documentation and generated content
 ***************************************
 
-.. contents:: Table of Contents
-
 :mod:`test_py_module`
 =====================
 
