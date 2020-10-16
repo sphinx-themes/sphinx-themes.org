@@ -24,7 +24,7 @@ def sort_key(theme):
     # - featured
     # - third-party themes
     # - default themes
-    featured = ["alabaster", "sphinx-rtd-theme", "furo"]
+    featured = ["alabaster", "classic", "furo", "sphinx-rtd-theme"]
     if theme["pypi"] == "sphinx":
         rank = _get_index_or_default(
             featured, theme["config"], default=len(featured) + 1

@@ -6,14 +6,19 @@
       "pypi": "sphinx"
     },
     {
-      "config": "sphinx_rtd_theme",
-      "display": "Read the Docs Theme",
-      "pypi": "sphinx-rtd-theme"
+      "config": "classic",
+      "display": "classic",
+      "pypi": "sphinx"
     },
     {
       "config": "furo",
       "display": "Furo",
       "pypi": "furo"
+    },
+    {
+      "config": "sphinx_rtd_theme",
+      "display": "Read the Docs Theme",
+      "pypi": "sphinx-rtd-theme"
     },
     {
       "config": "bootstrap-astropy",
@@ -159,11 +164,6 @@
     {
       "config": "bizstyle",
       "display": "bizstyle",
-      "pypi": "sphinx"
-    },
-    {
-      "config": "classic",
-      "display": "classic",
       "pypi": "sphinx"
     },
     {
