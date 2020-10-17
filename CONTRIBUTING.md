@@ -129,5 +129,5 @@ The GitHub Action job runs the various `nox -s ...` commands and pushes the gene
 [`pipx`]: https://pypi.org/project/pipx/
 [`pre-commit`]: https://pypi.org/project/pre-commit/
 [`chromedriver`]: https://chromedriver.chromium.org/
-[`themes.json`]: https://github.com/pradyunsg/sphinx-themes/blob/master/themes.json
-[`tools/sort-json.py`]: https://github.com/pradyunsg/sphinx-themes/blob/master/tools/sort-json.py
+[`themes.json`]: ./themes.json
+[`tools/sort-json.py`]: ./tools/sort-json.py
