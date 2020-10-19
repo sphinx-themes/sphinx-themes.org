@@ -27,3 +27,5 @@ html_title = project
 # !! MARKER !!
 html_theme = "insipid"
 html_add_permalinks = '\N{SECTION SIGN}'
+html_context = {'display_github': True, 'github_user': 'sphinx-themes', 'github_repo': 'sphinx-themes.org', 'conf_py_path': '/sample-docs/', 'commit': 'master'}
+html_copy_source = False
