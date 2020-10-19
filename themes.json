@@ -79,6 +79,14 @@
       "pypi": "insegel"
     },
     {
+      "config": {
+        "html_theme": "insipid",
+        "html_add_permalinks": "'\\N{SECTION SIGN}'"
+      },
+      "display": "An Insipid Sphinx Theme (with initially hidden sidebar)",
+      "pypi": "insipid-sphinx-theme"
+    },
+    {
       "config": "logilab",
       "display": "Logilab",
       "pypi": "logilab-sphinx-themes"
