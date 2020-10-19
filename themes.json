@@ -81,7 +81,9 @@
     {
       "config": {
         "html_theme": "insipid",
-        "html_add_permalinks": "'\\N{SECTION SIGN}'"
+        "html_add_permalinks": "'\\N{SECTION SIGN}'",
+        "html_copy_source": "False",
+        "html_context": "{'display_github': True, 'github_user': 'sphinx-themes', 'github_repo': 'sphinx-themes.org', 'conf_py_path': '/sample-docs/', 'commit': 'master'}"
       },
       "display": "An Insipid Sphinx Theme (with initially hidden sidebar)",
       "pypi": "insipid-sphinx-theme"
