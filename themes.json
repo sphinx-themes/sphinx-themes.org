@@ -89,6 +89,17 @@
       "pypi": "insipid-sphinx-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "kotti_docs_theme"
+        ],
+        "html_theme": "kotti_docs_theme",
+        "html_theme_path": "[kotti_docs_theme.get_theme_dir()]"
+      },
+      "display": "kotti_docs_theme",
+      "pypi": "kotti_docs_theme"
+    },
+    {
       "config": "logilab",
       "display": "Logilab",
       "pypi": "logilab-sphinx-themes"
