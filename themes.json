@@ -97,7 +97,7 @@
         "html_theme_path": "[kotti_docs_theme.get_theme_dir()]"
       },
       "display": "kotti_docs_theme",
-      "pypi": "kotti_docs_theme"
+      "pypi": "kotti-docs-theme"
     },
     {
       "config": "logilab",
