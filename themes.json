@@ -278,6 +278,17 @@
       "pypi": "sphinx-documatt-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "sphinx_drove_theme"
+        ],
+        "html_theme": "sphinx_drove_theme",
+        "html_theme_path": "[sphinx_drove_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx_drove_theme",
+      "pypi": "sphinx-drove-theme"
+    },
+    {
       "config": "press",
       "display": "press",
       "pypi": "sphinx-press-theme"
