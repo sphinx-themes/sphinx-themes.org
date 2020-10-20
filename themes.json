@@ -184,6 +184,17 @@
     },
     {
       "config": {
+        "_imports": [
+          "quark_sphinx_theme"
+        ],
+        "html_theme": "quark",
+        "html_theme_path": "[quark_sphinx_theme.get_path()]"
+      },
+      "display": "quark-sphinx-theme",
+      "pypi": "quark-sphinx-theme"
+    },
+    {
+      "config": {
         "_extensions": [
           "sphinx_ansible_theme.ext.pygments_lexer"
         ],
