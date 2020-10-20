@@ -167,6 +167,11 @@
       "pypi": "python-docs-theme"
     },
     {
+      "config": "renku",
+      "display": "renku-sphinx-theme",
+      "pypi": "renku-sphinx-theme"
+    },
+    {
       "config": {
         "_imports": [
           "solar_theme"
