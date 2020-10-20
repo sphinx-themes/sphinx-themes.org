@@ -79,7 +79,7 @@
           "hbp_sphinx_theme"
         ],
         "html_theme": "hbp_sphinx_theme",
-        "html_theme_path": "[hbp_sphinx_theme.get_html_theme_path()]",
+        "html_theme_path": "[hbp_sphinx_theme.get_html_theme_path()]"
       },
       "display": "hbp-sphinx-theme",
       "pypi": "hbp-sphinx-theme"
