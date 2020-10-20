@@ -112,6 +112,11 @@
       "pypi": "jupyter-sphinx-theme"
     },
     {
+      "config": "karma_sphinx_theme",
+      "display": "karma_sphinx_theme",
+      "pypi": "karma-sphinx-theme"
+    },
+    {
       "config": {
         "_imports": [
           "kotti_docs_theme"
@@ -173,9 +178,42 @@
       "pypi": "murray"
     },
     {
+      "config": {
+        "_imports": [
+          "oe_sphinx_theme"
+        ],
+        "html_theme": "oe_sphinx",
+        "html_theme_path": "[oe_sphinx_theme.get_theme_dir()]"
+      },
+      "display": "oe-sphinx-theme",
+      "pypi": "oe-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "ovs_sphinx_theme"
+        ],
+        "html_theme": "ovs",
+        "html_theme_path": "[ovs_sphinx_theme.get_theme_dir()]"
+      },
+      "display": "ovs-sphinx-theme",
+      "pypi": "ovs-sphinx-theme"
+    },
+    {
       "config": "python_docs_theme",
       "display": "Python Documentation Theme",
       "pypi": "python-docs-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "quark_sphinx_theme"
+        ],
+        "html_theme": "quark",
+        "html_theme_path": "[quark_sphinx_theme.get_path()]"
+      },
+      "display": "quark-sphinx-theme",
+      "pypi": "quark-sphinx-theme"
     },
     {
       "config": "renku",
@@ -192,17 +230,6 @@
       },
       "display": "solar-theme",
       "pypi": "solar-theme"
-    },
-    {
-      "config": {
-        "_imports": [
-          "quark_sphinx_theme"
-        ],
-        "html_theme": "quark",
-        "html_theme_path": "[quark_sphinx_theme.get_path()]"
-      },
-      "display": "quark-sphinx-theme",
-      "pypi": "quark-sphinx-theme"
     },
     {
       "config": {
