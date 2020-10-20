@@ -107,6 +107,17 @@
     {
       "config": {
         "_imports": [
+          "lsst_sphinx_bootstrap_theme"
+        ],
+        "html_theme": "lsst_sphinx_bootstrap_theme",
+        "html_theme_path": "[lsst_sphinx_bootstrap_theme.get_html_theme_path()]"
+      },
+      "display": "lsst-sphinx-bootstrap-theme",
+      "pypi": "lsst-sphinx-bootstrap-theme"
+    },
+    {
+      "config": {
+        "_imports": [
           "os",
           "mozilla_sphinx_theme"
         ],
