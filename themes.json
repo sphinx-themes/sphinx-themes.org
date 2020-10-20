@@ -95,7 +95,7 @@
         ],
         "html_sidebars": "{'**': ['sidebartoc.html']}",
         "html_theme": "jupyter",
-        "html_theme_path": "jupyter_sphinx_theme.get_html_theme_path()",
+        "html_theme_path": "jupyter_sphinx_theme.get_html_theme_path()"
       },
       "display": "jupyter-sphinx-theme",
       "pypi": "jupyter-sphinx-theme"
