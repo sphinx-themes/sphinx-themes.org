@@ -123,6 +123,17 @@
     },
     {
       "config": {
+        "_imports": [
+          "renga_sphinx_theme"
+        ],
+        "html_theme": "renga",
+        "html_theme_path": "[renga_sphinx_theme.get_path()]"
+      },
+      "display": "renga-sphinx-theme",
+      "pypi": "renga-sphinx-theme"
+    },
+    {
+      "config": {
         "_extensions": [
           "sphinx_ansible_theme.ext.pygments_lexer"
         ],
