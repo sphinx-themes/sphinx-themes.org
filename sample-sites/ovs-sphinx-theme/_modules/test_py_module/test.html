@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test_py_module.test &#8212; Sphinx Themes Sample</title>
+    <link rel="stylesheet" href="../../_static/openvswitch.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head><body>
+<header role="banner">
+  <div class="cp--header collaborative-projects">
+    <div class="gray-diagonal">
+      <div class="container">
+        <a id="cp--logo" href="http://collabprojects.linuxfoundation.org">
+          <img src="../../_static/lf/lfcollabprojects_logo_gray.png" alt="Linux Foundation Collaborative Projects"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="logo">
+    <div class="container">
+      <a href="//www.openvswitch.org">
+        <img src="../../_static/vswitch.png" alt="Open vSwitch"></a>
+    </div>
+  </div>
+  <div class="subnav">
+    <div class="container">
+      <nav id="menu">
+        <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+        <input type="checkbox" id="tm">
+        <ul class="main-menu clearfix">
+          <li>
+            <a href="//www.openvswitch.org/features">Overview</a>
+          </li>
+          <li>
+            <a href="/">Documentation
+              <span class="drop-icon">▾</span>
+              <label title="Toggle Drop-down" class="drop-icon" for="sm20">▾</label>
+            </a>
+            <input type="checkbox" id="sm20">
+            <ul class="sub-menu">
+              <li>
+                <a href="/">Open vSwitch (latest)</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/dist-docs-2.5">Open vSwitch 2.5.x
+                </a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/dist-docs">Man Pages</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Talks &amp; Presentations
+              <span class="drop-icon">▾</span>
+              <label title="Toggle Drop-down" class="drop-icon" for="sm21">▾</label>
+            </a>
+            <input type="checkbox" id="sm21">
+            <ul class="sub-menu">
+              <li>
+                <a href="//www.openvswitch.org/support/ovscon2016">OVScon 2016</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/ovscon2015">OVScon 2015</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/ovscon2014">OVScon 2014</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/papers">Papers</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/slides">Presentations</a>
+              </li>
+              <li>
+                <a href="//www.openvswitch.org/support/interviews">Interviews</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="//www.openvswitch.org/download">Download</a>
+          </li>
+          <li>
+            <a href="//mail.openvswitch.org/">Mailing Lists</a>
+          </li>
+          <li>
+            <a href="//www.openvswitch.org/charter">Charter</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+  <div class="container">
+    <div class="section group">
+      <div class="col-2-3">
+        
+  <h1>Source code for test_py_module.test</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Foo"><a class="viewcode-back" href="../../demo/api.html#test_py_module.test.Foo">[docs]</a><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;Docstring for class Foo.</span>
+
+<span class="sd">    This text tests for the formatting of docstrings generated from output</span>
+<span class="sd">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<span class="sd">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
+<span class="sd">    and etc, but those will *always* have the ``.descname`` or</span>
+<span class="sd">    ``.descclassname`` class.</span>
+
+<span class="sd">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
+<span class="sd">    the same style as anything else with ````this type of markup````.</span>
+
+<span class="sd">    It&#39;s common for programmers to give a code example inside of their</span>
+<span class="sd">    docstring::</span>
+
+<span class="sd">        from test_py_module import Foo</span>
+
+<span class="sd">        myclass = Foo()</span>
+<span class="sd">        myclass.dothismethod(&#39;with this argument&#39;)</span>
+<span class="sd">        myclass.flush()</span>
+
+<span class="sd">        print(myclass)</span>
+
+
+<span class="sd">    Here is a link to :py:meth:`capitalize`.</span>
+<span class="sd">    Here is a link to :py:meth:`__init__`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
+    <span class="c1">#: It can have multiple lines.</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
+
+    <span class="n">baz</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="sd">&quot;&quot;&quot;Docstring for class attribute Foo.baz.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Foo.__init__"><a class="viewcode-back" href="../../demo/api.html#test_py_module.test.Foo.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qux</span><span class="p">,</span> <span class="n">spam</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start the Foo.</span>
+
+<span class="sd">        :param qux: The first argument to initialize class.</span>
+<span class="sd">        :type qux: string</span>
+<span class="sd">        :param spam: Spam me yes or no...</span>
+<span class="sd">        :type spam: bool</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#: Doc comment for instance attribute qux.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qux</span> <span class="o">=</span> <span class="mi">3</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">spam</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="sd">&quot;&quot;&quot;Docstring for instance attribute spam.&quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Foo.add"><a class="viewcode-back" href="../../demo/api.html#test_py_module.test.Foo.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the added values.</span>
+
+<span class="sd">        :param val1: First number to add.</span>
+<span class="sd">        :type val1: int</span>
+<span class="sd">        :param val2: Second number to add.</span>
+<span class="sd">        :type val2: int</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span></div>
+
+<div class="viewcode-block" id="Foo.capitalize"><a class="viewcode-back" href="../../demo/api.html#test_py_module.test.Foo.capitalize">[docs]</a>    <span class="k">def</span> <span class="nf">capitalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">myvalue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a string as uppercase.</span>
+
+<span class="sd">        :param myvalue: String to change</span>
+<span class="sd">        :type myvalue: string</span>
+<span class="sd">        :rtype: string</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">myvalue</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Foo.another_function"><a class="viewcode-back" href="../../demo/api.html#test_py_module.test.Foo.another_function">[docs]</a>    <span class="k">def</span> <span class="nf">another_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Here is another function.</span>
+
+<span class="sd">        :param a: The number of green hats you own.</span>
+<span class="sd">        :type a: int</span>
+
+<span class="sd">        :param b: The number of non-green hats you own.</span>
+<span class="sd">        :type b: int</span>
+
+<span class="sd">        :param kwargs: Additional keyword arguments. Each keyword parameter</span>
+<span class="sd">                       should specify the name of your favorite cuisine.</span>
+<span class="sd">                       The values should be floats, specifying the mean price</span>
+<span class="sd">                       of your favorite dish in that cooking style.</span>
+<span class="sd">        :type kwargs: float</span>
+
+<span class="sd">        :returns: A 2-tuple.  The first element is the mean price of all dishes</span>
+<span class="sd">                  across cuisines.  The second element is the total number of</span>
+<span class="sd">                  hats you own: :math:`a + b`.</span>
+<span class="sd">        :rtype: tuple</span>
+
+<span class="sd">        :raises ValueError: When ``a`` is not an integer.</span>
+
+<span class="sd">        .. versionadded:: 1.0</span>
+<span class="sd">            This was added in 1.0</span>
+<span class="sd">        .. versionchanged:: 2.0</span>
+<span class="sd">            This was changed in 2.0</span>
+<span class="sd">        .. deprecated:: 3.0</span>
+<span class="sd">            This is deprecated since 3.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwargs</span><span class="p">),</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span></div></div>
+</pre></div>
+
+        <div class="browse">
+          
+          
+        </div>
+      </div>
+      <div class="col-1-3">
+        <div class="widget">
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" placeholder="Search  documentation" /><button type="submit"></button>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+        </div>
+        <div class="widget">
+          <div class="widget-title">
+            Contents
+          </div>
+          <div class="widget-body">
+            <p class="caption"><span class="caption-text">Demo Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/structure.html">Structural Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/structure.html#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/demo.html">Paragraph Level Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/lists_tables.html">Lists &amp; Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/api.html">API documentation and generated content</a></li>
+</ul>
+<p class="caption"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/long.html">Long Sticky Nav</a></li>
+</ul>
+
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-title">
+            Browse
+          </div>
+          <div class="widget-body">
+            <ul>
+              <li>
+                <a href="../../genindex.html" title="General Index"
+                   accesskey="I">General Index</a>
+              </li>
+              <li>
+                <a href="../../py-modindex.html" title="Python Module Index"
+                   >Python Module Index</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-title">
+            Navigation
+          </div>
+          <div class="widget-body">
+            <ul>
+              <li class="nav-item nav-item-0">
+                <a href="../../index.html">Sphinx Themes Sample</a>
+                <ul>
+                  <li class="nav-item nav-item-1">
+                    <a href="../index.html" accesskey="U">Module code</a>
+                  <ul><li>test_py_module.test</li></ul></li></ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+</main>
+
+<footer role="contentinfo">
+  <div class="cp--footer collaborative-projects">
+    <div class="gray-diagonal">
+      <div class="container">
+        <p>&copy; 2016 A Linux Foundation Collaborative Project. All Rights Reserved.</p>
+        <p>Linux Foundation is a registered trademark of The Linux Foundation. Linux is a registered <a href="http://www.linuxfoundation.org/programs/legal/trademark" title="Linux Mark Institute">trademark</a> of Linus Torvalds. Open vSwitch and OvS are trademarks of The Linux Foundation.</p>
+        <p>Please see our <a href="http://www.linuxfoundation.org/privacy">privacy policy</a> and <a href="http://www.linuxfoundation.org/terms">terms of use</a>.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
