@@ -122,6 +122,11 @@
       "pypi": "python-docs-theme"
     },
     {
+      "config": "renku",
+      "display": "renku-sphinx-theme",
+      "pypi": "renku-sphinx-theme"
+    },
+    {
       "config": {
         "_extensions": [
           "sphinx_ansible_theme.ext.pygments_lexer"
