@@ -1,0 +1,254 @@
+// Custom OE styles
+
+
+// Table of Contents overruled
+// OE Settings
+//
+// a. Base
+// b. Grid
+// c. Global
+// d. Media Query Ranges
+// e. Typography
+// 09. Dropdown Buttons
+// 20. Pagination
+// 21. Panels
+// 28. Sub Nav
+// 29. Switch
+// 31. Tabs
+// 34. Top Bar
+
+
+// a. Base
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import "foundation/functions";
+
+$base-font-size: 100%;
+
+// The $base-font-size is 100% while $base-line-height is 10%
+$base-line-height: 140%;
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+// $include-print-styles: true;
+$include-html-global-classes: $include-html-classes;
+
+// b. Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+$row-width: rem-calc(1172) !default;
+$total-columns: 12;
+$column-gutter: rem-calc(30);
+
+
+// c. Global
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$font-family-light-serif: "Flanders Art Sans Light", Arial, sans-serif !default;
+$font-family-bold-serif: "Flanders Art Sans Bold", Arial, sans-serif !default;
+$font-family-sans-serif: "Flanders Art Sans", Arial, sans-serif !default;
+$font-family-medium-serif: "Flanders Art Sans Medium", Arial, sans-serif !default;
+$font-family-serif: Calibri, Georgia,serif !default;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+
+// We use these as default colors throughout
+
+$primary-color: #944EA1 !default;  
+$secondary-color: #e7e7e7 !default;
+$alert-color: #FF0000 !default;    
+$success-color: #43AC6A !default;  
+$warning-color: #f08a24 !default;  
+$info-color: #a0d3e8 !default;   
+$custom-color:#FFFFCC !default; 
+
+
+$dark-purple    : rgb(117,63,127); 	// #753F7F  
+$mid-purple     : rgb(148,78,161); 	// #944EA1
+$light-purple   : rgb(176,93,191); 	// #B05DBF
+$white          : rgb(255,255,255); // #FFFFFF
+$black          : rgb(0, 0, 0);		// #000000
+$dark-gray      : rgb(63,56,64); 	// #3F3840
+$mid-gray       : rgb(229,229,229); // #E5E5E5
+$light-gray     : rgb(237,237,237); // #EDEDED
+$gray           : rgb(213,213,213); // #D5D5D5
+$silver         : rgb(152,152,152); // #989898
+$steel          : #666666 !default;
+$jet            : #333333 !default;
+$ghost          : #FAFAFA;
+$aluminum       : #efefef;
+$white-gray     : #fbfbfb; // hover color 
+$jumbo       	: #888888;
+
+// social 
+
+$soc-twitter 	: #2da5da;
+$soc-facebook 	: #3567a6;
+$soc-mail 	    : #926da5;
+$soc-linkedin 	: #007ab9;
+$soc-twitter_hover 	: #2690bf;
+$soc-facebook_hover : #255592;
+$soc-mail_hover 	: #7a588b;
+$soc-linkedin_hover : #006ca4;
+
+// OE specific
+
+$fresh-blue     : #2da3ce;
+$gray-blue      : #86abbe;
+
+
+// We use these to control various global styles
+$body-bg: #F5F5F5;
+$body-font-color: $silver;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
+
+$body-error-bg: $dark-purple;
+
+// We use this to control font-smoothing
+$font-smoothing: antialiased;
+
+// Overwrite font-awesome font dir
+$fa-font-path: "../bower_components/font-awesome/fonts";
+
+// Overwrite border bottom and font-weight for tooltip fields
+$has-tip-border-bottom: none;
+$has-tip-border-bottom-hover: none;
+$has-tip-font-weight: none;
+
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// OE Query Ranges
+
+$small-range: (0em, 36.125em) !default;
+$medium-range: (36.128em, 55.500em) !default;
+$large-range: (55.503em, 73.125em) !default;
+$xlarge-range: (73.128em, 120em) !default;
+$xxlarge-range: (120.063em, 99999999em) !default;
+
+
+// e. Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$header-font-color: $dark-purple;
+
+// A general <small> styling
+$small-font-size: 80%;
+
+// We use these to style paragraphs
+$paragraph-font-size: 1rem;
+$paragraph-line-height: 1.4;
+
+
+// We use these to style blockquotes
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-padding: rem-calc(2 20 0 19);
+$blockquote-border: 3px solid $mid-purple;
+
+
+// We use these to set the padding around the breadcrumbs.
+
+$crumb-side-padding: rem-calc(14);
+$crumb-border-size: 0;
+
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(13);
+$crumb-font-color-current: $dark-gray;
+$crumb-font-color-unavailable: $silver;
+// We use these to control the slash between breadcrumbs
+$crumb-slash: "›";
+// We use these to style the fieldset border and spacing.
+$fieldset-border-color: $mid-gray;
+
+// We use these to style the legends when you use them
+$legend-bg: none;
+
+// We use these to style the error states for inputs and labels
+ $input-error-message-padding: rem-calc(3 6 6);
+ $input-error-message-top: -1px;
+ $input-error-message-font-size: rem-calc(12);
+ $input-error-message-font-weight: $font-weight-normal;
+ $input-error-message-font-style: normal;
+ $input-error-message-font-color: $alert-color;
+ $input-error-message-font-color-alt: $light-purple;
+
+
+// Select variables
+$select-bg-color: $white;
+$select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
+
+
+// 09. Dropdown Buttons
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$button-pip-sml: rem-calc(4);
+$dropdown-button-padding-sml: $button-pip-sml * 7;
+
+
+// 20. Pagination
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$pagination-li-font-color: $dark-purple;
+$pagination-li-font-size: rem-calc(14);
+$pagination-li-margin: rem-calc(5);
+$pagination-link-font-color: $light-purple;
+$pagination-link-active-bg: scale-color($white, $lightness: -10%);
+$pagination-link-unavailable-font-color: $silver;
+
+
+// 21. Panels
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$panel-bg: scale-color($white, $lightness: 95%);
+$panel-font-color: $steel;
+
+// 28. Sub Nav
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$sub-nav-font-color: $light-purple;
+
+// 29. Switch
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to control default font sizes for our classes.
+$switch-font-size-tny: 11px;
+$switch-font-size-sml: 12px;
+$switch-font-size-med: 14px;
+$switch-font-size-lrg: 17px;
+
+// 31. Tabs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabs-navigation-padding: rem-calc(12);
+$tabs-navigation-bg-color: $mid-purple;
+$tabs-navigation-active-bg-color: $dark-purple;
+$tabs-navigation-font-color: $white;
+$tabs-navigation-font-size: rem-calc(14);
+.tabs-content {background:$light-gray;padding:5px 10px;margin-top:1px;}
+.tabs dd {margin-right:1px !important}
+
+// 34. Top Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-bg-color: $mid-purple;
+$topbar-bg: $topbar-bg-color;
+$topbar-margin-bottom: 30px;
+$topbar-dropdown-bg: $mid-purple;
+$topbar-dropdown-link-bg: $mid-purple;
+
+// Set the link colors and styles for top-level nav
+
+$topbar-link-font-size: rem-calc(14);
+$topbar-link-bg-hover: $dark-purple;
+$topbar-link-bg-active: $dark-purple !default;
+$topbar-link-bg-active-hover: scale-color($dark-gray, $lightness: -14%);
+

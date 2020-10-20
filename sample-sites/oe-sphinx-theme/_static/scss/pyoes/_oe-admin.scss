@@ -1,0 +1,170 @@
+// Private frontend (admin) custom SASS code.
+
+/* General */
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; background: #f3f3f3; overflow:hidden; }
+#appContainer { width: 100%; height: 100%; background: #f3f3f3;}
+
+/* Loading overlay */
+.pageOverlay { top: 0; left: 0; position: absolute; height: 100%; width: 100%; z-index: 1001; display: block; background: #484848; text-align: center;}
+//#loadingOverlay { background: #484848 url('../img/general/loader.gif') no-repeat center; background-size: 50px 50px; cursor: wait; }
+.loadingMessage {font-size: 1em; margin: 30px; color: #999; }
+
+/* Admin Header */
+$header-height: 50px;
+.appHeader { background-color: $white; height: $header-height; overflow: hidden; }
+.appHeader .headerLeft { height: $header-height; position: relative; margin-right: 305px; padding-left: 20px; }
+.appHeader .headerTitle, .appHeader .headerLogo, .appHeader .headerMenu { display: inline-block; float: left; height: 100%; margin-right: 15px;}
+.appHeader .headerLogo { background: url('../img/pyoes/OE-vlaanderen-logo.png') no-repeat center left; padding-left: 40px; background-size: 40px; margin-left: 15px; }
+.appHeader .headerMenu { padding: 10px; margin-left: 15px; }
+.appHeader h1{ margin: 0; padding: 0; font-size: 26px !important; line-height: $header-height; }
+.appHeader h2 { font-size: 23px; color: $dark-purple !important; margin: 0; padding: 5px 0 0 0; }
+.appHeader h4 { font-size: 12px; color: $dark-purple !important; margin: 0; padding-left: 3px; }
+.appHeader .headerMenu button { padding: 5px 10px 5px 5px; margin: 0; text-transform: capitalize; }
+.appHeader .headerMenu .fa-bars:before { padding: 5px; }
+.appHeader .headerRight { height: $header-height; float: right; width: 300px; margin-left: 5px; color: #3E769E; text-align: right; font-size: 0.875rem; padding: 5px 5px 0 0; }
+.appHeader .headerRight a, .appHeader .headerRight  a:visited { color: #3E769E; text-decoration: underline; }
+
+
+/* Admin Footer */
+.appFooter { margin: 0; border-top: 1px #efefef solid; height: 25px; width: 100%; background: #ffffff url('../img/pyoes/OE-vlaanderen-logo.png') no-repeat center left; background-size: 24px; padding-left: 24px; font-size: 0.875rem; }
+
+/* Placeholder admin (dojo) */
+.placeholder-input.dijitDateTextBox { padding-left: 0; }
+.placeholder-input.dijitDateTextBox .dijitArrowButtonContainer { border: none !important; background: none; }
+.placeholder-input.dijitDateTextBox .dijitInputContainer { min-height: 100%; }
+.placeholder-input.dijitDateTextBox input.dijitInputInner { padding: 0.5rem !important; }
+.placeholder-input.dijitDateTextBox input.dijitArrowButtonInner { width: 1.25rem; height: 100% !important; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+); }
+
+/* ==== DOJO Overrides ==== */
+// Dialog
+.dijitDialogUnderlay { background: rgba(72, 72, 72, 0.8); opacity: 1; }
+.nihilo .dijitDialog .dijitDialogTitle { font-size: 23px; color: #753f7f; }
+.nihilo .dijitDialogCloseIcon { background: none;  font-size: 22px; font-weight: bold; }
+.dijitDialog .closeText { display: block; }
+.nihilo .dijitDialog { background-color: #FFFFFF; }
+.nihilo .dijitDialog .dijitDialogPaneContent { padding: 25px; }
+.nihilo .dijitDialogTitleBar { padding: 10px; }
+
+// Restore dgrid css
+.dgrid table.dgrid-row-table { margin: 0; background: none; }
+.dgrid table th { width: auto; }
+.dgrid [class*="column"] + [class*="column"]:last-child { float: none; }
+.dgrid-sort-arrow { margin: 0; }
+
+// Tab container
+.nihilo .dijitTabSpacer { border: none; height: 0; }
+.nihilo .dijitTabPaneWrapper { border: none; border-radius: 0; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTab { border: 1px solid #efefef; border-top: none; background: #ffffff none; border-radius: 0; }
+.nihilo .dijitTab .tabLabel, .nihilo .dijitTabCloseButton:before { color: $gray; }
+.nihilo .dijitTabCloseButton { background: none; width: 15px; height: 100%; padding-top: 5px; }
+.nihilo .dijitTabCloseButton:before { content: "\f00d"; font-family: FontAwesome; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTabContainerBottom-tabs .dijitTabChecked { border: none; background: #ffffff none; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTab.dijitTabChecked .dijitTabCloseButton{ cursor: pointer; padding-top: 5px;}
+.nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .tabLabel,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabHover .tabLabel,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .dijitTabCloseButton:before,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabHover .dijitTabCloseButtonHover:before { color: $dark-purple; }
+.nihilo .dijitTabContainerTop-tabs { text-align: center; width: 100% !important; padding: 0; }
+.nihilo .dijitTabContainerTop-tabs .dijitTab { background: $mid-purple none; border: none; border-radius: 0; color: $white; font-size: 0.6875rem; padding: 0.625rem 1.25rem; text-transform: uppercase; line-height: normal; margin: 0 1px 1.25rem 0; }
+.nihilo .dijitTabContainerTop-tabs .dijitTab:hover,
+.nihilo .dijitTabContainerTop-tabs .dijitTab.dijitTabChecked { background: $dark-purple none; }
+
+//uit adviezen
+.nihilo .dijitTabContainerBottomChildWrapper {  height: 100%; }
+.nihilo .dijitTabContainerBottom-child { height: 100%; width: 100%; background-color: #ffffff; display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; padding: 15px; }
+.nihilo .dijitTabContainerTop { display: flex; display: -ms-flexbox; flex: 1 1 0; -ms-flex: 1 1; flex-direction: column; -ms-flex-direction: column; min-height: 0; }
+.nihilo .dijitTabPaneWrapper.dijitTabContainerTop-container { flex: 1; -ms-flex: 1; display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; min-height: 0; }
+.nihilo .dijitTabContainerTopChildWrapper.dijitVisible { flex: 1; -ms-flex: 1; overflow-y: auto; }
+.nihilo  .dijitTabContainerTop-child { height: 100%; }  //fix voor type drop down
+
+// Restore dijit css
+//.nihilo input[type="text"].dijitInputInner { padding: 0 0.25em !important; }
+.nihilo input[type="text"].dijitArrowButtonInner { background-color: rgba(0, 0, 0, 0); border: none; cursor: pointer; }
+
+// Inputs
+.nihilo .dijitSelect .dijitButtonContents, .nihilo .dijitSelect, .nihilo .dijitTextBox, .nihilo .dijitTextArea { background: #fff none; }
+.nihilo .dijitTextBox { height: 1.5rem; }
+.nihilo .dijitArrowButton, .nihilo input.dijitInputInner { height: 100%; }
+
+// Accordeon container
+.nihilo .dijitAccordionTitle, .nihilo .dijitAccordionTitleSelected { background: #EEEEEE none; }
+.nihilo .dijitAccordionTitleSelected { color: #753f7f; }
+.nihilo .placeholder-disabled .dijitArrowButtonContainer { display: none; }
+
+// date field placeholder
+.nihilo .dijitInputField .dijitPlaceHolder { padding: 8px 0 0 0; }
+.nihilo .dijitTabContainerTop-child { display: inline-block; min-width: 100%; position: absolute; }
+
+//selectlist in grid
+.nihilo .dijitSelect .dijitButtonContents { padding-left: 10px; }
+
+//select dropdows in grids
+.nihilo .dgrid .dijitSelect.dijitReadOnly .dijitArrowButtonContainer { display: none; }
+.nihilo .dgrid .dijitSelect .dijitArrowButtonContainer .dijitArrowButtonInner { margin: 0; }
+.nihilo .dgrid .dijitSelect .dijitSelectLabel { margin: 5px; }
+
+// appBody/appMenu
+.appBody { padding: 20px 20px 10px; }
+
+/* Menu */
+.appMenu { height: 450px; width: 800px; }
+.appMenu .menuControls { margin-bottom: 10px; }
+.appMenu .menuControls > * { padding: 0; }
+.appMenu .menuControls .button,
+.appMenu .menuControls input { margin: 0; height: 37px; }
+.appMenu .menuHeader > * { padding: 0; height: 35px; position: relative; display: inline-block; }
+.appMenu .menuHeader .refreshLink { font-size: 0.875em; position: absolute; bottom: 0; right: 0; }
+.appMenu .menuHeader .refreshLink .fa { padding-left: 5px; }
+.appMenu .menuPane { height: 400px; display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; }
+.appMenu .menuBody { flex: 1; -ms-flex: 1; }
+.appMenu .menuBody .dgrid { height: 350px; }
+.appMenu .dgrid-column-id,
+.appMenu .dgrid-column-dossier_uri { width: 100px; }
+
+// Content View
+/* View */
+.contentView .viewHeader, .contentView .viewFooter,
+.contentView .viewBody { max-width: 100%; }
+.contentView .viewHeader > *, .contentView .viewFooter > *,
+.contentView .viewBody > * { padding: 0; }
+.contentView .viewHeader h3 { margin: 0; }
+.contentView .viewHeader .headerButtons { font-size: 20px; text-align: right; }
+.contentView .viewHeader .headerButtons a { padding-right: 5px; }
+.contentView .viewFooter .button { margin-bottom: 0; }
+.contentView .viewBody .viewForm { margin: 0 10px; }
+
+/* view grids */
+.contentView .dgrid { height: 250px; }
+.contentView .dgrid .dgrid-header th { padding: .5rem .625rem .625rem; font-size: .875rem; font-weight: 700; color: #333; }
+.contentView .dgrid .dgrid-cell { border: none; }
+.contentView .dgrid .dgrid-row { padding: .5625rem .625rem; }
+.contentView .dgrid .dgrid-row-odd { background: #F9F9F9; }
+.contentView .dgrid .dgrid-header { background: #F5F5F5; }
+.contentView .dgrid .dgrid-selected { background: #BFD6EB; }
+.contentView .addLinkContainer { font-size: 14px; text-align: right; }
+.contentView .dGridHyperlink { text-align: center; }
+
+//size all id columns
+.contentView .dgrid-column-id { width: 100px; }
+
+//size all remove columns
+.contentView .dgrid-column-remove { width: 50px; }
+
+//upload input => move to elements?
+.input-container { position: relative; width: 100px; height: 20px; display:inline-block; }
+.input-container a { position: absolute; width: 100%; height: 100%; cursor: pointer; display: inline-block; }
+.input-container input[type="file"] { z-index: 2; opacity: 0; position: relative; width: 100%; height: 100%; cursor: pointer; padding: 0; margin: 0; display: inline-block; }
+
+//closeicon dialog
+.dijitDialog .closeText { right: 0px; margin-top: 5px; }
+.dijitDialog .closeText i { margin-right: 10px; }
+
+/* Dgrowl */
+.dGrowl-channel { width: 350px; }
+.dGrowl-notification { width: 320px; }
+.dGrowl-channel-warn .dGrowl-notification { background-color: rgb(255, 217, 162); border: 1px solid rgb(233, 123, 20); }
+
+.hide { display: none !important; }
+
+.dijitDialog .closeText { right: 0px; margin-top: 5px; }
+.dijitDialog .closeText i { margin-right: 10px; }

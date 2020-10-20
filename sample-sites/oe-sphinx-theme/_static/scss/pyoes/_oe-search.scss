@@ -1,0 +1,28 @@
+
+//
+// OE searchbox ex beeldbank
+//
+
+
+.fl-block-search {border-top:5px solid $dark-purple}
+.fl-block-search form {margin-top:25px}
+.fl-block-search_fieldset, .fl-block-search_fieldset input {border:none;padding:0;margin:0;line-height:16px}
+.fl-block-search_fieldset select  {width:95%}
+    
+.searchBox {position: relative;padding: 0px;}
+.searchBox input {box-sizing: border-box;width: 100%; padding: 0 0 0 10px;}
+.searchBox button {padding:12px 30px;position: absolute;top: 0px;right: 0px;text-transform: uppercase; }
+.searchBox button:before {content: '';position: absolute;display: block;height: 44px;top:0;left:0;width:0;}
+.searchBox small {font-size:0.8em;float:$opposite-direction;margin-bottom:20px;}
+
+.searchBox fieldset {background:none;border:none;padding:0;margin:0;font-size:0.8em;}
+.searchBox fieldset input {float:left; }
+.searchBox h3 { padding-bottom:60px;border:1px solid #C03 }
+
+
+// ex besluitendatabank
+.form-search h5 {font-size:0.9em;margin:10px 0 5px 0;padding:0}
+
+
+
+

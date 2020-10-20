@@ -1,0 +1,9 @@
+{
+  "name": "oe-sphinx-theme",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "~5.4.0",
+    "font-awesome": "~4.3.0"
+  }
+}

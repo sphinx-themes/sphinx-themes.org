@@ -1,0 +1,49 @@
+// OE Elements
+
+/* Icons main page */
+.icon-large-left {float:$default-float;margin:0 20px 30px 0;font-size:60px;color:$mid-gray}
+.vruler {border-left:1px solid $light-gray;padding-top:0px}
+
+
+/* Alt elements alert box */
+.alert-success { background-color: #dff0d8; border-color: #d6e9c6; color: #3c763d; }
+.alert-success .alert-link  { color: #2b542c; text-decoration: underline; }
+.alert-info { background-color: #d9edf7; border-color: #bce8f1; color: #31708f; }
+.alert-info .alert-link { color: #245269;text-decoration: underline; }
+.alert-warning { background-color: #fcf8e3; border-color: #faebcc; color: #8a6d3b; }
+.alert-warning .alert-link { color: #66512c;text-decoration: underline; }
+.alert-danger { background-color: #f2dede; border-color: #ebccd1; color: #a94442; }
+.alert-danger .alert-link { color: #843534;text-decoration: underline; }
+.alert-time { background-color: #666; } // besluiten time list
+
+
+
+.bg-primary { background-color: #944ea1; }
+.bg-success { background-color: #43ac6a; }
+.bg-info { background-color: #5bc0de; }
+.bg-warning { background-color: #f08a24; }
+.bg-danger { background-color: #ff0000; }
+
+
+// label colored
+.label-colored {background-color:$fresh-blue;}
+.label-colored a {text-decoration:none !important;color:$white;padding-right:3px}
+.label-colored a span {color:$white;border-left:1px dotted $info-color;padding-left:8px}
+
+
+// img panel header ( home page )
+h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
+
+// color page
+.color-cube { height:120px; width:160px; color:$white; float:$default-float; padding:5px }
+
+
+// articles
+dt, b, strong {font-family: $font-family-bold-serif;font-weight:700;}
+h4 > em {padding:5px 0 10px 0;display:block;font-size:1.3em;line-height:1.3em}
+article > h1 {padding-bottom:18px;}
+article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
+article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
+
+.panel article h3, .panel article h4, .panel article h5 {line-height:1.3em} 
+.body-bg-error { background:$body-error-bg; }

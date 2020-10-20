@@ -1,0 +1,134 @@
+
+//
+// OE custom LISTS
+//
+
+
+// li colored disk
+ul.disk          	{ list-style:none; padding:0; margin:10px 0; }
+ul.disk li          { padding-left:1em; position:relative; }
+ul.disk li:before   { content:"•"; color:$light-purple; position:absolute; left:0em; }
+ul.disk li a:link 	{ color:$fresh-blue;margin-bottom:8px;text-decoration:underline} 
+ul.disk li a:hover 	{ text-decoration:none} 
+ul.disk ul         	{ list-style:none; padding:0; margin:5px 0; font-size:0.9em;}
+
+
+// li no disk
+ul.nodisk {margin-left: 0em;}
+ul.nodisk li {list-style: inside none;}
+ul.nodisk li a:link {text-decoration:underline}
+ul.nodisk li a:hover {text-decoration:none}
+
+// source list
+ul.source li {list-style-type: none;}
+ul.source {margin:20px 0;padding-left: 0;font-size:0.8em;}
+
+
+// reactions list
+ul.reactions {margin:0;font-size:0.9em}
+.reactions li {list-style-type:none;padding:5px 10px;}
+.reactions li:nth-child(2) {background-color:$light-gray}
+.reactions cite {font-family: $font-family-bold-serif;font-size:1em}
+.reactions blockquote {border:none;color:$dark-gray;padding-left:0;margin:0 0 5px 0}
+
+
+//ordered list
+ol > li {list-style-type: decimal;} 
+ol > li ol {padding:0; margin:5px 15px; font-size:0.9em} 
+
+
+// ordered list no number
+ol.nonumbers {margin-left:0} 
+ol.nonumbers > li {list-style-type: none;} 
+
+
+// actoren (front-end)
+
+ul.source-authors li {list-style-type: none;}
+ul.source-authors  {font-family:$font-family-sans-serif;color:$dark-purple;margin:20px 0 0 0;font-size:0.6em;line-height:1.6em;}
+
+//temp?
+.source-authors-block {margin-top:10px;height:255px;width:98%;overflow-y:scroll}
+ul.source-authors-list  {font-size:0.8em;line-height:1.6em;}
+ul.source-authors-list li  {color:$dark-gray;border:1px solid $mid-gray;margin-bottom:18px;padding:4px}
+ul.source-authors-list li:hover  {background:$white-gray;display:block}
+ul.source-authors-list i  {color:$mid-gray;margin:0 8px}
+
+
+// Multiple fields in placeholder form list > elements form 
+
+ul.list-selected-items  {margin-top:-10px; margin-left: 10px; padding-right: 10px;}
+.list-selected-items li {border-bottom:1px solid $gray}
+.list-selected-items li i {padding:5px 0 0 0; cursor: pointer;}
+
+
+// list dropdown dropdown box
+.f-dropdown-padding li {padding:5px 0 8px 0;}
+
+
+// search list small - ex besluitendatabank
+
+.small-list {margin:0;border-bottom:1px solid $light-gray;padding:0;}
+ul.small-list li  {font-size:0.9em;margin:12px 0 0 0;border-top:1px solid $mid-gray;padding-top:10px}
+ul.small-list li i {margin:0;}
+ul.small-list li label {line-height:12px;min-height:12px}
+ul.small-list li:last-child {padding-bottom:12px}
+
+ul.small-list ul   {margin: 0}
+ul.small-list ul li  {font-size:0.8em;border-top:none;margin:0}
+ul.small-list ul li input {float:left;}
+
+
+// beeldbank / beheersplannen label + colored
+
+ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
+.tag-label li, .tag-label-col li {float:$default-float;background-color:$light-gray;margin:0 15px 10px 0;display:block;padding:4px 10px;font-size:0.9em}
+.tag-label li:first-child, .tag-label-col li:first-child {background:none;padding-left:0}
+.tag-label li:last-child {background-color:$aluminum;}
+.tag-label li a  {text-decoration:none !important;color:$black}
+.tag-label li a span, .tag-label-col li a span  {margin:2px 0 0 10px;color:$alert-color;font-size:1.1em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
+.tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
+
+.img-vert-list {height: 180px; width: 180px;display: inline-block;position: relative;}
+.img-vert-list img {max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top:0;bottom:0;left:0;right:0;margin: auto}
+
+
+// definition table besluiten
+.def-besluit {margin:30px 0;}
+.def-besluit td:first-child {width:150px;font-size:0.8em;color:$dark-gray}
+.def-besluit td {vertical-align: top}
+
+
+// list download
+ul.listdownload  {list-style-type:none;float:right;padding:3px 0 0 0;font-size:0.8em}
+.listdownload li  {float:left !important;margin-left:20px}
+ul.listdownload li i {color:gray;float:left !important;margin:0px 10px 0 0;font-size:1.5em }
+ul.listdownload li a {color:$dark-purple !important;}
+ul.listdownload li a:hover {color:$black !important;}
+
+//app footer 
+ul.soclogolist li {list-style: inside none;float:$default-float;font-size:1.5rem;margin:8px 3px 0 15px}
+
+
+// subnavigation panel 
+    div.subnav-panel {
+      height: 150px;
+      line-height: 150px;
+      text-align: center;
+      background:#fff;
+      border:1px solid $aluminum ;
+    }
+
+     div.subnav-panel span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+
+     div.subnav-panel:hover {
+      background:$white-gray;
+    }
+     div.subnav-panel h3 {
+      margin:20px 0;font-size:1.3rem
+    }
+

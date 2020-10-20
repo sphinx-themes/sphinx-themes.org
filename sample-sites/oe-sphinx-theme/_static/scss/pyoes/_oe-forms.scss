@@ -1,0 +1,78 @@
+// OE Form (+ form elements)
+
+/* Placeholder fields */
+.placeholder-container { -webkit-appearance: none; -webkit-border-radius: 0px; background-color: white; font-family: inherit; border: 1px solid $gray; color: rgba(0, 0, 0, 0.75); display: inline-table;
+  vertical-align: top; font-size: 0.875rem; height: 2.3125rem; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; transition: box-shadow 0.45s, border-color 0.45s ease-in-out; margin: 1px 0 16px 0; }
+.placeholder-container label { display: table-cell; padding-left: 10px; color: $dark-gray; width: 20%; font-size: 0.775rem; vertical-align: middle; background-color: transparent; }
+.placeholder-container input[type="text"] { border: none !important; box-shadow: none; margin: 0; display: table-cell; background-color: transparent !important; color:$dark-gray; }
+.placeholder-container select { border: none; box-shadow: none; margin: 0; display: table-cell; background-color: transparent; -moz-appearance: none; height:37px;font-size:0.9em }
+.placeholder-container > .combo-dropdown { border: 0 !important; }
+.placeholder-container textarea { border: none !important; box-shadow: none; margin: 0; display: table-cell; background-color: transparent !important; resize: vertical; }
+.placeholder-container.error { border: 1px solid $alert-color !important; }
+.placeholder-input { border: none !important; box-shadow: none; margin: 0; display: table-cell; background-color: transparent; background: none !important; padding-left: 8px; }
+.placeholder-input-border { border-left: 1px dotted #d3d3d3 !important; }
+.placeholder-disabled { background-color: #DDDDDD; }
+.placeholder-textarea label { vertical-align: top; padding-top: 8px;}
+
+.placeholder-checkbox input[type="checkbox"], .placeholder-checkbox-label { display: table-cell !important; vertical-align: middle !important; cursor: pointer; font-size:0.8em; }
+.placeholder-checkbox label { position: relative; width: 100%; }
+.placeholder-checkbox input[type="checkbox"] { opacity: 0; position: absolute; }
+.placeholder-checkbox input[type="checkbox"] + .placeholder-checkbox-label:after { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 20px; height: 20px; padding: 2px; margin-left: 10px; text-align: center; font-size:0.8em; }
+.placeholder-checkbox input[type="checkbox"]:checked + .placeholder-checkbox-label:after { content: '\2714'; background: $fresh-blue; color: #fff; }
+
+
+/*small*/
+.placeholder-checkbox-sm input[type="checkbox"], .placeholder-checkbox-label-sm { display: table-cell !important; vertical-align: middle !important; cursor: pointer; font-size:0.7em; }
+.placeholder-checkbox-sm label { position: relative; width: 100%; }
+.placeholder-checkbox-sm input[type="checkbox"] { opacity: 0; position: absolute; }
+.placeholder-checkbox-sm input[type="checkbox"] + .placeholder-checkbox-label-sm:before { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 15px; height: 15px; padding: 0px; margin-right: 10px; text-align: center; font-size:0.8em; }
+.placeholder-checkbox-sm input[type="checkbox"]:checked + .placeholder-checkbox-label-sm:before { content: '\2714'; background: $fresh-blue; color: #fff; }
+
+
+
+
+.plus-icon { padding-top: 12px; padding-left: 8px; color: #3f3840; }
+.plus-icon-link { display:table-cell; border-left: 1px dotted #d3d3d3; float: left; vertical-align: middle; height: 37px; }
+
+
+/* Checkbox custom */
+.checkbox-custom, .radio-custom { opacity: 0; position: absolute; }
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label { display: inline-block; vertical-align: middle; margin: 5px; cursor: pointer; font-size:0.8em; }
+.checkbox-custom-label, .radio-custom-label { position: relative; }
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 20px; height: 20px; padding: 2px; margin-right: 10px; text-align: center; font-size:0.8em; }
+.checkbox-custom:checked + .checkbox-custom-label:before { content: '\2714'; background: $fresh-blue; color: #fff; }
+.radio-custom + .radio-custom-label:before { border-radius: 50%; }
+.radio-custom:checked + .radio-custom-label:before { content: '\2714'; color: #bbb; }
+
+
+/* Form custom */
+// all buttons text uppercase
+.button {text-transform:uppercase}
+// legend /fieldset
+legend {text-transform:uppercase;font-size:0.8em}
+// errors
+.error {background: none !important}
+input.error {border: 1px solid $alert-color}
+// select optionform beeldbank
+select {height:42px}
+select:focus {outline:none}
+// fix for dropdown arrow in firefox
+select { -moz-appearance: none !important; }
+
+
+input::-webkit-input-placeholder {
+  color: $silver;
+  text-overflow: ellipsis;
+}
+input:-moz-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+}
+input::-moz-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+} /* for the future */
+input:-ms-input-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+}
