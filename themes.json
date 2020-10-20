@@ -74,6 +74,17 @@
       "pypi": "guzzle-sphinx-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "hbp_sphinx_theme"
+        ],
+        "html_theme": "hbp_sphinx_theme",
+        "html_theme_path": "[hbp_sphinx_theme.get_html_theme_path()]"
+      },
+      "display": "hbp-sphinx-theme",
+      "pypi": "hbp-sphinx-theme"
+    },
+    {
       "config": "insegel",
       "display": "insegel",
       "pypi": "insegel"
@@ -87,6 +98,18 @@
       },
       "display": "An Insipid Sphinx Theme (with initially hidden sidebar)",
       "pypi": "insipid-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "jupyter_sphinx_theme"
+        ],
+        "html_sidebars": "{'**': ['sidebartoc.html']}",
+        "html_theme": "jupyter",
+        "html_theme_path": "jupyter_sphinx_theme.get_html_theme_path()"
+      },
+      "display": "jupyter-sphinx-theme",
+      "pypi": "jupyter-sphinx-theme"
     },
     {
       "config": {
@@ -118,6 +141,17 @@
     {
       "config": {
         "_imports": [
+          "lsst_sphinx_bootstrap_theme"
+        ],
+        "html_theme": "lsst_sphinx_bootstrap_theme",
+        "html_theme_path": "[lsst_sphinx_bootstrap_theme.get_html_theme_path()]"
+      },
+      "display": "lsst-sphinx-bootstrap-theme",
+      "pypi": "lsst-sphinx-bootstrap-theme"
+    },
+    {
+      "config": {
+        "_imports": [
           "os",
           "mozilla_sphinx_theme"
         ],
@@ -128,9 +162,47 @@
       "pypi": "mozilla-sphinx-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "murray"
+        ],
+        "html_theme": "murray",
+        "html_theme_path": "[murray.get_html_theme_path()]"
+      },
+      "display": "murray",
+      "pypi": "murray"
+    },
+    {
       "config": "python_docs_theme",
       "display": "Python Documentation Theme",
       "pypi": "python-docs-theme"
+    },
+    {
+      "config": "renku",
+      "display": "renku-sphinx-theme",
+      "pypi": "renku-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "solar_theme"
+        ],
+        "html_theme": "solar_theme",
+        "html_theme_path": "[solar_theme.theme_path]"
+      },
+      "display": "solar-theme",
+      "pypi": "solar-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "quark_sphinx_theme"
+        ],
+        "html_theme": "quark",
+        "html_theme_path": "[quark_sphinx_theme.get_path()]"
+      },
+      "display": "quark-sphinx-theme",
+      "pypi": "quark-sphinx-theme"
     },
     {
       "config": {
