@@ -183,6 +183,17 @@
       "pypi": "python-docs-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "quark_sphinx_theme"
+        ],
+        "html_theme": "quark",
+        "html_theme_path": "[quark_sphinx_theme.get_path()]"
+      },
+      "display": "quark-sphinx-theme",
+      "pypi": "quark-sphinx-theme"
+    },
+    {
       "config": "renku",
       "display": "renku-sphinx-theme",
       "pypi": "renku-sphinx-theme"
@@ -197,17 +208,6 @@
       },
       "display": "solar-theme",
       "pypi": "solar-theme"
-    },
-    {
-      "config": {
-        "_imports": [
-          "quark_sphinx_theme"
-        ],
-        "html_theme": "quark",
-        "html_theme_path": "[quark_sphinx_theme.get_path()]"
-      },
-      "display": "quark-sphinx-theme",
-      "pypi": "quark-sphinx-theme"
     },
     {
       "config": {
