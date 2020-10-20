@@ -169,6 +169,17 @@
     {
       "config": {
         "_imports": [
+          "oe_sphinx_theme"
+        ],
+        "html_theme": "oe_sphinx",
+        "html_theme_path": "[oe_sphinx_theme.get_theme_dir()]"
+      },
+      "display": "oe-sphinx-theme",
+      "pypi": "oe-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
           "ovs_sphinx_theme"
         ],
         "html_theme": "ovs",
