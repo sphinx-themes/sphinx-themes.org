@@ -117,6 +117,17 @@
       "pypi": "mozilla-sphinx-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "pietroalbini_sphinx_themes"
+        ],
+        "html_theme": "pietroalbini",
+        "html_theme_path": "[pietroalbini_sphinx_themes.themes_path()]"
+      },
+      "display": "pietroalbini-sphinx-themes",
+      "pypi": "pietroalbini-sphinx-themes"
+    },
+    {
       "config": "python_docs_theme",
       "display": "Python Documentation Theme",
       "pypi": "python-docs-theme"
