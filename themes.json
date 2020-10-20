@@ -74,6 +74,17 @@
       "pypi": "guzzle-sphinx-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "hbp_sphinx_theme"
+        ],
+        "html_theme": "hbp_sphinx_theme",
+        "html_theme_path": "[hbp_sphinx_theme.get_html_theme_path()]"
+      },
+      "display": "hbp-sphinx-theme",
+      "pypi": "hbp-sphinx-theme"
+    },
+    {
       "config": "insegel",
       "display": "insegel",
       "pypi": "insegel"
