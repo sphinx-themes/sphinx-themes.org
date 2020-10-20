@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Sphinx Documentation &#8212; Sphinx Themes Sample</title>
+    <link rel="stylesheet" href="_static/app.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Structural Elements" href="demo/structure.html" />
+
+<script type="text/javascript" src="_static/sidebar.js"></script>
+
+<link rel="stylesheet" href="https://use.typekit.net/isi7ftn.css">
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script type="text/javascript" src="_static/copybutton.js"></script>
+
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="#">
+    <span id="logotext">LSST Science Pipelines</span>
+  </a>
+  <ul>
+    <li><a href="https://community.lsst.org">Forum</a></li>
+    <li><a href="https://www.lsst.io">Docs</a></li>
+    <li><a href="https://www.lsst.org">LSST.org →</a></li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="demo/structure.html" title="Structural Elements">
+	  next &raquo;
+	</a>
+      </li>
+      <li>
+	<a href="#">Sphinx Themes Sample</a>
+	 &#187;
+      </li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sample-sphinx-documentation">
+<h1>Sample Sphinx Documentation<a class="headerlink" href="#sample-sphinx-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is a <em>very</em> rudimentary sample page for Sphinx based documentation.</p>
+<p>In case you’re looking for a lot of fairly extensive pages, that stretch the
+theme in as many reasonable ways as possible, consider scrolling right to the
+end of this page and looking at the Demo Documentation below.</p>
+<div class="section" id="quick-inline-markup-demo">
+<h2>Quick Inline Markup Demo<a class="headerlink" href="#quick-inline-markup-demo" title="Permalink to this headline">¶</a></h2>
+<p>Inline markup in reStructuredText is pretty powerful. You can have <em>emphasis</em>,
+<strong>strong emphasis</strong>, <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, external hyperlinks with embedded
+URIs (<a class="reference external" href="http://www.python.org">Python web site</a>) standalone hyperlinks
+(<a class="reference external" href="http://www.python.org">http://www.python.org</a>), footnote references <a href="#id4"><span class="problematic" id="id1">[1]_</span></a> and so much more. Sometimes,
+you even have some <a href="#id2"><span class="problematic" id="id3">|problematic|</span></a> text that doesn’t do the right things but
+Sphinx still builds your page.</p>
+<p>Often, you’ll have multiple paragraphs of text in your documentation, possibly
+an explanation how stuff works. Here are some explicit interpreted text roles:
+a PEP reference (<span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0287"><strong>PEP 287</strong></a>); a <sub>subscript</sub>; a <sup>superscript</sup>; and
+explicit roles for <em>standard</em> <strong>inline</strong> <code class="docutils literal notranslate"><span class="pre">markup</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may want to know what admonitions look like.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>I just wanted to interrupt your very relevant insight, to assert my
+importance.</p>
+</div>
+<p>Or, maybe, you want to present a code block to the user.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Just a small code example&quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">Demo</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="o">=</span> <span class="kc">True</span>
+</span>
+    <span class="k">def</span> <span class="nf">how_ready_are_we</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="s2">&quot;very&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="k">else</span> <span class="s2">&quot;not at all&quot;</span>
+</span></pre></div>
+</td></tr></table></div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Demo Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html">Structural Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/structure.html#document-section">Document Section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html#structural-elements-2">Structural Elements 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/structure.html#id1">Document Section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo/demo.html">Paragraph Level Markup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#inline-markup">Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#math">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#meta">Meta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#blocks">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#sidebar">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#directives">Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#download-links">Download Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo/lists_tables.html">Lists &amp; Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/lists_tables.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/lists_tables.html#tables">Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo/api.html">API documentation and generated content</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#module-test_py_module.test"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_py_module</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#c-api">C++ API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#javascript-api">JavaScript API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#generated-index">Generated Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#optional-parameter-args">Optional parameter args</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/api.html#data">Data</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/long.html">Long Sticky Nav</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-1">Example Menu 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-2">Example Menu 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-3">Example Menu 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-4">Example Menu 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-5">Example Menu 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-6">Example Menu 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-7">Example Menu 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-8">Example Menu 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-9">Example Menu 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-10">Example Menu 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-11">Example Menu 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-12">Example Menu 12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-13">Example Menu 13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-14">Example Menu 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-15">Example Menu 15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-16">Example Menu 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-17">Example Menu 17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-18">Example Menu 18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-19">Example Menu 19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-20">Example Menu 20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-submenu-1">Example Submenu 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-1">Submenu 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-2">Submenu 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-3">Submenu 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-4">Submenu 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-5">Submenu 5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-submenu-2">Example Submenu 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id2">Submenu 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id4">Submenu 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id6">Submenu 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id7">Submenu 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id8">Submenu 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<form action="search.html" method="get">
+  <input class='c-searchbox' type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Sample Sphinx Documentation</a><ul>
+<li><a class="reference internal" href="#quick-inline-markup-demo">Quick Inline Markup Demo</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="_sources/index.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+  </p>
+  <p>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.2.1. Page design is based on Astropy's bootstrap-astropy theme in <a href="https://github.com/astropy/astropy-helpers">astropy-helpers</a>. <br />
+    LSST documentation is proudly served through the <a href="https://fastly.com">Fastly</a> CDN.
+  </p>
+  <p>
+    &copy; Copyright 2020, Pradyun Gedam.<br/>
+  </p>
+  <p>
+    Financial support for <a href="https://www.lsst.org">LSST</a> comes from the National Science Foundation (<a href="https://www.nsf.gov">NSF</a>) through Cooperative Agreement No. 1258333, the Department of Energy (<a href="http://energy.gov">DOE</a>) Office of Science under Contract No. DE-AC02-76SF00515, and private funding raised by the <a href="https://www.lsstcorporation.org">LSST Corporation</a>. The NSF-funded <a href="https://project.lsst.org">LSST Project Office</a> for construction was established as an operating center under management of the Association of Universities for Research in Astronomy (<a href="http://www.aura-astronomy.org">AURA</a>). The DOE-funded effort to build the LSST camera is managed by the SLAC National Accelerator Laboratory (<a href="https://www.slac.stanford.edu">SLAC</a>).
+  </p>
+</footer>
+  </body>
+</html>
