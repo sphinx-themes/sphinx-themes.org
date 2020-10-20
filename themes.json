@@ -112,6 +112,11 @@
       "pypi": "jupyter-sphinx-theme"
     },
     {
+      "config": "karma_sphinx_theme",
+      "display": "karma_sphinx_theme",
+      "pypi": "karma-sphinx-theme"
+    },
+    {
       "config": "logilab",
       "display": "Logilab",
       "pypi": "logilab-sphinx-themes"
