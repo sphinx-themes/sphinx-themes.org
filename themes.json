@@ -244,6 +244,17 @@
     },
     {
       "config": {
+        "_imports": [
+          "sphinx_adc_theme"
+        ],
+        "html_theme": "sphinx_adc_theme",
+        "html_theme_path": "[sphinx_adc_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx_adc_theme",
+      "pypi": "sphinx-adc-theme"
+    },
+    {
+      "config": {
         "_extensions": [
           "sphinx_ansible_theme.ext.pygments_lexer"
         ],
