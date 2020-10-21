@@ -315,6 +315,11 @@
       "pypi": "sphinx-typo3-theme"
     },
     {
+      "config": "sphinx_ustack_theme",
+      "display": "sphinx-ustack-theme",
+      "pypi": "sphinx-ustack-theme"
+    },
+    {
       "config": "agogo",
       "display": "agogo",
       "pypi": "sphinx"
