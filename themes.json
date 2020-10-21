@@ -279,6 +279,17 @@
       "pypi": "sphinx-bernard-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "better"
+        ],
+        "html_theme": "better",
+        "html_theme_path": "[better.better_theme_path]"
+      },
+      "display": "sphinx-better-theme",
+      "pypi": "sphinx-better-theme"
+    },
+    {
       "config": "sphinx_celery",
       "display": "Celery Theme",
       "pypi": "sphinx-celery"
