@@ -320,7 +320,7 @@
       "pypi": "sphinx-ustack-theme"
     },
     {
-      "config": "rex",
+      "config": "rextheme",
       "display": "sphinxcontrib-rextheme",
       "pypi": "sphinxcontrib-rextheme"
     },
