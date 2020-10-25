@@ -273,6 +273,16 @@ div.code-block-caption {
     font-size: unset;
 }
 
+td.linenos .linenodiv pre {
+    color: #666;
+    background-color: transparent;
+    padding: 7px 0px;
+}
+
+table.highlighttable td.linenos {
+    padding-right: 0.5em;
+}
+
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
     padding: 0 0.5em;
@@ -588,7 +598,7 @@ div.sphinxsidebar {
     overflow-y: auto;
     float: unset;
     margin-left: unset;  /* override basic.css */
-    z-index: 99;
+    z-index: 390;
     color: #333;
     background-color: #f5f5f5;
     overscroll-behavior: contain;
@@ -800,7 +810,7 @@ div.sphinxsidebar input {
 /* -- topbar ---------------------------------------------------------------- */
 
 #topbar-placeholder {
-    z-index: 123;
+    z-index: 500;
 }
 
 body.js #topbar-placeholder {
@@ -1030,7 +1040,7 @@ div.viewcode-block:target {
         opacity: 0;
         background-color: rgba(100%, 100%, 100%, 80%);
         transition: opacity 0.3s ease-out, visibility 0s 0.3s ease-out;
-        z-index: 42;
+        z-index: 380;
     }
 
     body.js.sidebar-visible #overlay {
