@@ -315,6 +315,16 @@
       "pypi": "sphinx-typo3-theme"
     },
     {
+      "config": {
+        "_extensions": [
+          "uedoc_theme"
+        ],
+        "html_theme": "uedoc_theme"
+      },
+      "display": "Unreal Engine Docs Theme (unofficial)",
+      "pypi": "sphinx-uedoc-theme"
+    },
+    {
       "config": "sphinx_ustack_theme",
       "display": "sphinx-ustack-theme",
       "pypi": "sphinx-ustack-theme"
