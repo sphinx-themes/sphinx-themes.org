@@ -38,6 +38,11 @@
       "pypi": "caktus-sphinx-theme"
     },
     {
+      "config": "cloud",
+      "display": "cloud_sptheme",
+      "pypi": "cloud-sptheme"
+    },
+    {
       "config": {
         "_extensions": [
           "edx_theme"
