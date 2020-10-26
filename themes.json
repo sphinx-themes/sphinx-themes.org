@@ -311,6 +311,11 @@
       "pypi": "sphinx-drove-theme"
     },
     {
+      "config": "sphinx_materialdesign_theme",
+      "display": "sphinx_materialdesign_theme",
+      "pypi": "sphinx-materialdesign-theme"
+    },
+    {
       "config": "press",
       "display": "press",
       "pypi": "sphinx-press-theme"
