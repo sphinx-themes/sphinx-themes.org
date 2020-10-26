@@ -321,6 +321,17 @@
       "pypi": "sphinx-sizzle-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "sphinx_theme_pd"
+        ],
+        "html_theme": "sphinx_theme_pd",
+        "html_theme_path": "[sphinx_theme_pd.get_html_theme_path()]"
+      },
+      "display": "sphinx_theme_pd",
+      "pypi": "sphinx-theme-pd"
+    },
+    {
       "config": "sphinx_typo3_theme",
       "display": "TYPO3 theme for docs.typo3.org",
       "pypi": "sphinx-typo3-theme"
