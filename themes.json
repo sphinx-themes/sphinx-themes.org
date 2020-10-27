@@ -362,6 +362,11 @@
       "pypi": "sphinx-uedoc-theme"
     },
     {
+      "config": "sphinx_ustack_theme",
+      "display": "sphinx-ustack-theme",
+      "pypi": "sphinx-ustack-theme"
+    },
+    {
       "config": {
         "_imports": [
           "sphinxbootstrap4theme"
@@ -375,42 +380,42 @@
     {
       "config": "basicstrap",
       "display": "sphinxjp.themes.basicstrap",
-      "pypi": "sphinxjp.themes.basicstrap"
+      "pypi": "sphinxjp-themes-basicstrap"
     },
     {
       "config": "dotted",
       "display": "sphinxjp.themes.dotted",
-      "pypi": "sphinxjp.themes.dotted"
+      "pypi": "sphinxjp-themes-dotted"
     },
     {
       "config": "gopher",
       "display": "sphinxjp.themes.gopher",
-      "pypi": "sphinxjp.themes.gopher"
+      "pypi": "sphinxjp-themes-gopher"
     },
     {
       "config": "htmlslide",
       "display": "sphinxjp.themes.htmlslide",
-      "pypi": "sphinxjp.themes.htmlslide"
+      "pypi": "sphinxjp-themes-htmlslide"
     },
     {
       "config": "revealjs",
       "display": "sphinxjp.themes.revealjs",
-      "pypi": "sphinxjp.themes.revealjs"
+      "pypi": "sphinxjp-themes-revealjs"
     },
     {
       "config": "s6",
       "display": "sphinxjp.themes.s6",
-      "pypi": "sphinxjp.themes.s6"
+      "pypi": "sphinxjp-themes-s6"
     },
     {
       "config": "sphinxjp",
       "display": "sphinxjp.themes.sphinxjp",
-      "pypi": "sphinxjp.themes.sphinxjp"
+      "pypi": "sphinxjp-themes-sphinxjp"
     },
     {
       "config": "trstyle",
       "display": "sphinxjp.themes.trstyle",
-      "pypi": "sphinxjp.themes.trstyle"
+      "pypi": "sphinxjp-themes-trstyle"
     },
     {
       "config": {
@@ -433,7 +438,7 @@
         "html_theme_path": "[tibas.tt.get_path(), alabaster.get_path()]"
       },
       "display": "tibas.tt",
-      "pypi": "tibas.tt"
+      "pypi": "tibas-tt"
     },
     {
       "config": "topos-theme",
@@ -450,11 +455,6 @@
       },
       "display": "wild_sphinx_theme",
       "pypi": "wild-sphinx-theme"
-    },
-    {
-      "config": "sphinx_ustack_theme",
-      "display": "sphinx-ustack-theme",
-      "pypi": "sphinx-ustack-theme"
     },
     {
       "config": "yummy_sphinx_theme",
