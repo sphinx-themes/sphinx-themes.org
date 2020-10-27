@@ -383,19 +383,9 @@
       "pypi": "sphinxjp-themes-basicstrap"
     },
     {
-      "config": "s6",
-      "display": "sphinxjp.themes.s6",
-      "pypi": "sphinxjp-themes-s6"
-    },
-    {
       "config": "sphinxjp",
       "display": "sphinxjp.themes.sphinxjp",
       "pypi": "sphinxjp-themes-sphinxjp"
-    },
-    {
-      "config": "trstyle",
-      "display": "sphinxjp.themes.trstyle",
-      "pypi": "sphinxjp-themes-trstyle"
     },
     {
       "config": {
