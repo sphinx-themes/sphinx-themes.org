@@ -331,6 +331,11 @@
       "pypi": "sphinx-sizzle-theme"
     },
     {
+      "config": "sphinx_susiai_theme",
+      "display": "sphinx-susiai-theme",
+      "pypi": "sphinx-susiai-theme"
+    },
+    {
       "config": {
         "_imports": [
           "sphinx_theme_pd"
@@ -360,6 +365,82 @@
       "config": "sphinx_ustack_theme",
       "display": "sphinx-ustack-theme",
       "pypi": "sphinx-ustack-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinxbootstrap4theme"
+        ],
+        "html_theme": "sphinxbootstrap4theme",
+        "html_theme_path": "[sphinxbootstrap4theme.get_path()]"
+      },
+      "display": "sphinxbootstrap4theme",
+      "pypi": "sphinxbootstrap4theme"
+    },
+    {
+      "config": "basicstrap",
+      "display": "sphinxjp.themes.basicstrap",
+      "pypi": "sphinxjp-themes-basicstrap"
+    },
+    {
+      "config": "sphinxjp",
+      "display": "sphinxjp.themes.sphinxjp",
+      "pypi": "sphinxjp-themes-sphinxjp"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sunpy_sphinx_theme"
+        ],
+        "html_theme": "sunpy",
+        "html_theme_path": "sunpy_sphinx_theme.get_html_theme_path()"
+      },
+      "display": "sunpy-sphinx-theme",
+      "pypi": "sunpy-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "tibas.tt",
+          "alabaster"
+        ],
+        "html_theme": "tt",
+        "html_theme_path": "[tibas.tt.get_path(), alabaster.get_path()]"
+      },
+      "display": "tibas.tt",
+      "pypi": "tibas-tt"
+    },
+    {
+      "config": "topos-theme",
+      "display": "topos-theme",
+      "pypi": "topos-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "wild_sphinx_theme"
+        ],
+        "html_theme": "wild",
+        "html_theme_path": "[wild_sphinx_theme.get_theme_dir()]"
+      },
+      "display": "wild_sphinx_theme",
+      "pypi": "wild-sphinx-theme"
+    },
+    {
+      "config": "yummy_sphinx_theme",
+      "display": "yummy-sphinx-theme",
+      "pypi": "yummy-sphinx-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "zerovm_sphinx_theme"
+        ],
+        "html_theme": "zerovm",
+        "html_theme_path": "[zerovm_sphinx_theme.theme_path]"
+      },
+      "display": "zerovm-sphinx-theme",
+      "pypi": "zerovm-sphinx-theme"
     },
     {
       "config": "agogo",
