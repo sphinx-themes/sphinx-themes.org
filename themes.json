@@ -295,14 +295,94 @@
       "pypi": "sphinx-better-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "sphinx_boost"
+        ],
+        "html_theme": "boost",
+        "html_theme_path": "[sphinx_boost.get_html_theme_path()]"
+      },
+      "display": "sphinx-boost",
+      "pypi": "sphinx-boost"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_bootstrap_theme"
+        ],
+        "html_theme": "bootstrap",
+        "html_theme_path": "sphinx_bootstrap_theme.get_html_theme_path()"
+      },
+      "display": "sphinx-bootstrap-theme",
+      "pypi": "sphinx-bootstrap-theme"
+    },
+    {
+      "config": "bulma",
+      "display": "sphinx-bulma-theme",
+      "pypi": "sphinx-bulma-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_catalystcloud_theme"
+        ],
+        "html_theme": "sphinx_catalystcloud_theme",
+        "html_theme_path": "[sphinx_catalystcloud_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx-catalystcloud-theme",
+      "pypi": "sphinx-catalystcloud-theme"
+    },
+    {
       "config": "sphinx_celery",
       "display": "Celery Theme",
       "pypi": "sphinx-celery"
     },
     {
+      "config": {
+        "_imports": [
+          "corlab_theme"
+        ],
+        "html_theme": "corlab_theme",
+        "html_theme_path": "[corlab_theme.get_theme_dir()]"
+      },
+      "display": "sphinx-corlab-theme",
+      "pypi": "sphinx-corlab-theme"
+    },
+    {
       "config": "sphinx_documatt_theme",
       "display": "Documatt Theme",
       "pypi": "sphinx-documatt-theme"
+    },
+    {
+      "config": "sphinx_fossasia_theme",
+      "display": "sphinx-fossasia-theme",
+      "pypi": "sphinx-fossasia-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_foundation_theme"
+        ],
+        "html_theme": "sphinx_foundation_theme",
+        "html_theme_path": "sphinx_foundation_theme.get_html_theme_path()"
+      },
+      "display": "sphinx-foundation-theme",
+      "pypi": "sphinx-foundation-theme"
+    },
+    {
+      "config": "sphinx_ioam_theme",
+      "display": "sphinx-ioam-theme",
+      "pypi": "sphinx-ioam-theme"
+    },
+    {
+      "config": "kr",
+      "display": "sphinx-kr-theme",
+      "pypi": "sphinx-kr-theme"
+    },
+    {
+      "config": "sphinx_material",
+      "display": "sphinx-material",
+      "pypi": "sphinx-material"
     },
     {
       "config": {
@@ -321,9 +401,57 @@
       "pypi": "sphinx-materialdesign-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "sphinx_modern_theme"
+        ],
+        "html_theme": "sphinx_modern_theme",
+        "html_theme_path": "[sphinx_modern_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx-modern-theme",
+      "pypi": "sphinx-modern-theme"
+    },
+    {
+      "config": "nervproject",
+      "display": "sphinx-nervproject-theme",
+      "pypi": "sphinx-nervproject-theme"
+    },
+    {
+      "config": "opnfv",
+      "display": "sphinx-opnfv-theme",
+      "pypi": "sphinx-opnfv-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_pdj_theme"
+        ],
+        "html_theme": "sphinx_pdj_theme",
+        "html_theme_path": "[sphinx_pdj_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx-pdj-theme",
+      "pypi": "sphinx-pdj-theme"
+    },
+    {
       "config": "press",
       "display": "press",
       "pypi": "sphinx-press-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_redactor_theme"
+        ],
+        "html_theme": "sphinx_redactor_theme",
+        "html_theme_path": "[sphinx_redactor_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx-redactor-theme",
+      "pypi": "sphinx-redactor-theme"
+    },
+    {
+      "config": "sphinx_rigado_theme",
+      "display": "sphinx-rigado-theme",
+      "pypi": "sphinx-rigado-theme"
     },
     {
       "config": "sizzle",
