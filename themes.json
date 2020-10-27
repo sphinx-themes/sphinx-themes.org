@@ -388,11 +388,6 @@
       "pypi": "sphinxjp-themes-dotted"
     },
     {
-      "config": "gopher",
-      "display": "sphinxjp.themes.gopher",
-      "pypi": "sphinxjp-themes-gopher"
-    },
-    {
       "config": "htmlslide",
       "display": "sphinxjp.themes.htmlslide",
       "pypi": "sphinxjp-themes-htmlslide"
