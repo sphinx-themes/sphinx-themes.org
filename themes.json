@@ -365,25 +365,9 @@
       "pypi": "sphinx-fossasia-theme"
     },
     {
-      "config": {
-        "_imports": [
-          "sphinx_foundation_theme"
-        ],
-        "html_theme": "sphinx_foundation_theme",
-        "html_theme_path": "sphinx_foundation_theme.get_html_theme_path()"
-      },
-      "display": "sphinx-foundation-theme",
-      "pypi": "sphinx-foundation-theme"
-    },
-    {
       "config": "sphinx_ioam_theme",
       "display": "sphinx-ioam-theme",
       "pypi": "sphinx-ioam-theme"
-    },
-    {
-      "config": "kr",
-      "display": "sphinx-kr-theme",
-      "pypi": "sphinx-kr-theme"
     },
     {
       "config": "sphinx_material",
