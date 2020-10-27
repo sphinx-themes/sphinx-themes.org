@@ -354,6 +354,17 @@
       "pypi": "sphinx-documatt-theme"
     },
     {
+      "config": {
+        "_imports": [
+          "sphinx_drove_theme"
+        ],
+        "html_theme": "sphinx_drove_theme",
+        "html_theme_path": "[sphinx_drove_theme.get_html_theme_path()]"
+      },
+      "display": "sphinx_drove_theme",
+      "pypi": "sphinx-drove-theme"
+    },
+    {
       "config": "sphinx_fossasia_theme",
       "display": "sphinx-fossasia-theme",
       "pypi": "sphinx-fossasia-theme"
@@ -383,17 +394,6 @@
       "config": "sphinx_material",
       "display": "sphinx-material",
       "pypi": "sphinx-material"
-    },
-    {
-      "config": {
-        "_imports": [
-          "sphinx_drove_theme"
-        ],
-        "html_theme": "sphinx_drove_theme",
-        "html_theme_path": "[sphinx_drove_theme.get_html_theme_path()]"
-      },
-      "display": "sphinx_drove_theme",
-      "pypi": "sphinx-drove-theme"
     },
     {
       "config": "sphinx_materialdesign_theme",
