@@ -383,21 +383,6 @@
       "pypi": "sphinxjp-themes-basicstrap"
     },
     {
-      "config": "dotted",
-      "display": "sphinxjp.themes.dotted",
-      "pypi": "sphinxjp-themes-dotted"
-    },
-    {
-      "config": "htmlslide",
-      "display": "sphinxjp.themes.htmlslide",
-      "pypi": "sphinxjp-themes-htmlslide"
-    },
-    {
-      "config": "revealjs",
-      "display": "sphinxjp.themes.revealjs",
-      "pypi": "sphinxjp-themes-revealjs"
-    },
-    {
       "config": "s6",
       "display": "sphinxjp.themes.s6",
       "pypi": "sphinxjp-themes-s6"
