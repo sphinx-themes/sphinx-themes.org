@@ -317,11 +317,6 @@
       "pypi": "sphinx-bootstrap-theme"
     },
     {
-      "config": "bulma",
-      "display": "sphinx-bulma-theme",
-      "pypi": "sphinx-bulma-theme"
-    },
-    {
       "config": {
         "_imports": [
           "sphinx_catalystcloud_theme"
