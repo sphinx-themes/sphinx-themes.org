@@ -1,0 +1,216 @@
+div.body a, div.body a:hover, div.body a:visited {
+    text-decoration: underline;
+}
+
+div.related a:hover,
+div.sphinxsidebar h3 a:hover,
+div.sphinxsidebar a:hover,
+a:hover, a.headerlink:hover {
+    color: #c04b27;
+}
+div.related a.button:hover,
+div.sphinxsidebar a.button:hover {
+    color: #fafafa;
+}
+
+div.sphinxsidebar h2 {
+    color: #1f5b8d;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0;
+}
+
+div.related .right a {
+    padding-right: 8px;
+}
+
+div a.button, button {
+    background: #1f5b8d;
+    color: #fafafa;
+    width: 100%;
+    padding: 0.5em 0;
+    display: block;
+    text-decoration: none;
+    border-radius: 0.5em;
+    text-align: center;
+}
+button {
+    width: inherit;
+    display: inline;
+    border: none;
+    padding: 0.5em 1.5em;
+}
+div.related .right a.button {
+    padding: 0 0.2em;
+}
+div.sphinxsidebar a.button {
+    width: 185px;
+}
+
+a.headerlink:hover {
+    background-color: transparent;
+}
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+    border: 0 none transparent;
+}
+
+div.sphinxsidebar input {
+    border-color: #757575;
+}
+
+div.admonition {
+    border: 1px solid #1f5b8d;
+    background-color: #BFE3F6;
+}
+
+div.admonition.note, div.seealso,
+div.viewcode-block:target,
+div.topic,
+code, th {
+    border-color: #757575;
+    background-color: #eee;
+}
+
+div.admonition.warning {
+    border-color: #c04b27;
+    background-color: #ffe4e4;
+}
+
+div.admonition.tip {
+    border: none;
+    background: inherit;
+}
+div.admonition.tip p.admonition-title {
+    font-style: italic;
+}
+
+pre {
+    border-color: #757575;
+}
+
+code, pre {
+    font-size: 1.1em;
+}
+
+img.logo {
+    max-width: 180px;
+    margin: 10px 0 10px 130px;
+}
+
+div.body {
+    border-left: 1px solid #cecece;
+}
+
+div.related {
+    margin-bottom: 20px;
+}
+
+div.related li.right {
+    margin-top: 10px;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+li#legacyportalbutton a {
+    display: inline-block;
+    float: right;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding: 0.2em 2em;
+    vertical-align: top;
+    width: auto;
+}
+
+div.bodywrapper {
+    margin-left: 216px;
+}
+div.sphinxsidebar {
+    width: 216px;
+}
+
+div.body {
+    padding-left: 23px;
+    padding-top: 15px;
+    max-width: 100%;
+}
+div.body > div.section {
+    max-width: 80%;
+}
+
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+    margin: 0;
+    padding: 0;
+}
+div.body h1 {
+    margin-bottom: 0.2em;
+}
+div.body h2 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+div.body h3, div.body h4, div.body h5, div.body h6 {
+    font-weight: bold;
+    font-size: 1em;
+}
+div.body p {
+    margin-bottom: 0.5em;
+    text-align: left;
+    line-height: 150%;
+}
+div.body div.section {
+    margin-bottom: 1.5em;
+}
+
+div.body-rellinks {
+    margin-top: 6em;
+    background-color: #fafafa;
+    padding: 0 .5em;
+}
+div.body-rellink {
+    width: 40%;
+    padding: .5em;
+}
+div.body-rellink h4 {
+    background-color: #fafafa;
+}
+div.body-prevlink {
+    float: left;
+}
+div.body-nextlink {
+    float: right;
+}
+
+div.sphinxsidebarwrapper {
+    padding-left: 20px;
+}
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points {
+    list-style-type: none;
+}
+div.sphinxsidebarwrapper > ul,
+div#localtoc > ul,
+div#localtoc > ul > li > ul,
+div.sphinxsidebar p.topless,
+#searchbox,
+div.sphinxsidebar a.button {
+    margin: 0 0 20px;
+}
+
+div.sphinxsidebar input[type='text'] {
+    border-radius: 1em;
+    padding: 0.25em 0.5em;
+}
+div.sphinxsidebar code {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    padding: 0;
+}
+div.sphinxsidebar li {
+    margin-top: 0.25em;
+}
