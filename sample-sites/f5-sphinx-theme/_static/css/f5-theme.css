@@ -1,0 +1,1243 @@
+/*
+ * Copyright 2018 F5 Networks
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Base structure
+ */
+
+.wrapper {
+  display: flex;
+}
+
+body {
+  padding: 0 0 0 0;
+  width: 100%;
+  scroll-padding-top: 28px;
+}
+
+a.copybtn {
+    width: 28px;
+    height: 28px;
+    padding: 8px;
+}
+
+#clouddocs-header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 20;
+}
+
+#clouddocs-footer {
+  position: relative;
+  max-height:20vh
+}
+
+#content {
+  padding: 20px;
+  padding-top: 152px;
+  transition: all 0.3s;
+}
+
+#content.active {
+  margin-left: 6px;
+}
+
+@media (min-width: 1271px) {
+    #content {
+      margin-left: 0;
+      min-height: 728px;
+    }
+    #content.active {
+      margin-left: 315px;
+      margin-right: 275px
+    }
+}
+
+@media (max-width: 1270px) {
+    #content {
+      margin-left: 325px;
+    }
+    #content.active {
+      margin-left: 0;
+    }
+}
+
+/* .search, #searchbox {
+  margin: auto;
+  display: inline;
+  width: 80%;
+  vertical-align: bottom;
+  border-radius: 4px;
+} */
+
+#sidebar p.caption-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Header paragraph links */
+a.headerlink {
+  color: #EBEBEB;
+}
+
+a.headerlink:hover {
+  color: #0083c0;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar with ToC and search
+ */
+.fa-caret-down.collapseButton, .fa-caret-right.collapseButton {
+  display: table-cell;
+  color: #bdbdbd;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.fa-caret-down.collapseButton {
+  padding-right: 5px;
+}
+
+.main-menu {
+  margin-top: 8px;
+}
+
+.nestedList > ul > li:not(.nestedList), .nav-sidebartoc li:not(.nestedList) {
+  margin-left: 14px;
+}
+
+.nav-sidebartoc li {
+  margin: 8px 0;
+}
+
+.nav-sidebartoc a {
+  display: table-cell;
+  color: #000;
+}
+
+/* disable underline for hover event */
+
+.btn-link:hover{
+   text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+.nav-sidebartoc a:hover {
+  color: #0c5c8d;
+  text-decoration: none;
+}
+
+
+.nav-sidebartoc form.search {
+  display: flex;
+}
+
+.nav-sidebartoc form.search > input:first-of-type {
+  flex: 1;
+}
+
+.nav-sidebartoc form.search button.btn {
+  border-color: #d1d1d1;
+  color: #5f5f5f;
+  background-color: initial;
+}
+
+#sidebar hr {
+  border-top: 1px solid #c1c1c1;
+  margin: 22px -12px 22px -16px;
+}
+
+#sidebar hr:last-of-type {
+  display: none;
+}
+
+#sidebar, .section-nav {
+  width: 320px;
+  margin-right: 20px;
+  position: fixed;
+  top: 106px;
+  transition: all 0.3s;
+  background-color: #fff;
+  float: left;
+  /* margin-top: 22px; */
+  margin-left: 12px;
+  overflow-x: auto;
+  overflow-y: scroll;
+  padding: 24px 12px 16px 16px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#sidebar.active {
+    margin-left: -35%;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 106px; /* fixed header height*/
+  margin: -106px 0 0; /* negative fixed header height */
+}
+
+.nav-sidebartoc > h5 {
+  font-size: 14px;
+  color: #000;
+}
+
+@media (max-width: 1270px) {
+    #sidebar {
+        margin-left: -75%;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1271px) {
+  .site-hidden {
+    display: none!important;
+  }
+}
+
+@media (max-width: 1270px) {
+  .site-hidden {
+    display: block;
+  }
+}
+
+form.search {
+  padding-bottom: 6px;
+  display: inline;
+}
+
+.search {
+  margin: auto !important;
+  display: inline-table;
+  width: auto !important;
+}
+
+#searchbox > form > button {
+  /* margin: auto;
+  padding: 0 4px;
+  border-radius: 4px; */
+  display: inline-block;
+}
+
+#sidebar ul {
+  /* margin: 3px 6px 6px -28px; */
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul ul {
+  margin-left: 12px;
+}
+
+/* collapsible sidebar list items */
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\f146';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'FontAwesome';
+    font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+    content: '\f0fe';
+}
+
+
+.site-nav-item {
+    line-height: 16px;
+    margin: 8px 0 0;
+    position: relative;
+}
+
+.docs-wrapper {
+  background: #212121;
+  cursor: pointer;
+  display: none;
+  height: 100vh;
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10011;
+}
+
+
+.search .btn-primary {
+  border-radius: 4px;
+}
+
+.navbar-btn {
+  margin: auto;
+  padding: 0 4px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.search-wrapper {
+  /* margin-right: 40px; */
+  /* padding-right: 60px; */
+  /* margin-left: initial; */
+}
+
+#search-results {
+  /* margin-left: -20px; */
+}
+
+#search-results > h2,
+#search-results > p {
+  margin-left: 0;
+}
+
+#search-results > ul {
+  display: block;
+}
+
+/*
+ * Version Warning
+ */
+
+#version-warning{
+    width: 20%;
+    float: right;
+    margin-top: 30px;
+    font-color: #0c5c8d;
+
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+/*
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+*/
+
+
+.site-article-inner {
+    width: 95%;
+    display: inline-grid;
+}
+
+.docs-container {
+  margin-left: 25px;
+  display: block;
+}
+
+.site-breadcrumb-nav {
+  padding-top: 16px;
+  display: inline;
+}
+
+ul.site-breadcrumb-list {
+  margin: -2px;
+  list-style-type: none;
+}
+
+.site-breadcrumb-list {
+  padding: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
+
+.site-breadcrumb-item {
+    display: inline-block;
+    margin: 0;
+}
+
+ul li p {
+  margin-bottom: 0;
+}
+
+.sidebar {
+  /*position: fixed;
+  right: 0; */
+  width: 300px;
+  float: right;
+  display: block;
+  margin-left: 25px;
+  background-color: #d4eaf6;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+
+
+#export-pdf{
+    font-size:small;
+    font-color: #1d9cd3;
+
+}
+
+
+.loweralpha {
+     list-style-type: lower-alpha;
+}
+
+.lowerroman {
+     list-style-type: lower-roman;
+}
+
+#right-sidebar{
+   right:0px;
+}
+
+#right-sidebar hr {
+  border-top: 1px solid #c1c1c1;
+  margin: 22px -12px 22px -16px;
+}
+
+#right-sidebar hr:last-of-type {
+  display: none;
+}
+
+#right-sidebar, .section-nav {
+  width: 280px;
+  display: block;
+  margin-right: 20px;
+  position: fixed;
+  top: 160px;
+  max-height: 80vh;
+  transition: all 0.3s;
+  float: left;
+  /* margin-top: 22px; */
+  margin-left: 20px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px 10px 16px 16px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#right-sidebar.active {
+    margin-left: -35%;
+}
+
+
+
+#right-sidebar ul {
+  /* margin: 3px 6px 6px -28px; */
+  list-style-type: none;
+  padding: 0;
+}
+
+#right-sidebar ul ul {
+  margin-left: 12px;
+}
+
+
+@media (max-width: 1270px) {
+
+  .sidebar {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+   #right-sidebar {
+       margin-right: -75%;
+   }
+
+   #right-sidebar.active {
+       margin-right: 0;
+   }
+
+}
+
+.sidebar>p,.sidebar>ul,.sidebar>li {
+  font-size: 90%;
+}
+
+.sidebar>ul,.sidebar>li {
+  margin: 11px;
+  padding-left: 5px;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+
+/*
+* Panels for Tip, See also, Note etc
+*/
+
+.admonition {
+  border-radius: 4px;
+  background-color: #504F4F;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 0 0, 0 0 1px #504F4F;
+  overflow: hidden;
+  max-width: 90%;
+}
+
+.admonition > .admonition-title {
+  font-weight: 600;
+  color: #504F4F;
+  padding: 6px;
+}
+
+div.sidebar ~ div.container.admonition {
+  position: relative;
+}
+
+/* F5 Yellow: Caution */
+.caution {
+  border: 1px #FFF200 solid;
+  background-color: #FFF;
+}
+
+.caution>.admonition-title {
+  background-color: #FFF200;
+}
+
+/* F5 Orange: Attention, Warning */
+.attention, .warning {
+  background-color: #FFF;
+}
+
+.attention>.admonition-title,
+.warning>.admonition-title {
+  background-color: #e6e7e8;
+  border-bottom: 2px solid #E4002B;
+}
+
+/* F5 Red */
+.danger, .error {
+  background-color: #FFF;
+}
+
+.danger>.admonition-title, .error>.admonition-title {
+  background-color: #e6e7e8;
+  border-bottom: 2px solid #E4002B;
+}
+
+/* Green */
+.hint,
+.admonition-tmsh {
+  background-color: #FFF;
+}
+
+.attention>.last {
+  padding: 6px;
+}
+
+.hint>.admonition-title,
+.admonition-tmsh>.admonition-title {
+  background-color: #e6e7e8;
+  border-bottom: 2px solid #8547AD;
+}
+
+/* F5 Purple */
+.tip,
+.note {
+  background-color: #FFF;
+}
+
+.tip>.admonition-title, .note>.admonition-title {
+  background-color: #e6e7e8;
+  border-bottom: 2px solid #00A1E4;
+}
+
+
+/* F5 Blue */
+.important,
+.seealso {
+  background-color: #FFF;
+}
+
+.important>.admonition-title,
+.seealso>.admonition-title {
+  background-color: #e6e7e8;
+  border-bottom: 2px solid #F3704B;
+}
+
+.attention>.last,
+.caution>.last,
+.warning>.last,
+.danger>.last,
+.error>.last,
+.hint>.last,
+.tip>.last,
+.note>.last,
+.important>.last,
+.seealso>.last {
+  padding: 6px;
+}
+
+/* Admonition icons */
+
+.admonition-title:before {
+  font-family: "FontAwesome";
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.attention>.admonition-title:before,
+.caution>.admonition-title:before,
+.warning>.admonition-title:before {
+  content: "\f06a";
+}
+
+.important>.admonition-title:before,
+.admonition-tmsh>.admonition-title:before,
+.note>.admonition-title:before,
+.tip>.admonition-title:before,
+.hint>.admonition-title:before {
+  content: "\f05a";
+}
+
+.danger>.admonition-title:before,
+.error>.admonition-title:before {
+  content: "\f071";
+}
+
+.admonition-tmsh>.admonition-title:after {
+  content: " Command";
+}
+
+.admonition-tmsh p.last,
+.admonition-tmsh p {
+    display: block;
+    padding: 10.5px;
+    margin: 6px 6px 11px;
+    font-size: 15px;
+    line-height: 1.375;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #4d4f53;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+}
+
+.admonition-todo>.admonition-title:before {
+  content: "\f046";
+}
+
+.admonition-todo>.admonition-title {
+  background-color: #ff3030;
+  color: white;
+  padding: 6px;
+}
+
+.admonition-todo {
+  border: solid 1px red;
+  background-color: #ffa0a0;
+}
+
+/*
+ * Fix margins when .last element is not p in
+ * admonition
+ */
+
+.admonition p.first {
+  margin-left: 0px;
+  margin-bottom: 0;
+}
+
+.admonition p {
+  margin-left: 2px;
+  padding: 6px;
+  margin-bottom: 0;
+}
+/* End fix */
+
+.admonition>ol,
+.admonition>ul {
+  margin-left: 30px;
+}
+
+/*
+ * Tables
+ */
+
+th, td {
+  padding: 8px;
+}
+
+th.stub {
+  background: white;
+  border-right: solid 3px grey;
+}
+
+.next-prev-btn-row {
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+
+.btn-primary{
+
+   background-color: #f1f1f1;
+   border-color: #1d9cd3;
+   color: #1d9cd3;
+
+}
+
+.btn-primary:hover{
+
+   background-color:#0c5c8d;
+   border-color: #f1f1f1;
+   color: #f1f1f1;
+
+}
+
+/*
+/ Remove whitespace after code blocks
+*/
+.literal-block-wrapper:after {
+    content: none;
+}
+
+.literal-block-wrapper + .docutils + .container {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+.code-block-caption {
+  font-weight: bold;
+}
+
+/*
+/ The below elements were adapted from the sphinx-rtd-theme
+/ https://github.com/rtfd/sphinx_rtd_theme
+/ Copyright (c) 2013 Dave Snider
+*/
+.guilabel {
+    border: none;
+    font-weight:700;
+    border-radius:4px;
+}
+.menuselection {
+    border: none;
+    font-weight:700;
+    border-radius:4px;
+}
+
+/*end elements from sphinx-rtd-theme*/
+
+/* footnote citations */
+.footnote-reference, .citation-reference {
+    vertical-align: super;
+    font-size: 85%;
+}
+
+h1,
+h2,
+h3,
+.nav-sidebartoc > h5  {
+  font-family: Proxima,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 400;
+  color: #000;
+}
+h4 {
+  font-weight: normal !important;
+  color: #000;
+}
+
+
+@media (max-width: 500px) {
+
+   /* padding list items with whitespaces to make list Mobile Friendly */
+
+    li {
+        margin: 10px 0 10px 0;
+    }
+
+}
+
+@media (min-width: 1271px) {
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 18px;
+
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+    h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    h4 {
+      font-size: 16px;
+      margin: 18px 0 10px 0;
+      width: 100%;
+    }
+    h5,
+    .h5,
+    p.first.sidebar-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    h6,
+    .h6 {
+      font-size: 15px;
+      font-style: italic;
+      font-weight: bold;
+    }
+}
+
+@media (max-width: 1270px) {
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 18px;
+
+    }
+    h2 {
+      font-size: 16px;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+    h3 {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    h4 {
+      font-size: 12px;
+      margin: 18px 0 10px 0;
+      width: 100%;
+    }
+    h5,
+    .h5,
+    p.first.sidebar-title {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h6,
+    .h6 {
+      font-size: 12px;
+      font-style: italic;
+      font-weight: bold;
+    }
+}
+
+
+
+caption {
+  display: table-caption;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #000;
+}
+
+ol.arabic {
+  padding-left: 20px;
+}
+
+ol > li {
+  margin-bottom: 11px;
+}
+
+/*
+formatting for sphinx pullquote directive
+*/
+blockquote.pull-quote {
+  padding: 11px !important;
+  border-color: #00A1E4;
+  border-width: 4px;
+  font-size: 95%;
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+
+/*
+formatting for using sidebar class with admonitions
+ */
+.sidebar.admonition {
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+.sidebar.admonition {
+    padding: 0 !important;
+  }
+}
+
+table {
+  width: auto;
+  overflow: scroll;
+  border-spacing: 0;
+  margin-bottom: 12px;
+  margin-top: 0px;
+  border-collapse: collapse;
+  border-radius: 4px;
+  border: 1px solid #94a4b5;
+  word-wrap: break-word;
+}
+
+table thead th {
+  background: #D9D5D5;
+  color: #504F4F;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 3px 10px;
+  text-align: left;
+}
+
+table tbody tr {
+  background: none;
+}
+
+table tbody td {
+  padding: 3px 10px;
+  text-align: left;
+}
+
+tr,
+tbody tr:nth-child(odd),
+tbody tr:nth-child(even) {
+  background: #FFF;
+}
+
+img {
+  object-fit: scale-down;
+  max-width: 100%;
+  height: auto;
+}
+
+img.logo {
+  margin: 8px 0 12px 0;
+}
+
+ul.simple {
+  padding-left: 20px;
+}
+
+/*
+override bootstrap pre settings in sphinx literal blocks
+ */
+div[class^='highlight'] pre,
+div[class~='docutils'],
+code,
+.code.descname {
+  width: auto;
+  padding: 1px;
+  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+  line-height: 1.5;
+  overflow: auto;
+  border-radius: 0;
+  color: #000;
+  border: 0;
+  background: #e4e4e4;
+}
+
+div[class^='highlight'] > table {
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+/*
+override table borders and spacing in literal blocks using line numbers
+ */
+table[class^='highlight'],
+table[class^='highlight'] tbody tr,
+table[class^='highlight'] tbody tr:nth-child(odd),
+table[class^='highlight'] th,
+table[class^='highlight'] td {
+  background: #e4e4e4;
+  padding: 0;
+  padding-top: 5px;
+  column-gap: 10px;
+  margin-top: auto;
+  width: 100%;
+  overflow-x:auto;
+}
+
+div[class^='highlight'] > div > pre {
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+div[class^='highlight'] > table > tbody > tr > td.linenos {
+  width: 4.5%;
+}
+
+div[class^='highlight'] > table > tbody > tr > td.linenos,
+div[class^='highlight'] > table > tbody > tr > td.code {
+  padding-left: 5px;
+  padding-right: 0;
+  /*align-content: left;*/
+}
+
+ol > li:nth-child(1) > div > div > pre,
+div[class^='highlight'] > div > pre,
+pre,
+.span.pre {
+  border: 0;
+  background: #e4e4e4;
+  padding: 10px;
+  padding-right: 28px;
+}
+
+.literal-block-wrapper + .docutils + .container {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+code.xref.download.docutils.literal,
+span.icon.fa.fa-download {
+  color: #0083c0;
+  background-color: transparent;
+}
+
+table[class^='highlight'] ~ tr {
+  margin: 0;
+  padding: 0;
+}
+
+div[class=code-block-caption] {
+  font-size: 90%;
+  font-weight: bold;
+  font-family: Proxima,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+  padding-bottom: 1px;
+}
+
+dl.function dt {
+  margin-bottom: 2px;
+  font-size: 95%;
+}
+
+dl > dd > table,
+dl > dd > table > *,
+dl > dd > table > tbody > tr.field-even.field,
+dl > dd > table > tbody > tr.field-odd.field {
+  border: 0;
+  border-top: 0;
+  background: rgba(229, 234, 239, 0.39);
+}
+
+dl > dd > p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+dl > dd > table > tbody > tr:nth-child(even) > td.field-body > ul,
+dl > dd > table > tbody > tr:nth-child(odd) > td.field-body > ul {
+  padding-left: 10px;
+}
+
+.highlight {
+  background: none!important;
+}
+
+.pageHeader {
+  height: 80px;
+  border-bottom: 14px solid #0186be;
+}
+
+@media (max-width: 768px) {
+  .row.pageHeader, .pageHeader, #MainMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .row.pageHeader, .pageHeader, #MainMenu {
+    display: block!important;
+    margin-top: 0;
+    margin-bottom: -4px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1148px) {
+  div[class^='highlight'] > table > tbody > tr > td.linenos {
+    display: none;
+  }
+
+}
+
+.container {
+  max-width: 100%;
+}
+
+/* override table formatting from f5.css */
+tr td:nth-last-child(n+5), tr td:nth-last-child(n+5) ~ td {
+    font-size: 100%;
+}
+
+table.docutils.footnote, table.docutils.footnote > tbody, table.docutils.footnote > tbody > tr, table.docutils.footnote > tbody > tr > td {
+    border: none;
+    font-size: 95%;
+    box-shadow: none;
+    padding-left: 4px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+/*
+ Mobile phone navbar
+*/
+
+#dismiss {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #sidebar.active {
+    margin-left: 0;
+    margin-bottom: 30px;
+    min-width: 100vw;
+    max-width: 100%;
+    overflow-x: unset;
+    position: static;
+  }
+  #sidebar {
+    margin-left: -100%;
+    margin-right: 0px;
+  }
+  #clouddocs-header {
+    position: static;
+  }
+  #content {
+    margin-left: 0px;
+    padding-top: 20px;
+  }
+  #content.active {
+    margin-left: 0;
+  }
+  #dismiss {
+    height: 35px;
+    visibility: visible;
+  }
+  .docs-container {
+    margin-left: 0px;
+  }
+
+  .site-article-inner {
+    width: 100%;
+  }
+}
+
+/* Older mobile phones with 320px screen */
+@media (max-width: 330px) {
+  #sidebar {
+    max-width: 300px;
+  }
+  .corp-header ul {
+    width: 90%;
+    margin: auto;
+    padding-left: 0;
+  }
+}
+
+/* Version menu */
+#version_div {
+  height: 30px;
+  background-color: #4c4e52;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+#version_div #current_version {
+  line-height: 20px;
+  font-weight: 600;
+}
+#version_arrow {
+  float:right;
+}
+#version_arrow.fa-sort-desc {
+  line-height: 10px;
+}
+ #version_arrow.fa-sort-asc {
+  line-height: inherit;
+}
+#other_versions {
+  padding: 10px;
+  background-color: #d5d3dc;
+}
+.version_list {
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+.version_list dt{
+  color: black;
+}
+.version_list dd {
+  display: inline;
+}
+.version_list dd a {
+    padding: 0;
+    padding-right: 8px;
+    color: black;
+}

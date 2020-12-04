@@ -1,0 +1,43 @@
+code .pre {
+    white-space: normal;
+}
+
+/* override table width restrictions */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.wy-table-responsive {
+    margin-bottom: 24px;
+    max-width: 100%;
+    overflow: visible;
+}
+
+table {
+    border: 1px solid #e1e4e5;
+
+}
+
+table th,
+table td {
+    font-size: 90%;
+    padding: 8px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e1e4e5;
+    border-left: 1px solid #e1e4e5;
+}
+
+table th:first-child,
+table td:first-child {
+    border-left-width: 0;
+}
+
+table th:empty {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+	border: 0;
+	display: none;
+}

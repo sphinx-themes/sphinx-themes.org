@@ -5,10 +5,9 @@
 <meta content="A demonstration of the reStructuredText markup language, containing examples of all basic constructs and many advanced constructs." lang="en" name="description" xml:lang="en" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Lists &amp; Tables" href="lists_tables.html" /><link rel="prev" title="Structural Elements" href="structure.html" />
 
-    <meta name="generator" content="sphinx-3.3.0, furo 2020.11.01.beta14"/>
+    <meta name="generator" content="sphinx-3.3.1, furo 2020.11.27.beta19"/>
         <title>Paragraph Level Markup - Sphinx Themes Sample</title>
-      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?d73b972092f5b7abcee29ce5">
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=4d4607a28768ea509d1701e6fba1bca6c595da19">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
@@ -39,13 +38,15 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style>
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script><script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="../_static/scripts/main.js?d73b972092f5b7abcee29ce5"></script></head>
+</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer src="../_static/jquery.js"></script>
+    <script defer src="../_static/underscore.js"></script>
+    <script defer src="../_static/doctools.js"></script>
+    <script defer src="../_static/language_data.js"></script>
+    <script defer async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script defer src="../_static/scripts/main.js?digest=1e13a99a5b478789393b59468e7cadf60869ce3f"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -87,27 +88,34 @@
 
 <div class="page">
   <header class="mobile-header">
-    <label class="header-left nav-overlay-icon" for="__navigation">
-      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-    </label>
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
     <div class="header-center">
       <a href="../index.html"><div class="brand">Sphinx Themes Sample</div></a>
     </div>
-    <div class="header-right"></div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
   </header>
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  
   <span class="sidebar-brand-text">Sphinx Themes Sample</span>
+  
 </a><form class="sidebar-search-container" method="get" action="../search.html">
   <input class="sidebar-search" placeholder="Search" name="q">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
-</form><div class="sidebar-scroll">
-  <div class="sidebar-tree">
-    <p class="caption"><span class="caption-text">Demo Documentation</span></p>
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Demo Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural Elements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html#structural-elements-2">Structural Elements 2</a></li>
@@ -120,8 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="long.html">Long Sticky Nav</a></li>
 </ul>
 
-  </div>
-  <div id="ethical-ad-placement"></div>
+</div>
 </div>
       </div>
       
@@ -130,7 +137,7 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="paragraph-level-markup">
@@ -711,10 +718,17 @@ with the “compound” directive.</p>
         </div>
 
         <div class="related-information">
-          <span class="copyright">Copyright &copy; 2020, Pradyun Gedam</span> |
-          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
-          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+              Copyright &#169; 2020, Pradyun Gedam
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/demo/demo.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
         </div>
         
       </footer>
@@ -728,8 +742,9 @@ with the “compound” directive.</p>
             Contents
           </span>
         </div>
-        <div class="toc-tree">
-          <ul>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
 <li><a class="reference internal" href="#">Paragraph Level Markup</a><ul>
 <li><a class="reference internal" href="#inline-markup">Inline Markup</a></li>
 <li><a class="reference internal" href="#math">Math</a></li>
@@ -776,6 +791,7 @@ with the “compound” directive.</p>
 </li>
 </ul>
 
+          </div>
         </div>
       </div>
       

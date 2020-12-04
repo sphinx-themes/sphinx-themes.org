@@ -1,0 +1,196 @@
+/* starling_theme | MIT License */
+
+/* General */
+
+body {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* Sidebar */
+
+nav.nav__list {
+  font-size: 16px;
+  padding-top: 5.5px;
+}
+
+nav.nav__list a.current {
+  font-weight: 900;
+}
+
+a.internal:hover {
+  text-decoration: underline;
+}
+
+a.icon-home:hover {
+  text-decoration: underline;
+}
+
+nav.nav__list p.caption {
+  text-transform: uppercase;
+  border-bottom-color: rgb(191, 191, 191);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+nav.nav__list .toctree-l1 {
+  padding-top: 10px;
+}
+
+nav.nav__list .toctree-l2 {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+nav.nav__list .toctree-l3 {
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+nav.nav__list .toctree-l4 {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+/* Menu and Main Navigation for StARLinG Links */
+
+div.masthead {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+li.masthead__menu-item {
+  box-sizing: border-box;
+}
+
+/* Breadcrumb navigation */
+
+.wy-breadcrumbs{
+  padding-left: 0;
+}
+
+.wy-breadcrumbs li {
+  font-size: 22px;
+  display: inline-block;
+}
+
+.wy-breadcrumbs li.wy-breadcrumbs-aside {
+  float: right;
+  font-size: 80%;
+}
+
+.wy-breadcrumbs a:link, .wy-breadcrumbs a:visited {
+  text-decoration: none;
+}
+
+/* Table of Contents */
+
+.toctree-wrapper p.caption {
+  font-size: 110%;
+}
+
+.wy-plain-list-disc, .toctree-wraper ul {
+  list-style: disc;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+section.page__content ul {
+  list-style-type: none;
+}
+
+/* Permalinks (needs some additional work to get them showing up at the right time) */
+
+.headerlink {
+  visibility: hidden;
+  font-size: 14px;
+}
+
+/* Code
+
+222,235,247
+189,215,238
+46,117,182
+31,78,121
+0,51,102
+38,38,38
+13,13,13
+
+*/
+
+div.highlight {
+  border-image-repeat: stretch stretch;
+  background-clip: border-box;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+pre {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+dt {
+  background-attachment: sroll;
+  background-clip: border-box;
+  // background-color: rgb(231, 242, 250);
+  background-color: rgb(222, 235, 247);
+  background-origin: padding-box;
+
+  background-position: 0% 0%;
+  background-size: auto auto;
+
+  border-top-color: rgb(106, 176, 222);
+  border-top-style: solid;
+  border-top-width: 3px;
+  box-sizing: border-box;
+
+  list-style-position: outside;
+  list-style-type: none;
+
+  color: rgb(41, 128, 185);
+  display: table;
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 6px;
+
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+}
+
+dl {
+  box-sizing: border-box;
+  color: rgb(64, 64, 64);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+
+dd {
+  margin-bottom: 12px;
+  margin-left: 24px;
+}
+
+code.descclassname {
+  color: rgb(0, 0, 0);
+}
+
+a.reference {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+}
+
+span.viewcode-link {
+  color: rgb(39, 174, 96);
+  line-height: 14px;
+  font-size: 11.51px;
+  font-weight: 700;
+  padding-left: 24px;
+}

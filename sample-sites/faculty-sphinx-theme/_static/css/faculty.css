@@ -1,0 +1,195 @@
+/* Body defaults */
+body {
+  color: #1c1c1c;
+  background-color: #f9f9f9;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, legend,
+.rst-content .toctree-wrapper p.caption,
+.rst-content .sidebar .sidebar-title,
+.rst-content .topic-title {
+  font-weight: normal;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.rst-content .topic-title {
+  font-size: 24px;
+}
+
+/* Body text */
+body, input, textarea, .rst-versions {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Code / fixed width text */
+code,
+.rst-content .linenodiv pre,
+.rst-content code,
+.rst-content div[class^='highlight'] pre,
+.rst-content footer span.commit tt,
+.rst-content kbd,
+.rst-content pre,
+.rst-content pre.literal-block,
+.rst-content samp,
+.rst-content tt,
+footer span.commit code,
+footer span.commit .rst-content tt {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+}
+
+/* Links */
+.rst-content a, .rst-content a:visited {
+  color: #fa7268;
+}
+
+/* Breadcrumbs */
+.wy-breadcrumbs li.breadcrumb {
+  padding-right: 5px;
+}
+
+/* Definition lists */
+.rst-content dl:not(.docutils) dt {
+  color: #fa7268;
+  border-top: solid 3px #fa7268;
+  background: #ffefee;
+}
+
+/* Page main content */
+.wy-nav-content {
+  background-color: #ffffff;
+  padding: 26px 52px;
+}
+.wy-nav-content-wrap {
+  background-color: unset;
+}
+
+/* Navigation bars */
+.wy-nav-side, .wy-nav-top {
+  background: #1c1c1c;
+}
+.wy-side-nav-search {
+  background-color: unset;
+  padding: 13px;
+}
+.wy-side-nav-search > a {
+  color: #ffffff;
+}
+.wy-nav-side {
+  padding-bottom: 0px;
+}
+
+/* Navifation menu */
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: unset;
+  color: #ffffff;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-bottom: 4px;
+}
+.wy-menu-vertical a {
+  color: #c0c0c0;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+.wy-menu-vertical li.current > a {
+  color: #1c1c1c;
+  background-color: #ffffff;
+}
+.wy-menu-vertical li.toctree-l2 a,
+.wy-menu-vertical li.toctree-l3 a,
+.wy-menu-vertical li.toctree-l4 a {
+  color: #1c1c1c;
+}
+
+/* Faculty logo and project title */
+.wy-side-nav-search > a.heading {
+  width: 300px;
+  margin: -13px -13px 0px;
+  padding: 0px;
+  transition: .3s;
+}
+.wy-side-nav-search > a.heading.heading-extra-margin {
+  margin-bottom: .4em;
+}
+.heading > span {
+  color: #ffffff;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 6px;
+  margin-bottom: .4em;
+}
+.wy-side-nav-search > a.heading .logo-box {
+  height: 50px;
+  padding: 5px;
+}
+.wy-side-nav-search > a.heading .logo-box.logo-box-large {
+  padding: 10px;
+  height: 70px;
+}
+.wy-side-nav-search > a.heading .logo-box img.logo {
+  height: 100%;
+  padding: 0px;
+}
+
+/* Navigation bar */
+.platform-navbar {
+  position: fixed;
+  top: 0px;
+  left: 300px;
+  width: calc(100vw - 300px);
+  line-height: 50px;
+  background-color: #1c1c1c;
+}
+.platform-navbar + div {
+  margin-top: 50px;
+}
+
+/* Hide navigation bar on small screens */
+@media (max-width: 768px) {
+  .platform-navbar {
+    display: none;
+  }
+}
+
+/* Lay out navigation bar entries */
+.platform-navbar ul {
+  display: flex;
+  flex: 1;
+  transition: .3s;
+}
+.platform-navbar li {
+  flex: 1;
+  position: relative;
+  transition: .3s;
+  text-align: left;
+  max-width: 12rem;
+}
+.platform-navbar .component > ul {
+  left: 0;
+  top: 100%;
+  display: none;
+  background-color: #1c1c1c;
+}
+
+/* Expand menus on hover */
+.platform-navbar .component:hover > ul {
+  display: block;
+}
+
+/* Links in navigation bar */
+.platform-navbar a {
+  display: block;
+  text-align: center; /* Temporary: Remove once menus filled */
+  /* padding-left: 1rem; Temporary: Restore once menus filled */
+  color: #ffffff;
+}
+
+/* Highlight elements with coral on hover */
+.wy-side-nav-search > a.heading:hover,
+.platform-navbar .component:hover,
+.platform-navbar .section:hover {
+  background-color: #fa7268;
+}
