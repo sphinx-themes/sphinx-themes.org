@@ -57,10 +57,13 @@ class IsolatedEnvironment:
     Inspired by nox's Session object.
     """
 
-    def __init__(self, name):
+    def __init__(self, name, html_theme):
         super().__init__()
         self.name = name
-        self.path = VENV_PATH / name
+        if html_theme:
+            self.path = VENV_PATH / name / html_theme
+        else:
+            self.path = VENV_PATH / name
         self.bin_paths = [self.path / "bin"]
 
     def create(self, *, delete=False):

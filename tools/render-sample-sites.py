@@ -17,7 +17,11 @@ from src.helpers import (
 def worker(theme):
     print(f"Working on: {theme.name}")
 
-    env = IsolatedEnvironment(theme.name)
+    html_theme = None
+    if not isinstance(theme.config, str) and theme.config["html_theme"]:
+        html_theme = theme.config["html_theme"]
+
+    env = IsolatedEnvironment(theme.name, html_theme)
     try:
         env.create(delete="CI" in os.environ)
 
