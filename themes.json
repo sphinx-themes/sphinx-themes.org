@@ -312,11 +312,32 @@
         "_imports": [
           "pylons_sphinx_themes"
         ],
-        "html_sidebars": "{ '**': [\n    'localtoc.html',\n    'ethicalads.html',\n    'relations.html',\n    'sourcelink.html',\n    'searchbox.html',\n] }",
+        "html_theme": "pylons",
+        "html_theme_path": "pylons_sphinx_themes.get_html_themes_path()"
+      },
+      "display": "pylons-sphinx-themes (pylons)",
+      "pypi": "pylons-sphinx-themes"
+    },
+    {
+      "config": {
+        "_imports": [
+          "pylons_sphinx_themes"
+        ],
         "html_theme": "pyramid",
         "html_theme_path": "pylons_sphinx_themes.get_html_themes_path()"
       },
-      "display": "pylons-sphinx-themes",
+      "display": "pylons-sphinx-themes (pyramid)",
+      "pypi": "pylons-sphinx-themes"
+    },
+    {
+      "config": {
+        "_imports": [
+          "pylons_sphinx_themes"
+        ],
+        "html_theme": "pylonsfw",
+        "html_theme_path": "pylons_sphinx_themes.get_html_themes_path()"
+      },
+      "display": "pylons-sphinx-themes (pylonsfw)",
       "pypi": "pylons-sphinx-themes"
     },
     {
