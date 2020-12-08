@@ -545,7 +545,6 @@
           "sphinx_hand_theme"
         ],
         "html_theme": "sphinx_hand_theme",
-        "html_theme_options": "html_theme_options = {\n'collapse_navigation': False,\n'display_version': False,\n'navigation_depth': 3,\n}",
         "html_theme_path": "[sphinx_hand_theme.get_html_theme_path()]"
       },
       "display": "sphinx_hand_theme",
