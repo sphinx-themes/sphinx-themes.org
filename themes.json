@@ -319,28 +319,6 @@
       "pypi": "pylons-sphinx-themes"
     },
     {
-      "config": {
-        "_imports": [
-          "pylons_sphinx_themes"
-        ],
-        "html_theme": "pyramid",
-        "html_theme_path": "pylons_sphinx_themes.get_html_themes_path()"
-      },
-      "display": "pylons-sphinx-themes (pyramid)",
-      "pypi": "pylons-sphinx-themes"
-    },
-    {
-      "config": {
-        "_imports": [
-          "pylons_sphinx_themes"
-        ],
-        "html_theme": "pylonsfw",
-        "html_theme_path": "pylons_sphinx_themes.get_html_themes_path()"
-      },
-      "display": "pylons-sphinx-themes (pylonsfw)",
-      "pypi": "pylons-sphinx-themes"
-    },
-    {
       "config": "python_docs_theme",
       "display": "Python Documentation Theme",
       "pypi": "python-docs-theme"
