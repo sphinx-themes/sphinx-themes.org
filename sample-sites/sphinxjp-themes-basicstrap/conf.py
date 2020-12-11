@@ -25,4 +25,5 @@ html_title = project
 # NOTE: All the lines are after this are the theme-specific ones. These are
 #       written as part of the site generation pipeline for this project.
 # !! MARKER !!
+extensions.append("sphinxjp.themes.basicstrap")
 html_theme = "basicstrap"
