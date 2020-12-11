@@ -753,11 +753,6 @@
       "pypi": "sphinxbootstrap4theme"
     },
     {
-      "config": "basicstrap",
-      "display": "sphinxjp.themes.basicstrap",
-      "pypi": "sphinxjp-themes-basicstrap"
-    },
-    {
       "config": {
         "_extensions": [
           "sphinxjp.themes.basicstrap"
