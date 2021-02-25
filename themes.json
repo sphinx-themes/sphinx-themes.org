@@ -308,6 +308,11 @@
       "pypi": "psyneulink-sphinx-theme"
     },
     {
+      "config": "pydata_sphinx_theme",
+      "display": "PyData Sphinx Theme",
+      "pypi": "pydata-sphinx-theme"
+    },
+    {
       "config": {
         "_imports": [
           "pylons_sphinx_themes"
@@ -436,6 +441,11 @@
       },
       "display": "sphinx-better-theme",
       "pypi": "sphinx-better-theme"
+    },
+    {
+      "config": "sphinx_book_theme",
+      "display": "Sphinx Book Theme",
+      "pypi": "sphinx-book-theme"
     },
     {
       "config": "sphinx_boogergreen_theme",
