@@ -443,14 +443,14 @@
       "pypi": "sphinx-better-theme"
     },
     {
-      "config": "sphinx_book_theme",
-      "display": "Sphinx Book Theme",
-      "pypi": "sphinx-book-theme"
-    },
-    {
       "config": "sphinx_boogergreen_theme",
       "display": "sphinx-boogergreen-theme",
       "pypi": "sphinx-boogergreen-theme"
+    },
+    {
+      "config": "sphinx_book_theme",
+      "display": "Sphinx Book Theme",
+      "pypi": "sphinx-book-theme"
     },
     {
       "config": {
