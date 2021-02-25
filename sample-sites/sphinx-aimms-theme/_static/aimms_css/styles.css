@@ -253,8 +253,7 @@ a[title="(in AIMMS Function Reference)"] .pre { color: brown; }
 /* --------------     Global document styling -------------------------------- */
 
 h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend, p {
-  font-family: "futura-pt", sans-serif;
-  margin-top: 20px; }
+  font-family: "futura-pt", sans-serif; }
 
 .btn {
   padding: 15px 30px;

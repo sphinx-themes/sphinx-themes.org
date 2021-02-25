@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>COMPAS - Lists &amp; Tables</title>
+  
+  <title> - Lists &amp; Tables</title>
+  
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,17 +27,6 @@
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-  <style>
-  .footer-text,
-  .footer-link,
-  .footer-title {
-    color: rgba(255, 255, 255, 0.25);
-  }
-  .footer-link:hover {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  </style>
 </head>
 
 <body data-spy="scroll" data-target="#compas-toc">
@@ -53,6 +44,7 @@
         <li class="nav-item"><a class="nav-link" href="/compas/latest/">Docs</a></li>
         <li class="nav-item"><a class="nav-link" href="/extensions.html">Extensions</a></li>
         <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contribute.html">Contribute</a></li>
       </ul>
       <!-- primary -->
       <ul class="navbar-nav d-none d-md-flex ml-md-auto">
@@ -84,7 +76,17 @@
   <div class="container-fluid">
     <div class="row">
       <!-- content -->
-      <main class="col-12 col-md-9 col-xl-7 px-2 px-md-5 py-5 compas-content" role="main">
+      <main class="col-12 col-md-9 col-xl-7 px-2 px-md-5 pt-2 pb-5 compas-content" role="main">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-3 bg-white px-0">
+            <li class="breadcrumb-item"><a href="../index.html">docs</a></li>
+            
+            <li class="breadcrumb-item active" aria-current="page">Lists &amp; Tables</li>
+          </ol>
+        </nav>
+        
+  
         
           
           <div class="section" id="lists-tables">
@@ -315,16 +317,16 @@ constructs and many advanced constructs.</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
-<div class="language-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</code></pre></div></td><td class="code"><div class="highlight"><pre><code><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<div class="language-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></code></pre></div></td><td class="code"><div class="highlight"><pre><code><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
 
 
@@ -735,27 +737,51 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
   </div>
   <!-- main -->
   <!-- footer -->
+  <footer class="compas-footer">
+    <nav class="nav p-2">
+      
+        <a href="demo.html" title="Paragraph Level Markup" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+          <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
+          <div class="nav-title flex-grow-1 align-self-center">
+            <div class="nav-direction small font-weight-light">Previous</div>
+            Paragraph Level Markup
+          </div>
+        </a>
+      
+
+      
+        <a href="api.html" title="API documentation and generated content" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+          <div class="nav-title footer-link flex-grow-1 align-self-center">
+            <div class="nav-direction small font-weight-light">Next</div>
+            API documentation and generated content
+          </div>
+          <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
+        </a>
+      
+    </nav>  
+  </footer>
   <!-- footer -->
-  <div class="below py-5" style="background-color: #23272b;">
+  <!-- below -->
+  <div class="below py-5">
     <div class="container">
       <div class="row flex-column">
         <div class="col-12 col-md-6 mx-md-auto text-center">
-          <h4 class="mb-4 mt-0 footer-text">COMPAS</h4>
-          <p class="footer-text">
+          <h4 class="mb-4 mt-0 below-text">COMPAS</h4>
+          <p class="below-text">
             A computational framework for collaboration and research
             in Architecture, Engineering, Fabrication, and Construction.
           </p>
-          <nav class="nav justify-content-center my-4">
-            <a href="https://compas-dev.github.io/main/devguide.html" class="nav-link btn btn-light mx-2" target="_blank">Contribute</a>
-          </nav>
+          <!-- <nav class="nav justify-content-center my-4">
+            <a href="#" class="nav-link btn btn-light mx-2" target="_blank">Newsletter</a>
+          </nav> -->
           <nav class="nav justify-content-center pb-3">
-            <a class="nav-link mx-2 px-0 footer-link" href="http://github.com/compas-dev" target="_blank">
+            <a class="nav-link mx-2 px-0 below-link" href="http://github.com/compas-dev" target="_blank">
               <span class="fab fa-github fa-1x"></span>
             </a>
-            <a class="nav-link mx-2 px-0 footer-link" href="http://forum.compas-framework.org" target="_blank">
+            <a class="nav-link mx-2 px-0 below-link" href="http://forum.compas-framework.org" target="_blank">
               <span class="fab fa-discourse fa-1x"></span>
             </a>
-            <a class="nav-link mx-2 px-0 footer-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+            <a class="nav-link mx-2 px-0 below-link" href="https://pypi.org/project/COMPAS/" target="_blank">
               <span class="fab fa-python fa-1x"></span>
             </a>
           </nav>
@@ -763,12 +789,13 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
       </div>
       <div class="row">
         <div class="col text-center">
-          <p class="p-0 m-0 footer-text">Copyright &copy; 2017-2020 compas-dev</p>
+          <p class="p-0 m-0 below-text">Copyright &copy; 2017-2021 compas-dev</p>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- below -->
+  <!-- scripts -->
   <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
     URL_ROOT          : '',
@@ -820,20 +847,7 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
     })
   }
   </script>
-
-  <script>
-  // var prevScrollpos = window.pageYOffset;
-  // window.onscroll = function() {
-  // var currentScrollPos = window.pageYOffset;
-  // if (prevScrollpos > currentScrollPos) {
-  //     document.getElementById("header").style.top = "0";
-  // } else {
-  //     document.getElementById("header").style.top = "-58px";
-  // }
-  // prevScrollpos = currentScrollPos;
-  // }
-  </script>
-
+  <!-- scripts -->
   
   
 </body>

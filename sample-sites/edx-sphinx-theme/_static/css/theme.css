@@ -3002,6 +3002,13 @@ pre.literal-block {
 .wy-menu a:hover {
 	text-decoration: none
 }
+.wy-menu p.caption {
+	color: #fff;
+	padding: 1.5rem 1.5rem 0;
+	font-weight: 700;
+	font-size: 0.825rem;
+	text-transform: uppercase;
+}
 .wy-menu-horiz {
 	*zoom: 1
 }

@@ -2826,10 +2826,9 @@ ol {
 	background-color: rgb(255, 255, 255)!important
 }
 
-.mdl-color-text--primary {
+/* .mdl-color-text--primary {
     color: rgb(96, 125, 139) !important
-	/* color: rgb(103, 58, 183)!important */
-}
+} */
 
 .mdl-color-text--primary-contrast {
 	color: rgb(255, 255, 255)!important
@@ -4751,7 +4750,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	-webkit-flex-wrap: nowrap;
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
-	width: 240px;
+	/* width: 240px; moved to scss */
 	height: 100%;
 	max-height: 100%;
 	position: absolute;
@@ -4761,8 +4760,9 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	box-sizing: border-box;
 	border-right: 1px solid #e0e0e0;
 	background: #fafafa;
+	/* Moved to drawer.scss
 	-webkit-transform: translateX(-250px);
-	transform: translateX(-250px);
+	transform: translateX(-250px); */
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	will-change: transform;
@@ -4938,10 +4938,11 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	}
 }
 
+/* Moved drawer.scss as part of sidebar
 .mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header {
 	margin-left: 240px;
-	width: calc(100% - 240px)
-}
+	width: calc(100% - 240px) */
+/* } */
 
 @media screen and (min-width:1025px) {
 	.mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
@@ -5160,8 +5161,9 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	-webkit-overflow-scrolling: touch
 }
 
+/* moved to drawer.scss
 .mdl-layout--fixed-drawer>.mdl-layout__content {
-	margin-left: 240px
+	margin-left: 300px
 }
 
 .mdl-layout__container.has-scrolling-header .mdl-layout__content {
@@ -5176,7 +5178,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 		overflow-y: auto;
 		overflow-x: hidden
 	}
-}
+} */
 
 .mdl-layout__tab-bar {
 	height: 96px;

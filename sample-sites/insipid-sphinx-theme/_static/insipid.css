@@ -39,29 +39,30 @@ body.js * {
 
 /* -- scrollbars ------------------------------------------------------------ */
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar, div.sphinxsidebar::-webkit-scrollbar {
+    width: 14px;
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb, div.sphinxsidebar::-webkit-scrollbar-thumb {
     background: #ccc;
 }
 
-html {
+html, div.sphinxsidebar {
     scrollbar-color: #ccc transparent;
 }
 
-div.body *::-webkit-scrollbar {
-    width: 5px;
-}
-
-div.body * {
-    scrollbar-width: thin;
+body {
+    scrollbar-color: initial;
 }
 
 div.sphinxsidebar::-webkit-scrollbar {
-    width: 5px;
-    background: #f5f5f5;
+    width: 7px;
+    background: transparent;
+}
+
+div.sphinxsidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 
 div.sphinxsidebar {
@@ -174,22 +175,22 @@ img {
     max-width: unset;
 }
 
-.compound {
+div.compound {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.compound-first {
+div.compound > .compound-first {
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
 }
 
-.compound-middle {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+div.compound > .compound-middle {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
-.compound-last {
-    margin-top: 0.5em;
+div.compound > .compound-last {
+    margin-top: 0.2em;
     margin-bottom: 0;
 }
 
@@ -289,7 +290,7 @@ table.highlighttable td.linenos {
     margin: 0 -0.5em;
 }
 
-kbd.docutils {
+kbd.docutils:not(.compound) {
     padding: 0.15em;
     border-radius: 3px;
     border: 1px solid #333;
@@ -304,11 +305,18 @@ div.topic, div.sidebar {
 div.admonition > p.admonition-title,
 div.topic > p.topic-title,
 div.sidebar > p.sidebar-title {
-    margin: -7px -7px 7px -7px ;
+    margin: -7px -7px 7px -7px;
     padding: 4px 7px;
     font-weight: normal;
     font-size: unset;
     color: #333;
+}
+
+.first.admonition-title,
+.first.topic-title,
+.first.sidebar-title {
+    /* override basic.css, which uses !important */
+    margin-top: -7px !important;
 }
 
 div.admonition > p.admonition-title + *,
@@ -526,6 +534,10 @@ div.body dl.exception > dt:not(:target) {
     text-align: right;
 }
 
+.relbar .icon {
+    color: #888;
+}
+
 .relbar .previous .icon {
     margin-right: 1em;
 }
@@ -560,7 +572,7 @@ div.body dl.exception > dt:not(:target) {
 /* -- breadcrumbs ----------------------------------------------------------- */
 
 nav.crumbs {
-    color: #ccc;
+    color: #888;
     font-size: 90%;
 }
 
@@ -581,10 +593,13 @@ nav.crumbs a:visited {
 
 footer {
     padding: 9px 0 9px 0;
-    border-top: #eee solid 1px;
     text-align: center;
     font-size: 75%;
     color: #333;
+}
+
+footer, div.articleComments {
+    border-top: #ccc solid 1px;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
@@ -828,13 +843,16 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 }
 
 #topbar {
-    border-bottom: #eee solid 1px;
+    border-bottom: #ccc solid 1px;
     background-color: #fff;
 }
 
 #topbar,
 #titlebar a,
-#titlebar a:visited,
+#titlebar a:visited {
+    color: #888;
+}
+
 .relbar,
 .relbar > a:hover .direction {
     color: #ccc;
@@ -842,7 +860,8 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 
 #topbar button:hover,
 #titlebar a:hover,
-.relbar a:hover {
+.relbar a:hover,
+.relbar a:hover .icon {
     color: #333;
 }
 
@@ -952,7 +971,7 @@ body.scrolled #titlebar .top {
 /* -- navigation icons ------------------------------------------------------ */
 
 /* cover nav-icon */
-div.body, .relbar, footer {
+div.body, .relbar, footer, div.articleComments {
     position: relative;
     background-color: #fff;
 }

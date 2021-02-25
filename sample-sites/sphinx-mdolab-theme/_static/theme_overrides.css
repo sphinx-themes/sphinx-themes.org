@@ -12,3 +12,20 @@
        overflow: visible !important;
     }
  }
+
+/* Override the definition list style which is broken */
+/* based on https://github.com/readthedocs/sphinx_rtd_theme/issues/979#issuecomment-662288540 */
+.rst-content dl:not(.docutils) dt:first-child {
+   margin-top: 0;
+ }
+.rst-content dl:not(.docutils) dt {
+   display: table;
+   margin: 6px 0;
+   font-size: 90%;
+   line-height: normal;
+   background: #e7f2fa;
+   color: #2980B9;
+   border-top: solid 3px #6ab0de;
+   padding: 6px;
+   position: relative;
+ }
