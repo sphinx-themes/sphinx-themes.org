@@ -62,7 +62,7 @@ def generate_previews(session):
         assert file.is_file(), repr(file)
         shutil.copy(str(file), str(destination / file.name))
 
-    (BUILD_PATH / "CNAME").write_text("sphinx-themes.org")
+    (PUBLIC_PATH / "CNAME").write_text("sphinx-themes.org")
 
 
 @nox.session(name="render-index")
