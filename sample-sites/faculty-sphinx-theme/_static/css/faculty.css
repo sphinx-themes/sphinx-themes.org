@@ -109,7 +109,6 @@ footer span.commit .rst-content tt {
   width: 300px;
   margin: -13px -13px 0px;
   padding: 0px;
-  transition: .3s;
 }
 .wy-side-nav-search > a.heading.heading-extra-margin {
   margin-bottom: .4em;
@@ -140,6 +139,7 @@ footer span.commit .rst-content tt {
   top: 0px;
   left: 300px;
   width: calc(100vw - 300px);
+  height: 50px;
   line-height: 50px;
   background-color: #1c1c1c;
 }
@@ -158,16 +158,14 @@ footer span.commit .rst-content tt {
 .platform-navbar ul {
   display: flex;
   flex: 1;
-  transition: .3s;
 }
 .platform-navbar li {
   flex: 1;
   position: relative;
-  transition: .3s;
   text-align: left;
   max-width: 12rem;
 }
-.platform-navbar .component > ul {
+.platform-navbar .platform-navbar-section > ul {
   left: 0;
   top: 100%;
   display: none;
@@ -175,21 +173,25 @@ footer span.commit .rst-content tt {
 }
 
 /* Expand menus on hover */
-.platform-navbar .component:hover > ul {
+.platform-navbar .platform-navbar-section:hover > ul {
   display: block;
 }
 
 /* Links in navigation bar */
-.platform-navbar a {
+.platform-navbar .platform-navbar-link {
   display: block;
-  text-align: center; /* Temporary: Remove once menus filled */
-  /* padding-left: 1rem; Temporary: Restore once menus filled */
+  padding-left: 15px;
+  padding-right: 15px;
   color: #ffffff;
+}
+.platform-navbar .platform-navbar-link i {
+  float: right;
+  line-height: 50px;
 }
 
 /* Highlight elements with coral on hover */
 .wy-side-nav-search > a.heading:hover,
-.platform-navbar .component:hover,
-.platform-navbar .section:hover {
+.platform-navbar .platform-navbar-section:hover,
+.platform-navbar .platform-navbar-entry:hover {
   background-color: #fa7268;
 }

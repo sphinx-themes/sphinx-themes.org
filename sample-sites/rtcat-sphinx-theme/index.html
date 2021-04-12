@@ -28,6 +28,10 @@
   
 
   
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
 
   
         <link rel="index" title="Index"
@@ -177,25 +181,17 @@ explicit roles for <em>standard</em> <strong>inline</strong> <code class="docuti
 importance.</p>
 </div>
 <p>Or, maybe, you want to present a code block to the user.</p>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Just a small code example&quot;&quot;&quot;</span>
-
-<span class="k">class</span> <span class="nc">Demo</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-<span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="o">=</span> <span class="kc">True</span>
-</span>
-    <span class="k">def</span> <span class="nf">how_ready_are_we</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="hll">        <span class="k">return</span> <span class="s2">&quot;very&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="k">else</span> <span class="s2">&quot;not at all&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="sd">&quot;&quot;&quot;Just a small code example&quot;&quot;&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">class</span> <span class="nc">Demo</span><span class="p">:</span>
+<span class="linenos">4</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">5</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="hll"><span class="linenos">6</span>        <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span class="linenos">7</span>
+<span class="linenos">8</span>    <span class="k">def</span> <span class="nf">how_ready_are_we</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="hll"><span class="linenos">9</span>        <span class="k">return</span> <span class="s2">&quot;very&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="k">else</span> <span class="s2">&quot;not at all&quot;</span>
 </span></pre></div>
-</td></tr></table></div>
+</div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Demo Documentation</span></p>
 <ul>
@@ -326,6 +322,7 @@ importance.</p>
             HAS_SOURCE: 'true'
         };
     </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lists &amp; Tables</title>
+    <title>Lists &amp; Tables &mdash; Sphinx Themes Sample</title>
 
     
         
@@ -13,6 +13,10 @@
         
         <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
         
+        
+            <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+        
+            <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
         
     
 
@@ -23,6 +27,7 @@
                 src="../_static/documentation_options.js"></script>
 
         
+            <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
             <script src="../_static/jquery.js"></script>
             <script src="../_static/underscore.js"></script>
             <script src="../_static/doctools.js"></script>
@@ -49,10 +54,16 @@
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item" href="../">
-                            
-                                <img src="../_static/img/logo.svg"
-                                     alt="Logo"/>
+                        <a class="navbar-item" href="../index.html">
+                            <img
+                                
+                                    src="../_static/img/logo.svg"
+                                
+                                alt="Logo"
+                                
+                                    style="width: 10rem;"
+                                
+                                />
                             
                         </a>
                         <!--<a role="button" class="navbar-burger burger" aria-label="menu"
@@ -67,10 +78,12 @@
                     
                         <div id="navbarMenu" class="navbar-menu">
                             <div class="navbar-end">
+                                <!--
                                 <a class="navbar-item" href="https://documatt.com">Documatt</a>
                                 <a class="navbar-item"
                                    href="https://snippets.documatt.com">Snippets</a>
                                 <a class="navbar-item is-active" href="https://blog.documatt.com">Blog</a>
+                                -->
                             </div>
                         </div>
                     
@@ -82,7 +95,7 @@
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <div class="container">
                     <ul>
-                        <li><a href="../">Sphinx Themes Sample</a></li>
+                        <li><a href="../index.html">Sphinx Themes Sample</a></li>
                         
 
     <li class="is-active">Lists &amp; Tables</li>
@@ -95,23 +108,22 @@
 
 
 
-    <section class="section site-cover" style="padding-bottom: 0;">
+    <section class="section site-hero" style="padding-bottom: 0;">
         <div class="container">
             <div class="columns">
-                <div class="column is-8 is-offset-2">
+                <div class="column content is-8 is-offset-2">
                         
-                            <h1 class="title is-2 has-text-primary">
-                                <a href="../">Sphinx Themes Sample</a>
+                            <h1 class="title is-2">
+                                <a href="../index.html">Sphinx Themes Sample</a>
                             </h1>
-                            <h2 class="subtitle is-4">
-                                Write and read beautiful books and documentation in easy way with our powerful writing platform.
-                            </h2>
+                            <div class="subtitle is-4">
+                                
+                            </div>
                         
                     
                 </div>
                 <div class="column">
                     
-                        e.g. [twitter follow]
                     
                 </div>
             </div>
@@ -361,27 +373,18 @@ constructs and many advanced constructs.</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-
-    <span class="s2">&quot;&quot;&quot;Docstring for class Foo.</span>
-
-<span class="s2">    This text tests for the formatting of docstrings generated from output</span>
-<span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;&quot;&quot;Docstring for class Foo.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="s2">    This text tests for the formatting of docstrings generated from output</span>
+<span class="linenos">10</span><span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </li>
 </ul>
 </li>
@@ -708,6 +711,21 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
 </div>
 
 
+
+                            
+                            
+                                <p class="has-text-weight-light is-size-6">
+                                    Previous:
+                                    <a href="demo.html"
+                                       title="previous chapter">Paragraph Level Markup</a>
+                                
+                                    |
+                                
+                                    Next:
+                                    <a href="api.html"
+                                       title="next chapter">API documentation and generated content</a>
+                                </p>
+                            
                         </article>
                     </div>
                     <div class="column is-2">
@@ -721,12 +739,22 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered has-text-primary">
-                <a href="../">
-                <img
-                        src="../_static/img/logo.svg"
-                        alt="Logo" style="width: 10rem;"></a>
-                <p>Write and read beautiful books and documentation in easy way with our powerful writing platform.</p>
-                <p>2020, Pradyun Gedam</p>
+                <a href="../index.html">
+                    <img
+                        
+                            src="../_static/img/logo.svg"
+                        
+                        alt="Logo"
+                        
+                            style="width: 10rem;"
+                        
+                    />
+                 </a>
+                
+                    <p></p>
+                
+
+                <p>Copyright &copy; 2020, Pradyun Gedam</p>
             </div>
         </div>
     </footer>

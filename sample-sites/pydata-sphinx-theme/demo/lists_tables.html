@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lists &amp; Tables &#8212; Sphinx Themes Sample</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,18 +20,14 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.c86189f1ce1b71a67eb6.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -40,60 +37,80 @@
     <link rel="prev" title="Paragraph Level Markup" href="demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../index.html">
     
-      <p class="title">Sphinx Themes Sample</p>
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Sphinx Themes Sample</p>
+</a>
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="structure.html">Structural Elements</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href=""></a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="demo.html">Paragraph Level Markup</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="">Lists & Tables</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="api.html">API documentation and generated content</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="long.html">Long Sticky Nav</a>
-        </li>
-        
-        
-      </ul>
+    
+  </div>
 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="structure.html">
+  Structural Elements
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-        
-      </ul>
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="demo.html">
+  Paragraph Level Markup
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Lists &amp; Tables
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api.html">
+  API documentation and generated content
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="long.html">
+  Long Sticky Nav
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -101,129 +118,138 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-    <div class="bd-toc-item active">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
     
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
+  </div>
+</nav>
+            </div>
+            
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enumerated-lists">
+     Enumerated Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-lists">
+     Definition Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#option-lists">
+     Option Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#field-list">
+     Field list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bullet-lists">
+     Bullet Lists
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#lists" class="nav-link">Lists</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#enumerated-lists" class="nav-link">Enumerated Lists</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#definition-lists" class="nav-link">Definition Lists</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#option-lists" class="nav-link">Option Lists</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#field-list" class="nav-link">Field list</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#bullet-lists" class="nav-link">Bullet Lists</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#simple" class="nav-link">Simple</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#complex" class="nav-link">Complex</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#second-list-level" class="nav-link">Second list level</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h5">
-            <a href="#but-deeper-down-the-rabbit-hole" class="nav-link">But deeper down the rabbit hole</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#hlists" class="nav-link">Hlists</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#numbered-list" class="nav-link">Numbered List</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#tables" class="nav-link">Tables</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#grid-tables" class="nav-link">Grid Tables</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#giant-tables" class="nav-link">Giant Tables</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#list-tables" class="nav-link">List Tables</a>
-        </li>
-    
-            </ul>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simple">
+       Simple
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#complex">
+       Complex
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#second-list-level">
+       Second list level
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#but-deeper-down-the-rabbit-hole">
+         But deeper down the rabbit hole
+        </a>
+       </li>
+      </ul>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hlists">
+     Hlists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numbered-list">
+     Numbered List
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grid-tables">
+     Grid Tables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#giant-tables">
+       Giant Tables
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-tables">
+     List Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
               
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -457,27 +483,18 @@ constructs and many advanced constructs.</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-
-    <span class="s2">&quot;&quot;&quot;Docstring for class Foo.</span>
-
-<span class="s2">    This text tests for the formatting of docstrings generated from output</span>
-<span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;&quot;&quot;Docstring for class Foo.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="s2">    This text tests for the formatting of docstrings generated from output</span>
+<span class="linenos">10</span><span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </li>
 </ul>
 </li>
@@ -819,17 +836,25 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
 
       </div>
     </div>
-
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.c86189f1ce1b71a67eb6.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2020, Pradyun Gedam.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Pradyun Gedam.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.0b1.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

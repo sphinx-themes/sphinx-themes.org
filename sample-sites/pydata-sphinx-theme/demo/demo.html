@@ -9,7 +9,8 @@
 
     <title>Paragraph Level Markup &#8212; Sphinx Themes Sample</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -21,82 +22,98 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.c86189f1ce1b71a67eb6.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lists &amp; Tables" href="lists_tables.html" />
     <link rel="prev" title="Structural Elements" href="structure.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../index.html">
     
-      <p class="title">Sphinx Themes Sample</p>
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Sphinx Themes Sample</p>
+</a>
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="structure.html">Structural Elements</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href=""></a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="">Paragraph Level Markup</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="lists_tables.html">Lists & Tables</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="api.html">API documentation and generated content</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="long.html">Long Sticky Nav</a>
-        </li>
-        
-        
-      </ul>
+    
+  </div>
 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="structure.html">
+  Structural Elements
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-        
-      </ul>
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Paragraph Level Markup
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="lists_tables.html">
+  Lists &amp; Tables
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api.html">
+  API documentation and generated content
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="long.html">
+  Long Sticky Nav
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -104,183 +121,205 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-    <div class="bd-toc-item active">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
     
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
+  </div>
+</nav>
+            </div>
+            
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inline-markup">
+   Inline Markup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math">
+   Math
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meta">
+   Meta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blocks">
+   Blocks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literal-blocks">
+     Literal Blocks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#line-blocks">
+     Line Blocks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#block-quotes">
+     Block Quotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#doctest-blocks">
+     Doctest Blocks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-blocks">
+     Code Blocks
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#inline-markup" class="nav-link">Inline Markup</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#math" class="nav-link">Math</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#meta" class="nav-link">Meta</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#blocks" class="nav-link">Blocks</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#literal-blocks" class="nav-link">Literal Blocks</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#line-blocks" class="nav-link">Line Blocks</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#block-quotes" class="nav-link">Block Quotes</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#doctest-blocks" class="nav-link">Doctest Blocks</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#code-blocks" class="nav-link">Code Blocks</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#emphasized-lines-with-line-numbers" class="nav-link">Emphasized lines with line numbers</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#sidebar" class="nav-link">Sidebar</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#code-with-sidebar" class="nav-link">Code with Sidebar</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#references" class="nav-link">References</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#footnotes" class="nav-link">Footnotes</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#citations" class="nav-link">Citations</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#glossary" class="nav-link">Glossary</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#targets" class="nav-link">Targets</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#directives" class="nav-link">Directives</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#contents" class="nav-link">Contents</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#centered-text" class="nav-link">Centered text</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#images-figures" class="nav-link">Images & Figures</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#images" class="nav-link">Images</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#figures" class="nav-link">Figures</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#admonitions" class="nav-link">Admonitions</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#topics-sidebars-and-rubrics" class="nav-link">Topics, Sidebars, and Rubrics</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#target-footnotes" class="nav-link">Target Footnotes</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#replacement-text" class="nav-link">Replacement Text</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#compound-paragraph" class="nav-link">Compound Paragraph</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#download-links" class="nav-link">Download Links</a>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emphasized-lines-with-line-numbers">
+       Emphasized lines with line numbers
+      </a>
+     </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sidebar">
+   Sidebar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-with-sidebar">
+     Code with Sidebar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citations">
+     Citations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#glossary">
+     Glossary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#targets">
+     Targets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#directives">
+   Directives
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contents">
+     Contents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#centered-text">
+     Centered text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images-figures">
+     Images &amp; Figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#images">
+       Images
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figures">
+       Figures
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#admonitions">
+     Admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topics-sidebars-and-rubrics">
+     Topics, Sidebars, and Rubrics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#target-footnotes">
+     Target Footnotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replacement-text">
+     Replacement Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compound-paragraph">
+     Compound Paragraph
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-links">
+   Download Links
+  </a>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
               
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -455,17 +494,13 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
 </div>
 <div class="section" id="emphasized-lines-with-line-numbers">
 <h4>Emphasized lines with line numbers<a class="headerlink" href="#emphasized-lines-with-line-numbers" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
-    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="hll">    <span class="nb">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
-</span>    <span class="nb">print</span> <span class="s1">&#39;This one is not...&#39;</span>
-<span class="hll">    <span class="nb">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll"><span class="linenos">5</span>    <span class="nb">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
 </span></pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -495,87 +530,48 @@ of the ruler or leader of men, who through his power awakens and develops their 
 </div>
 <div class="literal-block-wrapper docutils container" id="id24">
 <div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-
-    <span class="sd">&quot;&quot;&quot;Docstring for class Foo.</span>
-
-<span class="sd">    This text tests for the formatting of docstrings generated from output</span>
-<span class="sd">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
-<span class="sd">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
-<span class="sd">    and etc, but those will *always* have the ``.descname`` or</span>
-<span class="sd">    ``.descclassname`` class.</span>
-
-<span class="sd">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
-<span class="sd">    the same style as anything else with ````this type of markup````.</span>
-
-<span class="sd">    It&#39;s common for programmers to give a code example inside of their</span>
-<span class="sd">    docstring::</span>
-
-<span class="sd">        from test_py_module import Foo</span>
-
-<span class="sd">        myclass = Foo()</span>
-<span class="sd">        myclass.dothismethod(&#39;with this argument&#39;)</span>
-<span class="sd">        myclass.flush()</span>
-
-<span class="sd">        print(myclass)</span>
-
-
-<span class="sd">    Here is a link to :py:meth:`capitalize`.</span>
-<span class="sd">    Here is a link to :py:meth:`__init__`.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
-    <span class="c1">#: It can have multiple lines.</span>
-    <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
-
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Test Module for sphinx_rtd_theme.&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="sd">&quot;&quot;&quot;Docstring for class Foo.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="sd">    This text tests for the formatting of docstrings generated from output</span>
+<span class="linenos">10</span><span class="sd">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<span class="linenos">11</span><span class="sd">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
+<span class="linenos">12</span><span class="sd">    and etc, but those will *always* have the ``.descname`` or</span>
+<span class="linenos">13</span><span class="sd">    ``.descclassname`` class.</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="sd">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
+<span class="linenos">16</span><span class="sd">    the same style as anything else with ````this type of markup````.</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="sd">    It&#39;s common for programmers to give a code example inside of their</span>
+<span class="linenos">19</span><span class="sd">    docstring::</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="sd">        from test_py_module import Foo</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="sd">        myclass = Foo()</span>
+<span class="linenos">24</span><span class="sd">        myclass.dothismethod(&#39;with this argument&#39;)</span>
+<span class="linenos">25</span><span class="sd">        myclass.flush()</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="sd">        print(myclass)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="sd">    Here is a link to :py:meth:`capitalize`.</span>
+<span class="linenos">31</span><span class="sd">    Here is a link to :py:meth:`__init__`.</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>    <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
+<span class="linenos">36</span>    <span class="c1">#: It can have multiple lines.</span>
+<span class="linenos">37</span>    <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
+<span class="linenos">40</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -853,17 +849,25 @@ with the “compound” directive.</p>
 
       </div>
     </div>
-
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.c86189f1ce1b71a67eb6.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2020, Pradyun Gedam.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Pradyun Gedam.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.0b1.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>
