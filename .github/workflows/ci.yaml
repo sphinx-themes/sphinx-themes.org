@@ -4,6 +4,8 @@ on:
   pull_request:
   push:
     branches: [master]
+  schedule:
+    - cron: 0 0 * * MON # Run every Monday at 00:00 UTC
 
 jobs:
   pre-commit:
@@ -48,13 +50,13 @@ jobs:
 
     # Publish!
     - name: Deploy to GitHub Pages
-      if: github.event_name == 'push' && github.event.ref == 'refs/heads/master'
+      if: github.event_name == 'push' || github.event_name == 'schedule'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: public/
 
-    # Upload for access!
+    # Upload for introspection, useful for pull requests and debugging
     - uses: actions/upload-artifact@v2
       with:
         name: generated-site
