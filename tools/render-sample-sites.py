@@ -13,8 +13,6 @@ from src.helpers import (
     load_themes,
 )
 
-SPHINX_VERSION = os.environ.get("SPHINX_VERSION", "4.0.0.b1")
-
 
 def worker(theme):
     print(f"Working on: {theme.name}")
@@ -29,9 +27,8 @@ def worker(theme):
             shutil.rmtree(build_location)
         build_location.mkdir(parents=True)
 
-        # Install required packages
-        packages = sorted({theme.pypi})  # prevents duplication
-        env.install("--pre", f"sphinx=={SPHINX_VERSION}", *packages)
+        env.install("--pre", f"sphinx")  # we test against the latest Sphinx version
+        env.install(theme.pypi)
 
         # Run sphinx
         generate_sphinx_config_for(theme, at=build_location)
