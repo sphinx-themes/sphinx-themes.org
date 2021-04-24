@@ -143,8 +143,7 @@ def _theme_config_to_source_lines(config):
 
 
 def generate_sphinx_config_for(theme, *, at):
-    """Generate the Sphinx configuration file for this theme.
-    """
+    """Generate the Sphinx configuration file for this theme."""
     config_lines = _theme_config_to_source_lines(theme.config)
 
     with CONF_PY_TEMPLATE.open() as f:
