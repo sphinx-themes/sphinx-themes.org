@@ -175,11 +175,6 @@
       "pypi": "pietroalbini-sphinx-themes"
     },
     {
-      "config": "pydata_sphinx_theme",
-      "display": "PyData Sphinx Theme",
-      "pypi": "pydata-sphinx-theme"
-    },
-    {
       "config": "python_docs_theme",
       "display": "Python Documentation Theme",
       "pypi": "python-docs-theme"
