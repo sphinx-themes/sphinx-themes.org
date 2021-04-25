@@ -1,13 +1,14 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta content="reStructuredText, demonstration, demo, parser" name="keywords" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta content="reStructuredText, demonstration, demo, parser" name="keywords" />
 <meta content="A demonstration of the reStructuredText markup language, containing examples of all basic constructs and many advanced constructs." lang="en" name="description" xml:lang="en" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Lists &amp; Tables" href="lists_tables.html" /><link rel="prev" title="Structural Elements" href="structure.html" />
 
-    <meta name="generator" content="sphinx-4.0.0b1, furo 2020.12.09.beta21"/>
+    <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
         <title>Paragraph Level Markup - Sphinx Themes Sample</title>
-      <link rel="stylesheet" href="../_static/styles/furo.css?digest=a3f371badb8538d75df213ccffb17a4f6e8f3ac5">
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
@@ -38,17 +39,7 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css" />
-    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
-    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script defer data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script defer src="../_static/jquery.js"></script>
-    <script defer src="../_static/underscore.js"></script>
-    <script defer src="../_static/doctools.js"></script>
-    <script defer async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script defer src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
+</style><link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -88,6 +79,7 @@
 <label class="overlay toc-overlay" for="__toc"></label>
 
 
+
 <div class="page">
   <header class="mobile-header">
     <div class="header-left">
@@ -113,7 +105,7 @@
   <span class="sidebar-brand-text">Sphinx Themes Sample</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html">
-  <input class="sidebar-search" placeholder="Search" name="q">
+  <input class="sidebar-search" placeholder=Search name="q">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
@@ -311,13 +303,17 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
 </div>
 <div class="section" id="emphasized-lines-with-line-numbers">
 <h4>Emphasized lines with line numbers<a class="headerlink" href="#emphasized-lines-with-line-numbers" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
-<span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="hll"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">'This line is highlighted.'</span>
-</span><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">'This one is not...'</span>
-<span class="hll"><span class="linenos">5</span>    <span class="nb">print</span> <span class="s1">'...but this one is.'</span>
+<div class="highlight-python notranslate"><div class="table-wrapper"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll">    <span class="nb">print</span> <span class="s1">'This line is highlighted.'</span>
+</span>    <span class="nb">print</span> <span class="s1">'This one is not...'</span>
+<span class="hll">    <span class="nb">print</span> <span class="s1">'...but this one is.'</span>
 </span></pre></div>
-</div>
+</td></tr></table></div></div>
 </div>
 </div>
 </div>
@@ -347,48 +343,87 @@ of the ruler or leader of men, who through his power awakens and develops their 
 </div>
 <div class="literal-block-wrapper docutils container" id="id24">
 <div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="linenos"> 2</span><span class="sd">"""Test Module for sphinx_rtd_theme."""</span>
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span>    <span class="sd">"""Docstring for class Foo.</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="sd">    This text tests for the formatting of docstrings generated from output</span>
-<span class="linenos">10</span><span class="sd">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
-<span class="linenos">11</span><span class="sd">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
-<span class="linenos">12</span><span class="sd">    and etc, but those will *always* have the ``.descname`` or</span>
-<span class="linenos">13</span><span class="sd">    ``.descclassname`` class.</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="sd">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
-<span class="linenos">16</span><span class="sd">    the same style as anything else with ````this type of markup````.</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="sd">    It's common for programmers to give a code example inside of their</span>
-<span class="linenos">19</span><span class="sd">    docstring::</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="sd">        from test_py_module import Foo</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="sd">        myclass = Foo()</span>
-<span class="linenos">24</span><span class="sd">        myclass.dothismethod('with this argument')</span>
-<span class="linenos">25</span><span class="sd">        myclass.flush()</span>
-<span class="linenos">26</span>
-<span class="linenos">27</span><span class="sd">        print(myclass)</span>
-<span class="linenos">28</span>
-<span class="linenos">29</span>
-<span class="linenos">30</span><span class="sd">    Here is a link to :py:meth:`capitalize`.</span>
-<span class="linenos">31</span><span class="sd">    Here is a link to :py:meth:`__init__`.</span>
-<span class="linenos">32</span>
-<span class="linenos">33</span><span class="sd">    """</span>
-<span class="linenos">34</span>
-<span class="linenos">35</span>    <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
-<span class="linenos">36</span>    <span class="c1">#: It can have multiple lines.</span>
-<span class="linenos">37</span>    <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="linenos">38</span>
-<span class="linenos">39</span>    <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
-<span class="linenos">40</span>
+<div class="highlight-python notranslate"><div class="table-wrapper"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">"""Test Module for sphinx_rtd_theme."""</span>
+
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+
+    <span class="sd">"""Docstring for class Foo.</span>
+
+<span class="sd">    This text tests for the formatting of docstrings generated from output</span>
+<span class="sd">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<span class="sd">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
+<span class="sd">    and etc, but those will *always* have the ``.descname`` or</span>
+<span class="sd">    ``.descclassname`` class.</span>
+
+<span class="sd">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
+<span class="sd">    the same style as anything else with ````this type of markup````.</span>
+
+<span class="sd">    It's common for programmers to give a code example inside of their</span>
+<span class="sd">    docstring::</span>
+
+<span class="sd">        from test_py_module import Foo</span>
+
+<span class="sd">        myclass = Foo()</span>
+<span class="sd">        myclass.dothismethod('with this argument')</span>
+<span class="sd">        myclass.flush()</span>
+
+<span class="sd">        print(myclass)</span>
+
+
+<span class="sd">    Here is a link to :py:meth:`capitalize`.</span>
+<span class="sd">    Here is a link to :py:meth:`__init__`.</span>
+
+<span class="sd">    """</span>
+
+    <span class="c1">#: Doc comment for class attribute Foo.bar.</span>
+    <span class="c1">#: It can have multiple lines.</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">flox</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1">#: Doc comment for Foo.flox. One line only.</span>
+
 </pre></div>
-</div>
+</td></tr></table></div></div>
 </div>
 </div>
 </div>
@@ -758,5 +793,10 @@ with the “compound” directive.</p>
     </aside>
   </main>
 </div>
-  </body>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
 </html>
