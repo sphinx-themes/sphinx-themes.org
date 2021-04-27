@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ theme.display }} Demo -- failed to build</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+  </head>
+
+  <body class="antialiased max-w-4xl mx-auto p-4 my-2">
+    <h1 class="text-red-700 text-5xl text-center">
+      Build Failed!
+    </h1>
+    <div class="mt-2">
+      <div class="text-gray-700 text-center font-semibold">{{ now.strftime("%d %b %Y %H:%M:%S") }}</div>
+    </div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Configuration</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">
+        {{- theme.configuration -}}
+      </pre>
+    </div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Traceback</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">
+        {{- traceback -}}
+      </pre>
+    </div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Output</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">
+        {{- error -}}
+      </pre>
+    </div>
+  </body>
+
+</html>
