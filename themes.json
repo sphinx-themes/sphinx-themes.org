@@ -21,11 +21,6 @@
       "pypi": "sphinx-book-theme"
     },
     {
-      "config": "insegel",
-      "display": "Insegel",
-      "pypi": "insegel"
-    },
-    {
       "config": "press",
       "display": "Press",
       "pypi": "sphinx-press-theme"
@@ -34,6 +29,11 @@
       "config": "sphinx_celery",
       "display": "Celery",
       "pypi": "sphinx-celery"
+    },
+    {
+      "config": "insegel",
+      "display": "Insegel",
+      "pypi": "insegel"
     },
     {
       "config": {
