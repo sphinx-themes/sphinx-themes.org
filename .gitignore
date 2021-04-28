@@ -1,7 +1,9 @@
+# Automation
+.nox
+
 # Generated Files
-/build
 /public
-/.venv
+/build
 
 # Python stuff
 __pycache__

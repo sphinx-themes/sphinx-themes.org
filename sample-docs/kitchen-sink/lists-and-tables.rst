@@ -1,4 +1,3 @@
-
 **************
 Lists & Tables
 **************
@@ -192,10 +191,10 @@ Second list level
 
       heh heh. child. try to beat this embed:
 
-      .. literalinclude:: test_py_module/test.py
-          :language: python
+      .. literalinclude:: api.rst
+          :language: rst
           :linenos:
-          :lines: 1-10
+
   - and another. `yahoo <http://www.yahoo.com>`_
   - `yahoo <http://www.yahoo.com>`_
   - ``hi``
@@ -238,11 +237,11 @@ Hlists
 .. hlist::
     :columns: 2
 
-    - .. figure:: static/yi_jing_01_chien.jpg
+    - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
 
          This is a short caption for a figure.
 
-    - .. figure:: static/yi_jing_01_chien.jpg
+    - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
 
          This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.
@@ -336,11 +335,11 @@ List Tables
 
 .. list-table:: This is a list table with images in it.
 
-    * - .. figure:: static/yi_jing_01_chien.jpg
+    * - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
 
            This is a short caption for a figure.
 
-      - .. figure:: static/yi_jing_01_chien.jpg
+      - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
 
            This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
            Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.

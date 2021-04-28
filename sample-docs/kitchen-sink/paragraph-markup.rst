@@ -3,7 +3,7 @@
 
 .. demo.rst from: http://docutils.sourceforge.net/docs/user/rst/demo.txt
 
-.. |EXAMPLE| image:: static/yi_jing_01_chien.jpg
+.. |EXAMPLE| image:: https://source.unsplash.com/200x200/daily?cute+animals
    :width: 1em
 
 **********************
@@ -200,7 +200,7 @@ Sidebar
 
 .. sidebar:: Ch'ien / The Creative
 
-    .. image:: static/yi_jing_01_chien.jpg
+    .. image:: https://source.unsplash.com/200x200/daily?cute+animals
 
     *Above* CH'IEN THE CREATIVE, HEAVEN
 
@@ -225,11 +225,11 @@ Code with Sidebar
 
     With a sidebar on the right.
 
-.. literalinclude:: test_py_module/test.py
-    :language: python
+.. literalinclude:: api.rst
+    :language: rst
     :caption: Literal includes can also have captions.
     :linenos:
-    :lines: 1-40
+    :lines: 5-15
 
 References
 ==========
@@ -341,13 +341,13 @@ Images
 
 An image directive (also clickable -- a hyperlink reference):
 
-.. image:: static/yi_jing_01_chien.jpg
+.. image:: https://source.unsplash.com/200x200/daily?cute+animals
    :target: directives_
 
 Figures
 ^^^^^^^
 
-.. figure:: static/yi_jing_01_chien.jpg
+.. figure:: https://source.unsplash.com/200x200/daily?cute+animals
    :alt: reStructuredText, the markup syntax
 
    A figure is an image with a caption and/or a legend:
@@ -364,7 +364,7 @@ Figures
 
 A figure directive with center alignment
 
-.. figure:: static/yi_jing_01_chien.jpg
+.. figure:: https://source.unsplash.com/200x200/daily?cute+animals
    :align: center
 
    This caption should be centered.
@@ -470,4 +470,4 @@ with the "compound" directive.
 Download Links
 ==============
 
-:download:`This long long long long long long long long long long long long long long long download link should be blue, normal weight text with a leading icon, and should wrap white-spaces <static/yi_jing_01_chien.jpg>`
+:download:`This long long long long long long long long long long long long long long long download link should be blue, normal weight text with a leading icon, and should wrap white-spaces <https://source.unsplash.com/200x200/daily?cute+animals>`
