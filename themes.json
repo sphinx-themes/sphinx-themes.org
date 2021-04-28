@@ -21,6 +21,11 @@
       "pypi": "sphinx-book-theme"
     },
     {
+      "config": "pydata_sphinx_theme",
+      "display": "PyData",
+      "pypi": "pydata-sphinx-theme"
+    },
+    {
       "config": "press",
       "display": "Press",
       "pypi": "sphinx-press-theme"
