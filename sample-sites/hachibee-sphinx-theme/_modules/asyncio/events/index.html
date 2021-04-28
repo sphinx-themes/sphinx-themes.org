@@ -1,0 +1,911 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3c.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-style-type" content="text/css">
+        <meta http-equiv="content-script-type" content="text/javascript">
+        <meta name=generator content="Sphinx">
+        <meta name=viewport content="width=device-width,initial-scale=1.0">
+        
+        <title>asyncio.events &mdash; Hachibee</title>
+
+        
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/genericons.css" type="text/css" /><link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" /><link rel="stylesheet" href="../../../_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/mobile.css" type="text/css" media="only screen and (max-device-width: 568px)">
+        
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/backtop.js"></script>
+
+    </head>
+    <body>
+    <div class="content">
+        <header id="top-header">
+            <div class="left">
+    <ul class="breadcrumb">
+        <li>
+            <a href="../../../">Hachibee</a>
+             &raquo;
+        </li>
+        <li>
+            <a href="../../" accesskey="U">Module code</a>
+             &raquo;
+        </li> 
+    </ul>
+            </div>
+            <div class="right">
+                
+    <ul class="relative">
+      <li >
+            <a href="../../../genindex/" title="General Index"
+               class="icon-index"
+                accesskey="I"></a>
+        </li>
+      <li >
+            <a href="../../../py-modindex/" title="Python Module Index"
+               class="icon-modules"
+                ></a>
+        </li>
+    </ul>
+            </div>
+            <div class="clearer"></div>
+        </header>
+        
+
+        <div class="documentwrapper">
+        <div class="sidebarwrapper">
+            <div class="sidebar">
+                    <h3><a href="../../../">Top</a></h3><nav class="localtoc">
+</nav><div class="relative">
+</div>
+<div id="searchbox" style="display: none">
+  <h5>Quick search</h5>
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" placeholder=' quick search' />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            </div>
+        </div>
+            <div class="document">
+                <div class="body">
+                    
+    <h1>Source code for asyncio.events</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Event loop and event loop policy.&quot;&quot;&quot;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;AbstractEventLoopPolicy&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AbstractEventLoop&#39;</span><span class="p">,</span> <span class="s1">&#39;AbstractServer&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Handle&#39;</span><span class="p">,</span> <span class="s1">&#39;TimerHandle&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_event_loop_policy&#39;</span><span class="p">,</span> <span class="s1">&#39;set_event_loop_policy&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_event_loop&#39;</span><span class="p">,</span> <span class="s1">&#39;set_event_loop&#39;</span><span class="p">,</span> <span class="s1">&#39;new_event_loop&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_child_watcher&#39;</span><span class="p">,</span> <span class="s1">&#39;set_child_watcher&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_set_running_loop&#39;</span><span class="p">,</span> <span class="s1">&#39;get_running_loop&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_get_running_loop&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">contextvars</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">format_helpers</span>
+
+
+<span class="k">class</span> <span class="nc">Handle</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Object returned by callback registration methods.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_callback&#39;</span><span class="p">,</span> <span class="s1">&#39;_args&#39;</span><span class="p">,</span> <span class="s1">&#39;_cancelled&#39;</span><span class="p">,</span> <span class="s1">&#39;_loop&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_source_traceback&#39;</span><span class="p">,</span> <span class="s1">&#39;_repr&#39;</span><span class="p">,</span> <span class="s1">&#39;__weakref__&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_context&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">context</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">context</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">copy_context</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_context</span> <span class="o">=</span> <span class="n">context</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span> <span class="o">=</span> <span class="n">callback</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="o">.</span><span class="n">get_debug</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span> <span class="o">=</span> <span class="n">format_helpers</span><span class="o">.</span><span class="n">extract_stack</span><span class="p">(</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">_getframe</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_repr_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span><span class="p">:</span>
+            <span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;cancelled&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">format_helpers</span><span class="o">.</span><span class="n">_format_callback_source</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span><span class="p">:</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;created at </span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">info</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr_info</span><span class="p">()</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">info</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="o">.</span><span class="n">get_debug</span><span class="p">():</span>
+                <span class="c1"># Keep a representation in debug mode to keep callback and</span>
+                <span class="c1"># parameters. For example, to log the warning</span>
+                <span class="c1"># &quot;Executing &lt;Handle...&gt; took 2.5 second&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">cancelled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span>
+
+    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_callback</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">SystemExit</span><span class="p">,</span> <span class="ne">KeyboardInterrupt</span><span class="p">):</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="n">cb</span> <span class="o">=</span> <span class="n">format_helpers</span><span class="o">.</span><span class="n">_format_callback_source</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Exception in callback </span><span class="si">{</span><span class="n">cb</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="n">msg</span><span class="p">,</span>
+                <span class="s1">&#39;exception&#39;</span><span class="p">:</span> <span class="n">exc</span><span class="p">,</span>
+                <span class="s1">&#39;handle&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="p">,</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span><span class="p">:</span>
+                <span class="n">context</span><span class="p">[</span><span class="s1">&#39;source_traceback&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="o">.</span><span class="n">call_exception_handler</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+        <span class="bp">self</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Needed to break cycles when an exception occurs.</span>
+
+
+<span class="k">class</span> <span class="nc">TimerHandle</span><span class="p">(</span><span class="n">Handle</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Object returned by timed callback registration methods.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_scheduled&#39;</span><span class="p">,</span> <span class="s1">&#39;_when&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">when</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_traceback</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">=</span> <span class="n">when</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scheduled</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_repr_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_repr_info</span><span class="p">()</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="n">info</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;when=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_when</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">info</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_when</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TimerHandle</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">_when</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="fm">__le__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TimerHandle</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">_when</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TimerHandle</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">_when</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="fm">__ge__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TimerHandle</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">_when</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TimerHandle</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_when</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_when</span> <span class="ow">and</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_callback</span> <span class="ow">and</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_args</span> <span class="ow">and</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_cancelled</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cancelled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="o">.</span><span class="n">_timer_handle_cancelled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">when</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a scheduled callback time.</span>
+
+<span class="sd">        The time is an absolute timestamp, using the same time</span>
+<span class="sd">        reference as loop.time().</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_when</span>
+
+
+<span class="k">class</span> <span class="nc">AbstractServer</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstract server returned by create_server().&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop serving.  This leaves existing connections open.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">get_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the event loop the Server object is attached to.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">is_serving</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return True if the server is accepting connections.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start_serving</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start accepting connections.</span>
+
+<span class="sd">        This method is idempotent, so it can be called when</span>
+<span class="sd">        the server is already being serving.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">serve_forever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start accepting connections until the coroutine is cancelled.</span>
+
+<span class="sd">        The server is closed when the coroutine is cancelled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">wait_closed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Coroutine to wait until service is closed.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="fm">__aenter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="fm">__aexit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">exc</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_closed</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="AbstractEventLoop"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop">[docs]</a><span class="k">class</span> <span class="nc">AbstractEventLoop</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstract event loop.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Running and stopping the event loop.</span>
+
+<div class="viewcode-block" id="AbstractEventLoop.run_forever"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.run_forever">[docs]</a>    <span class="k">def</span> <span class="nf">run_forever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Run the event loop until stop() is called.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.run_until_complete"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.run_until_complete">[docs]</a>    <span class="k">def</span> <span class="nf">run_until_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Run the event loop until a Future is done.</span>
+
+<span class="sd">        Return the Future&#39;s result, or raise its exception.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.stop"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop the event loop as soon as reasonable.</span>
+
+<span class="sd">        Exactly how soon that is may depend on the implementation, but</span>
+<span class="sd">        no more I/O callbacks should be scheduled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.is_running"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.is_running">[docs]</a>    <span class="k">def</span> <span class="nf">is_running</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return whether the event loop is currently running.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.is_closed"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.is_closed">[docs]</a>    <span class="k">def</span> <span class="nf">is_closed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns True if the event loop was closed.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.close"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Close the loop.</span>
+
+<span class="sd">        The loop should not be running.</span>
+
+<span class="sd">        This is idempotent and irreversible.</span>
+
+<span class="sd">        No other methods should be called after this one.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.shutdown_asyncgens"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.shutdown_asyncgens">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">shutdown_asyncgens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shutdown all active asynchronous generators.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.shutdown_default_executor"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.shutdown_default_executor">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">shutdown_default_executor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Schedule the shutdown of the default executor.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+    <span class="c1"># Methods scheduling callbacks.  All these return Handles.</span>
+
+    <span class="k">def</span> <span class="nf">_timer_handle_cancelled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handle</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Notification that a TimerHandle has been cancelled.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">call_soon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_later</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">call_later</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">call_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">create_future</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Method scheduling a coroutine object: create a task.</span>
+
+    <span class="k">def</span> <span class="nf">create_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coro</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Methods for interacting with threads.</span>
+
+    <span class="k">def</span> <span class="nf">call_soon_threadsafe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">run_in_executor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">set_default_executor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">executor</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Network I/O methods returning Futures.</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">getaddrinfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                          <span class="n">family</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">getnameinfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sockaddr</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_connection</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span> <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">local_addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">server_hostname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">happy_eyeballs_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interleave</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<div class="viewcode-block" id="AbstractEventLoop.create_server"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.create_server">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_server</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_UNSPEC</span><span class="p">,</span>
+            <span class="n">flags</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AI_PASSIVE</span><span class="p">,</span> <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backlog</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reuse_address</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reuse_port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">start_serving</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A coroutine which creates a TCP server bound to host and port.</span>
+
+<span class="sd">        The return value is a Server object which can be used to stop</span>
+<span class="sd">        the service.</span>
+
+<span class="sd">        If host is an empty string or None all interfaces are assumed</span>
+<span class="sd">        and a list of multiple sockets will be returned (most likely</span>
+<span class="sd">        one for IPv4 and another one for IPv6). The host parameter can also be</span>
+<span class="sd">        a sequence (e.g. list) of hosts to bind to.</span>
+
+<span class="sd">        family can be set to either AF_INET or AF_INET6 to force the</span>
+<span class="sd">        socket to use IPv4 or IPv6. If not set it will be determined</span>
+<span class="sd">        from host (defaults to AF_UNSPEC).</span>
+
+<span class="sd">        flags is a bitmask for getaddrinfo().</span>
+
+<span class="sd">        sock can optionally be specified in order to use a preexisting</span>
+<span class="sd">        socket object.</span>
+
+<span class="sd">        backlog is the maximum number of queued connections passed to</span>
+<span class="sd">        listen() (defaults to 100).</span>
+
+<span class="sd">        ssl can be set to an SSLContext to enable SSL over the</span>
+<span class="sd">        accepted connections.</span>
+
+<span class="sd">        reuse_address tells the kernel to reuse a local socket in</span>
+<span class="sd">        TIME_WAIT state, without waiting for its natural timeout to</span>
+<span class="sd">        expire. If not specified will automatically be set to True on</span>
+<span class="sd">        UNIX.</span>
+
+<span class="sd">        reuse_port tells the kernel to allow this endpoint to be bound to</span>
+<span class="sd">        the same port as other existing endpoints are bound to, so long as</span>
+<span class="sd">        they all set this flag when being created. This option is not</span>
+<span class="sd">        supported on Windows.</span>
+
+<span class="sd">        ssl_handshake_timeout is the time in seconds that an SSL server</span>
+<span class="sd">        will wait for completion of the SSL handshake before aborting the</span>
+<span class="sd">        connection. Default is 60s.</span>
+
+<span class="sd">        start_serving set to True (default) causes the created server</span>
+<span class="sd">        to start accepting connections immediately.  When set to False,</span>
+<span class="sd">        the user should await Server.start_serving() or Server.serve_forever()</span>
+<span class="sd">        to make the server to start accepting connections.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.sendfile"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.sendfile">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">sendfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="o">*</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send a file through a transport.</span>
+
+<span class="sd">        Return an amount of sent bytes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.start_tls"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.start_tls">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">start_tls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">sslcontext</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                        <span class="n">server_side</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">server_hostname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                        <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Upgrade a transport to TLS.</span>
+
+<span class="sd">        Return a new transport that *protocol* should start using</span>
+<span class="sd">        immediately.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_unix_connection</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+            <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">server_hostname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<div class="viewcode-block" id="AbstractEventLoop.create_unix_server"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.create_unix_server">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_unix_server</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+            <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backlog</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">start_serving</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A coroutine which creates a UNIX Domain Socket server.</span>
+
+<span class="sd">        The return value is a Server object, which can be used to stop</span>
+<span class="sd">        the service.</span>
+
+<span class="sd">        path is a str, representing a file system path to bind the</span>
+<span class="sd">        server socket to.</span>
+
+<span class="sd">        sock can optionally be specified in order to use a preexisting</span>
+<span class="sd">        socket object.</span>
+
+<span class="sd">        backlog is the maximum number of queued connections passed to</span>
+<span class="sd">        listen() (defaults to 100).</span>
+
+<span class="sd">        ssl can be set to an SSLContext to enable SSL over the</span>
+<span class="sd">        accepted connections.</span>
+
+<span class="sd">        ssl_handshake_timeout is the time in seconds that an SSL server</span>
+<span class="sd">        will wait for the SSL handshake to complete (defaults to 60s).</span>
+
+<span class="sd">        start_serving set to True (default) causes the created server</span>
+<span class="sd">        to start accepting connections immediately.  When set to False,</span>
+<span class="sd">        the user should await Server.start_serving() or Server.serve_forever()</span>
+<span class="sd">        to make the server to start accepting connections.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.create_datagram_endpoint"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.create_datagram_endpoint">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_datagram_endpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span>
+                                       <span class="n">local_addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remote_addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                                       <span class="n">family</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                       <span class="n">reuse_address</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reuse_port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                       <span class="n">allow_broadcast</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A coroutine which creates a datagram endpoint.</span>
+
+<span class="sd">        This method will try to establish the endpoint in the background.</span>
+<span class="sd">        When successful, the coroutine returns a (transport, protocol) pair.</span>
+
+<span class="sd">        protocol_factory must be a callable returning a protocol instance.</span>
+
+<span class="sd">        socket family AF_INET, socket.AF_INET6 or socket.AF_UNIX depending on</span>
+<span class="sd">        host (or family if specified), socket type SOCK_DGRAM.</span>
+
+<span class="sd">        reuse_address tells the kernel to reuse a local socket in</span>
+<span class="sd">        TIME_WAIT state, without waiting for its natural timeout to</span>
+<span class="sd">        expire. If not specified it will automatically be set to True on</span>
+<span class="sd">        UNIX.</span>
+
+<span class="sd">        reuse_port tells the kernel to allow this endpoint to be bound to</span>
+<span class="sd">        the same port as other existing endpoints are bound to, so long as</span>
+<span class="sd">        they all set this flag when being created. This option is not</span>
+<span class="sd">        supported on Windows and some UNIX&#39;s. If the</span>
+<span class="sd">        :py:data:`~socket.SO_REUSEPORT` constant is not defined then this</span>
+<span class="sd">        capability is unsupported.</span>
+
+<span class="sd">        allow_broadcast tells the kernel to allow this endpoint to send</span>
+<span class="sd">        messages to the broadcast address.</span>
+
+<span class="sd">        sock can optionally be specified in order to use a preexisting</span>
+<span class="sd">        socket object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+    <span class="c1"># Pipes and subprocesses.</span>
+
+<div class="viewcode-block" id="AbstractEventLoop.connect_read_pipe"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.connect_read_pipe">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect_read_pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Register read pipe in event loop. Set the pipe to non-blocking mode.</span>
+
+<span class="sd">        protocol_factory should instantiate object with Protocol interface.</span>
+<span class="sd">        pipe is a file-like object.</span>
+<span class="sd">        Return pair (transport, protocol), where transport supports the</span>
+<span class="sd">        ReadTransport interface.&quot;&quot;&quot;</span>
+        <span class="c1"># The reason to accept file-like object instead of just file descriptor</span>
+        <span class="c1"># is: we need to own pipe and close it at transport finishing</span>
+        <span class="c1"># Can got complicated errors if pass f.fileno(),</span>
+        <span class="c1"># close fd in pipe transport then close f and vise versa.</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="AbstractEventLoop.connect_write_pipe"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.connect_write_pipe">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect_write_pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Register write pipe in event loop.</span>
+
+<span class="sd">        protocol_factory should instantiate object with BaseProtocol interface.</span>
+<span class="sd">        Pipe is file-like object already switched to nonblocking.</span>
+<span class="sd">        Return pair (transport, protocol), where transport support</span>
+<span class="sd">        WriteTransport interface.&quot;&quot;&quot;</span>
+        <span class="c1"># The reason to accept file-like object instead of just file descriptor</span>
+        <span class="c1"># is: we need to own pipe and close it at transport finishing</span>
+        <span class="c1"># Can got complicated errors if pass f.fileno(),</span>
+        <span class="c1"># close fd in pipe transport then close f and vise versa.</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">subprocess_shell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                               <span class="n">stdin</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                               <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                               <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                               <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">subprocess_exec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                              <span class="n">stdin</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                              <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                              <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Ready-based callback registration methods.</span>
+    <span class="c1"># The add_*() methods return None.</span>
+    <span class="c1"># The remove_*() methods return True if something was removed,</span>
+    <span class="c1"># False if there was nothing to delete.</span>
+
+    <span class="k">def</span> <span class="nf">add_reader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">remove_reader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fd</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">add_writer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">remove_writer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fd</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Completion based I/O methods returning Futures.</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_recv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_recv_into</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">buf</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_sendall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">address</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sock_sendfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                            <span class="o">*</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Signal handling.</span>
+
+    <span class="k">def</span> <span class="nf">add_signal_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">remove_signal_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Task factory.</span>
+
+    <span class="k">def</span> <span class="nf">set_task_factory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factory</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">get_task_factory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Error handlers.</span>
+
+    <span class="k">def</span> <span class="nf">get_exception_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">set_exception_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handler</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">default_exception_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">call_exception_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Debug flag management.</span>
+
+    <span class="k">def</span> <span class="nf">get_debug</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">set_debug</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+<span class="k">class</span> <span class="nc">AbstractEventLoopPolicy</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Abstract policy for accessing the event loop.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the event loop for the current context.</span>
+
+<span class="sd">        Returns an event loop object implementing the BaseEventLoop interface,</span>
+<span class="sd">        or raises an exception in case no event loop has been set for the</span>
+<span class="sd">        current context and the current policy does not specify to create one.</span>
+
+<span class="sd">        It should never return None.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">set_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the event loop for the current context to loop.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">new_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create and return a new event loop object according to this</span>
+<span class="sd">        policy&#39;s rules. If there&#39;s need to set this loop as the event loop for</span>
+<span class="sd">        the current context, set_event_loop must be called explicitly.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># Child processes handling (Unix only).</span>
+
+    <span class="k">def</span> <span class="nf">get_child_watcher</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Get the watcher for child processes.&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">set_child_watcher</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watcher</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the watcher for child processes.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+
+<span class="k">class</span> <span class="nc">BaseDefaultEventLoopPolicy</span><span class="p">(</span><span class="n">AbstractEventLoopPolicy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Default policy implementation for accessing the event loop.</span>
+
+<span class="sd">    In this policy, each thread has its own event loop.  However, we</span>
+<span class="sd">    only automatically create an event loop by default for the main</span>
+<span class="sd">    thread; other threads by default have no event loop.</span>
+
+<span class="sd">    Other policies may have different rules (e.g. a single global</span>
+<span class="sd">    event loop, or automatically creating an event loop per thread, or</span>
+<span class="sd">    using some other notion of context to which an event loop is</span>
+<span class="sd">    associated).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_loop_factory</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">class</span> <span class="nc">_Local</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">):</span>
+        <span class="n">_loop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">_set_called</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_local</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Local</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the event loop for the current context.</span>
+
+<span class="sd">        Returns an instance of EventLoop or raises an exception.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_loop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+                <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_set_called</span> <span class="ow">and</span>
+                <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span> <span class="ow">is</span> <span class="n">threading</span><span class="o">.</span><span class="n">main_thread</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_loop</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;There is no current event loop in thread </span><span class="si">%r</span><span class="s1">.&#39;</span>
+                               <span class="o">%</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_loop</span>
+
+    <span class="k">def</span> <span class="nf">set_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the event loop.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_set_called</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">assert</span> <span class="n">loop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">AbstractEventLoop</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_local</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span>
+
+    <span class="k">def</span> <span class="nf">new_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a new event loop.</span>
+
+<span class="sd">        You must call set_event_loop() to make this the current event</span>
+<span class="sd">        loop.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_factory</span><span class="p">()</span>
+
+
+<span class="c1"># Event loop policy.  The policy itself is always global, even if the</span>
+<span class="c1"># policy&#39;s rules say that there is an event loop per thread (or other</span>
+<span class="c1"># notion of context).  The default policy is installed by the first</span>
+<span class="c1"># call to get_event_loop_policy().</span>
+<span class="n">_event_loop_policy</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Lock for protecting the on-the-fly creation of the event loop policy.</span>
+<span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+
+<span class="c1"># A TLS for the running event loop, used by _get_running_loop.</span>
+<span class="k">class</span> <span class="nc">_RunningLoop</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">):</span>
+    <span class="n">loop_pid</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="n">_running_loop</span> <span class="o">=</span> <span class="n">_RunningLoop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">get_running_loop</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return the running event loop.  Raise a RuntimeError if there is none.</span>
+
+<span class="sd">    This function is thread-specific.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># NOTE: this function is implemented in C (see _asynciomodule.c)</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="n">_get_running_loop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">loop</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;no running event loop&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loop</span>
+
+
+<span class="k">def</span> <span class="nf">_get_running_loop</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return the running event loop or None.</span>
+
+<span class="sd">    This is a low-level function intended to be used by event loops.</span>
+<span class="sd">    This function is thread-specific.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># NOTE: this function is implemented in C (see _asynciomodule.c)</span>
+    <span class="n">running_loop</span><span class="p">,</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">_running_loop</span><span class="o">.</span><span class="n">loop_pid</span>
+    <span class="k">if</span> <span class="n">running_loop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">pid</span> <span class="o">==</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">running_loop</span>
+
+
+<span class="k">def</span> <span class="nf">_set_running_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set the running event loop.</span>
+
+<span class="sd">    This is a low-level function intended to be used by event loops.</span>
+<span class="sd">    This function is thread-specific.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># NOTE: this function is implemented in C (see _asynciomodule.c)</span>
+    <span class="n">_running_loop</span><span class="o">.</span><span class="n">loop_pid</span> <span class="o">=</span> <span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
+
+
+<span class="k">def</span> <span class="nf">_init_event_loop_policy</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_event_loop_policy</span>
+    <span class="k">with</span> <span class="n">_lock</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">_event_loop_policy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pragma: no branch</span>
+            <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">DefaultEventLoopPolicy</span>
+            <span class="n">_event_loop_policy</span> <span class="o">=</span> <span class="n">DefaultEventLoopPolicy</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">get_event_loop_policy</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Get the current event loop policy.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">_event_loop_policy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_init_event_loop_policy</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">_event_loop_policy</span>
+
+
+<span class="k">def</span> <span class="nf">set_event_loop_policy</span><span class="p">(</span><span class="n">policy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set the current event loop policy.</span>
+
+<span class="sd">    If policy is None, the default policy is restored.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_event_loop_policy</span>
+    <span class="k">assert</span> <span class="n">policy</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">AbstractEventLoopPolicy</span><span class="p">)</span>
+    <span class="n">_event_loop_policy</span> <span class="o">=</span> <span class="n">policy</span>
+
+
+<span class="k">def</span> <span class="nf">get_event_loop</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return an asyncio event loop.</span>
+
+<span class="sd">    When called from a coroutine or a callback (e.g. scheduled with call_soon</span>
+<span class="sd">    or similar API), this function will always return the running event loop.</span>
+
+<span class="sd">    If there is no running event loop set, the function will return</span>
+<span class="sd">    the result of `get_event_loop_policy().get_event_loop()` call.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># NOTE: this function is implemented in C (see _asynciomodule.c)</span>
+    <span class="n">current_loop</span> <span class="o">=</span> <span class="n">_get_running_loop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_loop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">current_loop</span>
+    <span class="k">return</span> <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">set_event_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Equivalent to calling get_event_loop_policy().set_event_loop(loop).&quot;&quot;&quot;</span>
+    <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">new_event_loop</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Equivalent to calling get_event_loop_policy().new_event_loop().&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">get_child_watcher</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Equivalent to calling get_event_loop_policy().get_child_watcher().&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">get_child_watcher</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">set_child_watcher</span><span class="p">(</span><span class="n">watcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Equivalent to calling</span>
+<span class="sd">    get_event_loop_policy().set_child_watcher(watcher).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">set_child_watcher</span><span class="p">(</span><span class="n">watcher</span><span class="p">)</span>
+
+
+<span class="c1"># Alias pure-Python implementations for testing purposes.</span>
+<span class="n">_py__get_running_loop</span> <span class="o">=</span> <span class="n">_get_running_loop</span>
+<span class="n">_py__set_running_loop</span> <span class="o">=</span> <span class="n">_set_running_loop</span>
+<span class="n">_py_get_running_loop</span> <span class="o">=</span> <span class="n">get_running_loop</span>
+<span class="n">_py_get_event_loop</span> <span class="o">=</span> <span class="n">get_event_loop</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># get_event_loop() is one of the most frequently called</span>
+    <span class="c1"># functions in asyncio.  Pure Python implementation is</span>
+    <span class="c1"># about 4 times slower than C-accelerated.</span>
+    <span class="kn">from</span> <span class="nn">_asyncio</span> <span class="kn">import</span> <span class="p">(</span><span class="n">_get_running_loop</span><span class="p">,</span> <span class="n">_set_running_loop</span><span class="p">,</span>
+                          <span class="n">get_running_loop</span><span class="p">,</span> <span class="n">get_event_loop</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Alias C implementations for testing purposes.</span>
+    <span class="n">_c__get_running_loop</span> <span class="o">=</span> <span class="n">_get_running_loop</span>
+    <span class="n">_c__set_running_loop</span> <span class="o">=</span> <span class="n">_set_running_loop</span>
+    <span class="n">_c_get_running_loop</span> <span class="o">=</span> <span class="n">get_running_loop</span>
+    <span class="n">_c_get_event_loop</span> <span class="o">=</span> <span class="n">get_event_loop</span>
+</pre></div>
+    <div id="raise-top"></div>
+
+                </div>
+            </div> <!-- document -->
+
+
+        </div> <!-- documentwrapper -->
+        <footer>
+            <p class="show-copyright">
+                &copy; Copyright 2021, Pradyun Gedam.
+            </p>
+            <p class="show-sphinx">
+              Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.0.0b1.
+            </p>
+            
+              <p class="theme-info"><a href="https://pypi.python.org/pypi/hachibee-sphinx-theme">Sphinx-hachibee-theme</a> is hosted on <a href="https://github.com/hachibeeDI/Sphinx-hachibee-theme">Github</a></p>
+            
+        </footer>
+    </div>
+    <script type="text/javascript" src="../../../_static/main.js" async></script>
+    </body>
+</html>

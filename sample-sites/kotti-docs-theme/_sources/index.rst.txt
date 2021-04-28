@@ -1,62 +1,33 @@
-===========================
-Sample Sphinx Documentation
-===========================
+====================
+|theme_display| Demo
+====================
 
-This is a *very* rudimentary sample page for Sphinx based documentation.
+This demo documentation showcases how the content is stylized by |theme_display| (from the package |theme_pypi_link|).
 
-In case you're looking for a lot of fairly extensive pages, that stretch the
-theme in as many reasonable ways as possible, consider scrolling right to the
-end of this page and looking at the Demo Documentation below.
-
-Quick Inline Markup Demo
-========================
-
-Inline markup in reStructuredText is pretty powerful. You can have *emphasis*,
-**strong emphasis**, ``inline literals``, external hyperlinks with embedded
-URIs (`Python web site <http://www.python.org>`__) standalone hyperlinks
-(http://www.python.org), footnote references [1]_ and so much more. Sometimes,
-you even have some |problematic| text that doesn't do the right things but
-Sphinx still builds your page.
-
-Often, you'll have multiple paragraphs of text in your documentation, possibly
-an explanation how stuff works. Here are some explicit interpreted text roles:
-a PEP reference (:PEP:`287`); a :sub:`subscript`; a :sup:`superscript`; and
-explicit roles for :emphasis:`standard` :strong:`inline` :literal:`markup`.
+If this is the first theme you're looking at, you'll want to look at the pages within the :doc:`kitchen-sink/index` section. Those pages contain nearly all the elements that Sphinx supports out-of-the-box, and should give you a good idea of how stuff looks in this theme.
 
 .. note::
-    You may want to know what admonitions look like.
 
-.. important::
-    I just wanted to interrupt your very relevant insight, to assert my
-    importance.
+    This was generated on |today|.
 
-Or, maybe, you want to present a code block to the user.
+.. toctree::
 
-.. code-block:: python
-    :linenos:
-    :emphasize-lines: 6,9
-
-    """Just a small code example"""
-
-    class Demo:
-        def __init__(self):
-            super().__init__()
-            self.ready = True
-
-        def how_ready_are_we(self) -> str:
-            return "very" if self.ready else "not at all"
+    placeholder-one
+    placeholder-two
+    placeholder-three
 
 .. toctree::
     :maxdepth: 2
-    :caption: Demo Documentation
+    :caption: Using this theme
 
-    demo/structure
-    demo/demo
-    demo/lists_tables
-    demo/api
+    quickstart
+    kitchen-sink/index
 
 .. toctree::
-    :maxdepth: 3
-    :caption: This is an incredibly long caption for a long menu
+    :hidden:
+    :caption: Additional Pages
 
-    demo/long
+    long-page
+    Sphinx Theme Gallery <https://sphinx-themes.org>
+    really-long-title
+    placeholder-four

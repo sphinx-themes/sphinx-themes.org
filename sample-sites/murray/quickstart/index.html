@@ -1,0 +1,186 @@
+<!doctype html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Quickstart</title>
+    
+
+    
+    
+    
+    
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+    <link rel="stylesheet"
+          href="../_static/css/normalize.min.css"
+          type="text/css"
+          />
+    <link rel="stylesheet"
+          href="../_static/css/main.css"
+          type="text/css"
+          />
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+
+    
+
+    <script src="../_static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+    </script>
+    <link rel="index" title="Index"
+                      href="../genindex/"/>
+    <link rel="search" title="Search" href="../search/"/>
+    <link rel="top" title="Murray" href="../"/>
+    <link rel="next" title="Kitchen Sink" href="../kitchen-sink/"/>
+    <link rel="prev" title="Placeholder Page Three" href="../placeholder-three/"/>
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        SOURCELINK_SUFFIX: '.txt',
+        HAS_SOURCE: true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script> 
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="nav-wrapper">
+
+      <div class="main-nav">
+        <h1>
+          <a href="../">
+            Sphinx Themes Sample
+          </a>
+        </h1>
+        <div class="next-prev">
+          <a title="Placeholder Page Three" href="../placeholder-three/">Placeholder Page Three</a> | 
+          <a title="Kitchen Sink" href="../kitchen-sink/">Kitchen Sink</a>
+        </div>
+      </div>
+
+      <label for="sidebartoggler" class="toggle">
+        <div class="ribbon"><div>≡</div></div>
+      </label>
+
+      <input type="checkbox" id="sidebartoggler" name="" value="">
+
+      <div class="nav">
+        <header class="wrapper clearfix">
+          <nav>
+            
+            
+            
+            
+            
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-three/">Placeholder Page Three</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using this theme</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kitchen-sink/">Kitchen Sink</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Additional Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-four/">Placeholder Page Four</a></li>
+</ul>
+
+            
+            
+            <ul>
+              <li>
+                <a href="../search/">Search</a>
+              </li>
+              <li>
+                <a href="../genindex/">Index</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix">
+        <article>
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install murray
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">murray</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;murray&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">murray</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation.</p></li>
+<li><p>Done!</p></li>
+</ol>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you hit an error in step 3 above (and not with the previous theme),
+that’s likely because you have some theme-specific configuration in your
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.</p>
+<p>Some theme-specific configuration options might not work if you’re changing
+the theme for existing documentation. Common tripping points include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>, since it depends on theme-specific <code class="docutils literal notranslate"><span class="pre">.html</span></code> files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code>, since it depends on theme-specific configuration options</p></li>
+</ul>
+<p>Certain extensions may misbehave with certain themes. It is a good idea to
+check that your extensions work as expected.</p>
+</div>
+</div>
+
+
+        </article>
+      </div> <!-- #main -->
+    </div> <!-- #main-container -->
+
+    <div class="footer-container">
+      <footer class="wrapper">
+        <div class="next-prev">
+          <a title="Placeholder Page Three" href="../placeholder-three/">Placeholder Page Three</a> | 
+          <a title="Kitchen Sink" href="../kitchen-sink/">Kitchen Sink</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../_static/js/main.js"></script>
+  </body>
+</html>

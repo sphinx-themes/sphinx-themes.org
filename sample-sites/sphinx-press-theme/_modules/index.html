@@ -23,13 +23,13 @@
       <script src="../_static/theme-vendors.js"></script>
       <script src="../_static/theme.js" defer></script>
     
-  <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="search" title="Search" href="../search.html" /> 
+  <link rel="index" title="Index" href="../genindex/" />
+  <link rel="search" title="Search" href="../search/" /> 
   </head>
 
   <body>
     <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
-  <router-link to="../index.html" class="home-link">
+  <router-link to="../" class="home-link">
     
       <span class="site-name">Sphinx Themes Sample</span>
     
@@ -40,16 +40,23 @@
 
   
     <div class="nav-item">
-      <a href="../index.html#quick-inline-markup-demo"
+      <a href="../#theme-display-demo"
          class="nav-link ">
-         Demo Documentation
+         theme_display demo
       </a>
     </div>
   
     <div class="nav-item">
-      <a href="../index.html#quick-inline-markup-demo"
+      <a href="../#theme-display-demo"
          class="nav-link ">
-         This is an incredibly long caption for a long menu
+         Using this theme
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../#theme-display-demo"
+         class="nav-link ">
+         Additional Pages
       </a>
     </div>
   
@@ -70,16 +77,23 @@
 
   
     <div class="nav-item">
-      <a href="../index.html#quick-inline-markup-demo"
+      <a href="../#theme-display-demo"
          class="nav-link ">
-         Demo Documentation
+         theme_display demo
       </a>
     </div>
   
     <div class="nav-item">
-      <a href="../index.html#quick-inline-markup-demo"
+      <a href="../#theme-display-demo"
          class="nav-link ">
-         This is an incredibly long caption for a long menu
+         Using this theme
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../#theme-display-demo"
+         class="nav-link ">
+         Additional Pages
       </a>
     </div>
   
@@ -90,7 +104,7 @@
           </navlinks><div id="searchbox" class="searchbox" role="search">
   <div class="caption"><span class="caption-text">Quick search</span>
     <div class="searchformwrapper">
-      <form class="search" action="../search.html" method="get">
+      <form class="search" action="../search/" method="get">
         <input type="text" name="q" />
         <input type="submit" value="Search" />
         <input type="hidden" name="check_keywords" value="yes" />
@@ -102,29 +116,23 @@
   
     <div class="sidebar-group">
       <p class="caption">
-        <span class="caption-text"><a href="../index.html#quick-inline-markup-demo">Demo Documentation</a></span>
+        <span class="caption-text"><a href="../#theme-display-demo">theme_display demo</a></span>
       </p>
       <ul class="">
         
-          <li class="toctree-l1 "><a href="../demo/structure.html" class="reference internal ">Structural Elements</a>
+          <li class="toctree-l1 "><a href="../placeholder-one/" class="reference internal ">Placeholder Page One</a>
 
             
           </li>
 
         
-          <li class="toctree-l1 "><a href="../demo/demo.html" class="reference internal ">Paragraph Level Markup</a>
+          <li class="toctree-l1 "><a href="../placeholder-two/" class="reference internal ">Placeholder Page Two</a>
 
             
           </li>
 
         
-          <li class="toctree-l1 "><a href="../demo/lists_tables.html" class="reference internal ">Lists & Tables</a>
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 "><a href="../demo/api.html" class="reference internal ">API documentation and generated content</a>
+          <li class="toctree-l1 "><a href="../placeholder-three/" class="reference internal ">Placeholder Page Three</a>
 
             
           </li>
@@ -135,11 +143,50 @@
   
     <div class="sidebar-group">
       <p class="caption">
-        <span class="caption-text"><a href="../index.html#quick-inline-markup-demo">This is an incredibly long caption for a long menu</a></span>
+        <span class="caption-text"><a href="../#theme-display-demo">Using this theme</a></span>
       </p>
       <ul class="">
         
-          <li class="toctree-l1 "><a href="../demo/long.html" class="reference internal ">Long Sticky Nav</a>
+          <li class="toctree-l1 "><a href="../quickstart/" class="reference internal ">Quickstart</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../kitchen-sink/" class="reference internal ">Kitchen Sink</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../#theme-display-demo">Additional Pages</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../long-page/" class="reference internal ">Long Page</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../https://sphinx-themes.org/" class="reference internal ">Sphinx Theme Gallery</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../really-long-title/" class="reference internal ">This is just a page with a really long title for checking how the theme handles these situations</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../placeholder-four/" class="reference internal ">Placeholder Page Four</a>
 
             
           </li>
@@ -155,7 +202,7 @@
           <div class="body-header" role="navigation" aria-label="navigation">
   
   <ul class="breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
+    <li><a href="../">Docs</a> &raquo;</li>
     
     <li>Overview: module code</li>
   </ul>
@@ -169,14 +216,16 @@
           <div class="content" role="main">
             
   <h1>All modules for which code is available</h1>
-<ul><li><a href="test_py_module/test.html">test_py_module.test</a></li>
+<ul><li><a href="asyncio/events/">asyncio.events</a></li>
+<li><a href="asyncio/runners/">asyncio.runners</a></li>
+<li><a href="asyncio/tasks/">asyncio.tasks</a></li>
 </ul>
 
           </div>
           <div class="page-nav">
             <div class="inner"><ul class="page-nav">
 </ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2020, Pradyun Gedam.
+      &#169; Copyright 2021, Pradyun Gedam.
     <br>
     Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.0b1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>

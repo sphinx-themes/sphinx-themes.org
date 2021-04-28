@@ -5,33 +5,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Sphinx Documentation &#8212; Sphinx Themes Sample</title>
+    <title>Better Demo &#8212; Better</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/better.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structural Elements" href="demo/structure.html" />
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Placeholder Page One" href="placeholder-one/" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head><body>
     <header id="pageheader"><h1><a href="# ">
-        Sphinx Themes Sample
+        Better
     </a></h1></header>
   <div class="related top">
   <nav id="rellinks">
     <ul>
         <li>
-          <a href="demo/structure.html" title="Next document">Structural Elements</a>
+          <a href="placeholder-one/" title="Next document">Placeholder Page One</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="#">Sphinx Themes Sample</a></li> 
+      <li><a href="#">Better</a></li> 
     </ul>
   </nav>
   </div>  
@@ -41,127 +41,37 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="sample-sphinx-documentation">
-<h1>Sample Sphinx Documentation<a class="headerlink" href="#sample-sphinx-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This is a <em>very</em> rudimentary sample page for Sphinx based documentation.</p>
-<p>In case you’re looking for a lot of fairly extensive pages, that stretch the
-theme in as many reasonable ways as possible, consider scrolling right to the
-end of this page and looking at the Demo Documentation below.</p>
-<div class="section" id="quick-inline-markup-demo">
-<h2>Quick Inline Markup Demo<a class="headerlink" href="#quick-inline-markup-demo" title="Permalink to this headline">¶</a></h2>
-<p>Inline markup in reStructuredText is pretty powerful. You can have <em>emphasis</em>,
-<strong>strong emphasis</strong>, <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, external hyperlinks with embedded
-URIs (<a class="reference external" href="http://www.python.org">Python web site</a>) standalone hyperlinks
-(<a class="reference external" href="http://www.python.org">http://www.python.org</a>), footnote references <a href="#id4"><span class="problematic" id="id1">[1]_</span></a> and so much more. Sometimes,
-you even have some <a href="#id2"><span class="problematic" id="id3">|problematic|</span></a> text that doesn’t do the right things but
-Sphinx still builds your page.</p>
-<p>Often, you’ll have multiple paragraphs of text in your documentation, possibly
-an explanation how stuff works. Here are some explicit interpreted text roles:
-a PEP reference (<span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0287"><strong>PEP 287</strong></a>); a <sub>subscript</sub>; a <sup>superscript</sup>; and
-explicit roles for <em>standard</em> <strong>inline</strong> <code class="docutils literal notranslate"><span class="pre">markup</span></code>.</p>
+  <div class="section" id="theme-display-demo">
+<h1>Better Demo<a class="headerlink" href="#theme-display-demo" title="Permalink to this headline">¶</a></h1>
+<p>This demo documentation showcases how the content is stylized by Better (from the package <a class="reference external" href="https://pypi.org/project/sphinx-better-theme/">sphinx-better-theme</a>).</p>
+<p>If this is the first theme you’re looking at, you’ll want to look at the pages within the <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section. Those pages contain nearly all the elements that Sphinx supports out-of-the-box, and should give you a good idea of how stuff looks in this theme.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You may want to know what admonitions look like.</p>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>I just wanted to interrupt your very relevant insight, to assert my
-importance.</p>
-</div>
-<p>Or, maybe, you want to present a code block to the user.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="sd">&quot;&quot;&quot;Just a small code example&quot;&quot;&quot;</span>
-<span class="linenos">2</span>
-<span class="linenos">3</span><span class="k">class</span> <span class="nc">Demo</span><span class="p">:</span>
-<span class="linenos">4</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">5</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-<span class="hll"><span class="linenos">6</span>        <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="o">=</span> <span class="kc">True</span>
-</span><span class="linenos">7</span>
-<span class="linenos">8</span>    <span class="k">def</span> <span class="nf">how_ready_are_we</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="hll"><span class="linenos">9</span>        <span class="k">return</span> <span class="s2">&quot;very&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ready</span> <span class="k">else</span> <span class="s2">&quot;not at all&quot;</span>
-</span></pre></div>
+<p>This was generated on Apr 28, 2021.</p>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Demo Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="demo/structure.html">Structural Elements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/structure.html#document-section">Document Section</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-three/">Placeholder Page Three</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Using this theme</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart/#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="demo/structure.html#structural-elements-2">Structural Elements 2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/structure.html#id1">Document Section</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="demo/demo.html">Paragraph Level Markup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#inline-markup">Inline Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#math">Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#meta">Meta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#blocks">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#sidebar">Sidebar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#references">References</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#directives">Directives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/demo.html#download-links">Download Links</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="demo/lists_tables.html">Lists &amp; Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/lists_tables.html#lists">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/lists_tables.html#tables">Tables</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="demo/api.html">API documentation and generated content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#module-test_py_module.test"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_py_module</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#c-api">C++ API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#javascript-api">JavaScript API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#generated-index">Generated Index</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#optional-parameter-args">Optional parameter args</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/api.html#data">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/paragraph-markup/">Paragraph Level Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists-and-tables/">Lists &amp; Tables</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="demo/long.html">Long Sticky Nav</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-1">Example Menu 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-2">Example Menu 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-3">Example Menu 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-4">Example Menu 4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-5">Example Menu 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-6">Example Menu 6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-7">Example Menu 7</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-8">Example Menu 8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-9">Example Menu 9</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-10">Example Menu 10</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-11">Example Menu 11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-12">Example Menu 12</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-13">Example Menu 13</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-14">Example Menu 14</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-15">Example Menu 15</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-16">Example Menu 16</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-17">Example Menu 17</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-18">Example Menu 18</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-19">Example Menu 19</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-menu-20">Example Menu 20</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-submenu-1">Example Submenu 1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-1">Submenu 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-2">Submenu 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-3">Submenu 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-4">Submenu 4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#submenu-5">Submenu 5</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="demo/long.html#example-submenu-2">Example Submenu 2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id2">Submenu 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id4">Submenu 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id6">Submenu 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id7">Submenu 4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="demo/long.html#id8">Submenu 5</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -172,19 +82,9 @@ importance.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Sample Sphinx Documentation</a><ul>
-<li><a class="reference internal" href="#quick-inline-markup-demo">Quick Inline Markup Demo</a><ul>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   <h4>Next topic</h4>
-  <p class="topless"><a href="demo/structure.html"
-                        title="next chapter">Structural Elements</a></p>
+  <p class="topless"><a href="placeholder-one/"
+                        title="next chapter">Placeholder Page One</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -192,7 +92,7 @@ importance.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<form class="search" action="search.html" method="get">
+<form class="search" action="search/" method="get">
   <input type="text" name="q"
    placeholder="type to search" />
   <input type="hidden" name="check_keywords" value="yes" />
@@ -207,18 +107,18 @@ importance.</p>
   <nav id="rellinks">
     <ul>
         <li>
-          <a href="demo/structure.html" title="Next document">Structural Elements</a>
+          <a href="placeholder-one/" title="Next document">Placeholder Page One</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="#">Sphinx Themes Sample</a></li> 
+      <li><a href="#">Better</a></li> 
     </ul>
   </nav>
   </div>
-  <footer id="pagefooter">&copy; 2020, Pradyun Gedam.
+  <footer id="pagefooter">&copy; 2021, Pradyun Gedam.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a>
       4.0.0b1
         with the <a href="http://github.com/irskep/sphinx-better-theme">

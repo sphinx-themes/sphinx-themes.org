@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quickstart &#8212; scrolls</title>
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Kitchen Sink" href="../kitchen-sink/" />
+    <link rel="prev" title="Placeholder Page Three" href="../placeholder-three/" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../"
+          title="back to the documentation overview"><span>Quickstart</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="../placeholder-three/">&laquo; Placeholder Page Three</a> |
+        <a href="#">Quickstart</a>
+        | <a href="../kitchen-sink/">Kitchen Sink &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="table of contents navigation">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;scrolls&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation.</p></li>
+<li><p>Done!</p></li>
+</ol>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you hit an error in step 3 above (and not with the previous theme),
+that’s likely because you have some theme-specific configuration in your
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.</p>
+<p>Some theme-specific configuration options might not work if you’re changing
+the theme for existing documentation. Common tripping points include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>, since it depends on theme-specific <code class="docutils literal notranslate"><span class="pre">.html</span></code> files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code>, since it depends on theme-specific configuration options</p></li>
+</ul>
+<p>Certain extensions may misbehave with certain themes. It is a good idea to
+check that your extensions work as expected.</p>
+</div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.0b1.
+    </div>
+  </body>
+</html>

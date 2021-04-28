@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API documentation &mdash; Bernard</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="shortcut icon" href="../../_static/favicon.ico" />
+
+        <link rel="stylesheet" href="../../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../../_static/bernard.css" type="text/css" />
+        <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+        <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+        <link rel="stylesheet" href="../../_static/bernard.css" type="text/css" />
+
+        <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT       : '../../',
+            VERSION        : '',
+            COLLAPSE_INDEX : false,
+            FILE_SUFFIX    : '.html',
+            HAS_SOURCE     : true
+        };
+        </script>
+
+        
+    </head>
+
+    <body>
+        <div class="ribbon">
+            <a href="https://github.com/bernardphp/bernard">Fork me on GitHub!</a>
+        </div>
+
+        <div class="container text-center">
+            <a class="logo" href="http://bernardphp.com">Bernard</a>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 toc">
+                    
+
+                    
+                        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using this theme</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart/#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../paragraph-markup/">Paragraph Level Markup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists-and-tables/">Lists &amp; Tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Additional Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../long-page/#document-section">Document Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../long-page/#section-2">Section 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+</ul>
+
+                    
+
+                    <a href="#" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+
+                <div class="col-md-9 body">
+                    
+  <div class="section" id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-asyncio">
+<span id="asyncio"></span><h2><code class="docutils literal notranslate"><span class="pre">asyncio</span></code><a class="headerlink" href="#module-asyncio" title="Permalink to this headline">¶</a></h2>
+<p>The asyncio package, tracking PEP 3156.</p>
+<dl class="py class">
+<dt id="asyncio.AbstractEventLoop">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">asyncio.</span></code><code class="sig-name descname"><span class="pre">AbstractEventLoop</span></code><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract event loop.</p>
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.close">
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the loop.</p>
+<p>The loop should not be running.</p>
+<p>This is idempotent and irreversible.</p>
+<p>No other methods should be called after this one.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.connect_read_pipe">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">connect_read_pipe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipe</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.connect_read_pipe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.connect_read_pipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register read pipe in event loop. Set the pipe to non-blocking mode.</p>
+<p>protocol_factory should instantiate object with Protocol interface.
+pipe is a file-like object.
+Return pair (transport, protocol), where transport supports the
+ReadTransport interface.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.connect_write_pipe">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">connect_write_pipe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipe</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.connect_write_pipe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.connect_write_pipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register write pipe in event loop.</p>
+<p>protocol_factory should instantiate object with BaseProtocol interface.
+Pipe is file-like object already switched to nonblocking.
+Return pair (transport, protocol), where transport support
+WriteTransport interface.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.create_datagram_endpoint">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">create_datagram_endpoint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">family</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reuse_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reuse_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_broadcast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.create_datagram_endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.create_datagram_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A coroutine which creates a datagram endpoint.</p>
+<p>This method will try to establish the endpoint in the background.
+When successful, the coroutine returns a (transport, protocol) pair.</p>
+<p>protocol_factory must be a callable returning a protocol instance.</p>
+<p>socket family AF_INET, socket.AF_INET6 or socket.AF_UNIX depending on
+host (or family if specified), socket type SOCK_DGRAM.</p>
+<p>reuse_address tells the kernel to reuse a local socket in
+TIME_WAIT state, without waiting for its natural timeout to
+expire. If not specified it will automatically be set to True on
+UNIX.</p>
+<p>reuse_port tells the kernel to allow this endpoint to be bound to
+the same port as other existing endpoints are bound to, so long as
+they all set this flag when being created. This option is not
+supported on Windows and some UNIX’s. If the
+<code class="xref py py-data docutils literal notranslate"><span class="pre">SO_REUSEPORT</span></code> constant is not defined then this
+capability is unsupported.</p>
+<p>allow_broadcast tells the kernel to allow this endpoint to send
+messages to the broadcast address.</p>
+<p>sock can optionally be specified in order to use a preexisting
+socket object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.create_server">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">create_server</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">protocol_factory</span></em>, <em class="sig-param"><span class="pre">host=None</span></em>, <em class="sig-param"><span class="pre">port=None</span></em>, <em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">family=&lt;AddressFamily.AF_UNSPEC:</span> <span class="pre">0&gt;</span></em>, <em class="sig-param"><span class="pre">flags=&lt;AddressInfo.AI_PASSIVE:</span> <span class="pre">1&gt;</span></em>, <em class="sig-param"><span class="pre">sock=None</span></em>, <em class="sig-param"><span class="pre">backlog=100</span></em>, <em class="sig-param"><span class="pre">ssl=None</span></em>, <em class="sig-param"><span class="pre">reuse_address=None</span></em>, <em class="sig-param"><span class="pre">reuse_port=None</span></em>, <em class="sig-param"><span class="pre">ssl_handshake_timeout=None</span></em>, <em class="sig-param"><span class="pre">start_serving=True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.create_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.create_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>A coroutine which creates a TCP server bound to host and port.</p>
+<p>The return value is a Server object which can be used to stop
+the service.</p>
+<p>If host is an empty string or None all interfaces are assumed
+and a list of multiple sockets will be returned (most likely
+one for IPv4 and another one for IPv6). The host parameter can also be
+a sequence (e.g. list) of hosts to bind to.</p>
+<p>family can be set to either AF_INET or AF_INET6 to force the
+socket to use IPv4 or IPv6. If not set it will be determined
+from host (defaults to AF_UNSPEC).</p>
+<p>flags is a bitmask for getaddrinfo().</p>
+<p>sock can optionally be specified in order to use a preexisting
+socket object.</p>
+<p>backlog is the maximum number of queued connections passed to
+listen() (defaults to 100).</p>
+<p>ssl can be set to an SSLContext to enable SSL over the
+accepted connections.</p>
+<p>reuse_address tells the kernel to reuse a local socket in
+TIME_WAIT state, without waiting for its natural timeout to
+expire. If not specified will automatically be set to True on
+UNIX.</p>
+<p>reuse_port tells the kernel to allow this endpoint to be bound to
+the same port as other existing endpoints are bound to, so long as
+they all set this flag when being created. This option is not
+supported on Windows.</p>
+<p>ssl_handshake_timeout is the time in seconds that an SSL server
+will wait for completion of the SSL handshake before aborting the
+connection. Default is 60s.</p>
+<p>start_serving set to True (default) causes the created server
+to start accepting connections immediately.  When set to False,
+the user should await Server.start_serving() or Server.serve_forever()
+to make the server to start accepting connections.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.create_unix_server">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">create_unix_server</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backlog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_handshake_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_serving</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.create_unix_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.create_unix_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>A coroutine which creates a UNIX Domain Socket server.</p>
+<p>The return value is a Server object, which can be used to stop
+the service.</p>
+<p>path is a str, representing a file system path to bind the
+server socket to.</p>
+<p>sock can optionally be specified in order to use a preexisting
+socket object.</p>
+<p>backlog is the maximum number of queued connections passed to
+listen() (defaults to 100).</p>
+<p>ssl can be set to an SSLContext to enable SSL over the
+accepted connections.</p>
+<p>ssl_handshake_timeout is the time in seconds that an SSL server
+will wait for the SSL handshake to complete (defaults to 60s).</p>
+<p>start_serving set to True (default) causes the created server
+to start accepting connections immediately.  When set to False,
+the user should await Server.start_serving() or Server.serve_forever()
+to make the server to start accepting connections.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.is_closed">
+<code class="sig-name descname"><span class="pre">is_closed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.is_closed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.is_closed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the event loop was closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.is_running">
+<code class="sig-name descname"><span class="pre">is_running</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.is_running"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.is_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the event loop is currently running.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.run_forever">
+<code class="sig-name descname"><span class="pre">run_forever</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.run_forever"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.run_forever" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the event loop until stop() is called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.run_until_complete">
+<code class="sig-name descname"><span class="pre">run_until_complete</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">future</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.run_until_complete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.run_until_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the event loop until a Future is done.</p>
+<p>Return the Future’s result, or raise its exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.sendfile">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">sendfile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.sendfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.sendfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a file through a transport.</p>
+<p>Return an amount of sent bytes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.shutdown_asyncgens">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">shutdown_asyncgens</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.shutdown_asyncgens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.shutdown_asyncgens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown all active asynchronous generators.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.shutdown_default_executor">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">shutdown_default_executor</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.shutdown_default_executor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.shutdown_default_executor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedule the shutdown of the default executor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.start_tls">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">start_tls</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sslcontext</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_handshake_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.start_tls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.start_tls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upgrade a transport to TLS.</p>
+<p>Return a new transport that <em>protocol</em> should start using
+immediately.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="asyncio.AbstractEventLoop.stop">
+<code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/events/#AbstractEventLoop.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.AbstractEventLoop.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the event loop as soon as reasonable.</p>
+<p>Exactly how soon that is may depend on the implementation, but
+no more I/O callbacks should be scheduled.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="asyncio.gather">
+<code class="sig-prename descclassname"><span class="pre">asyncio.</span></code><code class="sig-name descname"><span class="pre">gather</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">coros_or_futures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/tasks/#gather"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.gather" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a future aggregating results from the given coroutines/futures.</p>
+<p>Coroutines will be wrapped in a future and scheduled in the event
+loop. They will not necessarily be scheduled in the same order as
+passed in.</p>
+<p>All futures must share the same event loop.  If all the tasks are
+done successfully, the returned future’s result is the list of
+results (in the order of the original sequence, not necessarily
+the order of results arrival).  If <em>return_exceptions</em> is True,
+exceptions in the tasks are treated the same as successful
+results, and gathered in the result list; otherwise, the first
+raised exception will be immediately propagated to the returned
+future.</p>
+<p>Cancellation: if the outer Future is cancelled, all children (that
+have not completed yet) are also cancelled.  If any child is
+cancelled, this is treated as if it raised CancelledError –
+the outer Future is <em>not</em> cancelled in this case.  (This is to
+prevent the cancellation of one child to cause other children to
+be cancelled.)</p>
+<p>If <em>return_exceptions</em> is False, cancelling gather() after it
+has been marked done won’t cancel any submitted awaitables.
+For instance, gather can be marked done after propagating an
+exception to the caller, therefore, calling <code class="docutils literal notranslate"><span class="pre">gather.cancel()</span></code>
+after catching an exception (raised by one of the awaitables) from
+gather won’t cancel any other awaitables.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="asyncio.run">
+<code class="sig-prename descclassname"><span class="pre">asyncio.</span></code><code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/asyncio/runners/#run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#asyncio.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the coroutine and return the result.</p>
+<p>This function runs the passed coroutine, taking care of
+managing the asyncio event loop and finalizing asynchronous
+generators.</p>
+<p>This function cannot be called when another asyncio event loop is
+running in the same thread.</p>
+<p>If debug is True, the event loop will be run in debug mode.</p>
+<p>This function always creates a new event loop and closes it at the end.
+It should be used as a main entry point for asyncio programs, and should
+ideally only be called once.</p>
+<p>Example:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>async def main():</dt><dd><p>await asyncio.sleep(1)
+print(‘hello’)</p>
+</dd>
+</dl>
+<p>asyncio.run(main())</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+
+
+                </div>
+
+                <div class="container">
+                    
+                </div>
+            </div>
+        </div>
+            <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+            <script type="text/javascript" src="../../_static/jquery.js"></script>
+            <script type="text/javascript" src="../../_static/underscore.js"></script>
+            <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/bernard.js"></script>
+    </body>
+</html>

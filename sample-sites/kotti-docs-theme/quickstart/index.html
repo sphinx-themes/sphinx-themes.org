@@ -1,0 +1,267 @@
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    
+        <title>Quickstart &mdash; Kotti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT:'../',
+                VERSION:'',
+                COLLAPSE_INDEX:false,
+                FILE_SUFFIX:'.html',
+                HAS_SOURCE:  true
+            };
+        </script>
+            <script type="text/javascript" src="../_static/documentation_options.js"></script>
+            <script type="text/javascript" src="../_static/jquery.js"></script>
+            <script type="text/javascript" src="../_static/underscore.js"></script>
+            <script type="text/javascript" src="../_static/doctools.js"></script>
+            <script type="text/javascript" src="../_static/bootstrap-dropdown.js"></script>
+            <link rel="index" title="Index"
+                  href="../genindex/"/>
+            <link rel="search" title="Search" href="../search/"/>
+        <link rel="top" title="Kotti" href="../"/>
+            <link rel="next" title="Kitchen Sink" href="../kitchen-sink/"/>
+            <link rel="prev" title="Placeholder Page Three" href="../placeholder-three/"/> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+
+    <div class="related">
+        <ul class="nav">
+                <li class=""><a class="brand" href="../">Sphinx Themes Sample</a></li>
+                <li>
+                    <a href="../genindex/"
+                       title="General Index" accesskey="I">index</a>
+                </li>
+                <li>
+                    <a href="../py-modindex/"
+                       title="Python Module Index" >modules</a>
+                </li>
+                <li>
+                    <a href="../kitchen-sink/"
+                       title="Kitchen Sink" accesskey="N">next</a>
+                </li>
+                <li>
+                    <a href="../placeholder-three/"
+                       title="Placeholder Page Three" accesskey="P">previous</a>
+                </li> 
+        </ul>
+    </div>
+                <div class="pull-right">
+                    
+        <form class="navbar-search form-search" action="../search/"
+              method="get">
+            <input class="search-query" type="text" name="q" placeholder="search"/>
+            <input type="hidden" name="check_keywords" value="yes"/>
+            <input type="hidden" name="area" value="default"/>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container">
+        <div class="content row">
+                <div class="span9">
+                    
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install kotti-docs-theme
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kotti_docs_theme</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;kotti_docs_theme&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">kotti_docs_theme</span><span class="o">.</span><span class="n">get_theme_dir</span><span class="p">()]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation.</p></li>
+<li><p>Done!</p></li>
+</ol>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you hit an error in step 3 above (and not with the previous theme),
+that’s likely because you have some theme-specific configuration in your
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.</p>
+<p>Some theme-specific configuration options might not work if you’re changing
+the theme for existing documentation. Common tripping points include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>, since it depends on theme-specific <code class="docutils literal notranslate"><span class="pre">.html</span></code> files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code>, since it depends on theme-specific configuration options</p></li>
+</ul>
+<p>Certain extensions may misbehave with certain themes. It is a good idea to
+check that your extensions work as expected.</p>
+</div>
+</div>
+
+
+                    
+                </div>
+                <div class="span3">
+                    
+        <div class="sphinxsidebar">
+            <ul class="nav nav-list well">
+    <li class="nav-header">
+        Table Of Contents
+    </li>
+    <li>
+        <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+    </li>
+  <li class="nav-header">Previous topic</li>
+  <li>
+    <a href="../placeholder-three/"
+       title="previous chapter">Placeholder Page Three</a>
+  </li>
+  <li class="nav-header">Next topic</li>
+  <li>
+    <a href="../kitchen-sink/"
+       title="next chapter">Kitchen Sink</a>
+  </li>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/quickstart.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">GitHub</li>
+                <li>
+                    <a href="https://github.com/Pylons/Kotti/">Repo</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Pylons/Kotti/issues?state=open">Issues</a>
+                </li>
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Pylons&repo=Kotti&type=watch&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0"
+                            width="110px" height="20px"></iframe>
+                </li>
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Pylons&repo=Kotti&type=fork&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0"
+                            width="94px" height="20px"></iframe>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">Getting Help</li>
+                <li>
+                    <a href="http://groups.google.com/group/kotti">Mailing list</a>
+                </li>
+                <li>
+                    <a href="irc://irc.freenode.net/#kotti">IRC</a>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">Social</li>
+                <li class="follow-btn">
+                    <a href="https://twitter.com/KottiCMS"
+                       class="twitter-follow-button" data-width="145px"
+                       data-link-color="#0069D6" data-show-count="false">Follow
+                        @KottiCMS</a>
+                </li>
+                <li class="tweet-btn">
+                    <a href="https://twitter.com/share" class="twitter-share-button"
+                       data-url="http://kotti.pylonsproject.org/" data-count="horizontal"
+                       data-via="twbootstrap"
+                       data-related="KottiCMS:Creator of Sphinx Themes Sample">Tweet</a>
+                </li>
+                <li class="plusone-container">
+                    <g:plusone size="medium"></g:plusone>
+                </li>
+            </ul>
+        </div>
+                </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        
+        <div class="container">
+                    &copy;
+                        Copyright 2021, Pradyun Gedam.
+                    <br />
+                Created using <a
+                        href="http://sphinx.pocoo.org/">Sphinx</a> 4.0.0b1
+                    .
+                Theme based on
+                <a href="https://github.com/scotch/sphinx-bootstrap">
+                    Sphinx-Bootstrap
+                </a>
+                adapted from
+                <a href="http://twitter.github.com/bootstrap/">
+                    Twitter's Bootstrap
+                </a>
+                by <a href="http://www.scotchmedia.com">Scotch Media</a>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    $('.nav .active').on('click', function () {
+        e.preventDefault()
+        $(this).siblings().toggle()
+    });
+</script>
+
+<!-- plusone -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- twitter -->
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</body>
+</html>

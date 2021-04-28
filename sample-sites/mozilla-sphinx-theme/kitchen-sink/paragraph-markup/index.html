@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="reStructuredText, demonstration, demo, parser" name="keywords" />
+<meta content="A demonstration of the reStructuredText markup language, containing examples of all basic constructs and many advanced constructs." lang="en" name="description" xml:lang="en" />
+
+    <title>Paragraph Level Markup &#8212; Sandstone</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mozilla.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="API documentation" href="../api/" />
+    <link rel="prev" title="Kitchen Sink" href="../" /> 
+  </head><body><a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+
+    <div class="document">
+  <div class="documentwrapper">
+    
+    <div class="sphinxsidebar">
+        <nav>
+        <h2><a href="../../">Sphinx Themes Sample</a></h2>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using this theme</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Paragraph Level Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists-and-tables/">Lists &amp; Tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+    <div class="bodywrapper">
+      <div class="body">
+        
+  <div class="section" id="paragraph-level-markup">
+<h1>Paragraph Level Markup<a class="headerlink" href="#paragraph-level-markup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="inline-markup">
+<h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<p>Paragraphs contain text and may contain inline markup: <em>emphasis</em>, <strong>strong emphasis</strong>, <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>,
+standalone hyperlinks (<a class="reference external" href="http://www.python.org">http://www.python.org</a>), external hyperlinks (<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id29" id="id30">5</a>), internal cross-references (<a class="reference internal" href="#example">example</a>),
+external hyperlinks with embedded URIs (<a class="reference external" href="http://www.python.org">Python web site</a>), footnote references
+(manually numbered <a class="footnote-reference brackets" href="#id6" id="id1">1</a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2">3</a>, labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3">2</a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4">*</a>),
+citation references (<a class="footnote-reference brackets" href="#id16" id="id5">12</a>), substitution references (<a class="reference internal" href="https://source.unsplash.com/200x200/daily?cute+animals"><img alt="EXAMPLE" src="https://source.unsplash.com/200x200/daily?cute+animals" style="width: 1em;" /></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
+(see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here). Character-level inline markup is also possible
+(although exceedingly ugly!) in <em>re</em><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>. Problems are indicated by <a href="#id27"><span class="problematic" id="id28">|problematic|</span></a>
+text (generated by processing errors; this one is intentional).</p>
+<p>Also with <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>, which I use in the demo, I can link to <code class="xref py py-class docutils literal notranslate"><span class="pre">test_py_module.test.Foo</span></code>.
+It will link you right to my code documentation for it.</p>
+<p>The default role for interpreted text is <cite>Title Reference</cite>.  Here are some explicit interpreted text roles:
+a PEP reference (<span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0287"><strong>PEP 287</strong></a>); an RFC reference (<span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc2822.html"><strong>RFC 2822</strong></a>); a <sub>subscript</sub>; a <sup>superscript</sup>;
+and explicit roles for <em>standard</em> <strong>inline</strong> <code class="docutils literal notranslate"><span class="pre">markup</span></code>.</p>
+<p>GUI labels are a useful way to indicate that <span class="guilabel">Some action</span> is to be taken by the user.
+The GUI label should not run over <code class="docutils literal notranslate"><span class="pre">line-height</span></code> so as not to <span class="guilabel">interfere</span> with text from adjacent lines.</p>
+<p>Key-bindings indicate that the read is to press a button on the keyboard or mouse,
+for example <kbd class="kbd docutils literal notranslate">MMB</kbd> and <kbd class="kbd docutils literal notranslate">Shift-MMB</kbd>. Another useful markup to indicate a user action
+is to use <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> this can be used to show short and long menus in software.
+For example, and <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> can be seen here that breaks is too long to fit on this line.
+<span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ sub menu 2</span>.</p>
+<p>Let’s test wrapping and whitespace significance in inline literals:
+<code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">of</span> <span class="pre">--inline-literal</span> <span class="pre">--text,</span> <span class="pre">--including</span> <span class="pre">some--</span>
+<span class="pre">strangely--hyphenated-words.</span>&#160; <span class="pre">Adjust-the-width-of-your-browser-window</span>
+<span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">is</span> <span class="pre">wrapped.</span>&#160; <span class="pre">--</span> <span class="pre">----</span> <span class="pre">--------</span>&#160; <span class="pre">Now</span> <span class="pre">note</span>&#160;&#160;&#160; <span class="pre">the</span>
+<span class="pre">spacing</span>&#160;&#160;&#160; <span class="pre">between</span> <span class="pre">the</span>&#160;&#160;&#160; <span class="pre">words</span> <span class="pre">of</span>&#160;&#160;&#160; <span class="pre">this</span> <span class="pre">sentence</span>&#160;&#160;&#160; <span class="pre">(words</span>
+<span class="pre">should</span>&#160;&#160;&#160; <span class="pre">be</span> <span class="pre">grouped</span>&#160;&#160;&#160; <span class="pre">in</span> <span class="pre">pairs).</span></code></p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">--pep-references</span></code> option was supplied, there should be a live link to PEP 258 here.</p>
+</div>
+<div class="section" id="math">
+<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<p>This is a test. Here is an equation:
+<span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
+Here is another:</p>
+<div class="math notranslate nohighlight" id="equation-this-is-a-label">
+<span class="eqno">(1)<a class="headerlink" href="#equation-this-is-a-label" title="Permalink to this equation">¶</a></span>\[\nabla^2 f =
+\frac{1}{r^2} \frac{\partial}{\partial r}
+\left( r^2 \frac{\partial f}{\partial r} \right) +
+\frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
+\left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
+\frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}\]</div>
+<p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using <code class="docutils literal notranslate"><span class="pre">:eq:</span></code>.</p>
+</div>
+<div class="section" id="meta">
+<h2>Meta<a class="headerlink" href="#meta" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="blocks">
+<h2>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="literal-blocks">
+<h3>Literal Blocks<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h3>
+<p>Literal blocks are indicated with a double-colon (“::”) at the end of
+the preceding paragraph (over there <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>).  They can be indented:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;is left as-is&#39;</span>
+    <span class="n">spaces_and_linebreaks</span> <span class="o">=</span> <span class="s1">&#39;are preserved&#39;</span>
+    <span class="n">markup_processing</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>Or they can be quoted without indentation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt; Great idea!
+&gt;
+&gt; Why didn&#39;t I think of that?
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-blocks">
+<h3>Line Blocks<a class="headerlink" href="#line-blocks" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This is a line block.  It ends with a blank line.</div>
+<div class="line-block">
+<div class="line">Each new line begins with a vertical bar (“|”).</div>
+<div class="line">Line breaks and initial indents are preserved.</div>
+</div>
+<div class="line">Continuation lines are wrapped portions of long lines;
+they begin with a space in place of the vertical bar.</div>
+<div class="line-block">
+<div class="line">The left edge of a continuation line need not be aligned with
+the left edge of the text above it.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">This is a second line block.</div>
+<div class="line"><br /></div>
+<div class="line">Blank lines are permitted internally, but they must begin with a “|”.</div>
+</div>
+<p>Take it away, Eric the Orchestra Leader!</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">A one, two, a one two three four</div>
+<div class="line"><br /></div>
+<div class="line">Half a bee, philosophically,</div>
+<div class="line-block">
+<div class="line">must, <em>ipso facto</em>, half not be.</div>
+</div>
+<div class="line">But half the bee has got to be,</div>
+<div class="line-block">
+<div class="line"><em>vis a vis</em> its entity.  D’you see?</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">But can a bee be said to be</div>
+<div class="line-block">
+<div class="line">or not to be an entire bee,</div>
+<div class="line-block">
+<div class="line">when half the bee is not a bee,</div>
+<div class="line-block">
+<div class="line">due to some ancient injury?</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">Singing…</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="block-quotes">
+<h3>Block Quotes<a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h3>
+<p>Block quotes consist of indented body elements:</p>
+<blockquote>
+<div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+as follows and begins now.  All brontosauruses are thin at one
+end, much much thicker in the middle and then thin again at the
+far end.  That is my theory, it is mine, and belongs to me and I
+own it, and what it is too.</p>
+<p class="attribution">—Anne Elk (Miss)</p>
+</div></blockquote>
+</div>
+<div class="section" id="doctest-blocks">
+<h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;&#39;</span>
+<span class="go">Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;(cut and pasted from interactive Python sessions)&#39;</span>
+<span class="go">(cut and pasted from interactive Python sessions)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-blocks">
+<h3>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
+<pre class="literal-block"># parsed-literal test
+curl -O <a class="reference external" href="http://someurl/release">http://someurl/release</a>-.tar-gz</pre>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions.</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;windows&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">&quot;panes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;shell_command&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;echo &#39;did you know&#39;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;echo &#39;you can inline&#39;&quot;</span>
+        <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;shell_command&quot;</span><span class="p">:</span> <span class="s2">&quot;echo &#39;single commands&#39;&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;echo &#39;for panes&#39;&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;window_name&quot;</span><span class="p">:</span> <span class="s2">&quot;long form&quot;</span>
+    <span class="p">}</span>
+<span class="p">],</span>
+<span class="nt">&quot;session_name&quot;</span><span class="p">:</span> <span class="s2">&quot;shorthands&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="emphasized-lines-with-line-numbers">
+<h4>Emphasized lines with line numbers<a class="headerlink" href="#emphasized-lines-with-line-numbers" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll"><span class="linenos">5</span>    <span class="nb">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sidebar">
+<h2>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
+<div class="sidebar">
+<p class="sidebar-title">Ch’ien / The Creative</p>
+<img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals" />
+<p><em>Above</em> CH’IEN THE CREATIVE, HEAVEN</p>
+<p><em>Below</em> CH’IEN THE CREATIVE, HEAVEN</p>
+</div>
+<p>The first hexagram is made up of six unbroken lines. These unbroken lines stand for the primal power,
+which is light-giving, active, strong, and of the spirit. The hexagram is consistently strong in character,
+and since it is without weakness, its essence is power or energy. Its image is heaven.
+Its energy is represented as unrestricted by any fixed conditions in space and is therefore conceived of as motion.
+Time is regarded as the basis of this motion.
+Thus the hexagram includes also the power of time and the power of persisting in time, that is, duration.</p>
+<p>The power represented by the hexagram is to be interpreted in a dual sense in terms of its action
+on the universe and of its action on the world of men. In relation to the universe, the hexagram expresses the strong,
+creative action of the Deity. In relation to the human world, it denotes the creative action of the holy man or sage,
+of the ruler or leader of men, who through his power awakens and develops their higher nature.</p>
+<div class="section" id="code-with-sidebar">
+<h3>Code with Sidebar<a class="headerlink" href="#code-with-sidebar" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">A code example</p>
+<p>With a sidebar on the right.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gh">``asyncio``</span>
+<span class="linenos">2</span><span class="gh">===========</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> asyncio
+<span class="linenos">5</span>    <span class="nc">:members:</span> run, gather, AbstractEventLoop
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>A footnote contains body elements, consistently indented by at
+least 3 spaces.</p>
+<p>This is the footnote’s second paragraph.</p>
+</dd>
+<dt class="label" id="label"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7">1</a>) or
+automatically using a “#”-prefixed label.  This footnote has a
+label so it can be referred to from multiple places, both as a
+footnote reference (<a class="footnote-reference brackets" href="#label" id="id8">2</a>) and as a hyperlink reference
+(<a class="reference internal" href="#label">label</a>).</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dd><p>This footnote is numbered automatically and anonymously using a
+label of “#” only.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">*</a></span></dt>
+<dd><p>Footnotes may also use symbols, specified with a “*” label.
+Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11">†</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id11">†</a></span></dt>
+<dd><p>This footnote shows the next symbol in the sequence.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">4</span></dt>
+<dd><p>Here’s an unreferenced footnote, with a reference to a
+nonexistent footnote: <a href="#id33"><span class="problematic" id="id14">[5]_</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="citations">
+<h3>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id15"><span class="brackets">11</span></dt>
+<dd><p>This is the citation I made, let’s make this extremely long so that we can tell that it doesn’t follow the normal responsive table stuff.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">12</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id19">2</a>)</span></dt>
+<dd><p>This citation has some <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">blocks</span></code> in it, maybe some <strong>bold</strong> and
+<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id18" id="id17">13</a> too.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id17">13</a></span></dt>
+<dd><p>This citation will have two backlinks.</p>
+</dd>
+</dl>
+<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id16" id="id19">12</a>, and a <span id="id20">[nonexistent]</span> citation.</p>
+<p>Here is another type of citation: <cite>citation</cite></p>
+</div>
+<div class="section" id="glossary">
+<h3>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h3>
+<p>This is a glossary with definition terms for thing like <a class="reference internal" href="#term-Writing"><span class="xref std std-term">Writing</span></a>:</p>
+<dl class="glossary simple">
+<dt id="term-Documentation">Documentation<a class="headerlink" href="#term-Documentation" title="Permalink to this term">¶</a></dt><dd><p>Provides users with the knowledge they need to use something.</p>
+</dd>
+<dt id="term-Reading">Reading<a class="headerlink" href="#term-Reading" title="Permalink to this term">¶</a></dt><dd><p>The process of taking information into ones mind through the use of eyes.</p>
+</dd>
+<dt id="term-Writing">Writing<a class="headerlink" href="#term-Writing" title="Permalink to this term">¶</a></dt><dd><p>The process of putting thoughts into a medium for other people to <a class="reference internal" href="#term-Reading"><span class="xref std std-term">read</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="targets">
+<h3>Targets<a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h3>
+<p id="example">This paragraph is pointed to by the explicit “example” target.
+A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
+hyperlink targets</a> are also possible.</p>
+<p>Section headers are implicit targets, referred to by name. See
+<a class="reference internal" href="#targets">Targets</a>, which is a subsection of <a href="#id34"><span class="problematic" id="id35">`Body Elements`_</span></a>.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id29" id="id31">5</a>”.</p>
+<p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
+refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
+<p>Here’s a <a href="#id36"><span class="problematic" id="id37">`hyperlink reference without a target`_</span></a>, which generates an error.</p>
+</div>
+</div>
+<div class="section" id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="contents">
+<h3>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
+<p>These are just a sample of the many reStructuredText Directives. For others, please see:
+<a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">http://docutils.sourceforge.net/docs/ref/rst/directives.html</a>.</p>
+</div>
+<div class="section" id="centered-text">
+<h3>Centered text<a class="headerlink" href="#centered-text" title="Permalink to this headline">¶</a></h3>
+<p>You can create a statement with centered text with <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">centered::</span></code></p>
+<p class="centered">
+<strong>This is centered text!</strong></p></div>
+<div class="section" id="images-figures">
+<h3>Images &amp; Figures<a class="headerlink" href="#images-figures" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="images">
+<h4>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h4>
+<p>An image directive (also clickable – a hyperlink reference):</p>
+<a class="reference internal image-reference" href="#directives"><img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals" /></a>
+</div>
+<div class="section" id="figures">
+<h4>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-default" id="id25">
+<img alt="reStructuredText, the markup syntax" src="https://source.unsplash.com/200x200/daily?cute+animals" />
+<p class="caption"><span class="caption-text">A figure is an image with a caption and/or a legend:</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>re</p></td>
+<td><p>Revised, revisited, based on ‘re’ module.</p></td>
+</tr>
+<tr class="row-even"><td><p>Structured</p></td>
+<td><p>Structure-enhanced text, structuredtext.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Text</p></td>
+<td><p>Well it is, isn’t it?</p></td>
+</tr>
+</tbody>
+</table>
+<p>This paragraph is also part of the legend.</p>
+</div>
+</div>
+<p>A figure directive with center alignment</p>
+<div class="figure align-center" id="id26">
+<img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals" />
+<p class="caption"><span class="caption-text">This caption should be centered.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="admonitions">
+<h3>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Directives at large.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Don’t take any wooden nickels.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Mad scientist at work!</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Does not compute.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It’s bigger than a bread box.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Wash behind your ears.</p></li>
+<li><p>Clean up your room.</p>
+<ul>
+<li><p>Including the closet.</p></li>
+<li><p>The bathroom too.</p>
+<ul>
+<li><p>Take the trash out of the bathroom.</p></li>
+<li><p>Clean the sink.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Call your mother.</p></li>
+<li><p>Back up your data.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.
+Equations within a note:
+<span class="math notranslate nohighlight">\(G_{\mu\nu} = 8 \pi G (T_{\mu\nu}  + \rho_\Lambda g_{\mu\nu})\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>15% if the service is good.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Thing1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thing2</p></td>
+</tr>
+<tr class="row-even"><td><p>Thing3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Strong prose may provoke extreme mental exertion.
+Reader discretion is strongly advised.</p>
+</div>
+<div class="admonition-and-by-the-way admonition">
+<p class="admonition-title">And, by the way…</p>
+<p>You can make up your own admonition too.</p>
+</div>
+</div>
+<div class="section" id="topics-sidebars-and-rubrics">
+<h3>Topics, Sidebars, and Rubrics<a class="headerlink" href="#topics-sidebars-and-rubrics" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Sidebar Title</p>
+<p class="sidebar-subtitle">Optional Subtitle</p>
+<p>This is a sidebar.  It is for text outside the flow of the main
+text.</p>
+<p class="rubric">This is a rubric inside a sidebar</p>
+<p>Sidebars often appears beside the main text with a border and
+background color.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Topic Title</p>
+<p>This is a topic.</p>
+</div>
+<p class="rubric">This is a rubric</p>
+</div>
+<div class="section" id="target-footnotes">
+<h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Permalink to this headline">¶</a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id29"><span class="brackets">5</span><span class="fn-backref">(<a href="#id30">1</a>,<a href="#id31">2</a>,<a href="#id32">3</a>)</span></dt>
+<dd><p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="replacement-text">
+<h3>Replacement Text<a class="headerlink" href="#replacement-text" title="Permalink to this headline">¶</a></h3>
+<p>I recommend you try <a class="reference external" href="http://www.python.org/">Python, <em>the</em> best language around</a> <a class="footnote-reference brackets" href="#id29" id="id32">5</a>.</p>
+</div>
+<div class="section" id="compound-paragraph">
+<h3>Compound Paragraph<a class="headerlink" href="#compound-paragraph" title="Permalink to this headline">¶</a></h3>
+<div class="compound">
+<p class="compound-first">This paragraph contains a literal block:</p>
+<div class="compound-middle highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Connecting</span><span class="o">...</span> <span class="n">OK</span>
+<span class="n">Transmitting</span> <span class="n">data</span><span class="o">...</span> <span class="n">OK</span>
+<span class="n">Disconnecting</span><span class="o">...</span> <span class="n">OK</span>
+</pre></div>
+</div>
+<p class="compound-last">and thus consists of a simple paragraph, a literal block, and
+another simple paragraph.  Nonetheless it is semantically <em>one</em>
+paragraph.</p>
+</div>
+<p>This construct is called a <em>compound paragraph</em> and can be produced
+with the “compound” directive.</p>
+</div>
+</div>
+<div class="section" id="download-links">
+<h2>Download Links<a class="headerlink" href="#download-links" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference download external" download="" href="https://source.unsplash.com/200x200/daily?cute+animals"><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span> <span class="pre">link</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">blue,</span> <span class="pre">normal</span> <span class="pre">weight</span> <span class="pre">text</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">leading</span> <span class="pre">icon,</span> <span class="pre">and</span> <span class="pre">should</span> <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></a></p>
+</div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+      <div class="clearer"></div>
+    </div>
+  
+ 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.0b1.
+    </div> <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script> 
+  </body>
+</html>

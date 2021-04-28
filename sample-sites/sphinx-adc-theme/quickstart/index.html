@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quickstart &#8212; ADC</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <meta name="generator" content="Sphinx/ADC Theme by Mirounga www.mirounga.fr"/>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="top" title="ADC" href="../" />
+    <link rel="next" title="Kitchen Sink" href="../kitchen-sink/" />
+    <link rel="prev" title="Placeholder Page Three" href="../placeholder-three/" />
+    <link media="only screen and (max-device-width: 480px)" href="../_static/css/mobile.css" type="text/css" rel="stylesheet" /> 
+  </head><body>
+<div id="docstitle">
+    <p>ADC</p>
+</div>
+<div id="header">
+    <div id="title"><h1>Quickstart</h1></div>
+    <ul id="headerButtons">
+        <li id="toc_button"><div class="headerButton"><a href="#">Table of Contents</a></div></li>
+        <li id="page_buttons">
+            <div class="headerButton"><a href="../genindex/" title="General Index" accesskey="I">index</a></div>
+            <div class="headerButton"><a href="../py-modindex/" title="Python Module Index" >modules</a></div>
+            <div class="headerButton"><a href="../kitchen-sink/" title="Kitchen Sink" accesskey="N">next</a></div>
+            <div class="headerButton"><a href="../placeholder-three/" title="Placeholder Page Three" accesskey="P">previous</a></div>
+        </li>
+    </ul>
+</div>
+
+<div id="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+        <ul><li class="toctree-l1"><a href="../">Main Page</a></li></ul>
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../placeholder-three/">Placeholder Page Three</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using this theme</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kitchen-sink/">Kitchen Sink</a></li>
+</ul>
+
+      <h3>This Page</h3>
+      <ul class="this-page-menu">
+        <li><a href="../_sources/quickstart.rst.txt"
+               rel="nofollow">Show Source</a></li>
+      </ul>
+    <div id="searchbox" style="display: none">
+        <form class="search" action="../search/" method="get">
+                        <div class="search-wrapper">
+                        <input type="submit" value="" class="search-left"/>
+                        <input class="prettysearch" type="text" name="q" size="18" title="Enter search terms or a module, class or function name."/>
+                        <span class="search-right">&nbsp;</span>
+                        </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+</div>
+
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx-adc-theme
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_adc_theme</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_adc_theme&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_adc_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation.</p></li>
+<li><p>Done!</p></li>
+</ol>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you hit an error in step 3 above (and not with the previous theme),
+that’s likely because you have some theme-specific configuration in your
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.</p>
+<p>Some theme-specific configuration options might not work if you’re changing
+the theme for existing documentation. Common tripping points include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>, since it depends on theme-specific <code class="docutils literal notranslate"><span class="pre">.html</span></code> files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code>, since it depends on theme-specific configuration options</p></li>
+</ul>
+<p>Certain extensions may misbehave with certain themes. It is a good idea to
+check that your extensions work as expected.</p>
+</div>
+</div>
+
+
+          </div> 
+        </div>
+      </div>
+    <div class="footer">
+    <p>
+      &copy; Copyright 2021, Pradyun Gedam.
+      Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.0b1 <a href="https://github.com/mga-sphinx/sphinx_adc_theme">ADC Theme</a> .
+    (Revision )
+        </p>
+    </div>
+      <div class="clearer"></div>
+    </div>
+        <div id="breadcrumbs">
+                Quickstart
+        </div>
+        <script type="text/javascript" charset="utf-8" src="../_static/js/toc.js"></script>
+  </body>
+</html>
