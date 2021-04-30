@@ -42,8 +42,9 @@
     },
     {
       "config": {
-        "html_add_permalinks": "'\\N{SECTION SIGN}'",
         "html_context": "{'display_github': True, 'github_user': 'sphinx-themes', 'github_repo': 'sphinx-themes.org', 'conf_py_path': '/sample-docs/', 'commit': 'master'}",
+        "html_copy_source": "False",
+        "html_permalinks_icon": "'\\N{SECTION SIGN}'",
         "html_theme": "insipid"
       },
       "display": "Insipid",
