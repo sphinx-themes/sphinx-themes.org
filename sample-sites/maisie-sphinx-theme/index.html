@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Maisie Demo &#8212; Maisie</title>
+    <title>Maisie Sample &#8212; Maisie</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/maisie.css" />
     <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -24,7 +24,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex/" />
     <link rel="search" title="Search" href="search/" />
-    <link rel="next" title="Placeholder Page One" href="placeholder-one/" />
+    <link rel="next" title="Kitchen Sink" href="kitchen-sink/" />
   
    
 
@@ -39,10 +39,10 @@
           <a href="py-modindex/" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="placeholder-one/" title="Placeholder Page One"
+          <a href="kitchen-sink/" title="Kitchen Sink"
              accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">Maisie</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Maisie Demo</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Maisie Sample</a></li> 
       </ul>
     </div>
     <div class="container-wrapper">
@@ -52,9 +52,27 @@
       </div>
   <div id="left-column">
     <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Maisie Sample</a><ul>
+<li><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li><a class="reference internal" href="#exploration">Exploration</a></li>
+<li><a class="reference internal" href="#navigation">Navigation</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
   <h4>Next topic</h4>
-  <p class="topless"><a href="placeholder-one/"
-                        title="next chapter">Placeholder Page One</a></p>
+  <p class="topless"><a href="kitchen-sink/"
+                        title="next chapter">Kitchen Sink</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -84,44 +102,84 @@
             <ol class="breadcrumb">
               <li><a href="#">Docs</a></li>
               
-              <li>Maisie Demo</li>
+              <li>Maisie Sample</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <section id="theme-display-demo">
-<h1>Maisie Demo<a class="headerlink" href="#theme-display-demo" title="Permalink to this headline">¶</a></h1>
-<p>This demo documentation showcases how the content is stylized by Maisie (from the package <a class="reference external" href="https://pypi.org/project/maisie-sphinx-theme/">maisie-sphinx-theme</a>).</p>
-<p>If this is the first theme you’re looking at, you’ll want to look at the pages within the <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section. Those pages contain nearly all the elements that Sphinx supports out-of-the-box, and should give you a good idea of how stuff looks in this theme.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This was generated on May 01, 2021.</p>
+  <section id="theme-display-sample">
+<h1>Maisie Sample<a class="headerlink" href="#theme-display-sample" title="Permalink to this headline">¶</a></h1>
+<p>This is a demo site for Maisie, generated as part of
+<a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This sample documentation was generated on May 01, 2021, and is rebuilt weekly.</p>
 </div>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install maisie-sphinx-theme
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maisie_sphinx_theme</span>
+<span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;maisie_sphinx_theme&quot;</span><span class="p">)</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;maisie_sphinx_theme&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="n">maisie_sphinx_theme</span><span class="o">.</span><span class="n">html_theme_path</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></li>
+</ol>
+</section>
+<section id="exploration">
+<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+</div>
+<p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
+everything that you can with Sphinx “out-of-the-box”. Browsing through that
+section should give you a good idea of how stuff looks in this theme.</p>
+<p>This theme does not have any hosted-on-the-web documentation.</p>
+</section>
+<section id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
+<p>This is the most important part of a documentation theme. If you like
+the general look of the theme, please make sure that it is possible to
+easily navigate through this sample documentation.</p>
+<p>Ideally, the pages listed below should also be reachable via links
+somewhere else on this page (like the sidebar, or a topbar). If they are
+not, then this theme might need additional configuration to provide the
+sort of site navigation that’s necessary for “real” documentation.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">This is a caption</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
 <li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-three/">Placeholder Page Three</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Using this theme</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/">Quickstart</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart/#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/paragraph-markup/">Paragraph Level Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists-and-tables/">Lists &amp; Tables</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 </div>
+<p>Some pages like <a class="reference internal" href="placeholder-three/"><span class="doc">Placeholder Page Three</span></a> are declared in a “hidden”
+toctree, and thus would not be visible above. However, they are still a
+part of the overall site hierarchy and some themes may choose to present
+them to the user in the site navigation.</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>If you hit an error while building documentation with a new theme,
+it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
+file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
+<code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
+allow the build to proceed.</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -130,7 +188,7 @@
   <div class="footer-relations">
     
       <div class="pull-right">
-        <a class="btn btn-default" href="placeholder-one/" title="next chapter (use the right arrow)">Placeholder Page One</a>
+        <a class="btn btn-default" href="kitchen-sink/" title="next chapter (use the right arrow)">Kitchen Sink</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -148,10 +206,10 @@
           <a href="py-modindex/" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="placeholder-one/" title="Placeholder Page One"
+          <a href="kitchen-sink/" title="Kitchen Sink"
              >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">Maisie</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Maisie Demo</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Maisie Sample</a></li> 
       </ul>
     </div>
 <script type="text/javascript">
