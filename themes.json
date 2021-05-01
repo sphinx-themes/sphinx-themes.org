@@ -58,17 +58,6 @@
     {
       "config": {
         "_imports": [
-          "sphinx_redactor_theme"
-        ],
-        "html_theme": "sphinx_redactor_theme",
-        "html_theme_path": "[sphinx_redactor_theme.get_html_theme_path()]"
-      },
-      "display": "Redactor",
-      "pypi": "sphinx-redactor-theme"
-    },
-    {
-      "config": {
-        "_imports": [
           "sphinx_adc_theme"
         ],
         "html_theme": "sphinx_adc_theme",
@@ -224,6 +213,17 @@
       },
       "display": "Readable",
       "pypi": "sphinx-readable-theme"
+    },
+    {
+      "config": {
+        "_imports": [
+          "sphinx_redactor_theme"
+        ],
+        "html_theme": "sphinx_redactor_theme",
+        "html_theme_path": "[sphinx_redactor_theme.get_html_theme_path()]"
+      },
+      "display": "Redactor",
+      "pypi": "sphinx-redactor-theme"
     },
     {
       "config": "renku",

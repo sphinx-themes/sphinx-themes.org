@@ -15,7 +15,6 @@ _FEATURED = [
     "insegel",
     "insipid-sphinx-theme",
     "sphinx-material",
-    "sphinx-redactor-theme",
 ]
 
 
