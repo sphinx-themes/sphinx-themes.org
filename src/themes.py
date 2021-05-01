@@ -3,7 +3,7 @@
 import json
 import sys
 from dataclasses import dataclass, field
-from typing import Dict, Iterator, List, Union
+from typing import Dict, Iterator, List, Optional, Union
 
 from .constants import DESTINATION, FILES
 
@@ -40,6 +40,7 @@ class Theme:
 
     display: str
     pypi_package: str
+    documentation_link: Optional[str]
     configuration: Dict[str, Union[List[str], str]]
 
     imports: List[int] = field(default_factory=list)
@@ -57,11 +58,14 @@ class Theme:
         assert "pypi" in di, di
         pypi_package = di["pypi"]
 
+        documentation_link = di.get("documentation", None)
+
         assert "config" in di, di
         if isinstance(di["config"], str):
             return cls(
                 display=display,
                 pypi_package=pypi_package,
+                documentation_link=documentation_link,
                 configuration={"html_theme": di["config"]},
             )
 
@@ -75,6 +79,7 @@ class Theme:
         return cls(
             display=display,
             pypi_package=pypi_package,
+            documentation_link=documentation_link,
             configuration=configuration,
             imports=imports,
             extensions=extensions,

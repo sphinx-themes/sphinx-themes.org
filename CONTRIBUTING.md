@@ -35,12 +35,14 @@ For themes which only need `html_theme` to be set, the entry would be something 
 {
   "config": "sphinx_rtd_theme",
   "display": "Read the Docs",
+  "documentation": "https://sphinx-rtd-theme.readthedocs.io/en/latest/",
   "pypi": "sphinx-rtd-theme"
 }
 ```
 
 - `config` becomes the `html_theme` in Sphinx's `conf.py`
 - `display` is the name presented on the website
+- `documentation` is the link to the theme's "latest" documentation
 - `pypi` is the package installed for the theme from [PyPI]
 
 #### Complex Configuration
@@ -60,6 +62,7 @@ Certain themes require additional values to be set in `conf.py`, to be able to u
     "html_context": "{'executable': sys.executable}"
   },
   "display": "Read the Docs",
+  "documentation": "https://sphinx-rtd-theme.readthedocs.io/en/latest/",
   "pypi": "sphinx-rtd-theme"
 }
 ```

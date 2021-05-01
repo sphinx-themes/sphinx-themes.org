@@ -11,13 +11,13 @@ def update(session):
     session.run("pip-compile")
 
 
-@nox.session(name="list")
+@nox.session(name="list", reuse_venv=True)
 def list_themes(session):
     session.install("rich")
     session.run("python", "-m", "src.themes")
 
 
-@nox.session
+@nox.session(reuse_venv=True)
 def publish(session):
     session.install("-r", "requirements.txt")
     session.run("playwright", "install", "firefox")
