@@ -31,6 +31,11 @@ rst_prolog = """
 .. |theme_pypi_link| replace:: :pypi:`{{ theme.pypi_package }}`
 .. |theme_name| replace:: {{ theme.name }}
 .. |theme_display| replace:: {{ theme.display }}
+{% if theme.documentation_link -%}
+.. |theme_documentation_message| replace:: You can find this theme's documentation at {{ theme.documentation_link }}.
+{% else %}
+.. |theme_documentation_message| replace:: This theme does not have any hosted-on-the-web documentation.
+{%- endif %}
 """
 
 theme_configuration = """

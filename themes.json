@@ -3,31 +3,37 @@
     {
       "config": "alabaster",
       "display": "Alabaster",
+      "documentation": "https://alabaster.readthedocs.io/en/latest/",
       "pypi": "sphinx"
     },
     {
       "config": "sphinx_rtd_theme",
       "display": "Read the Docs",
+      "documentation": "https://sphinx-rtd-theme.readthedocs.io/en/latest/",
       "pypi": "sphinx-rtd-theme"
     },
     {
       "config": "furo",
       "display": "Furo",
+      "documentation": "https://pradyunsg.me/furo/",
       "pypi": "furo"
     },
     {
       "config": "sphinx_book_theme",
       "display": "Book",
+      "documentation": "https://sphinx-book-theme.readthedocs.io/en/latest/",
       "pypi": "sphinx-book-theme"
     },
     {
       "config": "pydata_sphinx_theme",
       "display": "PyData",
+      "documentation": "https://pydata-sphinx-theme.readthedocs.io/en/latest/",
       "pypi": "pydata-sphinx-theme"
     },
     {
       "config": "press",
       "display": "Press",
+      "documentation": "https://schettino72.github.io/sphinx_press_site/",
       "pypi": "sphinx-press-theme"
     },
     {
@@ -38,6 +44,7 @@
     {
       "config": "insegel",
       "display": "Insegel",
+      "documentation": "https://insegel.readthedocs.io/en/latest/",
       "pypi": "insegel"
     },
     {
@@ -48,11 +55,13 @@
         "html_theme": "insipid"
       },
       "display": "Insipid",
+      "documentation": "https://insipid-sphinx-theme.readthedocs.io/en/latest/",
       "pypi": "insipid-sphinx-theme"
     },
     {
       "config": "sphinx_material",
       "display": "Material",
+      "documentation": "https://bashtage.github.io/sphinx-material/",
       "pypi": "sphinx-material"
     },
     {
