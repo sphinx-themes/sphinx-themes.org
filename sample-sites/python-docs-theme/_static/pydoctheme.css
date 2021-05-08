@@ -6,10 +6,15 @@ body {
     margin-right: 1em;
 }
 
+.mobile-nav,
+.menu-wrapper {
+    display: none;
+}
+
 div.related {
     margin-bottom: 1.2em;
     padding: 0.5em 0;
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin-top: 0.5em;
 }
 
@@ -17,9 +22,23 @@ div.related a:hover {
     color: #0095C4;
 }
 
-div.related:first-child {
-    border-top: 0;
-    border-bottom: 1px solid #ccc;
+div.related ~ div.related {
+    border-top: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.related .switchers {
+    display: inline-flex;
+}
+
+.switchers > div {
+    margin-right: 5px;
+}
+
+.version_switcher_placeholder,
+.language_switcher_placeholder {
+    padding-left: 5px;
+    background-color: white;
 }
 
 .inline-search {
@@ -190,4 +209,282 @@ div.footer a:hover {
 
 dl > dt span ~ em {
     font-family: monospace, sans-serif;
+}
+
+.toctree-wrapper ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 1023px) {
+    /* Body layout */
+    div.body {
+        min-width: 100%;
+        padding: 0;
+        font-size: 0.875rem;
+    }
+    div.bodywrapper {
+        margin: 0;
+    }
+    /* Typography */
+    div.body h1 {
+        font-size: 1.625rem;
+    }
+    div.body h2 {
+        font-size: 1.25rem;
+    }
+    div.body h3, div.body h4, div.body h5 {
+        font-size: 1rem;
+    }
+    /* Remove sidebar and top related bar */
+    div.related, .sphinxsidebar {
+        display: none;
+    }
+    /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
+    html {
+        scroll-padding-top: 40px;
+    }
+
+    /* Top navigation bar */
+    .mobile-nav {
+        display: block;
+        height: 40px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
+        z-index: 1;
+    }
+    .mobile-nav * {
+        box-sizing: border-box;
+    }
+    .nav-content {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        height: 40px;
+        width: 100%;
+        padding: 0 1rem 0 45px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+    }
+    .nav-logo {
+        margin-right: 0.7rem;
+        display: flex;
+        flex: 0 0 auto;
+    }
+    .nav-content img {
+        width: 20px;
+        height: auto;
+    }
+    .version_switcher_placeholder {
+        flex: 0 1 0;
+        margin-right: 1rem;
+    }
+    .version_switcher_placeholder select {
+        height: 30px;
+        border-radius: 0;
+    }
+    .nav-content .search {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        padding: 0 0 0 2px;
+        border: 1px solid #a9a9a9;
+        height: 30px;
+        overflow: hidden;
+    }
+    .nav-content .search:hover {
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        border-color: rgba(223,225,229,0);
+    }
+    .nav-content .search input[type=text] {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        width: 40px;
+        height: 28px;
+        flex: 1 1 auto;
+    }
+    .nav-content .search input[type=submit] {
+        height: 100%;
+        border: 0;
+        box-shadow: none;
+        outline: 1px solid #999;
+        cursor: pointer;
+    }
+    .nav-content .search svg {
+        flex: 0 0 20px;
+        fill: #333;
+    }
+    .toggler__input {
+        width: 40px;
+        height: 40px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: 3;
+        margin: 0;
+    }
+    .toggler__label {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        border: 1px solid white;
+        box-shadow: none;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 8px;
+    }
+    .toggler__label:focus {
+        background-color: #eee;
+        border: 1px solid #ededed;
+        box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
+    }
+    .toggler__label:hover {
+        background-color: #eee;
+        border: 1px solid #ededed;
+        box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
+    }
+    .toggler__label > span {
+        position: relative;
+        flex: none;
+        height: 2px;
+        width: 100%;
+        background: #444;
+        transition: all 400ms ease;
+    }
+    .toggler__label > span::before,
+    .toggler__label > span::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: inherit;
+        position: absolute;
+        left: 0;
+        top: -8px;
+    }
+    .toggler__label > span::after {
+        top: 8px;
+    }
+    .toggler__input:checked ~ .toggler__label span {
+        transform: rotate(135deg);
+    }
+    .toggler__input:checked ~ .toggler__label span::before {
+        transform: rotate(90deg);
+    }
+    .toggler__input:checked ~ .toggler__label span::before,
+    .toggler__input:checked ~ .toggler__label span::after {
+        top: 0;
+    }
+    .toggler__input:checked:hover ~ .toggler__label span {
+        transform: rotate(315deg);
+    }
+    .toggler__input:checked ~ .menu-wrapper {
+        visibility: visible;
+        left: 0;
+    }
+
+    /* Sliding side menu */
+    .menu-wrapper {
+        display: block;
+        position: fixed;
+        top: 0;
+        transition: left 400ms ease;
+        left: -310px;
+        width: 300px;
+        height: 100%;
+        background-color: #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+    }
+    .menu-wrapper.open {
+        visibility: visible;
+        left: 0;
+    }
+    .menu {
+        padding: 40px 10px 30px 20px;
+    }
+    .menu-wrapper h3,
+    .menu-wrapper h4 {
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+    .menu-wrapper h4 {
+        font-size: 1.3em;
+    }
+    .menu-wrapper h3 {
+        color: #444444;
+        font-size: 1.4em;
+    }
+    .menu-wrapper h3 + p,
+    .menu-wrapper h4 + p {
+        margin-top: 0.5rem;
+    }
+    .menu a {
+        font-size: smaller;
+        color: #444444;
+        text-decoration: none;
+    }
+    .menu ul {
+        list-style: none;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+        padding-left: 0;
+    }
+    .menu ul ul {
+        margin-left: 20px;
+        list-style: square;
+    }
+    .menu ul li {
+        margin-bottom: 0.5rem;
+    }
+    .language_switcher_placeholder,
+    .version_switcher_placeholder {
+        position: relative;
+        border: 1px solid #a8a8a8;
+        height: 30px;
+    }
+    .language_switcher_placeholder {
+        margin-top: 2rem;
+    }
+    .language_switcher_placeholder::after,
+    .version_switcher_placeholder::after {
+        content: url('../_static/caret-down.svg');
+        position: absolute;
+        top: 7px;
+        width: 15px;
+        height: 15px;
+        right: 3px;
+        pointer-events: none;
+    }
+    .language_switcher_placeholder select,
+    .version_switcher_placeholder select {
+        appearance: none;
+        border: 0;
+        height: 100%;
+    }
+    .language_switcher_placeholder select {
+        width: 100%;
+    }
+    .document {
+        padding-top: 40px;
+        position: relative;
+        z-index: 0;
+    }
+    /*Responsive tables*/
+    .responsive-table__container {
+        width: 100%;
+        overflow-x: auto;
+    }
 }

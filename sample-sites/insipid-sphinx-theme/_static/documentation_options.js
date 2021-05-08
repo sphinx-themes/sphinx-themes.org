@@ -6,7 +6,7 @@ var DOCUMENTATION_OPTIONS = {
     BUILDER: 'dirhtml',
     FILE_SUFFIX: '.html',
     LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
+    HAS_SOURCE: true,
     SOURCELINK_SUFFIX: '.txt',
     NAVIGATION_WITH_KEYS: true
 };
