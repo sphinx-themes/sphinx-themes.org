@@ -159,8 +159,8 @@ strong:target {
 div.body dl > dt:target,
 div.body div.admonition dl > dt:target,
 div.body div.topic dl > dt:target,
-div.body div.sidebar dl > dt:target,
-div.body div.sidebar .sidebar-title a:target,
+div.body .sidebar dl > dt:target,
+div.body .sidebar .sidebar-title a:target,
 div.body a:target,
 strong:target {
     background-color: #fbe54e;
@@ -242,7 +242,7 @@ code.xref,
 a code,
 div.body div.admonition dl > dt code,
 div.body div.topic dl > dt code,
-div.body div.sidebar dl > dt code,
+div.body .sidebar dl > dt code,
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
 div.code-block-caption code {
     background-color: rgba(27,31,35,.05);
@@ -284,6 +284,10 @@ table.highlighttable td.linenos {
     padding-right: 0.5em;
 }
 
+span.linenos {
+    margin-right: 0.7em;
+}
+
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
     padding: 0 0.5em;
@@ -298,13 +302,13 @@ kbd.docutils:not(.compound) {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.topic, div.sidebar {
+div.topic, div.sidebar, aside.sidebar {
     border: none;
 }
 
 div.admonition > p.admonition-title,
 div.topic > p.topic-title,
-div.sidebar > p.sidebar-title {
+.sidebar > p.sidebar-title {
     margin: -7px -7px 7px -7px;
     padding: 4px 7px;
     font-weight: normal;
@@ -321,7 +325,7 @@ div.sidebar > p.sidebar-title {
 
 div.admonition > p.admonition-title + *,
 div.topic > p.topic-title + *,
-div.sidebar > p.sidebar-title + * {
+.sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
@@ -362,11 +366,12 @@ div.topic > p.topic-title {
 }
 
 div.sidebar,
+aside.sidebar,
 div.admonition.seealso {
     background-color: #f4f4f4;
 }
 
-div.sidebar > p.sidebar-title,
+.sidebar > p.sidebar-title,
 div.admonition.seealso > p.admonition-title {
     background-color: #e4e4e4;
 }
@@ -382,14 +387,14 @@ p.sidebar-subtitle {
 /* More specific selectors to override previous defintions */
 div.body div.admonition dl > dt,
 div.body div.topic dl > dt,
-div.body div.sidebar dl > dt {
+div.body .sidebar dl > dt {
     padding: unset;
     background-color: unset;
 }
 
 div.body div.admonition dl:not(.glossary) > dt,
 div.body div.topic dl:not(.glossary) > dt,
-div.body div.sidebar dl:not(.glossary) > dt {
+div.body .sidebar dl:not(.glossary) > dt {
     font-weight: unset;
 }
 
@@ -455,7 +460,7 @@ div.body dl > dt:first-child {
 div.body dl > dt.label:target,
 div.body div.admonition dl > dt:target,
 div.body div.topic dl > dt:target,
-div.body div.sidebar dl > dt:target {
+div.body .sidebar dl > dt:target {
     padding: 3px 7px;
     margin-top: -3px;
     margin-bottom: -3px;
