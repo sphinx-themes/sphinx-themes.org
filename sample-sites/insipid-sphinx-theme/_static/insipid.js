@@ -49,7 +49,7 @@ $(document).ready(function () {
     }
 
     var div_body = document.querySelector('div.body');
-    var first_section = document.querySelector('div.body .section');
+    var first_section = document.querySelector('div.body .section, div.body section');
     if (first_section) {
         $(document).on('scroll', function () {
             if (window.pageYOffset >= div_body.offsetTop + first_section.offsetTop) {
