@@ -229,5 +229,9 @@ $(document).ready(function () {
             hideSidebar();
         }
     })
+
+    if ($current.length == 1 && $overlay.css('position') === 'fixed') {
+        hideSidebar();
+    }
 });
 

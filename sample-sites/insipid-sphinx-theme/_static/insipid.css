@@ -217,7 +217,7 @@ a.external {
 
 a.external:hover {
     text-decoration: none;
-    border-bottom: none;
+    border-bottom: 1px dotted transparent;
 }
 
 a.external:visited {
