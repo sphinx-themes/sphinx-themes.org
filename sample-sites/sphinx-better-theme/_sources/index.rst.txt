@@ -24,6 +24,12 @@ Quickstart
 3. Build your Sphinx documentation with the new theme! [1]_
 
 
+Documentation
+=============
+
+|theme_documentation_message|
+
+
 Exploration
 ===========
 
@@ -36,7 +42,6 @@ The :doc:`kitchen-sink/index` section contains pages that contains basically
 everything that you can with Sphinx "out-of-the-box". Browsing through that
 section should give you a good idea of how stuff looks in this theme.
 
-|theme_documentation_message|
 
 Navigation
 ==========
