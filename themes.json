@@ -186,6 +186,17 @@
     {
       "config": {
         "_imports": [
+          "sphinx_nameko_theme"
+        ],
+        "html_theme": "nameko",
+        "html_theme_path": "[sphinx_nameko_theme.get_html_theme_path()]"
+      },
+      "display": "Nameko",
+      "pypi": "sphinx-nameko-theme"
+    },
+    {
+      "config": {
+        "_imports": [
           "sphinx_theme_pd"
         ],
         "html_theme": "sphinx_theme_pd",
