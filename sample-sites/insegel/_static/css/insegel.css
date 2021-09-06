@@ -299,7 +299,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 }
 
 #side-menu .caption {
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: 300;
   list-style-type: none;
   margin-bottom: 0px;
@@ -309,6 +309,15 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   text-transform: none;
   list-style-type: none;
   padding-left: 0px;
+}
+#side-menu .toctree-l2 > a {
+  font-weight: normal;
+  margin-left: 1em;
+}
+#side-menu .toctree-l3 > a, #side-menu .toctree-l4 > a, #side-menu .toctree-l5 > a {
+  font-weight: normal;
+  opacity: 0.7;
+  margin-left: 2em;
 }
 
 #search {
@@ -361,6 +370,10 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 
 .figure {
   margin-bottom: 1em;
+}
+
+div.highlight > pre {
+  white-space: pre-wrap;
 }
 
 header {
