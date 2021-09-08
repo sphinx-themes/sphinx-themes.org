@@ -14,7 +14,7 @@ jinja2==2.11.3
     # via -r requirements.in
 markupsafe==1.1.1
     # via jinja2
-pillow==8.2.0
+pillow==8.3.2
     # via -r requirements.in
 playwright==1.10.0
     # via -r requirements.in
@@ -25,6 +25,4 @@ pygments==2.8.1
 rich==10.1.0
     # via -r requirements.in
 typing-extensions==3.7.4.3
-    # via
-    #   playwright
-    #   rich
+    # via rich
