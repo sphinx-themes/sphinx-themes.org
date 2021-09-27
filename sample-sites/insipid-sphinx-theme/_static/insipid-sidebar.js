@@ -224,13 +224,13 @@ $(document).ready(function () {
         }
     }
 
-    $current.on('click', 'a', function () {
+    $current.on('click', '> a', function () {
         if ($overlay.css('position') === 'fixed') {
             hideSidebar();
         }
     })
 
-    if ($current.length == 1 && $overlay.css('position') === 'fixed') {
+    if ($current.length == 1 && $current[0].childElementCount == 1 && $overlay.css('position') === 'fixed') {
         hideSidebar();
     }
 });
