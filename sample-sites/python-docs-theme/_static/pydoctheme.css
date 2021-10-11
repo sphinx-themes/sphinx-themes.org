@@ -136,7 +136,7 @@ div.body a:hover {
 }
 
 tt, code, pre {
-    font-family: monospace, sans-serif;
+    font-family: "monospace", monospace;
     font-size: 96.5%;
 }
 
@@ -208,7 +208,7 @@ div.footer a:hover {
 }
 
 dl > dt span ~ em {
-    font-family: monospace, sans-serif;
+    font-family: "monospace", monospace;
 }
 
 .toctree-wrapper ul {
