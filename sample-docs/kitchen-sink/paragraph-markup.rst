@@ -421,15 +421,15 @@ Deprecations
 ------------
 
 .. versionadded:: v0.1
-   
+
    This is a version added message.
 
 .. versionchanged:: v0.2
-   
+
    This is a version changed message.
 
 .. deprecated:: v0.3
-   
+
    This is a deprecation message.
 
 Topics, Sidebars, and Rubrics
