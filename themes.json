@@ -75,6 +75,14 @@
     },
     {
       "config": {
+        "html_permalinks_icon": "'<span>#</span>'",
+        "html_theme": "sphinxawesome_theme"
+      },
+      "display": "Awesome",
+      "pypi": "sphinxawesome-theme"
+    },
+    {
+      "config": {
         "_extensions": [
           "sphinxjp.themes.basicstrap"
         ],
