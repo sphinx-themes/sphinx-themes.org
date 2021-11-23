@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="reStructuredText, demonstration, demo, parser" name="keywords"/>
+<meta content="A demonstration of the reStructuredText markup language, containing examples of all basic constructs and many advanced constructs." lang="en" name="description" xml:lang="en"/>
+<title>Paragraph Level Markup | Awesome</title>
+<link href="../../_static/pygments.css" rel="stylesheet"/>
+<link href="../../_static/theme.98444cbbfa592ec3b1c0.css" rel="stylesheet"/>
+<link href="kitchen-sink/paragraph-markup/" rel="canonical"/>
+<link href="../../search/" rel="search" title="Search"/>
+<link href="../../genindex/" rel="index" title="Index"/>
+<link href="../api/" rel="next" title="API documentation"/>
+<link href="../" rel="prev" title="Kitchen Sink"/>
+</head>
+<body class="antialiased text-sm sm:text-base text-gray">
+<div class="h-screen xl:grid xl:grid-layout" data-action="keydown@window-&gt;search#focus" data-controller="sidebar search" id="page">
+<a class="block text-xl bg-white py-4 z-20 absolute top-0 h-18 inset-x-0 text-center transform -translate-y-full focus:translate-y-0 focus:outline-none transition-transform duration-75" href="#paragraph-level-markup" title="Skip navigation links">Skip to content</a>
+<header class="grid-area-header z-10 h-14 sm:h-18">
+<div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+<button class="xl:hidden h-14 w-14 sm:h-18 sm:w-18 leading-14 sm:leading-18 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand" data-action="sidebar#open" data-sidebar-target="hamburger">
+<span class="sr-only">Open navigation menu</span>
+<svg aria-hidden="true" class="fill-current h-8 w-8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+</button><a aria-label="Back to homepage" class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none tooltipped tooltipped-sw" href="../../"><span class="hidden lg:inline-block flex-shrink-0 font-medium text-gray-100 mx-5 leading-14 sm:leading-18 tracking-wider">Awesome</span>
+</a></div><div class="flex justify-end items-center flex-1"><form action="../../search/" class="flex print:hidden justify-between items-center leading-14 sm:leading-18 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static" data-action="click-&gt;search#focusSearchInput" id="searchbox" method="get">
+<button aria-label="Get search results" class="text-inherit h-14 w-14 sm:h-18 sm:w-18" tabindex="-1">
+<svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</button>
+<input aria-label="Search the docs" class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100" data-search-target="searchInput" id="search-input" name="q" placeholder="Search the docs" type="search"/>
+</form></div>
+</div>
+</header>
+<aside class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100" data-sidebar-target="sidebar">
+<nav class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col" role="navigation">
+<div class="nav-toc flex-1 pl-6"><ul class="current">
+<li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="../">Kitchen Sink</a></div><ul class="current">
+<li class="toctree-l2 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#">Paragraph Level Markup</a></div><ul>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#inline-markup">Inline Markup</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#math">Math</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#meta">Meta</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#blocks">Blocks</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#sidebar">Sidebar</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#references">References</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#directives">Directives</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#download-links">Download Links</a></div></li>
+</ul>
+</li>
+<li class="toctree-l2"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="../api/">API documentation</a></div><ul>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../api/#module-asyncio"><code class="docutils literal notranslate">asyncio</code></a></div></li>
+</ul>
+</li>
+<li class="toctree-l2"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="../lists-and-tables/">Lists &amp; Tables</a></div><ul>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../lists-and-tables/#lists">Lists</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../lists-and-tables/#tables">Tables</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../placeholder-one/">Placeholder Page One</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../placeholder-two/">Placeholder Page Two</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../long-page/">Long Page</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference external" data-action="click-&gt;sidebar#close" href="https://www.sphinx-doc.org" rel="nofollow noopener">External Link<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></div></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional "hidden" Pages</span></p>
+<ul>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../placeholder-three/">Placeholder Page Three</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../placeholder-four/">Placeholder Page Four</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference external" data-action="click-&gt;sidebar#close" href="https://sphinx-themes.org" rel="nofollow noopener">Sphinx Theme Gallery<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></div></li>
+</ul>
+</div>
+<button class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center" data-action="" title="Close navigation menu">
+<span class="sr-only">Close navigation menu</span>
+<svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</aside>
+<main class="px-10 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0" data-action="scroll-&gt;scroll#showButton" data-controller="scroll"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
+<a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../../">Awesome</a>
+<span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="../">Kitchen Sink</a>
+<span class="mr-1">/</span><span aria-current="page">Paragraph Level Markup</span>
+</nav>
+<article class="flex-1" role="main">
+<section id="paragraph-level-markup">
+<h1>Paragraph Level Markup<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#paragraph-level-markup"><span>#</span></a></h1>
+<section id="inline-markup">
+<h2>Inline Markup<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#inline-markup"><span>#</span></a></h2>
+<p>Paragraphs contain text and may contain inline markup: <em>emphasis</em>, <strong>strong emphasis</strong>, <code class="docutils literal notranslate">inline literals</code>,
+standalone hyperlinks (<a class="reference external" href="http://www.python.org" rel="nofollow noopener">http://www.python.org<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>), external hyperlinks (<a class="reference external" href="http://www.python.org/" rel="nofollow noopener">Python<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> <a class="footnote-reference brackets" href="#id28" id="id29">5</a>), internal cross-references (<a class="reference internal" href="#example">example</a>),
+external hyperlinks with embedded URIs (<a class="reference external" href="http://www.python.org" rel="nofollow noopener">Python web site<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>), footnote references
+(manually numbered <a class="footnote-reference brackets" href="#id6" id="id1">1</a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2">3</a>, labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3">2</a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4">*</a>),
+citation references (<a class="footnote-reference brackets" href="#id16" id="id5">12</a>), substitution references (<a class="reference internal" href="https://source.unsplash.com/200x200/daily?cute+animals"><img alt="EXAMPLE" src="https://source.unsplash.com/200x200/daily?cute+animals" style="width: 1em;"/></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
+(see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here). Character-level inline markup is also possible
+(although exceedingly ugly!) in <em>re</em><code class="docutils literal notranslate">Structured</code><em>Text</em>. Problems are indicated by <a href="#id26"><span class="problematic" id="id27">|problematic|</span></a>
+text (generated by processing errors; this one is intentional).</p>
+<p>Also with <code class="docutils literal notranslate">sphinx.ext.autodoc</code>, which I use in the demo, I can link to <code class="xref py py-class docutils literal notranslate">test_py_module.test.Foo</code>.
+It will link you right to my code documentation for it.</p>
+<p>The default role for interpreted text is <cite>Title Reference</cite>.  Here are some explicit interpreted text roles:
+a PEP reference (<span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0287"><strong>PEP 287</strong><svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>); an RFC reference (<span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc2822.html"><strong>RFC 2822</strong><svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>); a <sub>subscript</sub>; a <sup>superscript</sup>;
+and explicit roles for <em>standard</em> <strong>inline</strong> <code class="docutils literal notranslate">markup</code>.</p>
+<p>GUI labels are a useful way to indicate that <span class="guilabel">Some action</span> is to be taken by the user.
+The GUI label should not run over <code class="docutils literal notranslate">line-height</code> so as not to <span class="guilabel">interfere</span> with text from adjacent lines.</p>
+<p>Key-bindings indicate that the read is to press a button on the keyboard or mouse,
+for example <kbd class="kbd docutils literal notranslate">MMB</kbd> and <kbd class="kbd docutils literal notranslate">Shift-MMB</kbd>. Another useful markup to indicate a user action
+is to use <code class="docutils literal notranslate">menuselection</code> this can be used to show short and long menus in software.
+For example, and <code class="docutils literal notranslate">menuselection</code> can be seen here that breaks is too long to fit on this line.
+<span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ sub menu 2</span>.</p>
+<p>Let’s test wrapping and whitespace significance in inline literals:
+<code class="docutils literal notranslate">This is an example of --inline-literal --text, --including some--
+strangely--hyphenated-words.  Adjust-the-width-of-your-browser-window
+to see how the text is wrapped.  -- ---- --------  Now note    the
+spacing    between the    words of    this sentence    (words
+should    be grouped    in pairs).</code></p>
+<p>If the <code class="docutils literal notranslate">--pep-references</code> option was supplied, there should be a live link to PEP 258 here.</p>
+</section>
+<section id="math">
+<h2>Math<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#math"><span>#</span></a></h2>
+<p>This is a test. Here is an equation:
+<span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
+Here is another:</p>
+<div class="math notranslate nohighlight" id="equation-this-is-a-label">
+<span class="eqno">(1)<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#equation-this-is-a-label"><span>#</span></a></span>\[\nabla^2 f =
+\frac{1}{r^2} \frac{\partial}{\partial r}
+\left( r^2 \frac{\partial f}{\partial r} \right) +
+\frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
+\left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
+\frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}\]</div>
+<p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using <code class="docutils literal notranslate">:eq:</code>.</p>
+</section>
+<section id="meta">
+<h2>Meta<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#meta"><span>#</span></a></h2>
+</section>
+<section id="blocks">
+<h2>Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#blocks"><span>#</span></a></h2>
+<section id="literal-blocks">
+<h3>Literal Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#literal-blocks"><span>#</span></a></h3>
+<p>Literal blocks are indicated with a double-colon (“::”) at the end of
+the preceding paragraph (over there <code class="docutils literal notranslate">--&gt;</code>).  They can be indented:</p>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">python</span></div>
+<pre><code><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">'is left as-is'</span>
+    <span class="n">spaces_and_linebreaks</span> <span class="o">=</span> <span class="s1">'are preserved'</span>
+    <span class="n">markup_processing</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Or they can be quoted without indentation:</p>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">python</span></div>
+<pre><code>&gt;&gt; Great idea!
+&gt;
+&gt; Why didn't I think of that?
+</code></pre></div>
+</section>
+<section id="line-blocks">
+<h3>Line Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#line-blocks"><span>#</span></a></h3>
+<div class="line-block">
+<div class="line">This is a line block.  It ends with a blank line.</div>
+<div class="line-block">
+<div class="line">Each new line begins with a vertical bar (“|”).</div>
+<div class="line">Line breaks and initial indents are preserved.</div>
+</div>
+<div class="line">Continuation lines are wrapped portions of long lines;
+they begin with a space in place of the vertical bar.</div>
+<div class="line-block">
+<div class="line">The left edge of a continuation line need not be aligned with
+the left edge of the text above it.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">This is a second line block.</div>
+<div class="line"><br/></div>
+<div class="line">Blank lines are permitted internally, but they must begin with a “|”.</div>
+</div>
+<p>Take it away, Eric the Orchestra Leader!</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">A one, two, a one two three four</div>
+<div class="line"><br/></div>
+<div class="line">Half a bee, philosophically,</div>
+<div class="line-block">
+<div class="line">must, <em>ipso facto</em>, half not be.</div>
+</div>
+<div class="line">But half the bee has got to be,</div>
+<div class="line-block">
+<div class="line"><em>vis a vis</em> its entity.  D’you see?</div>
+<div class="line"><br/></div>
+</div>
+<div class="line">But can a bee be said to be</div>
+<div class="line-block">
+<div class="line">or not to be an entire bee,</div>
+<div class="line-block">
+<div class="line">when half the bee is not a bee,</div>
+<div class="line-block">
+<div class="line">due to some ancient injury?</div>
+<div class="line"><br/></div>
+</div>
+</div>
+</div>
+<div class="line">Singing…</div>
+</div>
+</div></blockquote>
+</section>
+<section id="block-quotes">
+<h3>Block Quotes<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#block-quotes"><span>#</span></a></h3>
+<p>Block quotes consist of indented body elements:</p>
+<blockquote>
+<div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+as follows and begins now.  All brontosauruses are thin at one
+end, much much thicker in the middle and then thin again at the
+far end.  That is my theory, it is mine, and belongs to me and I
+own it, and what it is too.</p>
+<p class="attribution">—Anne Elk (Miss)</p>
+</div></blockquote>
+</section>
+<section id="doctest-blocks">
+<h3>Doctest Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#doctest-blocks"><span>#</span></a></h3>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">python</span></div>
+<pre><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span>
+<span class="go">Python-specific usage examples; begun with "&gt;&gt;&gt;"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'(cut and pasted from interactive Python sessions)'</span>
+<span class="go">(cut and pasted from interactive Python sessions)</span>
+</code></pre></div>
+</section>
+<section id="code-blocks">
+<h3>Code Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#code-blocks"><span>#</span></a></h3>
+<pre><code># parsed-literal test
+curl -O <a class="reference external" href="http://someurl/release" rel="nofollow noopener">http://someurl/release<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>-.tar-gz</code></pre>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">json</span>
+<span class="caption-text">Code Blocks can have captions.</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id22"><span>#</span></a></div>
+<pre><code><span class="p">{</span>
+<span class="nt">"windows"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">"panes"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">"shell_command"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">"echo 'did you know'"</span><span class="p">,</span>
+            <span class="s2">"echo 'you can inline'"</span>
+        <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+        <span class="nt">"shell_command"</span><span class="p">:</span> <span class="s2">"echo 'single commands'"</span>
+        <span class="p">},</span>
+        <span class="s2">"echo 'for panes'"</span>
+    <span class="p">],</span>
+    <span class="nt">"window_name"</span><span class="p">:</span> <span class="s2">"long form"</span>
+    <span class="p">}</span>
+<span class="p">],</span>
+<span class="nt">"session_name"</span><span class="p">:</span> <span class="s2">"shorthands"</span>
+<span class="p">}</span>
+</code></pre></div>
+<section id="emphasized-lines-with-line-numbers">
+<h4>Emphasized lines with line numbers<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#emphasized-lines-with-line-numbers"><span>#</span></a></h4>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">python</span></div>
+<pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+</span><span class="code-line" id="line-2"><span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+</span><mark><span class="code-line" id="line-3"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">'This line is highlighted.'</span>
+</span></mark><span class="code-line" id="line-4"><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">'This one is not...'</span>
+</span><mark><span class="code-line" id="line-5"><span class="linenos">5</span>    <span class="nb">print</span> <span class="s1">'...but this one is.'</span>
+</span></mark></code></pre></div>
+</section>
+</section>
+</section>
+<section id="sidebar">
+<h2>Sidebar<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#sidebar"><span>#</span></a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Ch’ien / The Creative</p>
+<img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals"/>
+<p><em>Above</em> CH’IEN THE CREATIVE, HEAVEN</p>
+<p><em>Below</em> CH’IEN THE CREATIVE, HEAVEN</p>
+</aside>
+<p>The first hexagram is made up of six unbroken lines. These unbroken lines stand for the primal power,
+which is light-giving, active, strong, and of the spirit. The hexagram is consistently strong in character,
+and since it is without weakness, its essence is power or energy. Its image is heaven.
+Its energy is represented as unrestricted by any fixed conditions in space and is therefore conceived of as motion.
+Time is regarded as the basis of this motion.
+Thus the hexagram includes also the power of time and the power of persisting in time, that is, duration.</p>
+<p>The power represented by the hexagram is to be interpreted in a dual sense in terms of its action
+on the universe and of its action on the world of men. In relation to the universe, the hexagram expresses the strong,
+creative action of the Deity. In relation to the human world, it denotes the creative action of the holy man or sage,
+of the ruler or leader of men, who through his power awakens and develops their higher nature.</p>
+<section id="code-with-sidebar">
+<h3>Code with Sidebar<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#code-with-sidebar"><span>#</span></a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">A code example</p>
+<p>With a sidebar on the right.</p>
+</aside>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang"></span>
+<span class="caption-text">Literal includes can also have captions.</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id23"><span>#</span></a></div>
+<pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="gh">``asyncio``</span>
+</span><span class="code-line" id="line-2"><span class="linenos">2</span><span class="gh">===========</span>
+</span><span class="code-line" id="line-3"><span class="linenos">3</span>
+</span><span class="code-line" id="line-4"><span class="linenos">4</span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> asyncio
+</span><span class="code-line" id="line-5"><span class="linenos">5</span>    <span class="nc">:members:</span> run, gather, AbstractEventLoop
+</span></code></pre></div>
+</section>
+</section>
+<section id="references">
+<h2>References<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#references"><span>#</span></a></h2>
+<section id="footnotes">
+<h3>Footnotes<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#footnotes"><span>#</span></a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>A footnote contains body elements, consistently indented by at
+least 3 spaces.</p>
+<p>This is the footnote’s second paragraph.</p>
+</dd>
+<dt class="label" id="label"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7">1</a>) or
+automatically using a “#”-prefixed label.  This footnote has a
+label so it can be referred to from multiple places, both as a
+footnote reference (<a class="footnote-reference brackets" href="#label" id="id8">2</a>) and as a hyperlink reference
+(<a class="reference internal" href="#label">label</a>).</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dd><p>This footnote is numbered automatically and anonymously using a
+label of “#” only.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">*</a></span></dt>
+<dd><p>Footnotes may also use symbols, specified with a “*” label.
+Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11">†</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id11">†</a></span></dt>
+<dd><p>This footnote shows the next symbol in the sequence.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">4</span></dt>
+<dd><p>Here’s an unreferenced footnote, with a reference to a
+nonexistent footnote: <a href="#id42"><span class="problematic" id="id14">[5]_</span></a>.</p>
+</dd>
+</dl>
+</section>
+<section id="citations">
+<h3>Citations<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#citations"><span>#</span></a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id15"><span class="brackets">11</span></dt>
+<dd><p>This is the citation I made, let’s make this extremely long so that we can tell that it doesn’t follow the normal responsive table stuff.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">12</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id19">2</a>)</span></dt>
+<dd><p>This citation has some <code class="docutils literal notranslate">code blocks</code> in it, maybe some <strong>bold</strong> and
+<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id18" id="id17">13</a> too.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id17">13</a></span></dt>
+<dd><p>This citation will have two backlinks.</p>
+</dd>
+</dl>
+<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id16" id="id19">12</a>, and a <span id="id20">[nonexistent]</span> citation.</p>
+<p>Here is another type of citation: <cite>citation</cite></p>
+</section>
+<section id="glossary">
+<h3>Glossary<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#glossary"><span>#</span></a></h3>
+<p>This is a glossary with definition terms for thing like <a class="reference internal" href="#term-Writing"><span class="xref std std-term">Writing</span></a>:</p>
+<dl class="glossary simple">
+<dt id="term-Documentation">Documentation<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#term-Documentation"><span>#</span></a></dt><dd><p>Provides users with the knowledge they need to use something.</p>
+</dd>
+<dt id="term-Reading">Reading<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#term-Reading"><span>#</span></a></dt><dd><p>The process of taking information into ones mind through the use of eyes.</p>
+</dd>
+<dt id="term-Writing">Writing<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#term-Writing"><span>#</span></a></dt><dd><p>The process of putting thoughts into a medium for other people to <a class="reference internal" href="#term-Reading"><span class="xref std std-term">read</span></a>.</p>
+</dd>
+</dl>
+</section>
+<section id="targets">
+<h3>Targets<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#targets"><span>#</span></a></h3>
+<p id="example">This paragraph is pointed to by the explicit “example” target.
+A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
+hyperlink targets</a> are also possible.</p>
+<p>Section headers are implicit targets, referred to by name. See
+<a class="reference internal" href="#targets">Targets</a>, which is a subsection of <a href="#id43"><span class="problematic" id="id44">`Body Elements`_</span></a>.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/" rel="nofollow noopener">Python<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> <a class="footnote-reference brackets" href="#id28" id="id30">5</a>”.</p>
+<p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
+refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
+<p>Here’s a <a href="#id45"><span class="problematic" id="id46">`hyperlink reference without a target`_</span></a>, which generates an error.</p>
+</section>
+</section>
+<section id="directives">
+<h2>Directives<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#directives"><span>#</span></a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#centered-text" id="id32">Centered text</a></p></li>
+<li><p><a class="reference internal" href="#images-figures" id="id33">Images &amp; Figures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#images" id="id34">Images</a></p></li>
+<li><p><a class="reference internal" href="#figures" id="id35">Figures</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#admonitions" id="id36">Admonitions</a></p></li>
+<li><p><a class="reference internal" href="#deprecations" id="id37">Deprecations</a></p></li>
+<li><p><a class="reference internal" href="#topics-sidebars-and-rubrics" id="id38">Topics, Sidebars, and Rubrics</a></p></li>
+<li><p><a class="reference internal" href="#target-footnotes" id="id39">Target Footnotes</a></p></li>
+<li><p><a class="reference internal" href="#replacement-text" id="id40">Replacement Text</a></p></li>
+<li><p><a class="reference internal" href="#compound-paragraph" id="id41">Compound Paragraph</a></p></li>
+</ul>
+</div>
+<p>Above mini table of contents is generated by the <code class="docutils literal notranslate">.. contents::</code> directive.
+It and all the other directives presented here are just a sample of the many
+reStructuredText Directives. For others, please see:
+<a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html" rel="nofollow noopener">http://docutils.sourceforge.net/docs/ref/rst/directives.html<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
+<section id="centered-text">
+<h3><a class="toc-backref" href="#id32">Centered text</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#centered-text"><span>#</span></a></h3>
+<p>You can create a statement with centered text with <code class="docutils literal notranslate">.. centered::</code></p>
+<p class="centered">
+<strong>This is centered text!</strong></p></section>
+<section id="images-figures">
+<h3><a class="toc-backref" href="#id33">Images &amp; Figures</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#images-figures"><span>#</span></a></h3>
+<section id="images">
+<h4><a class="toc-backref" href="#id34">Images</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#images"><span>#</span></a></h4>
+<p>An image directive (also clickable – a hyperlink reference):</p>
+<a class="reference internal image-reference" href="#directives"><img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals"/></a>
+</section>
+<section id="figures">
+<h4><a class="toc-backref" href="#id35">Figures</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#figures"><span>#</span></a></h4>
+<figure class="align-default" id="id24">
+<img alt="reStructuredText, the markup syntax" src="https://source.unsplash.com/200x200/daily?cute+animals"/>
+<figcaption><span class="caption-text">A figure is an image with a caption and/or a legend:</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id24"><span>#</span></a>
+<div class="legend">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 80%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>re</p></td>
+<td><p>Revised, revisited, based on ‘re’ module.</p></td>
+</tr>
+<tr class="row-even"><td><p>Structured</p></td>
+<td><p>Structure-enhanced text, structuredtext.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Text</p></td>
+<td><p>Well it is, isn’t it?</p></td>
+</tr>
+</tbody>
+</table>
+<p>This paragraph is also part of the legend.</p>
+</div>
+</figcaption>
+</figure>
+<p>A figure directive with center alignment</p>
+<figure class="align-center" id="id25">
+<img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals"/>
+<figcaption><span class="caption-text">This caption should be centered.</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id25"><span>#</span></a>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="admonitions">
+<h3><a class="toc-backref" href="#id36">Admonitions</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#admonitions"><span>#</span></a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Directives at large.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Don’t take any wooden nickels.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Mad scientist at work!</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Does not compute.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It’s bigger than a bread box.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Wash behind your ears.</p></li>
+<li><p>Clean up your room.</p>
+<ul>
+<li><p>Including the closet.</p></li>
+<li><p>The bathroom too.</p>
+<ul>
+<li><p>Take the trash out of the bathroom.</p></li>
+<li><p>Clean the sink.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Call your mother.</p></li>
+<li><p>Back up your data.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.
+Equations within a note:
+<span class="math notranslate nohighlight">\(G_{\mu\nu} = 8 \pi G (T_{\mu\nu}  + \rho_\Lambda g_{\mu\nu})\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>15% if the service is good.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Thing1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thing2</p></td>
+</tr>
+<tr class="row-even"><td><p>Thing3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Strong prose may provoke extreme mental exertion.
+Reader discretion is strongly advised.</p>
+</div>
+<div class="admonition-and-by-the-way admonition">
+<p class="admonition-title">And, by the way…</p>
+<p>You can make up your own admonition too.</p>
+</div>
+</section>
+<section id="deprecations">
+<h3><a class="toc-backref" href="#id37">Deprecations</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#deprecations"><span>#</span></a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version v0.1: </span>This is a version added message.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version v0.2: </span>This is a version changed message.</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version v0.3: </span>This is a deprecation message.</p>
+</div>
+</section>
+<section id="topics-sidebars-and-rubrics">
+<h3><a class="toc-backref" href="#id38">Topics, Sidebars, and Rubrics</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#topics-sidebars-and-rubrics"><span>#</span></a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Sidebar Title</p>
+<p class="sidebar-subtitle">Optional Subtitle</p>
+<p>This is a sidebar.  It is for text outside the flow of the main
+text.</p>
+<p class="rubric">This is a rubric inside a sidebar</p>
+<p>Sidebars often appears beside the main text with a border and
+background color.</p>
+</aside>
+<div class="topic">
+<p class="topic-title">Topic Title</p>
+<p>This is a topic.</p>
+</div>
+<p class="rubric">This is a rubric</p>
+</section>
+<section id="target-footnotes">
+<h3><a class="toc-backref" href="#id39">Target Footnotes</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#target-footnotes"><span>#</span></a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id28"><span class="brackets">5</span><span class="fn-backref">(<a href="#id29">1</a>,<a href="#id30">2</a>,<a href="#id31">3</a>)</span></dt>
+<dd><p><a class="reference external" href="http://www.python.org/" rel="nofollow noopener">http://www.python.org/<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></p>
+</dd>
+</dl>
+</section>
+<section id="replacement-text">
+<h3><a class="toc-backref" href="#id40">Replacement Text</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#replacement-text"><span>#</span></a></h3>
+<p>I recommend you try <a class="reference external" href="http://www.python.org/" rel="nofollow noopener">Python, <em>the</em> best language around<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> <a class="footnote-reference brackets" href="#id28" id="id31">5</a>.</p>
+</section>
+<section id="compound-paragraph">
+<h3><a class="toc-backref" href="#id41">Compound Paragraph</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#compound-paragraph"><span>#</span></a></h3>
+<div class="compound">
+<p class="compound-first">This paragraph contains a literal block:</p>
+<div class="highlight" data-controller="code">
+<div class="code-header">
+<span class="code-lang">python</span></div>
+<pre><code><span class="n">Connecting</span><span class="o">...</span> <span class="n">OK</span>
+<span class="n">Transmitting</span> <span class="n">data</span><span class="o">...</span> <span class="n">OK</span>
+<span class="n">Disconnecting</span><span class="o">...</span> <span class="n">OK</span>
+</code></pre></div>
+<p class="compound-last">and thus consists of a simple paragraph, a literal block, and
+another simple paragraph.  Nonetheless it is semantically <em>one</em>
+paragraph.</p>
+</div>
+<p>This construct is called a <em>compound paragraph</em> and can be produced
+with the “compound” directive.</p>
+</section>
+</section>
+<section id="download-links">
+<h2>Download Links<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#download-links"><span>#</span></a></h2>
+<p><a class="reference download external" download="" href="https://source.unsplash.com/200x200/daily?cute+animals"><code class="xref download docutils literal notranslate">This long long long long long long long long long long long long long long long download link should be blue, normal weight text with a leading icon, and should wrap white-spaces</code></a></p>
+</section>
+</section>
+</article>
+<footer>
+<div class="mt-20 mb-4 text-sm text-gray-700">© 2021, Pradyun Gedam Made with <a href="https://www.sphinx-doc.org">Sphinx 4.3.0</a></div>
+</footer></main>
+<button class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full" data-action="search#hideSnackbar" data-search-target="snackbar">
+  Clear highlights
+</button><div class="fixed hidden inset-0 bg-black bg-opacity-50" data-action="click-&gt;sidebar#close" data-sidebar-target="screen">
+</div>
+</div>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../_static/theme.3666d2347a4c66e5d7a8.js"></script>
+</body>
+</html>
