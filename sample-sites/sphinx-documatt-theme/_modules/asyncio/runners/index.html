@@ -233,8 +233,7 @@
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
 
-    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span>
-        <span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">cancelled</span><span class="p">():</span>

@@ -138,8 +138,7 @@
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
 
-    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span>
-        <span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">cancelled</span><span class="p">():</span>
@@ -232,7 +231,7 @@
                         Copyright 2021, Pradyun Gedam.
                     <br />
                 Created using <a
-                        href="http://sphinx.pocoo.org/">Sphinx</a> 4.2.0
+                        href="http://sphinx.pocoo.org/">Sphinx</a> 4.3.0
                     .
                 Theme based on
                 <a href="https://github.com/scotch/sphinx-bootstrap">

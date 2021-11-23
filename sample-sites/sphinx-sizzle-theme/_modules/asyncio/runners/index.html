@@ -388,8 +388,7 @@
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
 
-    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span>
-        <span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">to_cancel</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">to_cancel</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">cancelled</span><span class="p">():</span>
@@ -411,7 +410,7 @@
 
     <div class="col-md-12">
         <span></span><span class="pull-right">&copy; Copyright 2021, Pradyun Gedam.
-        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0 and the
+        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0 and the
         <a href="https://pypi.org/project/sphinx-sizzle-theme/"
 
            title="0.0.9/821a5457 [2020-04-16T19:31:16]"

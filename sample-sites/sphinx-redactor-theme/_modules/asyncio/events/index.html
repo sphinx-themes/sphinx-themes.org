@@ -537,6 +537,20 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
+<div class="viewcode-block" id="AbstractEventLoop.connect_accepted_socket"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.connect_accepted_socket">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect_accepted_socket</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span> <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ssl_handshake_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Handle an accepted connection.</span>
+
+<span class="sd">        This is used by servers that accept connections outside of</span>
+<span class="sd">        asyncio, but use asyncio to handle connections.</span>
+
+<span class="sd">        This method is a coroutine.  When completed, the coroutine</span>
+<span class="sd">        returns a (transport, protocol) pair.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
 <div class="viewcode-block" id="AbstractEventLoop.create_datagram_endpoint"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.create_datagram_endpoint">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_datagram_endpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span>
                                        <span class="n">local_addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remote_addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
                                        <span class="n">family</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -864,9 +878,16 @@
 <span class="sd">    the result of `get_event_loop_policy().get_event_loop()` call.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># NOTE: this function is implemented in C (see _asynciomodule.c)</span>
+    <span class="k">return</span> <span class="n">_py__get_event_loop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_get_event_loop</span><span class="p">(</span><span class="n">stacklevel</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">current_loop</span> <span class="o">=</span> <span class="n">_get_running_loop</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">current_loop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">current_loop</span>
+    <span class="kn">import</span> <span class="nn">warnings</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;There is no current event loop&#39;</span><span class="p">,</span>
+                  <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">get_event_loop_policy</span><span class="p">()</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
 
 
@@ -896,6 +917,7 @@
 <span class="n">_py__set_running_loop</span> <span class="o">=</span> <span class="n">_set_running_loop</span>
 <span class="n">_py_get_running_loop</span> <span class="o">=</span> <span class="n">get_running_loop</span>
 <span class="n">_py_get_event_loop</span> <span class="o">=</span> <span class="n">get_event_loop</span>
+<span class="n">_py__get_event_loop</span> <span class="o">=</span> <span class="n">_get_event_loop</span>
 
 
 <span class="k">try</span><span class="p">:</span>
@@ -903,7 +925,7 @@
     <span class="c1"># functions in asyncio.  Pure Python implementation is</span>
     <span class="c1"># about 4 times slower than C-accelerated.</span>
     <span class="kn">from</span> <span class="nn">_asyncio</span> <span class="kn">import</span> <span class="p">(</span><span class="n">_get_running_loop</span><span class="p">,</span> <span class="n">_set_running_loop</span><span class="p">,</span>
-                          <span class="n">get_running_loop</span><span class="p">,</span> <span class="n">get_event_loop</span><span class="p">)</span>
+                          <span class="n">get_running_loop</span><span class="p">,</span> <span class="n">get_event_loop</span><span class="p">,</span> <span class="n">_get_event_loop</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="k">pass</span>
 <span class="k">else</span><span class="p">:</span>
@@ -912,6 +934,7 @@
     <span class="n">_c__set_running_loop</span> <span class="o">=</span> <span class="n">_set_running_loop</span>
     <span class="n">_c_get_running_loop</span> <span class="o">=</span> <span class="n">get_running_loop</span>
     <span class="n">_c_get_event_loop</span> <span class="o">=</span> <span class="n">get_event_loop</span>
+    <span class="n">_c__get_event_loop</span> <span class="o">=</span> <span class="n">_get_event_loop</span>
 </pre></div>
 
             </div>
