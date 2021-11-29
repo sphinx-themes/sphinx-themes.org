@@ -10,7 +10,7 @@
 <meta content="A demonstration of the reStructuredText markup language, containing examples of all basic constructs and many advanced constructs." lang="en" name="description" xml:lang="en"/>
 <title>Paragraph Level Markup | Awesome</title>
 <link href="../../_static/pygments.css" rel="stylesheet"/>
-<link href="../../_static/theme.98444cbbfa592ec3b1c0.css" rel="stylesheet"/>
+<link href="../../_static/theme.c1078303e59ded3de0b8.css" rel="stylesheet"/>
 <link href="kitchen-sink/paragraph-markup/" rel="canonical"/>
 <link href="../../search/" rel="search" title="Search"/>
 <link href="../../genindex/" rel="index" title="Index"/>
@@ -143,22 +143,22 @@ Here is another:</p>
 <h3>Literal Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#literal-blocks"><span>#</span></a></h3>
 <p>Literal blocks are indicated with a double-colon (“::”) at the end of
 the preceding paragraph (over there <code class="docutils literal notranslate">--&gt;</code>).  They can be indented:</p>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">python</span></div>
-<pre><code><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
+<div class="highlight"><pre><code><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s1">'is left as-is'</span>
     <span class="n">spaces_and_linebreaks</span> <span class="o">=</span> <span class="s1">'are preserved'</span>
     <span class="n">markup_processing</span> <span class="o">=</span> <span class="kc">None</span>
-</code></pre></div>
+</code></pre></div></div>
 <p>Or they can be quoted without indentation:</p>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">python</span></div>
-<pre><code>&gt;&gt; Great idea!
+<div class="highlight"><pre><code>&gt;&gt; Great idea!
 &gt;
 &gt; Why didn't I think of that?
-</code></pre></div>
+</code></pre></div></div>
 </section>
 <section id="line-blocks">
 <h3>Line Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#line-blocks"><span>#</span></a></h3>
@@ -223,24 +223,24 @@ own it, and what it is too.</p>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#doctest-blocks"><span>#</span></a></h3>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">python</span></div>
-<pre><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span>
+<div class="highlight"><pre><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span>
 <span class="go">Python-specific usage examples; begun with "&gt;&gt;&gt;"</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'(cut and pasted from interactive Python sessions)'</span>
 <span class="go">(cut and pasted from interactive Python sessions)</span>
-</code></pre></div>
+</code></pre></div></div>
 </section>
 <section id="code-blocks">
 <h3>Code Blocks<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#code-blocks"><span>#</span></a></h3>
 <pre><code># parsed-literal test
 curl -O <a class="reference external" href="http://someurl/release" rel="nofollow noopener">http://someurl/release<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>-.tar-gz</code></pre>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">json</span>
 <span class="caption-text">Code Blocks can have captions.</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id22"><span>#</span></a></div>
-<pre><code><span class="p">{</span>
+<div class="highlight"><pre><code><span class="p">{</span>
 <span class="nt">"windows"</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
     <span class="nt">"panes"</span><span class="p">:</span> <span class="p">[</span>
@@ -260,18 +260,18 @@ curl -O <a class="reference external" href="http://someurl/release" rel="nofollo
 <span class="p">],</span>
 <span class="nt">"session_name"</span><span class="p">:</span> <span class="s2">"shorthands"</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
 <section id="emphasized-lines-with-line-numbers">
 <h4>Emphasized lines with line numbers<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#emphasized-lines-with-line-numbers"><span>#</span></a></h4>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">python</span></div>
-<pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<div class="highlight"><pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
 </span><span class="code-line" id="line-2"><span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
 </span><mark><span class="code-line" id="line-3"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">'This line is highlighted.'</span>
 </span></mark><span class="code-line" id="line-4"><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">'This one is not...'</span>
 </span><mark><span class="code-line" id="line-5"><span class="linenos">5</span>    <span class="nb">print</span> <span class="s1">'...but this one is.'</span>
-</span></mark></code></pre></div>
+</span></mark></code></pre></div></div>
 </section>
 </section>
 </section>
@@ -299,16 +299,16 @@ of the ruler or leader of men, who through his power awakens and develops their 
 <p class="sidebar-title">A code example</p>
 <p>With a sidebar on the right.</p>
 </aside>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang"></span>
 <span class="caption-text">Literal includes can also have captions.</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#id23"><span>#</span></a></div>
-<pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="gh">``asyncio``</span>
+<div class="highlight"><pre><code><span class="code-line" id="line-1"><span class="linenos">1</span><span class="gh">``asyncio``</span>
 </span><span class="code-line" id="line-2"><span class="linenos">2</span><span class="gh">===========</span>
 </span><span class="code-line" id="line-3"><span class="linenos">3</span>
 </span><span class="code-line" id="line-4"><span class="linenos">4</span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> asyncio
 </span><span class="code-line" id="line-5"><span class="linenos">5</span>    <span class="nc">:members:</span> run, gather, AbstractEventLoop
-</span></code></pre></div>
+</span></code></pre></div></div>
 </section>
 </section>
 <section id="references">
@@ -580,13 +580,13 @@ background color.</p>
 <h3><a class="toc-backref" href="#id41">Compound Paragraph</a><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#compound-paragraph"><span>#</span></a></h3>
 <div class="compound">
 <p class="compound-first">This paragraph contains a literal block:</p>
-<div class="highlight" data-controller="code">
+<div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">python</span></div>
-<pre><code><span class="n">Connecting</span><span class="o">...</span> <span class="n">OK</span>
+<div class="highlight"><pre><code><span class="n">Connecting</span><span class="o">...</span> <span class="n">OK</span>
 <span class="n">Transmitting</span> <span class="n">data</span><span class="o">...</span> <span class="n">OK</span>
 <span class="n">Disconnecting</span><span class="o">...</span> <span class="n">OK</span>
-</code></pre></div>
+</code></pre></div></div>
 <p class="compound-last">and thus consists of a simple paragraph, a literal block, and
 another simple paragraph.  Nonetheless it is semantically <em>one</em>
 paragraph.</p>
@@ -602,7 +602,7 @@ with the “compound” directive.</p>
 </section>
 </article>
 <footer>
-<div class="mt-20 mb-4 text-sm text-gray-700">© 2021, Pradyun Gedam Made with <a href="https://www.sphinx-doc.org">Sphinx 4.3.0</a></div>
+<div class="mt-20 mb-4 text-sm text-gray-700">© 2021, Pradyun Gedam Made with <a href="https://www.sphinx-doc.org">Sphinx 4.3.1</a></div>
 </footer></main>
 <button class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full" data-action="search#hideSnackbar" data-search-target="snackbar">
   Clear highlights
@@ -613,7 +613,7 @@ with the “compound” directive.</p>
 <script src="../../_static/jquery.js"></script>
 <script src="../../_static/underscore.js"></script>
 <script src="../../_static/doctools.js"></script>
-<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../_static/theme.3666d2347a4c66e5d7a8.js"></script>
 </body>
 </html>
