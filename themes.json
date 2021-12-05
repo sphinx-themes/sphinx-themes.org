@@ -79,6 +79,7 @@
         "html_theme": "sphinxawesome_theme"
       },
       "display": "Awesome",
+      "documentation": "https://sphinxawesome.xyz",
       "pypi": "sphinxawesome-theme"
     },
     {
