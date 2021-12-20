@@ -508,11 +508,9 @@
 
         <span class="k">await</span> <span class="n">_cancel_and_wait</span><span class="p">(</span><span class="n">fut</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">fut</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">fut</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
         <span class="k">except</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">CancelledError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">()</span> <span class="kn">from</span> <span class="nn">exc</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">()</span>
 
     <span class="n">waiter</span> <span class="o">=</span> <span class="n">loop</span><span class="o">.</span><span class="n">create_future</span><span class="p">()</span>
     <span class="n">timeout_handle</span> <span class="o">=</span> <span class="n">loop</span><span class="o">.</span><span class="n">call_later</span><span class="p">(</span><span class="n">timeout</span><span class="p">,</span> <span class="n">_release_waiter</span><span class="p">,</span> <span class="n">waiter</span><span class="p">)</span>
@@ -548,11 +546,9 @@
             <span class="c1"># exception, we should re-raise it</span>
             <span class="c1"># See https://bugs.python.org/issue40607</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">fut</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">fut</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
             <span class="k">except</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">CancelledError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">()</span> <span class="kn">from</span> <span class="nn">exc</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">()</span>
     <span class="k">finally</span><span class="p">:</span>
         <span class="n">timeout_handle</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
 
@@ -1040,7 +1036,7 @@
                 &copy; Copyright 2021, Pradyun Gedam.
             </p>
             <p class="show-sphinx">
-              Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.3.1.
+              Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.3.2.
             </p>
             
               <p class="theme-info"><a href="https://pypi.python.org/pypi/hachibee-sphinx-theme">Sphinx-hachibee-theme</a> is hosted on <a href="https://github.com/hachibeeDI/Sphinx-hachibee-theme">Github</a></p>

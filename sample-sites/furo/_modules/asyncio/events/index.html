@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" />
 
-    <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
+    <meta name="generator" content="sphinx-4.3.2, furo 2021.11.23"/>
         <title>asyncio.events - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
@@ -682,7 +682,7 @@
         <span class="c1"># The reason to accept file-like object instead of just file descriptor</span>
         <span class="c1"># is: we need to own pipe and close it at transport finishing</span>
         <span class="c1"># Can got complicated errors if pass f.fileno(),</span>
-        <span class="c1"># close fd in pipe transport then close f and vise versa.</span>
+        <span class="c1"># close fd in pipe transport then close f and vice versa.</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 <div class="viewcode-block" id="AbstractEventLoop.connect_write_pipe"><a class="viewcode-back" href="../../../kitchen-sink/api/#asyncio.AbstractEventLoop.connect_write_pipe">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect_write_pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
@@ -695,7 +695,7 @@
         <span class="c1"># The reason to accept file-like object instead of just file descriptor</span>
         <span class="c1"># is: we need to own pipe and close it at transport finishing</span>
         <span class="c1"># Can got complicated errors if pass f.fileno(),</span>
-        <span class="c1"># close fd in pipe transport then close f and vise versa.</span>
+        <span class="c1"># close fd in pipe transport then close f and vice versa.</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">subprocess_shell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol_factory</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
