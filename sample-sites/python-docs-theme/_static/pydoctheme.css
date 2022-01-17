@@ -51,7 +51,15 @@ form.inline-search input[type="submit"] {
     width: 40px;
 }
 
+div.document {
+    display: flex;
+}
+
 div.sphinxsidebar {
+    float: none;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
     background-color: #eeeeee;
     border-radius: 5px;
     line-height: 130%;
@@ -60,6 +68,13 @@ div.sphinxsidebar {
 
 div.sphinxsidebar h3, div.sphinxsidebar h4 {
     margin-top: 1.5em;
+}
+
+div.sphinxsidebarwrapper {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 div.sphinxsidebarwrapper > h3:first-child {
