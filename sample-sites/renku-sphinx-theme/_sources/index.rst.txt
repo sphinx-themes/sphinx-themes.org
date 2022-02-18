@@ -33,14 +33,16 @@ Documentation
 Exploration
 ===========
 
+The :doc:`kitchen-sink/index` section contains pages that contains basically
+everything that you can with Sphinx "out-of-the-box".
+
 .. toctree::
-    :hidden:
+    :titlesonly:
 
     kitchen-sink/index
 
-The :doc:`kitchen-sink/index` section contains pages that contains basically
-everything that you can with Sphinx "out-of-the-box". Browsing through that
-section should give you a good idea of how stuff looks in this theme.
+Browsing through that section should give you a good idea of how stuff looks
+in this theme.
 
 
 Navigation
