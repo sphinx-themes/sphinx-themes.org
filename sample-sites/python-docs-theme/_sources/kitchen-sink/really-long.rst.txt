@@ -19,15 +19,14 @@ Heading 1
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit temporibus cupiditate in ducimus illum assumenda dolor, dignissimos laboriosam voluptate dolorem dolore eum repellendus minima, nisi sequi? Eveniet, dignissimos asperiores!
 
-<!-- prettier-ignore-start -->
-(second-heading)=
-(second-heading-again)=
-(second-heading-yet-again)=
+.. _`second-heading`:
+.. _`second-heading-again`:
+.. _`second-heading-yet-again`:
+
 Heading 2
 =========
-<!-- prettier-ignore-end -->
 
-Let's make sure multiple permalinks work: [one](second-heading), [two](second-heading-again), [three](second-heading-yet-again).
+Let's make sure multiple permalinks work: :ref:`one <second-heading>`, :ref:`two <second-heading-again>`, :ref:`three <second-heading-yet-again>`.
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit temporibus cupiditate in ducimus illum assumenda dolor, dignissimos laboriosam voluptate dolorem dolore eum repellendus minima, nisi sequi? Eveniet, dignissimos asperiores!
 
