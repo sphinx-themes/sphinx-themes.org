@@ -226,6 +226,12 @@
       "pypi": "sphinx-pdj-theme"
     },
     {
+      "config": "piccolo_theme",
+      "display": "Piccolo",
+      "documentation": "https://piccolo-theme.readthedocs.io/en/latest/",
+      "pypi": "piccolo-theme"
+    },
+    {
       "config": "python_docs_theme",
       "display": "Python Documentation",
       "pypi": "python-docs-theme"
