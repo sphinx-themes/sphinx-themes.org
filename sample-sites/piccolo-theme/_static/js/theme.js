@@ -50,6 +50,7 @@ function setupRightSidebarToggle() {
     })
 }
 
+
 window.onload = function() {
     console.log("custom theme loaded")
 
