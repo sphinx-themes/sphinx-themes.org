@@ -3,27 +3,66 @@
  * We add extra br tags to the autodoc output, so each parameter is shown on
  * its own line.
  */
-function setupAutodoc() {
-    const paramElements = document.getElementsByClassName('sig-param')
+function setupAutodocPy() {
+    const paramElements = document.querySelectorAll('.py .sig-param')
 
     Array(...paramElements).forEach((element) => {
-        console.log('adding element ...')
         let brElement = document.createElement('br')
         element.parentNode.insertBefore(brElement, element)
     })
 
-    const lastParamElements = document.querySelectorAll('em.sig-param:last-of-type')
+    const lastParamElements = document.querySelectorAll('.py em.sig-param:last-of-type')
 
     Array(...lastParamElements).forEach((element) => {
-        console.log('adding end element ...')
         let brElement = document.createElement('br')
         element.after(brElement)
     })
 }
 
+function setupAutodocCpp() {
+    const highlightableElements = document.querySelectorAll(".cpp dt.sig-object")
+
+    Array(...highlightableElements).forEach((element) => {
+        element.classList.add("highlight");
+    })
+
+    const documentables = document.querySelectorAll("dt.sig-object.cpp");
+
+    Array(...documentables).forEach((element) => {
+        element.classList.add("highlight");
+
+        var parens = element.querySelectorAll(".sig-paren");
+        var commas = Array(...element.childNodes).filter(e => e.textContent == ", ")
+
+        if (parens.length != 2) return;
+
+        commas.forEach(c => {
+            if (c.compareDocumentPosition(parens[0]) == Node.DOCUMENT_POSITION_PRECEDING &&
+                c.compareDocumentPosition(parens[1]) == Node.DOCUMENT_POSITION_FOLLOWING
+            ) {
+                let brElement = document.createElement('br')
+                let spanElement = document.createElement('span')
+                spanElement.className = "sig-indent"
+                c.after(brElement)
+                brElement.after(spanElement)
+            }
+        });
+        
+        if (parens[0].nextSibling != parens[1]) {
+            // not an empty argument list
+            let brElement = document.createElement('br')
+            let spanElement = document.createElement('span')
+            spanElement.className = "sig-indent"
+            parens[0].after(brElement)
+            brElement.after(spanElement)
+            let brElement1 = document.createElement('br')
+            parens[1].parentNode.insertBefore(brElement1, parens[1]);
+        }
+    })
+}
+
 function setupSearchSidebar() {
     document.querySelector('form.search input[type=text]').placeholder = 'Search...'
-
     document.querySelector('form.search input[type=submit]').value = 'Search'
 }
 
@@ -54,7 +93,8 @@ function setupRightSidebarToggle() {
 window.onload = function() {
     console.log("custom theme loaded")
 
-    setupAutodoc()
+    setupAutodocPy()
+    setupAutodocCpp()
     setupSearchSidebar()
     setupSidebarToggle()
     setupRightSidebarToggle()

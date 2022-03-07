@@ -345,6 +345,41 @@ div.document dl.py span.sig-return span.sig-return-typehint pre {
 div.document dl.py em.sig-param > span:first-child {
   font-weight: bold;
 }
+div.document dl:not(.cpp) dt.cpp.sig em {
+  color: var(--fontColor);
+  font-size: 1.1rem;
+}
+div.document dl:not(.cpp) dt.cpp.sig span.descname {
+  color: var(--fontColor);
+  font-size: 1.1rem;
+}
+div.document dl.cpp {
+  margin-bottom: 1rem;
+}
+div.document dl.cpp dt.sig {
+  background-color: var(--codeBackgroundColor);
+  color: var(--fontColor);
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-left: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+  line-height: 1.4;
+}
+div.document dl.cpp span.sig-name {
+  color: var(--codeBlue);
+  font-weight: bold;
+}
+div.document dl.cpp span.sig-indent {
+  margin-left: 2rem;
+}
+div.document dl.cpp span.target + span {
+  color: var(--codeGreen);
+}
+div.document dl.cpp span.sig-param > span:first-child {
+  font-weight: bold;
+}
 div.document div.admonition {
   box-shadow: 0px 0px 0px 1px var(--dividerColor);
   border-radius: 0.2rem;
