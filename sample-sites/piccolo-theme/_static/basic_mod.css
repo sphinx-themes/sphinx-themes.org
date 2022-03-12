@@ -16,6 +16,7 @@ body {
   --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
   background-color: var(--mainBackgroundColor);
+  color: var(--fontColor);
 }
 body[data-mode=darkest] {
   --mainBackgroundColor: black;
@@ -37,19 +38,6 @@ body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
   --linkColor: #319be0;
   --searchHighlightColor: #fe8e04;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-code,
-table,
-dd {
-  color: var(--fontColor);
 }
 
 h1 {
@@ -88,6 +76,7 @@ body {
 }
 
 /*****************************************************************************/
+/* Top nav */
 div#searchbox h3#searchlabel {
   display: none;
 }
@@ -198,22 +187,7 @@ nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
 }
 
 /*****************************************************************************/
-div.related {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-div.related ul {
-  padding: 0;
-  margin: 0;
-}
-div.related ul li {
-  display: inline-block;
-}
-div.related ul li.right {
-  float: right;
-}
-
-/*****************************************************************************/
+/* Main content */
 div.document {
   flex-grow: 1;
   margin-top: 5rem;
@@ -240,6 +214,9 @@ div.document code {
 div.document div.documentwrapper {
   max-width: 45rem;
   margin: 0 auto;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 div.document div.highlight {
   box-sizing: border-box;
@@ -282,11 +259,31 @@ div.document li {
   font-size: 1rem;
   line-height: 1.5;
 }
+div.document ul, div.document ol {
+  padding-left: 2rem;
+}
+div.document dd {
+  margin-left: 1.5rem;
+}
 div.document hr {
   border: none;
   height: 1px;
   background-color: var(--dividerColor);
   margin: 2rem 0;
+}
+div.document table.docutils {
+  border-collapse: collapse;
+}
+div.document table.docutils th, div.document table.docutils td {
+  border: 1px solid var(--dividerColor);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+div.document table.docutils th p, div.document table.docutils th ul, div.document table.docutils td p, div.document table.docutils td ul {
+  margin: 0.3rem 0;
+}
+div.document table.docutils th ul, div.document table.docutils td ul {
+  padding-left: 1rem;
 }
 div.document span.highlighted {
   background-color: var(--searchHighlightColor);
@@ -305,6 +302,9 @@ div.document div#search-results ul.search {
 div.document div#search-results ul.search li {
   border-bottom: 1px solid var(--dividerColor);
   margin: 1rem 0;
+}
+div.document dd ul, div.document dd ol {
+  padding-left: 1rem;
 }
 div.document dl.py {
   margin-bottom: 2rem;
@@ -347,11 +347,9 @@ div.document dl.py em.sig-param > span:first-child {
 }
 div.document dl:not(.cpp) dt.cpp.sig em {
   color: var(--fontColor);
-  font-size: 1.1rem;
 }
 div.document dl:not(.cpp) dt.cpp.sig span.descname {
   color: var(--fontColor);
-  font-size: 1.1rem;
 }
 div.document dl.cpp {
   margin-bottom: 1rem;
@@ -430,6 +428,7 @@ div.document div.admonition.attention p.admonition-title, div.document div.admon
 }
 
 /*****************************************************************************/
+/* Sidebar */
 div.sphinxsidebar {
   background-color: var(--sidebarColor);
   border-right: 1px solid var(--dividerColor);
@@ -479,6 +478,7 @@ div.sphinxsidebar p {
 }
 
 /*****************************************************************************/
+/* The right sidebar, showing the table of contents for the current page. */
 div#show_right_sidebar {
   position: fixed;
   right: 0;
@@ -546,13 +546,6 @@ div#right_sidebar p span {
 }
 
 /*****************************************************************************/
-div.documentwrapper {
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-}
-
-/*****************************************************************************/
 /* Footer */
 div.footer {
   box-sizing: border-box;
@@ -591,6 +584,7 @@ div.button_nav div.right a {
 }
 
 /*****************************************************************************/
+/* Pygments overrides in dark mode */
 body[data-mode=dark] .highlight,
 body[data-mode=darkest] .highlight {
   --black: #000000;
