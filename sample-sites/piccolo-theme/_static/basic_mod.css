@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap?family=Roboto+Mono&display=swap");
 /*****************************************************************************/
 /* Typography */
-body {
+:root {
   --codeBackgroundColor: #f8f8f8;
   --inlineCodeBackgroundColor: #f8f8f8;
   --codeBlue: #0000ff;
@@ -12,25 +12,24 @@ body {
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
+  --notificationBannerColor: #176bb0;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
-  font-family: Roboto, "OpenSans", sans-serif;
-  background-color: var(--mainBackgroundColor);
-  color: var(--fontColor);
+  --navbarHeight: 4rem;
 }
-body[data-mode=darkest] {
+:root[data-mode=darkest] {
   --mainBackgroundColor: black;
   --sidebarColor: black;
   --codeBackgroundColor: rgba(255, 255, 255, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.1);
 }
-body[data-mode=dark] {
+:root[data-mode=dark] {
   --mainBackgroundColor: #242429;
   --sidebarColor: #242429;
   --codeBackgroundColor: rgba(0, 0, 0, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.06);
 }
-body[data-mode=dark], body[data-mode=darkest] {
+:root[data-mode=dark], :root[data-mode=darkest] {
   --codeBlue: #77baff;
   --codeGreen: #38c038;
   --dividerColor: rgba(255, 255, 255, 0.1);
@@ -38,6 +37,12 @@ body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
   --linkColor: #319be0;
   --searchHighlightColor: #fe8e04;
+}
+
+body {
+  font-family: Roboto, "OpenSans", sans-serif;
+  background-color: var(--mainBackgroundColor);
+  color: var(--fontColor);
 }
 
 h1 {
@@ -60,7 +65,7 @@ a {
 /*****************************************************************************/
 html {
   height: 100%;
-  scroll-padding-top: 3rem;
+  scroll-padding-top: var(--navbarHeight);
 }
 
 html,
@@ -108,81 +113,120 @@ div#searchbox form.search input[type=submit] {
   background-color: white;
 }
 
-nav#top_nav {
+div#top_nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
+}
+div#top_nav div#notification_banner {
+  background-color: var(--notificationBannerColor);
+  box-sizing: border-box;
+  padding: 0.1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+div#top_nav div#notification_banner a.close {
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: right;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+div#top_nav div#notification_banner a.close:hover {
+  color: white;
+}
+div#top_nav div#notification_banner p {
+  flex-grow: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 0.4rem 0;
+}
+div#top_nav div#notification_banner p a {
+  color: white;
+  text-decoration: underline;
+}
+div#top_nav nav {
+  background-color: var(--mainNavColor);
   box-sizing: border-box;
   padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 3rem;
 }
-nav#top_nav h1 {
+div#top_nav nav h1 {
   flex-grow: 1;
   font-size: 1.2rem;
   margin: 0;
   padding: 0 0 0 0.8rem;
   line-height: 1;
 }
-nav#top_nav h1 a {
+div#top_nav nav h1 a {
   color: white;
 }
-nav#top_nav p#toggle_sidebar {
+div#top_nav nav p#toggle_sidebar {
   transform: rotate(90deg);
   letter-spacing: 0.1rem;
   flex-grow: 0;
   margin: 0;
   padding: 0;
 }
-nav#top_nav p#toggle_sidebar a {
+div#top_nav nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
-nav#top_nav a#mode_toggle {
+div#top_nav nav a#mode_toggle {
   margin-right: 1rem;
   display: block;
   flex-grow: 0;
 }
-nav#top_nav a#mode_toggle svg {
+div#top_nav nav a#mode_toggle svg {
   height: 1.3rem;
   width: 1.3rem;
   vertical-align: middle;
 }
+div#top_nav nav p.mobile_search_link {
+  margin: 0;
+}
 @media (min-width: 50rem) {
-  nav#top_nav p.mobile_search_link {
+  div#top_nav nav p.mobile_search_link {
     display: none;
   }
 }
-nav#top_nav p.mobile_search_link a {
+div#top_nav nav p.mobile_search_link a {
   color: white;
 }
-nav#top_nav p.mobile_search_link a svg {
+div#top_nav nav p.mobile_search_link a svg {
   height: 1rem;
   vertical-align: middle;
 }
 @media (max-width: 50rem) {
-  nav#top_nav div.searchbox_wrapper {
+  div#top_nav nav div.searchbox_wrapper {
     display: none;
   }
 }
-nav#top_nav div.searchbox_wrapper div#searchbox {
+div#top_nav nav div.searchbox_wrapper div#searchbox {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
 }
-nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a {
+div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.8em;
   padding-right: 0.5rem;
   text-decoration: underline;
 }
-nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
+div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
   color: white;
 }
 
@@ -190,10 +234,11 @@ nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
 /* Main content */
 div.document {
   flex-grow: 1;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   margin-left: 15rem;
   margin-right: 15rem;
+  padding-top: var(--navbarHeight);
 }
 @media (max-width: 50rem) {
   div.document {
@@ -438,7 +483,7 @@ div.sphinxsidebar {
   bottom: 0;
   width: 15rem;
   box-sizing: border-box;
-  padding: 3rem 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
 }
 @media (max-width: 50rem) {
   div.sphinxsidebar {
@@ -487,7 +532,7 @@ div#show_right_sidebar {
   background-color: var(--sidebarColor);
   border-left: 1px solid var(--dividerColor);
   border-bottom: 1px solid var(--dividerColor);
-  padding: 3rem 1rem 0rem;
+  padding: var(--navbarHeight) 1rem 0rem;
 }
 div#show_right_sidebar p {
   font-size: 0.9em;
@@ -505,7 +550,7 @@ div#right_sidebar {
   width: 15rem;
   border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
-  padding: 3rem 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
   height: 100%;
   overflow-y: auto;
 }
@@ -549,44 +594,61 @@ div#right_sidebar p span {
 /* Footer */
 div.footer {
   box-sizing: border-box;
-  padding: 2rem 0;
+  padding-top: 2rem;
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--faintFontColor);
 }
 
+p#theme_credit {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--faintFontColor);
+}
+
 /*****************************************************************************/
 /* Buttons */
-div.button_nav {
+div.button_nav_wrapper {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+@media (max-width: 50rem) {
+  div.button_nav_wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+div.button_nav_wrapper div.button_nav {
   max-width: 45rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-div.button_nav div {
+div.button_nav_wrapper div.button_nav div {
   box-sizing: border-box;
   padding: 1rem;
   flex: 50%;
 }
-div.button_nav div a {
+div.button_nav_wrapper div.button_nav div a {
   display: block;
 }
-div.button_nav div a span {
+div.button_nav_wrapper div.button_nav div a span {
   font-weight: bold;
 }
-div.button_nav div.left a {
+div.button_nav_wrapper div.button_nav div.left a {
   text-align: left;
 }
-div.button_nav div.right a {
+div.button_nav_wrapper div.button_nav div.right a {
   text-align: right;
 }
 
 /*****************************************************************************/
 /* Pygments overrides in dark mode */
-body[data-mode=dark] .highlight,
-body[data-mode=darkest] .highlight {
+:root[data-mode=dark] .highlight,
+:root[data-mode=darkest] .highlight {
   --black: #000000;
   --red: #ff9393;
   --darkBlue: #3a37ff;
@@ -666,331 +728,331 @@ body[data-mode=darkest] .highlight {
   /* Name.Variable.Magic */
   /* Literal.Number.Integer.Long */
 }
-body[data-mode=dark] .highlight pre,
-body[data-mode=darkest] .highlight pre {
+:root[data-mode=dark] .highlight pre,
+:root[data-mode=darkest] .highlight pre {
   line-height: 125%;
 }
-body[data-mode=dark] .highlight td.linenos .normal,
-body[data-mode=darkest] .highlight td.linenos .normal {
+:root[data-mode=dark] .highlight td.linenos .normal,
+:root[data-mode=darkest] .highlight td.linenos .normal {
   color: inherit;
   background-color: transparent;
   padding-left: 5px;
   padding-right: 5px;
 }
-body[data-mode=dark] .highlight span.linenos,
-body[data-mode=darkest] .highlight span.linenos {
+:root[data-mode=dark] .highlight span.linenos,
+:root[data-mode=darkest] .highlight span.linenos {
   color: inherit;
   background-color: transparent;
   padding-left: 5px;
   padding-right: 5px;
 }
-body[data-mode=dark] .highlight td.linenos .special,
-body[data-mode=darkest] .highlight td.linenos .special {
+:root[data-mode=dark] .highlight td.linenos .special,
+:root[data-mode=darkest] .highlight td.linenos .special {
   color: var(--black);
   background-color: var(--paleYellow);
   padding-left: 5px;
   padding-right: 5px;
 }
-body[data-mode=dark] .highlight span.linenos.special,
-body[data-mode=darkest] .highlight span.linenos.special {
+:root[data-mode=dark] .highlight span.linenos.special,
+:root[data-mode=darkest] .highlight span.linenos.special {
   color: var(--black);
   background-color: var(--paleYellow);
   padding-left: 5px;
   padding-right: 5px;
 }
-body[data-mode=dark] .highlight .hll,
-body[data-mode=darkest] .highlight .hll {
+:root[data-mode=dark] .highlight .hll,
+:root[data-mode=darkest] .highlight .hll {
   background-color: var(--paleYellow);
 }
-body[data-mode=dark] .highlight .c,
-body[data-mode=darkest] .highlight .c {
+:root[data-mode=dark] .highlight .c,
+:root[data-mode=darkest] .highlight .c {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .err,
-body[data-mode=darkest] .highlight .err {
+:root[data-mode=dark] .highlight .err,
+:root[data-mode=darkest] .highlight .err {
   border: 1px solid var(--red);
 }
-body[data-mode=dark] .highlight .k,
-body[data-mode=darkest] .highlight .k {
+:root[data-mode=dark] .highlight .k,
+:root[data-mode=darkest] .highlight .k {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .o,
-body[data-mode=darkest] .highlight .o {
+:root[data-mode=dark] .highlight .o,
+:root[data-mode=darkest] .highlight .o {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .ch,
-body[data-mode=darkest] .highlight .ch {
+:root[data-mode=dark] .highlight .ch,
+:root[data-mode=darkest] .highlight .ch {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .cm,
-body[data-mode=darkest] .highlight .cm {
+:root[data-mode=dark] .highlight .cm,
+:root[data-mode=darkest] .highlight .cm {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .cp,
-body[data-mode=darkest] .highlight .cp {
+:root[data-mode=dark] .highlight .cp,
+:root[data-mode=darkest] .highlight .cp {
   color: var(--brown);
 }
-body[data-mode=dark] .highlight .cpf,
-body[data-mode=darkest] .highlight .cpf {
+:root[data-mode=dark] .highlight .cpf,
+:root[data-mode=darkest] .highlight .cpf {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .c1,
-body[data-mode=darkest] .highlight .c1 {
+:root[data-mode=dark] .highlight .c1,
+:root[data-mode=darkest] .highlight .c1 {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .cs,
-body[data-mode=darkest] .highlight .cs {
+:root[data-mode=dark] .highlight .cs,
+:root[data-mode=darkest] .highlight .cs {
   color: var(--torquoise);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .gd,
-body[data-mode=darkest] .highlight .gd {
+:root[data-mode=dark] .highlight .gd,
+:root[data-mode=darkest] .highlight .gd {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .ge,
-body[data-mode=darkest] .highlight .ge {
+:root[data-mode=dark] .highlight .ge,
+:root[data-mode=darkest] .highlight .ge {
   font-style: italic;
 }
-body[data-mode=dark] .highlight .gr,
-body[data-mode=darkest] .highlight .gr {
+:root[data-mode=dark] .highlight .gr,
+:root[data-mode=darkest] .highlight .gr {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .gh,
-body[data-mode=darkest] .highlight .gh {
+:root[data-mode=dark] .highlight .gh,
+:root[data-mode=darkest] .highlight .gh {
   color: var(--codeBlue);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .gi,
-body[data-mode=darkest] .highlight .gi {
+:root[data-mode=dark] .highlight .gi,
+:root[data-mode=darkest] .highlight .gi {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .go,
-body[data-mode=darkest] .highlight .go {
+:root[data-mode=dark] .highlight .go,
+:root[data-mode=darkest] .highlight .go {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .gp,
-body[data-mode=darkest] .highlight .gp {
+:root[data-mode=dark] .highlight .gp,
+:root[data-mode=darkest] .highlight .gp {
   color: var(--codeBlue);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .gs,
-body[data-mode=darkest] .highlight .gs {
+:root[data-mode=dark] .highlight .gs,
+:root[data-mode=darkest] .highlight .gs {
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .gu,
-body[data-mode=darkest] .highlight .gu {
+:root[data-mode=dark] .highlight .gu,
+:root[data-mode=darkest] .highlight .gu {
   color: var(--purple);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .gt,
-body[data-mode=darkest] .highlight .gt {
+:root[data-mode=dark] .highlight .gt,
+:root[data-mode=darkest] .highlight .gt {
   color: var(--codeBlue);
 }
-body[data-mode=dark] .highlight .kc,
-body[data-mode=darkest] .highlight .kc {
+:root[data-mode=dark] .highlight .kc,
+:root[data-mode=darkest] .highlight .kc {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .kd,
-body[data-mode=darkest] .highlight .kd {
+:root[data-mode=dark] .highlight .kd,
+:root[data-mode=darkest] .highlight .kd {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .kn,
-body[data-mode=darkest] .highlight .kn {
+:root[data-mode=dark] .highlight .kn,
+:root[data-mode=darkest] .highlight .kn {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .kp,
-body[data-mode=darkest] .highlight .kp {
+:root[data-mode=dark] .highlight .kp,
+:root[data-mode=darkest] .highlight .kp {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .kr,
-body[data-mode=darkest] .highlight .kr {
+:root[data-mode=dark] .highlight .kr,
+:root[data-mode=darkest] .highlight .kr {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .kt,
-body[data-mode=darkest] .highlight .kt {
+:root[data-mode=dark] .highlight .kt,
+:root[data-mode=darkest] .highlight .kt {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .m,
-body[data-mode=darkest] .highlight .m {
+:root[data-mode=dark] .highlight .m,
+:root[data-mode=darkest] .highlight .m {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .s,
-body[data-mode=darkest] .highlight .s {
+:root[data-mode=dark] .highlight .s,
+:root[data-mode=darkest] .highlight .s {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .na,
-body[data-mode=darkest] .highlight .na {
+:root[data-mode=dark] .highlight .na,
+:root[data-mode=darkest] .highlight .na {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .nb,
-body[data-mode=darkest] .highlight .nb {
+:root[data-mode=dark] .highlight .nb,
+:root[data-mode=darkest] .highlight .nb {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .nc,
-body[data-mode=darkest] .highlight .nc {
+:root[data-mode=dark] .highlight .nc,
+:root[data-mode=darkest] .highlight .nc {
   color: var(--codeBlue);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .no,
-body[data-mode=darkest] .highlight .no {
+:root[data-mode=dark] .highlight .no,
+:root[data-mode=darkest] .highlight .no {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .nd,
-body[data-mode=darkest] .highlight .nd {
+:root[data-mode=dark] .highlight .nd,
+:root[data-mode=darkest] .highlight .nd {
   color: var(--purple);
 }
-body[data-mode=dark] .highlight .ni,
-body[data-mode=darkest] .highlight .ni {
+:root[data-mode=dark] .highlight .ni,
+:root[data-mode=darkest] .highlight .ni {
   color: var(--grey);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .ne,
-body[data-mode=darkest] .highlight .ne {
+:root[data-mode=dark] .highlight .ne,
+:root[data-mode=darkest] .highlight .ne {
   color: var(--red);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .nf,
-body[data-mode=darkest] .highlight .nf {
+:root[data-mode=dark] .highlight .nf,
+:root[data-mode=darkest] .highlight .nf {
   color: var(--codeBlue);
 }
-body[data-mode=dark] .highlight .nl,
-body[data-mode=darkest] .highlight .nl {
+:root[data-mode=dark] .highlight .nl,
+:root[data-mode=darkest] .highlight .nl {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .nn,
-body[data-mode=darkest] .highlight .nn {
+:root[data-mode=dark] .highlight .nn,
+:root[data-mode=darkest] .highlight .nn {
   color: var(--codeBlue);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .nt,
-body[data-mode=darkest] .highlight .nt {
+:root[data-mode=dark] .highlight .nt,
+:root[data-mode=darkest] .highlight .nt {
   color: var(--codeGreen);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .nv,
-body[data-mode=darkest] .highlight .nv {
+:root[data-mode=dark] .highlight .nv,
+:root[data-mode=darkest] .highlight .nv {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .ow,
-body[data-mode=darkest] .highlight .ow {
+:root[data-mode=dark] .highlight .ow,
+:root[data-mode=darkest] .highlight .ow {
   color: var(--pink);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .w,
-body[data-mode=darkest] .highlight .w {
+:root[data-mode=dark] .highlight .w,
+:root[data-mode=darkest] .highlight .w {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .mb,
-body[data-mode=darkest] .highlight .mb {
+:root[data-mode=dark] .highlight .mb,
+:root[data-mode=darkest] .highlight .mb {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .mf,
-body[data-mode=darkest] .highlight .mf {
+:root[data-mode=dark] .highlight .mf,
+:root[data-mode=darkest] .highlight .mf {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .mh,
-body[data-mode=darkest] .highlight .mh {
+:root[data-mode=dark] .highlight .mh,
+:root[data-mode=darkest] .highlight .mh {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .mi,
-body[data-mode=darkest] .highlight .mi {
+:root[data-mode=dark] .highlight .mi,
+:root[data-mode=darkest] .highlight .mi {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .mo,
-body[data-mode=darkest] .highlight .mo {
+:root[data-mode=dark] .highlight .mo,
+:root[data-mode=darkest] .highlight .mo {
   color: var(--grey);
 }
-body[data-mode=dark] .highlight .sa,
-body[data-mode=darkest] .highlight .sa {
+:root[data-mode=dark] .highlight .sa,
+:root[data-mode=darkest] .highlight .sa {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .sb,
-body[data-mode=darkest] .highlight .sb {
+:root[data-mode=dark] .highlight .sb,
+:root[data-mode=darkest] .highlight .sb {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .sc,
-body[data-mode=darkest] .highlight .sc {
+:root[data-mode=dark] .highlight .sc,
+:root[data-mode=darkest] .highlight .sc {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .dl,
-body[data-mode=darkest] .highlight .dl {
+:root[data-mode=dark] .highlight .dl,
+:root[data-mode=darkest] .highlight .dl {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .sd,
-body[data-mode=darkest] .highlight .sd {
+:root[data-mode=dark] .highlight .sd,
+:root[data-mode=darkest] .highlight .sd {
   color: var(--red);
   font-style: italic;
 }
-body[data-mode=dark] .highlight .s2,
-body[data-mode=darkest] .highlight .s2 {
+:root[data-mode=dark] .highlight .s2,
+:root[data-mode=darkest] .highlight .s2 {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .se,
-body[data-mode=darkest] .highlight .se {
+:root[data-mode=dark] .highlight .se,
+:root[data-mode=darkest] .highlight .se {
   color: var(--brown);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .sh,
-body[data-mode=darkest] .highlight .sh {
+:root[data-mode=dark] .highlight .sh,
+:root[data-mode=darkest] .highlight .sh {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .si,
-body[data-mode=darkest] .highlight .si {
+:root[data-mode=dark] .highlight .si,
+:root[data-mode=darkest] .highlight .si {
   color: var(--pink);
   font-weight: bold;
 }
-body[data-mode=dark] .highlight .sx,
-body[data-mode=darkest] .highlight .sx {
+:root[data-mode=dark] .highlight .sx,
+:root[data-mode=darkest] .highlight .sx {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .sr,
-body[data-mode=darkest] .highlight .sr {
+:root[data-mode=dark] .highlight .sr,
+:root[data-mode=darkest] .highlight .sr {
   color: var(--pink);
 }
-body[data-mode=dark] .highlight .s1,
-body[data-mode=darkest] .highlight .s1 {
+:root[data-mode=dark] .highlight .s1,
+:root[data-mode=darkest] .highlight .s1 {
   color: var(--red);
 }
-body[data-mode=dark] .highlight .ss,
-body[data-mode=darkest] .highlight .ss {
+:root[data-mode=dark] .highlight .ss,
+:root[data-mode=darkest] .highlight .ss {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .bp,
-body[data-mode=darkest] .highlight .bp {
+:root[data-mode=dark] .highlight .bp,
+:root[data-mode=darkest] .highlight .bp {
   color: var(--codeGreen);
 }
-body[data-mode=dark] .highlight .fm,
-body[data-mode=darkest] .highlight .fm {
+:root[data-mode=dark] .highlight .fm,
+:root[data-mode=darkest] .highlight .fm {
   color: var(--codeBlue);
 }
-body[data-mode=dark] .highlight .vc,
-body[data-mode=darkest] .highlight .vc {
+:root[data-mode=dark] .highlight .vc,
+:root[data-mode=darkest] .highlight .vc {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .vg,
-body[data-mode=darkest] .highlight .vg {
+:root[data-mode=dark] .highlight .vg,
+:root[data-mode=darkest] .highlight .vg {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .vi,
-body[data-mode=darkest] .highlight .vi {
+:root[data-mode=dark] .highlight .vi,
+:root[data-mode=darkest] .highlight .vi {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .vm,
-body[data-mode=darkest] .highlight .vm {
+:root[data-mode=dark] .highlight .vm,
+:root[data-mode=darkest] .highlight .vm {
   color: var(--darkBlue);
 }
-body[data-mode=dark] .highlight .il,
-body[data-mode=darkest] .highlight .il {
+:root[data-mode=dark] .highlight .il,
+:root[data-mode=darkest] .highlight .il {
   color: var(--grey);
 }
 

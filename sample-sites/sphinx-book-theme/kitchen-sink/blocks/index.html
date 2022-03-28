@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Blocks &#8212; Book</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,17 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=1cee231a2b06fec83dfdf5e1f90e99acd3529254" type="text/css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Generic items" href="../generic/" />
@@ -43,7 +42,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -52,14 +65,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../">
       
       
@@ -192,74 +201,135 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/kitchen-sink/blocks.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/kitchen-sink/blocks.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#block-quotes">
    Block Quotes
@@ -344,12 +414,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Blocks</h1>
@@ -450,13 +519,14 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="blocks">
-<h1>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="block-quotes">
-<h2>Block Quotes<a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h2>
+  <section id="blocks">
+<h1>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">#</a></h1>
+<section id="block-quotes">
+<h2>Block Quotes<a class="headerlink" href="#block-quotes" title="Permalink to this headline">#</a></h2>
 <p>Block quotes consist of indented body elements:</p>
 <blockquote>
 <div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
@@ -466,8 +536,8 @@ far end.  That is my theory, it is mine, and belongs to me and I
 own it, and what it is too.</p>
 <p class="attribution">—Anne Elk (Miss)</p>
 </div></blockquote>
-<div class="section" id="epigraph">
-<h3>Epigraph<a class="headerlink" href="#epigraph" title="Permalink to this headline">¶</a></h3>
+<section id="epigraph">
+<h3>Epigraph<a class="headerlink" href="#epigraph" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#epigraph">https://docutils.sourceforge.io/docs/ref/rst/directives.html#epigraph</a></p>
 <blockquote class="epigraph">
 <div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
@@ -477,9 +547,9 @@ far end.  That is my theory, it is mine, and belongs to me and I
 own it, and what it is too.</p>
 <p class="attribution">—Anne Elk (Miss)</p>
 </div></blockquote>
-</div>
-<div class="section" id="pull-quotes">
-<h3>Pull quotes<a class="headerlink" href="#pull-quotes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="pull-quotes">
+<h3>Pull quotes<a class="headerlink" href="#pull-quotes" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#pull-quote">https://docutils.sourceforge.io/docs/ref/rst/directives.html#pull-quote</a></p>
 <blockquote class="pull-quote">
 <div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
@@ -489,9 +559,9 @@ far end.  That is my theory, it is mine, and belongs to me and I
 own it, and what it is too.</p>
 <p class="attribution">—Anne Elk (Miss)</p>
 </div></blockquote>
-</div>
-<div class="section" id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights">https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights</a></p>
 <blockquote class="highlights">
 <div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
@@ -501,10 +571,10 @@ far end.  That is my theory, it is mine, and belongs to me and I
 own it, and what it is too.</p>
 <p class="attribution">—Anne Elk (Miss)</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="line-blocks">
-<h2>Line Blocks<a class="headerlink" href="#line-blocks" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="line-blocks">
+<h2>Line Blocks<a class="headerlink" href="#line-blocks" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks">https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks</a></p>
 <p>This is a normal text paragraph.</p>
 <div class="line-block">
@@ -526,14 +596,14 @@ the left edge of the text above it.</div>
 <div class="line">Blank lines are permitted internally, but they must begin with a “|”.</div>
 </div>
 <p>This is a normal text paragraph again.</p>
-</div>
-<div class="section" id="monospace-blocks">
-<h2>Monospace Blocks<a class="headerlink" href="#monospace-blocks" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="monospace-blocks">
+<h2>Monospace Blocks<a class="headerlink" href="#monospace-blocks" title="Permalink to this headline">#</a></h2>
 <p>Sphinx supports many kinds of monospace blocks. This section is meant to
 showcase <em>all</em> of them that as known to the author of this page, at the time of
 writing.</p>
-<div class="section" id="production-list">
-<h3>Production List<a class="headerlink" href="#production-list" title="Permalink to this headline">¶</a></h3>
+<section id="production-list">
+<h3>Production List<a class="headerlink" href="#production-list" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist">https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist</a></p>
 <blockquote>
 <div><p>This directive is used to enclose a group of productions. Each production is given on a single line and consists of a name, separated by a colon from the following definition.</p>
@@ -550,9 +620,9 @@ annoying.</p>
                &quot;finally&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
                &quot;this-is-intentionally-very-stupidly-long-to-make-sure-that-this-has-a-proper-scrollbar&quot;
 </pre>
-</div>
-<div class="section" id="literal-blocks">
-<h3>Literal Blocks<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="literal-blocks">
+<h3>Literal Blocks<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#literal-blocks">https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#literal-blocks</a></p>
 <blockquote>
 <div><p>contains a block of text where line breaks and whitespace are significant and must be preserved</p>
@@ -571,9 +641,9 @@ annoying.</p>
 &gt; Why didn&#39;t I think of that?
 </pre></div>
 </div>
-</div>
-<div class="section" id="doctest-blocks">
-<h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="doctest-blocks">
+<h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks">https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks</a></p>
 <blockquote>
 <div><p>Doctest blocks are interactive Python sessions cut-and-pasted into docstrings. They are meant to illustrate usage by example, and provide an elegant and powerful testing environment via the doctest module in the Python standard library.</p>
@@ -590,9 +660,9 @@ annoying.</p>
 <span class="go">This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="parsed-literals">
-<h3>Parsed Literals<a class="headerlink" href="#parsed-literals" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="parsed-literals">
+<h3>Parsed Literals<a class="headerlink" href="#parsed-literals" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal-block">https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal-block</a></p>
 <blockquote>
 <div><p>It is equivalent to a line block with different rendering: typically in a typewriter/monospaced typeface, like an ordinary literal block. Parsed literal blocks are useful for adding hyperlinks to code examples.</p>
@@ -602,9 +672,9 @@ annoying.</p>
 <span class="n">echo</span> <span class="s2">&quot;This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="code-block">
-<h3>Code Block<a class="headerlink" href="#code-block" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="code-block">
+<h3>Code Block<a class="headerlink" href="#code-block" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#code">https://docutils.sourceforge.io/docs/ref/rst/directives.html#code</a></p>
 <blockquote>
 <div><p>The “code” directive constructs a literal block [containing code].</p>
@@ -627,10 +697,10 @@ annoying.</p>
 <span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="section" id="with-caption">
-<h4>With caption<a class="headerlink" href="#with-caption" title="Permalink to this headline">¶</a></h4>
+<section id="with-caption">
+<h4>With caption<a class="headerlink" href="#with-caption" title="Permalink to this headline">#</a></h4>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;session_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shorthands&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
@@ -647,9 +717,9 @@ annoying.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="with-line-numbers">
-<h4>With line numbers<a class="headerlink" href="#with-line-numbers" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="with-line-numbers">
+<h4>With line numbers<a class="headerlink" href="#with-line-numbers" title="Permalink to this headline">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
 <span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="hll"><span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This line is highlighted.&quot;</span><span class="p">)</span>
@@ -660,9 +730,9 @@ annoying.</p>
 <span class="linenos">8</span>    <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="with-none-highlighting">
-<h4>With <code class="docutils literal notranslate"><span class="pre">none</span></code> highlighting<a class="headerlink" href="#with-none-highlighting" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="with-none-highlighting">
+<h4>With <code class="docutils literal notranslate"><span class="pre">none</span></code> highlighting<a class="headerlink" href="#with-none-highlighting" title="Permalink to this headline">#</a></h4>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Taken from https://en.wikipedia.org/wiki/Pseudocode#Example
 algorithm ford-fulkerson is
     input: Graph G with flow capacity c,
@@ -686,17 +756,19 @@ algorithm ford-fulkerson is
     return f
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../api/" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -712,24 +784,28 @@ algorithm ford-fulkerson is
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pradyun Gedam<br/>
+  
+      &copy; Copyright 2021, Pradyun Gedam.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Pradyun Gedam<br/>
-    
-        &copy; Copyright 2021, Pradyun Gedam.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

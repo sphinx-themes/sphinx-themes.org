@@ -47,7 +47,7 @@ function setupAutodocCpp() {
                 brElement.after(spanElement)
             }
         });
-        
+
         if (parens[0].nextSibling != parens[1]) {
             // not an empty argument list
             let brElement = document.createElement('br')
@@ -90,7 +90,7 @@ function setupRightSidebarToggle() {
 }
 
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     console.log("custom theme loaded")
 
     setupAutodocPy()
@@ -98,4 +98,4 @@ window.onload = function() {
     setupSearchSidebar()
     setupSidebarToggle()
     setupRightSidebarToggle()
-}
+})
