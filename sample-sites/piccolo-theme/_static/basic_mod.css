@@ -239,12 +239,42 @@ div.document {
   margin-left: 15rem;
   margin-right: 15rem;
   padding-top: var(--navbarHeight);
+  /***************************************************************************/
+  /***************************************************************************/
 }
 @media (max-width: 50rem) {
   div.document {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+div.document section,
+div.document div.section {
+  margin: 4rem 0;
+}
+div.document section:first-child,
+div.document div.section:first-child {
+  margin-top: 0;
+}
+div.document section > section,
+div.document div.section > div.section {
+  margin: 4rem 0;
+}
+div.document section > section > section,
+div.document div.section > div.section > div.section {
+  margin: 2rem 0 0 0;
+}
+div.document section > section > section > section,
+div.document div.section > div.section > div.section > div.section {
+  margin: 1.5rem 0 0 0;
+}
+div.document h1 + section,
+div.document h1 + div.section {
+  margin-top: 2.5rem !important;
+}
+div.document h2 + section,
+div.document h2 + div.section {
+  margin-top: 1.5rem !important;
 }
 div.document img {
   max-width: 100%;
@@ -293,6 +323,15 @@ div.document str,
 div.document b {
   font-weight: 700;
 }
+div.document h1 {
+  margin: 0.8rem 0 0.5rem 0;
+}
+div.document h2 {
+  margin: 0.8rem 0 0.5rem 0;
+}
+div.document h3, div.document h4 {
+  margin: 1rem 0 0.5rem 0;
+}
 div.document h1:hover a.headerlink,
 div.document h2:hover a.headerlink,
 div.document h3:hover a.headerlink,
@@ -303,6 +342,9 @@ div.document p,
 div.document li {
   font-size: 1rem;
   line-height: 1.5;
+}
+div.document li p {
+  margin: 0 0 0.5rem 0;
 }
 div.document ul, div.document ol {
   padding-left: 2rem;
@@ -443,7 +485,6 @@ div.document div.admonition p + p {
   padding-top: 0.2rem;
 }
 div.document div.admonition p.admonition-title {
-  color: white;
   font-weight: bolder;
   letter-spacing: 0.01rem;
 }
@@ -539,6 +580,12 @@ div#show_right_sidebar p {
 }
 div#show_right_sidebar p span {
   color: var(--faintFontColor);
+  vertical-align: middle;
+}
+div#show_right_sidebar p span.icon {
+  color: var(--linkColor);
+  font-size: 0.9em;
+  padding-right: 0.2rem;
 }
 
 div#right_sidebar {
@@ -553,6 +600,15 @@ div#right_sidebar {
   padding: var(--navbarHeight) 1rem 1rem;
   height: 100%;
   overflow-y: auto;
+}
+div#right_sidebar p span {
+  color: var(--faintFontColor);
+  vertical-align: middle;
+}
+div#right_sidebar p span.icon {
+  color: var(--linkColor);
+  font-size: 0.9em;
+  padding-right: 0.2rem;
 }
 div#right_sidebar ul {
   padding-left: 0rem;
@@ -579,9 +635,6 @@ div#right_sidebar ul li > ul {
   padding-left: 1rem;
 }
 div#right_sidebar p {
-  color: var(--faintFontColor);
-}
-div#right_sidebar p span {
   color: var(--faintFontColor);
 }
 @media (max-width: 50rem) {
@@ -636,13 +689,23 @@ div.button_nav_wrapper div.button_nav div a {
   display: block;
 }
 div.button_nav_wrapper div.button_nav div a span {
+  vertical-align: middle;
+}
+div.button_nav_wrapper div.button_nav div a span.icon {
   font-weight: bold;
+  font-size: 0.8em;
 }
 div.button_nav_wrapper div.button_nav div.left a {
   text-align: left;
 }
+div.button_nav_wrapper div.button_nav div.left a span.icon {
+  padding-right: 0.4rem;
+}
 div.button_nav_wrapper div.button_nav div.right a {
   text-align: right;
+}
+div.button_nav_wrapper div.button_nav div.right a span.icon {
+  padding-left: 0.4rem;
 }
 
 /*****************************************************************************/
