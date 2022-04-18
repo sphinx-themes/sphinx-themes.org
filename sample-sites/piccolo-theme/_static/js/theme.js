@@ -20,13 +20,13 @@ function setupAutodocPy() {
 }
 
 function setupAutodocCpp() {
-    const highlightableElements = document.querySelectorAll(".cpp dt.sig-object")
+    const highlightableElements = document.querySelectorAll(".c dt.sig-object, .cpp dt.sig-object")
 
     Array(...highlightableElements).forEach((element) => {
         element.classList.add("highlight");
     })
 
-    const documentables = document.querySelectorAll("dt.sig-object.cpp");
+    const documentables = document.querySelectorAll("dt.sig-object.c,dt.sig-object.cpp");
 
     Array(...documentables).forEach((element) => {
         element.classList.add("highlight");

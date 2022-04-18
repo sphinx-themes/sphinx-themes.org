@@ -432,16 +432,10 @@ div.document dl.py span.sig-return span.sig-return-typehint pre {
 div.document dl.py em.sig-param > span:first-child {
   font-weight: bold;
 }
-div.document dl:not(.cpp) dt.cpp.sig em {
-  color: var(--fontColor);
-}
-div.document dl:not(.cpp) dt.cpp.sig span.descname {
-  color: var(--fontColor);
-}
-div.document dl.cpp {
+div.document dl.cpp, div.document dl.c {
   margin-bottom: 1rem;
 }
-div.document dl.cpp dt.sig {
+div.document dl.cpp dt.sig, div.document dl.c dt.sig {
   background-color: var(--codeBackgroundColor);
   color: var(--fontColor);
   box-sizing: border-box;
@@ -452,17 +446,17 @@ div.document dl.cpp dt.sig {
   border-radius: 0.2rem;
   line-height: 1.4;
 }
-div.document dl.cpp span.sig-name {
+div.document dl.cpp span.sig-name, div.document dl.c span.sig-name {
   color: var(--codeBlue);
   font-weight: bold;
 }
-div.document dl.cpp span.sig-indent {
+div.document dl.cpp span.sig-indent, div.document dl.c span.sig-indent {
   margin-left: 2rem;
 }
-div.document dl.cpp span.target + span {
+div.document dl.cpp span.target + span, div.document dl.c span.target + span {
   color: var(--codeGreen);
 }
-div.document dl.cpp span.sig-param > span:first-child {
+div.document dl.cpp span.sig-param > span:first-child, div.document dl.c span.sig-param > span:first-child {
   font-weight: bold;
 }
 div.document div.admonition {
