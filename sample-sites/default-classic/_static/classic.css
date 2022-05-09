@@ -28,6 +28,7 @@ body {
 }
 
 div.document {
+    display: flex;
     background-color: #1c4e63;
 }
 

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script defer src="../_static/insipid.js"></script>
     <script defer src="../_static/insipid-sidebar.js"></script>
@@ -23,34 +24,39 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body class="sidebar-visible">
+  </head><body>
     <script type="text/javascript">
-        (function() {
-            var $body = $(document.body);
-            $body.addClass('js');
-            $body.addClass('sidebar-resizing');  // avoid transitions on load
-            $body.removeClass('sidebar-visible');
-            try {
-                var sidebar = localStorage.getItem('sphinx-sidebar');
-                if (sidebar === 'visible') {
-                    $body.addClass('sidebar-visible');
-                }
-                var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
-                if (sidebar_width) {
-                    $(':root').css('--sidebar-width', sidebar_width);
-                }
-            } catch(e) {
+        document.body.classList.add('js');
+    </script>
+    <input type="checkbox" id="sidebar-checkbox" style="display: none;">
+    <label id="overlay" for="sidebar-checkbox"></label>
+    <div class="sidebar-resize-handle"></div>
+    <script type="text/javascript">
+        try {
+            let sidebar = localStorage.getItem('sphinx-sidebar');
+            const sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+            if (sidebar_width) {
+                document.documentElement.style.setProperty('--sidebar-width', sidebar_width);
             }
-        })();
+            // show sidebar on wide screen
+            if (!sidebar && window.matchMedia('(min-width: 100rem)').matches) {
+                sidebar = 'visible';
+                // NB: We don't store the value in localStorage!
+            }
+            if (sidebar === 'visible') {
+                document.getElementById('sidebar-checkbox').checked = true;
+            }
+        } catch(e) {
+            console.info(e);
+        }
     </script>
     <header id="topbar-placeholder">
       <div id="topbar">
         <div id="titlebar">
           <div class="buttons">
-            <button id="sidebar-button" type="button" aria-controls="sphinxsidebar" accesskey="M">
+            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
-            </button>
+            </label>
             <button id="search-button" type="button" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-form" accesskey="S">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
             </button>
@@ -82,7 +88,7 @@
     </nav>
 
     <nav class="relbar">
-    </nav>
+    </nav>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -118,13 +124,6 @@
           </div>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-
-    <nav class="relbar">
-    </nav>
-
-
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 
@@ -157,12 +156,16 @@
 <div id="ethical-ad-placement"></div>
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+
+    <nav class="relbar">
+    </nav>
+
     <footer role="contentinfo">
       &#169; Copyright 2021, Pradyun Gedam.
-      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0b1.
       <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
     </footer>
-    <div class="sidebar-resize-handle"></div>
-    <div id="overlay"></div>
   </body>
 </html>

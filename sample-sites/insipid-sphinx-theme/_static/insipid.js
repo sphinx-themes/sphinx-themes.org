@@ -8,6 +8,16 @@ $(document).ready(function () {
     var $topbar = $('#topbar');
     var $topbar_placeholder = $('#topbar-placeholder');
 
+    // make large tables horizontally scrollable
+    document.querySelectorAll(
+        'table.docutils:not(.field-list,.footnote,.citation)'
+    ).forEach(el => {
+        let wrapper = document.createElement('div');
+        wrapper.classList.add('insipid-horizontally-scrollable');
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    });
+
     const threshold = 10;
 
     // auto-hide topbar
@@ -82,6 +92,7 @@ $(document).ready(function () {
         } else {
             $search_form.hide();
             $search_button.attr('aria-expanded', 'false');
+            $search_button.blur();
         }
     });
 
