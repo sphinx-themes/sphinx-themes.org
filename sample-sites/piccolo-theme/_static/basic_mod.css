@@ -217,8 +217,11 @@ div#top_nav nav p.mobile_search_link a svg {
 }
 div#top_nav nav div.searchbox_wrapper div#searchbox {
   align-items: center;
-  display: flex;
+  display: flex !important;
   flex-direction: row-reverse;
+}
+div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link {
+  margin: 0 0.5rem 0 0;
 }
 div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a {
   color: rgba(255, 255, 255, 0.8);
@@ -372,6 +375,16 @@ div.document table.docutils th p, div.document table.docutils th ul, div.documen
 div.document table.docutils th ul, div.document table.docutils td ul {
   padding-left: 1rem;
 }
+div.document form input {
+  padding: 0.5rem;
+}
+div.document form input[type=submit], div.document form button {
+  border: none;
+  background-color: var(--mainNavColor);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
 div.document span.highlighted {
   background-color: var(--searchHighlightColor);
   padding: 0 0.1em;
@@ -388,7 +401,11 @@ div.document div#search-results ul.search {
 }
 div.document div#search-results ul.search li {
   border-bottom: 1px solid var(--dividerColor);
-  margin: 1rem 0;
+  margin: 0;
+  padding: 2rem 0;
+}
+div.document div#search-results ul.search li > a:first-child {
+  font-size: 1.2rem;
 }
 div.document dd ul, div.document dd ol {
   padding-left: 1rem;

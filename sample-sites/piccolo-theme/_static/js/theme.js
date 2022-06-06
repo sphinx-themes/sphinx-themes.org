@@ -62,8 +62,15 @@ function setupAutodocCpp() {
 }
 
 function setupSearchSidebar() {
-    document.querySelector('form.search input[type=text]').placeholder = 'Search...'
-    document.querySelector('form.search input[type=submit]').value = 'Search'
+    const searchInput = document.querySelector('form.search input[type=text]')
+    if (searchInput) {
+        searchInput.placeholder = 'Search...'
+    }
+
+    const searchButton = document.querySelector('form.search input[type=submit]')
+    if (searchButton) {
+        searchButton.value = 'Search'
+    }
 }
 
 function setupSidebarToggle() {
