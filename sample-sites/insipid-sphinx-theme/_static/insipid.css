@@ -165,7 +165,7 @@ strong:target {
 
 div.body dl > dt:target,
 div.body div.admonition dl > dt:target,
-div.body div.topic dl > dt:target,
+div.body .topic dl > dt:target,
 div.body .sidebar dl > dt:target,
 div.body .sidebar .sidebar-title a:target,
 div.body a:target,
@@ -261,7 +261,7 @@ code,
 code.xref,
 a code,
 div.body div.admonition dl > dt code,
-div.body div.topic dl > dt code,
+div.body .topic dl > dt code,
 div.body .sidebar dl > dt code,
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
 div.code-block-caption code {
@@ -331,16 +331,17 @@ table.autosummary span.pre {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.topic, div.sidebar, aside.sidebar {
+div.topic, aside.topic,
+div.sidebar, aside.sidebar {
     border: none;
 }
 
 .section > div.admonition,
 section > div.admonition,
 div.body > div.admonition,
-.section > div.topic,
-section > div.topic,
-div.body > div.topic {
+.section > .topic,
+section > .topic,
+div.body > .topic {
     margin: 10px -7px;
 }
 
@@ -350,7 +351,7 @@ aside.sidebar {
 }
 
 div.admonition > p.admonition-title,
-div.topic > p.topic-title,
+.topic > p.topic-title,
 .sidebar > p.sidebar-title {
     margin: -7px -7px 7px -7px;
     padding: 4px 7px;
@@ -367,13 +368,14 @@ div.topic > p.topic-title,
 }
 
 div.admonition > p.admonition-title + *,
-div.topic > p.topic-title + *,
+.topic > p.topic-title + *,
 .sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
 div.admonition > :first-child:not(.admonition-title),
-div.topic > :first-child:not(.topic-title) {
+div.topic > :first-child:not(.topic-title),
+aside.topic > :first-child:not(.topic-title) {
     margin-top: 0;
 }
 
@@ -401,11 +403,11 @@ div.admonition.warning > p.admonition-title {
     background-color: #f0d5b8;
 }
 
-div.topic {
+div.topic, aside.topic {
     background-color: #fff0eb;
 }
 
-div.topic > p.topic-title {
+.topic > p.topic-title {
     background-color: #f0dbd4;
 }
 
@@ -430,14 +432,14 @@ p.sidebar-subtitle {
 
 /* More specific selectors to override previous defintions */
 div.body div.admonition dl > dt,
-div.body div.topic dl > dt,
+div.body .topic dl > dt,
 div.body .sidebar dl > dt {
     padding: unset;
     background-color: unset;
 }
 
 div.body div.admonition dl:not(.glossary) > dt,
-div.body div.topic dl:not(.glossary) > dt,
+div.body .topic dl:not(.glossary) > dt,
 div.body .sidebar dl:not(.glossary) > dt {
     font-weight: unset;
 }
@@ -515,7 +517,7 @@ div.body dl > dt:first-child {
 
 div.body dl > dt.label:target,
 div.body div.admonition dl > dt:target,
-div.body div.topic dl > dt:target,
+div.body .topic dl > dt:target,
 div.body .sidebar dl > dt:target {
     padding: 3px 7px;
     margin-top: -3px;
