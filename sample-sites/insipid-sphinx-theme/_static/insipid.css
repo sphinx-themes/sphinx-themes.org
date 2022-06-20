@@ -184,21 +184,22 @@ section > hr.docutils {
     margin-right: -7px;
 }
 
-div.compound {
+div.compound:not(.toctree-wrapper) {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-div.compound > .compound-first {
+div.compound:not(.toctree-wrapper) > * {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+div.compound:not(.toctree-wrapper) > *:first-child {
     margin-top: 0;
     margin-bottom: 0.2em;
 }
 
-div.compound > .compound-middle {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-}
-div.compound > .compound-last {
+div.compound:not(.toctree-wrapper) > *:last-child {
     margin-top: 0.2em;
     margin-bottom: 0;
 }
@@ -294,6 +295,10 @@ div.code-block-caption {
     font-size: unset;
 }
 
+div.literal-block-wrapper {
+    clear: both;
+}
+
 td.linenos .linenodiv pre {
     color: #666;
     background-color: transparent;
@@ -325,15 +330,13 @@ span.pre {
     overflow-wrap: anywhere;
 }
 
-table.autosummary span.pre {
-    overflow-wrap: break-word;
-}
-
 /* -- admonitions ----------------------------------------------------------- */
 
 div.topic, aside.topic,
-div.sidebar, aside.sidebar {
+div.sidebar, aside.sidebar,
+nav.contents {
     border: none;
+    padding: 7px;
 }
 
 .section > div.admonition,
@@ -341,7 +344,10 @@ section > div.admonition,
 div.body > div.admonition,
 .section > .topic,
 section > .topic,
-div.body > .topic {
+div.body > .topic,
+.section > nav.contents,
+section > nav.contents,
+div.body > nav.contents {
     margin: 10px -7px;
 }
 
@@ -352,6 +358,7 @@ aside.sidebar {
 
 div.admonition > p.admonition-title,
 .topic > p.topic-title,
+nav.contents > p.topic-title,
 .sidebar > p.sidebar-title {
     margin: -7px -7px 7px -7px;
     padding: 4px 7px;
@@ -369,14 +376,20 @@ div.admonition > p.admonition-title,
 
 div.admonition > p.admonition-title + *,
 .topic > p.topic-title + *,
+nav.contents > p.topic-title + *,
 .sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
 div.admonition > :first-child:not(.admonition-title),
 div.topic > :first-child:not(.topic-title),
-aside.topic > :first-child:not(.topic-title) {
+aside.topic > :first-child:not(.topic-title),
+nav.contents > :first-child:not(.topic-title) {
     margin-top: 0;
+}
+
+nav.contents > :last-child {
+    margin-bottom: 0;
 }
 
 div.admonition {
@@ -403,11 +416,12 @@ div.admonition.warning > p.admonition-title {
     background-color: #f0d5b8;
 }
 
-div.topic, aside.topic {
+div.topic, nav.contents, aside.topic {
     background-color: #fff0eb;
 }
 
-.topic > p.topic-title {
+.topic > p.topic-title,
+nav.contents > p.topic-title {
     background-color: #f0dbd4;
 }
 
@@ -448,13 +462,17 @@ div.body .sidebar dl:not(.glossary) > dt {
 
 table.docutils {
     border-collapse: separate;
-    border-spacing: 5px 0px;
+    border-spacing: 4px 4px;
 }
 
 table.docutils th {
     font-weight: normal;
     background-color: rgba(27,31,35,.05);
     border-bottom: 2px solid #333;
+}
+
+table.docutils td {
+    overflow-wrap: break-word;
 }
 
 
