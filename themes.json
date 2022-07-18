@@ -37,11 +37,6 @@
       "pypi": "sphinx-press-theme"
     },
     {
-      "config": "sphinx_celery",
-      "display": "Celery",
-      "pypi": "sphinx-celery"
-    },
-    {
       "config": "insegel",
       "display": "Insegel",
       "documentation": "https://insegel.readthedocs.io/en/latest/",
