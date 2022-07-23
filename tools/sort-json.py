@@ -11,7 +11,7 @@ _FEATURED = [
     "sphinx-book-theme",
     "pydata-sphinx-theme",
     "sphinx-press-theme",
-    "sphinx-celery",
+    "piccolo-theme",
     "insegel",
     "insipid-sphinx-theme",
     "sphinx-material",
