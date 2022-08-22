@@ -1,5 +1,12 @@
-(() => { function dom_loaded() {
+(dom_loaded => {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', dom_loaded);
+    } else {
+        dom_loaded();
+    }
+})(() => {
     'use strict';
+
     const sidebar = document.querySelector('.sphinxsidebar');
     const sidebar_tabbable = sidebar.querySelectorAll('input, textarea, select, button, a[href], area[href], iframe');
     const sidebar_button = document.getElementById('sidebar-button');
@@ -86,18 +93,25 @@
         }
     });
 
-    var touchstart;
+    let touchstart;
 
     document.addEventListener('touchstart', event => {
         if (event.touches.length > 1) { return; }
-        var touch = event.touches[0];
-        if (touch.clientX <= sidebar.offsetWidth) {
-            touchstart = {
-                x: touch.clientX,
-                y: touch.clientY,
-                t: Date.now(),
-            };
+        const touch = event.touches[0];
+        if (sidebar_checkbox.checked) {
+            if (touch.clientX > sidebar.offsetWidth) {
+                return;
+            }
+        } else {
+            if (touch.clientX > 20) {
+                return;
+            }
         }
+        touchstart = {
+            x: touch.clientX,
+            y: touch.clientY,
+            t: Date.now(),
+        };
     });
 
     document.addEventListener('touchend', event => {
@@ -106,12 +120,12 @@
             touchstart = null;
             return;
         }
-        var touch = event.changedTouches[0];
-        var x = touch.clientX;
-        var y = touch.clientY;
-        var x_diff = x - touchstart.x;
-        var y_diff = y - touchstart.y;
-        var t_diff = Date.now() - touchstart.t;
+        const touch = event.changedTouches[0];
+        const x = touch.clientX;
+        const y = touch.clientY;
+        const x_diff = x - touchstart.x;
+        const y_diff = y - touchstart.y;
+        const t_diff = Date.now() - touchstart.t;
         if (t_diff < 400 && Math.abs(x_diff) > Math.max(100, Math.abs(y_diff))) {
             if (x_diff > 0) {
                 if (!sidebar_checkbox.checked) {
@@ -126,28 +140,29 @@
         touchstart = null;
     });
 
-    $('.sidebar-resize-handle').on('mousedown', event => {
-        $(window).on('mousemove', resize_mouse);
-        $(window).on('mouseup', stop_resize_mouse);
-        document.body.classList.add('sidebar-resizing');
-        return false;  // Prevent unwanted text selection while resizing
+    const sidebar_resize_handles = document.querySelectorAll('.sidebar-resize-handle');
+    sidebar_resize_handles.forEach(el => {
+        el.addEventListener('mousedown', event => {
+            window.addEventListener('mousemove', resize_mouse);
+            window.addEventListener('mouseup', stop_resize_mouse);
+            document.body.classList.add('sidebar-resizing');
+            event.preventDefault();  // Prevent unwanted text selection while resizing
+        });
+        el.addEventListener('touchstart', event => {
+            if (event.touches.length > 1) { return; }
+            window.addEventListener('touchmove', resize_touch);
+            window.addEventListener('touchend', stop_resize_touch);
+            document.body.classList.add('sidebar-resizing');
+            event.preventDefault();  // Prevent unwanted text selection while resizing
+        });
     });
 
-    $('.sidebar-resize-handle').on('touchstart', event => {
-        event = event.originalEvent;
-        if (event.touches.length > 1) { return; }
-        $(window).on('touchmove', resize_touch);
-        $(window).on('touchend', stop_resize_touch);
-        document.body.classList.add('sidebar-resizing');
-        return false;  // Prevent unwanted text selection while resizing
-    });
-
-    var ignore_resize = false;
+    let ignore_resize = false;
 
     function resize_base(event) {
         if (ignore_resize) { return; }
-        var window_width = window.innerWidth;
-        var width = event.clientX;
+        const window_width = window.innerWidth;
+        const width = event.clientX;
         if (width > window_width) {
             root.css('--sidebar-width', window_width + 'px');
         } else if (width > 10) {
@@ -159,11 +174,10 @@
     }
 
     function resize_mouse(event) {
-        resize_base(event.originalEvent);
+        resize_base(event);
     }
 
     function resize_touch(event) {
-        event = event.originalEvent;
         if (event.touches.length > 1) { return; }
         resize_base(event.touches[0]);
     }
@@ -178,22 +192,21 @@
     }
 
     function stop_resize_mouse(event) {
-        $(window).off('mousemove', resize_mouse);
-        $(window).off('mouseup', stop_resize_mouse);
+        window.removeEventListener('mousemove', resize_mouse);
+        window.removeEventListener('mouseup', stop_resize_mouse);
         stop_resize_base();
     }
 
     function stop_resize_touch(event) {
-        event = event.originalEvent;
         if (event.touches.length > 0 || event.changedTouches.length > 1) {
             return;
         }
-        $(window).off('touchmove', resize_touch);
-        $(window).off('touchend', stop_resize_touch);
+        window.removeEventListener('touchmove', resize_touch);
+        window.removeEventListener('touchend', stop_resize_touch);
         stop_resize_base();
     }
 
-    $(window).on('resize', () => {
+    window.addEventListener('resize', event => {
         const window_width = window.innerWidth;
         if (window_width < sidebar.offsetWidth) {
             root.css('--sidebar-width', window_width + 'px');
@@ -216,34 +229,68 @@
         resizeObserver.observe(topbar);
     }
 
-    var $current = $('.sphinxsidebar *:has(> a[href^="#"])');
+    let current = [];
+    let links = [];
 
-
-    $current.addClass('current-page');
-    if ($current.length) {
-        var top = $current.offset().top;
-        var height = $current.height();
-        const topbar_height = topbar.offsetHeight;
-        if (top < topbar_height || top + height > sidebar.offsetHeight) {
-            $current[0].scrollIntoView(true);
+    document.querySelectorAll('.sphinxsidebar *').forEach(el => {
+        let link = el.querySelector(':scope > a[href^="#"]');
+        if (link) {
+            el.classList.add('current-page');
+            current.push(el);
+            links.push(link);
         }
-    }
+    });
     const small_screen = window.matchMedia('(max-width: 39rem)');
 
-    $current.on('click', '> a', () => {
-        if (small_screen.matches) {
-            hide();
-        }
-    })
-
-    if ($current.length === 1 && $current[0].childElementCount === 1 && small_screen.matches) {
+    if (current.length === 1 && current[0].childElementCount === 1 && small_screen.matches) {
         hide();
     }
-}
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', dom_loaded);
-} else {
-    dom_loaded();
-}})();
+    if (current.length) {
+        const top = current[0].getBoundingClientRect().top;
+        const bottom = current[current.length - 1].getBoundingClientRect().bottom;
+        if (top < topbar.offsetHeight || bottom > sidebar.offsetHeight) {
+            current[0].scrollIntoView(true);
+        }
+    }
+
+    let sections = new Map();
+
+    const intersection_callback = (entries, observer) => {
+        entries.forEach(entry => {
+            let link = sections.get(entry.target);
+            if (entry.isIntersecting) {
+                link.classList.add('in-view');
+            } else {
+                link.classList.remove('in-view');
+            }
+        });
+    };
+
+    const intersection_observer = new IntersectionObserver(intersection_callback, {
+        root: null,
+        // NB: This uses the initial topbar height, later changes are ignored:
+        rootMargin: -topbar.offsetHeight + 'px 0px 0px 0px',
+        threshold: 0.0,
+    });
+
+    links.forEach(link => {
+        let section;
+        let id = link.hash;
+        if (id) {
+            id = id.slice(1);
+            section = document.getElementById(decodeURI(id));
+        } else {
+            // NB: The first section has no hash, so we don't know its ID:
+            section = document.querySelector('div.body .section, div.body section');
+        }
+        sections.set(section, link);
+        intersection_observer.observe(section);
+        link.addEventListener('click', event => {
+            if (small_screen.matches) {
+                hide();
+            }
+        })
+    });
+});
 

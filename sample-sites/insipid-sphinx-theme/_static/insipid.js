@@ -1,35 +1,30 @@
-$(document).ready(function () {
+(dom_loaded => {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', dom_loaded);
+    } else {
+        dom_loaded();
+    }
+})(() => {
     'use strict';
 
     // make sure all scripts are re-executed when navigating to cached page
-    window.onunload = function () {};
+    window.onunload = () => {};
 
-    var $body = $(document.body);
-    var $topbar = $('#topbar');
-    var $topbar_placeholder = $('#topbar-placeholder');
-
-    // make large tables horizontally scrollable
-    document.querySelectorAll(
-        'table.docutils:not(.field-list,.footnote,.citation)'
-    ).forEach(el => {
-        let wrapper = document.createElement('div');
-        wrapper.classList.add('insipid-horizontally-scrollable');
-        el.parentNode.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
-    });
+    const topbar = document.getElementById('topbar');
+    const topbar_placeholder = document.getElementById('topbar-placeholder');
 
     const threshold = 10;
 
     // auto-hide topbar
     function scroll_callback(scroller) {
-        var ignore_scroll = true;
-        var initial;
-        var scroll_timeout;
-        return function () {
+        let ignore_scroll = true;
+        let initial;
+        let scroll_timeout;
+        return event => {
             window.clearTimeout(scroll_timeout);
-            var current = scroller.scrollTop;
-            if (current <= $topbar.height() || (scroller.scrollHeight - current - scroller.clientHeight) < (scroller.clientHeight / 3)) {
-                $body.removeClass('topbar-folded');
+            const current = scroller.scrollTop;
+            if (current <= topbar.offsetHeight || (scroller.scrollHeight - current - scroller.clientHeight) < (scroller.clientHeight / 3)) {
+                document.body.classList.remove('topbar-folded');
                 ignore_scroll = true;
                 return;
             } else if (ignore_scroll) {
@@ -37,96 +32,94 @@ $(document).ready(function () {
                 ignore_scroll = false;
                 initial = current;
             } else if (current - initial > threshold) {
-                $body.addClass('topbar-folded');
+                document.body.classList.add('topbar-folded');
                 ignore_scroll = true;
                 return;
             } else if (current - initial < -threshold) {
-                $body.removeClass('topbar-folded');
+                document.body.classList.remove('topbar-folded');
                 ignore_scroll = true;
                 return;
             }
-            scroll_timeout = setTimeout(function() {
-                ignore_scroll = true;
-            }, 66);
+            scroll_timeout = setTimeout(() => { ignore_scroll = true; }, 66);
         };
     }
 
-    $(document).on('scroll', scroll_callback(document.scrollingElement));
+    document.addEventListener('scroll', scroll_callback(document.scrollingElement));
 
-    var sidebar_scroller = document.querySelector('.sphinxsidebar');
+    const sidebar_scroller = document.querySelector('.sphinxsidebar');
     if (sidebar_scroller) {
-        $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
+        sidebar_scroller.addEventListener('scroll', scroll_callback(sidebar_scroller));
     }
 
-    var div_body = document.querySelector('div.body');
-    var first_section = document.querySelector('div.body .section, div.body section');
+    const div_body = document.querySelector('div.body');
+    const first_section = document.querySelector('div.body .section, div.body section');
     if (first_section) {
-        $(document).on('scroll', function () {
+        document.addEventListener('scroll', event => {
             if (window.pageYOffset >= div_body.offsetTop + first_section.offsetTop) {
-                $body.addClass('scrolled');
+                document.body.classList.add('scrolled');
             } else {
-                $body.removeClass('scrolled');
+                document.body.classList.remove('scrolled');
             }
         });
-        $(document).scroll();
+        document.dispatchEvent(new Event('scroll'));
     }
 
-    $topbar.on('click', '.top', function () {
-        $(document.scrollingElement).animate({scrollTop: 0}, 400).focus();
+    topbar.querySelector('.top').addEventListener('click', event => {
+        window.scroll({ top: 0, behavior: 'smooth' });
+        event.preventDefault();
     });
 
     // show search
-    var $search_form = $('#search-form');
-    var $search_button = $('#search-button');
-    $search_button.on('click', function () {
+    const search_form = document.getElementById('search-form');
+    const search_button = document.getElementById('search-button');
+    search_button.addEventListener('click', event => {
         try {
             // https://readthedocs-sphinx-search.readthedocs.io/
             showSearchModal();
             return;
         } catch(e) {}
-        if ($search_form.is(':hidden')) {
-            $search_form.show();
-            $search_button.attr('aria-expanded', 'true');
-            $search_form.find('input').focus();
-            $body.removeClass('topbar-folded');
+        if (window.getComputedStyle(search_form).display === 'none') {
+            search_form.style.display = 'flex';
+            search_button.setAttribute('aria-expanded', 'true');
+            search_form.querySelector('input').focus();
+            document.body.classList.remove('topbar-folded');
         } else {
-            $search_form.hide();
-            $search_button.attr('aria-expanded', 'false');
-            $search_button.blur();
+            search_form.style.display = 'none';
+            search_button.setAttribute('aria-expanded', 'false');
+            search_button.blur();
         }
     });
 
+    const fullscreen_button = document.getElementById('fullscreen-button');
     if (document.fullscreenEnabled) {
-        var $fullscreen_button = $('#fullscreen-button');
-        $fullscreen_button.on('click', function() {
+        fullscreen_button.addEventListener('click', event => {
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen();
             } else {
                 document.exitFullscreen();
             }
-            $fullscreen_button.blur();
-            $topbar_placeholder.removeClass('fake-hover');
+            fullscreen_button.blur();
+            topbar_placeholder.classList.remove('fake-hover');
         });
     } else {
-        $('#fullscreen-button').remove();
+        fullscreen_button.remove();
     }
 
-    $topbar_placeholder.on('mouseenter', function() {
-        $topbar_placeholder.addClass('fake-hover');
+    topbar_placeholder.addEventListener('mouseenter', event => {
+        topbar_placeholder.classList.add('fake-hover');
     });
 
-    $topbar_placeholder.on('mouseleave', function() {
-        $topbar_placeholder.removeClass('fake-hover');
+    topbar_placeholder.addEventListener('mouseleave', event => {
+        topbar_placeholder.classList.remove('fake-hover');
     });
 
-    $topbar_placeholder.on('touchend', function($event){
-        if ($event.originalEvent.changedTouches[0].clientY < $topbar.height()) {
-            $topbar_placeholder.addClass('fake-hover');
+    document.addEventListener('touchend', event => {
+        if (event.touches.length > 1) { return; }
+        const touch = event.touches[0];
+        if (touch.clientY < topbar.offsetHeight) {
+            topbar_placeholder.classList.add('fake-hover');
+        } else {
+            topbar_placeholder.classList.remove('fake-hover');
         }
-        $event.stopPropagation();
-    });
-
-    $(window).on('touchmove touchend', function(){
-        $topbar_placeholder.removeClass('fake-hover');
     });
 });

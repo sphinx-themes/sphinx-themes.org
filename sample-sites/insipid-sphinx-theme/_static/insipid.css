@@ -153,10 +153,6 @@ blockquote p.attribution {
     text-align: end;
 }
 
-div.insipid-horizontally-scrollable {
-    overflow-x: auto;
-}
-
 div.body a:target,
 strong:target {
     padding: 3px;
@@ -184,22 +180,22 @@ section > hr.docutils {
     margin-right: -7px;
 }
 
-div.compound:not(.toctree-wrapper) {
+.compound:not(.toctree-wrapper) {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-div.compound:not(.toctree-wrapper) > * {
+.compound:not(.toctree-wrapper) > * {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
 
-div.compound:not(.toctree-wrapper) > *:first-child {
+.compound:not(.toctree-wrapper) > *:first-child {
     margin-top: 0;
     margin-bottom: 0.2em;
 }
 
-div.compound:not(.toctree-wrapper) > *:last-child {
+.compound:not(.toctree-wrapper) > *:last-child {
     margin-top: 0.2em;
     margin-bottom: 0;
 }
@@ -283,6 +279,10 @@ a code {
 
 code.descname {
     font-size: unset;
+}
+
+.sig-name {
+	font-size: unset;
 }
 
 .sig-paren,
@@ -461,8 +461,12 @@ div.body .sidebar dl:not(.glossary) > dt {
 /* -- tables and lists ------------------------------------------------------ */
 
 table.docutils {
+    overflow-x: auto;
+    display: block;
     border-collapse: separate;
     border-spacing: 4px 4px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 table.docutils th {
@@ -819,6 +823,11 @@ div.sphinxsidebar ul ul {
 
 div.sphinxsidebar a {
     color: #004188;
+}
+
+div.sphinxsidebar a.in-view {
+    font-style: italic;
+    font-weight: 600;
 }
 
 div.sphinxsidebar code {
