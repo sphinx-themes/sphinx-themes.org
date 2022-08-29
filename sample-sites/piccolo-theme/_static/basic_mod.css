@@ -185,12 +185,12 @@ div#top_nav nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
-div#top_nav nav a#mode_toggle {
+div#top_nav nav a#mode_toggle, div#top_nav nav a#source_link {
   margin-right: 1rem;
   display: block;
   flex-grow: 0;
 }
-div#top_nav nav a#mode_toggle svg {
+div#top_nav nav a#mode_toggle svg, div#top_nav nav a#source_link svg {
   height: 1.3rem;
   width: 1.3rem;
   vertical-align: middle;
