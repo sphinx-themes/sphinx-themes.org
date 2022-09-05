@@ -69,26 +69,42 @@
         event.preventDefault();
     });
 
-    // show search
-    const search_form = document.getElementById('search-form');
     const search_button = document.getElementById('search-button');
-    search_button.addEventListener('click', event => {
-        try {
-            // https://readthedocs-sphinx-search.readthedocs.io/
-            showSearchModal();
-            return;
-        } catch(e) {}
-        if (window.getComputedStyle(search_form).display === 'none') {
+    if (search_button) {
+        const search_form = document.getElementById('search-form');
+
+        function show_search() {
+            try {
+                // https://readthedocs-sphinx-search.readthedocs.io/
+                showSearchModal();
+                return;
+            } catch(e) {}
             search_form.style.display = 'flex';
             search_button.setAttribute('aria-expanded', 'true');
             search_form.querySelector('input').focus();
             document.body.classList.remove('topbar-folded');
-        } else {
+        }
+
+        function hide_search() {
             search_form.style.display = 'none';
             search_button.setAttribute('aria-expanded', 'false');
             search_button.blur();
         }
-    });
+
+        function toggle_search() {
+            if (window.getComputedStyle(search_form).display === 'none') {
+                show_search();
+            } else {
+                hide_search();
+            }
+        }
+
+        search_button.addEventListener('click', toggle_search);
+        if (Documentation.focusSearchBar) {
+            // Monkey-patch function provided by Sphinx:
+            Documentation.focusSearchBar = show_search;
+        }
+    }
 
     const fullscreen_button = document.getElementById('fullscreen-button');
     if (document.fullscreenEnabled) {

@@ -706,12 +706,14 @@ div.sphinxsidebar {
 
 #sidebar-checkbox:checked ~ div.document,
 #sidebar-checkbox:checked ~ .relbar,
+#sidebar-checkbox:checked ~ .articleComments,
 #sidebar-checkbox:checked ~ footer {
     margin-left: var(--sidebar-width);
 }
 
 body:not(.sidebar-resizing) div.document,
 body:not(.sidebar-resizing) .relbar,
+body:not(.sidebar-resizing) .articleComments,
 body:not(.sidebar-resizing) footer {
     transition: margin-left 0.3s ease-out;
 }
@@ -826,8 +828,8 @@ div.sphinxsidebar a {
 }
 
 div.sphinxsidebar a.in-view {
-    font-style: italic;
     font-weight: 600;
+    letter-spacing: -0.013em;
 }
 
 div.sphinxsidebar code {
@@ -1119,6 +1121,7 @@ div.viewcode-block:target {
 @media only screen and (max-width: 39rem) {
     #sidebar-checkbox:checked ~ div.document,
     #sidebar-checkbox:checked ~ .relbar,
+    #sidebar-checkbox:checked ~ .articleComments,
     #sidebar-checkbox:checked ~ footer {
         margin-left: 0;
     }
