@@ -10,6 +10,7 @@ The most valuable contribution to this project would be to contribute more aweso
 - Clone your fork.
 - Edit [`themes.json`], adding the new theme's configuration (described below) to it.
 - Run `nox -s lint`, to ensure the entry is positioned properly.
+- Run `nox -s publish -- <your-theme-pypi-name>`, to build your theme's preview locally.
 - Commit and push changes.
 - File a pull request!
 
