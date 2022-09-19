@@ -1,33 +1,31 @@
 
-  
-
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-      <title>Blocks | Awesome</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" />
-      <link rel="stylesheet" href="../../_static/theme.e6081a2fb60dd7bf7015.css" />
-      <link rel="canonical" href="kitchen-sink/blocks/" />
-        <link rel="search" title="Search" href="../../search/" />
-        <link rel="index" title="Index" href="../../genindex/" />
-        <link rel="next" title="Generic items" href="../generic/" />
-        <link rel="prev" title="API documentation" href="../api/" />
+    <title>Blocks | Awesome</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/theme.092012b65a584553e4f6.css" />
+    <link rel="canonical" href="kitchen-sink/blocks/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="next" title="Generic items" href="../generic/" />
+    <link rel="prev" title="API documentation" href="../api/" />
   </head>
 
   <body class="antialiased text-gray scroll-smooth">
     <div
       id="page"
-      data-controller="sidebar search"
-      data-action="keydown@window->search#focus"
-      class="h-screen xl:grid xl:grid-layout"
+      data-controller="sidebar search "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
       <a class="block text-xl bg-white py-4 z-20 absolute top-0 h-14 inset-x-0 text-center transform -translate-y-full focus:translate-y-0 focus:outline-none transition-transform duration-75" href="#blocks" title="Skip navigation links">Skip to content</a>
 
-      <header class="grid-area-header z-10 h-14">
+      <header class="grid-area-header z-10 h-14 sticky top-0 print:hidden">
         <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
       <button
     data-action="sidebar#open"
@@ -43,7 +41,7 @@
   action="../../search/"
   data-action="click->search#focusSearchInput"
   method="get"
-  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static">
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
 
   <button
     class="text-inherit h-14 w-14"
@@ -67,8 +65,8 @@
       </header>
 
       
-  <aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
-    <nav
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
   role="navigation"
   class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
 >
@@ -112,20 +110,19 @@
     <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
   </button>
 </nav>
-  </aside>
+</aside>
 
-  <main
-    data-controller="scroll"
-    class="px-4 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0"
-  ><nav role="navigation"
+<main
+  class="px-4 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../../">Awesome</a>
   <span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="../">Kitchen Sink</a>
     <span class="mr-1">/</span><span aria-current="page">Blocks</span>
 </nav>
-    <article role="main" class="flex-1">
-      
+  <article role="main" class="flex-1">
+    
   <section id="blocks">
 <h1>Blocks<a class="headerlink" href="#blocks" title="Permalink to this heading"><span>#</span></a></h1>
 <section id="block-quotes">
@@ -231,17 +228,19 @@ annoying.</p>
 <div><p>contains a block of text where line breaks and whitespace are significant and must be preserved</p>
 </div></blockquote>
 <p>This is a normal text paragraph. The next paragraph is a code sample:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><code><span class="n">It</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">processed</span> <span class="ow">in</span> <span class="nb">any</span> <span class="n">way</span><span class="p">,</span> <span class="k">except</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">It</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">processed</span> <span class="ow">in</span> <span class="nb">any</span> <span class="n">way</span><span class="p">,</span> <span class="k">except</span>
 <span class="n">that</span> <span class="n">the</span> <span class="n">indentation</span> <span class="ow">is</span> <span class="n">removed</span><span class="o">.</span>
 
 <span class="n">It</span> <span class="n">can</span> <span class="n">span</span> <span class="n">multiple</span> <span class="n">lines</span><span class="o">.</span>
-</code></pre></div></div>
+</pre></div>
+</div>
 <p>This is a normal text paragraph again.</p>
 <p>They can be quoted without indentation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><code>&gt;&gt; Great idea!
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt; Great idea!
 &gt;
 &gt; Why didn&#39;t I think of that?
-</code></pre></div></div>
+</pre></div>
+</div>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this heading"><span>#</span></a></h3>
@@ -253,13 +252,14 @@ annoying.</p>
 <p class="admonition-title">Note</p>
 <p>This is fine.</p>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;&#39;</span><span class="p">)</span>
 <span class="go">Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(cut and pasted from interactive Python sessions)&quot;</span><span class="p">)</span>
 <span class="go">(cut and pasted from interactive Python sessions)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.&quot;</span><span class="p">)</span>
 <span class="go">This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.</span>
-</code></pre></div></div>
+</pre></div>
+</div>
 </section>
 <section id="parsed-literals">
 <h3>Parsed Literals<a class="headerlink" href="#parsed-literals" title="Permalink to this heading"><span>#</span></a></h3>
@@ -267,10 +267,11 @@ annoying.</p>
 <blockquote>
 <div><p>It is equivalent to a line block with different rendering: typically in a typewriter/monospaced typeface, like an ordinary literal block. Parsed literal blocks are useful for adding hyperlinks to code examples.</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><code><span class="c1"># parsed-literal test</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># parsed-literal test</span>
 <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">someurl</span><span class="o">/</span><span class="n">release</span><span class="o">-</span><span class="mf">0.1.0</span><span class="o">.</span><span class="n">tar</span><span class="o">-</span><span class="n">gz</span>
 <span class="n">echo</span> <span class="s2">&quot;This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.&quot;</span>
-</code></pre></div></div>
+</pre></div>
+</div>
 </section>
 <section id="code-block">
 <h3>Code Block<a class="headerlink" href="#code-block" title="Permalink to this heading"><span>#</span></a></h3>
@@ -279,27 +280,28 @@ annoying.</p>
 <div><p>The “code” directive constructs a literal block [containing code].</p>
 </div></blockquote>
 <p>This has an alias of <code class="docutils literal notranslate"><span class="pre">code-block</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><code><span id='line-1' class='code-line'><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span>
-</span><span id='line-2' class='code-line'><span class="linenos"> 2</span>
-</span><span id='line-3' class='code-line'><span class="linenos"> 3</span><span class="c1"># This is an example</span>
-</span><span id='line-4' class='code-line'><span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Math</span><span class="p">:</span>
-</span><span id='line-5' class='code-line'><span class="linenos"> 5</span>    <span class="nd">@staticmethod</span>
-</span><span id='line-6' class='code-line'><span class="linenos"> 6</span>    <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-</span><span id='line-7' class='code-line'><span class="linenos"> 7</span>        <span class="sd">&quot;&quot;&quot;Fibonacci series up to n&quot;&quot;&quot;</span>
-</span><span id='line-8' class='code-line'><span class="linenos"> 8</span>        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-</span><span id='line-9' class='code-line'><span class="linenos"> 9</span>        <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-</span><span id='line-10' class='code-line'><span class="linenos">10</span>            <span class="k">yield</span> <span class="n">a</span>
-</span><span id='line-11' class='code-line'><span class="linenos">11</span>            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span><span id='line-12' class='code-line'><span class="linenos">12</span>
-</span><span id='line-13' class='code-line'><span class="linenos">13</span>
-</span><span id='line-14' class='code-line'><span class="linenos">14</span><span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
-</span><span id='line-15' class='code-line'><span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
-</span></code></pre></div></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># This is an example</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Math</span><span class="p">:</span>
+<span class="linenos"> 5</span>    <span class="nd">@staticmethod</span>
+<span class="linenos"> 6</span>    <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="linenos"> 7</span>        <span class="sd">&quot;&quot;&quot;Fibonacci series up to n&quot;&quot;&quot;</span>
+<span class="linenos"> 8</span>        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="linenos"> 9</span>        <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">10</span>            <span class="k">yield</span> <span class="n">a</span>
+<span class="linenos">11</span>            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
 <section id="with-caption">
 <h4>With caption<a class="headerlink" href="#with-caption" title="Permalink to this heading"><span>#</span></a></h4>
-<div class="highlight docutils container" id="id1">
+<div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Permalink to this code"><span>#</span></a></div>
-<div class="highlight-json notranslate"><div class="highlight"><pre><code><span class="p">{</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;session_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shorthands&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
@@ -312,24 +314,26 @@ annoying.</p>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">  </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-</code></pre></div></div>
+</pre></div>
+</div>
 </div>
 </section>
 <section id="with-line-numbers">
 <h4>With line numbers<a class="headerlink" href="#with-line-numbers" title="Permalink to this heading"><span>#</span></a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><code><span id='line-1' class='code-line'><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
-</span><span id='line-2' class='code-line'><span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
-</span><mark><span id='line-3' class='code-line'><span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This line is highlighted.&quot;</span><span class="p">)</span>
-</span></mark><span id='line-4' class='code-line'><span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This one is not...&quot;</span><span class="p">)</span>
-</span><mark><span id='line-5' class='code-line'><span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...but this one is.&quot;</span><span class="p">)</span>
-</span></mark><span id='line-6' class='code-line'><span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span>
-</span><span id='line-7' class='code-line'><span class="linenos">7</span>        <span class="s2">&quot;This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.&quot;</span>
-</span><span id='line-8' class='code-line'><span class="linenos">8</span>    <span class="p">)</span>
-</span></code></pre></div></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll"><span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This line is highlighted.&quot;</span><span class="p">)</span>
+</span><span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This one is not...&quot;</span><span class="p">)</span>
+<span class="hll"><span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...but this one is.&quot;</span><span class="p">)</span>
+</span><span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span>
+<span class="linenos">7</span>        <span class="s2">&quot;This is an intentionally very long line because I want to make sure that we are handling scrollable code blocks correctly.&quot;</span>
+<span class="linenos">8</span>    <span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="with-none-highlighting">
 <h4>With <code class="docutils literal notranslate"><span class="pre">none</span></code> highlighting<a class="headerlink" href="#with-none-highlighting" title="Permalink to this heading"><span>#</span></a></h4>
-<div class="highlight-none notranslate"><div class="highlight"><pre><code># Taken from https://en.wikipedia.org/wiki/Pseudocode#Example
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Taken from https://en.wikipedia.org/wiki/Pseudocode#Example
 algorithm ford-fulkerson is
     input: Graph G with flow capacity c,
         source node s,
@@ -350,20 +354,21 @@ algorithm ford-fulkerson is
             f(v, u) ← −f(u, v)
 
     return f
-</code></pre></div></div>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
 </section>
 
 
-    </article>
+  </article>
 
-    <footer>
-      
-        <div class="mt-20 mb-4 text-sm text-gray-700">&copy; 2021, Pradyun Gedam&nbsp;Made with <a href="https://www.sphinx-doc.org">Sphinx 5.1.1</a></div>
-      
-    </footer></main>
+  <footer>
+    
+      <div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2021, Pradyun Gedam&nbsp;Made with <a href="https://www.sphinx-doc.org">Sphinx 5.1.1</a></div>
+    
+  </footer></main>
 
 
       <button
@@ -380,12 +385,12 @@ algorithm ford-fulkerson is
     </div>
     
       
-  <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-  <script src="../../_static/jquery.js"></script>
-  <script src="../../_static/underscore.js"></script>
-  <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-  <script src="../../_static/doctools.js"></script>
-<script src="../../_static/theme.a9d041328d1560cbc665.js"></script>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/theme.3051a0ec24cad00d4d88.js"></script>
     
   </body>
 </html>
