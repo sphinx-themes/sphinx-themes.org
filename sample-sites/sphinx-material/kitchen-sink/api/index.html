@@ -55,6 +55,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Blocks" href="../blocks/" />
@@ -183,7 +184,54 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#kitchen-sink-api--page-root" class="md-nav__link">API documentation</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#urllib.parse.DefragResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DefragResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.DefragResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.ParseResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ParseResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.ParseResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.SplitResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SplitResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.SplitResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.parse_qs" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">parse_qs()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.parse_qsl" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote_from_bytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote_from_bytes()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote_plus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote_plus()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote_plus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote_plus()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote_to_bytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote_to_bytes()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urldefrag" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urldefrag()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlencode" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urljoin" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urljoin()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlparse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlparse()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlsplit" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlsplit()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlunparse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlunparse()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlunsplit" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
     
 <li class="md-nav__item"><a class="md-nav__extra_link" href="../../_sources/kitchen-sink/api.rst.txt">Show Source</a> </li>
 
@@ -217,7 +265,7 @@ by setting the following options:</p>
 </pre></div>
 </div>
 </div>
-<span class="target" id="module-urllib.parse"></span><p>Parse (absolute and relative) URLs.</p>
+<p>Parse (absolute and relative) URLs.</p>
 <p>urlparse module is based upon the following RFC specifications.</p>
 <p>RFC 3986 (STD66): “Uniform Resource Identifiers” by T. Berners-Lee, R. Fielding
 and L.  Masinter, January 2005.</p>
@@ -236,7 +284,7 @@ currently not entirely compliant with this RFC due to defacto
 scenarios for parsing, and for backward compatibility purposes, some
 parsing quirks from older RFCs are retained. The testcases in
 test_urlparse.py provides a good indicator of parsing behavior.</p>
-<dl class="py class">
+<span class="target" id="module-urllib.parse"></span><dl class="py class">
 <dt class="sig sig-object py" id="urllib.parse.DefragResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -505,7 +553,7 @@ empty query; the RFC states that these are equivalent).</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.2.1.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

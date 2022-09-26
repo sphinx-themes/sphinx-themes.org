@@ -14,6 +14,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <script src="../../_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
@@ -176,7 +177,7 @@ by setting the following options:</p>
 </pre></div>
 </div>
 </div>
-<span class="target" id="module-urllib.parse"></span><p>Parse (absolute and relative) URLs.</p>
+<p>Parse (absolute and relative) URLs.</p>
 <p>urlparse module is based upon the following RFC specifications.</p>
 <p>RFC 3986 (STD66): “Uniform Resource Identifiers” by T. Berners-Lee, R. Fielding
 and L.  Masinter, January 2005.</p>
@@ -195,7 +196,7 @@ currently not entirely compliant with this RFC due to defacto
 scenarios for parsing, and for backward compatibility purposes, some
 parsing quirks from older RFCs are retained. The testcases in
 test_urlparse.py provides a good indicator of parsing behavior.</p>
-<dl class="py class">
+<span class="target" id="module-urllib.parse"></span><dl class="py class">
 <dt class="sig sig-object py" id="urllib.parse.DefragResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -444,6 +445,43 @@ empty query; the RFC states that these are equivalent).</p>
         </div>
       </div>
     
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon"><</span><span>Page contents<span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">></span><span>Page contents:<span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">API documentation</a><ul>
+<li><a class="reference internal" href="#urllib.parse.DefragResult"><code class="docutils literal notranslate"><span class="pre">DefragResult</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.DefragResultBytes"><code class="docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.ParseResult"><code class="docutils literal notranslate"><span class="pre">ParseResult</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.ParseResultBytes"><code class="docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.SplitResult"><code class="docutils literal notranslate"><span class="pre">SplitResult</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.SplitResultBytes"><code class="docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.parse_qs"><code class="docutils literal notranslate"><span class="pre">parse_qs()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.parse_qsl"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.quote"><code class="docutils literal notranslate"><span class="pre">quote()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.quote_from_bytes"><code class="docutils literal notranslate"><span class="pre">quote_from_bytes()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.quote_plus"><code class="docutils literal notranslate"><span class="pre">quote_plus()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.unquote"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.unquote_plus"><code class="docutils literal notranslate"><span class="pre">unquote_plus()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.unquote_to_bytes"><code class="docutils literal notranslate"><span class="pre">unquote_to_bytes()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urldefrag"><code class="docutils literal notranslate"><span class="pre">urldefrag()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urlencode"><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urljoin"><code class="docutils literal notranslate"><span class="pre">urljoin()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urlparse"><code class="docutils literal notranslate"><span class="pre">urlparse()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urlsplit"><code class="docutils literal notranslate"><span class="pre">urlsplit()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urlunparse"><code class="docutils literal notranslate"><span class="pre">urlunparse()</span></code></a></li>
+<li><a class="reference internal" href="#urllib.parse.urlunsplit"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
 
       <div class="clearer"></div>
     </div>
@@ -467,7 +505,7 @@ empty query; the RFC states that these are equivalent).</p>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Pradyun Gedam.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.1.
     </div>
 
 <p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>

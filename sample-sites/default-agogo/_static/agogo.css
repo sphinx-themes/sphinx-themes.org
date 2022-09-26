@@ -269,6 +269,8 @@ div.document ol {
 
 div.sidebar,
 aside.sidebar {
+  width: 20em;
+  float: right;
   font-size: .9em;
 }
 
