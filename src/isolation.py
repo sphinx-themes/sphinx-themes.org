@@ -28,7 +28,9 @@ class IsolatedEnvironment:
             return
 
         process = await asyncio.create_subprocess_exec(
-            "virtualenv",
+            sys.executable,
+            "-m",
+            "venv",
             str(self.path),
             stdout=asyncio.subprocess.DEVNULL,
             stderr=asyncio.subprocess.DEVNULL,
