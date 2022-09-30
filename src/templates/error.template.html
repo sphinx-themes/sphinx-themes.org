@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
   </head>
 
-  <body class="antialiased max-w-4xl mx-auto p-4 my-2">
+  <body class="bg-red-50 antialiased max-w-4xl mx-auto p-4 my-2">
     <h1 class="text-red-700 text-5xl text-center">
       Build Failed!
     </h1>
     <div class="mt-2">
       <div class="text-gray-700 text-center font-semibold">{{ now.strftime("%d %b %Y %H:%M:%S %Z") }}</div>
+    </div>
+    <div class="mt-4">
+      <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
+        Unless all site previews are broken, this is a problem with the
+        <a class="underline"
+          href="https://pypi.org/project/{{ theme.pypi_package }}/"><code>{{ theme.pypi_package }}</code></a>
+        package.
+      </div>
     </div>
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Configuration</div>
