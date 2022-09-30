@@ -1,9 +1,7 @@
 import asyncio
 import os
 import shutil
-import textwrap
-import traceback
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import rich.progress
@@ -20,8 +18,7 @@ def get_error_page(theme: Theme, error: Exception) -> str:
     return template.render(
         theme=theme,
         error=error,
-        traceback=textwrap.dedent("".join(traceback.format_stack())),
-        now=datetime.now(),
+        now=datetime.now(tz=timezone.utc),
     )
 
 
