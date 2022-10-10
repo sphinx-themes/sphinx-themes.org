@@ -174,6 +174,10 @@ div#top_nav nav h1 {
 div#top_nav nav h1 a {
   color: white;
 }
+div#top_nav nav h1 img {
+  height: 1.3rem;
+  width: auto;
+}
 div#top_nav nav p#toggle_sidebar {
   transform: rotate(90deg);
   letter-spacing: 0.1rem;
@@ -297,12 +301,12 @@ div.document div.documentwrapper {
   padding: 1rem;
 }
 div.document div.highlight {
+  color: #252630;
   box-sizing: border-box;
   padding: 0.2rem 1rem;
   margin: 0.5rem 0;
   border-radius: 0.2rem;
   font-size: 0.9rem;
-  color: var(--fontColor);
 }
 div.document div.highlight pre {
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
@@ -721,8 +725,8 @@ div.button_nav_wrapper div.button_nav div.right a span.icon {
 
 /*****************************************************************************/
 /* Pygments overrides in dark mode */
-:root[data-mode=dark] .highlight,
-:root[data-mode=darkest] .highlight {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight {
   --black: #000000;
   --red: #ff9393;
   --darkBlue: #3a37ff;
@@ -802,331 +806,331 @@ div.button_nav_wrapper div.button_nav div.right a span.icon {
   /* Name.Variable.Magic */
   /* Literal.Number.Integer.Long */
 }
-:root[data-mode=dark] .highlight pre,
-:root[data-mode=darkest] .highlight pre {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight pre,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight pre {
   line-height: 125%;
 }
-:root[data-mode=dark] .highlight td.linenos .normal,
-:root[data-mode=darkest] .highlight td.linenos .normal {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight td.linenos .normal,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight td.linenos .normal {
   color: inherit;
   background-color: transparent;
   padding-left: 5px;
   padding-right: 5px;
 }
-:root[data-mode=dark] .highlight span.linenos,
-:root[data-mode=darkest] .highlight span.linenos {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight span.linenos,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight span.linenos {
   color: inherit;
   background-color: transparent;
   padding-left: 5px;
   padding-right: 5px;
 }
-:root[data-mode=dark] .highlight td.linenos .special,
-:root[data-mode=darkest] .highlight td.linenos .special {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight td.linenos .special,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight td.linenos .special {
   color: var(--black);
   background-color: var(--paleYellow);
   padding-left: 5px;
   padding-right: 5px;
 }
-:root[data-mode=dark] .highlight span.linenos.special,
-:root[data-mode=darkest] .highlight span.linenos.special {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight span.linenos.special,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight span.linenos.special {
   color: var(--black);
   background-color: var(--paleYellow);
   padding-left: 5px;
   padding-right: 5px;
 }
-:root[data-mode=dark] .highlight .hll,
-:root[data-mode=darkest] .highlight .hll {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .hll,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .hll {
   background-color: var(--paleYellow);
 }
-:root[data-mode=dark] .highlight .c,
-:root[data-mode=darkest] .highlight .c {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .c,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .c {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .err,
-:root[data-mode=darkest] .highlight .err {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .err,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .err {
   border: 1px solid var(--red);
 }
-:root[data-mode=dark] .highlight .k,
-:root[data-mode=darkest] .highlight .k {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .k,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .k {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .o,
-:root[data-mode=darkest] .highlight .o {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .o,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .o {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .ch,
-:root[data-mode=darkest] .highlight .ch {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ch,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ch {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .cm,
-:root[data-mode=darkest] .highlight .cm {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .cm,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .cm {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .cp,
-:root[data-mode=darkest] .highlight .cp {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .cp,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .cp {
   color: var(--brown);
 }
-:root[data-mode=dark] .highlight .cpf,
-:root[data-mode=darkest] .highlight .cpf {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .cpf,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .cpf {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .c1,
-:root[data-mode=darkest] .highlight .c1 {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .c1,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .c1 {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .cs,
-:root[data-mode=darkest] .highlight .cs {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .cs,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .cs {
   color: var(--torquoise);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .gd,
-:root[data-mode=darkest] .highlight .gd {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gd,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gd {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .ge,
-:root[data-mode=darkest] .highlight .ge {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ge,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ge {
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .gr,
-:root[data-mode=darkest] .highlight .gr {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gr,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gr {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .gh,
-:root[data-mode=darkest] .highlight .gh {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gh,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gh {
   color: var(--codeBlue);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .gi,
-:root[data-mode=darkest] .highlight .gi {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gi,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gi {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .go,
-:root[data-mode=darkest] .highlight .go {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .go,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .go {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .gp,
-:root[data-mode=darkest] .highlight .gp {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gp,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gp {
   color: var(--codeBlue);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .gs,
-:root[data-mode=darkest] .highlight .gs {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gs,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gs {
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .gu,
-:root[data-mode=darkest] .highlight .gu {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gu,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gu {
   color: var(--purple);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .gt,
-:root[data-mode=darkest] .highlight .gt {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .gt,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .gt {
   color: var(--codeBlue);
 }
-:root[data-mode=dark] .highlight .kc,
-:root[data-mode=darkest] .highlight .kc {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kc,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kc {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .kd,
-:root[data-mode=darkest] .highlight .kd {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kd,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kd {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .kn,
-:root[data-mode=darkest] .highlight .kn {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kn,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kn {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .kp,
-:root[data-mode=darkest] .highlight .kp {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kp,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kp {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .kr,
-:root[data-mode=darkest] .highlight .kr {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kr,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kr {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .kt,
-:root[data-mode=darkest] .highlight .kt {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .kt,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .kt {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .m,
-:root[data-mode=darkest] .highlight .m {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .m,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .m {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .s,
-:root[data-mode=darkest] .highlight .s {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .s,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .s {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .na,
-:root[data-mode=darkest] .highlight .na {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .na,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .na {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .nb,
-:root[data-mode=darkest] .highlight .nb {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nb,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nb {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .nc,
-:root[data-mode=darkest] .highlight .nc {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nc,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nc {
   color: var(--codeBlue);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .no,
-:root[data-mode=darkest] .highlight .no {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .no,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .no {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .nd,
-:root[data-mode=darkest] .highlight .nd {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nd,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nd {
   color: var(--purple);
 }
-:root[data-mode=dark] .highlight .ni,
-:root[data-mode=darkest] .highlight .ni {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ni,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ni {
   color: var(--grey);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .ne,
-:root[data-mode=darkest] .highlight .ne {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ne,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ne {
   color: var(--red);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .nf,
-:root[data-mode=darkest] .highlight .nf {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nf,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nf {
   color: var(--codeBlue);
 }
-:root[data-mode=dark] .highlight .nl,
-:root[data-mode=darkest] .highlight .nl {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nl,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nl {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .nn,
-:root[data-mode=darkest] .highlight .nn {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nn,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nn {
   color: var(--codeBlue);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .nt,
-:root[data-mode=darkest] .highlight .nt {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nt,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nt {
   color: var(--codeGreen);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .nv,
-:root[data-mode=darkest] .highlight .nv {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .nv,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .nv {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .ow,
-:root[data-mode=darkest] .highlight .ow {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ow,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ow {
   color: var(--pink);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .w,
-:root[data-mode=darkest] .highlight .w {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .w,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .w {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .mb,
-:root[data-mode=darkest] .highlight .mb {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .mb,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .mb {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .mf,
-:root[data-mode=darkest] .highlight .mf {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .mf,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .mf {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .mh,
-:root[data-mode=darkest] .highlight .mh {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .mh,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .mh {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .mi,
-:root[data-mode=darkest] .highlight .mi {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .mi,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .mi {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .mo,
-:root[data-mode=darkest] .highlight .mo {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .mo,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .mo {
   color: var(--grey);
 }
-:root[data-mode=dark] .highlight .sa,
-:root[data-mode=darkest] .highlight .sa {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sa,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sa {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .sb,
-:root[data-mode=darkest] .highlight .sb {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sb,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sb {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .sc,
-:root[data-mode=darkest] .highlight .sc {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sc,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sc {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .dl,
-:root[data-mode=darkest] .highlight .dl {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .dl,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .dl {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .sd,
-:root[data-mode=darkest] .highlight .sd {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sd,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sd {
   color: var(--red);
   font-style: italic;
 }
-:root[data-mode=dark] .highlight .s2,
-:root[data-mode=darkest] .highlight .s2 {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .s2,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .s2 {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .se,
-:root[data-mode=darkest] .highlight .se {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .se,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .se {
   color: var(--brown);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .sh,
-:root[data-mode=darkest] .highlight .sh {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sh,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sh {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .si,
-:root[data-mode=darkest] .highlight .si {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .si,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .si {
   color: var(--pink);
   font-weight: bold;
 }
-:root[data-mode=dark] .highlight .sx,
-:root[data-mode=darkest] .highlight .sx {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sx,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sx {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .sr,
-:root[data-mode=darkest] .highlight .sr {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .sr,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .sr {
   color: var(--pink);
 }
-:root[data-mode=dark] .highlight .s1,
-:root[data-mode=darkest] .highlight .s1 {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .s1,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .s1 {
   color: var(--red);
 }
-:root[data-mode=dark] .highlight .ss,
-:root[data-mode=darkest] .highlight .ss {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .ss,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .ss {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .bp,
-:root[data-mode=darkest] .highlight .bp {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .bp,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .bp {
   color: var(--codeGreen);
 }
-:root[data-mode=dark] .highlight .fm,
-:root[data-mode=darkest] .highlight .fm {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .fm,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .fm {
   color: var(--codeBlue);
 }
-:root[data-mode=dark] .highlight .vc,
-:root[data-mode=darkest] .highlight .vc {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .vc,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .vc {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .vg,
-:root[data-mode=darkest] .highlight .vg {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .vg,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .vg {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .vi,
-:root[data-mode=darkest] .highlight .vi {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .vi,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .vi {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .vm,
-:root[data-mode=darkest] .highlight .vm {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .vm,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .vm {
   color: var(--darkBlue);
 }
-:root[data-mode=dark] .highlight .il,
-:root[data-mode=darkest] .highlight .il {
+:root[data-mode=dark] body[data-dark_mode_code_blocks=true] .highlight .il,
+:root[data-mode=darkest] body[data-dark_mode_code_blocks=true] .highlight .il {
   color: var(--grey);
 }
 
