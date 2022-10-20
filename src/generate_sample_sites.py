@@ -44,7 +44,7 @@ async def generate_site(
         progress.advance(task, 1)
 
         progress.log(f"[yellow]{theme.name}[reset]: Installing packages...")
-        await env.install("--pre", "sphinx")
+        await env.install("sphinx")
         progress.advance(task, 1)
         await env.install(theme.pypi_package)
         progress.advance(task, 1)
