@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>API documentation &#8212; Material</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Blocks" href="../blocks/" />
+    <link rel="prev" title="Admonitions" href="../admonitions/" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#kitchen-sink/api" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../" title="Material"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Material</span>
+          <span class="md-header-nav__topic"> API documentation </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../../search/" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../../"versions.json"",
+        target_loc = "../../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../../" class="md-tabs__link">Material</a></li>
+          <li class="md-tabs__item"><a href="../" class="md-tabs__link">Kitchen Sink</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../" title="Material" class="md-nav__button md-logo">
+      
+        <img src="../../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../../"
+       title="Material">Material</a>
+  </label>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#kitchen-sink-api--page-root" class="md-nav__link">API documentation</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#urllib.parse.DefragResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DefragResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.DefragResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.ParseResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ParseResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.ParseResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.SplitResult" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SplitResult</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.SplitResultBytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.parse_qs" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">parse_qs()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.parse_qsl" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote_from_bytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote_from_bytes()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.quote_plus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">quote_plus()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote_plus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote_plus()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.unquote_to_bytes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">unquote_to_bytes()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urldefrag" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urldefrag()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlencode" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urljoin" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urljoin()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlparse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlparse()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlsplit" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlsplit()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlunparse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlunparse()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#urllib.parse.urlunsplit" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../../_sources/kitchen-sink/api.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="api-documentation">
+<h1 id="kitchen-sink-api--page-root">API documentation<a class="headerlink" href="#kitchen-sink-api--page-root" title="Permalink to this heading">¶</a></h1>
+<p>Using Sphinx’s <code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> plugin, it is possible to auto-generate documentation of a Python module.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Avoid having in-function-signature type annotations with autodoc,
+by setting the following options:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for autodoc ----------------------------------------------------</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration</span>
+
+<span class="c1"># Automatically extract typehints when specified and place them in</span>
+<span class="c1"># descriptions of the relevant function/method.</span>
+<span class="n">autodoc_typehints</span> <span class="o">=</span> <span class="s2">"description"</span>
+
+<span class="c1"># Don't show class signature with the class' name.</span>
+<span class="n">autodoc_class_signature</span> <span class="o">=</span> <span class="s2">"separated"</span>
+</pre></div>
+</div>
+</div>
+<span class="target" id="module-urllib.parse"></span><p>Parse (absolute and relative) URLs.</p>
+<p>urlparse module is based upon the following RFC specifications.</p>
+<p>RFC 3986 (STD66): “Uniform Resource Identifiers” by T. Berners-Lee, R. Fielding
+and L.  Masinter, January 2005.</p>
+<p>RFC 2732 : “Format for Literal IPv6 Addresses in URL’s by R.Hinden, B.Carpenter
+and L.Masinter, December 1999.</p>
+<p>RFC 2396:  “Uniform Resource Identifiers (URI)”: Generic Syntax by T.
+Berners-Lee, R. Fielding, and L. Masinter, August 1998.</p>
+<p>RFC 2368: “The mailto URL scheme”, by P.Hoffman , L Masinter, J. Zawinski, July 1998.</p>
+<p>RFC 1808: “Relative Uniform Resource Locators”, by R. Fielding, UC Irvine, June
+1995.</p>
+<p>RFC 1738: “Uniform Resource Locators (URL)” by T. Berners-Lee, L. Masinter, M.
+McCahill, December 1994</p>
+<p>RFC 3986 is considered the current standard and any future changes to
+urlparse module should conform with it.  The urlparse module is
+currently not entirely compliant with this RFC due to defacto
+scenarios for parsing, and for backward compatibility purposes, some
+parsing quirks from older RFCs are retained. The testcases in
+test_urlparse.py provides a good indicator of parsing behavior.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.DefragResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.DefragResultBytes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResultBytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.ParseResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">ParseResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#ParseResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.ParseResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.ParseResultBytes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">ParseResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#ParseResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.ParseResultBytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.SplitResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">SplitResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#SplitResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.SplitResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib.parse.SplitResultBytes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">SplitResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#SplitResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.SplitResultBytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.parse_qs">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">parse_qs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_blank_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_parsing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&amp;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#parse_qs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.parse_qs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a query given as a string argument.</p>
+<p>Arguments:</p>
+<p>qs: percent-encoded query string to be parsed</p>
+<dl class="simple">
+<dt>keep_blank_values: flag indicating whether blank values in</dt><dd><p>percent-encoded queries should be treated as blank strings.
+A true value indicates that blanks should be retained as
+blank strings.  The default false value indicates that
+blank values are to be ignored and treated as if they were
+not included.</p>
+</dd>
+<dt>strict_parsing: flag indicating what to do with parsing errors.</dt><dd><p>If false (the default), errors are silently ignored.
+If true, errors raise a ValueError exception.</p>
+</dd>
+<dt>encoding and errors: specify how to decode percent-encoded sequences</dt><dd><p>into Unicode characters, as accepted by the bytes.decode() method.</p>
+</dd>
+<dt>max_num_fields: int. If set, then throws a ValueError if there</dt><dd><p>are more than n fields read by parse_qsl().</p>
+</dd>
+<dt>separator: str. The symbol to use for separating the query arguments.</dt><dd><p>Defaults to &amp;.</p>
+</dd>
+</dl>
+<p>Returns a dictionary.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.parse_qsl">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">parse_qsl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_blank_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_parsing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&amp;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#parse_qsl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.parse_qsl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a query given as a string argument.</p>
+<p>Arguments:</p>
+<p>qs: percent-encoded query string to be parsed</p>
+<dl class="simple">
+<dt>keep_blank_values: flag indicating whether blank values in</dt><dd><p>percent-encoded queries should be treated as blank strings.
+A true value indicates that blanks should be retained as blank
+strings.  The default false value indicates that blank values
+are to be ignored and treated as if they were  not included.</p>
+</dd>
+<dt>strict_parsing: flag indicating what to do with parsing errors. If</dt><dd><p>false (the default), errors are silently ignored. If true,
+errors raise a ValueError exception.</p>
+</dd>
+<dt>encoding and errors: specify how to decode percent-encoded sequences</dt><dd><p>into Unicode characters, as accepted by the bytes.decode() method.</p>
+</dd>
+<dt>max_num_fields: int. If set, then throws a ValueError</dt><dd><p>if there are more than n fields read by parse_qsl().</p>
+</dd>
+<dt>separator: str. The symbol to use for separating the query arguments.</dt><dd><p>Defaults to &amp;.</p>
+</dd>
+</dl>
+<p>Returns a list, as G-d intended.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.quote">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'abc</span> <span class="pre">def'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="s"><span class="pre">'abc%20def'</span></span></span></span><a class="reference internal" href="../../_modules/urllib/parse/#quote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each part of a URL, e.g. the path info, the query, etc., has a
+different set of reserved characters that must be quoted. The
+quote function offers a cautious (not minimal) way to quote a
+string for most of these parts.</p>
+<p>RFC 3986 Uniform Resource Identifier (URI): Generic Syntax lists
+the following (un)reserved characters.</p>
+<p>unreserved    = ALPHA / DIGIT / “-” / “.” / “_” / “~”
+reserved      = gen-delims / sub-delims
+gen-delims    = “:” / “/” / “?” / “#” / “[” / “]” / “@”
+sub-delims    = “!” / “$” / “&amp;” / “’” / “(” / “)”</p>
+<blockquote>
+<div><p>/ “*” / “+” / “,” / “;” / “=”</p>
+</div></blockquote>
+<p>Each of the reserved characters is reserved in some component of a URL,
+but not necessarily in all of them.</p>
+<p>The quote function %-escapes all characters that are neither in the
+unreserved chars (“always safe”) nor the additional chars set via the
+safe arg.</p>
+<p>The default for the safe arg is ‘/’. The character is reserved, but in
+typical usage the quote function is being called on a path where the
+existing slash characters are to be preserved.</p>
+<p>Python 3.7 updates from using RFC 2396 to RFC 3986 to quote URL strings.
+Now, “~” is included in the set of unreserved characters.</p>
+<p>string and safe may be either str or bytes objects. encoding and errors
+must not be specified if string is a bytes object.</p>
+<p>The optional encoding and errors parameters specify how to deal with
+non-ASCII characters, as accepted by the str.encode method.
+By default, encoding=’utf-8’ (characters are encoded with UTF-8), and
+errors=’strict’ (unsupported characters raise a UnicodeEncodeError).</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.quote_from_bytes">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote_from_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#quote_from_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote_from_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like quote(), but accepts a bytes object rather than a str, and does
+not perform string-to-bytes encoding.  It always returns an ASCII string.
+quote_from_bytes(b’abc def?’) -&gt; ‘abc%20def%3f’</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.quote_plus">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#quote_plus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote_plus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like quote(), but also replace ‘ ‘ with ‘+’, as required for quoting
+HTML form values. Plus signs in the original string are escaped unless
+they are included in safe. It also does not have safe default to ‘/’.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.unquote">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#unquote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace %xx escapes by their single-character equivalent. The optional
+encoding and errors parameters specify how to decode percent-encoded
+sequences into Unicode characters, as accepted by the bytes.decode()
+method.
+By default, percent-encoded sequences are decoded with UTF-8, and invalid
+sequences are replaced by a placeholder character.</p>
+<p>unquote(‘abc%20def’) -&gt; ‘abc def’.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.unquote_plus">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#unquote_plus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote_plus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like unquote(), but also replace plus signs by spaces, as required for
+unquoting HTML form values.</p>
+<p>unquote_plus(‘%7e/abc+def’) -&gt; ‘~/abc def’</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.unquote_to_bytes">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote_to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'abc%20def'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">b'abc</span> <span class="pre">def'.</span></span></span><a class="reference internal" href="../../_modules/urllib/parse/#unquote_to_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote_to_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urldefrag">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urldefrag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urldefrag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urldefrag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes any existing fragment from URL.</p>
+<p>Returns a tuple of the defragmented URL and the fragment.  If
+the URL contained no fragments, the second element is the
+empty string.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urlencode">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlencode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doseq=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote_via=&lt;function</span> <span class="pre">quote_plus&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlencode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlencode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode a dict or sequence of two-element tuples into a URL query string.</p>
+<p>If any values in the query arg are sequences and doseq is true, each
+sequence element is converted to a separate parameter.</p>
+<p>If the query arg is a sequence of two-element tuples, the order of the
+parameters in the output will match the order of parameters in the
+input.</p>
+<p>The components of a query arg may each be either a string or a bytes type.</p>
+<p>The safe, encoding, and errors parameters are passed down to the function
+specified by quote_via (encoding and errors only if a component is a str).</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urljoin">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urljoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urljoin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urljoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join a base URL and a possibly relative URL to form an absolute
+interpretation of the latter.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urlparse">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlparse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlparse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a URL into 6 components:
+&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;</p>
+<p>The result is a named 6-tuple with fields corresponding to the
+above. It is either a ParseResult or ParseResultBytes object,
+depending on the type of the url parameter.</p>
+<p>The username, password, hostname, and port sub-components of netloc
+can also be accessed as attributes of the returned object.</p>
+<p>The scheme argument provides the default value of the scheme
+component when no scheme is found in url.</p>
+<p>If allow_fragments is False, no attempt is made to separate the
+fragment component from the previous component, which can be either
+path or query.</p>
+<p>Note that % escapes are not expanded.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urlsplit">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlsplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlsplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlsplit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a URL into 5 components:
+&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;</p>
+<p>The result is a named 5-tuple with fields corresponding to the
+above. It is either a SplitResult or SplitResultBytes object,
+depending on the type of the url parameter.</p>
+<p>The username, password, hostname, and port sub-components of netloc
+can also be accessed as attributes of the returned object.</p>
+<p>The scheme argument provides the default value of the scheme
+component when no scheme is found in url.</p>
+<p>If allow_fragments is False, no attempt is made to separate the
+fragment component from the previous component, which can be either
+path or query.</p>
+<p>Note that % escapes are not expanded.</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urlunparse">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlunparse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlunparse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlunparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put a parsed URL back together again.  This may result in a
+slightly different, but equivalent URL, if the URL that was parsed
+originally had redundant delimiters, e.g. a ? with an empty query
+(the draft states that these are equivalent).</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="urllib.parse.urlunsplit">
+<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlunsplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlunsplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlunsplit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine the elements of a tuple as returned by urlsplit() into a
+complete URL as a string. The data argument can be any five-item iterable.
+This may result in a slightly different, but equivalent URL, if the URL that
+was parsed originally had unnecessary delimiters (for example, a ? with an
+empty query; the RFC states that these are equivalent).</p>
+</dd></dl>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../admonitions/" title="Admonitions"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Admonitions </span>
+              </div>
+            </a>
+          
+          
+            <a href="../blocks/" title="Blocks"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Blocks </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2021, Pradyun Gedam.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
