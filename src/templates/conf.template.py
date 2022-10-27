@@ -25,6 +25,8 @@ extlinks = {
     "pypi": ("https://pypi.org/project/%s/", ""),
 }
 
+todo_include_todos = True
+
 # -- Theme-specific -----------------------------------------------------------
 
 rst_prolog = """
