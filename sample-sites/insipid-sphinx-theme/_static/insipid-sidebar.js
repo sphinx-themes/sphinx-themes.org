@@ -280,6 +280,17 @@
         if (id) {
             id = id.slice(1);
             section = document.getElementById(decodeURI(id));
+            // Detect API doc headers:
+            let single_definition_term = (
+                section.nodeName == 'DT' &&
+                section.nextElementSibling.nodeName == 'DD' &&
+                !section.nextElementSibling.nextElementSibling &&
+                section.parentElement.nodeName == 'DL');
+            if (single_definition_term) {
+                // The <dl> contains only a single <dt> + <dd>,
+                // therefore we can observe the whole <dl>.
+                section = section.parentElement;
+            }
         } else {
             // NB: The first section has no hash, so we don't know its ID:
             section = document.querySelector('div.body .section, div.body section');
