@@ -267,12 +267,11 @@
     <span class="k">def</span> <span class="nf">port</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">port</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hostinfo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-                <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Port could not be cast to integer value as </span><span class="si">{</span><span class="n">port</span><span class="si">!r}</span><span class="s1">&#39;</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">port</span> <span class="o">&lt;=</span> <span class="mi">65535</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">port</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">port</span><span class="o">.</span><span class="n">isascii</span><span class="p">():</span>
+                <span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Port could not be cast to integer value as </span><span class="si">{</span><span class="n">port</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">port</span> <span class="o">&lt;=</span> <span class="mi">65535</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Port out of range 0-65535&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">port</span>
 
@@ -1221,15 +1220,15 @@
 <span class="k">def</span> <span class="nf">_splitnport</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">defport</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Split host and port, returning numeric port.</span>
 <span class="sd">    Return given default port if no &#39;:&#39; found; defaults to -1.</span>
-<span class="sd">    Return numerical port if a valid number are found after &#39;:&#39;.</span>
+<span class="sd">    Return numerical port if a valid number is found after &#39;:&#39;.</span>
 <span class="sd">    Return None if &#39;:&#39; but not a valid number.&quot;&quot;&quot;</span>
     <span class="n">host</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">delim</span><span class="p">:</span>
         <span class="n">host</span> <span class="o">=</span> <span class="n">port</span>
     <span class="k">elif</span> <span class="n">port</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">port</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">port</span><span class="o">.</span><span class="n">isascii</span><span class="p">():</span>
             <span class="n">nport</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">else</span><span class="p">:</span>
             <span class="n">nport</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="n">host</span><span class="p">,</span> <span class="n">nport</span>
     <span class="k">return</span> <span class="n">host</span><span class="p">,</span> <span class="n">defport</span>
