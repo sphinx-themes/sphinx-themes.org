@@ -22,7 +22,7 @@ extensions = [
 ]
 
 extlinks = {
-    "pypi": ("https://pypi.org/project/%s/", ""),
+    "pypi": ("https://pypi.org/project/%s/", "%s"),
 }
 
 todo_include_todos = True
