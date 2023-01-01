@@ -167,7 +167,7 @@
 <span class="n">_parse_cache</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">def</span> <span class="nf">clear_cache</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Clear the parse cache and the quoters cache.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Clear the parse cache and the quoters cache.&quot;&quot;&quot;</span>
     <span class="n">_parse_cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">_safe_quoters</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 
@@ -210,7 +210,7 @@
 
 <span class="c1"># Result objects are more helpful than simple tuples</span>
 <span class="k">class</span> <span class="nc">_ResultMixinStr</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Standard approach to encoding parsed results from str to bytes&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Standard approach to encoding parsed results from str to bytes&quot;&quot;&quot;</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">):</span>
@@ -218,7 +218,7 @@
 
 
 <span class="k">class</span> <span class="nc">_ResultMixinBytes</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Standard approach to decoding parsed results from bytes to str&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Standard approach to decoding parsed results from bytes to str&quot;&quot;&quot;</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">):</span>
@@ -226,7 +226,7 @@
 
 
 <span class="k">class</span> <span class="nc">_NetlocResultMixinBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Shared methods for the parsed result objects containing a netloc element&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Shared methods for the parsed result objects containing a netloc element&quot;&quot;&quot;</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
 
     <span class="nd">@property</span>
@@ -450,7 +450,7 @@
 <span class="k">del</span> <span class="n">_fix_result_transcoding</span>
 
 <div class="viewcode-block" id="urlparse"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlparse">[docs]</a><span class="k">def</span> <span class="nf">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a URL into 6 components:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a URL into 6 components:</span>
 <span class="sd">    &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;</span>
 
 <span class="sd">    The result is a named 6-tuple with fields corresponding to the</span>
@@ -515,7 +515,7 @@
                              <span class="s2">&quot;characters under NFKC normalization&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="urlsplit"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlsplit">[docs]</a><span class="k">def</span> <span class="nf">urlsplit</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a URL into 5 components:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a URL into 5 components:</span>
 <span class="sd">    &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;</span>
 
 <span class="sd">    The result is a named 5-tuple with fields corresponding to the</span>
@@ -572,7 +572,7 @@
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="urlunparse"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunparse">[docs]</a><span class="k">def</span> <span class="nf">urlunparse</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Put a parsed URL back together again.  This may result in a</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Put a parsed URL back together again.  This may result in a</span>
 <span class="sd">    slightly different, but equivalent URL, if the URL that was parsed</span>
 <span class="sd">    originally had redundant delimiters, e.g. a ? with an empty query</span>
 <span class="sd">    (the draft states that these are equivalent).&quot;&quot;&quot;</span>
@@ -583,7 +583,7 @@
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">urlunsplit</span><span class="p">((</span><span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span><span class="p">)))</span></div>
 
 <div class="viewcode-block" id="urlunsplit"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunsplit">[docs]</a><span class="k">def</span> <span class="nf">urlunsplit</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Combine the elements of a tuple as returned by urlsplit() into a</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Combine the elements of a tuple as returned by urlsplit() into a</span>
 <span class="sd">    complete URL as a string. The data argument can be any five-item iterable.</span>
 <span class="sd">    This may result in a slightly different, but equivalent URL, if the URL that</span>
 <span class="sd">    was parsed originally had unnecessary delimiters (for example, a ? with an</span>
@@ -602,7 +602,7 @@
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="urljoin"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urljoin">[docs]</a><span class="k">def</span> <span class="nf">urljoin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Join a base URL and a possibly relative URL to form an absolute</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Join a base URL and a possibly relative URL to form an absolute</span>
 <span class="sd">    interpretation of the latter.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">url</span>
@@ -671,7 +671,7 @@
 
 
 <div class="viewcode-block" id="urldefrag"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urldefrag">[docs]</a><span class="k">def</span> <span class="nf">urldefrag</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Removes any existing fragment from URL.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes any existing fragment from URL.</span>
 
 <span class="sd">    Returns a tuple of the defragmented URL and the fragment.  If</span>
 <span class="sd">    the URL contained no fragments, the second element is the</span>
@@ -690,7 +690,7 @@
 <span class="n">_hextobyte</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="unquote_to_bytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_to_bytes">[docs]</a><span class="k">def</span> <span class="nf">unquote_to_bytes</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;unquote_to_bytes(&#39;abc%20def&#39;) -&gt; b&#39;abc def&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;unquote_to_bytes(&#39;abc%20def&#39;) -&gt; b&#39;abc def&#39;.&quot;&quot;&quot;</span>
     <span class="c1"># Note: strings are encoded as UTF-8. This is only an issue if it contains</span>
     <span class="c1"># unescaped non-ASCII characters, which URIs should not.</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">string</span><span class="p">:</span>
@@ -722,7 +722,7 @@
 <span class="n">_asciire</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;([</span><span class="se">\x00</span><span class="s1">-</span><span class="se">\x7f</span><span class="s1">]+)&#39;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="unquote"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote">[docs]</a><span class="k">def</span> <span class="nf">unquote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Replace %xx escapes by their single-character equivalent. The optional</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Replace %xx escapes by their single-character equivalent. The optional</span>
 <span class="sd">    encoding and errors parameters specify how to decode percent-encoded</span>
 <span class="sd">    sequences into Unicode characters, as accepted by the bytes.decode()</span>
 <span class="sd">    method.</span>
@@ -751,7 +751,7 @@
 
 <div class="viewcode-block" id="parse_qs"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qs">[docs]</a><span class="k">def</span> <span class="nf">parse_qs</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
              <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">max_num_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">&#39;&amp;&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a query given as a string argument.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a query given as a string argument.</span>
 
 <span class="sd">        Arguments:</span>
 
@@ -793,7 +793,7 @@
 
 <div class="viewcode-block" id="parse_qsl"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qsl">[docs]</a><span class="k">def</span> <span class="nf">parse_qsl</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
               <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">max_num_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">&#39;&amp;&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a query given as a string argument.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a query given as a string argument.</span>
 
 <span class="sd">        Arguments:</span>
 
@@ -858,7 +858,7 @@
     <span class="k">return</span> <span class="n">r</span></div>
 
 <div class="viewcode-block" id="unquote_plus"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_plus">[docs]</a><span class="k">def</span> <span class="nf">unquote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Like unquote(), but also replace plus signs by spaces, as required for</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Like unquote(), but also replace plus signs by spaces, as required for</span>
 <span class="sd">    unquoting HTML form values.</span>
 
 <span class="sd">    unquote_plus(&#39;%7e/abc+def&#39;) -&gt; &#39;~/abc def&#39;</span>
@@ -874,7 +874,7 @@
 <span class="n">_safe_quoters</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">class</span> <span class="nc">Quoter</span><span class="p">(</span><span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A mapping from bytes (in range(0,256)) to strings.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A mapping from bytes (in range(0,256)) to strings.</span>
 
 <span class="sd">    String values are percent-encoded byte values, unless the key &lt; 128, and</span>
 <span class="sd">    in the &quot;safe&quot; set (either the specified safe set, or default set).</span>
@@ -882,7 +882,7 @@
     <span class="c1"># Keeps a cache internally, using defaultdict, for efficiency (lookups</span>
     <span class="c1"># of cached keys don&#39;t call Python code at all).</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">safe</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;safe: bytes object.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;safe: bytes object.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">safe</span> <span class="o">=</span> <span class="n">_ALWAYS_SAFE</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">safe</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -896,7 +896,7 @@
         <span class="k">return</span> <span class="n">res</span>
 
 <div class="viewcode-block" id="quote"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote">[docs]</a><span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;quote(&#39;abc def&#39;) -&gt; &#39;abc%20def&#39;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;quote(&#39;abc def&#39;) -&gt; &#39;abc%20def&#39;</span>
 
 <span class="sd">    Each part of a URL, e.g. the path info, the query, etc., has a</span>
 <span class="sd">    different set of reserved characters that must be quoted. The</span>
@@ -950,7 +950,7 @@
     <span class="k">return</span> <span class="n">quote_from_bytes</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="quote_plus"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_plus">[docs]</a><span class="k">def</span> <span class="nf">quote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Like quote(), but also replace &#39; &#39; with &#39;+&#39;, as required for quoting</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Like quote(), but also replace &#39; &#39; with &#39;+&#39;, as required for quoting</span>
 <span class="sd">    HTML form values. Plus signs in the original string are escaped unless</span>
 <span class="sd">    they are included in safe. It also does not have safe default to &#39;/&#39;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -967,7 +967,7 @@
     <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="quote_from_bytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_from_bytes">[docs]</a><span class="k">def</span> <span class="nf">quote_from_bytes</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Like quote(), but accepts a bytes object rather than a str, and does</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Like quote(), but accepts a bytes object rather than a str, and does</span>
 <span class="sd">    not perform string-to-bytes encoding.  It always returns an ASCII string.</span>
 <span class="sd">    quote_from_bytes(b&#39;abc def\x3f&#39;) -&gt; &#39;abc%20def%3f&#39;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -990,7 +990,7 @@
 
 <div class="viewcode-block" id="urlencode"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlencode">[docs]</a><span class="k">def</span> <span class="nf">urlencode</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">doseq</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
               <span class="n">quote_via</span><span class="o">=</span><span class="n">quote_plus</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Encode a dict or sequence of two-element tuples into a URL query string.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode a dict or sequence of two-element tuples into a URL query string.</span>
 
 <span class="sd">    If any values in the query arg are sequences and doseq is true, each</span>
 <span class="sd">    sequence element is converted to a separate parameter.</span>
@@ -1076,7 +1076,7 @@
 
 
 <span class="k">def</span> <span class="nf">_to_bytes</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;to_bytes(u&quot;URL&quot;) --&gt; &#39;URL&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;to_bytes(u&quot;URL&quot;) --&gt; &#39;URL&#39;.&quot;&quot;&quot;</span>
     <span class="c1"># Most URL schemes require ASCII. If that changes, the conversion</span>
     <span class="c1"># can be relaxed.</span>
     <span class="c1"># XXX get rid of to_bytes()</span>
@@ -1090,7 +1090,7 @@
 
 
 <span class="k">def</span> <span class="nf">unwrap</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Transform a string like &#39;&lt;URL:scheme://host/path&gt;&#39; into &#39;scheme://host/path&#39;.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transform a string like &#39;&lt;URL:scheme://host/path&gt;&#39; into &#39;scheme://host/path&#39;.</span>
 
 <span class="sd">    The string is returned unchanged if it&#39;s not a wrapped URL.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1111,7 +1111,7 @@
 
 <span class="n">_typeprog</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">def</span> <span class="nf">_splittype</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splittype(&#39;type:opaquestring&#39;) --&gt; &#39;type&#39;, &#39;opaquestring&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splittype(&#39;type:opaquestring&#39;) --&gt; &#39;type&#39;, &#39;opaquestring&#39;.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_typeprog</span>
     <span class="k">if</span> <span class="n">_typeprog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_typeprog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;([^/:]+):(.*)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
@@ -1132,7 +1132,7 @@
 
 <span class="n">_hostprog</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">def</span> <span class="nf">_splithost</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splithost(&#39;//host[:port]/path&#39;) --&gt; &#39;host[:port]&#39;, &#39;/path&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splithost(&#39;//host[:port]/path&#39;) --&gt; &#39;host[:port]&#39;, &#39;/path&#39;.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_hostprog</span>
     <span class="k">if</span> <span class="n">_hostprog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_hostprog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;//([^/#?]*)(.*)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
@@ -1154,7 +1154,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splituser</span><span class="p">(</span><span class="n">host</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splituser(&#39;user[:passwd]@host[:port]&#39;) --&gt; &#39;user[:passwd]&#39;, &#39;host[:port]&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splituser(&#39;user[:passwd]@host[:port]&#39;) --&gt; &#39;user[:passwd]&#39;, &#39;host[:port]&#39;.&quot;&quot;&quot;</span>
     <span class="n">user</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">host</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">user</span> <span class="k">if</span> <span class="n">delim</span> <span class="k">else</span> <span class="kc">None</span><span class="p">),</span> <span class="n">host</span>
 
@@ -1167,7 +1167,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splitpasswd</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splitpasswd(&#39;user:passwd&#39;) -&gt; &#39;user&#39;, &#39;passwd&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splitpasswd(&#39;user:passwd&#39;) -&gt; &#39;user&#39;, &#39;passwd&#39;.&quot;&quot;&quot;</span>
     <span class="n">user</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">passwd</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">user</span><span class="p">,</span> <span class="p">(</span><span class="n">passwd</span> <span class="k">if</span> <span class="n">delim</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
 
@@ -1182,7 +1182,7 @@
 <span class="c1"># splittag(&#39;/path#tag&#39;) --&gt; &#39;/path&#39;, &#39;tag&#39;</span>
 <span class="n">_portprog</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">def</span> <span class="nf">_splitport</span><span class="p">(</span><span class="n">host</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splitport(&#39;host:port&#39;) --&gt; &#39;host&#39;, &#39;port&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splitport(&#39;host:port&#39;) --&gt; &#39;host&#39;, &#39;port&#39;.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_portprog</span>
     <span class="k">if</span> <span class="n">_portprog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_portprog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(.*):([0-9]*)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
@@ -1203,7 +1203,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splitnport</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">defport</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Split host and port, returning numeric port.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split host and port, returning numeric port.</span>
 <span class="sd">    Return given default port if no &#39;:&#39; found; defaults to -1.</span>
 <span class="sd">    Return numerical port if a valid number is found after &#39;:&#39;.</span>
 <span class="sd">    Return None if &#39;:&#39; but not a valid number.&quot;&quot;&quot;</span>
@@ -1227,7 +1227,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splitquery</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splitquery(&#39;/path?query&#39;) --&gt; &#39;/path&#39;, &#39;query&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splitquery(&#39;/path?query&#39;) --&gt; &#39;/path&#39;, &#39;query&#39;.&quot;&quot;&quot;</span>
     <span class="n">path</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">query</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">delim</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">query</span>
@@ -1242,7 +1242,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splittag</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splittag(&#39;/path#tag&#39;) --&gt; &#39;/path&#39;, &#39;tag&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splittag(&#39;/path#tag&#39;) --&gt; &#39;/path&#39;, &#39;tag&#39;.&quot;&quot;&quot;</span>
     <span class="n">path</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">tag</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">delim</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">tag</span>
@@ -1257,7 +1257,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splitattr</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splitattr(&#39;/path;attr1=value1;attr2=value2;...&#39;) -&gt;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splitattr(&#39;/path;attr1=value1;attr2=value2;...&#39;) -&gt;</span>
 <span class="sd">        &#39;/path&#39;, [&#39;attr1=value1&#39;, &#39;attr2=value2&#39;, ...].&quot;&quot;&quot;</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
@@ -1271,7 +1271,7 @@
 
 
 <span class="k">def</span> <span class="nf">_splitvalue</span><span class="p">(</span><span class="n">attr</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;splitvalue(&#39;attr=value&#39;) --&gt; &#39;attr&#39;, &#39;value&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;splitvalue(&#39;attr=value&#39;) --&gt; &#39;attr&#39;, &#39;value&#39;.&quot;&quot;&quot;</span>
     <span class="n">attr</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">attr</span><span class="p">,</span> <span class="p">(</span><span class="n">value</span> <span class="k">if</span> <span class="n">delim</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>

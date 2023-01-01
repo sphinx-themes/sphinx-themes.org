@@ -1,0 +1,366 @@
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Istok Web Bold'), local('IstokWeb-Bold'), url(fonts/istok/istok.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Computer Modern Concrete'
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Computer Modern Concrete';
+  src: url('fonts/concrete/cmunorm.eot');
+  src: url('fonts/concrete/cmunorm.eot?#iefix') format('embedded-opentype'),
+            url('fonts/concrete/cmunorm.woff') format('woff'),
+            url('fonts/concrete/cmunorm.ttf') format('truetype'),
+            url('fonts/concrete/cmunorm.svg#cmunorm') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Computer Modern Concrete';
+  src: url('fonts/concrete/cmunobx.eot');
+  src: url('fonts/concrete/cmunobx.eot?#iefix') format('embedded-opentype'),
+            url('fonts/concrete/cmunobx.woff') format('woff'),
+            url('fonts/concrete/cmunobx.ttf') format('truetype'),
+            url('fonts/concrete/cmunobx.svg#cmunobx') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Computer Modern Concrete';
+  src: url('fonts/concrete/cmunoti.eot');
+  src: url('fonts/concrete/cmunoti.eot?#iefix') format('embedded-opentype'),
+            url('fonts/concrete/cmunoti.woff') format('woff'),
+            url('fonts/concrete/cmunoti.ttf') format('truetype'),
+            url('fonts/concrete/cmunoti.svg#cmunoti') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Computer Modern Concrete';
+  src: url('fonts/concrete/cmunobi.eot');
+  src: url('fonts/concrete/cmunobi.eot?#iefix') format('embedded-opentype'),
+            url('fonts/concrete/cmunobi.woff') format('woff'),
+            url('fonts/concrete/cmunobi.ttf') format('truetype'),
+            url('fonts/concrete/cmunobi.svg#cmunobi') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/typewriter/cmuntt.eot');
+  src: url('fonts/typewriter/cmuntt.eot?#iefix') format('embedded-opentype'),
+            url('fonts/typewriter/cmuntt.woff') format('woff'),
+            url('fonts/typewriter/cmuntt.ttf') format('truetype'),
+            url('fonts/typewriter/cmuntt.svg#cmuntt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/typewriter/cmuntb.eot');
+  src: url('fonts/typewriter/cmuntb.eot?#iefix') format('embedded-opentype'),
+            url('fonts/typewriter/cmuntb.woff') format('woff'),
+            url('fonts/typewriter/cmuntb.ttf') format('truetype'),
+            url('fonts/typewriter/cmuntb.svg#cmuntb') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/typewriter/cmunit.eot');
+  src: url('fonts/typewriter/cmunit.eot?#iefix') format('embedded-opentype'),
+            url('fonts/typewriter/cmunit.woff') format('woff'),
+            url('fonts/typewriter/cmunit.ttf') format('truetype'),
+            url('fonts/typewriter/cmunit.svg#cmunit') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/typewriter/cmuntx.eot');
+  src: url('fonts/typewriter/cmuntx.eot?#iefix') format('embedded-opentype'),
+            url('fonts/typewriter/cmuntx.woff') format('woff'),
+            url('fonts/typewriter/cmuntx.ttf') format('truetype'),
+            url('fonts/typewriter/cmuntx.svg#cmuntx') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Computer Modern Concrete', Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+
+a {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+a:hover {
+  color: white;
+  background-color: #333;
+}
+
+p {
+  text-align: justify;
+  line-height: 110%;
+}
+
+pre,
+code {
+  font-family: 'Computer Modern Typewriter';
+}
+
+pre {
+  background-color: #FFF9F9;
+  padding: 3px;
+}
+
+code {
+  background-color: #FCFAFA;
+  padding: 3px;
+}
+
+pre > code {
+  padding: 0px;
+  background-color: transparent;
+}
+
+h1, h2, h3, h4, th {
+  font-family: 'Istok Web', sans-serif;
+}
+
+.body > .section:last-child {
+  border-top: 1px dotted rgb(51, 0, 0);
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+  padding-top: 0.5em;
+  text-transform: uppercase;
+}
+
+caption {
+  caption-side: bottom;
+}
+
+figure,
+div.figure,
+table {
+
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+td, th {
+  border: 1px solid #EEE;
+  padding: 0.2em;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+h2.author,
+h3.date,
+h1.title {
+  margin: 0;
+}
+
+button,
+input {
+  font-family: "Computer Modern Typewriter";
+  font-style: italic;
+}
+
+.admonition {
+  border: 1px dotted #EEE;
+  padding: 4px;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+caption,
+.figure .caption,
+.figure .legend,
+figcaption,
+h2.author,
+h3.date {
+  font-size: 0.8em;
+  color: #555;
+  font-family: 'Computer Modern Typewriter' ,monospace;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2.author,
+h3.date {
+  display: inline-block;
+}
+
+caption,
+figcaption {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: left;
+}
+
+h2.author::after {
+  content: ' ~';
+}
+
+/* experimental, un toque rudo */
+
+.headerlink {
+  color: blue;
+}
+
+#searchbox {
+  margin-top: 12px;
+}
+
+.headerlink:hover {
+  background-color: blue;
+}
+
+.rubric {
+  font-size: 0.8em;
+}
+
+.sphinxsidebar {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* reset */
+.sphinxsidebar ul.ablog-cloud li {
+  float: none;
+  font-size: 100%;
+  margin-right: 0;
+  height: auto;
+  line-height: normal;
+  vertical-align: inherit;
+}
+
+.sphinxsidebar ul.ablog-cloud {
+  overflow: visible;
+}
+
+.sphinxsidebar ul.ablog-cloud a {
+  vertical-align: inherit;
+  text-decoration: underline;
+}
+
+.sphinxsidebar h1,
+.sphinxsidebar h2,
+.sphinxsidebar h3,
+.sphinxsidebar ul,
+.sphinxsidebar li {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/* footnotes */
+
+.footnote {
+  margin-bottom: 1em;
+}
+
+.footnote td p {
+  margin-top: 0;
+}
+
+.footnote .label {
+  width: 3em;
+}
+
+/* verse */
+
+blockquote .line-block {
+  max-width: 30em;
+}
+
+blockquote .line-block .line {
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
+/* screenplay */
+
+.screenplay {
+  background-color: #FFF9F9;
+  padding: 3px;
+  font-family: 'Computer Modern Typewriter';
+}
+
+.screenplay .line {
+  margin-bottom: 1.5em;
+}
+
+.screenplay .dialog-character {
+  color: #030;
+  margin-bottom: 0;
+  max-width: 15em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screenplay .dialog-text {
+  color: #300;
+  max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screenplay .slugline {
+  text-transform: uppercase;
+  color: #003;
+}
+
+.screenplay .transition {
+  text-transform: uppercase;
+  color: #330; 
+}
+
+.screenplay .action {
+  color: #033; 
+}

@@ -1,162 +1,262 @@
+
 <!DOCTYPE html>
-<html lang="en" class="no-js">
 
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insipid Demo -- failed to build</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-  </head>
+    <title>Insipid Sample &#8212; Insipid</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/insipid.css" />
 
-  <body class="bg-red-50 antialiased max-w-4xl mx-auto p-4 my-2">
-    <h1 class="text-red-700 text-5xl text-center">
-      Build Failed!
-    </h1>
-    <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">31 Dec 2022 09:06:30 UTC</div>
-    </div>
-    <div class="mt-4">
-      <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
-        Unless all site previews are broken, this is a problem with the
-        <a class="underline"
-          href="https://pypi.org/project/insipid-sphinx-theme/"><code>insipid-sphinx-theme</code></a>
-        package.
+    <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script defer src="_static/insipid.js"></script>
+    <script defer src="_static/insipid-sidebar.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Kitchen Sink" href="kitchen-sink/" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head><body>
+    <script type="text/javascript">
+        document.body.classList.add('js');
+    </script>
+    <input type="checkbox" id="sidebar-checkbox" style="display: none;">
+    <label id="overlay" for="sidebar-checkbox"></label>
+    <div class="sidebar-resize-handle"></div>
+    <script type="text/javascript">
+        try {
+            let sidebar = localStorage.getItem('sphinx-sidebar');
+            const sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+            if (sidebar_width) {
+                document.documentElement.style.setProperty('--sidebar-width', sidebar_width);
+            }
+            // show sidebar on wide screen
+            if (!sidebar && window.matchMedia('(min-width: 100rem)').matches) {
+                sidebar = 'visible';
+                // NB: We don't store the value in localStorage!
+            }
+            if (sidebar === 'visible') {
+                document.getElementById('sidebar-checkbox').checked = true;
+            }
+        } catch(e) {
+            console.info(e);
+        }
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </label>
+            <button id="search-button" type="button" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-form" accesskey="S">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+            </button>
+          </div>
+          <div class="title">
+            <span class="parent">Insipid</span>
+            <a class="top" href="#">Insipid Sample</a>
+          </div>
+          <div class="buttons">
+            <button id="fullscreen-button" type="button" aria-hidden="true">
+              <span class="enable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
+              </span>
+              <span class="disable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div id="searchbox" role="search">
+          <form id="search-form" class="search" style="display: none" action="search/" method="get">
+            <input type="search" name="q" placeholder="Search ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <button>Go</button>
+          </form>
+        </div>
       </div>
+    </header>
+    <nav>
+      <a href="kitchen-sink/" class="nav-icon next" title="next:&#13;Kitchen Sink" aria-label="Next topic" accesskey="N" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="relbar">
+      <a class="next" href="kitchen-sink/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Kitchen Sink
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<section id="theme-display-sample">
+<h1>Insipid Sample<a class="headerlink" href="#theme-display-sample" title="Permalink to this heading">§</a></h1>
+<p>This is a demo site for Insipid, generated as part of
+<a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This sample documentation was generated on Jan 01, 2023, and is rebuilt weekly.</p>
+</div>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">§</a></h2>
+<ol class="arabic">
+<li><p>Install this theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install insipid-sphinx-theme
+</pre></div>
+</div>
+</li>
+<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_permalinks_icon</span> <span class="o">=</span> <span class="s1">&#39;§&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;insipid&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+</ol>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">§</a></h2>
+<p>You can find this theme’s documentation at <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">https://insipid-sphinx-theme.readthedocs.io/</a>.</p>
+</section>
+<section id="exploration">
+<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this heading">§</a></h2>
+<p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
+everything that you can with Sphinx “out-of-the-box”.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Browsing through that section should give you a good idea of how stuff looks
+in this theme.</p>
+</section>
+<section id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this heading">§</a></h2>
+<p>This is the most important part of a documentation theme. If you like
+the general look of the theme, please make sure that it is possible to
+easily navigate through this sample documentation.</p>
+<p>Ideally, the pages listed below should also be reachable via links
+somewhere else on this page (like the sidebar, or a topbar). If they are
+not, then this theme might need additional configuration to provide the
+sort of site navigation that’s necessary for “real” documentation.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<p>Some pages like <a class="reference internal" href="placeholder-three/"><span class="doc">Placeholder Page Three</span></a> are declared in a “hidden”
+toctree, and thus would not be visible above. However, they are still a
+part of the overall site hierarchy and some themes may choose to present
+them to the user in the site navigation.</p>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If you hit an error while building documentation with a new theme,
+it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
+file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
+<code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
+allow the build to proceed.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+
+          <div class="sidebar-resize-handle"></div>
+
+<h3><a href="#">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<hr class="docutils" />
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="genindex/" accesskey="I">General Index</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="py-modindex/">Python Module Index</a></li>
+</ul>
+<div id="ethical-ad-placement"></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
     </div>
-    <div class="mt-4">
-      <div class="text-gray-700 text-center font-semibold">Configuration</div>
-      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">{&#39;html_permalinks_icon&#39;: &#34;&#39;\\N{SECTION SIGN}&#39;&#34;, &#39;html_theme&#39;: &#39;insipid&#39;}</pre>
-    </div>
-    <div class="mt-4">
-      <div class="text-gray-700 text-center font-semibold">Output</div>
-      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-Running Sphinx v6.0.0
-making output directory... done
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-building [mo]: targets for 0 po files that are out of date
-building [dirhtml]: targets for 18 source files that are out of date
-updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-[new config] 18 added, 0 changed, 0 removed
-reading sources... [  5%] index
 
-======================================== stderr ========================================
+    <nav class="relbar">
+      <a class="next" href="kitchen-sink/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Kitchen Sink
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>
 
-Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 299, in next_line
-    self.line = self.input_lines[self.line_offset]
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 1136, in __getitem__
-    return self.data[i]
-IndexError: list index out of range
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 226, in run
-    self.next_line()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 302, in next_line
-    raise EOFError
-EOFError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 281, in build_main
-    app.build(args.force_all, args.filenames)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 344, in build
-    self.builder.build_update()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 310, in build_update
-    self.build(to_build,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 326, in build
-    updated_docnames = set(self.read())
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 433, in read
-    self._read_serial(docnames)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 454, in _read_serial
-    self.read_doc(docname)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 510, in read_doc
-    publisher.publish()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/core.py&#34;, line 224, in publish
-    self.document = self.reader.read(self.source, self.parser,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/io.py&#34;, line 103, in read
-    self.parse()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/readers/__init__.py&#34;, line 76, in parse
-    self.parser.parse(self.input, document)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/parsers.py&#34;, line 78, in parse
-    self.statemachine.run(inputlines, document, inliner=self.inliner)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 169, in run
-    results = StateMachineWS.run(self, input_lines, input_offset,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 233, in run
-    context, next_state, result = self.check_line(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 445, in check_line
-    return method(match, context, next_state)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2357, in explicit_markup
-    self.explicit_list(blank_finish)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2382, in explicit_list
-    newline_offset, blank_finish = self.nested_list_parse(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 316, in nested_list_parse
-    state_machine.run(block, input_offset, memo=self.memo,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 195, in run
-    results = StateMachineWS.run(self, input_lines, input_offset)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 233, in run
-    context, next_state, result = self.check_line(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 445, in check_line
-    return method(match, context, next_state)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2660, in explicit_markup
-    nodelist, blank_finish = self.explicit_construct(match)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2367, in explicit_construct
-    return method(self, expmatch)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2059, in substitution_def
-    new_abs_offset, blank_finish = self.nested_list_parse(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 316, in nested_list_parse
-    state_machine.run(block, input_offset, memo=self.memo,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 195, in run
-    results = StateMachineWS.run(self, input_lines, input_offset)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 233, in run
-    context, next_state, result = self.check_line(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 445, in check_line
-    return method(match, context, next_state)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2688, in embedded_directive
-    nodelist, blank_finish = self.directive(match,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2104, in directive
-    return self.run_directive(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2154, in run_directive
-    result = directive_instance.run()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/directives/misc.py&#34;, line 314, in run
-    self.state.nested_parse(self.content, self.content_offset,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 279, in nested_parse
-    state_machine.run(block, input_offset, memo=self.memo,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 195, in run
-    results = StateMachineWS.run(self, input_lines, input_offset)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/statemachine.py&#34;, line 239, in run
-    result = state.eof(context)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2725, in eof
-    self.blank(None, context, None)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 2716, in blank
-    paragraph, literalnext = self.paragraph(
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 416, in paragraph
-    textnodes, messages = self.inline_text(text, lineno)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 425, in inline_text
-    nodes, messages = self.inliner.parse(text, lineno,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 649, in parse
-    before, inlines, remaining, sysmessages = method(self, match,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 792, in interpreted_or_phrase_ref
-    nodelist, messages = self.interpreted(rawsource, escaped, role,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/docutils/parsers/rst/states.py&#34;, line 889, in interpreted
-    nodes, messages2 = role_fn(role, rawsource, text, lineno, self)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/ext/extlinks.py&#34;, line 101, in role
-    title = caption % part
-TypeError: not all arguments converted during string formatting
-
-Exception occurred:
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/insipid-sphinx-theme/lib/python3.10/site-packages/sphinx/ext/extlinks.py&#34;, line 101, in role
-    title = caption % part
-TypeError: not all arguments converted during string formatting
-The full traceback has been saved in /tmp/sphinx-err-1f3pja5k.log, if you want to report the issue to the developers.
-Please also report this if it was a user error, so that a better error message can be provided next time.
-A bug report can be filed in the tracker at &lt;https://github.com/sphinx-doc/sphinx/issues&gt;. Thanks!
-</pre>
-    </div>
+    <footer role="contentinfo">
+      &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
+<a class="reference internal" href="_sources/index.rst.txt" rel="nofollow">Show Source</a>.
+    </footer>
   </body>
-
 </html>
