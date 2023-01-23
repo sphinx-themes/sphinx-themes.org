@@ -3,6 +3,7 @@
 #ethical-ad-placement {
     margin-top: auto;
     padding-top: 3em;
+    min-height: 200px;
 }
 
 #readthedocs-embed-flyout, #duplicated-readthedocs-versions {
@@ -10,7 +11,7 @@
     margin-right: -10px;
 }
 
-#readthedocs-embed-flyout {
+#duplicated-readthedocs-versions {
     margin-bottom: -10px;
 }
 

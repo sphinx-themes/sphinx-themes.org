@@ -42,12 +42,13 @@ div.body {
 /* -- scrollbars ------------------------------------------------------------ */
 
 html::-webkit-scrollbar, div.sphinxsidebar::-webkit-scrollbar {
-    width: 14px;
-    background: transparent;
+    width: 12px;
+    background-color: #fff;
 }
 
 html::-webkit-scrollbar-thumb, div.sphinxsidebar::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background-color: #ccc;
+    border-radius: 6px;
 }
 
 html, div.sphinxsidebar {
@@ -60,11 +61,10 @@ body {
 
 div.sphinxsidebar::-webkit-scrollbar {
     width: 7px;
-    background: transparent;
 }
 
 div.sphinxsidebar::-webkit-scrollbar-thumb {
-    background: #ccc;
+    border-radius: 3.5px;
 }
 
 div.sphinxsidebar {
@@ -126,7 +126,7 @@ a.headerlink {
 }
 
 blockquote {
-    clear: left;
+    clear: inline-start;
     margin: 10px 0;
     border: 1px solid #0002;
     border-left-width: 7px;
@@ -169,6 +169,29 @@ strong:target {
     background-color: #fbe54e;
 }
 
+.footnote:target {
+    background-color: unset;
+}
+
+.footnote:target .label {
+    padding: 3px;
+    margin: -3px;
+    background-color: #fbe54e;
+}
+
+.citation:target .label {
+    padding: 3px;
+    margin-left: -3px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+    background-color: #fbe54e;
+}
+
+.citation:target .backrefs {
+    margin-left: -8px;
+}
+
 hr.docutils {
     border: 0;
     border-top: solid 1px #ccc;
@@ -198,6 +221,10 @@ section > hr.docutils {
 .compound:not(.toctree-wrapper) > *:last-child {
     margin-top: 0.2em;
     margin-bottom: 0;
+}
+
+section, .section {
+    clear: inline-start;
 }
 
 /* -- hyperlink styles ------------------------------------------------------ */
@@ -654,6 +681,10 @@ div.body dl.exception > dt:not(:target) {
     line-height: 0.5em;
 }
 
+.relbar .pre {
+    white-space: pre;
+}
+
 /* -- breadcrumbs ----------------------------------------------------------- */
 
 nav.crumbs {
@@ -827,7 +858,7 @@ div.sphinxsidebar ul ul {
     list-style: unset;
 }
 
-div.sphinxsidebar a {
+.sphinxsidebar a {
     color: #004188;
 }
 

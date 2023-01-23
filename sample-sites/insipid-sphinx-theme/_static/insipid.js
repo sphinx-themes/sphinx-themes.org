@@ -72,6 +72,7 @@
     const search_button = document.getElementById('search-button');
     if (search_button) {
         const search_form = document.getElementById('search-form');
+        const search_field = search_form.querySelector('input');
 
         function show_search() {
             try {
@@ -81,7 +82,7 @@
             } catch(e) {}
             search_form.style.display = 'flex';
             search_button.setAttribute('aria-expanded', 'true');
-            search_form.querySelector('input').focus();
+            search_field.focus();
             document.body.classList.remove('topbar-folded');
         }
 
@@ -104,6 +105,13 @@
             // Monkey-patch function provided by Sphinx:
             Documentation.focusSearchBar = show_search;
         }
+
+        search_field.addEventListener('keydown', event => {
+            if (event.code === 'Escape') {
+                hide_search();
+                search_field.blur();
+            }
+        });
     }
 
     const fullscreen_button = document.getElementById('fullscreen-button');
