@@ -241,7 +241,7 @@ With line numbers
 Without highlighting
 ~~~~~~~~~~~~~~~~~~~~
 
-.. code-block::
+.. code-block:: text
 
     # Taken from https://en.wikipedia.org/wiki/Pseudocode#Example
     algorithm ford-fulkerson is
