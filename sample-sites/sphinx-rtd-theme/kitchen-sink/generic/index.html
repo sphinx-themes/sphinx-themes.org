@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generic items &mdash; Read the Docs</title>
@@ -11,10 +11,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -30,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../" class="icon icon-home"> Sphinx Themes Sample
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Sphinx Themes Sample
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -84,7 +86,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a></li>
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../">Kitchen Sink</a></li>
       <li class="breadcrumb-item active">Generic items</li>
       <li class="wy-breadcrumbs-aside">
@@ -112,10 +114,10 @@ a <sup>superscript</sup>, <em>emphasis</em>, <strong>strong</strong>, and
 <section id="hyperlinks">
 <h3>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this heading"></a></h3>
 <p>It is a website, so it’ll have hyperlinks like <a class="reference external" href="http://www.python.org">http://www.python.org</a> (inline),
-or <a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id20">4</a> (external reference), <a class="reference internal" href="#example">example</a> (internal reference),
+or <a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> (external reference), <a class="reference internal" href="#example">example</a> (internal reference),
 <a class="reference external" href="http://www.python.org">Python web site</a> (external hyperlinks with embedded
-URI), footnote references (manually numbered <a class="footnote-reference brackets" href="#id6" id="id1">1</a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2">3</a>,
-labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3">2</a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4">*</a>), citation references (<a class="footnote-reference brackets" href="#id13" id="id5">12</a>),
+URI), footnote references (manually numbered <a class="footnote-reference brackets" href="#id6" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>,
+labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>*<span class="fn-bracket">]</span></a>), citation references (<a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>),
 substitution references (<a class="reference internal" href="https://source.unsplash.com/32x32/daily?icon"><img alt="EXAMPLE" src="https://source.unsplash.com/32x32/daily?icon" style="width: 1em;" /></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
 (see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here).</p>
 <p>reStructuredText has character-level inline markup too. It’s ugly to write, but
@@ -216,44 +218,54 @@ voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <section id="footnotes">
 <h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading"></a></h3>
-<dl class="footnote brackets">
-<dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
-<dd><p>A footnote contains body elements, consistently indented by at
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>A footnote contains body elements, consistently indented by at
 least 3 spaces.</p>
 <p>This is the footnote’s second paragraph.</p>
-</dd>
-<dt class="label" id="label"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
-<dd><p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7">1</a>) or
+</aside>
+<aside class="footnote brackets" id="label" role="note">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>) or
 automatically using a “#”-prefixed label.  This footnote has a
 label so it can be referred to from multiple places, both as a
-footnote reference (<a class="footnote-reference brackets" href="#label" id="id8">2</a>) and as a hyperlink reference
+footnote reference (<a class="footnote-reference brackets" href="#label" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>) and as a hyperlink reference
 (<a class="reference internal" href="#label">label</a>).</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
-<dd><p>This footnote is numbered automatically and anonymously using a
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">3</a><span class="fn-bracket">]</span></span>
+<p>This footnote is numbered automatically and anonymously using a
 label of “#” only.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">*</a></span></dt>
-<dd><p>Footnotes may also use symbols, specified with a “*” label.
-Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11">†</a>.</p>
-</dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id11">†</a></span></dt>
-<dd><p>This footnote shows the next symbol in the sequence.</p>
-</dd>
-</dl>
+</aside>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">*</a><span class="fn-bracket">]</span></span>
+<p>Footnotes may also use symbols, specified with a “*” label.
+Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>†<span class="fn-bracket">]</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">†</a><span class="fn-bracket">]</span></span>
+<p>This footnote shows the next symbol in the sequence.</p>
+</aside>
+</aside>
 </section>
 <section id="citations">
 <h3>Citations<a class="headerlink" href="#citations" title="Permalink to this heading"></a></h3>
-<dl class="footnote brackets">
-<dt class="label" id="id13"><span class="brackets">12</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id16">2</a>)</span></dt>
-<dd><p>This citation has some <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">blocks</span></code> in it, maybe some <strong>bold</strong> and
-<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id15" id="id14">13</a> too.</p>
-</dd>
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id14">13</a></span></dt>
-<dd><p>This citation will have one backlink.</p>
-</dd>
-</dl>
-<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id13" id="id16">12</a> citation.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id13" role="note">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id16">2</a>)</span>
+<p>This citation has some <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">blocks</span></code> in it, maybe some <strong>bold</strong> and
+<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id15" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> too.</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">13</a><span class="fn-bracket">]</span></span>
+<p>This citation will have one backlink.</p>
+</aside>
+</aside>
+<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id13" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> citation.</p>
 <p>Here is another type of citation: <cite>citation</cite></p>
 </section>
 <section id="targets">
@@ -263,17 +275,19 @@ A reference can be found under <a class="reference internal" href="#inline-marku
 hyperlink targets</a> are also possible.</p>
 <p>Section headers are implicit targets, referred to by name. See
 <a class="reference internal" href="#targets">Targets</a>.</p>
-<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id21">4</a>”.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>”.</p>
 <p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
 refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
 </section>
 <section id="target-footnotes">
 <h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Permalink to this heading"></a></h3>
-<dl class="footnote brackets">
-<dt class="label" id="id19"><span class="brackets">4</span><span class="fn-backref">(<a href="#id20">1</a>,<a href="#id21">2</a>)</span></dt>
-<dd><p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id19" role="note">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id20">1</a>,<a role="doc-backlink" href="#id21">2</a>)</span>
+<p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
+</aside>
+</aside>
 </section>
 </section>
 <section id="centered-text">
