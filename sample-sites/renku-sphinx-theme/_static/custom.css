@@ -27,8 +27,14 @@ Then you can edit and make changes to this file and see the results by doing the
   - After doing changes commit scss and css files.
 
 */
-.wy-nav-content-wrap {
+.wy-nav-side {
   background: #01192d;
+}
+
+@media screen and (min-width: 1100px) {
+  .wy-nav-content-wrap {
+      background:#01192d;
+  }
 }
 
 a {
