@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">01 May 2023 01:01:42 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">08 May 2023 00:56:47 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -34,88 +34,39 @@
 Running Sphinx v7.0.0
 making output directory... done
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-building [mo]: targets for 0 po files that are out of date
-writing output... 
-building [dirhtml]: targets for 18 source files that are out of date
-updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-[new config] 18 added, 0 changed, 0 removed
-reading sources... [  5%] index
-reading sources... [ 11%] kitchen-sink/admonitions
-reading sources... [ 16%] kitchen-sink/api
-reading sources... [ 22%] kitchen-sink/blocks
-reading sources... [ 27%] kitchen-sink/generic
-reading sources... [ 33%] kitchen-sink/images
-reading sources... [ 38%] kitchen-sink/index
-reading sources... [ 44%] kitchen-sink/lists
-reading sources... [ 50%] kitchen-sink/really-long
-reading sources... [ 55%] kitchen-sink/structure
-reading sources... [ 61%] kitchen-sink/tables
-reading sources... [ 66%] kitchen-sink/typography
-reading sources... [ 72%] long-page
-reading sources... [ 77%] placeholder-four
-reading sources... [ 83%] placeholder-one
-reading sources... [ 88%] placeholder-three
-reading sources... [ 94%] placeholder-two
-reading sources... [100%] really-long-title
-
-looking for now-outdated files... none found
-pickling environment... done
-checking consistency... done
-preparing documents... done
-writing output... [  5%] index
 
 ======================================== stderr ========================================
-/opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/urllib/parse.py:docstring of urllib.parse.quote:13: ERROR: Unexpected indentation.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1093, in handle_page
-    output = self.templates.render(templatename, ctx)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/jinja2glue.py&#34;, line 196, in render
-    return self.environment.get_template(template).render(context)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/jinja2/environment.py&#34;, line 1301, in render
-    self.environment.handle_exception()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/jinja2/environment.py&#34;, line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/themes/basic/page.html&#34;, line 10, in top-level template code
-    {%- extends &#34;layout.html&#34; %}
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx_sizzle_theme/layout.html&#34;, line 117, in top-level template code
-    {{ css() }}
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/jinja2/sandbox.py&#34;, line 393, in call
-    return __context.call(__obj, *args, **kwargs)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/jinja2/runtime.py&#34;, line 777, in _invoke
-    rv = self._func(*arguments)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx_sizzle_theme/layout.html&#34;, line 3, in template
-    &lt;link rel=&#34;stylesheet&#34; href=&#34;{{ pathto(&#39;_static/&#39; + style, 1) }}&#34; type=&#34;text/css&#34; /&gt;
-jinja2.exceptions.UndefinedError: &#39;style&#39; is undefined
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 73, in __init__
+    inherit = self.config.get(&#39;theme&#39;, &#39;inherit&#39;)
+  File &#34;/opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/configparser.py&#34;, line 783, in get
+    d = self._unify_values(section, vars)
+  File &#34;/opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/configparser.py&#34;, line 1154, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: &#39;theme&#39;
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 285, in build_main
-    app.build(args.force_all, args.filenames)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 351, in build
-    self.builder.build_update()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 294, in build_update
-    self.build(to_build,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 361, in build
-    self.write(docnames, list(updated_docnames), method)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 569, in write
-    self._write_serial(sorted(docnames))
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 579, in _write_serial
-    self.write_doc(docname, doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 667, in write_doc
-    self.handle_page(docname, ctx, event_arg=doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1100, in handle_page
-    raise ThemeError(__(&#34;An error happened in rendering the page %s.\nReason: %r&#34;) %
-sphinx.errors.ThemeError: An error happened in rendering the page index.
-Reason: UndefinedError(&#34;&#39;style&#39; is undefined&#34;)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 280, in build_main
+    app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 268, in __init__
+    self._init_builder()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 338, in _init_builder
+    self.builder.init()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 252, in init
+    self.init_templates()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 303, in init_templates
+    self.theme = theme_factory.create(themename)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 230, in create
+    return Theme(name, self.themes[name], factory=self)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 75, in __init__
+    raise ThemeError(__(&#39;theme %r doesn\&#39;t have &#34;theme&#34; setting&#39;) % name) from exc
+sphinx.errors.ThemeError: theme &#39;sizzle&#39; doesn&#39;t have &#34;theme&#34; setting
 
 Theme error:
-An error happened in rendering the page index.
-Reason: UndefinedError(&#34;&#39;style&#39; is undefined&#34;)
+theme &#39;sizzle&#39; doesn&#39;t have &#34;theme&#34; setting
 </pre>
     </div>
   </body>
