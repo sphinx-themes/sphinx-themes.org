@@ -496,3 +496,14 @@ footer {
 #dark-mode-toggle-container {
     float: right;
 }
+
+.wy-side-nav-search img {
+  display: block;
+  margin: auto auto 0.809em auto;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  padding: 5px;
+  border-radius: 0;
+  padding-right: 22px;
+}
