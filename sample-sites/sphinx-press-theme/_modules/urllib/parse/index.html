@@ -349,6 +349,10 @@
 <span class="sd">scenarios for parsing, and for backward compatibility purposes, some</span>
 <span class="sd">parsing quirks from older RFCs are retained. The testcases in</span>
 <span class="sd">test_urlparse.py provides a good indicator of parsing behavior.</span>
+
+<span class="sd">The WHATWG URL Parser spec should also be considered.  We are not compliant with</span>
+<span class="sd">it either due to existing user code API behavior expectations (Hyrum&#39;s Law).</span>
+<span class="sd">It serves as a useful guide when making changes.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">re</span>
@@ -401,6 +405,10 @@
                 <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
                 <span class="s1">&#39;0123456789&#39;</span>
                 <span class="s1">&#39;+-.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Leading and trailing C0 control and space to be stripped per WHATWG spec.</span>
+<span class="c1"># == &quot;&quot;.join([chr(i) for i in range(0, 0x20 + 1)])</span>
+<span class="n">_WHATWG_C0_CONTROL_OR_SPACE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f</span><span class="s1"> &#39;</span>
 
 <span class="c1"># Unsafe bytes to be removed per WHATWG spec</span>
 <span class="n">_UNSAFE_URL_BYTES_TO_REMOVE</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
@@ -779,6 +787,10 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="p">,</span> <span class="n">_coerce_result</span> <span class="o">=</span> <span class="n">_coerce_args</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="p">)</span>
+    <span class="c1"># Only lstrip url as some applications rely on preserving trailing space.</span>
+    <span class="c1"># (https://url.spec.whatwg.org/#concept-basic-url-parser would strip both)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="n">_WHATWG_C0_CONTROL_OR_SPACE</span><span class="p">)</span>
+    <span class="n">scheme</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">_WHATWG_C0_CONTROL_OR_SPACE</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">_UNSAFE_URL_BYTES_TO_REMOVE</span><span class="p">:</span>
         <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
