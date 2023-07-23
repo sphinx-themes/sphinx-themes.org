@@ -20,7 +20,7 @@ playwright==1.17.0
     # via -r requirements.in
 pyee==8.1.0
     # via playwright
-pygments==2.8.1
+pygments==2.15.0
     # via rich
 rich==10.1.0
     # via -r requirements.in
