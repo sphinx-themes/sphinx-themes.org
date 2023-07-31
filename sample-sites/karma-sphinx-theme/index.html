@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">24 Jul 2023 01:02:55 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">31 Jul 2023 00:58:41 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,7 +31,7 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-Running Sphinx v7.0.1
+Running Sphinx v7.1.1
 making output directory... done
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
@@ -40,22 +40,22 @@ writing output...
 building [dirhtml]: targets for 18 source files that are out of date
 updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
 [new config] 18 added, 0 changed, 0 removed
-reading sources... [  5%] index
+reading sources... [  6%] index
 reading sources... [ 11%] kitchen-sink/admonitions
-reading sources... [ 16%] kitchen-sink/api
+reading sources... [ 17%] kitchen-sink/api
 reading sources... [ 22%] kitchen-sink/blocks
-reading sources... [ 27%] kitchen-sink/generic
+reading sources... [ 28%] kitchen-sink/generic
 reading sources... [ 33%] kitchen-sink/images
-reading sources... [ 38%] kitchen-sink/index
+reading sources... [ 39%] kitchen-sink/index
 reading sources... [ 44%] kitchen-sink/lists
 reading sources... [ 50%] kitchen-sink/really-long
-reading sources... [ 55%] kitchen-sink/structure
+reading sources... [ 56%] kitchen-sink/structure
 reading sources... [ 61%] kitchen-sink/tables
-reading sources... [ 66%] kitchen-sink/typography
+reading sources... [ 67%] kitchen-sink/typography
 reading sources... [ 72%] long-page
-reading sources... [ 77%] placeholder-four
+reading sources... [ 78%] placeholder-four
 reading sources... [ 83%] placeholder-one
-reading sources... [ 88%] placeholder-three
+reading sources... [ 89%] placeholder-three
 reading sources... [ 94%] placeholder-two
 reading sources... [100%] really-long-title
 
@@ -63,7 +63,10 @@ looking for now-outdated files... none found
 pickling environment... done
 checking consistency... done
 preparing documents... done
-writing output... [  5%] index
+copying assets... copying static files... done
+copying extra files... done
+done
+writing output... [  6%] index
 
 ======================================== stderr ========================================
 /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/urllib/parse.py:docstring of urllib.parse.quote:13: ERROR: Unexpected indentation.
@@ -71,7 +74,7 @@ writing output... [  5%] index
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1093, in handle_page
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1098, in handle_page
     output = self.templates.render(templatename, ctx)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/jinja2glue.py&#34;, line 196, in render
     return self.environment.get_template(template).render(context)
@@ -88,21 +91,21 @@ jinja2.exceptions.UndefinedError: &#39;style&#39; is undefined
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 285, in build_main
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 290, in build_main
     app.build(args.force_all, args.filenames)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 351, in build
     self.builder.build_update()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 294, in build_update
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 290, in build_update
     self.build(to_build,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 361, in build
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 360, in build
     self.write(docnames, list(updated_docnames), method)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 569, in write
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 567, in write
     self._write_serial(sorted(docnames))
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 579, in _write_serial
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 577, in _write_serial
     self.write_doc(docname, doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 667, in write_doc
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 675, in write_doc
     self.handle_page(docname, ctx, event_arg=doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1100, in handle_page
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/karma-sphinx-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1105, in handle_page
     raise ThemeError(__(&#34;An error happened in rendering the page %s.\nReason: %r&#34;) %
 sphinx.errors.ThemeError: An error happened in rendering the page index.
 Reason: UndefinedError(&#34;&#39;style&#39; is undefined&#34;)

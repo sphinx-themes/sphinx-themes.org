@@ -1,0 +1,293 @@
+.bg-dark {
+    background: #222;
+}
+
+.bg-light {
+    background: white;
+}
+
+.fg-light {
+    color: white;
+}
+
+.fg-accent {
+    color: #e18a07;
+}
+
+.footer {
+     color: #888;
+     border-top: solid 10px #222;
+}
+
+.menu ul {
+      background: #888;
+}
+
+.menu .toctree-l1 ul {
+      background: #444;
+}
+
+.menu .toctree-l1 .toctree-l2 {
+      border-bottom: solid 1px #222;
+}
+
+.menu .toctree-l1.current {
+    border-top: solid 1px #e18a07;
+}
+
+.menu .toctree-l1 ul {
+    border-top: solid 1px #e18a07;
+}
+
+.menu .toctree-l2.current {
+    border-top: solid 1px #e18a07;
+    border-bottom: solid 1px #e18a07;
+}
+
+.menu .toctree-l1 a {
+      color: white;
+}
+
+.menu .toctree-l1 > a:after {
+      font-family: FontAwesome;
+      content: '\f0dd';
+      position: absolute;
+      right: 25px;
+      transform: rotate(-90deg);
+}
+
+.menu .toctree-l1 > a.current:after {
+      transform: none;
+}
+
+/* -- Search -- */
+.search-bar {
+     border-radius: 10px;
+     border-width: 2px;
+     border-style: solid;
+     color: white;
+}
+
+.main ul.search li {
+    border-top: solid 5px #222;
+}
+
+.main ul.search li .highlighted {
+    color: #e18a07;
+}
+
+.main h2 {
+    border-top: 10px solid #222;
+}
+
+.main a,
+.footer a {
+     display: inline-block;
+     text-decoration: none;
+     color: #e18a07;
+     transition: transform 0.2s ease-out;
+}
+
+.main a:hover,
+.footer a:hover {
+     transform: translate(0px, -3px);
+     text-decoration: underline;
+}
+
+.main .headerlink {
+     color: #888;
+     text-decoration: none;
+}
+
+.admonition {
+    margin: 20px 0;
+}
+
+.admonition-title {
+    font-size: 16pt;
+    font-weight: 600;
+    color: white;
+    background: #666;
+}
+
+.admonition .last {
+    background: #444;
+    color: white;
+    box-shadow: 1px 1px 2px 2px inset #222;
+}
+
+.admonition.danger .admonition-title,
+.admonition.error .admonition-title,
+.admonition.warning .admonition-title {
+    background: #a20;
+}
+
+.admonition.danger .last,
+.admonition.error .last,
+.admonition.warning .last {
+    background: #810;
+}
+
+.admonition.caution .admonition-title,
+.admonition.admonition-todo .admonition-title {
+    background: #992;
+}
+
+.admonition.caution .last,
+.admonition.admonition-todo .last {
+    background: #662;
+}
+
+.admonition.hint .admonition-title,
+.admonition.tip .admonition-title {
+    background: #262;
+}
+
+.admonition.hint .last,
+.admonition.tip .last {
+    background: #242;
+}
+
+/* -- Autodoc -- */
+dl.class,
+dl.function {
+    border-top: solid 10px #222;
+}
+
+dl.attribute > dt,
+dl.class > dt,
+dl.function > dt,
+dl.method > dt {
+    font-size: 12pt;
+    color: #888;
+}
+
+dl.attribute > dt > code.descname,
+dl.class > dt > code.descname,
+dl.function > dt > code.descname,
+dl.method > dt > code.descname {
+    font-size: 14pt;
+    color: black;
+}
+
+dl.class > dt > em.property,
+dl.function > dt:before,
+dl.method > dt:before,
+dl.attribute > dt:before {
+    color: #e18a07;
+    font-style: italic;
+}
+
+dl.function > dt:before {
+    content: 'function';
+}
+
+dl.method > dt:before {
+    content: 'method';
+}
+
+dl.attribute > dt:before {
+    content: 'attribute';
+}
+
+/* -- Tables -- */
+table, th, td {
+    border-color: #ddd;
+}
+
+table.field-list {
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+}
+
+/* -- Figures -- */
+.main .figure {
+    border-top: solid 1px #222;
+    border-bottom: solid 1px #222;
+}
+
+.main .figure .caption {
+    color: #888;
+}
+
+/* -- Code -- */
+.main div[class^='highlight-'] {
+     color: white;
+     background: #444;
+     box-shadow: 1px 1px 2px 2px inset #222;
+}
+
+.main div.highlight-haskell:hover:before {
+     content: 'haskell';
+}
+
+
+.main div.highlight-java:hover:before {
+     content: 'java';
+}
+
+
+.main div.highlight-js:hover:before {
+     content: 'javascript';
+}
+
+
+.main div.highlight-json:hover:before {
+     content: 'json';
+}
+
+
+.main div.highlight-pycon:hover:before {
+     content: 'python';
+}
+
+
+.main div.highlight-python:hover:before {
+     content: 'python';
+}
+
+
+.main div[class^='highlight-']:before {
+     float: right;
+     font-weight: 600;
+     font-style: italic;
+     padding: 5px;
+     color: #e18a07;
+}
+
+.main div[class^='highlight-']:hover span {
+     color: #e18a07;
+     text-shadow: 1px 1px 1px black;
+}
+
+.main div[class^='highlight-']:hover span.o,
+.main div[class^='highlight-']:hover span.ow,
+.main div[class^='highlight-']:hover span.p {
+     filter: brightness(100);
+}
+
+.main div[class^='highlight-']:hover span.n,
+.main div[class^='highlight-']:hover span.na,
+.main div[class^='highlight-']:hover span.nb,
+.main div[class^='highlight-']:hover span.nc,
+.main div[class^='highlight-']:hover span.nf,
+.main div[class^='highlight-']:hover span.nn,
+.main div[class^='highlight-']:hover span.nt,
+.main div[class^='highlight-']:hover span.nx {
+     filter: saturate(50%) brightness(150%);
+}
+
+.main div[class^='highlight-']:hover span.k,
+.main div[class^='highlight-']:hover span.kd,
+.main div[class^='highlight-']:hover span.kn {
+     filter: brightness(250%) saturate(150%);
+}
+
+.main div[class^='highlight-']:hover span.gp,
+.main div[class^='highlight-']:hover span.go {
+     filter: saturate(0%) brightness(150%);
+}
+
+.main div[class^='highlight-']:hover span.mi {
+     filter: hue-rotate(60deg) brightness(200%);
+}
