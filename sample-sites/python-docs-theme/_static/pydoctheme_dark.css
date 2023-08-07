@@ -104,7 +104,8 @@ div.warning {
 }
 
 div.topic,
-div.note {
+div.note,
+nav.contents {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: currentColor;
 }
@@ -123,4 +124,14 @@ div.note {
 
 img.invert-in-dark-mode {
     filter: invert(1) hue-rotate(.5turn);
+}
+
+/* -- object description styles --------------------------------------------- */
+
+/* C++ specific styling */
+
+/* Override Sphinx's basic.css to fix colour contrast */
+.sig.c   .k, .sig.c   .kt,
+.sig.cpp .k, .sig.cpp .kt {
+    color: #5283ff;
 }

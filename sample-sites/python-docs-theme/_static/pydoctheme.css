@@ -84,6 +84,13 @@ form.inline-search input[type='submit'] {
 
 div.document {
     display: flex;
+    /* Don't let long code literals extend beyond the right side of the screen */
+    overflow-wrap: break-word;
+}
+
+/* Don't let long code literals extend beyond the right side of the screen */
+span.pre {
+    white-space: unset;
 }
 
 div.sphinxsidebar {
