@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">14 Aug 2023 00:50:36 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">21 Aug 2023 00:48:08 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,14 +31,14 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-Running Sphinx v7.1.2
+Running Sphinx v7.2.2
 making output directory... done
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 
 ======================================== stderr ========================================
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 73, in __init__
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 75, in __init__
     inherit = self.config.get(&#39;theme&#39;, &#39;inherit&#39;)
   File &#34;/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/configparser.py&#34;, line 783, in get
     d = self._unify_values(section, vars)
@@ -49,19 +49,19 @@ configparser.NoSectionError: No section: &#39;theme&#39;
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 285, in build_main
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 293, in build_main
     app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 268, in __init__
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 272, in __init__
     self._init_builder()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 338, in _init_builder
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 342, in _init_builder
     self.builder.init()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 257, in init
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 219, in init
     self.init_templates()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 308, in init_templates
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 270, in init_templates
     self.theme = theme_factory.create(themename)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 230, in create
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 232, in create
     return Theme(name, self.themes[name], factory=self)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 75, in __init__
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 77, in __init__
     raise ThemeError(__(&#39;theme %r doesn\&#39;t have &#34;theme&#34; setting&#39;) % name) from exc
 sphinx.errors.ThemeError: theme &#39;sizzle&#39; doesn&#39;t have &#34;theme&#34; setting
 

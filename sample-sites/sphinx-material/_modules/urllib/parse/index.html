@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,9 +48,9 @@
     <title>urllib.parse &#8212; Material</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../../_static/material.css?v=79c92029" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
   
@@ -99,7 +99,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../../search/" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -519,7 +519,9 @@
 <span class="n">ResultBase</span> <span class="o">=</span> <span class="n">_NetlocResultMixinStr</span>
 
 <span class="c1"># Structured result objects for string data</span>
-<div class="viewcode-block" id="DefragResult"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.DefragResult">[docs]</a><span class="k">class</span> <span class="nc">DefragResult</span><span class="p">(</span><span class="n">_DefragResultBase</span><span class="p">,</span> <span class="n">_ResultMixinStr</span><span class="p">):</span>
+<div class="viewcode-block" id="DefragResult">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.DefragResult">[docs]</a>
+<span class="k">class</span> <span class="nc">DefragResult</span><span class="p">(</span><span class="n">_DefragResultBase</span><span class="p">,</span> <span class="n">_ResultMixinStr</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fragment</span><span class="p">:</span>
@@ -527,18 +529,27 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span></div>
 
-<div class="viewcode-block" id="SplitResult"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.SplitResult">[docs]</a><span class="k">class</span> <span class="nc">SplitResult</span><span class="p">(</span><span class="n">_SplitResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinStr</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SplitResult">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.SplitResult">[docs]</a>
+<span class="k">class</span> <span class="nc">SplitResult</span><span class="p">(</span><span class="n">_SplitResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinStr</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ParseResult"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.ParseResult">[docs]</a><span class="k">class</span> <span class="nc">ParseResult</span><span class="p">(</span><span class="n">_ParseResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinStr</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ParseResult">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.ParseResult">[docs]</a>
+<span class="k">class</span> <span class="nc">ParseResult</span><span class="p">(</span><span class="n">_ParseResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinStr</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">urlunparse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
+
 <span class="c1"># Structured result objects for bytes data</span>
-<div class="viewcode-block" id="DefragResultBytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.DefragResultBytes">[docs]</a><span class="k">class</span> <span class="nc">DefragResultBytes</span><span class="p">(</span><span class="n">_DefragResultBase</span><span class="p">,</span> <span class="n">_ResultMixinBytes</span><span class="p">):</span>
+<div class="viewcode-block" id="DefragResultBytes">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.DefragResultBytes">[docs]</a>
+<span class="k">class</span> <span class="nc">DefragResultBytes</span><span class="p">(</span><span class="n">_DefragResultBase</span><span class="p">,</span> <span class="n">_ResultMixinBytes</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fragment</span><span class="p">:</span>
@@ -546,15 +557,22 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span></div>
 
-<div class="viewcode-block" id="SplitResultBytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.SplitResultBytes">[docs]</a><span class="k">class</span> <span class="nc">SplitResultBytes</span><span class="p">(</span><span class="n">_SplitResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinBytes</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SplitResultBytes">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.SplitResultBytes">[docs]</a>
+<span class="k">class</span> <span class="nc">SplitResultBytes</span><span class="p">(</span><span class="n">_SplitResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinBytes</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ParseResultBytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.ParseResultBytes">[docs]</a><span class="k">class</span> <span class="nc">ParseResultBytes</span><span class="p">(</span><span class="n">_ParseResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinBytes</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ParseResultBytes">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.ParseResultBytes">[docs]</a>
+<span class="k">class</span> <span class="nc">ParseResultBytes</span><span class="p">(</span><span class="n">_ParseResultBase</span><span class="p">,</span> <span class="n">_NetlocResultMixinBytes</span><span class="p">):</span>
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
     <span class="k">def</span> <span class="nf">geturl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">urlunparse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
 
 <span class="c1"># Set up the encode/decode result pairs</span>
 <span class="k">def</span> <span class="nf">_fix_result_transcoding</span><span class="p">():</span>
@@ -570,7 +588,9 @@
 <span class="n">_fix_result_transcoding</span><span class="p">()</span>
 <span class="k">del</span> <span class="n">_fix_result_transcoding</span>
 
-<div class="viewcode-block" id="urlparse"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlparse">[docs]</a><span class="k">def</span> <span class="nf">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="urlparse">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlparse">[docs]</a>
+<span class="k">def</span> <span class="nf">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Parse a URL into 6 components:</span>
 <span class="sd">    &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;</span>
 
@@ -599,6 +619,7 @@
         <span class="n">params</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">ParseResult</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
 
 <span class="k">def</span> <span class="nf">_splitparams</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
     <span class="k">if</span> <span class="s1">'/'</span>  <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
@@ -635,7 +656,9 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"netloc '"</span> <span class="o">+</span> <span class="n">netloc</span> <span class="o">+</span> <span class="s2">"' contains invalid "</span> <span class="o">+</span>
                              <span class="s2">"characters under NFKC normalization"</span><span class="p">)</span>
 
-<div class="viewcode-block" id="urlsplit"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlsplit">[docs]</a><span class="k">def</span> <span class="nf">urlsplit</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="urlsplit">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlsplit">[docs]</a>
+<span class="k">def</span> <span class="nf">urlsplit</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Parse a URL into 5 components:</span>
 <span class="sd">    &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;</span>
 
@@ -696,7 +719,10 @@
     <span class="n">_parse_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="urlunparse"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunparse">[docs]</a><span class="k">def</span> <span class="nf">urlunparse</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
+
+<div class="viewcode-block" id="urlunparse">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunparse">[docs]</a>
+<span class="k">def</span> <span class="nf">urlunparse</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Put a parsed URL back together again.  This may result in a</span>
 <span class="sd">    slightly different, but equivalent URL, if the URL that was parsed</span>
 <span class="sd">    originally had redundant delimiters, e.g. a ? with an empty query</span>
@@ -707,7 +733,10 @@
         <span class="n">url</span> <span class="o">=</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">;</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">urlunsplit</span><span class="p">((</span><span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span><span class="p">)))</span></div>
 
-<div class="viewcode-block" id="urlunsplit"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunsplit">[docs]</a><span class="k">def</span> <span class="nf">urlunsplit</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
+
+<div class="viewcode-block" id="urlunsplit">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlunsplit">[docs]</a>
+<span class="k">def</span> <span class="nf">urlunsplit</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Combine the elements of a tuple as returned by urlsplit() into a</span>
 <span class="sd">    complete URL as a string. The data argument can be any five-item iterable.</span>
 <span class="sd">    This may result in a slightly different, but equivalent URL, if the URL that</span>
@@ -726,7 +755,10 @@
         <span class="n">url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s1">'#'</span> <span class="o">+</span> <span class="n">fragment</span>
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="urljoin"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urljoin">[docs]</a><span class="k">def</span> <span class="nf">urljoin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<div class="viewcode-block" id="urljoin">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urljoin">[docs]</a>
+<span class="k">def</span> <span class="nf">urljoin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Join a base URL and a possibly relative URL to form an absolute</span>
 <span class="sd">    interpretation of the latter."""</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
@@ -795,7 +827,10 @@
         <span class="n">resolved_path</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">'/'</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span><span class="p">)))</span></div>
 
 
-<div class="viewcode-block" id="urldefrag"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urldefrag">[docs]</a><span class="k">def</span> <span class="nf">urldefrag</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="urldefrag">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urldefrag">[docs]</a>
+<span class="k">def</span> <span class="nf">urldefrag</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Removes any existing fragment from URL.</span>
 
 <span class="sd">    Returns a tuple of the defragmented URL and the fragment.  If</span>
@@ -811,10 +846,13 @@
         <span class="n">defrag</span> <span class="o">=</span> <span class="n">url</span>
     <span class="k">return</span> <span class="n">_coerce_result</span><span class="p">(</span><span class="n">DefragResult</span><span class="p">(</span><span class="n">defrag</span><span class="p">,</span> <span class="n">frag</span><span class="p">))</span></div>
 
+
 <span class="n">_hexdig</span> <span class="o">=</span> <span class="s1">'0123456789ABCDEFabcdef'</span>
 <span class="n">_hextobyte</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="unquote_to_bytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_to_bytes">[docs]</a><span class="k">def</span> <span class="nf">unquote_to_bytes</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<div class="viewcode-block" id="unquote_to_bytes">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_to_bytes">[docs]</a>
+<span class="k">def</span> <span class="nf">unquote_to_bytes</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""unquote_to_bytes('abc%20def') -&gt; b'abc def'."""</span>
     <span class="c1"># Note: strings are encoded as UTF-8. This is only an issue if it contains</span>
     <span class="c1"># unescaped non-ASCII characters, which URIs should not.</span>
@@ -844,9 +882,12 @@
             <span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="k">return</span> <span class="sa">b</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
 
+
 <span class="n">_asciire</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'([</span><span class="se">\x00</span><span class="s1">-</span><span class="se">\x7f</span><span class="s1">]+)'</span><span class="p">)</span>
 
-<div class="viewcode-block" id="unquote"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote">[docs]</a><span class="k">def</span> <span class="nf">unquote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">):</span>
+<div class="viewcode-block" id="unquote">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote">[docs]</a>
+<span class="k">def</span> <span class="nf">unquote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Replace %xx escapes by their single-character equivalent. The optional</span>
 <span class="sd">    encoding and errors parameters specify how to decode percent-encoded</span>
 <span class="sd">    sequences into Unicode characters, as accepted by the bytes.decode()</span>
@@ -874,7 +915,10 @@
     <span class="k">return</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="parse_qs"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qs">[docs]</a><span class="k">def</span> <span class="nf">parse_qs</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+<div class="viewcode-block" id="parse_qs">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qs">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_qs</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
              <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">,</span> <span class="n">max_num_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">'&amp;'</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Parse a query given as a string argument.</span>
 
@@ -916,7 +960,10 @@
     <span class="k">return</span> <span class="n">parsed_result</span></div>
 
 
-<div class="viewcode-block" id="parse_qsl"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qsl">[docs]</a><span class="k">def</span> <span class="nf">parse_qsl</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+<div class="viewcode-block" id="parse_qsl">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.parse_qsl">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_qsl</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
               <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">,</span> <span class="n">max_num_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">'&amp;'</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Parse a query given as a string argument.</span>
 
@@ -982,7 +1029,10 @@
             <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">r</span></div>
 
-<div class="viewcode-block" id="unquote_plus"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_plus">[docs]</a><span class="k">def</span> <span class="nf">unquote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">):</span>
+
+<div class="viewcode-block" id="unquote_plus">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.unquote_plus">[docs]</a>
+<span class="k">def</span> <span class="nf">unquote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Like unquote(), but also replace plus signs by spaces, as required for</span>
 <span class="sd">    unquoting HTML form values.</span>
 
@@ -990,6 +1040,7 @@
 <span class="sd">    """</span>
     <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'+'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">unquote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span></div>
+
 
 <span class="n">_ALWAYS_SAFE</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="sa">b</span><span class="s1">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>
                          <span class="sa">b</span><span class="s1">'abcdefghijklmnopqrstuvwxyz'</span>
@@ -1020,7 +1071,9 @@
         <span class="bp">self</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span>
         <span class="k">return</span> <span class="n">res</span>
 
-<div class="viewcode-block" id="quote"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote">[docs]</a><span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">'/'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="quote">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote">[docs]</a>
+<span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">'/'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""quote('abc def') -&gt; 'abc%20def'</span>
 
 <span class="sd">    Each part of a URL, e.g. the path info, the query, etc., has a</span>
@@ -1074,7 +1127,10 @@
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"quote() doesn't support 'errors' for bytes"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">quote_from_bytes</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="quote_plus"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_plus">[docs]</a><span class="k">def</span> <span class="nf">quote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="quote_plus">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_plus">[docs]</a>
+<span class="k">def</span> <span class="nf">quote_plus</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Like quote(), but also replace ' ' with '+', as required for quoting</span>
 <span class="sd">    HTML form values. Plus signs in the original string are escaped unless</span>
 <span class="sd">    they are included in safe. It also does not have safe default to '/'.</span>
@@ -1091,7 +1147,10 @@
     <span class="n">string</span> <span class="o">=</span> <span class="n">quote</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">safe</span> <span class="o">+</span> <span class="n">space</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">'+'</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="quote_from_bytes"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_from_bytes">[docs]</a><span class="k">def</span> <span class="nf">quote_from_bytes</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">'/'</span><span class="p">):</span>
+
+<div class="viewcode-block" id="quote_from_bytes">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.quote_from_bytes">[docs]</a>
+<span class="k">def</span> <span class="nf">quote_from_bytes</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">'/'</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Like quote(), but accepts a bytes object rather than a str, and does</span>
 <span class="sd">    not perform string-to-bytes encoding.  It always returns an ASCII string.</span>
 <span class="sd">    quote_from_bytes(b'abc def\x3f') -&gt; 'abc%20def%3f'</span>
@@ -1113,7 +1172,10 @@
         <span class="n">_safe_quoters</span><span class="p">[</span><span class="n">safe</span><span class="p">]</span> <span class="o">=</span> <span class="n">quoter</span> <span class="o">=</span> <span class="n">Quoter</span><span class="p">(</span><span class="n">safe</span><span class="p">)</span><span class="o">.</span><span class="fm">__getitem__</span>
     <span class="k">return</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">quoter</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">bs</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="urlencode"><a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlencode">[docs]</a><span class="k">def</span> <span class="nf">urlencode</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">doseq</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+
+<div class="viewcode-block" id="urlencode">
+<a class="viewcode-back" href="../../../kitchen-sink/api/#urllib.parse.urlencode">[docs]</a>
+<span class="k">def</span> <span class="nf">urlencode</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">doseq</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
               <span class="n">quote_via</span><span class="o">=</span><span class="n">quote_plus</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Encode a dict or sequence of two-element tuples into a URL query string.</span>
 
@@ -1192,6 +1254,7 @@
                             <span class="n">elt</span> <span class="o">=</span> <span class="n">quote_via</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">elt</span><span class="p">),</span> <span class="n">safe</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span>
                         <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s1">'='</span> <span class="o">+</span> <span class="n">elt</span><span class="p">)</span>
     <span class="k">return</span> <span class="s1">'&amp;'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">)</span></div>
+
 
 
 <span class="k">def</span> <span class="nf">to_bytes</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
@@ -1423,7 +1486,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

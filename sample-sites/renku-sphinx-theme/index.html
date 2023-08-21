@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Renku Sample &mdash; Renku</title>
@@ -13,10 +13,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex/" />
     <link rel="search" title="Search" href="search/" />
@@ -28,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> Sphinx Themes Sample
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Sphinx Themes Sample
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -69,7 +74,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Renku Sample</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
@@ -81,15 +86,15 @@
            <div itemprop="articleBody">
              
   <section id="theme-display-sample">
-<h1>Renku Sample<a class="headerlink" href="#theme-display-sample" title="Permalink to this headline"></a></h1>
+<h1>Renku Sample<a class="headerlink" href="#theme-display-sample" title="Permalink to this heading"></a></h1>
 <p>This is a demo site for Renku, generated as part of
 <a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>This sample documentation was generated on Aug 14, 2023, and is rebuilt weekly.</p>
+<p>This sample documentation was generated on Aug 21, 2023, and is rebuilt weekly.</p>
 </div>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Install this theme:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install renku-sphinx-theme
@@ -101,15 +106,15 @@
 </pre></div>
 </div>
 </li>
-<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></li>
+<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 </ol>
 </section>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
 <p>This theme does not have any hosted-on-the-web documentation.</p>
 </section>
 <section id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline"></a></h2>
+<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this heading"></a></h2>
 <p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
 everything that you can with Sphinx “out-of-the-box”.</p>
 <div class="toctree-wrapper compound">
@@ -134,7 +139,7 @@ everything that you can with Sphinx “out-of-the-box”.</p>
 in this theme.</p>
 </section>
 <section id="navigation">
-<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline"></a></h2>
+<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h2>
 <p>This is the most important part of a documentation theme. If you like
 the general look of the theme, please make sure that it is possible to
 easily navigate through this sample documentation.</p>
@@ -159,15 +164,16 @@ toctree, and thus would not be visible above. However, they are still a
 part of the overall site hierarchy and some themes may choose to present
 them to the user in the site navigation.</p>
 <hr class="docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>If you hit an error while building documentation with a new theme,
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If you hit an error while building documentation with a new theme,
 it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
 file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
 <code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
 allow the build to proceed.</p>
-</dd>
-</dl>
+</aside>
+</aside>
 </section>
 </section>
 

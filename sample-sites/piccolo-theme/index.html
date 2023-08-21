@@ -1,292 +1,136 @@
 <!DOCTYPE html>
+<html lang="en" class="no-js">
 
-<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piccolo Demo -- failed to build</title>
 
-    <title>Piccolo Sample &#8212; Piccolo</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
-    <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js?v=df4b10f6"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="_static/js/theme.js"></script>
-    <script src="_static/js/petite-vue.js"></script>
-    <link rel="index" title="Index" href="genindex/" />
-    <link rel="search" title="Search" href="search/" />
-    <link rel="next" title="Kitchen Sink" href="kitchen-sink/" /> 
-  </head><body data-dark_mode_code_blocks="true">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+  </head>
 
-<div id="top_nav">
-    
-
-    <nav>
-        
-            
-        
-
-        <p id="toggle_sidebar">
-            <a href="#" title="Toggle sidebar">|||</a>
-        </p>
-        <h1><a href="#" title="Go to homepage">Piccolo</a></h1>
-
-        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
-    <template v-if="mode == 'light'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-
-    <template v-if="mode == 'dark'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-
-    <template v-if="mode == 'darkest'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-</a>
-
-<script>
-(function() {
-    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
-
-    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
-
-    if (initialMode) {
-        // Make sure the value in local storage is valid
-        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
-            initialMode = 'light'
-            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
-        }
-    } else {
-        // Check if the client prefers dark mode
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            initialMode = 'dark'
-        } else {
-            initialMode = 'light'
-        }
-        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
-    }
-
-    document.documentElement.dataset.mode = initialMode
-
-    PetiteVue.createApp({
-        'mode': initialMode,
-        handleClick() {
-            let currentMode = this.mode
-
-            if (currentMode == 'light') {
-                this.mode = 'dark'
-            } else if (currentMode == 'dark') {
-                this.mode = 'darkest'
-            } else if (currentMode == 'darkest') {
-                this.mode = 'light'
-            }
-
-            document.documentElement.dataset.mode = this.mode
-            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
-
-            console.log(this.mode)
-        }
-    }).mount('#mode_toggle')
-})()
-</script>
-            <p class="mobile_search_link">
-                <a href="search/" title="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
-                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
-                    </svg>
-                </a>
-            </p>
-        
-
-        <div class="searchbox_wrapper">
-            
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search/" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <body class="bg-red-50 antialiased max-w-4xl mx-auto p-4 my-2">
+    <h1 class="text-red-700 text-5xl text-center">
+      Build Failed!
+    </h1>
+    <div class="mt-2">
+      <div class="text-gray-700 text-center font-semibold">21 Aug 2023 00:45:01 UTC</div>
     </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-    </nav>
-</div>
-
-    
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><ul>
-<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
-<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-three/">Placeholder Page Three</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-four/">Placeholder Page Four</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
-</ul>
-
-        </div>
+    <div class="mt-4">
+      <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
+        Unless all site previews are broken, this is a problem with the
+        <a class="underline"
+          href="https://pypi.org/project/piccolo-theme/"><code>piccolo-theme</code></a>
+        package.
       </div>
-
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="theme-display-sample">
-<h1>Piccolo Sample<a class="headerlink" href="#theme-display-sample" title="Permalink to this heading">¶</a></h1>
-<p>This is a demo site for Piccolo, generated as part of
-<a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This sample documentation was generated on Aug 14, 2023, and is rebuilt weekly.</p>
-</div>
-<section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h2>
-<ol class="arabic">
-<li><p>Install this theme:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install piccolo-theme
-</pre></div>
-</div>
-</li>
-<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;piccolo_theme&#39;</span>
-</pre></div>
-</div>
-</li>
-<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-</ol>
-</section>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h2>
-<p>You can find this theme’s documentation at <a class="reference external" href="https://piccolo-theme.readthedocs.io/en/latest/">https://piccolo-theme.readthedocs.io/en/latest/</a>.</p>
-</section>
-<section id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this heading">¶</a></h2>
-<p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
-everything that you can with Sphinx “out-of-the-box”.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/admonitions/">Admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/blocks/">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/generic/">Generic items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/images/">Images &amp; Figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists/">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/">Structural Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/tables/">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/typography/">Typography</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<p>Browsing through that section should give you a good idea of how stuff looks
-in this theme.</p>
-</section>
-<section id="navigation">
-<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this heading">¶</a></h2>
-<p>This is the most important part of a documentation theme. If you like
-the general look of the theme, please make sure that it is possible to
-easily navigate through this sample documentation.</p>
-<p>Ideally, the pages listed below should also be reachable via links
-somewhere else on this page (like the sidebar, or a topbar). If they are
-not, then this theme might need additional configuration to provide the
-sort of site navigation that’s necessary for “real” documentation.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
-<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<p>Some pages like <a class="reference internal" href="placeholder-three/"><span class="doc">Placeholder Page Three</span></a> are declared in a “hidden”
-toctree, and thus would not be visible above. However, they are still a
-part of the overall site hierarchy and some themes may choose to present
-them to the user in the site navigation.</p>
-<hr class="docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>If you hit an error while building documentation with a new theme,
-it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
-file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
-<code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
-allow the build to proceed.</p>
-</aside>
-</aside>
-</section>
-</section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-    
-        <div id="show_right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents<span></a></p>
-        </div>
-
-        <div id="right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:<span></a></p>
-            <div class="page_toc">
-                <ul>
-<li><a class="reference internal" href="#">Piccolo Sample</a><ul>
-<li><a class="reference internal" href="#quickstart">Quickstart</a></li>
-<li><a class="reference internal" href="#documentation">Documentation</a></li>
-<li><a class="reference internal" href="#exploration">Exploration</a></li>
-<li><a class="reference internal" href="#navigation">Navigation</a><ul>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            </div>
-        </div>
-    
-
-      <div class="clearer"></div>
     </div>
-    <div class="button_nav_wrapper">
-        <div class="button_nav">
-            <div class="left">
-                
-            </div>
-
-            <div class="right">
-                
-                    <a href="kitchen-sink/"><span>Kitchen Sink</span><span class="icon">&gt;</span></a>
-                
-            </div>
-        </div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Configuration</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">{&#39;html_theme&#39;: &#39;piccolo_theme&#39;}</pre>
     </div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Output</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
+Running Sphinx v7.2.2
+making output directory... done
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [dirhtml]: targets for 18 source files that are out of date
+updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+[new config] 18 added, 0 changed, 0 removed
+reading sources... [  6%] index
+reading sources... [ 11%] kitchen-sink/admonitions
+reading sources... [ 17%] kitchen-sink/api
+reading sources... [ 22%] kitchen-sink/blocks
+reading sources... [ 28%] kitchen-sink/generic
+reading sources... [ 33%] kitchen-sink/images
+reading sources... [ 39%] kitchen-sink/index
+reading sources... [ 44%] kitchen-sink/lists
+reading sources... [ 50%] kitchen-sink/really-long
+reading sources... [ 56%] kitchen-sink/structure
+reading sources... [ 61%] kitchen-sink/tables
+reading sources... [ 67%] kitchen-sink/typography
+reading sources... [ 72%] long-page
+reading sources... [ 78%] placeholder-four
+reading sources... [ 83%] placeholder-one
+reading sources... [ 89%] placeholder-three
+reading sources... [ 94%] placeholder-two
+reading sources... [100%] really-long-title
 
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... copying static files... done
+copying extra files... done
+done
+writing output... [  6%] index
 
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2021, Pradyun Gedam.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+======================================== stderr ========================================
+/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/urllib/parse.py:docstring of urllib.parse.quote:13: ERROR: Unexpected indentation.
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1121, in handle_page
+    output = self.templates.render(templatename, ctx)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/jinja2glue.py&#34;, line 201, in render
+    return self.environment.get_template(template).render(context)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/jinja2/environment.py&#34;, line 1301, in render
+    self.environment.handle_exception()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/jinja2/environment.py&#34;, line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/themes/basic/page.html&#34;, line 10, in top-level template code
+    {%- extends &#34;layout.html&#34; %}
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/piccolo_theme/layout.html&#34;, line 1, in top-level template code
+    {% extends &#34;basic/layout.html&#34; %}
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/themes/basic/../basic/layout.html&#34;, line 114, in top-level template code
+    {%- block css %}
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/themes/basic/../basic/layout.html&#34;, line 115, in block &#39;css&#39;
+    {{- css() }}
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/jinja2/sandbox.py&#34;, line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/jinja2/runtime.py&#34;, line 777, in _invoke
+    rv = self._func(*arguments)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/themes/basic/../basic/layout.html&#34;, line 95, in template
+    {{ css_tag(css) }}
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/jinja2/sandbox.py&#34;, line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1063, in css_tag
+    if checksum := _file_checksum(outdir, css.filename):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/html/_assets.py&#34;, line 138, in _file_checksum
+    raise ThemeError(msg)
+sphinx.errors.ThemeError: Local asset file paths must not contain query strings: &#39;_static/basic_mod.css?v=0.7.0-1&#39;
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 298, in build_main
+    app.build(args.force_all, args.filenames)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 355, in build
+    self.builder.build_update()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 293, in build_update
+    self.build(to_build,
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 363, in build
+    self.write(docnames, list(updated_docnames), method)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 571, in write
+    self._write_serial(sorted(docnames))
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 581, in _write_serial
+    self.write_doc(docname, doctree)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 655, in write_doc
+    self.handle_page(docname, ctx, event_arg=doctree)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/piccolo-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1128, in handle_page
+    raise ThemeError(__(&#34;An error happened in rendering the page %s.\nReason: %r&#34;) %
+sphinx.errors.ThemeError: An error happened in rendering the page index.
+Reason: ThemeError(&#34;Local asset file paths must not contain query strings: &#39;_static/basic_mod.css?v=0.7.0-1&#39;&#34;)
+
+Theme error:
+An error happened in rendering the page index.
+Reason: ThemeError(&#34;Local asset file paths must not contain query strings: &#39;_static/basic_mod.css?v=0.7.0-1&#39;&#34;)
+</pre>
     </div>
-
-<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
   </body>
+
 </html>

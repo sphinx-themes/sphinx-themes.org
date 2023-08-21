@@ -184,7 +184,11 @@ a {
 }
 
 a:hover {
-    color: #444;
+    color: #551a8b;
+}
+
+a:visited {
+    color: #551a8b;
 }
 
 pre {

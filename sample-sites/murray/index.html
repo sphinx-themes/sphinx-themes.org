@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">14 Aug 2023 00:48:45 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">21 Aug 2023 00:46:45 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,14 +31,14 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-Running Sphinx v7.1.2
+Running Sphinx v7.2.2
 making output directory... done
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 building [mo]: targets for 0 po files that are out of date
 writing output... 
 building [dirhtml]: targets for 18 source files that are out of date
-updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 [new config] 18 added, 0 changed, 0 removed
 reading sources... [  6%] index
 reading sources... [ 11%] kitchen-sink/admonitions
@@ -74,9 +74,9 @@ writing output... [  6%] index
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1098, in handle_page
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1121, in handle_page
     output = self.templates.render(templatename, ctx)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/jinja2glue.py&#34;, line 196, in render
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/jinja2glue.py&#34;, line 201, in render
     return self.environment.get_template(template).render(context)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/jinja2/environment.py&#34;, line 1301, in render
     self.environment.handle_exception()
@@ -91,21 +91,21 @@ jinja2.exceptions.UndefinedError: &#39;style&#39; is undefined
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 290, in build_main
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/cmd/build.py&#34;, line 298, in build_main
     app.build(args.force_all, args.filenames)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/application.py&#34;, line 351, in build
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/application.py&#34;, line 355, in build
     self.builder.build_update()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 290, in build_update
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 293, in build_update
     self.build(to_build,
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 360, in build
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 363, in build
     self.write(docnames, list(updated_docnames), method)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 567, in write
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 571, in write
     self._write_serial(sorted(docnames))
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 577, in _write_serial
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/__init__.py&#34;, line 581, in _write_serial
     self.write_doc(docname, doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 675, in write_doc
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 655, in write_doc
     self.handle_page(docname, ctx, event_arg=doctree)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1105, in handle_page
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/murray/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 1128, in handle_page
     raise ThemeError(__(&#34;An error happened in rendering the page %s.\nReason: %r&#34;) %
 sphinx.errors.ThemeError: An error happened in rendering the page index.
 Reason: UndefinedError(&#34;&#39;style&#39; is undefined&#34;)
