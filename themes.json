@@ -273,6 +273,7 @@
     {
       "config": "sizzle",
       "display": "Sizzle",
+      "documentation": "https://docs.red-dove.com/sphinx_sizzle_theme/index.html",
       "pypi": "sphinx-sizzle-theme"
     },
     {
