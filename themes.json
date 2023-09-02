@@ -205,6 +205,12 @@
       "pypi": "sphinx-nameko-theme"
     },
     {
+      "config": "sphinx_nefertiti",
+      "display": "Nefertiti",
+      "documentation": "https://sphinx-nefertiti.readthedocs.io/en/latest/",
+      "pypi": "sphinx-nefertiti"
+    },
+    {
       "config": {
         "_imports": [
           "sphinx_theme_pd"
