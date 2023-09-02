@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="Sphinx Themes Sample" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="" />
+    <meta name="docsearch:version" content="" />
+    
+      <title>Lists &mdash; Nefertiti</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-icons.css" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
+          <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=b20cc3f5" />
+          <link rel="stylesheet" type="text/css" href="../../_static/colorsets/sphinx-nefertiti.min.css" />
+          <link rel="stylesheet" type="text/css" href="../../_static/fonts/nunito/stylesheet.css" />
+          <link rel="stylesheet" type="text/css" href="../../_static/fonts/red-hat-mono/stylesheet.css" />
+          <link rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=b20cc3f5" />
+        <link rel="index" title="Index" href="../../genindex/" />
+        <link rel="search" title="Search" href="../../search/" />
+        <link rel="top" title="Nefertiti" href="#" />
+        <link rel="up" title="Kitchen Sink" href="../" />
+        <link rel="next" title="Really Long Page Title because we should test sidebar wrapping" href="../really-long/" />
+        <link rel="prev" title="Images &amp; Figures" href="../images/" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Red Hat Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);}
+      h1 *, h2 *, h3 *, h4 *, h5 *, h6 * { font-size: inherit; }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-xxl visually-hidden-focusable overflow-hidden justify-content-start">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a href="../../"
+              
+              class="navbar-brand p-0 me-0 md-lg-2"
+          ><span class="brand-text">Sphinx Themes Sample</span></a>
+        
+        <div class="d-flex d-lg-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-lg-0 px-lg-3">
+    <hr class="d-lg-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-lg-auto">
+        <form id="nftt-search-form" action="../../search/" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search docs" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title text-white fw-bold" id="nfttNavbarOffcanvasLabel"><span class="brand-text">Nefertiti for Sphinx</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-lg-0">
+            <hr class="d-lg-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+              
+              <!-- version_dropdown.html -->
+
+              
+              <!-- colorscheme_dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-lg-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-lg-none small ms-2">Toggle light/dark</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Light/dark</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span class="small">
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="small ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span class="small">
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="small ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span class="small">
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="small ms-3">Default</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-xxl nftt-gutter nftt-layout">
+      <aside class="nftt-sidebar">
+        <div class="title d-none d-md-block">
+          <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Table of contents</span>
+        </div>
+        <div id="sidebar" tabindex="-1" class="offcanvas-lg offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+            <!-- danirus sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title" id="nfttSidebarOffcanvasLabel">
+    Table of contents
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="filter" aria-label="filter">
+    </div>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+        </div>
+      </aside>
+      <main class="nftt-main">
+        <article id="content" class="nftt-content" role="main">
+    <section id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Link to this heading">¶</a></h1>
+<section id="enumerated-lists">
+<h2>Enumerated Lists<a class="headerlink" href="#enumerated-lists" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Arabic numerals.</p>
+<ol class="loweralpha simple">
+<li><p>lower alpha)</p>
+<ol class="lowerroman simple">
+<li><p>(lower roman)</p>
+<ol class="upperalpha simple">
+<li><p>upper alpha.</p>
+<ol class="upperroman simple">
+<li><p>upper roman)</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Lists that don’t start at 1:</p>
+<ol class="arabic simple" start="3">
+<li><p>Three</p></li>
+<li><p>Four</p></li>
+</ol>
+<ol class="upperalpha simple" start="3">
+<li><p>C</p></li>
+<li><p>D</p></li>
+</ol>
+<ol class="lowerroman simple" start="3">
+<li><p>iii</p></li>
+<li><p>iv</p></li>
+</ol>
+</li>
+<li><p>List items may also be auto-enumerated.</p></li>
+</ol>
+</section>
+<section id="definition-lists">
+<h2>Definition Lists<a class="headerlink" href="#definition-lists" title="Link to this heading">¶</a></h2>
+<dl>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+<dt>Term<span class="classifier">classifier</span></dt><dd><p>Definition paragraph 1.</p>
+<p>Definition paragraph 2.</p>
+</dd>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+<p>I have no clue why the definition list below is classified as a different style
+of definition list than the one above.</p>
+<dl class="simple">
+<dt>Is it the spaces in the term?</dt><dd><p>Maybe it was the multiple line paragraph
+in the line below that caused this?</p>
+</dd>
+<dt>Is it the paragraph above the list maybe?</dt><dd><p>I guess a lot of these lists don’t have leading paragraphs?</p>
+</dd>
+<dt>Is it everything all at once?</dt><dd><p>Who knows?!</p>
+</dd>
+</dl>
+</section>
+<section id="option-lists">
+<h2>Option Lists<a class="headerlink" href="#option-lists" title="Link to this heading">¶</a></h2>
+<p>For listing command-line options:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments
+and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">--very-long-option</span></kbd></dt>
+<dd><p>The description can also start on the next line.</p>
+<p>The description may contain multiple body elements,
+regardless of where it starts.</p>
+</dd>
+<dt><kbd><span class="option">-x</span>, <span class="option">-y</span>, <span class="option">-z</span></kbd></dt>
+<dd><p>Multiple options are an “option group”.</p>
+</dd>
+<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
+<dd><p>Commonly-seen: short &amp; long options.</p>
+</dd>
+<dt><kbd><span class="option">-1 <var>file</var></span>, <span class="option">--one=<var>file</var></span>, <span class="option">--two <var>file</var></span></kbd></dt>
+<dd><p>Multiple options with arguments.</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+<p>There must be at least two spaces between the option and the description.</p>
+</section>
+<section id="field-list">
+<h2>Field list<a class="headerlink" href="#field-list" title="Link to this heading">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">Address<span class="colon">:</span></dt>
+<dd class="field-odd"><p>123 Example Street
+Example, EX  Canada
+A1B 2C3</p>
+</dd>
+<dt class="field-even">Organization<span class="colon">:</span></dt>
+<dd class="field-even"><p>humankind</p>
+</dd>
+<dt class="field-odd">Status<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a “work in progress”</p>
+</dd>
+<dt class="field-even">Version<span class="colon">:</span></dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">Field name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a generic bibliographic field.</p>
+</dd>
+<dt class="field-even">Field name 2<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generic bibliographic fields may contain multiple body elements.</p>
+<p>Like this.</p>
+</dd>
+</dl>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading">¶</a></h2>
+<p>This is a glossary with definition terms for thing like <a class="reference internal" href="#term-Writing"><span class="xref std std-term">Writing</span></a>:</p>
+<dl class="simple glossary">
+<dt id="term-Documentation">Documentation<a class="headerlink" href="#term-Documentation" title="Link to this term">¶</a></dt><dd><p>Provides users with the knowledge they need to use something.</p>
+</dd>
+<dt id="term-Reading">Reading<a class="headerlink" href="#term-Reading" title="Link to this term">¶</a></dt><dd><p>The process of taking information into ones mind through the use of eyes.</p>
+</dd>
+<dt id="term-Writing">Writing<a class="headerlink" href="#term-Writing" title="Link to this term">¶</a></dt><dd><p>The process of putting thoughts into a medium for other people to <a class="reference internal" href="#term-Reading"><span class="xref std std-term">read</span></a>.</p>
+</dd>
+</dl>
+<p>Here’s another glossary, with more detail. The important bit here is that the contents of the definition are multi-paragraph.</p>
+<dl class="glossary">
+<dt id="term-Import-Package">Import Package<a class="headerlink" href="#term-Import-Package" title="Link to this term">¶</a></dt><dd><p>A Python module which can contain other modules or recursively, other packages.</p>
+<p>An import package is more commonly referred to with the single word “package”, but this guide will use the expanded term when more clarity is needed to prevent confusion with a Distribution Package which is also commonly called a “package”.</p>
+</dd>
+<dt id="term-Package-Index">Package Index<a class="headerlink" href="#term-Package-Index" title="Link to this term">¶</a></dt><dd><p>A repository of distributions with a web interface to automate package discovery and consumption.</p>
+</dd>
+</dl>
+</section>
+<section id="bullet-lists">
+<h2>Bullet Lists<a class="headerlink" href="#bullet-lists" title="Link to this heading">¶</a></h2>
+<section id="simple">
+<h3>Simple<a class="headerlink" href="#simple" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>A simple list.</p></li>
+<li><p>There are no margins between list items.</p></li>
+<li><p>Simple lists do not contain multiple paragraphs. That’s a complex list.</p></li>
+<li><p>In the case of a nested list</p>
+<ul>
+<li><p>There are no margins between elements</p>
+<ul>
+<li><p>Still no margins</p>
+<ul>
+<li><p>Still no margins</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="complex">
+<h3>Complex<a class="headerlink" href="#complex" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>A bullet list</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p></li>
+</ul>
+</li>
+<li><p>Item 2.</p>
+<p>Paragraph 2 of item 2.</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p>
+<ul>
+<li><p>Third level.</p></li>
+<li><p>Item 2.</p></li>
+</ul>
+</li>
+<li><p>Nested item 3.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literall</span></code></p></li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+</ul>
+</section>
+<section id="second-list-level">
+<h3>Second list level<a class="headerlink" href="#second-list-level" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>here is a list in a second-level section.</p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p>here is an inner bullet <code class="docutils literal notranslate"><span class="pre">oh</span></code></p>
+<ul>
+<li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<p>heh heh. child. try to beat this embed:</p>
+</li>
+</ul>
+</li>
+<li><p>and another. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+</ul>
+</li>
+<li><p>how about an admonition?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note nested in a list.</p>
+</div>
+</li>
+<li><p>and hehe</p></li>
+</ul>
+<section id="but-deeper-down-the-rabbit-hole">
+<h4>But deeper down the rabbit hole<a class="headerlink" href="#but-deeper-down-the-rabbit-hole" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>I kept saying that, “deeper down the rabbit hole”. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p>I cackle at night <a class="reference external" href="http://www.yahoo.com">yahoo</a>.</p></li>
+</ul>
+</li>
+<li><p>I’m so lonely here in GZ <code class="docutils literal notranslate"><span class="pre">guangzhou</span></code></p></li>
+<li><p>A man of python destiny, hopes and dreams. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.yahoo.com">yahoo</a> <code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destiny</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="hlists">
+<h2>Hlists<a class="headerlink" href="#hlists" title="Link to this heading">¶</a></h2>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>First item</p></li>
+<li><p>Second item</p></li>
+<li><p>Third item</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Forth item</p></li>
+<li><p>Fifth item</p></li>
+<li><p>Sixths item</p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Hlist with images</p>
+<table class="hlist"><tr><td><ul>
+<li><figure class="align-default" id="id11">
+<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy" />
+<figcaption>
+<p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</td><td><ul>
+<li><figure class="align-default" id="id12">
+<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy" />
+<figcaption>
+<p><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</td></tr></table>
+</section>
+<section id="numbered-list">
+<h2>Numbered List<a class="headerlink" href="#numbered-list" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>One,</p></li>
+<li><p>Two.</p></li>
+<li><p>Three with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed feugiat sagittis neque quis eleifend. Duis rutrum lectus sit amet mattis suscipit.</p></li>
+</ol>
+<ul class="simple">
+<li><ol class="upperalpha simple">
+<li><p>Using bullets and letters. (A)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Using bullets and letters. (B)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="3">
+<li><p>Using bullets and letters. (C)</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+
+</article>
+        
+          <aside class="nftt-toc">
+            <div class="mt-3 mb-1 my-lg-0 ps-xl-3 text-muted">
+              <button class="btn btn-link link-dark p-md-0 mb-2 mb-md-0 text-decoration-none nftt-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+              >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+              <div class="title d-none d-md-block">
+                <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+              </div>
+              <hr class="d-none d-md-block my-2">
+              <div class="collapse nftt-toc-collapse" id="tocContents">
+                <nav id="TableOfContents">
+                  <ul>
+<li><a class="reference internal" href="#">Lists</a><ul>
+<li><a class="reference internal" href="#enumerated-lists">Enumerated Lists</a></li>
+<li><a class="reference internal" href="#definition-lists">Definition Lists</a></li>
+<li><a class="reference internal" href="#option-lists">Option Lists</a></li>
+<li><a class="reference internal" href="#field-list">Field list</a></li>
+<li><a class="reference internal" href="#glossary">Glossary</a></li>
+<li><a class="reference internal" href="#bullet-lists">Bullet Lists</a><ul>
+<li><a class="reference internal" href="#simple">Simple</a></li>
+<li><a class="reference internal" href="#complex">Complex</a></li>
+<li><a class="reference internal" href="#second-list-level">Second list level</a><ul>
+<li><a class="reference internal" href="#but-deeper-down-the-rabbit-hole">But deeper down the rabbit hole</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hlists">Hlists</a></li>
+<li><a class="reference internal" href="#numbered-list">Numbered List</a></li>
+</ul>
+</li>
+</ul>
+
+                </nav>
+              </div>
+            </div>
+          </aside>
+        
+      </main>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="page-item">
+            <a href="../images/" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Images &amp; Figures">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">Images &amp; Figures</span>
+              </div>
+            </a>
+          </li>
+        <li class="page-item ms-auto">
+            <a href="../really-long/" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Really Long Page Title because we should test sidebar wrapping">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">Really Long Page Title because we should test sidebar wrapping</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="Nefertiti-for-Sphinx">
+          <span class="fs-6 fw-bold">Sphinx Themes Sample</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2021, Pradyun Gedam</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 7.2.5</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.1.11</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+    <script type="text/javascript" src="../../_static/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx-nefertiti.min.js"></script>
+    
+  </body>
+</html>
