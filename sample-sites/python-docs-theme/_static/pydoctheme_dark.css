@@ -103,6 +103,7 @@ div.warning {
     background-color: rgba(255, 0, 0, 0.5);
 }
 
+aside.topic,
 div.topic,
 div.note,
 nav.contents {
