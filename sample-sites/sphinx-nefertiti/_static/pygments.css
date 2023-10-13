@@ -4,7 +4,7 @@
 .light td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .light span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .light .highlight .hll { background-color: #ffffcc }
-.light .highlight { background: #f8f8f8; }
+.light .highlight pre { background: #f8f8f8; }
 .light .highlight .c { color: #008800; font-style: italic } /* Comment */
 .light .highlight .err { border: 1px solid #FF0000 } /* Error */
 .light .highlight .k { color: #AA22FF; font-weight: bold } /* Keyword */
