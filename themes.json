@@ -317,6 +317,17 @@
       "pypi": "topos-theme"
     },
     {
+      "config": {
+        "_extensions": [
+          "sphinx_wagtail_theme"
+        ],
+        "html_theme": "sphinx_wagtail_theme"
+      },
+      "display": "Wagtail",
+      "documentation": "https://sphinx-wagtail-theme.readthedocs.io/en/latest/",
+      "pypi": "sphinx-wagtail-theme"
+    },
+    {
       "config": "yummy_sphinx_theme",
       "display": "Yummy",
       "pypi": "yummy-sphinx-theme"
