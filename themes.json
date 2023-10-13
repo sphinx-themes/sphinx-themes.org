@@ -205,7 +205,14 @@
       "pypi": "sphinx-nameko-theme"
     },
     {
-      "config": "sphinx_nefertiti",
+      "config": {
+        "html_theme": "sphinx_nefertiti",
+        "html_theme_options": {
+          "documentation_font": "Open Sans",
+          "monospace_font": "Ubuntu Mono",
+          "monospace_font_size": "1.1rem"
+        }
+      },
       "display": "Nefertiti",
       "documentation": "https://sphinx-nefertiti.readthedocs.io/en/latest/",
       "pypi": "sphinx-nefertiti"
