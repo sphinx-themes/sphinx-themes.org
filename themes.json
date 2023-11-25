@@ -132,6 +132,12 @@
       "pypi": "cloud-sptheme"
     },
     {
+      "config": "conestack",
+      "display": "Conestack",
+      "documentation": "https://sphinx-conestack-theme.readthedocs.io/en/latest/",
+      "pypi": "sphinx-conestack-theme"
+    },
+    {
       "config": "sphinx_documatt_theme",
       "display": "Documatt",
       "pypi": "sphinx-documatt-theme"
