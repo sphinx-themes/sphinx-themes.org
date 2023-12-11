@@ -105,7 +105,7 @@ Field list
 Glossary
 --------
 
-This is a glossary with definition terms for thing like :term:`Writing`:
+This is a glossary with definition terms for things like :term:`Writing`:
 
 .. glossary::
 
@@ -174,9 +174,9 @@ Complex
 
   * Nested item 3.
 
-- ``inline literall``
-- ``inline literall``
-- ``inline literall``
+- ``inline literal``
+- ``inline literal``
+- ``inline literal``
 - This item has multiple paragraphs.
 
   This item has multiple paragraphs.
@@ -237,9 +237,9 @@ Hlists
     - First item
     - Second item
     - Third item
-    - Forth item
+    - Fourth item
     - Fifth item
-    - Sixths item
+    - Sixth item
 
 .. rubric:: Hlist with images
 
