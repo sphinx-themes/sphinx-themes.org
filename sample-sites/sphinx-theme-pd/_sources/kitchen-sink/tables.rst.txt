@@ -73,7 +73,7 @@ PyPI                                 .. code-block:: bash
 List Tables
 -----------
 
-.. list-table:: List tables can have captions like this one.
+.. list-table:: List tables can have captions like this one. Fixed widths, *both* header row and header column.
     :widths: 10 5 10 50
     :header-rows: 1
     :stub-columns: 1
@@ -83,17 +83,57 @@ List Tables
       - Header 2
       - Header 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
     * - Stub Row 1
-      - Row 1
-      - Column 2
-      - Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+      - Row 1, Col 1
+      - Row 1, Col 2
+      - Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
     * - Stub Row 2
-      - Row 2
-      - Column 2
-      - Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+      - Row 2, Col 1
+      - Row 2, Col 2
+      - Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
     * - Stub Row 3
-      - Row 3
-      - Column 2
-      - Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+      - Row 3, Col 1
+      - Row 3, Col 2
+      - Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+
+.. list-table:: A list table with a header *row*, auto-width.
+    :header-rows: 1
+
+    * - Header 1
+      - Header 2
+      - Header 3
+      - Header 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Row 1, Col 1
+      - Row 1, Col 2
+      - Row 1, Col 3
+      - Row 1, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Row 2, Col 1
+      - Row 2, Col 2
+      - Row 2, Col 3
+      - Row 2, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Row 3, Col 1
+      - Row 3, Col 2
+      - Row 3, Col 3
+      - Row 3, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+
+.. list-table:: A list table with a header ("stub") *column*, auto-width.
+    :stub-columns: 1
+
+    * - Stub Row 1
+      - Row 1, Col 1
+      - Row 1, Col 2
+      - Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Stub Row 2
+      - Row 2, Col 1
+      - Row 2, Col 2
+      - Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Stub Row 3
+      - Row 3, Col 1
+      - Row 3, Col 2
+      - Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
+    * - Stub Row 4
+      - Row 4, Col 1
+      - Row 4, Col 2
+      - Row 4, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.
 
 .. list-table:: This is a list table with images in it.
 

@@ -11,7 +11,7 @@
 <meta content="Tables | Awesome" property="og:title"/>
 <meta content="Tables | Awesome" name="twitter:title"/>
 <link href="../../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../../_static/theme.css?v=1c6a6288" rel="stylesheet" type="text/css"/>
+<link href="../../_static/theme.css?v=e43df443" rel="stylesheet" type="text/css"/>
 <link href="../../search/" rel="search" title="Search"/>
 <link href="../../genindex/" rel="index" title="Index"/>
 <link href="../typography/" rel="next" title="Typography"/>
@@ -293,7 +293,7 @@ empty: <code class="docutils literal notranslate"><span class="pre">--&gt;</span
 <section id="list-tables">
 <h2>List Tables<a class="headerlink" href="#list-tables" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#list-tables'"><span>#</span></a></h2>
 <table class="docutils align-default" id="id1">
-<caption><span class="caption-text">List tables can have captions like this one.</span><a class="headerlink" href="#id1" title="Link to this table"><span>#</span></a></caption>
+<caption><span class="caption-text">List tables can have captions like this one. Fixed widths, <em>both</em> header row and header column.</span><a class="headerlink" href="#id1" title="Link to this table"><span>#</span></a></caption>
 <colgroup>
 <col style="width: 13.3%"/>
 <col style="width: 6.7%"/>
@@ -309,37 +309,89 @@ empty: <code class="docutils literal notranslate"><span class="pre">--&gt;</span
 </thead>
 <tbody>
 <tr class="row-even"><th class="stub"><p>Stub Row 1</p></th>
-<td><p>Row 1</p></td>
-<td><p>Column 2</p></td>
-<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+<td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Stub Row 2</p></th>
-<td><p>Row 2</p></td>
-<td><p>Column 2</p></td>
-<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+<td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p>Stub Row 3</p></th>
-<td><p>Row 3</p></td>
-<td><p>Column 2</p></td>
-<td><p>Column 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+<td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id2">
-<caption><span class="caption-text">This is a list table with images in it.</span><a class="headerlink" href="#id2" title="Link to this table"><span>#</span></a></caption>
+<caption><span class="caption-text">A list table with a header <em>row</em>, auto-width.</span><a class="headerlink" href="#id2" title="Link to this table"><span>#</span></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td><figure class="align-default" id="id3">
+<tr class="row-even"><td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3</p></td>
+<td><p>Row 1, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3</p></td>
+<td><p>Row 2, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3</p></td>
+<td><p>Row 3, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">A list table with a header (“stub”) <em>column</em>, auto-width.</span><a class="headerlink" href="#id3" title="Link to this table"><span>#</span></a></caption>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>Stub Row 1</p></th>
+<td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 2</p></th>
+<td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Stub Row 3</p></th>
+<td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 4</p></th>
+<td><p>Row 4, Col 1</p></td>
+<td><p>Row 4, Col 2</p></td>
+<td><p>Row 4, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">This is a list table with images in it.</span><a class="headerlink" href="#id4" title="Link to this table"><span>#</span></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id5">
 <img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy"/>
 <figcaption>
-<p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id3" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id5" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </td>
-<td><figure class="align-default" id="id4">
+<td><figure class="align-default" id="id6">
 <img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy"/>
 <figcaption>
 <p><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id4" title="Link to this image"><span>#</span></a></p>
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id6" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </td>
@@ -349,7 +401,7 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
 </section>
 </section>
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
-<div class="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<div class="sticky top-16 -mt-10 max-h-[calc(var(100vh)-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
 <li><a :data-current="activeSection === '#grid-tables'" class="reference internal" href="#grid-tables">Grid Tables</a><ul>
 <li><a :data-current="activeSection === '#giant-tables'" class="reference internal" href="#giant-tables">Giant Tables</a></li>
