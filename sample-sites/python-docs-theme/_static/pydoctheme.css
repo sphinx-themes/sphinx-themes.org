@@ -29,6 +29,11 @@ pre {
     color: inherit;
 }
 
+a[href] {
+    text-decoration: underline 1px;
+    text-underline-offset: 0.25em;
+}
+
 body {
     margin-left: 1em;
     margin-right: 1em;
@@ -177,7 +182,7 @@ div.body {
 
 div.body p, div.body dd, div.body li, div.body blockquote {
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
     margin: 0;
