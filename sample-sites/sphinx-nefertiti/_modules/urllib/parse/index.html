@@ -34,14 +34,14 @@
     </style>
   </head>
   <body>
-    <header class="navbar navbar-expand-lg navbar-dark nftt-navbar flex-column fixed-top">
+    <header class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
       <div class="skip-links container-xxl visually-hidden-focusable overflow-hidden justify-content-start">
         <div class="border-bottom mb-2 pb-2 w-100">
           <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
           <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
         </div>
       </div>
-      <nav class="container-xxl nftt-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      <nav class="container-xxl nftt-gutter flex-wrap flex-xl-nowrap" aria-label="Main navigation">
         <div class="nftt-navbar-toggler">
           <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
             <i class="bi bi-list"></i>
@@ -52,7 +52,7 @@
               class="navbar-brand p-0 me-0 md-lg-2"
           ><span class="brand-text">Sphinx Themes Sample</span></a>
         
-        <div class="d-flex d-lg-none">
+        <div class="d-flex d-xl-none">
           <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
             <i class="bi bi-search"></i>
           </button>
@@ -61,15 +61,15 @@
           </button>
         </div>
         
-<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
   <div class="offcanvas-header px-4 pb-0">
     <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
   </div>
-  <div class="offcanvas-body p-4 pt-0 p-lg-0 px-lg-3">
-    <hr class="d-lg-none text-white-50">
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+    <hr class="d-xl-none text-white-50">
     <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
-      <li class="nav-item col-12 col-lg-auto">
+      <li class="nav-item col-12 col-xl-auto">
         <form id="nftt-search-form" action="../../../search/" method="get">
           <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Search docs" aria-label="Search" aria-describedby="button-search">
@@ -83,23 +83,23 @@
   </div>
 </div>
 
-        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
           <div class="offcanvas-header px-4 pb-0">
-            <div class="offcanvas-title text-white fw-bold" id="nfttNavbarOffcanvasLabel"><span class="brand-text">Nefertiti for Sphinx</span></div>
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-text">Nefertiti for Sphinx</span></div>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
           </div>
-          <div class="offcanvas-body p-4 pt-0 p-lg-0">
-            <hr class="d-lg-none text-white-50">
-            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
               
               <!-- version_dropdown.html -->
 
               
               <!-- colorscheme_dropdown.html -->
 <li class="nav-item dropdown">
-  <a class="nav-link d-flex py-2 px-0 px-lg-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
     <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
-    <span id="snftt-luz-text" class="d-lg-none small ms-2">Toggle light/dark</span>
+    <span id="snftt-luz-text" class="d-xl-none small ms-2">Toggle light/dark</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
     <li>
@@ -140,14 +140,15 @@
       </nav>
     </header>
 
-    <div class="container-xxl nftt-gutter nftt-layout">
+    <div class="container-fluid nftt-gutter nftt-layout">
       <aside class="nftt-sidebar">
-        <div class="title d-none d-md-block">
-          <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Table of contents</span>
-        </div>
-        <div id="sidebar" tabindex="-1" class="offcanvas-lg offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
-            <!-- danirus sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
-  <h5 class="offcanvas-title" id="nfttSidebarOffcanvasLabel">
+        <div class="nftt-sidebar-content">
+          <div class="title d-none d-xl-block">
+            <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+          </div>
+          <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+              <!-- danirus sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
     Table of contents
   </h5>
   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
@@ -191,6 +192,7 @@
     </button>
   </template>
 </div>
+          </div>
         </div>
       </aside>
       <main class="nftt-main">
@@ -1492,7 +1494,7 @@
         
         
         <div class="built-with pt-2">
-          Built with <a href="http://sphinx-doc.org">Sphinx 7.2.6</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.2.1</a>
+          Built with <a href="http://sphinx-doc.org">Sphinx 7.2.6</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.2.3</a>
         </div>
         
       </div>
