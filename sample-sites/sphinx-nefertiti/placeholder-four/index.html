@@ -37,7 +37,7 @@
   </head>
   <body>
     <header class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
-      <div class="skip-links container-xxl visually-hidden-focusable overflow-hidden justify-content-start">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start">
         <div class="border-bottom mb-2 pb-2 w-100">
           <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
           <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
@@ -142,14 +142,15 @@
       </nav>
     </header>
 
-    <div class="container-fluid nftt-gutter nftt-layout">
-      <aside class="nftt-sidebar">
-        <div class="nftt-sidebar-content">
-          <div class="title d-none d-xl-block">
-            <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
-          </div>
-          <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
-              <!-- danirus sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+    <div class="container-fluid">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar">
+          <div class="nftt-sidebar-content">
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- danirus sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
   <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
     Table of contents
   </h5>
@@ -194,10 +195,9 @@
     </button>
   </template>
 </div>
+            </div>
           </div>
-        </div>
-      </aside>
-      <main class="nftt-main">
+        </aside>
         <article id="content" class="nftt-content" role="main">
     <section id="placeholder-page-four">
 <h1>Placeholder Page Four<a class="headerlink" href="#placeholder-page-four" title="Link to this heading">¶</a></h1>
@@ -205,8 +205,10 @@
 </section>
 
 </article>
-        
-      </main>
+        <aside class="nftt-toc">
+          
+        </aside>
+      </div>
     </div>
 
     <footer class="nftt-footer">
@@ -242,7 +244,7 @@
         
         
         <div class="built-with pt-2">
-          Built with <a href="http://sphinx-doc.org">Sphinx 7.2.6</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.2.3</a>
+          Built with <a href="http://sphinx-doc.org">Sphinx 7.2.6</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.3.0</a>
         </div>
         
       </div>
@@ -257,5 +259,6 @@
     <script type="text/javascript" src="../_static/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../_static/sphinx-nefertiti.min.js"></script>
     
+    <script type="text/javascript" src="../_static/doc_versions.js"></script>
   </body>
 </html>

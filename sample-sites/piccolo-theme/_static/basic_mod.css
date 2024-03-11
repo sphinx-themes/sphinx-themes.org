@@ -397,6 +397,21 @@ div.document li p {
 div.document ul, div.document ol {
   padding-left: 2rem;
 }
+div.document ol.loweralpha {
+  list-style: lower-alpha;
+}
+div.document ol.arabic {
+  list-style: decimal;
+}
+div.document ol.lowerroman {
+  list-style: lower-roman;
+}
+div.document ol.upperalpha {
+  list-style: upper-alpha;
+}
+div.document ol.upperroman {
+  list-style: upper-roman;
+}
 div.document dd {
   margin-left: 1.5rem;
 }
