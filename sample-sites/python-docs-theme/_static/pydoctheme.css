@@ -170,7 +170,7 @@ div.sphinxsidebar a:hover {
 form.inline-search input,
 div.sphinxsidebar input,
 div.related input {
-    font-family: 'Lucida Grande', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
     border: 1px solid #999999;
     font-size: smaller;
     border-radius: 3px;
@@ -258,7 +258,7 @@ div.body a:hover {
 }
 
 tt, code, pre {
-    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     font-size: 96.5%;
 }
 
@@ -361,8 +361,7 @@ div.genindex-jumpbox a {
     position: absolute;
     top: 0;
     right: 0;
-    text-size: 75%;
-    font-family: monospace;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     padding-left: 0.2em;
     padding-right: 0.2em;
     border-radius: 0 3px 0 0;
