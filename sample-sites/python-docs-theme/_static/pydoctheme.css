@@ -333,7 +333,7 @@ div.footer a:hover {
 
 dl > dt span ~ em,
 .sig {
-    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 .toctree-wrapper ul {
@@ -621,4 +621,51 @@ div.genindex-jumpbox a {
     div.footer {
         margin-top: -2em;
     }
+}
+
+/* Version change directives */
+:root {
+    --versionadded: rgb(41 100 51);
+    --versionchanged: rgb(133 72 38);
+    --deprecated: rgb(159 49 51);
+
+    --versionadded-border: rgb(79 196 100);
+    --versionchanged-border: rgb(244, 227, 76);
+    --deprecated-border: rgb(244, 76, 78);
+}
+
+div.versionadded,
+div.versionchanged,
+div.deprecated,
+div.deprecated-removed {
+    border-left: 3px solid;
+    padding: 0 1rem;
+}
+
+div.versionadded {
+    border-left-color: var(--versionadded-border);
+}
+
+div.versionchanged {
+    border-left-color: var(--versionchanged-border);
+}
+
+div.deprecated,
+div.deprecated-removed,
+div.versionremoved {
+    border-left-color: var(--deprecated-border);
+}
+
+div.versionadded .versionmodified {
+    color: var(--versionadded);
+}
+
+div.versionchanged .versionmodified {
+    color: var(--versionchanged);
+}
+
+div.deprecated .versionmodified,
+div.deprecated-removed .versionmodified,
+div.versionremoved .versionmodified {
+    color: var(--deprecated);
 }

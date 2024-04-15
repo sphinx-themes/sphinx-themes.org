@@ -140,3 +140,10 @@ img.invert-in-dark-mode {
 .sig.cpp .k, .sig.cpp .kt {
     color: #5283ff;
 }
+
+/* Version change directives */
+:root {
+    --versionadded: rgb(79 196 100);
+    --versionchanged: rgb(244, 227, 76);
+    --deprecated: rgb(244, 76, 78);
+}
