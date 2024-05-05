@@ -25,6 +25,10 @@ extlinks = {
     "pypi": ("https://pypi.org/project/%s/", "%s"),
 }
 
+intersphinx_mapping = {
+    "sphinx": ("https://www.sphinx-doc.org/", None),
+}
+
 todo_include_todos = True
 
 # -- Theme-specific -----------------------------------------------------------
