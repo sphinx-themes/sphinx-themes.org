@@ -58,7 +58,9 @@ def render_into_template(
 # --------------------------------------------------------------------------------------
 # Browser Interactions
 # --------------------------------------------------------------------------------------
-async def take_screenshots_at_all_resolutions(page: Page, url: str) -> Dict[str, Image.Image]:
+async def take_screenshots_at_all_resolutions(
+    page: Page, url: str
+) -> Dict[str, Image.Image]:
     screenshots = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
