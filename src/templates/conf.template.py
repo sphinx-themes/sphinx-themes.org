@@ -26,7 +26,7 @@ extlinks = {
 }
 
 intersphinx_mapping = {
-    'sphinx': ('https://www.sphinx-doc.org/', None),
+    "sphinx": ("https://www.sphinx-doc.org/", None),
 }
 
 todo_include_todos = True
