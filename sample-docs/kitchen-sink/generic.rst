@@ -28,7 +28,7 @@ a :sup:`superscript`, :emphasis:`emphasis`, :strong:`strong`, and
 Hyperlinks
 ----------
 
-It is a website, so it'll have hyperlinks like http://www.python.org (inline),
+It is a website, so it'll have hyperlinks like https://www.python.org/ (inline),
 or Python_ (external reference), example_ (internal reference),
 `Python web site <https://www.python.org>`__ (external hyperlinks with embedded
 URI), footnote references (manually numbered [1]_, anonymous auto-numbered [#]_,
@@ -199,7 +199,7 @@ Targets_.
 
 Explicit external targets are interpolated into references such as "Python_".
 
-.. _Python: http://www.python.org/
+.. _Python: https://www.python.org/
 
 Targets may be indirect and anonymous.  Thus `this phrase`__ may also
 refer to the Targets_ section.
