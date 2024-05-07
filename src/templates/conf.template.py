@@ -31,6 +31,11 @@ intersphinx_mapping = {
 
 todo_include_todos = True
 
+linkcheck_ignore = [
+    r"http://someurl",
+    r"https://source.unsplash.com/",
+]
+
 # -- Theme-specific -----------------------------------------------------------
 
 rst_prolog = """
