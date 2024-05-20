@@ -123,30 +123,30 @@ body {
 
 /*****************************************************************************/
 /* Top nav */
-div#searchbox h3#searchlabel {
+#searchbox h3#searchlabel {
   display: none;
 }
-div#searchbox form.search {
+#searchbox form.search {
   display: flex;
   flex-direction: row;
 }
-div#searchbox form.search input {
+#searchbox form.search input {
   display: block;
   box-sizing: border-box;
   padding: 0.3rem;
   color: rgba(0, 0, 0, 0.7);
   border-radius: 0.2rem;
 }
-div#searchbox form.search input[type=text] {
+#searchbox form.search input[type=text] {
   border: none;
   background-color: rgba(255, 255, 255, 0.6);
   flex-grow: 1;
   margin-right: 0.2rem;
 }
-div#searchbox form.search input[type=text]::placeholder {
+#searchbox form.search input[type=text]::placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
-div#searchbox form.search input[type=submit] {
+#searchbox form.search input[type=submit] {
   cursor: pointer;
   color: var(--mainNavColor);
   flex-grow: 0;
