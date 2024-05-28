@@ -58,11 +58,14 @@ def render_into_template(
 # --------------------------------------------------------------------------------------
 # Browser Interactions
 # --------------------------------------------------------------------------------------
-async def take_screenshots_at_all_resolutions(page: Page) -> Dict[str, Image.Image]:
+async def take_screenshots_at_all_resolutions(
+    page: Page, url: str
+) -> Dict[str, Image.Image]:
     screenshots = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
         await page.set_viewport_size(resolution)
+        await page.goto(url, wait_until="load")
         await asyncio.sleep(1)  # give the rendering logic a moment
 
         size = (resolution["width"], resolution["height"])
@@ -84,12 +87,8 @@ async def render_at_multiple_resolutions(
         page = await context.new_page()
         progress.advance(task, 1)
 
-        # progress.log(f"{theme.name}: Navigating to local URL.")
-        await page.goto(theme.url, wait_until="load")
-        progress.advance(task, 2)
-
         # progress.log(f"{theme.name}: Taking screenshots.")
-        screenshots = await take_screenshots_at_all_resolutions(page)
+        screenshots = await take_screenshots_at_all_resolutions(page, theme.url)
         progress.advance(task, 5)
 
         # progress.log(f"{theme.name}: Rendering to template.")
