@@ -1,0 +1,9 @@
+:root {
+    --cs-color: var(--bs-white);
+    --cs-bg-color: var(--bs-gray-900);
+    --cs-highlight-color: ;
+
+    --layout-width: 1320px;
+    --sidebar-left-width: 180px;
+    --sidebar-right-width: 180px;
+}

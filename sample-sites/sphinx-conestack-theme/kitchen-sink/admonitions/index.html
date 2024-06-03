@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Admonitions &#8212; Conestack</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/conestack.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="API documentation" href="../api/" />
+    <link rel="prev" title="Kitchen Sink" href="../" />
+<link rel="stylesheet" type="text/css" src="../../_static/bootstrap.css" />
+<script src="../../_static/bootstrap.bundle.min.js"></script>
+<script src="../../_static/conestack.js"></script>
+
+  </head><body>
+
+  <noscript>
+    <style type="text/css">
+      #searchbox,
+      #searchdesc {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #navbar-toggle {
+          display: none;
+        }
+        #cs-mobile-menu {
+          display: block;
+        }
+        #cs-layout {
+          margin-top: 12rem;
+        }
+        #cs-ext-links {
+          margin-right: 2rem!important;
+        }
+      }
+    </style>
+  </noscript>
+
+  
+  <header class="navbar navbar-expand-md" id="header">
+    <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
+  <a id="logo" class="navbar-brand p-0 me-2" href="../../">
+    <img src="_static/conestack.svg"
+         alt="Logo"
+         width="40px"
+         height="40px" />
+    <span>conestack</span>
+  </a>
+
+      
+  <div id="nav-search" class="ms-auto">
+    <div id="searchbox" class="nav-item me-3" role="search">
+      <form class="search input-group" action="../../search/" method="get">
+        <input type="text" class="form-control" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button type="submit" 
+                class="bi bi-search input-group-text"
+                btn-title="Search documentation"></button>
+      </form>
+    </div>
+  </div>
+      
+
+      <button id="navbar-toggle" class="navbar-toggler p-0 me-4" type="button" data-bs-toggle="collapse" data-bs-target="#cs-mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
+      </button>
+
+      <div class="collapse container-fluid m-0 p-3" id="cs-mobile-menu"><nav class="cs-mobile-toc">
+  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+
+</nav>
+      </div>
+    </nav>
+  </header>
+  
+
+  <div class="container-xxl my-md-4" id="cs-layout">
+    
+  <aside id="cs-sidebar" class="ms-4 sphinxsidebar"><nav class="cs-nav-toc">
+  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+
+</nav>
+    
+  </aside>
+    
+
+    
+      <main class="document cs-main order-1" role="main">
+    
+      <div class="ps-lg-4 mt-3 cs-content">
+        
+  <section id="admonitions">
+<h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this heading">#</a></h1>
+<p>Sphinx provides several different types of admonitions.</p>
+<section id="topic">
+<h2><code class="docutils literal notranslate"><span class="pre">topic</span></code><a class="headerlink" href="#topic" title="Permalink to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">This is a topic.</p>
+<p>This is what admonitions are a special case of, according to the docutils
+documentation.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</aside>
+</section>
+<section id="admonition">
+<h2><code class="docutils literal notranslate"><span class="pre">admonition</span></code><a class="headerlink" href="#admonition" title="Permalink to this heading">#</a></h2>
+<div class="admonition-the-one-with-the-custom-titles admonition">
+<p class="admonition-title">The one with the custom titles</p>
+<p>It’s got a certain charm to it.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="attention">
+<h2><code class="docutils literal notranslate"><span class="pre">attention</span></code><a class="headerlink" href="#attention" title="Permalink to this heading">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Climate change is real.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="caution">
+<h2><code class="docutils literal notranslate"><span class="pre">caution</span></code><a class="headerlink" href="#caution" title="Permalink to this heading">#</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Cliff ahead: Don’t drive off it.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="danger">
+<h2><code class="docutils literal notranslate"><span class="pre">danger</span></code><a class="headerlink" href="#danger" title="Permalink to this heading">#</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Mad scientist at work!</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="error">
+<h2><code class="docutils literal notranslate"><span class="pre">error</span></code><a class="headerlink" href="#error" title="Permalink to this heading">#</a></h2>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Does not compute.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="hint">
+<h2><code class="docutils literal notranslate"><span class="pre">hint</span></code><a class="headerlink" href="#hint" title="Permalink to this heading">#</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Insulators insulate, until they are subject to ______ voltage.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="important">
+<h2><code class="docutils literal notranslate"><span class="pre">important</span></code><a class="headerlink" href="#important" title="Permalink to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Tech is not neutral, nor is it apolitical.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="note">
+<h2><code class="docutils literal notranslate"><span class="pre">note</span></code><a class="headerlink" href="#note" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="seealso">
+<h2><code class="docutils literal notranslate"><span class="pre">seealso</span></code><a class="headerlink" href="#seealso" title="Permalink to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Other relevant information.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="tip">
+<h2><code class="docutils literal notranslate"><span class="pre">tip</span></code><a class="headerlink" href="#tip" title="Permalink to this heading">#</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>25% if the service is good.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="todo">
+<h2><code class="docutils literal notranslate"><span class="pre">todo</span></code><a class="headerlink" href="#todo" title="Permalink to this heading">#</a></h2>
+<div class="admonition-todo admonition" id="id12">
+<p class="admonition-title">Todo</p>
+<p>This needs the <code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> extension.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="warning">
+<h2><code class="docutils literal notranslate"><span class="pre">warning</span></code><a class="headerlink" href="#warning" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Reader discretion is strongly advised.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="versionadded">
+<h2><code class="docutils literal notranslate"><span class="pre">versionadded</span></code><a class="headerlink" href="#versionadded" title="Permalink to this heading">#</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version v0.1.1: </span>Here’s a version added message.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="versionchanged">
+<h2><code class="docutils literal notranslate"><span class="pre">versionchanged</span></code><a class="headerlink" href="#versionchanged" title="Permalink to this heading">#</a></h2>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version v0.1.1: </span>Here’s a version changed message.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+<section id="deprecated">
+<h2><code class="docutils literal notranslate"><span class="pre">deprecated</span></code><a class="headerlink" href="#deprecated" title="Permalink to this heading">#</a></h2>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version v0.1.1: </span>Here’s a deprecation message.</p>
+<p>We also support <em>italic</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">code</span></code>, <a class="reference external" href="https://www.sphinx-doc.org/">links</a>, and more.</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+
+    
+  <div class="cs-local-toc mx-4 mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+    <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+    <nav id="TableOfContents">
+      <ul>
+<li><a class="reference internal" href="#topic"><code class="docutils literal notranslate"><span class="pre">topic</span></code></a></li>
+<li><a class="reference internal" href="#admonition"><code class="docutils literal notranslate"><span class="pre">admonition</span></code></a></li>
+<li><a class="reference internal" href="#attention"><code class="docutils literal notranslate"><span class="pre">attention</span></code></a></li>
+<li><a class="reference internal" href="#caution"><code class="docutils literal notranslate"><span class="pre">caution</span></code></a></li>
+<li><a class="reference internal" href="#danger"><code class="docutils literal notranslate"><span class="pre">danger</span></code></a></li>
+<li><a class="reference internal" href="#error"><code class="docutils literal notranslate"><span class="pre">error</span></code></a></li>
+<li><a class="reference internal" href="#hint"><code class="docutils literal notranslate"><span class="pre">hint</span></code></a></li>
+<li><a class="reference internal" href="#important"><code class="docutils literal notranslate"><span class="pre">important</span></code></a></li>
+<li><a class="reference internal" href="#note"><code class="docutils literal notranslate"><span class="pre">note</span></code></a></li>
+<li><a class="reference internal" href="#seealso"><code class="docutils literal notranslate"><span class="pre">seealso</span></code></a></li>
+<li><a class="reference internal" href="#tip"><code class="docutils literal notranslate"><span class="pre">tip</span></code></a></li>
+<li><a class="reference internal" href="#todo"><code class="docutils literal notranslate"><span class="pre">todo</span></code></a></li>
+<li><a class="reference internal" href="#warning"><code class="docutils literal notranslate"><span class="pre">warning</span></code></a></li>
+<li><a class="reference internal" href="#versionadded"><code class="docutils literal notranslate"><span class="pre">versionadded</span></code></a></li>
+<li><a class="reference internal" href="#versionchanged"><code class="docutils literal notranslate"><span class="pre">versionchanged</span></code></a></li>
+<li><a class="reference internal" href="#deprecated"><code class="docutils literal notranslate"><span class="pre">deprecated</span></code></a></li>
+</ul>
+
+    </nav>
+  </div>
+    
+    </main>
+  </div><div class="container footer" role="contentinfo">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 my-4 border-top"><ul class="pb-2 mb-3 nav container border-bottom">
+  <li class="nav-item col-md-6 col">
+    <a href="../"
+       title="previous chapter"
+       class="nav-link px-2 text-muted previous-chapter">Kitchen Sink</a>
+  </li>
+  <li class="nav-item col-md-6 col text-end">
+    <a href="../api/"
+       title="next chapter"
+       class="nav-link px-2 text-muted next-chapter">API documentation</a>
+  </li>
+</ul>
+      <div class="container text-center text-muted pt-2 pb-2">
+          &#169; Copyright 2021, Pradyun Gedam.
+      </div>
+      <div class="container text-center text-muted pt-2 pb-2">
+        Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
+      </div>
+  </footer>
+</div>
+
+  </body>
+</html>
