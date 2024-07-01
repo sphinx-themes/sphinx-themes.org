@@ -1,3 +1,13 @@
+/* Common colours */
+:root {
+    --good-color: rgb(79 196 100);
+    --good-border: var(--good-color);
+    --middle-color: rgb(244, 227, 76);
+    --middle-border: var(--middle-color);
+    --bad-color: rgb(244, 76, 78);
+    --bad-border: var(--bad-color);
+}
+
 
 /* Browser elements */
 :root {
@@ -79,10 +89,6 @@ table.docutils th {
     background-color: #424242;
 }
 
-.refcount {
-    color: #afa;
-}
-
 .stableabi {
     color: #bbf;
 }
@@ -105,6 +111,29 @@ div.warning {
 
 .warning code {
     background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Admonitions */
+:root {
+    --admonition-background: #ffffff1a;
+    --admonition-border: currentColor;
+    --admonition-color: #ffffffde;
+    --attention-background: #ffffff1a;
+    --attention-border: currentColor;
+    --caution-background: #ffff001a;
+    --caution-border: #dd6;
+    --danger-background: #f003;
+    --danger-border: #f66;
+    --error-background: #f003;
+    --error-border: #f66;
+    --hint-background: #0044117a;
+    --hint-border: green;
+    --seealso-background: #ffff001a;
+    --seealso-border: #dd6;
+    --tip-background: #0044117a;
+    --tip-border: green;
+    --warning-background: #ff000033;
+    --warning-border: #ff6666;
 }
 
 aside.topic,
@@ -143,7 +172,7 @@ img.invert-in-dark-mode {
 
 /* Version change directives */
 :root {
-    --versionadded: rgb(79 196 100);
-    --versionchanged: rgb(244, 227, 76);
-    --deprecated: rgb(244, 76, 78);
+    --versionadded: var(--good-color);
+    --versionchanged: var(--middle-color);
+    --deprecated: var(--bad-color);
 }
