@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">29 Jul 2024 01:00:15 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">05 Aug 2024 01:00:54 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,7 +31,7 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-Running Sphinx v7.4.7
+Running Sphinx v8.0.2
 loading translations [en]... locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 done
@@ -39,7 +39,7 @@ making output directory... done
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 Original exception:
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 453, in load_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 448, in load_extension
     mod = import_module(extname)
   File &#34;/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/importlib/__init__.py&#34;, line 126, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -57,7 +57,7 @@ ImportError: cannot import name &#39;reprunicode&#39; from &#39;docutils.nodes&#
 ======================================== stderr ========================================
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 453, in load_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 448, in load_extension
     mod = import_module(extname)
   File &#34;/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/importlib/__init__.py&#34;, line 126, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -80,17 +80,17 @@ Traceback (most recent call last):
     self._init_builder()
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 365, in _init_builder
     self.builder.init()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 226, in init
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 235, in init
     self.init_templates()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 276, in init_templates
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/builders/html/__init__.py&#34;, line 285, in init_templates
     self.theme = theme_factory.create(theme_name)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 243, in create
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 234, in create
     entry_point_loader()
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 204, in _load_theme_closure
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/theming.py&#34;, line 195, in _load_theme_closure
     app.setup_extension(theme_module)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/application.py&#34;, line 429, in setup_extension
     self.registry.load_extension(self, extname)
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 456, in load_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/sphinx/registry.py&#34;, line 451, in load_extension
     raise ExtensionError(__(&#39;Could not import extension %s&#39;) % extname,
 sphinx.errors.ExtensionError: Could not import extension sphinx_sizzle_theme (exception: cannot import name &#39;reprunicode&#39; from &#39;docutils.nodes&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/build/sphinx-sizzle-theme/lib/python3.10/site-packages/docutils/nodes.py))
 
