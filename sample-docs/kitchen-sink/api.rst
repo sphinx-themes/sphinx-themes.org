@@ -7,6 +7,12 @@
 API documentation
 *****************
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    domains/api_*_domain
+
 Using autodoc
 =============
 
