@@ -34,5 +34,14 @@ Using Sphinx's :any:`sphinx.ext.autodoc` plugin, it is possible to auto-generate
         # Don't show class signature with the class' name.
         autodoc_class_signature = "separated"
 
-.. automodule:: urllib.parse
+
+The ``automodule`` Directive with reStructuredText Markup
+---------------------------------------------------------
+
+What follows is an example showing usage of the ``.. automodule::`` directive.
+
+.. currentmodule:: all_in_one_restructuredtext
+
+.. automodule:: all_in_one_restructuredtext
     :members:
+    :member-order: bysource
