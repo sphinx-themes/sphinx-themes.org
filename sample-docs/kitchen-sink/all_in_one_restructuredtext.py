@@ -13,7 +13,7 @@ The module's docstrings use reStructuredText markup.
 # - add example of numpy-style docstrings
 
 import abc
-from typing import final, Final, TypeAlias, TypeVar
+from typing import final, TypeAlias, TypeVar
 
 
 ParameterT = TypeVar("ParameterT")  #: Docstring of type ParameterT
