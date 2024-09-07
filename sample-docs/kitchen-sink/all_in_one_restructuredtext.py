@@ -8,7 +8,6 @@ The module's docstrings use reStructuredText markup.
 # - show roles to refer to elements
 # - async with
 # - async for
-# - *args, **kwargs
 # - Python 3.12 type parameters
 # - add example of numpy-style docstrings
 
@@ -27,70 +26,147 @@ MyType: TypeAlias = list[float]  #: The docstring.
 my_module_level_variable: MyType = [0.0, 1.1]  #: The docstring.
 
 
-def my_function(*args, **kwargs):
-    """TODO.
+def my_function_pure_sphinx(*args, **kwargs):
+    r'''
+    This function accepts any number of arguments and keyword arguments.
+
+    Note:
+        If you do *not* use ``sphinx.ext.napoleon``:
+
+        In the source code,
+        the docstring for this function is a "raw" docstring using ``r"""..."""``,
+        and ``*args`` and ``**kwargs`` below are escaped with a backslash
+        (``\*args`` and ``\*\*kwargs``).
+
+        See also https://github.com/sphinx-doc/sphinx/issues/9893.
+
+    :param \*args: Variable length argument list.
+    :param \*\*kwargs: Arbitrary keyword arguments.
+
+    :return: None
+
+    Text at end of docstring.
+    '''
+    pass
+
+
+def my_function_google_style(*args, **kwargs):
+    r'''
+    This function accepts any number of arguments and keyword arguments.
+
+    Note:
+        If you do *not* use ``sphinx.ext.napoleon``:
+
+        In the source code,
+        the docstring for this function is a "raw" docstring using ``r"""..."""``,
+        and ``*args`` and ``**kwargs`` below are escaped with a backslash
+        (``\*args`` and ``\*\*kwargs``).
+
+        See also https://github.com/sphinx-doc/sphinx/issues/9893.
 
     Args:
-        *args: Variable length argument list. FIXME: parse error?
-        **kwargs: Arbitrary keyword arguments. FIXME: parse error?
+        \*args: Variable length argument list.
+        \*\*kwargs: Arbitrary keyword arguments.
 
     Returns:
-        Nothing.
+        None
+
+    Text at end of docstring.
+    '''
+    pass
+
+
+def my_function_needs_napoleon(*args, **kwargs):
+    """
+    This function accepts any number of arguments and keyword arguments.
+
+    Note:
+        If you use ``sphinx.ext.napoleon`` (and only then),
+        there is no need to escape ``*args`` and ``**kwargs`` below.
+
+    Args:
+        *args: Variable length argument list.
+        **kwargs: Arbitrary keyword arguments.
+
+    Returns:
+        None
+
+    Text at end of docstring.
+    """
+    pass
+
+
+def my_function2(foo: int, bar: str):
+    """
+    A simple function.
+
+    Args:
+        foo: A regular argument.
+        bar: Another regular argument.
+
+    Returns:
+        None
+
+    .. deprecated:: 2.0
+        Use :func:`my_function_pure_sphinx` instead.
+
+    Text at end of docstring.
     """
     pass
 
 
 def my_generator():
-    """TODO.
+    """A generator.
 
     Yields:
-        Nothing.
+        None
     """
     yield None
 
 
 class MyException(Exception):
-    """TODO."""
+    """Custom exception class."""
 
     pass
 
 
 class AllInOne:
-    """TODO.
+    """This is a class that demonstrates various Python features.
 
-    Google-style docstrings
+    Uses Google-style docstrings
     (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).
 
 
     Attributes:
-        _my_property: TODO.
+        _my_property: A private property of the class.
     """
 
     __metaclass__ = abc.ABCMeta
 
     def __init__(self):
-        """TODO."""
+        """Initialize the :py:class:`AllInOne` class."""
+        pass
 
     def my_method(self, my_param: ParameterT = "default_value", /, *, keyword_only_param=None) -> ReturnT:
-        """TODO.
+        """A normal method.
 
         We are using both positional-only and keyword-only syntax.
 
         Here is some code in a literal block::
 
-            foo = True  # assign ``True`` to ``foo``
+            foo = True  # assign ``True``
 
         Note:
             Do not include the *self* parameter in the ``Args`` section.
 
         Args:
             my_param: Documenting *my_param*.
-                Another sentence on the next line, still belonging to *my_param*.
+                Another sentence on the next docstring line, still belonging to *my_param*.
             keyword_only_param: Documenting *keyword_only_param*.
-                Another sentence on the next line, still belonging to *keyword_only_param*.
+                Another sentence on the next docstring line, still belonging to *keyword_only_param*.
 
         Returns:
-            TODO
+            The value of the local variable ``my_var``.
 
         Raises:
             :py:exc:`MyException`: if something went wrong.
@@ -101,11 +177,11 @@ class AllInOne:
 
         Text at end of docstring.
         """
-        self.my_var: ReturnT = "return_value"
-        return self.my_var
+        my_var: ReturnT = "return_value"
+        return my_var
 
     async def my_async_method(self, my_param: ParameterT = "default_value") -> ReturnT:
-        """TODO.
+        """An :term:`async` method.
 
         Text at end of docstring.
         """
@@ -114,7 +190,7 @@ class AllInOne:
 
     @abc.abstractmethod
     def my_abstractmethod(my_param: ParameterT = "default_value") -> ReturnT:
-        """TODO.
+        """An abstract method.
 
         Text at end of docstring.
         """
@@ -123,7 +199,7 @@ class AllInOne:
 
     @classmethod
     def my_classmethod(cls, my_param: ParameterT = "default_value") -> ReturnT:
-        """TODO.
+        """A :any:`classmethod`.
 
         Text at end of docstring.
         """
@@ -132,7 +208,7 @@ class AllInOne:
 
     @staticmethod
     def my_staticmethod(my_param: ParameterT = "default_value") -> ReturnT:
-        """TODO.
+        """A :any:`staticmethod`.
 
         Text at end of docstring.
         """
@@ -141,44 +217,78 @@ class AllInOne:
 
     @property
     def my_property(self):
-        """TODO."""
+        """
+        Getter for the private property :py:attr:`_my_property`.
+
+        Returns:
+            The value of :py:attr:`_my_property`.
+
+        Text at end of docstring.
+        """
         return self._my_property
 
     @my_property.setter
     def my_property(self, value):
-        """TODO."""
+        """
+        Setter for the private property :py:attr:`_my_property`.
+
+        Args:
+            value: The value to set :py:attr:`_my_property` to.
+
+        Text at end of docstring.
+        """
         self._my_property = value
 
     def my_decorator_method(method):
-        """TODO."""
+        """
+        A decorator method that wraps the provided method.
+
+        Args:
+            method: The method to decorate.
+
+        Returns:
+            The decorated method.
+
+        Text at end of docstring.
+        """
 
         def decorate_method():
-            """TODO."""
+            """The decorated method."""
             method()
 
         return decorate_method
 
     @my_decorator_method
     def my_decorated_method():
-        """TODO."""
+        """A method that is decorated by :py:meth:`my_decorator_method`."""
         pass
 
 
 @final
 class MyFinalClass:
-    """TODO."""
+    """A class that cannot be subclassed."""
 
     @final
     def my_final_method(self) -> None:
-        """TODO."""
+        """A method that cannot be overridden by subclasses."""
         pass
 
 
 def my_decorator_function(function):
-    """TODO."""
+    """
+    A decorator function that wraps the provided function.
+
+    Args:
+        function: The function to decorate.
+
+    Returns:
+        The decorated function.
+
+    Text at end of docstring.
+    """
 
     def decorate_function():
-        """TODO."""
+        """The decorated function."""
         function()
 
     return decorate_function
@@ -186,5 +296,9 @@ def my_decorator_function(function):
 
 @my_decorator_function
 def my_decorated_function():
-    """TODO."""
+    """
+    A function that is decorated by the :py:func:`my_decorator_function`.
+
+    This docstring is not shown, just the one of ``decorate_function()``.
+    """
     pass
