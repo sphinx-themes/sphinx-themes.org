@@ -189,13 +189,13 @@ Second list level
 ^^^^^^^^^^^^^^^^^
 
 - here is a list in a second-level section.
-- `yahoo <https://www.yahoo.com>`_
-- `yahoo <https://www.yahoo.com>`_
+- `yahoo <https://www.yahoo.com/>`_
+- `yahoo <https://www.yahoo.com/>`_
 
-  - `yahoo <https://www.yahoo.com>`_
+  - `yahoo <https://www.yahoo.com/>`_
   - here is an inner bullet ``oh``
 
-    - one more ``with an inline literally``. `yahoo <https://www.yahoo.com>`_
+    - one more ``with an inline literally``. `yahoo <https://www.yahoo.com/>`_
 
       heh heh. child. try to beat this embed:
 
@@ -204,8 +204,8 @@ Second list level
           :linenos:
           :lines: 10-20
 
-  - and another. `yahoo <https://www.yahoo.com>`_
-  - `yahoo <https://www.yahoo.com>`_
+  - and another. `yahoo <https://www.yahoo.com/>`_
+  - `yahoo <https://www.yahoo.com/>`_
   - ``hi``
 - how about an admonition?
 
@@ -217,15 +217,15 @@ Second list level
 But deeper down the rabbit hole
 """""""""""""""""""""""""""""""
 
-- I kept saying that, "deeper down the rabbit hole". `yahoo <https://www.yahoo.com>`_
+- I kept saying that, "deeper down the rabbit hole". `yahoo <https://www.yahoo.com/>`_
 
-  - I cackle at night `yahoo <https://www.yahoo.com>`_.
+  - I cackle at night `yahoo <https://www.yahoo.com/>`_.
 - I'm so lonely here in GZ ``guangzhou``
-- A man of python destiny, hopes and dreams. `yahoo <https://www.yahoo.com>`_
+- A man of python destiny, hopes and dreams. `yahoo <https://www.yahoo.com/>`_
 
-  - `yahoo <https://www.yahoo.com>`_
+  - `yahoo <https://www.yahoo.com/>`_
 
-    - `yahoo <https://www.yahoo.com>`_ ``hi``
+    - `yahoo <https://www.yahoo.com/>`_ ``hi``
     - ``destiny``
 
 Hlists
