@@ -137,11 +137,14 @@ List Tables
 
 .. list-table:: This is a list table with images in it.
 
-    * - .. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+    * - .. figure:: ../../src/assets/illustration.svg
+            :width: 200px
 
            This is a short caption for a figure.
 
-      - .. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+      - .. figure:: ../../src/assets/illustration.svg
+            :width: 200px
 
-           This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-           Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.
+           This is a long caption for a figure.
+           Illustration by `Pixeltrue <https://icons8.com/illustrations/author/5ec7b0e101d0360016f3d1b3>`_
+           from `Ouch! <https://icons8.com/illustrations>`_.
