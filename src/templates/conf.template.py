@@ -1,3 +1,5 @@
+import os
+import sys
 import textwrap
 
 from docutils import nodes
@@ -11,6 +13,8 @@ copyright = "2021, Pradyun Gedam"
 author = "Pradyun Gedam"
 
 html_title = "{{ theme.display }}"
+
+sys.path.insert(0, os.path.abspath("sample-docs/kitchen-sink/"))
 
 extensions = [
     "sphinx.ext.autodoc",
