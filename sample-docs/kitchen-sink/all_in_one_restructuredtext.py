@@ -12,8 +12,7 @@ The module's docstrings use reStructuredText markup.
 # - add example of numpy-style docstrings
 
 import abc
-from typing import final, TypeAlias, TypeVar
-
+from typing import TypeAlias, TypeVar, final
 
 ParameterT = TypeVar("ParameterT")  #: Docstring of type ParameterT
 
@@ -147,7 +146,9 @@ class AllInOne:
         """Initialize the :py:class:`AllInOne` class."""
         pass
 
-    def my_method(self, my_param: ParameterT = "default_value", /, *, keyword_only_param=None) -> ReturnT:
+    def my_method(
+        self, my_param: ParameterT = "default_value", /, *, keyword_only_param=None
+    ) -> ReturnT:
         """A normal method.
 
         We are using both positional-only and keyword-only syntax.
