@@ -754,3 +754,10 @@ div.deprecated-removed .versionmodified,
 div.versionremoved .versionmodified {
     color: var(--deprecated);
 }
+
+/* Hide header when printing */
+@media print {
+    div.mobile-nav {
+        display: none;
+    }
+}
