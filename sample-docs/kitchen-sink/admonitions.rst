@@ -153,3 +153,13 @@ Sphinx provides several different types of admonitions.
    Here's a deprecation message.
 
    We also support *italic*, **bold**, ``code``, `links <https://www.sphinx-doc.org/>`_, and more.
+
+
+``versionremoved``
+==================
+
+.. versionremoved:: v0.1.1
+
+   Here's a version removed message.
+
+   We also support *italic*, **bold**, ``code``, `links <https://www.sphinx-doc.org/>`_, and more.
