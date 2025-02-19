@@ -40,7 +40,10 @@ jobs:
       - name: Upgrade pip
         run: pip install --upgrade pip
       - name: Install nox
-        run: pip install nox
+        run: pip install nox playwright
+
+      - name: Render entire site
+        run: sudo playwright install-deps
 
       - name: Render entire site
         run: nox -s publish
