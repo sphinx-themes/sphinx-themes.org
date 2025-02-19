@@ -39,11 +39,10 @@ jobs:
       # Install runtime dependencies
       - name: Upgrade pip
         run: pip install --upgrade pip
-      - name: Install nox
+      - name: Install nox & playwright
         run: pip install nox playwright
-
-      - name: Render entire site
-        run: sudo playwright install-deps
+      - name: Install playwright's dependencies
+        run: python -m playwright install --with-deps
 
       - name: Render entire site
         run: nox -s publish
