@@ -1,10 +1,8 @@
 """Script to generate the screenshots for all the themes."""
 
 import asyncio
-import contextlib
 import functools
 import io
-import textwrap
 from typing import Dict, Tuple
 
 import rich

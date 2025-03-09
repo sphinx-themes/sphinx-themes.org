@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import rich.progress
+import rich.traceback
 from jinja2 import Template
 
 from .constants import BUILD, DESTINATION, TEMPLATES
@@ -76,7 +77,7 @@ async def generate_site(
             ]
             raise Exception("\n".join(message))
     except Exception as e:
-        progress.log(f"Fail: [red]{theme.name}[reset]\n\t{e}")
+        progress.log(f"Fail: [red]{theme.name}[reset]", rich.traceback.Traceback())
         destination_path.mkdir(parents=True, exist_ok=True)
         (destination_path / "index.html").write_text(get_error_page(theme, e))
     else:

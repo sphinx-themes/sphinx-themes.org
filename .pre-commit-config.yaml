@@ -1,34 +1,29 @@
 repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.10
+    hooks:
+      - id: ruff
+      - id: ruff-format
 
-- repo: https://github.com/psf/black
-  rev: 23.1.0
-  hooks:
-    - id: black
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-builtin-literals
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: forbid-new-submodules
+      - id: trailing-whitespace
 
-- repo: https://github.com/timothycrosley/isort
-  rev: 5.12.0
-  hooks:
-  - id: isort
-
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: 'v4.4.0'
-  hooks:
-    - id: check-builtin-literals
-    - id: check-added-large-files
-    - id: check-case-conflict
-    - id: check-toml
-    - id: check-yaml
-    - id: debug-statements
-    - id: end-of-file-fixer
-    - id: forbid-new-submodules
-    - id: trailing-whitespace
-
-- repo: local
-  hooks:
-  - id: sort-json
-    name: Sort theme.json
-    language: python
-    pass_filenames: false
-    types: []
-    always_run: true
-    entry: python tools/sort-json.py
+  - repo: local
+    hooks:
+      - id: sort-json
+        name: Sort theme.json
+        language: python
+        pass_filenames: false
+        types: []
+        always_run: true
+        entry: python tools/sort-json.py

@@ -1,7 +1,5 @@
-import textwrap
-
 from docutils import nodes
-from docutils.parsers.rst import Directive, directives
+from docutils.parsers.rst import Directive
 from docutils.statemachine import StringList
 
 # -- Common stuff -------------------------------------------------------------
