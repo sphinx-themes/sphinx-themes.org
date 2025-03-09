@@ -268,4 +268,4 @@ voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.
 Download Links
 ==============
 
-:download:`This long long long long long long long long long long long long long long long download link should wrap white-spaces <https://picsum.photos/200/200
+:download:`This long long long long long long long long long long long long long long long download link should wrap white-spaces <https://picsum.photos/200/200>`

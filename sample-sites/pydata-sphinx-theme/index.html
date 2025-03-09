@@ -1,604 +1,115 @@
-
 <!DOCTYPE html>
-
-
-<html lang="en" data-content_root="./" >
+<html lang="en" class="no-js">
 
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyData Demo -- failed to build</title>
 
-    <title>PyData Sample &#8212; PyData</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-    <script src="_static/documentation_options.js?v=187304be"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
-    <link rel="index" title="Index" href="genindex/" />
-    <link rel="search" title="Search" href="search/" />
-    <link rel="next" title="Kitchen Sink" href="kitchen-sink/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="search/"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="#">
-  
-  
-  
-  
-  
-  
-    <p class="title logo__title">PyData</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="kitchen-sink/">
-    Kitchen Sink
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-one/">
-    Placeholder Page One
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-two/">
-    Placeholder Page Two
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="really-long-title/">
-    This is just a page with a really long title for checking how the theme handles these situations
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="long-page/">
-    Long Page
-  </a>
-</li>
-
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-external" href="https://www.sphinx-doc.org">
-    External Link
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="placeholder-three/">
-    Placeholder Page Three
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="placeholder-four/">
-    Placeholder Page Four
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-external" href="https://sphinx-themes.org">
-    Sphinx Theme Gallery
-  </a>
-</li>
-
-                </ul>
-            </li>
-            
-  </ul>
-</nav></div>
-      
+  <body class="bg-red-50 antialiased max-w-4xl mx-auto p-4 my-2">
+    <h1 class="text-red-700 text-5xl text-center">
+      Build Failed!
+    </h1>
+    <div class="mt-2">
+      <div class="text-gray-700 text-center font-semibold">09 Mar 2025 12:29:31 UTC</div>
     </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="kitchen-sink/">
-    Kitchen Sink
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-one/">
-    Placeholder Page One
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-two/">
-    Placeholder Page Two
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="really-long-title/">
-    This is just a page with a really long title for checking how the theme handles these situations
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="long-page/">
-    Long Page
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://www.sphinx-doc.org">
-    External Link
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-three/">
-    Placeholder Page Three
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="placeholder-four/">
-    Placeholder Page Four
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://sphinx-themes.org">
-    Sphinx Theme Gallery
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
+    <div class="mt-4">
+      <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
+        Unless all site previews are broken, this is a problem with the
+        <a class="underline"
+          href="https://pypi.org/project/pydata-sphinx-theme/"><code>pydata-sphinx-theme</code></a>
+        package.
       </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-        
-      </div>
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none"></div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
-  <section id="theme-display-sample">
-<h1>PyData Sample<a class="headerlink" href="#theme-display-sample" title="Link to this heading">#</a></h1>
-<p>This is a demo site for PyData, generated as part of
-<a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This sample documentation was generated on Mar 09, 2025, and is rebuilt weekly.</p>
-</div>
-<section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>Install this theme:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install pydata-sphinx-theme
-</pre></div>
-</div>
-</li>
-<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;pydata_sphinx_theme&#39;</span>
-</pre></div>
-</div>
-</li>
-<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-</ol>
-</section>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
-<p>You can find this theme’s documentation at <a class="reference external" href="https://pydata-sphinx-theme.readthedocs.io/en/latest/">https://pydata-sphinx-theme.readthedocs.io/en/latest/</a>.</p>
-</section>
-<section id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Link to this heading">#</a></h2>
-<p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
-everything that you can with Sphinx “out-of-the-box”.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/admonitions/">Admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/blocks/">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/generic/">Generic items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/images/">Images &amp; Figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists/">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/">Structural Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/tables/">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/typography/">Typography</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<p>Browsing through that section should give you a good idea of how stuff looks
-in this theme.</p>
-</section>
-<section id="navigation">
-<h2>Navigation<a class="headerlink" href="#navigation" title="Link to this heading">#</a></h2>
-<p>This is the most important part of a documentation theme. If you like
-the general look of the theme, please make sure that it is possible to
-easily navigate through this sample documentation.</p>
-<p>Ideally, the pages listed below should also be reachable via links
-somewhere else on this page (like the sidebar, or a topbar). If they are
-not, then this theme might need additional configuration to provide the
-sort of site navigation that’s necessary for “real” documentation.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
-<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<p>Some pages like <a class="reference internal" href="placeholder-three/"><span class="doc">Placeholder Page Three</span></a> are declared in a “hidden”
-toctree, and thus would not be visible above. However, they are still a
-part of the overall site hierarchy and some themes may choose to present
-them to the user in the site navigation.</p>
-<hr class="docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>If you hit an error while building documentation with a new theme,
-it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
-file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
-<code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
-allow the build to proceed.</p>
-</aside>
-</aside>
-</section>
-</section>
-
-
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-    <a class="right-next"
-       href="kitchen-sink/"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Kitchen Sink</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploration">Exploration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation">Navigation</a><ul class="nav section-nav flex-column">
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="_sources/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
     </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2021, Pradyun Gedam.
-      <br/>
-    
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
-    <br/>
-  </p>
-</div>
-      
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Configuration</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">{&#39;html_theme&#39;: &#39;pydata_sphinx_theme&#39;}</pre>
     </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
-</p></div>
-      
-    </div>
-  
-</div>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Output</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
+[01mRunning Sphinx v8.2.3[39;49;00m
+[01mloading translations [en]... [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+done
+[01mmaking output directory... [39;49;00mdone
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+loading intersphinx inventory &#39;sphinx&#39; from https://www.sphinx-doc.org/objects.inv ...
+intersphinx inventory has moved: https://www.sphinx-doc.org/objects.inv -&gt; https://www.sphinx-doc.org/en/master/objects.inv
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mwriting output... [39;49;00m
+[01mbuilding [dirhtml]: [39;49;00mtargets for 18 source files that are out of date
+[01mupdating environment: [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+[new config] 18 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[  6%] [35mindex[39;49;00m
+[01mreading sources... [39;49;00m[ 11%] [35mkitchen-sink/admonitions[39;49;00m
+[01mreading sources... [39;49;00m[ 17%] [35mkitchen-sink/api[39;49;00m
+[01mreading sources... [39;49;00m[ 22%] [35mkitchen-sink/blocks[39;49;00m
+[01mreading sources... [39;49;00m[ 28%] [35mkitchen-sink/generic[39;49;00m
+[01mreading sources... [39;49;00m[ 33%] [35mkitchen-sink/images[39;49;00m
+[01mreading sources... [39;49;00m[ 39%] [35mkitchen-sink/index[39;49;00m
+[01mreading sources... [39;49;00m[ 44%] [35mkitchen-sink/lists[39;49;00m
+[01mreading sources... [39;49;00m[ 50%] [35mkitchen-sink/really-long[39;49;00m
+[01mreading sources... [39;49;00m[ 56%] [35mkitchen-sink/structure[39;49;00m
+[01mreading sources... [39;49;00m[ 61%] [35mkitchen-sink/tables[39;49;00m
+[01mreading sources... [39;49;00m[ 67%] [35mkitchen-sink/typography[39;49;00m
+[01mreading sources... [39;49;00m[ 72%] [35mlong-page[39;49;00m
+[01mreading sources... [39;49;00m[ 78%] [35mplaceholder-four[39;49;00m
+[01mreading sources... [39;49;00m[ 83%] [35mplaceholder-one[39;49;00m
+[01mreading sources... [39;49;00m[ 89%] [35mplaceholder-three[39;49;00m
+[01mreading sources... [39;49;00m[ 94%] [35mplaceholder-two[39;49;00m
+[01mreading sources... [39;49;00m[100%] [35mreally-long-title[39;49;00m
 
-  </footer>
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m
+[01mcopying static files... [39;49;00m
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/pydata-sphinx-theme/_static/language_data.js
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/pydata-sphinx-theme/_static/documentation_options.js
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/pydata-sphinx-theme/_static/basic.css
+[01mcopying static files: [39;49;00mdone
+[01mcopying extra files... [39;49;00m
+[01mcopying extra files: [39;49;00mdone
+[01mcopying assets: [39;49;00mdone
+[01mwriting output... [39;49;00m[  6%] [32mindex[39;49;00m
+[01mwriting output... [39;49;00m[ 11%] [32mkitchen-sink/admonitions[39;49;00m
+[01mwriting output... [39;49;00m[ 17%] [32mkitchen-sink/api[39;49;00m
+[01mwriting output... [39;49;00m[ 22%] [32mkitchen-sink/blocks[39;49;00m
+[01mwriting output... [39;49;00m[ 28%] [32mkitchen-sink/generic[39;49;00m
+[01mwriting output... [39;49;00m[ 33%] [32mkitchen-sink/images[39;49;00m
+[01mwriting output... [39;49;00m[ 39%] [32mkitchen-sink/index[39;49;00m
+[01mwriting output... [39;49;00m[ 44%] [32mkitchen-sink/lists[39;49;00m
+[01mwriting output... [39;49;00m[ 50%] [32mkitchen-sink/really-long[39;49;00m
+[01mwriting output... [39;49;00m[ 56%] [32mkitchen-sink/structure[39;49;00m
+[01mwriting output... [39;49;00m[ 61%] [32mkitchen-sink/tables[39;49;00m
+[01mwriting output... [39;49;00m[ 67%] [32mkitchen-sink/typography[39;49;00m
+[01mwriting output... [39;49;00m[ 72%] [32mlong-page[39;49;00m
+[01mwriting output... [39;49;00m[ 78%] [32mplaceholder-four[39;49;00m
+[01mwriting output... [39;49;00m[ 83%] [32mplaceholder-one[39;49;00m
+[01mwriting output... [39;49;00m[ 89%] [32mplaceholder-three[39;49;00m
+[01mwriting output... [39;49;00m[ 94%] [32mplaceholder-two[39;49;00m
+[01mwriting output... [39;49;00m[100%] [32mreally-long-title[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex py-modindex done
+[01mhighlighting module code... [39;49;00m[ 50%] [94mcode[39;49;00m
+[01mhighlighting module code... [39;49;00m[100%] [94mcodeop[39;49;00m
+
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild finished with problems, 2 warnings (with warnings treated as errors).[39;49;00m
+
+======================================== stderr ========================================
+[31m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:7: ERROR: Unexpected indentation. [docutils][39;49;00m
+[91m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:8: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils][39;49;00m
+</pre>
+    </div>
   </body>
+
 </html>

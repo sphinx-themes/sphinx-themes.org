@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codeop &#8212; Python Documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=23252803" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /><link rel="stylesheet" href="../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../_static/py.svg" />
+            <script type="text/javascript" src="../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu" />
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../_static/py.svg" alt="Python logo"/>
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../search/" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" />
+                <input type="submit" value="Go"/>
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../">Python Documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">codeop</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search/" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box" />
+          <input type="submit" value="Go" />
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for codeop</h1><div class="highlight"><pre>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Utilities to compile possibly incomplete Python source code.</span>
+
+<span class="sd">This module provides two interfaces, broadly similar to the builtin</span>
+<span class="sd">function compile(), which take program text, a filename and a &#39;mode&#39;</span>
+<span class="sd">and:</span>
+
+<span class="sd">- Return code object if the command is complete and valid</span>
+<span class="sd">- Return None if the command is incomplete</span>
+<span class="sd">- Raise SyntaxError, ValueError or OverflowError if the command is a</span>
+<span class="sd">  syntax error (OverflowError and ValueError can be produced by</span>
+<span class="sd">  malformed literals).</span>
+
+<span class="sd">The two interfaces are:</span>
+
+<span class="sd">compile_command(source, filename, symbol):</span>
+
+<span class="sd">    Compiles a single command in the manner described above.</span>
+
+<span class="sd">CommandCompiler():</span>
+
+<span class="sd">    Instances of this class have __call__ methods identical in</span>
+<span class="sd">    signature to compile_command; the difference is that if the</span>
+<span class="sd">    instance compiles program text containing a __future__ statement,</span>
+<span class="sd">    the instance &#39;remembers&#39; and compiles all subsequent program texts</span>
+<span class="sd">    with the statement in force.</span>
+
+<span class="sd">The module also provides another class:</span>
+
+<span class="sd">Compile():</span>
+
+<span class="sd">    Instances of this class act like the built-in function compile,</span>
+<span class="sd">    but with &#39;memory&#39; in the sense described above.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">__future__</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="n">_features</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">__future__</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+             <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">__future__</span><span class="o">.</span><span class="n">all_feature_names</span><span class="p">]</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;compile_command&quot;</span><span class="p">,</span> <span class="s2">&quot;Compile&quot;</span><span class="p">,</span> <span class="s2">&quot;CommandCompiler&quot;</span><span class="p">]</span>
+
+<span class="c1"># The following flags match the values from Include/cpython/compile.h</span>
+<span class="c1"># Caveat emptor: These flags are undocumented on purpose and depending</span>
+<span class="c1"># on their effect outside the standard library is **unsupported**.</span>
+<span class="n">PyCF_DONT_IMPLY_DEDENT</span> <span class="o">=</span> <span class="mh">0x200</span>
+<span class="n">PyCF_ALLOW_INCOMPLETE_INPUT</span> <span class="o">=</span> <span class="mh">0x4000</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_maybe_compile</span><span class="p">(</span><span class="n">compiler</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
+    <span class="c1"># Check for source consisting of only blank lines and comments.</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
+            <span class="k">break</span>               <span class="c1"># Leave it alone.</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">symbol</span> <span class="o">!=</span> <span class="s2">&quot;eval&quot;</span><span class="p">:</span>
+            <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;pass&quot;</span>     <span class="c1"># Replace it with a &#39;pass&#39; statement</span>
+
+    <span class="c1"># Disable compiler warnings when checking for incomplete input.</span>
+    <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="p">(</span><span class="ne">SyntaxWarning</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">compiler</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>  <span class="c1"># Let other compile() errors propagate.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">compiler</span><span class="p">(</span><span class="n">source</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">None</span>
+            <span class="k">except</span> <span class="ne">SyntaxError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">if</span> <span class="s2">&quot;incomplete input&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">None</span>
+                <span class="c1"># fallthrough</span>
+
+    <span class="k">return</span> <span class="n">compiler</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">incomplete_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_is_syntax_error</span><span class="p">(</span><span class="n">err1</span><span class="p">,</span> <span class="n">err2</span><span class="p">):</span>
+    <span class="n">rep1</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err1</span><span class="p">)</span>
+    <span class="n">rep2</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;was never closed&quot;</span> <span class="ow">in</span> <span class="n">rep1</span> <span class="ow">and</span> <span class="s2">&quot;was never closed&quot;</span> <span class="ow">in</span> <span class="n">rep2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">rep1</span> <span class="o">==</span> <span class="n">rep2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">incomplete_input</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">incomplete_input</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">|=</span> <span class="n">PyCF_ALLOW_INCOMPLETE_INPUT</span>
+        <span class="n">flags</span> <span class="o">|=</span> <span class="n">PyCF_DONT_IMPLY_DEDENT</span>
+    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="compile_command">
+<a class="viewcode-back" href="../../kitchen-sink/api/#code.compile_command">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">compile_command</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s2">&quot;single&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compile a command and determine whether it is incomplete.</span>
+
+<span class="sd">    Arguments:</span>
+
+<span class="sd">    source -- the source string; may contain \n characters</span>
+<span class="sd">    filename -- optional filename from which source was read; default</span>
+<span class="sd">                &quot;&lt;input&gt;&quot;</span>
+<span class="sd">    symbol -- optional grammar start symbol; &quot;single&quot; (default), &quot;exec&quot;</span>
+<span class="sd">              or &quot;eval&quot;</span>
+
+<span class="sd">    Return value / exceptions raised:</span>
+
+<span class="sd">    - Return a code object if the command is complete and valid</span>
+<span class="sd">    - Return None if the command is incomplete</span>
+<span class="sd">    - Raise SyntaxError, ValueError or OverflowError if the command is a</span>
+<span class="sd">      syntax error (OverflowError and ValueError can be produced by</span>
+<span class="sd">      malformed literals).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_maybe_compile</span><span class="p">(</span><span class="n">_compile</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Compile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Instances of this class behave much like the built-in compile</span>
+<span class="sd">    function, but if one is used to compile text containing a future</span>
+<span class="sd">    statement, it &quot;remembers&quot; and compiles all subsequent program texts</span>
+<span class="sd">    with the statement in force.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">PyCF_DONT_IMPLY_DEDENT</span> <span class="o">|</span> <span class="n">PyCF_ALLOW_INCOMPLETE_INPUT</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flags</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;incomplete_input&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">PyCF_DONT_IMPLY_DEDENT</span>
+            <span class="n">flags</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">PyCF_ALLOW_INCOMPLETE_INPUT</span>
+        <span class="n">codeob</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">_features</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">codeob</span><span class="o">.</span><span class="n">co_flags</span> <span class="o">&amp;</span> <span class="n">feature</span><span class="o">.</span><span class="n">compiler_flag</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">flags</span> <span class="o">|=</span> <span class="n">feature</span><span class="o">.</span><span class="n">compiler_flag</span>
+        <span class="k">return</span> <span class="n">codeob</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CommandCompiler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Instances of this class have __call__ methods identical in</span>
+<span class="sd">    signature to compile_command; the difference is that if the</span>
+<span class="sd">    instance compiles program text containing a __future__ statement,</span>
+<span class="sd">    the instance &#39;remembers&#39; and compiles all subsequent program texts</span>
+<span class="sd">    with the statement in force.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span> <span class="o">=</span> <span class="n">Compile</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s2">&quot;single&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compile a command and determine whether it is incomplete.</span>
+
+<span class="sd">        Arguments:</span>
+
+<span class="sd">        source -- the source string; may contain \n characters</span>
+<span class="sd">        filename -- optional filename from which source was read;</span>
+<span class="sd">                    default &quot;&lt;input&gt;&quot;</span>
+<span class="sd">        symbol -- optional grammar start symbol; &quot;single&quot; (default) or</span>
+<span class="sd">                  &quot;eval&quot;</span>
+
+<span class="sd">        Return value / exceptions raised:</span>
+
+<span class="sd">        - Return a code object if the command is complete and valid</span>
+<span class="sd">        - Return None if the command is incomplete</span>
+<span class="sd">        - Raise SyntaxError, ValueError or OverflowError if the command is a</span>
+<span class="sd">          syntax error (OverflowError and ValueError can be produced by</span>
+<span class="sd">          malformed literals).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_maybe_compile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../">Python Documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">codeop</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search/" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box" />
+          <input type="submit" value="Go" />
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2021, Pradyun Gedam.
+    <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    
+    
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+    
+    <br />
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

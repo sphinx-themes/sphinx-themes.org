@@ -334,6 +334,19 @@ A1B 2C3</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="http://www.yahoo.com">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="linenos"> 1</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"list"</span><span class="p">,</span> <span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="line-2"><span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">list_themes</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+</span><span id="line-3"><span class="linenos"> 3</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">"rich"</span><span class="p">)</span>
+</span><span id="line-4"><span class="linenos"> 4</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"src.themes"</span><span class="p">)</span>
+</span><span id="line-5"><span class="linenos"> 5</span>
+</span><span id="line-6"><span class="linenos"> 6</span>
+</span><span id="line-7"><span class="linenos"> 7</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="line-8"><span class="linenos"> 8</span><span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+</span><span id="line-9"><span class="linenos"> 9</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">"-r"</span><span class="p">,</span> <span class="s2">"requirements.txt"</span><span class="p">)</span>
+</span><span id="line-10"><span class="linenos">10</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"playwright"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="s2">"firefox"</span><span class="p">)</span>
+</span><span id="line-11"><span class="linenos">11</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"src.generate_sample_sites"</span><span class="p">,</span> <span class="o">*</span><span class="n">session</span><span class="o">.</span><span class="n">posargs</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
 </li>
 </ul>
 </li>

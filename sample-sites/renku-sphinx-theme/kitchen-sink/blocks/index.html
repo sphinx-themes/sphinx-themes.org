@@ -218,6 +218,22 @@ annoying.</p>
 &gt; Why didn&#39;t I think of that?
 </pre></div>
 </div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">list_themes</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+<span class="linenos"> 3</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;rich&quot;</span><span class="p">)</span>
+<span class="linenos"> 4</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;src.themes&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+<span class="linenos"> 9</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;-r&quot;</span><span class="p">,</span> <span class="s2">&quot;requirements.txt&quot;</span><span class="p">)</span>
+<span class="linenos">10</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;playwright&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;firefox&quot;</span><span class="p">)</span>
+<span class="linenos">11</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;src.generate_sample_sites&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">session</span><span class="o">.</span><span class="n">posargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Link to this heading"></a></h3>
@@ -276,8 +292,8 @@ annoying.</p>
 </div>
 <section id="with-caption">
 <h4>With caption<a class="headerlink" href="#with-caption" title="Link to this heading"></a></h4>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;session_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shorthands&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>

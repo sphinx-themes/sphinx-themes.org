@@ -63,27 +63,23 @@
     <h3><a href="../../">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">API documentation</a><ul>
-<li><a class="reference internal" href="#urllib.parse.DefragResult"><code class="docutils literal notranslate"><span class="pre">DefragResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.DefragResultBytes"><code class="docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.ParseResult"><code class="docutils literal notranslate"><span class="pre">ParseResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.ParseResultBytes"><code class="docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.SplitResult"><code class="docutils literal notranslate"><span class="pre">SplitResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.SplitResultBytes"><code class="docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.parse_qs"><code class="docutils literal notranslate"><span class="pre">parse_qs()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.parse_qsl"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote"><code class="docutils literal notranslate"><span class="pre">quote()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote_from_bytes"><code class="docutils literal notranslate"><span class="pre">quote_from_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote_plus"><code class="docutils literal notranslate"><span class="pre">quote_plus()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote_plus"><code class="docutils literal notranslate"><span class="pre">unquote_plus()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote_to_bytes"><code class="docutils literal notranslate"><span class="pre">unquote_to_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urldefrag"><code class="docutils literal notranslate"><span class="pre">urldefrag()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlencode"><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urljoin"><code class="docutils literal notranslate"><span class="pre">urljoin()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlparse"><code class="docutils literal notranslate"><span class="pre">urlparse()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlsplit"><code class="docutils literal notranslate"><span class="pre">urlsplit()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlunparse"><code class="docutils literal notranslate"><span class="pre">urlunparse()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlunsplit"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a><ul>
+<li><a class="reference internal" href="#code.InteractiveConsole.interact"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.interact()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.push"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.push()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.raw_input"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.raw_input()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.resetbuffer"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.resetbuffer()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a><ul>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.runcode"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.runcode()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.runsource"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.runsource()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.showsyntaxerror"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.showsyntaxerror()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.showtraceback"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.showtraceback()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.write"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.write()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code.compile_command"><code class="docutils literal notranslate"><span class="pre">compile_command()</span></code></a></li>
+<li><a class="reference internal" href="#code.interact"><code class="docutils literal notranslate"><span class="pre">interact()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -196,267 +192,167 @@ by setting the following options:</p>
 </pre></div>
 </div>
 </div>
-<p id="module-urllib.parse">Parse (absolute and relative) URLs.</p>
-<p>urlparse module is based upon the following RFC specifications.</p>
-<p>RFC 3986 (STD66): “Uniform Resource Identifiers” by T. Berners-Lee, R. Fielding
-and L.  Masinter, January 2005.</p>
-<p>RFC 2732 : “Format for Literal IPv6 Addresses in URL’s by R.Hinden, B.Carpenter
-and L.Masinter, December 1999.</p>
-<p>RFC 2396:  “Uniform Resource Identifiers (URI)”: Generic Syntax by T.
-Berners-Lee, R. Fielding, and L. Masinter, August 1998.</p>
-<p>RFC 2368: “The mailto URL scheme”, by P.Hoffman , L Masinter, J. Zawinski, July 1998.</p>
-<p>RFC 1808: “Relative Uniform Resource Locators”, by R. Fielding, UC Irvine, June
-1995.</p>
-<p>RFC 1738: “Uniform Resource Locators (URL)” by T. Berners-Lee, L. Masinter, M.
-McCahill, December 1994</p>
-<p>RFC 3986 is considered the current standard and any future changes to
-urlparse module should conform with it.  The urlparse module is
-currently not entirely compliant with this RFC due to defacto
-scenarios for parsing, and for backward compatibility purposes, some
-parsing quirks from older RFCs are retained. The testcases in
-test_urlparse.py provides a good indicator of parsing behavior.</p>
-<p>The WHATWG URL Parser spec should also be considered.  We are not compliant with
-it either due to existing user code API behavior expectations (Hyrum’s Law).
-It serves as a useful guide when making changes.</p>
+<p id="module-code">Utilities needed to emulate Python’s interactive interpreter.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.DefragResult">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResult" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="code.InteractiveConsole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">code.</span></span><span class="sig-name descname"><span class="pre">InteractiveConsole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;console&gt;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveConsole"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveConsole" title="Link to this definition">¶</a></dt>
+<dd><p>Closely emulate the behavior of the interactive Python interpreter.</p>
+<p>This class builds on InteractiveInterpreter and adds prompting
+using the familiar sys.ps1 and sys.ps2, and input buffering.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveConsole.interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">banner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exitmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveConsole.interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveConsole.interact" title="Link to this definition">¶</a></dt>
+<dd><p>Closely emulate the interactive Python console.</p>
+<p>The optional banner argument specifies the banner to print
+before the first interaction; by default it prints a banner
+similar to the one printed by the real Python interpreter,
+followed by the current class name in parentheses (so as not
+to confuse this with the real interpreter – since it’s so
+close!).</p>
+<p>The optional exitmsg argument specifies the exit message
+printed when exiting. Pass the empty string to suppress
+printing an exit message. If exitmsg is not given or None,
+a default message is printed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveConsole.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveConsole.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveConsole.push" title="Link to this definition">¶</a></dt>
+<dd><p>Push a line to the interpreter.</p>
+<p>The line should not have a trailing newline; it may have
+internal newlines.  The line is appended to a buffer and the
+interpreter’s runsource() method is called with the
+concatenated contents of the buffer as source.  If this
+indicates that the command was executed or invalid, the buffer
+is reset; otherwise, the command is incomplete, and the buffer
+is left as it was after the line was appended.  The return
+value is 1 if more input is required, 0 if the line was dealt
+with in some way (this is the same as runsource()).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveConsole.raw_input">
+<span class="sig-name descname"><span class="pre">raw_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveConsole.raw_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveConsole.raw_input" title="Link to this definition">¶</a></dt>
+<dd><p>Write a prompt and read a line.</p>
+<p>The returned line does not include the trailing newline.
+When the user enters the EOF key sequence, EOFError is raised.</p>
+<p>The base implementation uses the built-in function
+input(); a subclass may replace this with a different
+implementation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveConsole.resetbuffer">
+<span class="sig-name descname"><span class="pre">resetbuffer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveConsole.resetbuffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveConsole.resetbuffer" title="Link to this definition">¶</a></dt>
+<dd><p>Reset the input buffer.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.DefragResultBytes">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">DefragResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#DefragResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.DefragResultBytes" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="code.InteractiveInterpreter">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">code.</span></span><span class="sig-name descname"><span class="pre">InteractiveInterpreter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter" title="Link to this definition">¶</a></dt>
+<dd><p>Base class for InteractiveConsole.</p>
+<p>This class deals with parsing and interpreter state (the user’s
+namespace); it doesn’t deal with input buffering or prompting or
+input file naming (the filename is always passed in explicitly).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveInterpreter.runcode">
+<span class="sig-name descname"><span class="pre">runcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter.runcode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter.runcode" title="Link to this definition">¶</a></dt>
+<dd><p>Execute a code object.</p>
+<p>When an exception occurs, self.showtraceback() is called to
+display a traceback.  All exceptions are caught except
+SystemExit, which is reraised.</p>
+<p>A note about KeyboardInterrupt: this exception may occur
+elsewhere in this code, and may not always be caught.  The
+caller should be prepared to deal with it.</p>
+</dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.ParseResult">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">ParseResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#ParseResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.ParseResult" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveInterpreter.runsource">
+<span class="sig-name descname"><span class="pre">runsource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;input&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter.runsource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter.runsource" title="Link to this definition">¶</a></dt>
+<dd><p>Compile and run some source in the interpreter.</p>
+<p>Arguments are as for compile_command().</p>
+<p>One of several things can happen:</p>
+<p>1) The input is incorrect; compile_command() raised an
+exception (SyntaxError or OverflowError).  A syntax traceback
+will be printed by calling the showsyntaxerror() method.</p>
+<p>2) The input is incomplete, and more input is required;
+compile_command() returned None.  Nothing happens.</p>
+<p>3) The input is complete; compile_command() returned a code
+object.  The code is executed by calling self.runcode() (which
+also handles run-time exceptions, except for SystemExit).</p>
+<p>The return value is True in case 2, False in the other cases (unless
+an exception is raised).  The return value can be used to
+decide whether to use sys.ps1 or sys.ps2 to prompt the next
+line.</p>
+</dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.ParseResultBytes">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">ParseResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#ParseResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.ParseResultBytes" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveInterpreter.showsyntaxerror">
+<span class="sig-name descname"><span class="pre">showsyntaxerror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter.showsyntaxerror"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter.showsyntaxerror" title="Link to this definition">¶</a></dt>
+<dd><p>Display the syntax error that just occurred.</p>
+<p>This doesn’t display a stack trace because there isn’t one.</p>
+<p>If a filename is given, it is stuffed in the exception instead
+of what was there before (because Python’s parser always uses
+“&lt;string&gt;” when reading from a string).</p>
+<p>The output is written by self.write(), below.</p>
+</dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.SplitResult">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">SplitResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#SplitResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.SplitResult" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveInterpreter.showtraceback">
+<span class="sig-name descname"><span class="pre">showtraceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter.showtraceback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter.showtraceback" title="Link to this definition">¶</a></dt>
+<dd><p>Display the exception that just occurred.</p>
+<p>We remove the first stack item because it is our own code.</p>
+<p>The output is written by self.write(), below.</p>
+</dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="urllib.parse.SplitResultBytes">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">SplitResultBytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#SplitResultBytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.SplitResultBytes" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="code.InteractiveInterpreter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#InteractiveInterpreter.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.InteractiveInterpreter.write" title="Link to this definition">¶</a></dt>
+<dd><p>Write a string.</p>
+<p>The base implementation writes to sys.stderr; a subclass may
+replace this with a different implementation.</p>
+</dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.parse_qs">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">parse_qs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_blank_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_parsing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&amp;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#parse_qs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.parse_qs" title="Link to this definition">¶</a></dt>
-<dd><p>Parse a query given as a string argument.</p>
-<p>Arguments:</p>
-<p>qs: percent-encoded query string to be parsed</p>
-<dl class="simple">
-<dt>keep_blank_values: flag indicating whether blank values in</dt><dd><p>percent-encoded queries should be treated as blank strings.
-A true value indicates that blanks should be retained as
-blank strings.  The default false value indicates that
-blank values are to be ignored and treated as if they were
-not included.</p>
-</dd>
-<dt>strict_parsing: flag indicating what to do with parsing errors.</dt><dd><p>If false (the default), errors are silently ignored.
-If true, errors raise a ValueError exception.</p>
-</dd>
-<dt>encoding and errors: specify how to decode percent-encoded sequences</dt><dd><p>into Unicode characters, as accepted by the bytes.decode() method.</p>
-</dd>
-<dt>max_num_fields: int. If set, then throws a ValueError if there</dt><dd><p>are more than n fields read by parse_qsl().</p>
-</dd>
-<dt>separator: str. The symbol to use for separating the query arguments.</dt><dd><p>Defaults to &amp;.</p>
-</dd>
-</dl>
-<p>Returns a dictionary.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.parse_qsl">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">parse_qsl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_blank_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_parsing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&amp;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#parse_qsl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.parse_qsl" title="Link to this definition">¶</a></dt>
-<dd><p>Parse a query given as a string argument.</p>
+<dt class="sig sig-object py" id="code.compile_command">
+<span class="sig-prename descclassname"><span class="pre">code.</span></span><span class="sig-name descname"><span class="pre">compile_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;input&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/codeop/#compile_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.compile_command" title="Link to this definition">¶</a></dt>
+<dd><p>Compile a command and determine whether it is incomplete.</p>
 <p>Arguments:</p>
-<p>qs: percent-encoded query string to be parsed</p>
-<dl class="simple">
-<dt>keep_blank_values: flag indicating whether blank values in</dt><dd><p>percent-encoded queries should be treated as blank strings.
-A true value indicates that blanks should be retained as blank
-strings.  The default false value indicates that blank values
-are to be ignored and treated as if they were  not included.</p>
-</dd>
-<dt>strict_parsing: flag indicating what to do with parsing errors. If</dt><dd><p>false (the default), errors are silently ignored. If true,
-errors raise a ValueError exception.</p>
-</dd>
-<dt>encoding and errors: specify how to decode percent-encoded sequences</dt><dd><p>into Unicode characters, as accepted by the bytes.decode() method.</p>
-</dd>
-<dt>max_num_fields: int. If set, then throws a ValueError</dt><dd><p>if there are more than n fields read by parse_qsl().</p>
-</dd>
-<dt>separator: str. The symbol to use for separating the query arguments.</dt><dd><p>Defaults to &amp;.</p>
-</dd>
-</dl>
-<p>Returns a list, as G-d intended.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.quote">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'abc</span> <span class="pre">def'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="s"><span class="pre">'abc%20def'</span></span></span></span><a class="reference internal" href="../../_modules/urllib/parse/#quote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote" title="Link to this definition">¶</a></dt>
-<dd><p>Each part of a URL, e.g. the path info, the query, etc., has a
-different set of reserved characters that must be quoted. The
-quote function offers a cautious (not minimal) way to quote a
-string for most of these parts.</p>
-<p>RFC 3986 Uniform Resource Identifier (URI): Generic Syntax lists
-the following (un)reserved characters.</p>
-<p>unreserved    = ALPHA / DIGIT / “-” / “.” / “_” / “~”
-reserved      = gen-delims / sub-delims
-gen-delims    = “:” / “/” / “?” / “#” / “[” / “]” / “&#64;”
-sub-delims    = “!” / “$” / “&amp;” / “’” / “(” / “)”</p>
+<p>source – the source string; may contain n characters
+filename – optional filename from which source was read; default</p>
 <blockquote>
-<div><p>/ “*” / “+” / “,” / “;” / “=”</p>
+<div><p>“&lt;input&gt;”</p>
 </div></blockquote>
-<p>Each of the reserved characters is reserved in some component of a URL,
-but not necessarily in all of them.</p>
-<p>The quote function %-escapes all characters that are neither in the
-unreserved chars (“always safe”) nor the additional chars set via the
-safe arg.</p>
-<p>The default for the safe arg is ‘/’. The character is reserved, but in
-typical usage the quote function is being called on a path where the
-existing slash characters are to be preserved.</p>
-<p>Python 3.7 updates from using RFC 2396 to RFC 3986 to quote URL strings.
-Now, “~” is included in the set of unreserved characters.</p>
-<p>string and safe may be either str or bytes objects. encoding and errors
-must not be specified if string is a bytes object.</p>
-<p>The optional encoding and errors parameters specify how to deal with
-non-ASCII characters, as accepted by the str.encode method.
-By default, encoding=’utf-8’ (characters are encoded with UTF-8), and
-errors=’strict’ (unsupported characters raise a UnicodeEncodeError).</p>
+<dl class="simple">
+<dt>symbol – optional grammar start symbol; “single” (default), “exec”</dt><dd><p>or “eval”</p>
+</dd>
+</dl>
+<p>Return value / exceptions raised:</p>
+<ul class="simple">
+<li><p>Return a code object if the command is complete and valid</p></li>
+<li><p>Return None if the command is incomplete</p></li>
+<li><p>Raise SyntaxError, ValueError or OverflowError if the command is a
+syntax error (OverflowError and ValueError can be produced by
+malformed literals).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.quote_from_bytes">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote_from_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#quote_from_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote_from_bytes" title="Link to this definition">¶</a></dt>
-<dd><p>Like quote(), but accepts a bytes object rather than a str, and does
-not perform string-to-bytes encoding.  It always returns an ASCII string.
-quote_from_bytes(b’abc def?’) -&gt; ‘abc%20def%3f’</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.quote_plus">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">quote_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#quote_plus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.quote_plus" title="Link to this definition">¶</a></dt>
-<dd><p>Like quote(), but also replace ‘ ‘ with ‘+’, as required for quoting
-HTML form values. Plus signs in the original string are escaped unless
-they are included in safe. It also does not have safe default to ‘/’.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.unquote">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#unquote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote" title="Link to this definition">¶</a></dt>
-<dd><p>Replace %xx escapes by their single-character equivalent. The optional
-encoding and errors parameters specify how to decode percent-encoded
-sequences into Unicode characters, as accepted by the bytes.decode()
-method.
-By default, percent-encoded sequences are decoded with UTF-8, and invalid
-sequences are replaced by a placeholder character.</p>
-<p>unquote(‘abc%20def’) -&gt; ‘abc def’.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.unquote_plus">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'replace'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#unquote_plus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote_plus" title="Link to this definition">¶</a></dt>
-<dd><p>Like unquote(), but also replace plus signs by spaces, as required for
-unquoting HTML form values.</p>
-<p>unquote_plus(‘%7e/abc+def’) -&gt; ‘~/abc def’</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.unquote_to_bytes">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">unquote_to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'abc%20def'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">b'abc</span> <span class="pre">def'.</span></span></span><a class="reference internal" href="../../_modules/urllib/parse/#unquote_to_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.unquote_to_bytes" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urldefrag">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urldefrag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urldefrag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urldefrag" title="Link to this definition">¶</a></dt>
-<dd><p>Removes any existing fragment from URL.</p>
-<p>Returns a tuple of the defragmented URL and the fragment.  If
-the URL contained no fragments, the second element is the
-empty string.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urlencode">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlencode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doseq=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote_via=&lt;function</span> <span class="pre">quote_plus&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlencode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlencode" title="Link to this definition">¶</a></dt>
-<dd><p>Encode a dict or sequence of two-element tuples into a URL query string.</p>
-<p>If any values in the query arg are sequences and doseq is true, each
-sequence element is converted to a separate parameter.</p>
-<p>If the query arg is a sequence of two-element tuples, the order of the
-parameters in the output will match the order of parameters in the
-input.</p>
-<p>The components of a query arg may each be either a string or a bytes type.</p>
-<p>The safe, encoding, and errors parameters are passed down to the function
-specified by quote_via (encoding and errors only if a component is a str).</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urljoin">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urljoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urljoin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urljoin" title="Link to this definition">¶</a></dt>
-<dd><p>Join a base URL and a possibly relative URL to form an absolute
-interpretation of the latter.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urlparse">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlparse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlparse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlparse" title="Link to this definition">¶</a></dt>
-<dd><p>Parse a URL into 6 components:
-&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;</p>
-<p>The result is a named 6-tuple with fields corresponding to the
-above. It is either a ParseResult or ParseResultBytes object,
-depending on the type of the url parameter.</p>
-<p>The username, password, hostname, and port sub-components of netloc
-can also be accessed as attributes of the returned object.</p>
-<p>The scheme argument provides the default value of the scheme
-component when no scheme is found in url.</p>
-<p>If allow_fragments is False, no attempt is made to separate the
-fragment component from the previous component, which can be either
-path or query.</p>
-<p>Note that % escapes are not expanded.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urlsplit">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlsplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_fragments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlsplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlsplit" title="Link to this definition">¶</a></dt>
-<dd><p>Parse a URL into 5 components:
-&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;</p>
-<p>The result is a named 5-tuple with fields corresponding to the
-above. It is either a SplitResult or SplitResultBytes object,
-depending on the type of the url parameter.</p>
-<p>The username, password, hostname, and port sub-components of netloc
-can also be accessed as attributes of the returned object.</p>
-<p>The scheme argument provides the default value of the scheme
-component when no scheme is found in url.</p>
-<p>If allow_fragments is False, no attempt is made to separate the
-fragment component from the previous component, which can be either
-path or query.</p>
-<p>Note that % escapes are not expanded.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urlunparse">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlunparse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlunparse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlunparse" title="Link to this definition">¶</a></dt>
-<dd><p>Put a parsed URL back together again.  This may result in a
-slightly different, but equivalent URL, if the URL that was parsed
-originally had redundant delimiters, e.g. a ? with an empty query
-(the draft states that these are equivalent).</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="urllib.parse.urlunsplit">
-<span class="sig-prename descclassname"><span class="pre">urllib.parse.</span></span><span class="sig-name descname"><span class="pre">urlunsplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib/parse/#urlunsplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#urllib.parse.urlunsplit" title="Link to this definition">¶</a></dt>
-<dd><p>Combine the elements of a tuple as returned by urlsplit() into a
-complete URL as a string. The data argument can be any five-item iterable.
-This may result in a slightly different, but equivalent URL, if the URL that
-was parsed originally had unnecessary delimiters (for example, a ? with an
-empty query; the RFC states that these are equivalent).</p>
+<dt class="sig sig-object py" id="code.interact">
+<span class="sig-prename descclassname"><span class="pre">code.</span></span><span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">banner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readfunc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exitmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/code/#interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#code.interact" title="Link to this definition">¶</a></dt>
+<dd><p>Closely emulate the interactive Python interpreter.</p>
+<p>This is a backwards compatible interface to the InteractiveConsole
+class.  When readfunc is not specified, it attempts to import the
+readline module to enable GNU readline if it is available.</p>
+<p>Arguments (all optional, all default to None):</p>
+<p>banner – passed to InteractiveConsole.interact()
+readfunc – if not None, replaces InteractiveConsole.raw_input()
+local – passed to InteractiveInterpreter.__init__()
+exitmsg – passed to InteractiveConsole.interact()</p>
 </dd></dl>
 
 </section>
@@ -472,27 +368,23 @@ empty query; the RFC states that these are equivalent).</p>
     <h3><a href="../../">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">API documentation</a><ul>
-<li><a class="reference internal" href="#urllib.parse.DefragResult"><code class="docutils literal notranslate"><span class="pre">DefragResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.DefragResultBytes"><code class="docutils literal notranslate"><span class="pre">DefragResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.ParseResult"><code class="docutils literal notranslate"><span class="pre">ParseResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.ParseResultBytes"><code class="docutils literal notranslate"><span class="pre">ParseResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.SplitResult"><code class="docutils literal notranslate"><span class="pre">SplitResult</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.SplitResultBytes"><code class="docutils literal notranslate"><span class="pre">SplitResultBytes</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.parse_qs"><code class="docutils literal notranslate"><span class="pre">parse_qs()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.parse_qsl"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote"><code class="docutils literal notranslate"><span class="pre">quote()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote_from_bytes"><code class="docutils literal notranslate"><span class="pre">quote_from_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.quote_plus"><code class="docutils literal notranslate"><span class="pre">quote_plus()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote_plus"><code class="docutils literal notranslate"><span class="pre">unquote_plus()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.unquote_to_bytes"><code class="docutils literal notranslate"><span class="pre">unquote_to_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urldefrag"><code class="docutils literal notranslate"><span class="pre">urldefrag()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlencode"><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urljoin"><code class="docutils literal notranslate"><span class="pre">urljoin()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlparse"><code class="docutils literal notranslate"><span class="pre">urlparse()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlsplit"><code class="docutils literal notranslate"><span class="pre">urlsplit()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlunparse"><code class="docutils literal notranslate"><span class="pre">urlunparse()</span></code></a></li>
-<li><a class="reference internal" href="#urllib.parse.urlunsplit"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole</span></code></a><ul>
+<li><a class="reference internal" href="#code.InteractiveConsole.interact"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.interact()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.push"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.push()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.raw_input"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.raw_input()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveConsole.resetbuffer"><code class="docutils literal notranslate"><span class="pre">InteractiveConsole.resetbuffer()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter</span></code></a><ul>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.runcode"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.runcode()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.runsource"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.runsource()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.showsyntaxerror"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.showsyntaxerror()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.showtraceback"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.showtraceback()</span></code></a></li>
+<li><a class="reference internal" href="#code.InteractiveInterpreter.write"><code class="docutils literal notranslate"><span class="pre">InteractiveInterpreter.write()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code.compile_command"><code class="docutils literal notranslate"><span class="pre">compile_command()</span></code></a></li>
+<li><a class="reference internal" href="#code.interact"><code class="docutils literal notranslate"><span class="pre">interact()</span></code></a></li>
 </ul>
 </li>
 </ul>

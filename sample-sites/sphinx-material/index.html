@@ -1,346 +1,117 @@
 <!DOCTYPE html>
+<html lang="en" class="no-js">
 
-<html lang="en" data-content_root="./">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Demo -- failed to build</title>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="lang:clipboard.copy" content="Copy to clipboard">
-  <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
-  <meta name="lang:search.result.none" content="No matching documents">
-  <meta name="lang:search.result.one" content="1 matching document">
-  <meta name="lang:search.result.other" content="# matching documents">
-  <meta name="lang:search.tokenizer" content="[\s\-]+">
-
-  
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
-
-    <style>
-      body,
-      input {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
-      }
-
-      code,
-      kbd,
-      pre {
-        font-family: "Roboto Mono", "Courier New", Courier, monospace
-      }
-    </style>
-  
-
-  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
-  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
-  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
-  
-  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
-  
-  <meta name="theme-color" content="#3f51b5">
-  <script src="_static/javascripts/modernizr.js"></script>
-  
-  
-  
-    <title>Material Sample &#8212; Material</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
-    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
-    <script src="_static/documentation_options.js?v=187304be"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="index" title="Index" href="genindex/" />
-    <link rel="search" title="Search" href="search/" />
-    <link rel="next" title="Kitchen Sink" href="kitchen-sink/" />
-  
-   
-
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
   </head>
-  <body dir=ltr
-        data-md-color-primary=blue-grey data-md-color-accent=blue>
-  
-  <svg class="md-svg">
-    <defs data-children-count="0">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-      
-    </defs>
-  </svg>
-  
-  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
-  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
-  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#index" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex navheader">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="#" title="Material"
-           class="md-header-nav__button md-logo">
-          
-            &nbsp;
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">Material</span>
-          <span class="md-header-nav__topic"> Material Sample </span>
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" action="search/" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder=""Search""
-             autocapitalize="off" autocomplete="off" spellcheck="false"
-             data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
+
+  <body class="bg-red-50 antialiased max-w-4xl mx-auto p-4 my-2">
+    <h1 class="text-red-700 text-5xl text-center">
+      Build Failed!
+    </h1>
+    <div class="mt-2">
+      <div class="text-gray-700 text-center font-semibold">09 Mar 2025 12:29:34 UTC</div>
+    </div>
+    <div class="mt-4">
+      <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
+        Unless all site previews are broken, this is a problem with the
+        <a class="underline"
+          href="https://pypi.org/project/sphinx-material/"><code>sphinx-material</code></a>
+        package.
       </div>
     </div>
-  </div>
-</div>
-
-      </div>
-      
-      
-  
-  <script src="_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = ""versions.json"",
-        target_loc = "../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
-  </script>
-  
-
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Configuration</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">{&#39;html_theme&#39;: &#39;sphinx_material&#39;}</pre>
     </div>
-  </nav>
-</header>
+    <div class="mt-4">
+      <div class="text-gray-700 text-center font-semibold">Output</div>
+      <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
+[01mRunning Sphinx v8.2.3[39;49;00m
+[01mloading translations [en]... [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+done
+[01mmaking output directory... [39;49;00mdone
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+loading intersphinx inventory &#39;sphinx&#39; from https://www.sphinx-doc.org/objects.inv ...
+intersphinx inventory has moved: https://www.sphinx-doc.org/objects.inv -&gt; https://www.sphinx-doc.org/en/master/objects.inv
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mwriting output... [39;49;00m
+[01mbuilding [dirhtml]: [39;49;00mtargets for 18 source files that are out of date
+[01mupdating environment: [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+[new config] 18 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[  6%] [35mindex[39;49;00m
+[01mreading sources... [39;49;00m[ 11%] [35mkitchen-sink/admonitions[39;49;00m
+[01mreading sources... [39;49;00m[ 17%] [35mkitchen-sink/api[39;49;00m
+[01mreading sources... [39;49;00m[ 22%] [35mkitchen-sink/blocks[39;49;00m
+[01mreading sources... [39;49;00m[ 28%] [35mkitchen-sink/generic[39;49;00m
+[01mreading sources... [39;49;00m[ 33%] [35mkitchen-sink/images[39;49;00m
+[01mreading sources... [39;49;00m[ 39%] [35mkitchen-sink/index[39;49;00m
+[01mreading sources... [39;49;00m[ 44%] [35mkitchen-sink/lists[39;49;00m
+[01mreading sources... [39;49;00m[ 50%] [35mkitchen-sink/really-long[39;49;00m
+[01mreading sources... [39;49;00m[ 56%] [35mkitchen-sink/structure[39;49;00m
+[01mreading sources... [39;49;00m[ 61%] [35mkitchen-sink/tables[39;49;00m
+[01mreading sources... [39;49;00m[ 67%] [35mkitchen-sink/typography[39;49;00m
+[01mreading sources... [39;49;00m[ 72%] [35mlong-page[39;49;00m
+[01mreading sources... [39;49;00m[ 78%] [35mplaceholder-four[39;49;00m
+[01mreading sources... [39;49;00m[ 83%] [35mplaceholder-one[39;49;00m
+[01mreading sources... [39;49;00m[ 89%] [35mplaceholder-three[39;49;00m
+[01mreading sources... [39;49;00m[ 94%] [35mplaceholder-two[39;49;00m
+[01mreading sources... [39;49;00m[100%] [35mreally-long-title[39;49;00m
 
-  
-  <div class="md-container">
-    
-    
-    
-  <nav class="md-tabs" data-md-component="tabs">
-    <div class="md-tabs__inner md-grid">
-      <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="#" class="md-tabs__link">Material</a></li>
-      </ul>
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m
+[01mcopying static files... [39;49;00m
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-material/_static/language_data.js
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-material/_static/documentation_options.js
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-material/_static/basic.css
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-material/_static/material.css
+[01mcopying static files: [39;49;00mdone
+[01mcopying extra files... [39;49;00m
+[01mcopying extra files: [39;49;00mdone
+[01mcopying assets: [39;49;00mdone
+[01mwriting output... [39;49;00m[  6%] [32mindex[39;49;00m
+[01mwriting output... [39;49;00m[ 11%] [32mkitchen-sink/admonitions[39;49;00m
+[01mwriting output... [39;49;00m[ 17%] [32mkitchen-sink/api[39;49;00m
+[01mwriting output... [39;49;00m[ 22%] [32mkitchen-sink/blocks[39;49;00m
+[01mwriting output... [39;49;00m[ 28%] [32mkitchen-sink/generic[39;49;00m
+[01mwriting output... [39;49;00m[ 33%] [32mkitchen-sink/images[39;49;00m
+[01mwriting output... [39;49;00m[ 39%] [32mkitchen-sink/index[39;49;00m
+[01mwriting output... [39;49;00m[ 44%] [32mkitchen-sink/lists[39;49;00m
+[01mwriting output... [39;49;00m[ 50%] [32mkitchen-sink/really-long[39;49;00m
+[01mwriting output... [39;49;00m[ 56%] [32mkitchen-sink/structure[39;49;00m
+[01mwriting output... [39;49;00m[ 61%] [32mkitchen-sink/tables[39;49;00m
+[01mwriting output... [39;49;00m[ 67%] [32mkitchen-sink/typography[39;49;00m
+[01mwriting output... [39;49;00m[ 72%] [32mlong-page[39;49;00m
+[01mwriting output... [39;49;00m[ 78%] [32mplaceholder-four[39;49;00m
+[01mwriting output... [39;49;00m[ 83%] [32mplaceholder-one[39;49;00m
+[01mwriting output... [39;49;00m[ 89%] [32mplaceholder-three[39;49;00m
+[01mwriting output... [39;49;00m[ 94%] [32mplaceholder-two[39;49;00m
+[01mwriting output... [39;49;00m[100%] [32mreally-long-title[39;49;00m
+
+[01mgenerating indices... [39;49;00mgenindex py-modindex done
+[01mhighlighting module code... [39;49;00m[ 50%] [94mcode[39;49;00m
+[01mhighlighting module code... [39;49;00m[100%] [94mcodeop[39;49;00m
+
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild finished with problems, 3 warnings (with warnings treated as errors).[39;49;00m
+
+======================================== stderr ========================================
+[31m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:7: ERROR: Unexpected indentation. [docutils][39;49;00m
+[91m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:8: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils][39;49;00m
+[91mWARNING: cannot cache unpickleable configuration value: &#39;html_context&#39; (because it contains a function, class, or module object) [config.cache][39;49;00m
+</pre>
     </div>
-  </nav>
-    <main class="md-main">
-      <div class="md-main__inner md-grid" data-md-component="container">
-        
-          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="#" title="Material" class="md-nav__button md-logo">
-      
-        <img src="_static/" alt=" logo" width="48" height="48">
-      
-    </a>
-    <a href="#"
-       title="Material">Material</a>
-  </label>
-  
-
-</nav>
-              </div>
-            </div>
-          </div>
-          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">"Contents"</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Material Sample</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#quickstart" class="md-nav__link">Quickstart</a>
-        </li>
-        <li class="md-nav__item"><a href="#documentation" class="md-nav__link">Documentation</a>
-        </li>
-        <li class="md-nav__item"><a href="#exploration" class="md-nav__link">Exploration</a>
-        </li>
-        <li class="md-nav__item"><a href="#navigation" class="md-nav__link">Navigation</a>
-        </li></ul>
-            </nav>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/index.rst.txt">Show Source</a> </li>
-
-<li id="searchbox" class="md-nav__item"></li>
-
-  </ul>
-</nav>
-              </div>
-            </div>
-          </div>
-        
-        <div class="md-content">
-          <article class="md-content__inner md-typeset" role="main">
-            
-  <section id="theme-display-sample">
-<h1 id="index--page-root">Material Sample<a class="headerlink" href="#index--page-root" title="Link to this heading">¶</a></h1>
-<p>This is a demo site for Material, generated as part of
-<a class="reference external" href="https://sphinx-themes.org">Sphinx Themes Gallery</a>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This sample documentation was generated on Mar 09, 2025, and is rebuilt weekly.</p>
-</div>
-<section id="quickstart">
-<h2 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h2>
-<ol class="arabic">
-<li><p>Install this theme:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx-material
-</pre></div>
-</div>
-</li>
-<li><p>Set the following in your existing Sphinx documentation’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">'sphinx_material'</span>
-</pre></div>
-</div>
-</li>
-<li><p>Build your Sphinx documentation with the new theme! <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-</ol>
-</section>
-<section id="documentation">
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
-<p>You can find this theme’s documentation at <a class="reference external" href="https://bashtage.github.io/sphinx-material/">https://bashtage.github.io/sphinx-material/</a>.</p>
-</section>
-<section id="exploration">
-<h2 id="exploration">Exploration<a class="headerlink" href="#exploration" title="Link to this heading">¶</a></h2>
-<p>The <a class="reference internal" href="kitchen-sink/"><span class="doc">Kitchen Sink</span></a> section contains pages that contains basically
-everything that you can with Sphinx “out-of-the-box”.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="kitchen-sink/">Kitchen Sink</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/admonitions/">Admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/api/">API documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/blocks/">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/generic/">Generic items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/images/">Images &amp; Figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/lists/">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/">Structural Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/tables/">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kitchen-sink/typography/">Typography</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<p>Browsing through that section should give you a good idea of how stuff looks
-in this theme.</p>
-</section>
-<section id="navigation">
-<h2 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Link to this heading">¶</a></h2>
-<p>This is the most important part of a documentation theme. If you like
-the general look of the theme, please make sure that it is possible to
-easily navigate through this sample documentation.</p>
-<p>Ideally, the pages listed below should also be reachable via links
-somewhere else on this page (like the sidebar, or a topbar). If they are
-not, then this theme might need additional configuration to provide the
-sort of site navigation that’s necessary for “real” documentation.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-one/">Placeholder Page One</a></li>
-<li class="toctree-l1"><a class="reference internal" href="placeholder-two/">Placeholder Page Two</a></li>
-<li class="toctree-l1"><a class="reference internal" href="really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="long-page/">Long Page</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<p>Some pages like <a class="reference internal" href="placeholder-three/"><span class="doc">Placeholder Page Three</span></a> are declared in a “hidden”
-toctree, and thus would not be visible above. However, they are still a
-part of the overall site hierarchy and some themes may choose to present
-them to the user in the site navigation.</p>
-<hr class="docutils"/>
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
-<p>If you hit an error while building documentation with a new theme,
-it is likely due to some theme-specific configuration in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
-file of that documentation. These are usually <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code>,
-<code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code> or <code class="docutils literal notranslate"><span class="pre">html_theme_config</span></code>. Unsetting those will likely
-allow the build to proceed.</p>
-</aside>
-</aside>
-</section>
-</section>
-
-
-          </article>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="md-footer">
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-          
-          
-            <a href="kitchen-sink/" title="Kitchen Sink"
-               class="md-flex md-footer-nav__link md-footer-nav__link--next"
-               rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
-                class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> "Next" </span> Kitchen Sink </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink"><i
-                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          
-        </a>
-        
-      </nav>
-    </div>
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner md-grid">
-        <div class="md-footer-copyright">
-          <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2021, Pradyun Gedam.
-              
-          </div>
-            Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
-             and
-            <a href="https://github.com/bashtage/sphinx-material/">Material for
-              Sphinx</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="_static/javascripts/application.js"></script>
-  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
   </body>
+
 </html>
