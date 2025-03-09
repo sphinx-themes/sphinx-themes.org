@@ -1,15 +1,12 @@
 /**
-  CHANGES FOR CUSTOM.CSS SHOULD BE MADE INSIDE CUSTOM.SCSS
-  
-  Requirements:
-  - pip install compile-scss https://pypi.org/project/compile-scss/
+CHANGES FOR CUSTOM.CSS SHOULD BE MADE INSIDE CUSTOM.SCSS
 
 To make changes to styling, first run the following in the root of the project:
-    - pip install -e .[dev]
+  - pip install -e .[dev]
 
 Then you can edit and make changes to this file and see the results by doing the following:
   Steps:
-  - Run:  compile_scss --watch from inside /renku_sphinx_theme
+  - Run: pysassc custom.scss custom.css
   - That command will compile scss changes into css.
   - After doing changes commit scss and css files.
 */
@@ -36,7 +33,7 @@ $rk-pink: #d26a98;
 
 @media screen and (min-width: 1100px) {
   .wy-nav-content-wrap {
-      background:$rk-blue;
+    background: $rk-blue;
   }
 }
 
@@ -86,7 +83,7 @@ a {
     margin-bottom: 1rem;
   }
 
-	// code blocks
+  // code blocks
   .highlight {
     background: $rk-background;
   }
@@ -152,7 +149,7 @@ a {
     }
   }
 
-	// level 1 link
+  // level 1 link
   .toctree-l1 {
     opacity: 0.5;
     &:hover {
@@ -161,9 +158,9 @@ a {
     }
   }
 
-	// selected level 1 link
+  // selected level 1 link
   li.toctree-l1.current {
-		opacity: 1;
+    opacity: 1;
     background-color: inherit;
     > a {
       border: 0px;
