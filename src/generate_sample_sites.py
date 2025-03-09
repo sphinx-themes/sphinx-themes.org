@@ -62,6 +62,7 @@ async def generate_site(
             "--verbose",
             "--builder=dirhtml",
             f"--conf-dir={env.path}",
+            "--fail-on-warning",
             str(BUILD["sources"]),
             str(destination_path),
         )
