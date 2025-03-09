@@ -8,7 +8,7 @@ import nox
 @nox.session
 def update(session):
     session.install("pip-tools")
-    session.run("pip-compile")
+    session.run("pip-compile", "requirements.in", "--upgrade")
 
 
 @nox.session(name="list", reuse_venv=True)
