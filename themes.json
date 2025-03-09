@@ -58,10 +58,10 @@
       "pypi": "insipid-sphinx-theme"
     },
     {
-      "config": "sphinx_material",
-      "display": "Material",
-      "documentation": "https://bashtage.github.io/sphinx-material/",
-      "pypi": "sphinx-material"
+      "config": "sphinx_immaterial",
+      "display": "Immaterial",
+      "documentation": "https://jbms.github.io/sphinx-immaterial/",
+      "pypi": "sphinx-immaterial"
     },
     {
       "config": {
