@@ -59,9 +59,9 @@ async def generate_site(
         progress.log(f"[yellow]{theme.name}[reset]: Building site...")
         returncode, output = await env.run(
             "sphinx-build",
-            "-v",
-            "-b=dirhtml",
-            f"-c={env.path}",
+            "--verbose",
+            "--builder=dirhtml",
+            f"--conf-dir={env.path}",
             str(BUILD["sources"]),
             str(destination_path),
         )
