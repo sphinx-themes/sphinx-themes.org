@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">09 Mar 2025 12:29:40 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">11 Mar 2025 20:04:47 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -35,9 +35,13 @@
 ======================================== stderr ========================================
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/bin/sphinx-build&#34;, line 4, in &lt;module&gt;
+    from sphinx.cmd.build import main
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 18, in &lt;module&gt;
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 26, in &lt;module&gt;
-ImportError: cannot import name &#39;Domain&#39; from &#39;sphinx.domains&#39; (unknown location)
+    from sphinx.application import Sphinx
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 18, in &lt;module&gt;
+    from docutils.parsers.rst import Directive, roles
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/parsers/rst/__init__.py&#34;, line 77, in &lt;module&gt;
+ImportError: cannot import name &#39;universal&#39; from &#39;docutils.transforms&#39; (unknown location)
 </pre>
     </div>
   </body>
