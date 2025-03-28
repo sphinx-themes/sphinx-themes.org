@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">17 Mar 2025 01:09:30 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">28 Mar 2025 23:47:39 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,10 +31,61 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
+Running Sphinx v5.0.0
+Original exception:
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/other.py&#34;, line 7, in &lt;module&gt;
+    from docutils.parsers.rst.directives.admonitions import BaseAdmonition
+ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
+
 
 ======================================== stderr ========================================
-usage: sphinx-build [OPTIONS] SOURCEDIR OUTPUTDIR [FILENAMES...]
-sphinx-build: error: unrecognized arguments: --verbose --builder=dirhtml --conf-dir=build/sphinx-nameko-theme --fail-on-warning
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/other.py&#34;, line 7, in &lt;module&gt;
+    from docutils.parsers.rst.directives.admonitions import BaseAdmonition
+ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 272, in build_main
+    app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 219, in __init__
+    self.setup_extension(extension)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 380, in setup_extension
+    self.registry.load_extension(self, extname)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 433, in load_extension
+    raise ExtensionError(__(&#39;Could not import extension %s&#39;) % extname,
+sphinx.errors.ExtensionError: Could not import extension sphinx.directives.other (exception: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;)
+
+Extension error:
+Could not import extension sphinx.directives.other (exception: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;)
 </pre>
     </div>
   </body>

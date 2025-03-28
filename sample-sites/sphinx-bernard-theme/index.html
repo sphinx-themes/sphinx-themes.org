@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">17 Mar 2025 01:09:26 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">28 Mar 2025 23:47:30 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -70,9 +70,9 @@ locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/loc
 [01mpreparing documents... [39;49;00mdone
 [01mcopying assets... [39;49;00m
 [01mcopying static files... [39;49;00m
-Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/basic.css
 Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/language_data.js
 Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/documentation_options.js
+Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/basic.css
 Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/bernard.css
 [01mcopying static files: [39;49;00mdone
 [01mcopying extra files... [39;49;00m
@@ -81,8 +81,10 @@ Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-
 [01mwriting output... [39;49;00m[  6%] [32mindex[39;49;00m
 
 ======================================== stderr ========================================
-[31m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:7: ERROR: Unexpected indentation. [docutils][39;49;00m
-[91m/usr/lib/python3.12/code.py:docstring of codeop.compile_command:8: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils][39;49;00m
+[31m/usr/lib/python3.12/urllib/parse.py:docstring of urllib.parse.quote:13: ERROR: Unexpected indentation. [docutils][39;49;00m
+[91m/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed [docutils][39;49;00m
+[91m/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/generic.rst:271: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils][39;49;00m
+[91m/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed [docutils][39;49;00m
 
 [91mTheme error![39;49;00m
 
@@ -99,8 +101,8 @@ Versions
 Last Messages
 =============
 
-    Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/language_data.js
     Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/documentation_options.js
+    Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/basic.css
     Writing evaluated template result to /home/runner/work/sphinx-themes.org/sphinx-themes.org/public/sample-sites/sphinx-bernard-theme/_static/bernard.css
     copying static files: done
     copying extra files...
@@ -133,12 +135,16 @@ Traceback
 
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1212, in handle_page
+        output = self.templates.render(templatename, ctx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 217, in render
+        return self.environment.get_template(template).render(context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 1295, in render
         self.environment.handle_exception()
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 942, in handle_exception
         raise rewrite_traceback_stack(source=source)
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/themes/basic/page.html&#34;, line 10, in top-level template code
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/themes/basic/page.html&#34;, line 2, in top-level template code
         {%- extends &#34;layout.html&#34; %}
         ^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx_bernard_theme/layout.html&#34;, line 25, in top-level template code
@@ -150,26 +156,29 @@ Traceback
     
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 432, in build_main
+        app.build(args.force_all, args.filenames)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 426, in build
-        allowed_exceptions: Tuple[Type[Exception], ...] = ()) -&gt; List:
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.builder.build_update()
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 375, in build_update
+        self.build(
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 454, in build
-        self.env.merge_info_from(docs, env, self.app)
+        self.write(docnames, updated_docnames, method)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 735, in write
+        self.write_documents(docnames)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 749, in write_documents
+        self._write_serial(sorted_docnames)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 768, in _write_serial
+        self.write_doc(docname, doctree)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 677, in write_doc
-        self.write_domain_indices()
+        self.handle_page(docname, ctx, event_arg=doctree)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1228, in handle_page
-        # logo_url
-                ^^^
+        raise ThemeError(msg) from exc
     sphinx.errors.ThemeError: An error happened in rendering the page index.
     Reason: UndefinedError(&#34;&#39;style&#39; is undefined&#34;)
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-vdz6qpxf.log
+/tmp/sphinx-err-ey_2gt7m.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.

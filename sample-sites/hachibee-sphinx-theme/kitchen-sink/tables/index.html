@@ -1,0 +1,428 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3c.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-style-type" content="text/css">
+        <meta http-equiv="content-script-type" content="text/javascript">
+        <meta name=generator content="Sphinx">
+        <meta name=viewport content="width=device-width,initial-scale=1.0">
+        <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+        <title>Tables &mdash; Hachibee</title>
+
+        
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/genericons.css" type="text/css" /><link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="stylesheet" href="../../_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/mobile.css" type="text/css" media="only screen and (max-device-width: 568px)">
+        
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/backtop.js"></script>
+
+    </head>
+    <body>
+    <div class="content">
+        <header id="top-header">
+            <div class="left">
+    <ul class="breadcrumb">
+        <li>
+            <a href="../../">Hachibee</a>
+             &raquo;
+        </li>
+        <li>
+            <a href="../" accesskey="U">Kitchen Sink</a>
+             &raquo;
+        </li> 
+    </ul>
+            </div>
+            <div class="right">
+                
+    <ul class="relative">
+      <li >
+            <a href="../../genindex/" title="General Index"
+               class="icon-index"
+                accesskey="I"></a>
+        </li>
+      <li >
+            <a href="../../py-modindex/" title="Python Module Index"
+               class="icon-modules"
+                ></a>
+        </li>
+      <li >
+            <a href="../typography/" title="Typography"
+               class="icon-next"
+                accesskey="N"></a>
+        </li>
+      <li >
+            <a href="../structure/" title="Structural Elements"
+               class="icon-previous"
+                accesskey="P"></a>
+        </li>
+    </ul>
+            </div>
+            <div class="clearer"></div>
+        </header>
+        
+
+        <div class="documentwrapper">
+        <div class="sidebarwrapper">
+            <div class="sidebar">
+                    <h3><a href="../../">Top</a></h3><nav class="localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Tables</a><ul>
+<li><a class="reference internal" href="#grid-tables">Grid Tables</a><ul>
+<li><a class="reference internal" href="#giant-tables">Giant Tables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#table-containing-code">Table containing code</a></li>
+<li><a class="reference internal" href="#list-tables">List Tables</a></li>
+</ul>
+</li>
+</ul>
+
+</nav><div class="relative">
+      <h4>Previous topic</h4>
+      <p class="topless"><a href="../structure/"
+                            title="previous chapter">Structural Elements</a></p>
+      <h4>Next topic</h4>
+      <p class="topless"><a href="../typography/"
+                            title="next chapter">Typography</a></p>
+</div>
+  <h4>This Page</h4>
+  <a href="../../_sources/kitchen-sink/tables.rst.txt"
+           rel="nofollow">Show Source</a>
+<div id="searchbox" style="display: none">
+  <h5>Quick search</h5>
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" placeholder=' quick search' />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            </div>
+        </div>
+            <div class="document">
+                <div class="body">
+                    
+    <section id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h1>
+<section id="grid-tables">
+<h2>Grid Tables<a class="headerlink" href="#grid-tables" title="Permalink to this heading">¶</a></h2>
+<p>Here’s a grid table followed by a simple table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header row, column 1
+(header rows optional)</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1, column 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="3"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td colspan="2" rowspan="2"><ul class="simple">
+<li><p>Table cells</p></li>
+<li><p>contain</p></li>
+<li><p>body elements.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 5</p></td>
+<td colspan="2"><p>Cells may also be
+empty: <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<section id="giant-tables">
+<h3>Giant Tables<a class="headerlink" href="#giant-tables" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="table-containing-code">
+<h2>Table containing code<a class="headerlink" href="#table-containing-code" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Installing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pradyun’s pip fork and installer</p></td>
+<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;pip @ git+https://github.com/pradyunsg/pip#20.3.3&quot;</span><span class="w"> </span><span class="s2">&quot;installer @ git+https://github.com/pradyunsg/installer&quot;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>PyPI</p></td>
+<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pip<span class="w"> </span>installer
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="list-tables">
+<h2>List Tables<a class="headerlink" href="#list-tables" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">List tables can have captions like this one. Fixed widths, <em>both</em> header row and header column.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>List table</p></th>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: <a class="reference external" href="https://www.sphinx-doc.org/">https://www.sphinx-doc.org/</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Stub Row 1</p></th>
+<td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: <a class="reference external" href="https://www.sphinx-doc.org/">https://www.sphinx-doc.org/</a></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Stub Row 2</p></th>
+<td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: <a class="reference external" href="https://www.sphinx-doc.org/">https://www.sphinx-doc.org/</a></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 3</p></th>
+<td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: <a class="reference external" href="https://www.sphinx-doc.org/">https://www.sphinx-doc.org/</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">A list table with a header <em>row</em>, auto-width.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3</p></td>
+<td><p>Row 1, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3</p></td>
+<td><p>Row 2, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3</p></td>
+<td><p>Row 3, Col 4 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">A list table with a header (“stub”) <em>column</em>, auto-width.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>Stub Row 1</p></th>
+<td><p>Row 1, Col 1</p></td>
+<td><p>Row 1, Col 2</p></td>
+<td><p>Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 2</p></th>
+<td><p>Row 2, Col 1</p></td>
+<td><p>Row 2, Col 2</p></td>
+<td><p>Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Stub Row 3</p></th>
+<td><p>Row 3, Col 1</p></td>
+<td><p>Row 3, Col 2</p></td>
+<td><p>Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Stub Row 4</p></th>
+<td><p>Row 4, Col 1</p></td>
+<td><p>Row 4, Col 2</p></td>
+<td><p>Row 4, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris arcu.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">This is a list table with images in it.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id5">
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<figcaption>
+<p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<figcaption>
+<p><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <div id="raise-top"></div>
+
+                </div>
+            </div> <!-- document -->
+
+
+        </div> <!-- documentwrapper -->
+        <footer>
+            <p class="show-copyright">
+                &copy; Copyright 2021, Pradyun Gedam.
+            </p>
+            <p class="show-sphinx">
+              Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 5.0.0.
+            </p>
+            
+              <p class="theme-info"><a href="https://pypi.python.org/pypi/hachibee-sphinx-theme">Sphinx-hachibee-theme</a> is hosted on <a href="https://github.com/hachibeeDI/Sphinx-hachibee-theme">Github</a></p>
+            
+        </footer>
+    </div>
+    <script type="text/javascript" src="../../_static/main.js" async></script>
+    </body>
+</html>

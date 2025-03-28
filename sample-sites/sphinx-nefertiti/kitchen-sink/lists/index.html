@@ -17,8 +17,8 @@
     
     <link rel="canonical" href="kitchen-sink/lists" />
           <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../../_static/sphinx-nefertiti-default.min.css?v=0f5ffd77" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../../_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../../_static/sphinx-nefertiti-default.min.css?v=84f2ec69" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../../_static/fonts/nunito/stylesheet.css?v=ce93212b" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../../_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../../_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../../_static/pygments-light.css?v=970f37b1" /><!-- add (1) -->
@@ -431,19 +431,6 @@ A1B 2C3</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">list_themes</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
-<span class="linenos"> 3</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;rich&quot;</span><span class="p">)</span>
-<span class="linenos"> 4</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;src.themes&quot;</span><span class="p">)</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="linenos"> 8</span><span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
-<span class="linenos"> 9</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;-r&quot;</span><span class="p">,</span> <span class="s2">&quot;requirements.txt&quot;</span><span class="p">)</span>
-<span class="linenos">10</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;playwright&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;firefox&quot;</span><span class="p">)</span>
-<span class="linenos">11</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;src.generate_sample_sites&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">session</span><span class="o">.</span><span class="n">posargs</span><span class="p">)</span>
-</pre></div>
-</div>
 </li>
 </ul>
 </li>
@@ -626,7 +613,7 @@ Sed feugiat sagittis neque quis eleifend. Duis rutrum lectus sit amet mattis sus
         
         
         <div class="built-with pt-2">
-          Built with <a href="http://sphinx-doc.org">Sphinx 8.2.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.4</a>
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.2.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.5</a>
         </div>
         
       </div>

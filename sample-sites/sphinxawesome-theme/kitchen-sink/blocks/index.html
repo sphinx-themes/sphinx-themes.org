@@ -238,22 +238,6 @@ annoying.</p>
 </span><span id="line-3">&gt; Why didn't I think of that?
 </span></code></pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id1" title="Link to this code"><span>#</span></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="linenos"> 1</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"list"</span><span class="p">,</span> <span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="line-2"><span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">list_themes</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
-</span><span id="line-3"><span class="linenos"> 3</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">"rich"</span><span class="p">)</span>
-</span><span id="line-4"><span class="linenos"> 4</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"src.themes"</span><span class="p">)</span>
-</span><span id="line-5"><span class="linenos"> 5</span>
-</span><span id="line-6"><span class="linenos"> 6</span>
-</span><span id="line-7"><span class="linenos"> 7</span><span class="nd">@nox</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">reuse_venv</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="line-8"><span class="linenos"> 8</span><span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
-</span><span id="line-9"><span class="linenos"> 9</span>    <span class="n">session</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">"-r"</span><span class="p">,</span> <span class="s2">"requirements.txt"</span><span class="p">)</span>
-</span><span id="line-10"><span class="linenos">10</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"playwright"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="s2">"firefox"</span><span class="p">)</span>
-</span><span id="line-11"><span class="linenos">11</span>    <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"src.generate_sample_sites"</span><span class="p">,</span> <span class="o">*</span><span class="n">session</span><span class="o">.</span><span class="n">posargs</span><span class="p">)</span>
-</span></code></pre></div>
-</div>
-</div>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#doctest-blocks'"><span>#</span></a></h3>
@@ -312,8 +296,8 @@ annoying.</p>
 </div>
 <section id="with-caption">
 <h4>With caption<a class="headerlink" href="#with-caption" title="Link to this heading"><span>#</span></a></h4>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id2" title="Link to this code"><span>#</span></a></div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Link to this code"><span>#</span></a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">{</span>
 </span><span id="line-2"><span class="w">  </span><span class="nt">"session_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shorthands"</span><span class="p">,</span>
 </span><span id="line-3"><span class="w">  </span><span class="nt">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
