@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">21 Apr 2025 01:13:38 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">24 Apr 2025 22:59:28 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -38,13 +38,25 @@ done
 Original exception:
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1324, in _find_and_load_unlocked
-ModuleNotFoundError: No module named &#39;sphinx.transforms.post_transforms.images&#39;
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/epub3.py&#34;, line 16, in &lt;module&gt;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/_epub_base.py&#34;, line 19, in &lt;module&gt;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 64, in &lt;module&gt;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/writers/html.py&#34;, line 7, in &lt;module&gt;
+    from docutils.writers.html4css1 import Writer
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/html4css1/__init__.py&#34;, line 21, in &lt;module&gt;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/_html_base.py&#34;, line 33, in &lt;module&gt;
+ImportError: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py)
 
 
 ======================================== stderr ========================================
@@ -54,7 +66,7 @@ ModuleNotFoundError: No module named &#39;sphinx.transforms.post_transforms.imag
 Versions
 ========
 
-* Platform:         linux; (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)
+* Platform:         linux; (Linux-6.11.0-1012-azure-x86_64-with-glibc2.39)
 * Python version:   3.12.3 (CPython)
 * Sphinx version:   8.2.3
 * Docutils version: 0.21.2
@@ -76,13 +88,25 @@ Traceback
 
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+        mod = import_module(extname)
+              ^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
         return _bootstrap._gcd_import(name[level:], package, level)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1324, in _find_and_load_unlocked
-    ModuleNotFoundError: No module named &#39;sphinx.transforms.post_transforms.images&#39;
+      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+      File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/epub3.py&#34;, line 16, in &lt;module&gt;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/_epub_base.py&#34;, line 19, in &lt;module&gt;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 64, in &lt;module&gt;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/writers/html.py&#34;, line 7, in &lt;module&gt;
+        from docutils.writers.html4css1 import Writer
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/html4css1/__init__.py&#34;, line 21, in &lt;module&gt;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/_html_base.py&#34;, line 33, in &lt;module&gt;
+    ImportError: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py)
     
     The above exception was the direct cause of the following exception:
     
@@ -91,11 +115,12 @@ Traceback
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 287, in __init__
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 489, in setup_extension
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 544, in load_extension
-    sphinx.errors.ExtensionError: Could not import extension sphinx.transforms.post_transforms.images (exception: No module named &#39;sphinx.transforms.post_transforms.images&#39;)
+        raise ExtensionError(
+    sphinx.errors.ExtensionError: Could not import extension sphinx.builders.epub3 (exception: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py))
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-km8foh8v.log
+/tmp/sphinx-err-lrchn8f1.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
