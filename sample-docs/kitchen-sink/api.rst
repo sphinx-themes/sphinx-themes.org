@@ -7,6 +7,15 @@
 API documentation
 *****************
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    domains/api_*_domain
+
+Using autodoc
+=============
+
 Using Sphinx's :any:`sphinx.ext.autodoc` plugin, it is possible to auto-generate documentation of a Python module.
 
 .. tip::
