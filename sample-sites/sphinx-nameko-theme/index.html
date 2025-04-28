@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">24 Apr 2025 22:59:35 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">28 Apr 2025 01:13:24 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,14 +31,105 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
+Running Sphinx v5.0.0
+making output directory... done
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+loading intersphinx inventory from https://www.sphinx-doc.org/objects.inv...
+intersphinx inventory has moved: https://www.sphinx-doc.org/objects.inv -&gt; https://www.sphinx-doc.org/en/master/objects.inv
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+building [mo]: targets for 0 po files that are out of date
+building [dirhtml]: targets for 18 source files that are out of date
+updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
+[new config] 18 added, 0 changed, 0 removed
+reading sources... [  5%] index
+reading sources... [ 11%] kitchen-sink/admonitions
+reading sources... [ 16%] kitchen-sink/api
+reading sources... [ 22%] kitchen-sink/blocks
+reading sources... [ 27%] kitchen-sink/generic
+reading sources... [ 33%] kitchen-sink/images
+reading sources... [ 38%] kitchen-sink/index
+reading sources... [ 44%] kitchen-sink/lists
+reading sources... [ 50%] kitchen-sink/really-long
+reading sources... [ 55%] kitchen-sink/structure
+reading sources... [ 61%] kitchen-sink/tables
+reading sources... [ 66%] kitchen-sink/typography
+reading sources... [ 72%] long-page
+reading sources... [ 77%] placeholder-four
+reading sources... [ 83%] placeholder-one
+reading sources... [ 88%] placeholder-three
+reading sources... [ 94%] placeholder-two
+reading sources... [100%] really-long-title
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [  5%] index
+writing output... [ 11%] kitchen-sink/admonitions
+writing output... [ 16%] kitchen-sink/api
+writing output... [ 22%] kitchen-sink/blocks
+writing output... [ 27%] kitchen-sink/generic
+writing output... [ 33%] kitchen-sink/images
+writing output... [ 38%] kitchen-sink/index
+writing output... [ 44%] kitchen-sink/lists
+writing output... [ 50%] kitchen-sink/really-long
+writing output... [ 55%] kitchen-sink/structure
+writing output... [ 61%] kitchen-sink/tables
+writing output... [ 66%] kitchen-sink/typography
+writing output... [ 72%] long-page
+writing output... [ 77%] placeholder-four
+writing output... [ 83%] placeholder-one
+writing output... [ 88%] placeholder-three
+writing output... [ 94%] placeholder-two
+writing output... [100%] really-long-title
+
+generating indices... genindex failed
 
 ======================================== stderr ========================================
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/admonitions.rst:161: ERROR: Unknown directive type &#34;versionremoved&#34;.
+
+.. versionremoved:: v0.1.1
+
+   Here&#39;s a version removed message.
+
+   We also support *italic*, **bold**, ``code``, `links &lt;https://www.sphinx-doc.org/en/master/&gt;`_, and more.
+/usr/lib/python3.12/urllib/parse.py:docstring of urllib.parse.quote:13: ERROR: Unexpected indentation.
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
+
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/bin/sphinx-build&#34;, line 4, in &lt;module&gt;
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 18, in &lt;module&gt;
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 32, in &lt;module&gt;
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/highlighting.py&#34;, line 21, in &lt;module&gt;
-ModuleNotFoundError: No module named &#39;sphinx.pygments_styles&#39;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1072, in handle_page
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 189, in render
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 1295, in render
+    self.environment.handle_exception()
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/themes/basic/genindex.html&#34;, line 28, in top-level template code
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx_nameko_theme/nameko/layout.html&#34;, line 1, in top-level template code
+    {%- extends &#34;basic/layout.html&#34; %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 210, in get_source
+jinja2.exceptions.TemplateNotFound: basic/layout.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 276, in build_main
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 329, in build
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 288, in build_update
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 355, in build
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 658, in finish
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/parallel.py&#34;, line 34, in add_task
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py&#34;, line 517, in wrapper
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 674, in gen_indices
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 730, in write_genindex
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1079, in handle_page
+sphinx.errors.ThemeError: An error happened in rendering the page genindex.
+Reason: TemplateNotFound(&#39;basic/layout.html&#39;)
+
+Theme error:
+An error happened in rendering the page genindex.
+Reason: TemplateNotFound(&#39;basic/layout.html&#39;)
 </pre>
     </div>
   </body>
