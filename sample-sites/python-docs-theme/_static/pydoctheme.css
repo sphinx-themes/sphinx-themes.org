@@ -1,5 +1,3 @@
-@import url('classic.css');
-
 /* Common colours */
 :root {
     --good-color: rgb(41 100 51);
@@ -200,16 +198,6 @@ div.sphinxsidebar input[type='text'] {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Sphinx 4.x and earlier compat */
-    height: 100%;
-    background-color: #CCCCCC;
-    margin-left: 0;
-    color: #444444;
-    font-size: 1.2em;
-    cursor: pointer;
-    padding-top: 1px;
-    float: none;
-    /* after Sphinx 4.x and earlier is dropped, only the below is needed */
     width: 12px;
     min-width: 12px;
     border-radius: 0 5px 5px 0;
@@ -340,6 +328,10 @@ tt, code, pre {
     font-size: 96.5%;
 }
 
+div.body pre {
+    line-height: 120%;
+}
+
 div.body tt,
 div.body code {
     border-radius: 3px;
@@ -450,17 +442,23 @@ div.genindex-jumpbox a {
     top: 0;
     right: 0;
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
+    font-size: 80%;
+    padding-left: .5em;
+    padding-right: .5em;
+    height: 100%;
+    max-height: min(100%, 2.4em);
     border-radius: 0 3px 0 0;
-    color: #ac9; /* follows div.body pre */
-    border-color: #ac9; /* follows div.body pre */
-    border-style: solid; /* follows div.body pre */
-    border-width: 1px; /* follows div.body pre */
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ac9; /* follows div.body pre */
 }
 
-.copybutton[data-hidden='true'] {
-    text-decoration: line-through;
+.copybutton:hover {
+    background-color: #eee;
+}
+
+.copybutton:active {
+    background-color: #ddd;
 }
 
 @media (max-width: 1023px) {

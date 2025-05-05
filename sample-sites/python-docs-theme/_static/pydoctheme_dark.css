@@ -176,3 +176,16 @@ img.invert-in-dark-mode {
     --versionchanged: var(--middle-color);
     --deprecated: var(--bad-color);
 }
+
+.copybutton {
+    color: #ac9; /* follows div.body pre */
+    background-color: #222222; /* follows body */
+}
+
+.copybutton:hover {
+    background-color: #434343;
+}
+
+.copybutton:active {
+    background-color: #656565;
+}
