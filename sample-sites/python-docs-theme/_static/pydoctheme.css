@@ -451,6 +451,7 @@ div.genindex-jumpbox a {
     color: #000;
     background-color: #fff;
     border: 1px solid #ac9; /* follows div.body pre */
+    display: none;
 }
 
 .copybutton:hover {
@@ -459,6 +460,14 @@ div.genindex-jumpbox a {
 
 .copybutton:active {
     background-color: #ddd;
+}
+
+.highlight:active .copybutton {
+    display: block;
+}
+
+.highlight:hover .copybutton {
+    display: block;
 }
 
 @media (max-width: 1023px) {
