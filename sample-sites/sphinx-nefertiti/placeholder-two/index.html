@@ -13,13 +13,16 @@
     <meta name="docsearch:release" content="" />
     <meta name="docsearch:version" content="" />
     
+      <meta name="theme-color" content="#0DCAF0" />
+    
+    
       <title>Placeholder Page Two &mdash; Nefertiti</title>
     
     <link rel="canonical" href="placeholder-two" />
           <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=84f2ec69" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=ce93212b" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=06ca779e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/ubuntu-sans-mono/stylesheet.css?v=8616a587" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=970f37b1" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
@@ -31,11 +34,24 @@
     <style>
       :root {
         --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
-        --nftt-font-monospace: "Red Hat Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-font-monospace: "Ubuntu Sans Mono", var(--nftt-font-family-monospace) !important;
         --nftt-project-name-font: var(--nftt-body-font-family);
         --nftt-documentation-font: var(--nftt-body-font-family);
         --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);}
-      h1 *, h2 *, h3 *, h4 *, h5 *, h6 * { font-size: inherit; }
+
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
     </style>
   </head>
   <body>
@@ -45,7 +61,7 @@
     <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
       <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
         <div class="border-bottom mb-2 pb-2 w-100">
-          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
           <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
         </div>
       </div>
@@ -81,7 +97,7 @@
       <li class="nav-item col-12 col-xl-auto">
         <form id="nftt-search-form" action="../search/" method="get">
           <div class="input-group">
-            <input type="text" name="q" class="form-control search-input" placeholder="Search docs" aria-label="Search" aria-describedby="button-search">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
             <input type="hidden" name="check_keywords" value="yes" />
             <input type="hidden" name="area" value="default" />
             <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
@@ -104,15 +120,16 @@
               
               
               
-              <!-- colorscheme_dropdown.html -->
+              
+              <!-- lightdark-dropdown.html -->
 <li class="nav-item dropdown">
-  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
     <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
-    <span id="snftt-luz-text" class="d-xl-none ms-2">Toggle light/dark</span>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
     <li>
-      <h6 class="dropdown-header">Light/dark</h6>
+      <h6 class="dropdown-header">Change appearance</h6>
     </li>
     <li>
       <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
@@ -137,7 +154,7 @@
         <span>
           <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
         </span>
-        <span class="ms-3">Default</span>
+        <span class="ms-3">Automatic</span>
         <i class="bi bi-check ms-auto"></i>
       </a>
     </li>
@@ -169,7 +186,7 @@
 <div class="offcanvas-body">
   <nav class="toc" aria-label="Main menu">
     <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
-      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="filter" aria-label="filter">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
     </div>
     <ul>
 <li class="toctree-l1"><a class="reference internal" href="../kitchen-sink/">Kitchen Sink</a><ul>
@@ -269,7 +286,7 @@
         
         
         <div class="built-with pt-2">
-          Built with <a href="http://sphinx-doc.org">Sphinx 8.2.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.5</a>
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.2.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.2</a>
         </div>
         
       </div>
@@ -281,7 +298,7 @@
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/docs-versions.js?v=08b0cbfb"></script>
-    <script src="../_static/sphinx-nefertiti.min.js?v=de1d41e1"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=51494676"></script>
     <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
   </body>
 </html>
