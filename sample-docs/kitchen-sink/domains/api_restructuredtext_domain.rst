@@ -6,7 +6,7 @@
 Directives in the reStructuredText domain
 -----------------------------------------
 
-The domain name is ``rst``, see https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html
+The domain name is ``rst``. See https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html.
 
 .. rst:directive:: my_directive
 

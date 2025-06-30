@@ -6,7 +6,7 @@
 Directives in the JavaScript domain
 -----------------------------------
 
-The domain name is ``js``, see https://www.sphinx-doc.org/en/master/usage/domains/javascript.html
+The domain name is ``js``. See https://www.sphinx-doc.org/en/master/usage/domains/javascript.html.
 
 .. js:function:: $.myFunction(href, callback[, errback])
 

@@ -6,14 +6,14 @@
 Directives in the C++ domain
 ----------------------------
 
-The domain name is ``cpp``, see https://www.sphinx-doc.org/en/master/usage/domains/cpp.html.
+The domain name is ``cpp``. See https://www.sphinx-doc.org/en/master/usage/domains/cpp.html.
 
 The following directives are available. All declarations can start with a
-visibility statement (``public``, ``private`` or ``protected``).
+visibility statement, ``public``, ``private``, or ``protected``.
 
 .. cpp:class:: MyClass : public MyBase, MyOtherBase
 
-   The ``.. cpp:class::`` directive, showing a class/struct.
+   The ``.. cpp:class::`` directive, showing a class or struct.
 
 .. cpp:class:: OuterScope::MyClass2 : public MyBase, MyOtherBase
 
@@ -21,15 +21,15 @@ visibility statement (``public``, ``private`` or ``protected``).
 
 .. cpp:class:: template<typename T, std::size_t N> std::array
 
-   The ``.. cpp:class::`` directive, showing a class/struct.
+   The ``.. cpp:class::`` directive, showing a class or struct.
 
 .. cpp:class:: template<> std::array2<bool, 256>
 
-   The ``.. cpp:class::`` directive, showing a class/struct.
+   The ``.. cpp:class::`` directive, showing a class or struct.
 
 .. cpp:class:: template<typename T> std::array3<T, 42>
 
-   The ``.. cpp:class::`` directive, showing a class/struct.
+   The ``.. cpp:class::`` directive, showing a class or struct.
 
 .. cpp:function:: bool myMethod(int arg1, std::string arg2)
 
@@ -49,7 +49,7 @@ visibility statement (``public``, ``private`` or ``protected``).
 
 .. cpp:function:: constexpr void my_constexpr_function(std::string &bar[2]) noexcept
 
-   The ``.. cpp:function::`` directive, showing a constexpr function.
+   The ``.. cpp:function::`` directive, showing a ``constexpr`` function.
 
 .. cpp:function:: MyClass::MyClass4(const MyClass&) = default
 

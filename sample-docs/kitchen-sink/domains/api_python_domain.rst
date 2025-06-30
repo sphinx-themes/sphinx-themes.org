@@ -6,7 +6,7 @@
 Directives in the Python domain
 -------------------------------
 
-The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domains/python.html
+The domain name is ``py``. See https://www.sphinx-doc.org/en/master/usage/domains/python.html.
 
 .. py:module:: my_module
    :platform: platform1, platform2
@@ -31,7 +31,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :single-line-parameter-list:
    :single-line-type-parameter-list:
 
-   The ``py:function`` directive; using Python 3.12 *type parameters*.
+   The ``py:function`` directive, using Python 3.12 *type parameters*.
 
 .. py:data:: my_data
    :type: type
@@ -63,7 +63,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :single-line-parameter-list:
    :single-line-type-parameter-list:
 
-   The ``py:exception`` directive; using Python 3.12 *type parameters*.
+   The ``py:exception`` directive, using Python 3.12 *type parameters*.
 
 .. py:class:: MyClass
    :canonical: my_module.MyClass
@@ -92,7 +92,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :single-line-parameter-list:
    :single-line-type-parameter-list:
 
-   The ``py:class`` directive; using Python 3.12 *type parameters*.
+   The ``py:class`` directive, using Python 3.12 *type parameters*.
 
 .. py:attribute:: my_attribute
    :type: type
@@ -111,8 +111,8 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :classmethod:
    :type: type
 
-   The ``py:property`` directive;
-   using the ``:abstractmethod:``, ``:classmethod:`` flags.
+   The ``py:property`` directive,
+   using the ``:abstractmethod:`` and ``:classmethod:`` flags.
 
 .. py:type:: MyType
    :canonical: my_module.MyType
@@ -136,8 +136,8 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :single-line-type-parameter-list:
    :staticmethod:
 
-   The ``py:method`` directive;
-   using all of the ``:abstractmethod:``, ``:async:``, ``:classmethod:``, ``:final:``, ``:staticmethod:`` flags;
+   The ``py:method`` directive,
+   using all of the ``:abstractmethod:``, ``:async:``, ``:classmethod:``, ``:final:``, and ``:staticmethod:`` flags,
    using Python 3.12 *type parameters*.
 
 .. py:staticmethod:: my_staticmethod(parameters)
@@ -146,7 +146,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
 
 .. py:staticmethod:: my_staticmethod_type_parameters[ParameterT](parameter: ParameterT) -> ParameterT
 
-   The ``py:staticmethod`` directive; using Python 3.12 *type parameters*.
+   The ``py:staticmethod`` directive, using Python 3.12 *type parameters*.
 
 .. py:classmethod:: my_classmethod(parameters)
 
@@ -154,7 +154,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
 
 .. py:classmethod:: my_classmethod_type_parameters[ParameterT](parameter: ParameterT) -> ParameterT
 
-   The ``py:classmethod`` directive; using Python 3.12 *type parameters*.
+   The ``py:classmethod`` directive, using Python 3.12 *type parameters*.
 
 .. py:decorator:: my_decorator
    :single-line-parameter-list:
@@ -172,7 +172,7 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
    :single-line-parameter-list:
    :single-line-type-parameter-list:
 
-   The ``py:decorator`` directive; using Python 3.12 *type parameters*.
+   The ``py:decorator`` directive, using Python 3.12 *type parameters*.
 
 .. py:decoratormethod:: my_decoratormethod
 
@@ -184,4 +184,4 @@ The domain name is ``py``, see https://www.sphinx-doc.org/en/master/usage/domain
 
 .. py:decoratormethod:: my_decoratormethod_signature_type_parameters[ParameterT](signature)
 
-   The ``py:decoratormethod`` directive; using Python 3.12 *type parameters*.
+   The ``py:decoratormethod`` directive, using Python 3.12 *type parameters*.

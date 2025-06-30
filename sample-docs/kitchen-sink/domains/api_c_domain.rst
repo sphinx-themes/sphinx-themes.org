@@ -6,7 +6,7 @@
 Directives in the C domain
 --------------------------
 
-The domain name is ``c``, see https://www.sphinx-doc.org/en/master/usage/domains/c.html
+The domain name is ``c``. See https://www.sphinx-doc.org/en/master/usage/domains/c.html.
 
 .. c:member:: PyObject *PyTypeObject.tp_bases
 
@@ -28,12 +28,12 @@ The domain name is ``c``, see https://www.sphinx-doc.org/en/master/usage/domains
 
 .. c:macro:: MY_MACRO
 
-   The ``.. c:macro::`` directive, showing a macro, i.e., a C-language #define, without the replacement text.
+   The ``.. c:macro::`` directive, showing a macro, i.e., a C-language ``#define``, without the replacement text.
 
 .. c:macro:: MY_MACRO_ARGS(arg_list)
    :single-line-parameter-list:
 
-   The ``.. c:macro::`` directive, showing a macro, i.e., a C-language #define, without the replacement text.
+   The ``.. c:macro::`` directive, showing a macro, i.e., a C-language ``#define``, without the replacement text.
 
 .. c:struct:: MyStruct
 
