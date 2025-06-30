@@ -135,7 +135,6 @@ class AllInOne:
     Uses Google-style docstrings
     (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).
 
-
     Attributes:
         _my_property: A private property of the class.
     """

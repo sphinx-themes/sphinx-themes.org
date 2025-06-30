@@ -81,7 +81,7 @@ visibility statement, ``public``, ``private``, or ``protected``.
 
 .. cpp:type:: std::vector<int> MyListType
 
-   The ``.. cpp:type::`` directive, showing a typedef-like declaration of a type.
+   The ``.. cpp:type::`` directive, showing a ``typedef``-like declaration of a type.
 
 .. cpp:type:: MyContainerType::const_iterator
 
@@ -93,7 +93,7 @@ visibility statement, ``public``, ``private``, or ``protected``.
 
 .. cpp:type:: template<typename T> MyTemplatedTypeAlias = std::vector<T>
 
-   The ``.. cpp:type::`` directive, showing a templated type alias can also be
+   The ``.. cpp:type::`` directive, showing a templated type alias.
 
 .. cpp:enum:: MyEnum
 
