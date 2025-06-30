@@ -1,6 +1,5 @@
 import os
 import sys
-import textwrap
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
