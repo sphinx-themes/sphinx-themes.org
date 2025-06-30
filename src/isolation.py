@@ -1,10 +1,6 @@
-"""Manage isolated virtual environments for each build.
-"""
+"""Manage isolated virtual environments for each build."""
 
 import asyncio
-import os
-import shutil
-import subprocess
 import sys
 
 from .constants import BUILD
@@ -28,9 +24,10 @@ class IsolatedEnvironment:
             return
 
         process = await asyncio.create_subprocess_exec(
-            sys.executable,
-            "-m",
+            "uv",
             "venv",
+            "--python",
+            sys.executable,
             str(self.path),
             stdout=asyncio.subprocess.DEVNULL,
             stderr=asyncio.subprocess.DEVNULL,
@@ -40,19 +37,13 @@ class IsolatedEnvironment:
             raise RuntimeError("Could not create virtual environment.")
 
     async def install(self, *args, **kwargs):
-        returncode, _ = await self.run("pip", "install", *args, **kwargs)
+        returncode, _ = await self.run("uv", "pip", "install", *args, **kwargs)
         if returncode:
             raise RuntimeError(f"Could not install: {' '.join(args)}")
 
-    async def run(self, *args, external=False, env={}):
-        assert args
-
-        locations = [str(path.resolve()) for path in self.bin_paths]
-        executable_path = shutil.which(args[0], path=os.pathsep.join(locations))
-
+    async def run(self, *args, env=None):
         process = await asyncio.create_subprocess_exec(
-            executable_path,
-            *args[1:],
+            *args,
             env=env,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
