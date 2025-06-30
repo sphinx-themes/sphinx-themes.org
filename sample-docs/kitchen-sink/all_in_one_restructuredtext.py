@@ -8,7 +8,6 @@ The module's docstrings use reStructuredText markup.
 # - show roles to refer to elements
 # - async with
 # - async for
-# - Python 3.12 type parameters
 # - add example of numpy-style docstrings
 
 import abc
