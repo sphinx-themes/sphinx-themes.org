@@ -17,7 +17,7 @@ visibility statement, ``public``, ``private``, or ``protected``.
 
 .. cpp:class:: OuterScope::MyClass2 : public MyBase, MyOtherBase
 
-   The ``.. cpp:class::`` directive, showing a class/struct.
+   The ``.. cpp:class::`` directive, showing a class or struct.
 
 .. cpp:class:: template<typename T, std::size_t N> std::array
 
