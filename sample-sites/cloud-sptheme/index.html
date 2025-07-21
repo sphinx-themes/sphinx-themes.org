@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">14 Jul 2025 01:22:05 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">21 Jul 2025 00:31:40 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -38,6 +38,8 @@ done
 Original exception:
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -47,10 +49,9 @@ Traceback (most recent call last):
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 32, in &lt;module&gt;
-    uri_re = re.compile(&#39;([a-z]+:)?//&#39;)  # matches to foo:// and // (a protocol relative URL)
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ModuleNotFoundError: No module named &#39;sphinx.util.http_date&#39;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/cpp/__init__.py&#34;, line 15, in &lt;module&gt;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/cpp/_ast.py&#34;, line 10, in &lt;module&gt;
+ModuleNotFoundError: No module named &#39;sphinx.domains.cpp._ids&#39;
 
 
 ======================================== stderr ========================================
@@ -82,6 +83,8 @@ Traceback
 
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+        mod = import_module(extname)
+              ^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
         return _bootstrap._gcd_import(name[level:], package, level)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,27 +94,23 @@ Traceback
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
       File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 32, in &lt;module&gt;
-        uri_re = re.compile(&#39;([a-z]+:)?//&#39;)  # matches to foo:// and // (a protocol relative URL)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ModuleNotFoundError: No module named &#39;sphinx.util.http_date&#39;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/cpp/__init__.py&#34;, line 15, in &lt;module&gt;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/cpp/_ast.py&#34;, line 10, in &lt;module&gt;
+    ModuleNotFoundError: No module named &#39;sphinx.domains.cpp._ids&#39;
     
     The above exception was the direct cause of the following exception:
     
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 414, in build_main
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 287, in __init__
-        filename = path.join(self.doctreedir, ENV_PICKLE_FILENAME)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 489, in setup_extension
-        document is parsed -- this means that the whole environment must be
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 544, in load_extension
-    sphinx.errors.ExtensionError: Could not import extension sphinx.builders.linkcheck (exception: No module named &#39;sphinx.util.http_date&#39;)
+        raise ExtensionError(
+    sphinx.errors.ExtensionError: Could not import extension sphinx.domains.cpp (exception: No module named &#39;sphinx.domains.cpp._ids&#39;)
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-io1zgg26.log
+/tmp/sphinx-err-v_po2js7.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.

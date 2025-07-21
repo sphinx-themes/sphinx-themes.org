@@ -81,19 +81,19 @@ List Tables
     * - List table
       - Header 1
       - Header 2
-      - Header 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/
+      - Header 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/en/master/
     * - Stub Row 1
       - Row 1, Col 1
       - Row 1, Col 2
-      - Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/
+      - Row 1, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/en/master/
     * - Stub Row 2
       - Row 2, Col 1
       - Row 2, Col 2
-      - Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/
+      - Row 2, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/en/master/
     * - Stub Row 3
       - Row 3, Col 1
       - Row 3, Col 2
-      - Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/
+      - Row 3, Col 3 long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Link: https://www.sphinx-doc.org/en/master/
 
 .. list-table:: A list table with a header *row*, auto-width.
     :header-rows: 1
