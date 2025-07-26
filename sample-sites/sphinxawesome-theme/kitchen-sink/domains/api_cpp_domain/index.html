@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../../../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Directives in the C++ domain | Awesome</title>
+<meta content="Directives in the C++ domain | Awesome" property="og:title"/>
+<meta content="Directives in the C++ domain | Awesome" name="twitter:title"/>
+<link href="../../../_static/pygments.css?v=e72c8e07" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="../../../search/" rel="search" title="Search"/>
+<link href="../../../genindex/" rel="index" title="Index"/>
+<link href="../api_javascript_domain/" rel="next" title="Directives in the JavaScript domain"/>
+<link href="../api_c_domain/" rel="prev" title="Directives in the C domain"/>
+<script>
+    <!-- Prevent Flash of wrong theme -->
+      const userPreference = localStorage.getItem('darkMode');
+      let mode;
+      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        mode = 'dark';
+        document.documentElement.classList.add('dark');
+      } else {
+        mode = 'light';
+      }
+      if (!userPreference) {localStorage.setItem('darkMode', mode)}
+    </script>
+</head>
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+      Skip to content
+    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+<div class="hidden mr-4 md:flex">
+<a class="flex items-center mr-6" href="../../../"><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Awesome</span>
+</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
+<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
+</svg>
+<span class="sr-only">Toggle navigation menu</span>
+</button>
+<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../../../search/" class="relative flex items-center group" id="searchbox" method="get">
+<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
+<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+<span class="text-xs">⌘</span>
+    K
+  </kbd>
+</form>
+</div>
+<nav class="flex items-center space-x-1">
+<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
+<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
+</svg>
+<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
+</svg>
+</button>
+</nav>
+</div>
+</div>
+</header>
+<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
+<a class="!justify-start text-sm md:!hidden bg-background" href="../../../"><span class="font-bold text-clip whitespace-nowrap">Awesome</span>
+</a>
+<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+<ul class="current">
+<li class="toctree-l1 current" x-data="{ expanded: $el.classList.contains('current') ? true : false }"><a :class="{ 'expanded' : expanded }" @click="expanded = !expanded" class="reference internal expandable" href="../../">Kitchen Sink<button @click.prevent.stop="expanded = !expanded" type="button"><span class="sr-only"></span><svg fill="currentColor" height="18px" stroke="none" viewbox="0 0 24 24" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></a><ul class="current" x-show="expanded">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current" x-data="{ expanded: $el.classList.contains('current') ? true : false }"><a :class="{ 'expanded' : expanded }" @click="expanded = !expanded" class="reference internal expandable" href="../../api/">API documentation<button @click.prevent.stop="expanded = !expanded" type="button"><span class="sr-only"></span><svg fill="currentColor" height="18px" stroke="none" viewbox="0 0 24 24" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></a><ul class="current" x-show="expanded">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional "hidden" Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
+<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
+</svg>
+</button>
+</aside>
+<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+<div class="w-full min-w-0 mx-auto">
+<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../../../">
+<span class="hidden md:inline">Awesome</span>
+<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
+</svg>
+</a>
+<div class="mr-1">/</div><a class="hover:text-foreground overflow-hidden text-ellipsis whitespace-nowrap" href="../../">Kitchen Sink</a>
+<div class="mr-1">/</div><a class="hover:text-foreground overflow-hidden text-ellipsis whitespace-nowrap" href="../../api/">API documentation</a>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Directives in the C++ domain</span>
+</nav>
+<div id="content" role="main">
+<section id="directives-in-the-c-domain">
+<h1>Directives in the C++ domain<a class="headerlink" href="#directives-in-the-c-domain" title="Link to this heading"><span>#</span></a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">cpp</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html">https://www.sphinx-doc.org/en/master/usage/domains/cpp.html</a>.</p>
+<p>The following directives are available. All declarations can start with a
+visibility statement, <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, or <code class="docutils literal notranslate"><span class="pre">protected</span></code>.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47MyClass">
+<span id="_CPPv37MyClass"></span><span id="_CPPv27MyClass"></span><span id="MyClass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">MyBase</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">MyOtherBase</span></span><a class="headerlink" href="#_CPPv47MyClass" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv47MyClass'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10OuterScope8MyClass2E">
+<span id="_CPPv3N10OuterScope8MyClass2E"></span><span id="_CPPv2N10OuterScope8MyClass2E"></span><span id="OuterScope::MyClass2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">OuterScope</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MyClass2</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">MyBase</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">MyOtherBase</span></span><a class="headerlink" href="#_CPPv4N10OuterScope8MyClass2E" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N10OuterScope8MyClass2E'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0_NSt6size_tEENSt5arrayE">
+<span id="_CPPv3I0_NSt6size_tEENSt5arrayE"></span><span id="_CPPv2I0_NSt6size_tEENSt5arrayE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array</span></span></span><a class="headerlink" href="#_CPPv4I0_NSt6size_tEENSt5arrayE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0_NSt6size_tEENSt5arrayE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4IENSt6array2IbXL256EEEE">
+<span id="_CPPv3IENSt6array2IbXL256EEEE"></span><span id="_CPPv2IENSt6array2IbX256EEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array2</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">256</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4IENSt6array2IbXL256EEEE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4IENSt6array2IbXL256EEEE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENSt6array3I1TXL42EEEE">
+<span id="_CPPv3I0ENSt6array3I1TXL42EEEE"></span><span id="_CPPv2I0ENSt6array3I1TX42EEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array3</span></span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENSt6array3I1TXL42EEEE" title="std::array3&lt;T, 42&gt;::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0ENSt6array3I1TXL42EEEE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0ENSt6array3I1TXL42EEEE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48myMethodiNSt6stringE">
+<span id="_CPPv38myMethodiNSt6stringE"></span><span id="_CPPv28myMethodiNSt6stringE"></span><span id="myMethod__i.ss"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48myMethodiNSt6stringE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv48myMethodiNSt6stringE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function or member function with parameters and types.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49myMethod2id">
+<span id="_CPPv39myMethod2id"></span><span id="_CPPv29myMethod2id"></span><span id="myMethod2__i.double"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myMethod2</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span>, <span class="kt"><span class="pre">double</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49myMethod2id" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv49myMethod2id'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function or member function with unnamed parameters.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7MyClassixENSt6size_tE">
+<span id="_CPPv3NK7MyClassixENSt6size_tE"></span><span id="_CPPv2NK7MyClassixENSt6size_tE"></span><span id="MyClass::subscript-operator__std::sC"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7MyClassixENSt6size_tE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4NK7MyClassixENSt6size_tE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing an overload for the indexing operator.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKcvbEv">
+<span id="_CPPv3NKcvbEv"></span><span id="_CPPv2NKcvbEv"></span><span id="castto-b-operatorC"></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKcvbEv" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4NKcvbEv'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a casting operator.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421my_constexpr_functionAL2E_RNSt6stringE">
+<span id="_CPPv321my_constexpr_functionAL2E_RNSt6stringE"></span><span id="_CPPv221my_constexpr_functionA2_RNSt6stringE"></span><span id="my_constexpr_function__ssRACE"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_constexpr_function</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bar</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv421my_constexpr_functionAL2E_RNSt6stringE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv421my_constexpr_functionAL2E_RNSt6stringE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> function.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass8MyClass4ERK7MyClass">
+<span id="_CPPv3N7MyClass8MyClass4ERK7MyClass"></span><span id="_CPPv2N7MyClass8MyClass4ERK7MyClass"></span><span id="MyClass::MyClass4__MyClassCR"></span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MyClass4</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N7MyClass8MyClass4ERK7MyClass" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N7MyClass8MyClass4ERK7MyClass'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a copy constructor with default implementation.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0E20my_function_templatevRR1U">
+<span id="_CPPv3I0E20my_function_templateRR1U"></span><span id="_CPPv2I0E20my_function_templateRR1U"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_function_template</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0E20my_function_templatevRR1U" title="my_function_template::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0E20my_function_templatevRR1U" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0E20my_function_templatevRR1U'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function template.</p>
+</dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IE35my_function_template_specialisationvi">
+<span id="_CPPv3IE35my_function_template_specialisationi"></span><span id="_CPPv2IE35my_function_template_specialisationi"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_function_template_specialisation</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IE35my_function_template_specialisationvi" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4IE35my_function_template_specialisationvi'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function template specialisation.</p>
+</dd></dl>
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass8myMemberE">
+<span id="_CPPv3N7MyClass8myMemberE"></span><span id="_CPPv2N7MyClass8myMemberE"></span><span id="MyClass::myMember__ss"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMember</span></span></span><a class="headerlink" href="#_CPPv4N7MyClass8myMemberE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N7MyClass8myMemberE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a variable or member variable.</p>
+</dd></dl>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass13myOtherMemberE">
+<span id="_CPPv3N7MyClass13myOtherMemberE"></span><span id="_CPPv2N7MyClass13myOtherMemberE"></span><span id="MyClass::myOtherMember__ssAA"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myOtherMember</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N7MyClass13myOtherMemberE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N7MyClass13myOtherMemberE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:var::</span></code> directive, showing a variable.</p>
+</dd></dl>
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv418my_member_variable">
+<span id="_CPPv318my_member_variable"></span><span id="_CPPv218my_member_variable"></span><span id="my_member_variable__i"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_member_variable</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#_CPPv418my_member_variable" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv418my_member_variable'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a member variable.</p>
+</dd></dl>
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv4I0E12my_constexpr">
+<span id="_CPPv3I0E12my_constexpr"></span><span id="_CPPv2I0E12my_constexpr"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E12my_constexpr" title="my_constexpr::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_constexpr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E12my_constexpr" title="my_constexpr::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">3.1415926535897932385</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4I0E12my_constexpr" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0E12my_constexpr'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a variable template.</p>
+</dd></dl>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410MyListType">
+<span id="_CPPv310MyListType"></span><span id="_CPPv210MyListType"></span><span id="MyListType"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyListType</span></span></span><a class="headerlink" href="#_CPPv410MyListType" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv410MyListType'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a <code class="docutils literal notranslate"><span class="pre">typedef</span></code>-like declaration of a type.</p>
+</dd></dl>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N15MyContainerType14const_iteratorE">
+<span id="_CPPv3N15MyContainerType14const_iteratorE"></span><span id="_CPPv2N15MyContainerType14const_iteratorE"></span><span id="MyContainerType::const_iterator"></span><span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">MyContainerType</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">const_iterator</span></span></span><a class="headerlink" href="#_CPPv4N15MyContainerType14const_iteratorE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N15MyContainerType14const_iteratorE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a declaration of a type alias with unspecified type.</p>
+</dd></dl>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv411MyTypeAlias">
+<span id="_CPPv311MyTypeAlias"></span><span id="_CPPv211MyTypeAlias"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyTypeAlias</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv411MyTypeAlias" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv411MyTypeAlias'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a declaration of a type alias.</p>
+</dd></dl>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0E20MyTemplatedTypeAlias">
+<span id="_CPPv3I0E20MyTemplatedTypeAlias"></span><span id="_CPPv2I0E20MyTemplatedTypeAlias"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyTemplatedTypeAlias</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0E20MyTemplatedTypeAlias" title="MyTemplatedTypeAlias::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0E20MyTemplatedTypeAlias" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0E20MyTemplatedTypeAlias'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a templated type alias.</p>
+</dd></dl>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv46MyEnum">
+<span id="_CPPv36MyEnum"></span><span id="_CPPv26MyEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyEnum</span></span></span><a class="headerlink" href="#_CPPv46MyEnum" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv46MyEnum'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum::</span></code> directive, showing an unscoped enum.</p>
+</dd></dl>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv414MySpecificEnum">
+<span id="_CPPv314MySpecificEnum"></span><span id="_CPPv214MySpecificEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MySpecificEnum</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><a class="headerlink" href="#_CPPv414MySpecificEnum" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv414MySpecificEnum'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum::</span></code> directive, showing an unscoped enum with specified underlying type.</p>
+</dd></dl>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv412MyScopedEnum">
+<span id="_CPPv312MyScopedEnum"></span><span id="_CPPv212MyScopedEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyScopedEnum</span></span></span><a class="headerlink" href="#_CPPv412MyScopedEnum" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv412MyScopedEnum'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum-class::</span></code> directive, showing a scoped enum.</p>
+</dd></dl>
+<dl class="cpp enum-struct">
+<dt class="sig sig-object cpp" id="_CPPv422MyScopedVisibilityEnum">
+<span id="_CPPv322MyScopedVisibilityEnum"></span><span id="_CPPv222MyScopedVisibilityEnum"></span><span class="k"><span class="pre">protected</span></span><span class="w"> </span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyScopedVisibilityEnum</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">underlying_type</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv414MySpecificEnum" title="MySpecificEnum"><span class="n"><span class="pre">MySpecificEnum</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><a class="headerlink" href="#_CPPv422MyScopedVisibilityEnum" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv422MyScopedVisibilityEnum'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum-struct::</span></code> directive, showing a scoped enum with non-default visibility, and with a specified underlying type.</p>
+</dd></dl>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6MyEnum12myEnumeratorE">
+<span id="_CPPv3N6MyEnum12myEnumeratorE"></span><span id="_CPPv2N6MyEnum12myEnumeratorE"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv46MyEnum" title="MyEnum"><span class="n"><span class="pre">MyEnum</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myEnumerator</span></span></span><a class="headerlink" href="#_CPPv4N6MyEnum12myEnumeratorE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N6MyEnum12myEnumeratorE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enumerator::</span></code> directive, showing an enumerator.</p>
+</dd></dl>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6MyEnum17myOtherEnumeratorE">
+<span id="_CPPv3N6MyEnum17myOtherEnumeratorE"></span><span id="_CPPv2N6MyEnum17myOtherEnumeratorE"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv46MyEnum" title="MyEnum"><span class="n"><span class="pre">MyEnum</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myOtherEnumerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#_CPPv4N6MyEnum17myOtherEnumeratorE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4N6MyEnum17myOtherEnumeratorE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enumerator::</span></code> directive, showing a enumerator with a value.</p>
+</dd></dl>
+<dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv48my_union">
+<span id="_CPPv38my_union"></span><span id="_CPPv28my_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_union</span></span></span><a class="headerlink" href="#_CPPv48my_union" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv48my_union'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:union::</span></code> directive, showing a union.</p>
+</dd></dl>
+<dl class="cpp concept">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENSt8IteratorE">
+<span id="_CPPv3I0ENSt8IteratorE"></span><span id="_CPPv2I0ENSt8IteratorE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">It</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Iterator</span></span></span><a class="headerlink" href="#_CPPv4I0ENSt8IteratorE" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#_CPPv4I0ENSt8IteratorE'"><span>#</span></a><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:concept::</span></code> directive, showing a proxy to an element of a notional sequence.</p>
+<ul class="simple">
+<li><p><span class="cpp-expr sig sig-inline cpp"><span class="o">*</span><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v8.3.0)"><span class="n">r</span></a></span>, when <span class="cpp-expr sig sig-inline cpp"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v8.3.0)"><span class="n">r</span></a></span> is dereferenceable.</p></li>
+<li><p><span class="cpp-expr sig sig-inline cpp"><span class="o">++</span><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v8.3.0)"><span class="n">r</span></a></span>, with return type <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0ENSt8IteratorE" title="std::Iterator::It"><span class="n">It</span></a><span class="p">&amp;</span></span>, when
+<span class="cpp-expr sig sig-inline cpp"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v8.3.0)"><span class="n">r</span></a></span> is incrementable.</p></li>
+</ul>
+</dd></dl>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="kt"><span class="pre">bool</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv48myMethodiNSt6stringE" title="myMethod"><span class="n"><span class="pre">myMethod</span></span></a><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">)</span></span><br/></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:alias::</span></code> directive, showing an alias declaration.</p>
+</dd></dl>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#_CPPv47MyClass'" class="reference internal" href="#_CPPv47MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N10OuterScope8MyClass2E'" class="reference internal" href="#_CPPv4N10OuterScope8MyClass2E"><code class="docutils literal notranslate"><span class="pre">MyClass2</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0_NSt6size_tEENSt5arrayE'" class="reference internal" href="#_CPPv4I0_NSt6size_tEENSt5arrayE"><code class="docutils literal notranslate"><span class="pre">array</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4IENSt6array2IbXL256EEEE'" class="reference internal" href="#_CPPv4IENSt6array2IbXL256EEEE"><code class="docutils literal notranslate"><span class="pre">array2</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0ENSt6array3I1TXL42EEEE'" class="reference internal" href="#_CPPv4I0ENSt6array3I1TXL42EEEE"><code class="docutils literal notranslate"><span class="pre">array3</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv48myMethodiNSt6stringE'" class="reference internal" href="#_CPPv48myMethodiNSt6stringE"><code class="docutils literal notranslate"><span class="pre">myMethod()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv49myMethod2id'" class="reference internal" href="#_CPPv49myMethod2id"><code class="docutils literal notranslate"><span class="pre">myMethod2()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4NK7MyClassixENSt6size_tE'" class="reference internal" href="#_CPPv4NK7MyClassixENSt6size_tE"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4NKcvbEv'" class="reference internal" href="#_CPPv4NKcvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv421my_constexpr_functionAL2E_RNSt6stringE'" class="reference internal" href="#_CPPv421my_constexpr_functionAL2E_RNSt6stringE"><code class="docutils literal notranslate"><span class="pre">my_constexpr_function()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N7MyClass8MyClass4ERK7MyClass'" class="reference internal" href="#_CPPv4N7MyClass8MyClass4ERK7MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass4()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0E20my_function_templatevRR1U'" class="reference internal" href="#_CPPv4I0E20my_function_templatevRR1U"><code class="docutils literal notranslate"><span class="pre">my_function_template()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4IE35my_function_template_specialisationvi'" class="reference internal" href="#_CPPv4IE35my_function_template_specialisationvi"><code class="docutils literal notranslate"><span class="pre">my_function_template_specialisation()</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N7MyClass8myMemberE'" class="reference internal" href="#_CPPv4N7MyClass8myMemberE"><code class="docutils literal notranslate"><span class="pre">myMember</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N7MyClass13myOtherMemberE'" class="reference internal" href="#_CPPv4N7MyClass13myOtherMemberE"><code class="docutils literal notranslate"><span class="pre">myOtherMember</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv418my_member_variable'" class="reference internal" href="#_CPPv418my_member_variable"><code class="docutils literal notranslate"><span class="pre">my_member_variable</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0E12my_constexpr'" class="reference internal" href="#_CPPv4I0E12my_constexpr"><code class="docutils literal notranslate"><span class="pre">my_constexpr</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv410MyListType'" class="reference internal" href="#_CPPv410MyListType"><code class="docutils literal notranslate"><span class="pre">MyListType</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N15MyContainerType14const_iteratorE'" class="reference internal" href="#_CPPv4N15MyContainerType14const_iteratorE"><code class="docutils literal notranslate"><span class="pre">const_iterator</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv411MyTypeAlias'" class="reference internal" href="#_CPPv411MyTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTypeAlias</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0E20MyTemplatedTypeAlias'" class="reference internal" href="#_CPPv4I0E20MyTemplatedTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTemplatedTypeAlias</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv46MyEnum'" class="reference internal" href="#_CPPv46MyEnum"><code class="docutils literal notranslate"><span class="pre">MyEnum</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv414MySpecificEnum'" class="reference internal" href="#_CPPv414MySpecificEnum"><code class="docutils literal notranslate"><span class="pre">MySpecificEnum</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv412MyScopedEnum'" class="reference internal" href="#_CPPv412MyScopedEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedEnum</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv422MyScopedVisibilityEnum'" class="reference internal" href="#_CPPv422MyScopedVisibilityEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedVisibilityEnum</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N6MyEnum12myEnumeratorE'" class="reference internal" href="#_CPPv4N6MyEnum12myEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myEnumerator</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4N6MyEnum17myOtherEnumeratorE'" class="reference internal" href="#_CPPv4N6MyEnum17myOtherEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myOtherEnumerator</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv48my_union'" class="reference internal" href="#_CPPv48my_union"><code class="docutils literal notranslate"><span class="pre">my_union</span></code></a></li>
+<li><a :data-current="activeSection === '#_CPPv4I0ENSt8IteratorE'" class="reference internal" href="#_CPPv4I0ENSt8IteratorE"><code class="docutils literal notranslate"><span class="pre">Iterator</span></code></a></li>
+</ul>
+</div>
+</aside>
+</main>
+</div>
+</div><footer class="py-6 border-t border-border md:py-0">
+<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2021, Pradyun Gedam Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 8.2.3</a></p>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../_static/documentation_options.js?v=187304be"></script>
+<script src="../../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../../../_static/theme.js?v=073f68d9"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directives in the C domain &#8212; pyramid</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=0c472235" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pyramid.css?v=424f8d56" />
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the C++ domain" href="../api_cpp_domain/" />
+    <link rel="prev" title="API documentation" href="../../api/" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex/" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_cpp_domain/" title="Directives in the C++ domain"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../api/" title="API documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../">pyramid</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../" >Kitchen Sink</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../api/" accesskey="U">API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives in the C domain</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="directives-in-the-c-domain">
+<h1>Directives in the C domain<a class="headerlink" href="#directives-in-the-c-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">c</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/c.html">https://www.sphinx-doc.org/en/master/usage/domains/c.html</a>.</p>
+<dl class="c member">
+<dt class="sig sig-object c" id="c.PyTypeObject.tp_bases">
+<span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">PyTypeObject</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">tp_bases</span></span></span><a class="headerlink" href="#c.PyTypeObject.tp_bases" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:member::</span></code> directive, showing a struct member.</p>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.my_var">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_var</span></span></span><a class="headerlink" href="#c.my_var" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:var::</span></code> directive, showing a variable.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyType_GenericAlloc">
+<span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyType_GenericAlloc</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyTypeObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">nitems</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:function::</span></code> directive, showing a function. The signature should be given as in C.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – description of the first parameter.</p></li>
+<li><p><strong>nitems</strong> – description of the second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a result.</p>
+</dd>
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NULL</strong> – under some conditions.</p></li>
+<li><p><strong>NULL</strong> – under some other conditions as well.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.MY_MACRO">
+<span class="sig-name descname"><span class="n"><span class="pre">MY_MACRO</span></span></span><a class="headerlink" href="#c.MY_MACRO" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::</span></code> directive, showing a macro, i.e., a C-language <code class="docutils literal notranslate"><span class="pre">#define</span></code>, without the replacement text.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.MY_MACRO_ARGS">
+<span class="sig-name descname"><span class="n"><span class="pre">MY_MACRO_ARGS</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">arg_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.MY_MACRO_ARGS" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::</span></code> directive, showing a macro, i.e., a C-language <code class="docutils literal notranslate"><span class="pre">#define</span></code>, without the replacement text.</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt class="sig sig-object c" id="c.MyStruct">
+<span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyStruct</span></span></span><a class="headerlink" href="#c.MyStruct" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:struct::</span></code> directive, showing a struct.</p>
+</dd></dl>
+
+<dl class="c union">
+<dt class="sig sig-object c" id="c.MyUnion">
+<span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyUnion</span></span></span><a class="headerlink" href="#c.MyUnion" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:union::</span></code> directive, showing a union.</p>
+</dd></dl>
+
+<dl class="c enum">
+<dt class="sig sig-object c" id="c.MyEnum">
+<span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyEnum</span></span></span><a class="headerlink" href="#c.MyEnum" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enum::</span></code> directive, showing an enum.</p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.myEnumerator">
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myEnumerator</span></span></span><a class="headerlink" href="#c.myEnumerator" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enumerator::</span></code> directive, showing an enumerator.</p>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.my_type">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_type</span></span></span><a class="headerlink" href="#c.my_type" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span></code> directive, showing a type.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../../api/"
+                          title="previous chapter">API documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../api_cpp_domain/"
+                          title="next chapter">Directives in the C++ domain</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/kitchen-sink/domains/api_c_domain.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex/" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_cpp_domain/" title="Directives in the C++ domain"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../api/" title="API documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../">pyramid</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../" >Kitchen Sink</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../api/" >API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives in the C domain</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

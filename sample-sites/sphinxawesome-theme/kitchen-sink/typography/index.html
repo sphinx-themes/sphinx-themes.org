@@ -71,7 +71,14 @@
 <ul class="current">
 <li class="toctree-l1 current" x-data="{ expanded: $el.classList.contains('current') ? true : false }"><a :class="{ 'expanded' : expanded }" @click="expanded = !expanded" class="reference internal expandable" href="../">Kitchen Sink<button @click.prevent.stop="expanded = !expanded" type="button"><span class="sr-only"></span><svg fill="currentColor" height="18px" stroke="none" viewbox="0 0 24 24" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></a><ul class="current" x-show="expanded">
 <li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2" x-data="{ expanded: $el.classList.contains('current') ? true : false }"><a :class="{ 'expanded' : expanded }" @click="expanded = !expanded" class="reference internal expandable" href="../api/">API documentation<button @click.prevent.stop="expanded = !expanded" type="button"><span class="sr-only"></span><svg fill="currentColor" height="18px" stroke="none" viewbox="0 0 24 24" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></a><ul x-show="expanded">
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>

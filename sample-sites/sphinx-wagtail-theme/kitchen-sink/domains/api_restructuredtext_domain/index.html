@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-content_root="../../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Directives in the reStructuredText domain &mdash; Wagtail</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../../genindex/" />
+            <link rel="search" title="Search" href="../../../search/" />
+            <link rel="top" title="Wagtail" href="#" />
+            <link rel="up" title="API documentation" href="../../api/" />
+            <link rel="next" title="Blocks" href="../../blocks/" />
+            <link rel="prev" title="Directives in the Python domain" href="../api_python_domain/" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../../_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="../../../"
+                        title="Wagtail"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../../_static/img/wagtail-logo-circle.svg" width="45" height="59" alt="Wagtail"
+                            class="logo-img"
+                        />
+                        Sphinx Wagtail Theme
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../../search/" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../../">Docs</a></li>
+            <li class="breadcrumb-item"><a href="../../">Kitchen Sink</a></li>
+            <li class="breadcrumb-item"><a href="../../api/">API documentation</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Directives in the reStructuredText domain</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/kitchen-sink/domains/api_restructuredtext_domain.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../../_sources/kitchen-sink/domains/api_restructuredtext_domain.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="directives-in-the-restructuredtext-domain">
+<h1>Directives in the reStructuredText domain<a class="headerlink" href="#directives-in-the-restructuredtext-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">rst</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html">https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html</a>.</p>
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive::</span></span><a class="headerlink" href="#directive-my_directive" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive</span></code>.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive2">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive2::</span></span><span class="sig-prename descclassname"> <span class="pre">my_argument</span></span><a class="headerlink" href="#directive-my_directive2" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive2</span></code> with argument <code class="docutils literal notranslate"><span class="pre">my_argument</span></code>.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive3">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive3::</span></span><a class="headerlink" href="#directive-my_directive3" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive3</span></code>.</p>
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option1">
+<span class="sig-name descname"><span class="pre">:my_option1:</span></span><a class="headerlink" href="#directive-option-my_directive3-my_option1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option2">
+<span class="sig-name descname"><span class="pre">:my_option2:</span></span><em class="property"> <span class="pre">my_argument</span></em><a class="headerlink" href="#directive-option-my_directive3-my_option2" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive:option::</span></code> directive, showing the directive option <code class="docutils literal notranslate"><span class="pre">my_option2</span></code> that has an argument.</p>
+</dd></dl>
+
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option3">
+<span class="sig-name descname"><span class="pre">:my_option3:</span></span><em class="property"> <span class="pre">my_argument2</span></em><em class="property"> <span class="pre">(my_argument2_type)</span></em><a class="headerlink" href="#directive-option-my_directive3-my_option3" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive:option::</span></code> directive, showing the directive option <code class="docutils literal notranslate"><span class="pre">my_option3</span></code> that has an argument with a type definition.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-role_name">
+<span class="sig-name descname"><span class="pre">:role_name:</span></span><a class="headerlink" href="#role-role_name" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:role::</span></code> directive, showing a role.</p>
+</dd></dl>
+
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="../api_python_domain/" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Directives in the Python domain
+    </a>
+    <a class="float-right" href="../../blocks/" title="Next">
+        Blocks <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Directives in the reStructuredText domain</a><ul>
+<li><a class="reference internal" href="#directive-my_directive"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">my_directive::</span></code></a></li>
+<li><a class="reference internal" href="#directive-my_directive2"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">my_directive2::</span></code></a></li>
+<li><a class="reference internal" href="#directive-my_directive3"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">my_directive3::</span></code></a><ul>
+<li><a class="reference internal" href="#directive-option-my_directive3-my_option1"><code class="docutils literal notranslate"><span class="pre">:my_option1:</span></code></a></li>
+<li><a class="reference internal" href="#directive-option-my_directive3-my_option2"><code class="docutils literal notranslate"><span class="pre">:my_option2:</span></code></a></li>
+<li><a class="reference internal" href="#directive-option-my_directive3-my_option3"><code class="docutils literal notranslate"><span class="pre">:my_option3:</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#role-role_name"><code class="docutils literal notranslate"><span class="pre">:role_name:</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright 2021, Pradyun Gedam
+            </div>
+            <div class="text-center text-white-50 font-italic mt-3">
+                <small>
+                    Created using
+                    <a class="text-white" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Sphinx Wagtail Theme 6.5.0
+                    </a>
+                    and
+                    <a class="text-white" href="https://www.sphinx-doc.org/" rel="nofollow" target="_blank">
+                        Sphinx 8.2.3
+                    </a>
+                </small>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../../_static/documentation_options.js?v=187304be"></script>
+        <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+        <script type="text/javascript" src="../../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>
