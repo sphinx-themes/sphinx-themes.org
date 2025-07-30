@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">30 Jul 2025 09:27:08 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">30 Jul 2025 09:41:26 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -32,256 +32,57 @@
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
 Running Sphinx v5.0.0
-making output directory... done
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-loading intersphinx inventory from https://www.sphinx-doc.org/objects.inv...
-intersphinx inventory has moved: https://www.sphinx-doc.org/objects.inv -&gt; https://www.sphinx-doc.org/en/master/objects.inv
-locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-building [mo]: targets for 0 po files that are out of date
-building [dirhtml]: targets for 23 source files that are out of date
-updating environment: locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exists
-[new config] 23 added, 0 changed, 0 removed
-reading sources... [  4%] index
-reading sources... [  8%] kitchen-sink/admonitions
-reading sources... [ 13%] kitchen-sink/api
-reading sources... [ 17%] kitchen-sink/blocks
-reading sources... [ 21%] kitchen-sink/domains/api_c_domain
-reading sources... [ 26%] kitchen-sink/domains/api_cpp_domain
-reading sources... [ 30%] kitchen-sink/domains/api_javascript_domain
-reading sources... [ 34%] kitchen-sink/domains/api_python_domain
-reading sources... [ 39%] kitchen-sink/domains/api_restructuredtext_domain
-reading sources... [ 43%] kitchen-sink/generic
-reading sources... [ 47%] kitchen-sink/images
-reading sources... [ 52%] kitchen-sink/index
-reading sources... [ 56%] kitchen-sink/lists
-reading sources... [ 60%] kitchen-sink/really-long
-reading sources... [ 65%] kitchen-sink/structure
-reading sources... [ 69%] kitchen-sink/tables
-reading sources... [ 73%] kitchen-sink/typography
-reading sources... [ 78%] long-page
-reading sources... [ 82%] placeholder-four
-reading sources... [ 86%] placeholder-one
-reading sources... [ 91%] placeholder-three
-reading sources... [ 95%] placeholder-two
-reading sources... [100%] really-long-title
+Original exception:
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/other.py&#34;, line 7, in &lt;module&gt;
+    from docutils.parsers.rst.directives.admonitions import BaseAdmonition
+ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
 
-looking for now-outdated files... none found
-pickling environment... done
-checking consistency... done
-preparing documents... done
-writing output... [  4%] index
-writing output... [  8%] kitchen-sink/admonitions
-writing output... [ 13%] kitchen-sink/api
-writing output... [ 17%] kitchen-sink/blocks
 
 ======================================== stderr ========================================
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/admonitions.rst:161: ERROR: Unknown directive type &#34;versionremoved&#34;.
-
-.. versionremoved:: v0.1.1
-
-   Here&#39;s a version removed message.
-
-   We also support *italic*, **bold**, ``code``, `links &lt;https://www.sphinx-doc.org/en/master/&gt;`_, and more.
-WARNING: autodoc: failed to import module &#39;all_in_one_restructuredtext&#39;; the following exception was raised:
-No module named &#39;all_in_one_restructuredtext&#39;
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_c_domain.rst:33: ERROR: Error in &#34;c:macro&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. c:macro:: MY_MACRO_ARGS(arg_list)
-   :single-line-parameter-list:
-
-   The ``.. c:macro::`` directive, showing a macro, i.e., a C-language ``#define``, without the replacement text.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:11: ERROR: Error in &#34;py:module&#34; directive:
-no content permitted.
-
-.. py:module:: my_module
-   :platform: platform1, platform2
-   :synopsis: purpose
-   :deprecated:
-
-   The ``py:module`` directive, showing the docstring for the whole module.
-
-   The second line of the module docstring.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:20: ERROR: Error in &#34;py:function&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:function:: my_function(parameter: ParameterT = default_value) -&gt; ReturnT
-   :async:
-   :canonical: my_module.my_function
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:function`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:28: ERROR: Error in &#34;py:function&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:function:: my_function_type_parameters[ParameterT](parameter: ParameterT) -&gt; ParameterT
-   :async:
-   :canonical: my_module.my_function_type_parameters
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:function`` directive, using Python 3.12 *type parameters*.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:43: ERROR: Error in &#34;py:exception&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:exception:: MyException
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:exception`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:49: ERROR: Error in &#34;py:exception&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:exception:: MyExceptionFinal
-   :final:
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:exception`` directive, ``final``.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:56: ERROR: Error in &#34;py:exception&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:exception:: MyException_type_parameters(parameters)
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:exception`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:62: ERROR: Error in &#34;py:exception&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:exception:: MyExceptionTypeParameters[ParameterT](parameter: ParameterT)
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:exception`` directive, using Python 3.12 *type parameters*.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:68: ERROR: Error in &#34;py:class&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:class:: MyClass
-   :canonical: my_module.MyClass
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:class`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:75: ERROR: Error in &#34;py:class&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:class:: MyClassFinal
-   :canonical: my_module.MyClassFinal
-   :final:
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:class`` directive, ``final``.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:83: ERROR: Error in &#34;py:class&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:class:: MyClassParameters(parameters)
-   :canonical: my_module.MyClass2
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:class`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:90: ERROR: Error in &#34;py:class&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:class:: MyClassTypeParameters[ParameterT](parameter: ParameterT)
-   :canonical: my_module.MyClassTypeParameters
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:class`` directive, using Python 3.12 *type parameters*.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:117: ERROR: Unknown directive type &#34;py:type&#34;.
-
-.. py:type:: MyType
-   :canonical: my_module.MyType
-
-   The ``py:type`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:122: ERROR: Error in &#34;py:method&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:method:: my_method(parameters) -&gt; ReturnT
-   :canonical: my_module.my_method
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:method`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:129: ERROR: Error in &#34;py:method&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:method:: my_method_type_parameters[ParameterT](parameter: ParameterT) -&gt; ParameterT
-   :abstractmethod:
-   :async:
-   :canonical: my_module.my_method_type_parameters
-   :classmethod:
-   :final:
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-   :staticmethod:
-
-   The ``py:method`` directive,
-   using all of the ``:abstractmethod:``, ``:async:``, ``:classmethod:``, ``:final:``, and ``:staticmethod:`` flags,
-   using Python 3.12 *type parameters*.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:159: ERROR: Error in &#34;py:decorator&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:decorator:: my_decorator
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:decorator`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:165: ERROR: Error in &#34;py:decorator&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:decorator:: my_decorator_parameters(parameters)
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:decorator`` directive.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_python_domain.rst:171: ERROR: Error in &#34;py:decorator&#34; directive:
-unknown option: &#34;single-line-parameter-list&#34;.
-
-.. py:decorator:: my_decorator_type_parameters[ParameterT](parameter: ParameterT)
-   :single-line-parameter-list:
-   :single-line-type-parameter-list:
-
-   The ``py:decorator`` directive, using Python 3.12 *type parameters*.
-/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1072, in handle_page
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 189, in render
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 1016, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 975, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/loaders.py&#34;, line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 210, in get_source
-jinja2.exceptions.TemplateNotFound: page.html
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
+    mod = import_module(extname)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/other.py&#34;, line 7, in &lt;module&gt;
+ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 276, in build_main
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 329, in build
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 288, in build_update
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 352, in build
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 544, in write
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 554, in _write_serial
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 648, in write_doc
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1079, in handle_page
-sphinx.errors.ThemeError: An error happened in rendering the page kitchen-sink/blocks.
-Reason: TemplateNotFound(&#39;page.html&#39;)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 272, in build_main
+    app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 219, in __init__
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 380, in setup_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 433, in load_extension
+    raise ExtensionError(__(&#39;Could not import extension %s&#39;) % extname,
+sphinx.errors.ExtensionError: Could not import extension sphinx.directives.other (exception: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;)
 
-Theme error:
-An error happened in rendering the page kitchen-sink/blocks.
-Reason: TemplateNotFound(&#39;page.html&#39;)
+Extension error:
+Could not import extension sphinx.directives.other (exception: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;)
 </pre>
     </div>
   </body>
