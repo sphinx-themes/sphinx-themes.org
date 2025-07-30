@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">28 Jul 2025 01:25:39 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">30 Jul 2025 09:27:08 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -71,6 +71,19 @@ checking consistency... done
 preparing documents... done
 writing output... [  4%] index
 writing output... [  8%] kitchen-sink/admonitions
+writing output... [ 13%] kitchen-sink/api
+writing output... [ 17%] kitchen-sink/blocks
+writing output... [ 21%] kitchen-sink/domains/api_c_domain
+writing output... [ 26%] kitchen-sink/domains/api_cpp_domain
+writing output... [ 30%] kitchen-sink/domains/api_javascript_domain
+writing output... [ 34%] kitchen-sink/domains/api_python_domain
+writing output... [ 39%] kitchen-sink/domains/api_restructuredtext_domain
+writing output... [ 43%] kitchen-sink/generic
+writing output... [ 47%] kitchen-sink/images
+writing output... [ 52%] kitchen-sink/index
+writing output... [ 56%] kitchen-sink/lists
+writing output... [ 60%] kitchen-sink/really-long
+writing output... [ 65%] kitchen-sink/structure
 
 ======================================== stderr ========================================
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/admonitions.rst:161: ERROR: Unknown directive type &#34;versionremoved&#34;.
@@ -80,8 +93,8 @@ writing output... [  8%] kitchen-sink/admonitions
    Here&#39;s a version removed message.
 
    We also support *italic*, **bold**, ``code``, `links &lt;https://www.sphinx-doc.org/en/master/&gt;`_, and more.
-WARNING: autodoc: failed to import module &#39;all_in_one_restructuredtext&#39;; the following exception was raised:
-No module named &#39;all_in_one_restructuredtext&#39;
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/all_in_one_restructuredtext.py:docstring of all_in_one_restructuredtext.my_function_needs_napoleon:8: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/all_in_one_restructuredtext.py:docstring of all_in_one_restructuredtext.my_function_needs_napoleon:8: WARNING: Inline strong start-string without end-string.
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/blocks.rst:138: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/domains/api_c_domain.rst:33: ERROR: Error in &#34;c:macro&#34; directive:
 unknown option: &#34;single-line-parameter-list&#34;.
@@ -247,6 +260,9 @@ unknown option: &#34;single-line-parameter-list&#34;.
 
    The ``py:decorator`` directive, using Python 3.12 *type parameters*.
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/lists.rst:202: WARNING: Include file &#39;/home/runner/work/sphinx-themes.org/src/furo/__init__.py&#39; not found or reading it failed
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/all_in_one_restructuredtext.py:docstring of all_in_one_restructuredtext.AllInOne.my_async_method:1: WARNING: term not in glossary: async
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/all_in_one_restructuredtext.py:docstring of all_in_one_restructuredtext.AllInOne.my_classmethod:1: WARNING: &#39;any&#39; reference target not found: classmethod
+/home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/all_in_one_restructuredtext.py:docstring of all_in_one_restructuredtext.AllInOne.my_staticmethod:1: WARNING: &#39;any&#39; reference target not found: staticmethod
 
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1072, in handle_page
@@ -274,11 +290,11 @@ Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 554, in _write_serial
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 648, in write_doc
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1079, in handle_page
-sphinx.errors.ThemeError: An error happened in rendering the page kitchen-sink/admonitions.
+sphinx.errors.ThemeError: An error happened in rendering the page kitchen-sink/structure.
 Reason: TemplateNotFound(&#39;page.html&#39;)
 
 Theme error:
-An error happened in rendering the page kitchen-sink/admonitions.
+An error happened in rendering the page kitchen-sink/structure.
 Reason: TemplateNotFound(&#39;page.html&#39;)
 </pre>
     </div>
