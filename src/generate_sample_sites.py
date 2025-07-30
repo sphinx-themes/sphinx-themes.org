@@ -25,7 +25,7 @@ def get_error_page(theme: Theme, error: Exception) -> str:
 
 def render_conf_template(theme: Theme, destination: Path):
     template = Template(TEMPLATES["configuration"].read_text())
-    rendered = template.render(theme=theme)
+    rendered = template.render(theme=theme, sources=str(BUILD["sources"]))
 
     destination.write_text(rendered)
 

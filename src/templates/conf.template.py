@@ -13,7 +13,7 @@ author = "Pradyun Gedam"
 
 html_title = "{{ theme.display }}"
 
-sys.path.insert(0, os.path.abspath("sample-docs/kitchen-sink/"))
+sys.path.insert(0, os.path.join("{{ sources }}", "kitchen-sink"))
 
 extensions = [
     "sphinx.ext.autodoc",
