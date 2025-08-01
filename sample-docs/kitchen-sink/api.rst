@@ -7,6 +7,13 @@
 API documentation
 *****************
 
+    A domain is a collection of markup (directives and roles) to describe and link to objects belonging together,
+    e.g. elements of a programming language.
+
+    -- https://www.sphinx-doc.org/en/master/usage/domains/index.html
+
+The following sections show examples of the domains built-in to Sphinx.
+
 .. toctree::
     :titlesonly:
     :glob:
@@ -38,7 +45,9 @@ Using Sphinx's :any:`sphinx.ext.autodoc` plugin, it is possible to auto-generate
 The ``automodule`` Directive with reStructuredText Markup
 ---------------------------------------------------------
 
-What follows is an example showing usage of the ``.. automodule::`` directive.
+What follows after the line is an example showing usage of the ``.. automodule::`` directive.
+
+---
 
 .. currentmodule:: all_in_one_restructuredtext
 

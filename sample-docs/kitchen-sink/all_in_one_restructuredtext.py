@@ -5,23 +5,30 @@ The module's docstrings use reStructuredText markup.
 """
 
 # TODO:
-# - show roles to refer to elements
-# - async with
-# - async for
-# - add example of numpy-style docstrings
+# - show the roles to refer to the listed directives
+# - missing: async with, async for
+# - add example(s) of numpy-style docstrings
 
 import abc
 from typing import TypeAlias, TypeVar, final
 
-ParameterT = TypeVar("ParameterT")  #: Docstring of type ParameterT
+ParameterT = TypeVar("ParameterT")  #: Docstring of type :py:type:`ParameterT`
 
 ReturnT = TypeVar("ReturnT")
-"""Docstring of type ReturnT."""
+"""Docstring of type :any:`ReturnT`."""
 
-# Python 3.12: type MyType = list[float]  #: The docstring.
-MyType: TypeAlias = list[float]  #: The docstring.
+# type MyType = list[
+#     float
+# ]  #: The docstring of :py:type:`MyType` using Python 3.12 syntax.
 
-my_module_level_variable: MyType = [0.0, 1.1]  #: The docstring.
+MyType: TypeAlias = list[
+    float
+]  #: The docstring of :py:type:`MyType` using an explicit ``TypeAlias``.
+
+my_module_level_variable: MyType = [
+    0.0,
+    1.1,
+]  #: The docstring of :py:data:`my_module_level_variable`.
 
 
 def my_function_pure_sphinx(*args, **kwargs):
@@ -106,7 +113,8 @@ def my_function2(foo: int, bar: str):
         None
 
     .. deprecated:: 2.0
-        Use :func:`my_function_pure_sphinx` instead.
+        (This is an example of a deprecation admonition.)
+        Use :py:func:`my_function_pure_sphinx` instead.
 
     Text at end of docstring.
     """
@@ -131,7 +139,7 @@ class MyException(Exception):
 class AllInOne:
     """This is a class that demonstrates various Python features.
 
-    Uses Google-style docstrings
+    It uses Google-style docstrings
     (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).
 
     Attributes:
