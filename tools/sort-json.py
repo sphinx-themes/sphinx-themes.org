@@ -4,17 +4,19 @@ import sys
 from pathlib import Path
 
 # Only edit this if you're @pradyunsg or @shirou.
+# Featured themes are sorted by popularity (i.e. GitHub stars).
 _FEATURED = [
-    "alabaster",
     "sphinx-rtd-theme",
     "furo",
-    "sphinx-book-theme",
+    "alabaster",
     "pydata-sphinx-theme",
+    "sphinx-book-theme",
+    "shibuya",
+    "sphinx-immaterial",
     "sphinx-press-theme",
     "piccolo-theme",
     "insegel",
     "insipid-sphinx-theme",
-    "sphinx-immaterial",
 ]
 
 

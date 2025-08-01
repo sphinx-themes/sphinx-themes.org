@@ -1,12 +1,6 @@
 {
   "themes": [
     {
-      "config": "alabaster",
-      "display": "Alabaster",
-      "documentation": "https://alabaster.readthedocs.io/en/latest/",
-      "pypi": "sphinx"
-    },
-    {
       "config": "sphinx_rtd_theme",
       "display": "Read the Docs",
       "documentation": "https://sphinx-rtd-theme.readthedocs.io/en/latest/",
@@ -19,16 +13,34 @@
       "pypi": "furo"
     },
     {
-      "config": "sphinx_book_theme",
-      "display": "Book",
-      "documentation": "https://sphinx-book-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-book-theme"
+      "config": "alabaster",
+      "display": "Alabaster",
+      "documentation": "https://alabaster.readthedocs.io/en/latest/",
+      "pypi": "sphinx"
     },
     {
       "config": "pydata_sphinx_theme",
       "display": "PyData",
       "documentation": "https://pydata-sphinx-theme.readthedocs.io/en/latest/",
       "pypi": "pydata-sphinx-theme"
+    },
+    {
+      "config": "sphinx_book_theme",
+      "display": "Book",
+      "documentation": "https://sphinx-book-theme.readthedocs.io/en/latest/",
+      "pypi": "sphinx-book-theme"
+    },
+    {
+      "config": "shibuya",
+      "display": "Shibuya",
+      "documentation": "https://shibuya.lepture.com/",
+      "pypi": "shibuya"
+    },
+    {
+      "config": "sphinx_immaterial",
+      "display": "Immaterial",
+      "documentation": "https://jbms.github.io/sphinx-immaterial/",
+      "pypi": "sphinx-immaterial"
     },
     {
       "config": "press",
@@ -56,12 +68,6 @@
       "display": "Insipid",
       "documentation": "https://insipid-sphinx-theme.readthedocs.io/",
       "pypi": "insipid-sphinx-theme"
-    },
-    {
-      "config": "sphinx_immaterial",
-      "display": "Immaterial",
-      "documentation": "https://jbms.github.io/sphinx-immaterial/",
-      "pypi": "sphinx-immaterial"
     },
     {
       "config": {
