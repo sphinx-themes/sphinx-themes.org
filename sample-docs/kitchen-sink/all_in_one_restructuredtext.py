@@ -190,7 +190,7 @@ class AllInOne:
         return my_var
 
     async def my_async_method(self, my_param: ParameterT = "default_value") -> ReturnT:
-        """An :py::keyword:`async` method.
+        """An :py:keyword:`async` method.
 
         Text at end of docstring.
         """
