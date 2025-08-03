@@ -112,7 +112,7 @@ def my_function2(foo: int, bar: str):
     Returns:
         None
 
-    .. deprecated:: 2.0
+    .. deprecated:: x.y
         (This is an example of a deprecation admonition.)
         Use :py:func:`my_function_pure_sphinx` instead.
 
@@ -168,9 +168,11 @@ class AllInOne:
 
         Args:
             my_param: Documenting *my_param*.
-                Another sentence on the next docstring line, still belonging to *my_param*.
+                This is another sentence on the next docstring line,
+                still belonging to *my_param*.
             keyword_only_param: Documenting *keyword_only_param*.
-                Another sentence on the next docstring line, still belonging to *keyword_only_param*.
+                This is another sentence on the next docstring line,
+                still belonging to *keyword_only_param*.
 
         Returns:
             The value of the local variable ``my_var``.
@@ -188,7 +190,7 @@ class AllInOne:
         return my_var
 
     async def my_async_method(self, my_param: ParameterT = "default_value") -> ReturnT:
-        """An :term:`async` method.
+        """An :py::keyword:`async` method.
 
         Text at end of docstring.
         """
