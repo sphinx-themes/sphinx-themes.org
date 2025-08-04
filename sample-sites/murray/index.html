@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">30 Jul 2025 09:41:26 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">04 Aug 2025 01:27:35 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -32,15 +32,25 @@
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
 Running Sphinx v5.0.0
+Original exception:
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
+  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
+  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 26, in &lt;module&gt;
+ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
+
 
 ======================================== stderr ========================================
 
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 272, in build_main
-    dest=&#39;traceback&#39;,
-              ^^^^^^^
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 219, in __init__
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 380, in setup_extension
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
     # retry with builder.format
               ^^^^^^^^^^^^^^^^^^
@@ -53,19 +63,20 @@ Traceback (most recent call last):
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/texinfo.py&#34;, line 37, in &lt;module&gt;
-    template_dir = package_dir.joinpath(&#39;templates&#39;, &#39;texinfo&#39;)
-                   ^^^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;str&#39; object has no attribute &#39;joinpath&#39;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 26, in &lt;module&gt;
+ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
 
-Exception occurred:
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/texinfo.py&#34;, line 37, in &lt;module&gt;
-    template_dir = package_dir.joinpath(&#39;templates&#39;, &#39;texinfo&#39;)
-                   ^^^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;str&#39; object has no attribute &#39;joinpath&#39;
-The full traceback has been saved in /tmp/sphinx-err-6yv7i22b.log, if you want to report the issue to the developers.
-Please also report this if it was a user error, so that a better error message can be provided next time.
-A bug report can be filed in the tracker at &lt;https://github.com/sphinx-doc/sphinx/issues&gt;. Thanks!
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 272, in build_main
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 219, in __init__
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 380, in setup_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 433, in load_extension
+sphinx.errors.ExtensionError: Could not import extension sphinx.builders.linkcheck (exception: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py))
+
+Extension error:
+Could not import extension sphinx.builders.linkcheck (exception: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py))
 </pre>
     </div>
   </body>

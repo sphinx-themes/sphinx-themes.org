@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Directives in the JavaScript domain &#8212; Maisie</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/maisie.css?v=e05a0192" />
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the Python domain" href="../api_python_domain/" />
+    <link rel="prev" title="Directives in the C++ domain" href="../api_cpp_domain/" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex/" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_python_domain/" title="Directives in the Python domain"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../api_cpp_domain/" title="Directives in the C++ domain"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../">Maisie</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../" >Kitchen Sink</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../api/" accesskey="U">API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives in the JavaScript domain</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Directives in the JavaScript domain</a><ul>
+<li><a class="reference internal" href="#myFunction"><code class="docutils literal notranslate"><span class="pre">$.myFunction()</span></code></a></li>
+<li><a class="reference internal" href="#myMethod"><code class="docutils literal notranslate"><span class="pre">$.myMethod()</span></code></a></li>
+<li><a class="reference internal" href="#MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
+<li><a class="reference internal" href="#my_variable"><code class="docutils literal notranslate"><span class="pre">my_variable</span></code></a></li>
+<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../api_cpp_domain/"
+                          title="previous chapter">Directives in the C++ domain</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../api_python_domain/"
+                          title="next chapter">Directives in the Python domain</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/kitchen-sink/domains/api_javascript_domain.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../../search/" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../../">Docs</a></li>
+              
+                <li><a href="../../">Kitchen Sink</a></li>
+              
+                <li><a href="../../api/">API documentation</a></li>
+              
+              <li>Directives in the JavaScript domain</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <section id="directives-in-the-javascript-domain">
+<h1>Directives in the JavaScript domain<a class="headerlink" href="#directives-in-the-javascript-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">js</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/javascript.html">https://www.sphinx-doc.org/en/master/usage/domains/javascript.html</a>.</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="myFunction">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myFunction</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myFunction" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code> directive, showing a JavaScript function or method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>href</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> – Gets called with the object.</p></li>
+<li><p><strong>errback</strong> – Gets called in case the request fails. And a lot of other
+text so we need multiple lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – For whatever reason in that case.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Something.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js method">
+<dt class="sig sig-object js" id="myMethod">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myMethod" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::</span></code> directive (an alias for <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code>,
+showing a function that is implemented as a method on a class object.</p>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="MyClass">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyClass" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::</span></code> directive, showing a JavaScript object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – A name</p></li>
+<li><p><strong>num</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – An optional number</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js data">
+<dt class="sig sig-object js" id="my_variable">
+<span class="sig-name descname"><span class="n"><span class="pre">my_variable</span></span></span><a class="headerlink" href="#my_variable" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::</span></code> directive, showing a global variable or constant.</p>
+</dd></dl>
+
+<dl class="js attribute">
+<dt class="sig sig-object js" id="object.name">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#object.name" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::</span></code> directive, showing an attribute <em>name</em> of <em>object</em>.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../api_cpp_domain/" title="previous chapter (use the left arrow)">Directives in the C++ domain</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../api_python_domain/" title="next chapter (use the right arrow)">Directives in the Python domain</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex/" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex/" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_python_domain/" title="Directives in the Python domain"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../api_cpp_domain/" title="Directives in the C++ domain"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../">Maisie</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../" >Kitchen Sink</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../api/" >API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives in the JavaScript domain</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2021, Pradyun Gedam. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
