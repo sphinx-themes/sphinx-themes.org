@@ -4,11 +4,6 @@ This is the module-level docstring of the module :py:mod:`all_in_one_restructure
 The module's docstrings use reStructuredText markup.
 """
 
-# TODO:
-# - show the roles to refer to the listed directives
-# - missing: async with, async for
-# - add example(s) of numpy-style docstrings
-
 import abc
 from typing import TypeAlias, TypeVar, final
 
