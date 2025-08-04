@@ -4,24 +4,26 @@ This is the module-level docstring of the module :py:mod:`all_in_one_restructure
 The module's docstrings use reStructuredText markup.
 """
 
-# TODO:
-# - show roles to refer to elements
-# - async with
-# - async for
-# - add example of numpy-style docstrings
-
 import abc
 from typing import TypeAlias, TypeVar, final
 
-ParameterT = TypeVar("ParameterT")  #: Docstring of type ParameterT
+ParameterT = TypeVar("ParameterT")  #: Docstring of type :py:type:`ParameterT`
 
 ReturnT = TypeVar("ReturnT")
-"""Docstring of type ReturnT."""
+"""Docstring of type :any:`ReturnT`."""
 
-# Python 3.12: type MyType = list[float]  #: The docstring.
-MyType: TypeAlias = list[float]  #: The docstring.
+# type MyType = list[
+#     float
+# ]  #: The docstring of :py:type:`MyType` using Python 3.12 syntax.
 
-my_module_level_variable: MyType = [0.0, 1.1]  #: The docstring.
+MyType: TypeAlias = list[
+    float
+]  #: The docstring of :py:type:`MyType` using an explicit ``TypeAlias``.
+
+my_module_level_variable: MyType = [
+    0.0,
+    1.1,
+]  #: The docstring of :py:data:`my_module_level_variable`.
 
 
 def my_function_pure_sphinx(*args, **kwargs):
@@ -105,8 +107,9 @@ def my_function2(foo: int, bar: str):
     Returns:
         None
 
-    .. deprecated:: 2.0
-        Use :func:`my_function_pure_sphinx` instead.
+    .. deprecated:: x.y
+        (This is an example of a deprecation admonition.)
+        Use :py:func:`my_function_pure_sphinx` instead.
 
     Text at end of docstring.
     """
@@ -131,7 +134,7 @@ class MyException(Exception):
 class AllInOne:
     """This is a class that demonstrates various Python features.
 
-    Uses Google-style docstrings
+    It uses Google-style docstrings
     (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).
 
     Attributes:
@@ -160,9 +163,11 @@ class AllInOne:
 
         Args:
             my_param: Documenting *my_param*.
-                Another sentence on the next docstring line, still belonging to *my_param*.
+                This is another sentence on the next docstring line,
+                still belonging to *my_param*.
             keyword_only_param: Documenting *keyword_only_param*.
-                Another sentence on the next docstring line, still belonging to *keyword_only_param*.
+                This is another sentence on the next docstring line,
+                still belonging to *keyword_only_param*.
 
         Returns:
             The value of the local variable ``my_var``.
@@ -180,7 +185,7 @@ class AllInOne:
         return my_var
 
     async def my_async_method(self, my_param: ParameterT = "default_value") -> ReturnT:
-        """An :term:`async` method.
+        """An :py:keyword:`async` method.
 
         Text at end of docstring.
         """
