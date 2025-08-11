@@ -11,6 +11,10 @@ code, .rst-content tt,
     background-color: rgb(24, 26, 27);
 }
 
+label {
+    color: #d1cec7
+}
+
 h2 a, h2 a:visited, h2 a:hover {
     color: rgb(209, 206, 199);
 }
@@ -96,6 +100,52 @@ codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.lite
     background-color: #2b2929;
     color: #B1B5B7;
 }
+
+
+
+/* parlante comments */
+#parlante-comments,
+  #parlante-add-comment {
+    background-color: #181a1b;
+    color: #d1cec7;
+  }
+
+  .parlante-comment {
+    border-bottom: 1px solid #333;
+  }
+
+  #parlante-author,
+  #parlante-content {
+    background-color: #2a2d2e;
+    color: #ffffff;
+    border: 1px solid #444;
+    outline: none;
+    box-shadow: none;
+    appearance: none; /* remove estilos nativos */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  #parlante-submit {
+    background-color: #f3f6f6;
+    color: #404040;
+  }
+
+  #parlante-submit:hover {
+    background-color: #c6caca;
+  }
+
+  #parlante-add-ok {
+    background-color: #395d3a;
+    color: #d4f7d4;
+    border: 1px solid #497e4a;
+  }
+
+  #parlante-add-error {
+    background-color: #712f2f;
+    color: #fdd;
+    border: 1px solid #a55050;
+  }
 
 
 }
