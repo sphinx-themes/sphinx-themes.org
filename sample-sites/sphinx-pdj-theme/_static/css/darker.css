@@ -23,9 +23,17 @@ body {
     color: rgb(209, 206, 199);
 }
 
+h1, h2 {
+    color: #fff;
+}
+
 
 a, a:hover, a:visited {
     color: rgb(113, 178, 234);
+}
+
+h1 a, h1 a:hover, h1 a:visited {
+    color: #fff;
 }
 
 .wy-menu-vertical a {
@@ -114,6 +122,9 @@ codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.lite
     border-bottom: 1px solid #333;
   }
 
+  #parlante-pingme-name,
+  #parlante-pingme-email,
+  #parlante-pingme-content,
   #parlante-author,
   #parlante-content {
     background-color: #2a2d2e;
@@ -126,26 +137,31 @@ codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.lite
     -moz-appearance: none;
   }
 
+  #parlante-pingme-submit,
   #parlante-submit {
     background-color: #f3f6f6;
     color: #404040;
   }
 
+#parlante-pingme-submit:hover,
   #parlante-submit:hover {
     background-color: #c6caca;
   }
 
+  #parlante-pingme-ok,
   #parlante-add-ok {
     background-color: #395d3a;
     color: #d4f7d4;
     border: 1px solid #497e4a;
   }
 
+  #parlante-pingme-error
   #parlante-add-error {
     background-color: #712f2f;
     color: #fdd;
     border: 1px solid #a55050;
   }
+
 
 
 }

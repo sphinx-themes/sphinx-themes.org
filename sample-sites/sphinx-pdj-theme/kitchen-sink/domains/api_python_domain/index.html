@@ -7,7 +7,7 @@
 
     <title>Directives in the Python domain &#8212; PDJ</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/pdj.css?v=c92af8a8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/pdj.css?v=1923cfa2" />
 
 <link rel="stylesheet" href="../../../_static/css/darker.css" type="text/css"
       media="(prefers-color-scheme: dark)"/>
@@ -40,7 +40,7 @@
     <div class="rst-content">
       <div role="navigation" aria-label="breadcrumbs navigation">
       </div>
-      <div role="main" class="">
+      <div class="">
 
 	
 	<div id="content" class="hfeed entry-container hentry">
@@ -48,6 +48,7 @@
 	    <dark-mode-toggle appearance="toggle" class="slider" dark="" light="">
 	    </dark-mode-toggle>
 	  </div>
+	  <div role="main">
   <section id="directives-in-the-python-domain">
 <h1>Directives in the Python domain<a class="headerlink" href="#directives-in-the-python-domain" title="Link to this heading">¶</a></h1>
 <p>The domain name is <code class="docutils literal notranslate"><span class="pre">py</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/python.html">https://www.sphinx-doc.org/en/master/usage/domains/python.html</a>.</p>
@@ -221,6 +222,7 @@ using Python 3.12 <em>type parameters</em>.</p>
 </section>
 
 
+	  </div>
 	</div>
       </div>
       
@@ -277,6 +279,8 @@ using Python 3.12 <em>type parameters</em>.</p>
 
   <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
     
+
+    
       
       
 	  <ul class="current">
@@ -312,8 +316,78 @@ using Python 3.12 <em>type parameters</em>.</p>
 
       
     
+  
+  
+  <div>
+    <h3><a href="../../../">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Directives in the Python domain</a><ul>
+<li><a class="reference internal" href="#my_module.my_function"><code class="docutils literal notranslate"><span class="pre">my_function()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_function_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_function_type_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_data"><code class="docutils literal notranslate"><span class="pre">my_data</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyException"><code class="docutils literal notranslate"><span class="pre">MyException</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyExceptionFinal"><code class="docutils literal notranslate"><span class="pre">MyExceptionFinal</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyException_type_parameters"><code class="docutils literal notranslate"><span class="pre">MyException_type_parameters</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyExceptionTypeParameters"><code class="docutils literal notranslate"><span class="pre">MyExceptionTypeParameters</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyClassFinal"><code class="docutils literal notranslate"><span class="pre">MyClassFinal</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyClassParameters"><code class="docutils literal notranslate"><span class="pre">MyClassParameters</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyClassTypeParameters"><code class="docutils literal notranslate"><span class="pre">MyClassTypeParameters</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_attribute"><code class="docutils literal notranslate"><span class="pre">my_attribute</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_property"><code class="docutils literal notranslate"><span class="pre">my_property</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_property2"><code class="docutils literal notranslate"><span class="pre">my_property2</span></code></a></li>
+<li><a class="reference internal" href="#my_module.MyType"><code class="docutils literal notranslate"><span class="pre">MyType</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_method"><code class="docutils literal notranslate"><span class="pre">my_method()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_method_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_method_type_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_staticmethod"><code class="docutils literal notranslate"><span class="pre">my_staticmethod()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_staticmethod_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_staticmethod_type_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_classmethod"><code class="docutils literal notranslate"><span class="pre">my_classmethod()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_classmethod_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_classmethod_type_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decorator"><code class="docutils literal notranslate"><span class="pre">my_decorator()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decorator_parameters"><code class="docutils literal notranslate"><span class="pre">my_decorator_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decorator_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_decorator_type_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decoratormethod"><code class="docutils literal notranslate"><span class="pre">my_decoratormethod()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decoratormethod_signature"><code class="docutils literal notranslate"><span class="pre">my_decoratormethod_signature()</span></code></a></li>
+<li><a class="reference internal" href="#my_module.my_decoratormethod_signature_type_parameters"><code class="docutils literal notranslate"><span class="pre">my_decoratormethod_signature_type_parameters()</span></code></a></li>
+</ul>
+</li>
+</ul>
 
   </div>
+  
+  
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../api_javascript_domain/"
+                          title="previous chapter">Directives in the JavaScript domain</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../api_restructuredtext_domain/"
+                          title="next chapter">Directives in the reStructuredText domain</a></p>
+  </div>
+  
+  
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/kitchen-sink/domains/api_python_domain.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+  
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+  
+
+  </div>
+
   &nbsp;
 </nav>
 

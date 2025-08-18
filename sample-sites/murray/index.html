@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">11 Aug 2025 01:23:05 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">18 Aug 2025 01:21:30 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -35,8 +35,6 @@ Running Sphinx v5.0.0
 Original exception:
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
-    mod = import_module(extname)
-          ^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,25 +44,14 @@ Traceback (most recent call last):
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/epub3.py&#34;, line 12, in &lt;module&gt;
-    from sphinx.builders import _epub_base
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/_epub_base.py&#34;, line 15, in &lt;module&gt;
-    from sphinx.builders.html import BuildInfo, StandaloneHTMLBuilder
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 45, in &lt;module&gt;
-    from sphinx.writers.html import HTMLTranslator, HTMLWriter
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/writers/html.py&#34;, line 12, in &lt;module&gt;
-    from docutils.writers.html4css1 import HTMLTranslator as BaseTranslator
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/html4css1/__init__.py&#34;, line 22, in &lt;module&gt;
-    from docutils.transforms import writer_aux
-ImportError: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 26, in &lt;module&gt;
+ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
 
 
 ======================================== stderr ========================================
 
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 430, in load_extension
-    mod = import_module(extname)
-          ^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,33 +61,20 @@ Traceback (most recent call last):
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/epub3.py&#34;, line 12, in &lt;module&gt;
-    from sphinx.builders import _epub_base
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/_epub_base.py&#34;, line 15, in &lt;module&gt;
-    from sphinx.builders.html import BuildInfo, StandaloneHTMLBuilder
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 45, in &lt;module&gt;
-    from sphinx.writers.html import HTMLTranslator, HTMLWriter
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/writers/html.py&#34;, line 12, in &lt;module&gt;
-    from docutils.writers.html4css1 import HTMLTranslator as BaseTranslator
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/writers/html4css1/__init__.py&#34;, line 22, in &lt;module&gt;
-ImportError: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py)
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 26, in &lt;module&gt;
+ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 272, in build_main
-    app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 219, in __init__
-    self.setup_extension(extension)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 380, in setup_extension
-    self.registry.load_extension(self, extname)
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 433, in load_extension
-    raise ExtensionError(__(&#39;Could not import extension %s&#39;) % extname,
-sphinx.errors.ExtensionError: Could not import extension sphinx.builders.epub3 (exception: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py))
+sphinx.errors.ExtensionError: Could not import extension sphinx.builders.linkcheck (exception: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py))
 
 Extension error:
-Could not import extension sphinx.builders.epub3 (exception: cannot import name &#39;writer_aux&#39; from &#39;docutils.transforms&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/transforms/__init__.py))
+Could not import extension sphinx.builders.linkcheck (exception: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py))
 </pre>
     </div>
   </body>
