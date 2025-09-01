@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">25 Aug 2025 01:14:30 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">01 Sep 2025 01:20:52 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -49,9 +49,8 @@ Traceback (most recent call last):
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/admonitions.py&#34;, line 6, in &lt;module&gt;
-    from docutils.parsers.rst.directives.admonitions import BaseAdmonition
-ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/c/__init__.py&#34;, line 20, in &lt;module&gt;
+ModuleNotFoundError: No module named &#39;sphinx.domains.c._parser&#39;
 
 
 ======================================== stderr ========================================
@@ -94,27 +93,22 @@ Traceback
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
       File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
       File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/directives/admonitions.py&#34;, line 6, in &lt;module&gt;
-        from docutils.parsers.rst.directives.admonitions import BaseAdmonition
-    ModuleNotFoundError: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/domains/c/__init__.py&#34;, line 20, in &lt;module&gt;
+    ModuleNotFoundError: No module named &#39;sphinx.domains.c._parser&#39;
     
     The above exception was the direct cause of the following exception:
     
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 414, in build_main
-        app = Sphinx(
-              ^^^^^^^
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 287, in __init__
-        self.setup_extension(extension)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 489, in setup_extension
-        self.registry.load_extension(self, extname)
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 544, in load_extension
         raise ExtensionError(
-    sphinx.errors.ExtensionError: Could not import extension sphinx.directives.admonitions (exception: No module named &#39;docutils.parsers.rst.directives.admonitions&#39;)
+    sphinx.errors.ExtensionError: Could not import extension sphinx.domains.c (exception: No module named &#39;sphinx.domains.c._parser&#39;)
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-zxosqh7k.log
+/tmp/sphinx-err-w5p8hk8c.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
