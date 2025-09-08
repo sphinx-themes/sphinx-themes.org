@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../../">
+<html lang="en" data-content_root="">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Directives in the JavaScript domain &#8212; Nameko</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d7e2fa82" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/nameko.css?v=2296cfae" />
-    <script src="../../../_static/documentation_options.js?v=187304be"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nameko.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Directives in the Python domain" href="../api_python_domain/" />
@@ -31,9 +33,6 @@
           <a href="../../../genindex/" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex/" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="../api_python_domain/" title="Directives in the Python domain"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -52,11 +51,11 @@
           <div class="body" role="main">
             
   <section id="directives-in-the-javascript-domain">
-<h1>Directives in the JavaScript domain<a class="headerlink" href="#directives-in-the-javascript-domain" title="Link to this heading">¶</a></h1>
+<h1>Directives in the JavaScript domain<a class="headerlink" href="#directives-in-the-javascript-domain" title="Permalink to this heading">¶</a></h1>
 <p>The domain name is <code class="docutils literal notranslate"><span class="pre">js</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/javascript.html">https://www.sphinx-doc.org/en/master/usage/domains/javascript.html</a>.</p>
 <dl class="js function">
 <dt class="sig sig-object js" id="myFunction">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myFunction</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myFunction" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myFunction</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code> directive, showing a JavaScript function or method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Arguments<span class="colon">:</span></dt>
@@ -78,14 +77,14 @@ text so we need multiple lines.</p></li>
 
 <dl class="js method">
 <dt class="sig sig-object js" id="myMethod">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myMethod" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::</span></code> directive (an alias for <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code>,
 showing a function that is implemented as a method on a class object.</p>
 </dd></dl>
 
 <dl class="js class">
 <dt class="sig sig-object js" id="MyClass">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyClass" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::</span></code> directive, showing a JavaScript object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Arguments<span class="colon">:</span></dt>
@@ -99,13 +98,13 @@ showing a function that is implemented as a method on a class object.</p>
 
 <dl class="js data">
 <dt class="sig sig-object js" id="my_variable">
-<span class="sig-name descname"><span class="n"><span class="pre">my_variable</span></span></span><a class="headerlink" href="#my_variable" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">my_variable</span></span></span><a class="headerlink" href="#my_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::</span></code> directive, showing a global variable or constant.</p>
 </dd></dl>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="object.name">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#object.name" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#object.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::</span></code> directive, showing an attribute <em>name</em> of <em>object</em>.</p>
 </dd></dl>
 
@@ -117,21 +116,7 @@ showing a function that is implemented as a method on a class object.</p>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../../../">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Directives in the JavaScript domain</a><ul>
-<li><a class="reference internal" href="#myFunction"><code class="docutils literal notranslate"><span class="pre">$.myFunction()</span></code></a></li>
-<li><a class="reference internal" href="#myMethod"><code class="docutils literal notranslate"><span class="pre">$.myMethod()</span></code></a></li>
-<li><a class="reference internal" href="#MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
-<li><a class="reference internal" href="#my_variable"><code class="docutils literal notranslate"><span class="pre">my_variable</span></code></a></li>
-<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.name</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-  </div><h3>Related Topics</h3>
+        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
 <ul>
   <li><a href="../../../">Documentation index</a><ul>
   <li><a href="../../">Kitchen Sink</a><ul>
