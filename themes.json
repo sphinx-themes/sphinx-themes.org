@@ -19,6 +19,12 @@
       "pypi": "furo"
     },
     {
+      "config": "shibuya",
+      "display": "Shibuya",
+      "documentation": "https://shibuya.lepture.com/",
+      "pypi": "shibuya"
+    },
+    {
       "config": "sphinx_book_theme",
       "display": "Book",
       "documentation": "https://sphinx-book-theme.readthedocs.io/en/latest/",
@@ -281,12 +287,6 @@
       },
       "display": "Sandstone",
       "pypi": "mozilla-sphinx-theme"
-    },
-    {
-      "config": "shibuya",
-      "display": "Shibuya",
-      "documentation": "https://shibuya.lepture.com/",
-      "pypi": "shibuya"
     },
     {
       "config": "sizzle",

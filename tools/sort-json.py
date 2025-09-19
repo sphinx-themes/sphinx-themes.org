@@ -8,6 +8,7 @@ _FEATURED = [
     "alabaster",
     "sphinx-rtd-theme",
     "furo",
+    "shibuya",
     "sphinx-book-theme",
     "pydata-sphinx-theme",
     "sphinx-press-theme",
