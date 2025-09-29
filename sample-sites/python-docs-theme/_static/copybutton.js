@@ -16,7 +16,7 @@ function getCopyableText(rootElement) {
     }
     // Remove all elements with the "go" (Generic.Output),
     // "gp" (Generic.Prompt), or "gt" (Generic.Traceback) CSS class
-    const elements = rootElement.querySelectorAll(".gp, .go, .gt")
+    const elements = rootElement.querySelectorAll(".gp, .go, .gt, .linenos")
     for (const el of elements) {
         el.remove()
     }
