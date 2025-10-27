@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">20 Oct 2025 01:15:05 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">27 Oct 2025 01:17:11 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -70,6 +70,11 @@ pickling environment... done
 checking consistency... done
 preparing documents... done
 writing output... [  4%] index
+writing output... [  8%] kitchen-sink/admonitions
+writing output... [ 13%] kitchen-sink/api
+writing output... [ 17%] kitchen-sink/blocks
+writing output... [ 21%] kitchen-sink/domains/api_c_domain
+writing output... [ 26%] kitchen-sink/domains/api_cpp_domain
 
 ======================================== stderr ========================================
 /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/kitchen-sink/admonitions.rst:161: ERROR: Unknown directive type &#34;versionremoved&#34;.
@@ -249,11 +254,7 @@ unknown option: &#34;single-line-parameter-list&#34;.
 
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1072, in handle_page
-    def handle_page(
-                     
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 189, in render
-    cfg_templates_path = [
-       ^^^^^^^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/jinja2/environment.py&#34;, line 1016, in get_template
     return self._load_template(name, globals)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -264,38 +265,24 @@ Traceback (most recent call last):
     source, filename, uptodate = self.get_source(environment, name)
                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/jinja2glue.py&#34;, line 210, in get_source
-    self.environment.globals[&#39;accesskey&#39;] = pass_context(accesskey)
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.TemplateNotFound: page.html
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 276, in build_main
-    &#39;--pdb&#39;, &#39;-P&#39;, action=&#39;store_true&#39;, dest=&#39;pdb&#39;, help=__(&#39;run Pdb on exception&#39;)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 329, in build
-    self._post_init_env()
-            ^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 288, in build_update
-    repo = CatalogRepository(
-        ^^^^^^^^^^^^^^^^^^^^^
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 352, in build
-    )
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 544, in write
-    )
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/__init__.py&#34;, line 554, in _write_serial
-    &#39;master document.&#39;
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 648, in write_doc
-    &#39;sourcename&#39;: sourcename,
   File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 1079, in handle_page
-    event_arg: Any = None,
-        ^^^^^^^^^^^^^^^^^^
-sphinx.errors.ThemeError: An error happened in rendering the page index.
+sphinx.errors.ThemeError: An error happened in rendering the page kitchen-sink/domains/api_cpp_domain.
 Reason: TemplateNotFound(&#39;page.html&#39;)
 
 Theme error:
-An error happened in rendering the page index.
+An error happened in rendering the page kitchen-sink/domains/api_cpp_domain.
 Reason: TemplateNotFound(&#39;page.html&#39;)
 </pre>
     </div>
