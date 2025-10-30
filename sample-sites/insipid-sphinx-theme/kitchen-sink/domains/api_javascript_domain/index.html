@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directives in the JavaScript domain &#8212; Insipid</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/insipid.css?v=b2d00be7" />
+
+    <script src="../../../_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script defer src="../../../_static/insipid.js"></script>
+    <script defer src="../../../_static/insipid-sidebar.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the Python domain" href="../api_python_domain/" />
+    <link rel="prev" title="Directives in the C++ domain" href="../api_cpp_domain/" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head><body>
+    <script type="text/javascript">
+        document.body.classList.add('js');
+    </script>
+    <input type="checkbox" id="sidebar-checkbox" style="display: none;">
+    <label id="overlay" for="sidebar-checkbox"></label>
+    <div class="sidebar-resize-handle"></div>
+    <script type="text/javascript">
+        try {
+            let sidebar = localStorage.getItem('sphinx-sidebar');
+            const sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+            if (sidebar_width) {
+                document.documentElement.style.setProperty('--sidebar-width', sidebar_width);
+            }
+            // show sidebar on wide screen
+            if (!sidebar && window.matchMedia('(min-width: 100rem)').matches) {
+                sidebar = 'visible';
+                // NB: We don't store the value in localStorage!
+            }
+            if (sidebar === 'visible') {
+                document.getElementById('sidebar-checkbox').checked = true;
+            }
+        } catch(e) {
+            console.info(e);
+        }
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </label>
+            <button id="search-button" type="button" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-form" accesskey="S">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+            </button>
+          </div>
+          <div class="title">
+            <a class="parent" href="../../api/" accesskey="U">API documentation</a>
+            <a class="top" href="#">Directives in the JavaScript domain</a>
+          </div>
+          <div class="buttons">
+            <button id="fullscreen-button" type="button" aria-hidden="true">
+              <span class="enable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
+              </span>
+              <span class="disable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div id="searchbox" role="search">
+          <form id="search-form" class="search" style="display: none" action="../../../search/" method="get">
+            <input type="search" name="q" placeholder="Search ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <button>Go</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="../api_cpp_domain/" class="nav-icon previous" title="previous:&#13;Directives in the C++ domain" aria-label="Previous topic" accesskey="P" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+      </a>
+      <a href="../api_python_domain/" class="nav-icon next" title="next:&#13;Directives in the Python domain" aria-label="Next topic" accesskey="N" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="relbar">
+      <a class="previous" href="../api_cpp_domain/" aria-label="Previous topic" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">previous</span>
+            Directives in the C++ domain
+          </span>
+        </div>
+      </a>
+      <a class="next" href="../api_python_domain/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Directives in the Python domain
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<section id="directives-in-the-javascript-domain">
+<h1>Directives in the JavaScript domain<a class="headerlink" href="#directives-in-the-javascript-domain" title="Link to this heading">§</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">js</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/javascript.html">https://www.sphinx-doc.org/en/master/usage/domains/javascript.html</a>.</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="myFunction">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myFunction</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myFunction" title="Link to this definition">§</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code> directive, showing a JavaScript function or method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>href</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> – Gets called with the object.</p></li>
+<li><p><strong>errback</strong> – Gets called in case the request fails. And a lot of other
+text so we need multiple lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – For whatever reason in that case.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Something.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js method">
+<dt class="sig sig-object js" id="myMethod">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myMethod" title="Link to this definition">§</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::</span></code> directive (an alias for <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code>,
+showing a function that is implemented as a method on a class object.</p>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="MyClass">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyClass" title="Link to this definition">§</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::</span></code> directive, showing a JavaScript object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – A name</p></li>
+<li><p><strong>num</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – An optional number</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js data">
+<dt class="sig sig-object js" id="my_variable">
+<span class="sig-name descname"><span class="n"><span class="pre">my_variable</span></span></span><a class="headerlink" href="#my_variable" title="Link to this definition">§</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::</span></code> directive, showing a global variable or constant.</p>
+</dd></dl>
+
+<dl class="js attribute">
+<dt class="sig sig-object js" id="object.name">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#object.name" title="Link to this definition">§</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::</span></code> directive, showing an attribute <em>name</em> of <em>object</em>.</p>
+</dd></dl>
+
+</section>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+
+          <div class="sidebar-resize-handle"></div>
+
+<h3><a href="../../../">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div><hr class="docutils"></div>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../../../genindex/" accesskey="I">General Index</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../../../py-modindex/">Python Module Index</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <nav class="relbar">
+      <a class="previous" href="../api_cpp_domain/" aria-label="Previous topic" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">previous</span>
+            Directives in the C++ domain
+          </span>
+        </div>
+      </a>
+      <a class="next" href="../api_python_domain/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Directives in the Python domain
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>
+
+    <footer role="contentinfo">
+      &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
+<a class="reference internal" href="../../../_sources/kitchen-sink/domains/api_javascript_domain.rst.txt" rel="nofollow">Show Source</a>.
+    </footer>
+  </body>
+</html>

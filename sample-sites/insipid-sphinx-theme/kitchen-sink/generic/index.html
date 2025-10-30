@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generic items &#8212; Insipid</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../_static/insipid.css?v=b2d00be7" />
+
+    <script src="../../_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="../../_static/insipid.js"></script>
+    <script defer src="../../_static/insipid-sidebar.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Images &amp; Figures" href="../images/" />
+    <link rel="prev" title="Blocks" href="../blocks/" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head><body>
+    <script type="text/javascript">
+        document.body.classList.add('js');
+    </script>
+    <input type="checkbox" id="sidebar-checkbox" style="display: none;">
+    <label id="overlay" for="sidebar-checkbox"></label>
+    <div class="sidebar-resize-handle"></div>
+    <script type="text/javascript">
+        try {
+            let sidebar = localStorage.getItem('sphinx-sidebar');
+            const sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+            if (sidebar_width) {
+                document.documentElement.style.setProperty('--sidebar-width', sidebar_width);
+            }
+            // show sidebar on wide screen
+            if (!sidebar && window.matchMedia('(min-width: 100rem)').matches) {
+                sidebar = 'visible';
+                // NB: We don't store the value in localStorage!
+            }
+            if (sidebar === 'visible') {
+                document.getElementById('sidebar-checkbox').checked = true;
+            }
+        } catch(e) {
+            console.info(e);
+        }
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </label>
+            <button id="search-button" type="button" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-form" accesskey="S">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+            </button>
+          </div>
+          <div class="title">
+            <a class="parent" href="../" accesskey="U">Kitchen Sink</a>
+            <a class="top" href="#">Generic items</a>
+          </div>
+          <div class="buttons">
+            <button id="fullscreen-button" type="button" aria-hidden="true">
+              <span class="enable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
+              </span>
+              <span class="disable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div id="searchbox" role="search">
+          <form id="search-form" class="search" style="display: none" action="../../search/" method="get">
+            <input type="search" name="q" placeholder="Search ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <button>Go</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="../blocks/" class="nav-icon previous" title="previous:&#13;Blocks" aria-label="Previous topic" accesskey="P" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+      </a>
+      <a href="../images/" class="nav-icon next" title="next:&#13;Images &amp; Figures" aria-label="Next topic" accesskey="N" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="relbar">
+      <a class="previous" href="../blocks/" aria-label="Previous topic" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">previous</span>
+            Blocks
+          </span>
+        </div>
+      </a>
+      <a class="next" href="../images/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Images &amp; Figures
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<section id="generic-items">
+<h1>Generic items<a class="headerlink" href="#generic-items" title="Link to this heading">§</a></h1>
+<p>These are the things that don’t quite fit into other groupings.</p>
+<section id="inline-markup">
+<h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Link to this heading">§</a></h2>
+<p>One of the nice things about markup languages is the ability to have inline
+markup. This makes the presentation <em>much</em> nicer. The <strong>bold</strong> text shouldn’t
+be too overbearing. It is very common to have <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">code</span></code> as well. It is
+important to ensure that the inline code doesn’t have a line height that is
+greater than the regular prose; otherwise the spacing looks weird.</p>
+<p>It is also possible to use explicit roles to do things like a <sub>subscript</sub>,
+a <sup>superscript</sup>, <em>emphasis</em>, <strong>strong</strong>, and
+<code class="docutils literal notranslate"><span class="pre">literal</span></code>.</p>
+<section id="hyperlinks">
+<h3>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Link to this heading">§</a></h3>
+<p>It is a website, so it’ll have hyperlinks like <a class="reference external" href="https://www.python.org/">https://www.python.org/</a> (inline),
+or <a class="reference external" href="https://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> (external reference), <a class="reference internal" href="#example">example</a> (internal reference),
+<a class="reference external" href="https://www.python.org/">Python web site</a> (external hyperlinks with embedded
+URI), footnote references (manually numbered <a class="footnote-reference brackets" href="#id6" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>,
+labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>*<span class="fn-bracket">]</span></a>), citation references (<a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>),
+substitution references (<a class="reference internal" href="https://picsum.photos/16/16"><img alt="EXAMPLE" src="https://picsum.photos/16/16" style="width: 1em;" /></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
+(see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here).</p>
+<p>reStructuredText has character-level inline markup too. It’s ugly to write, but
+someone might be using it, so here’s an example: <strong>re</strong><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>.</p>
+<p>It is also possible to link to documented items, such as
+<code class="xref py py-class docutils literal notranslate"><span class="pre">api_sample.RandomNumberGenerator</span></code>.</p>
+</section>
+<section id="interpreted-text">
+<h3>Interpreted text<a class="headerlink" href="#interpreted-text" title="Link to this heading">§</a></h3>
+<p>The default role for “interpreted text” (AKA single backticks) is
+<cite>Title Reference</cite>. There are other reference syntaxes as well: <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0287/"><strong>PEP 287</strong></a> and
+<span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2822.html"><strong>RFC 2822</strong></a>.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">--pep-references</span></code> option was supplied, there should be a live link to
+PEP 258 here.</p>
+<section id="gui-labels">
+<h4>GUI labels<a class="headerlink" href="#gui-labels" title="Link to this heading">§</a></h4>
+<p>According to the RST demo, GUI labels (like <span class="guilabel">this label</span>) are a way to
+indicate that some action is to be taken by the user. Like inline code literals,
+GUI labels should not run over line height.</p>
+</section>
+<section id="keys-menu-labels">
+<h4>Keys / Menu labels<a class="headerlink" href="#keys-menu-labels" title="Link to this heading">§</a></h4>
+<p>Key-bindings indicate that the read is to press a button on the keyboard or
+mouse, for example <kbd class="kbd docutils literal notranslate">MMB</kbd>, <kbd class="kbd docutils literal notranslate">⌘</kbd>+<kbd class="kbd docutils literal notranslate">⇧</kbd>+<kbd class="kbd docutils literal notranslate">M</kbd> and <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">MMB</kbd>. Another
+useful way is <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> to show menus:
+<span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ Some sub menu 2 ‣ Some sub menu 3</span></p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> should break when it is too long to fit on a
+single line.</p>
+</section>
+<section id="long-inline-code-wrapping">
+<h4>Long inline code wrapping<a class="headerlink" href="#long-inline-code-wrapping" title="Link to this heading">§</a></h4>
+<p>Let’s test wrapping and whitespace significance in inline literals:
+<code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">of</span> <span class="pre">--inline-literal</span> <span class="pre">--text,</span> <span class="pre">--including</span> <span class="pre">some--</span>
+<span class="pre">strangely--hyphenated-words.</span>&#160; <span class="pre">Adjust-the-width-of-your-browser-window</span>
+<span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">is</span> <span class="pre">wrapped.</span>&#160; <span class="pre">--</span> <span class="pre">----</span> <span class="pre">--------</span>&#160; <span class="pre">Now</span> <span class="pre">note</span>&#160;&#160;&#160; <span class="pre">the</span>
+<span class="pre">spacing</span>&#160;&#160;&#160; <span class="pre">between</span> <span class="pre">the</span>&#160;&#160;&#160; <span class="pre">words</span> <span class="pre">of</span>&#160;&#160;&#160; <span class="pre">this</span> <span class="pre">sentence</span>&#160;&#160;&#160; <span class="pre">(words</span>
+<span class="pre">should</span>&#160;&#160;&#160; <span class="pre">be</span> <span class="pre">grouped</span>&#160;&#160;&#160; <span class="pre">in</span> <span class="pre">pairs).</span></code></p>
+</section>
+</section>
+</section>
+<section id="math">
+<h2>Math<a class="headerlink" href="#math" title="Link to this heading">§</a></h2>
+<p>This is a test. Here is an equation:
+<span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
+Here is another:</p>
+<div class="math notranslate nohighlight" id="equation-this-is-a-label">
+<span class="eqno">(1)<a class="headerlink" href="#equation-this-is-a-label" title="Link to this equation">§</a></span>\[\nabla^2 f =
+\frac{1}{r^2} \frac{\partial}{\partial r}
+\left( r^2 \frac{\partial f}{\partial r} \right) +
+\frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
+\left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
+\frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}\]</div>
+<p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using
+<code class="docutils literal notranslate"><span class="pre">:eq:</span></code>.</p>
+</section>
+<section id="sidebar">
+<h2>Sidebar<a class="headerlink" href="#sidebar" title="Link to this heading">§</a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Ch’ien / The Creative</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</aside>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<section id="code-with-sidebar">
+<h3>Code with Sidebar<a class="headerlink" href="#code-with-sidebar" title="Link to this heading">§</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">A code example</p>
+<p>With a sidebar on the right.</p>
+</aside>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Code blocks can also have captions.</span><a class="headerlink" href="#id18" title="Link to this code">§</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;two&quot;</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;three&quot;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;four&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;five&quot;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;six&quot;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;seven&quot;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eight&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nine&quot;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ten&quot;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eleven&quot;</span><span class="p">)</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;twelve&quot;</span><span class="p">)</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;thirteen&quot;</span><span class="p">)</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fourteen&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">§</a></h2>
+<section id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">§</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>A footnote contains body elements, consistently indented by at
+least 3 spaces.</p>
+<p>This is the footnote’s second paragraph.</p>
+</aside>
+<aside class="footnote brackets" id="label" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>) or
+automatically using a “#”-prefixed label.  This footnote has a
+label so it can be referred to from multiple places, both as a
+footnote reference (<a class="footnote-reference brackets" href="#label" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>) and as a hyperlink reference
+(<a class="reference internal" href="#label">label</a>).</p>
+</aside>
+<aside class="footnote brackets" id="id9" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">3</a><span class="fn-bracket">]</span></span>
+<p>This footnote is numbered automatically and anonymously using a
+label of “#” only.</p>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">*</a><span class="fn-bracket">]</span></span>
+<p>Footnotes may also use symbols, specified with a “*” label.
+Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>†<span class="fn-bracket">]</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">†</a><span class="fn-bracket">]</span></span>
+<p>This footnote shows the next symbol in the sequence.</p>
+</aside>
+</aside>
+</section>
+<section id="citations">
+<h3>Citations<a class="headerlink" href="#citations" title="Link to this heading">§</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id16">2</a>)</span>
+<p>This citation has some <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">blocks</span></code> in it, maybe some <strong>bold</strong> and
+<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id15" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> too.</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">13</a><span class="fn-bracket">]</span></span>
+<p>This citation will have one backlink.</p>
+</aside>
+</aside>
+<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id13" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> citation.</p>
+<p>Here is another type of citation: <cite>citation</cite></p>
+</section>
+<section id="targets">
+<h3>Targets<a class="headerlink" href="#targets" title="Link to this heading">§</a></h3>
+<p id="example">This paragraph is pointed to by the explicit “example” target.
+A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
+hyperlink targets</a> are also possible.</p>
+<p>Section headers are implicit targets, referred to by name. See
+<a class="reference internal" href="#targets">Targets</a>.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="https://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>”.</p>
+<p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
+refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
+</section>
+<section id="target-footnotes">
+<h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Link to this heading">§</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id19" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id20">1</a>,<a role="doc-backlink" href="#id21">2</a>)</span>
+<p><a class="reference external" href="https://www.python.org/">https://www.python.org/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="centered-text">
+<h2>Centered text<a class="headerlink" href="#centered-text" title="Link to this heading">§</a></h2>
+<p>You can create a statement with centered text with <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">centered::</span></code></p>
+<p class="centered">
+<strong>This is centered text!</strong></p></section>
+<section id="rubric">
+<h2>Rubric<a class="headerlink" href="#rubric" title="Link to this heading">§</a></h2>
+<blockquote>
+<div><p>A rubric is like an informal heading that doesn’t correspond to the document’s structure.</p>
+<p class="attribution">—<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric">https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric</a></p>
+</div></blockquote>
+<p>Wikipedia says it is something different:</p>
+<blockquote>
+<div><p>A rubric is a word or section of text that is traditionally written or printed in red ink for emphasis.</p>
+<p class="attribution">—<a class="reference external" href="https://en.wikipedia.org/wiki/Rubric">https://en.wikipedia.org/wiki/Rubric</a></p>
+</div></blockquote>
+<p>This is stylized as docutils tells us to stylize it, since it is used for footnote headers (see end of <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html">https://docs.python.org/3/reference/lexical_analysis.html</a>)</p>
+<p class="rubric">This is a rubric</p>
+<section id="sidebars-and-rubrics">
+<h3>Sidebars and Rubrics<a class="headerlink" href="#sidebars-and-rubrics" title="Link to this heading">§</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Sidebar Title</p>
+<p class="sidebar-subtitle">Optional Subtitle</p>
+<p>This is a sidebar.  It is for text outside the flow of the main
+text.</p>
+<p class="rubric">This is a rubric inside a sidebar</p>
+<p>Sidebars often appears beside the main text with a border and
+background color.</p>
+</aside>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+</section>
+</section>
+<section id="download-links">
+<h2>Download Links<a class="headerlink" href="#download-links" title="Link to this heading">§</a></h2>
+<p><a class="reference download external" download="" href="https://picsum.photos/200/200"><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span> <span class="pre">link</span> <span class="pre">should</span> <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></a></p>
+</section>
+</section>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+
+          <div class="sidebar-resize-handle"></div>
+
+<h3><a href="../../">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div><hr class="docutils"></div>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../../genindex/" accesskey="I">General Index</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../../py-modindex/">Python Module Index</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <nav class="relbar">
+      <a class="previous" href="../blocks/" aria-label="Previous topic" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">previous</span>
+            Blocks
+          </span>
+        </div>
+      </a>
+      <a class="next" href="../images/" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            Images &amp; Figures
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>
+
+    <footer role="contentinfo">
+      &#169; Copyright 2021, Pradyun Gedam.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
+<a class="reference internal" href="../../_sources/kitchen-sink/generic.rst.txt" rel="nofollow">Show Source</a>.
+    </footer>
+  </body>
+</html>

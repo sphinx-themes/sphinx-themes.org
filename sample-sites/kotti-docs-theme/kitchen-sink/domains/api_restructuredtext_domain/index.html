@@ -1,0 +1,272 @@
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+        <title>Directives in the reStructuredText domain &mdash; Kotti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../_static/sphinx-bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../_static/sphinx-bootstrap.css" type="text/css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT:'../../../',
+                VERSION:'',
+                COLLAPSE_INDEX:false,
+                FILE_SUFFIX:'.html',
+                HAS_SOURCE:  true
+            };
+        </script>
+            <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+            <script type="text/javascript" src="../../../_static/jquery.js"></script>
+            <script type="text/javascript" src="../../../_static/underscore.js"></script>
+            <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+            <script type="text/javascript" src="../../../_static/doctools.js"></script>
+            <script type="text/javascript" src="../../../_static/bootstrap-dropdown.js"></script>
+            <link rel="index" title="Index"
+                  href="../../../genindex/"/>
+            <link rel="search" title="Search" href="../../../search/"/>
+        <link rel="top" title="Kotti" href="../../../"/>
+            <link rel="up" title="API documentation" href="../../api/"/>
+            <link rel="next" title="Blocks" href="../../blocks/"/>
+            <link rel="prev" title="Directives in the Python domain" href="../api_python_domain/"/> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+
+    <div class="related">
+        <ul class="nav">
+                <li class=""><a class="brand" href="../../../">Sphinx Themes Sample</a></li>
+                <li>
+                    <a href="../../../genindex/"
+                       title="General Index" accesskey="I">index</a>
+                </li>
+                <li>
+                    <a href="../../blocks/"
+                       title="Blocks" accesskey="N">next</a>
+                </li>
+                <li>
+                    <a href="../api_python_domain/"
+                       title="Directives in the Python domain" accesskey="P">previous</a>
+                </li>
+                <li><a href="../../"
+                        >Kitchen Sink</a>
+                </li>
+                <li><a href="../../api/"
+                        accesskey="U">API documentation</a>
+                </li> 
+        </ul>
+    </div>
+                <div class="pull-right">
+                    
+        <form class="navbar-search form-search" action="../../../search/"
+              method="get">
+            <input class="search-query" type="text" name="q" placeholder="search"/>
+            <input type="hidden" name="check_keywords" value="yes"/>
+            <input type="hidden" name="area" value="default"/>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container">
+        <div class="content row">
+                <div class="span9">
+                    
+  <section id="directives-in-the-restructuredtext-domain">
+<h1>Directives in the reStructuredText domain<a class="headerlink" href="#directives-in-the-restructuredtext-domain" title="Permalink to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">rst</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html">https://www.sphinx-doc.org/en/master/usage/domains/restructuredtext.html</a>.</p>
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive::</span></span><a class="headerlink" href="#directive-my_directive" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive</span></code>.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive2">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive2::</span></span><span class="sig-prename descclassname"> <span class="pre">my_argument</span></span><a class="headerlink" href="#directive-my_directive2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive2</span></code> with argument <code class="docutils literal notranslate"><span class="pre">my_argument</span></code>.</p>
+</dd></dl>
+
+<dl class="rst directive">
+<dt class="sig sig-object rst" id="directive-my_directive3">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">my_directive3::</span></span><a class="headerlink" href="#directive-my_directive3" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span></code> directive, showing the directive <code class="docutils literal notranslate"><span class="pre">my_directive3</span></code>.</p>
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option1">
+<span class="sig-name descname"><span class="pre">:my_option1:</span></span><a class="headerlink" href="#directive-option-my_directive3-my_option1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option2">
+<span class="sig-name descname"><span class="pre">:my_option2:</span></span><em class="property"> <span class="pre">my_argument</span></em><a class="headerlink" href="#directive-option-my_directive3-my_option2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive:option::</span></code> directive, showing the directive option <code class="docutils literal notranslate"><span class="pre">my_option2</span></code> that has an argument.</p>
+</dd></dl>
+
+<dl class="rst directive:option">
+<dt class="sig sig-object rst" id="directive-option-my_directive3-my_option3">
+<span class="sig-name descname"><span class="pre">:my_option3:</span></span><em class="property"> <span class="pre">my_argument2</span></em><em class="property"> <span class="pre">(my_argument2_type)</span></em><a class="headerlink" href="#directive-option-my_directive3-my_option3" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive:option::</span></code> directive, showing the directive option <code class="docutils literal notranslate"><span class="pre">my_option3</span></code> that has an argument with a type definition.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="rst role">
+<dt class="sig sig-object rst" id="role-role_name">
+<span class="sig-name descname"><span class="pre">:role_name:</span></span><a class="headerlink" href="#role-role_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:role::</span></code> directive, showing a role.</p>
+</dd></dl>
+
+</section>
+
+
+                    
+                </div>
+                <div class="span3">
+                    
+        <div class="sphinxsidebar">
+            <ul class="nav nav-list well">
+  <li class="nav-header">Previous topic</li>
+  <li>
+    <a href="../api_python_domain/"
+       title="previous chapter">Directives in the Python domain</a>
+  </li>
+  <li class="nav-header">Next topic</li>
+  <li>
+    <a href="../../blocks/"
+       title="next chapter">Blocks</a>
+  </li>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/kitchen-sink/domains/api_restructuredtext_domain.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">GitHub</li>
+                <li>
+                    <a href="https://github.com/Pylons/Kotti/">Repo</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Pylons/Kotti/issues?state=open">Issues</a>
+                </li>
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Pylons&repo=Kotti&type=watch&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0"
+                            width="110px" height="20px"></iframe>
+                </li>
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Pylons&repo=Kotti&type=fork&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0"
+                            width="94px" height="20px"></iframe>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">Getting Help</li>
+                <li>
+                    <a href="http://groups.google.com/group/kotti">Mailing list</a>
+                </li>
+                <li>
+                    <a href="irc://irc.freenode.net/#kotti">IRC</a>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul class="nav nav-list well">
+                <li class="nav-header">Social</li>
+                <li class="follow-btn">
+                    <a href="https://twitter.com/KottiCMS"
+                       class="twitter-follow-button" data-width="145px"
+                       data-link-color="#0069D6" data-show-count="false">Follow
+                        @KottiCMS</a>
+                </li>
+                <li class="tweet-btn">
+                    <a href="https://twitter.com/share" class="twitter-share-button"
+                       data-url="http://kotti.pylonsproject.org/" data-count="horizontal"
+                       data-via="twbootstrap"
+                       data-related="KottiCMS:Creator of Sphinx Themes Sample">Tweet</a>
+                </li>
+                <li class="plusone-container">
+                    <g:plusone size="medium"></g:plusone>
+                </li>
+            </ul>
+        </div>
+                </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        
+        <div class="container">
+                    &copy;
+                        Copyright 2021, Pradyun Gedam.
+                    <br />
+                Created using <a
+                        href="http://sphinx.pocoo.org/">Sphinx</a> 5.0.0
+                    .
+                Theme based on
+                <a href="https://github.com/scotch/sphinx-bootstrap">
+                    Sphinx-Bootstrap
+                </a>
+                adapted from
+                <a href="http://twitter.github.com/bootstrap/">
+                    Twitter's Bootstrap
+                </a>
+                by <a href="http://www.scotchmedia.com">Scotch Media</a>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    $('.nav .active').on('click', function () {
+        e.preventDefault()
+        $(this).siblings().toggle()
+    });
+</script>
+
+<!-- plusone -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- twitter -->
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</body>
+</html>
