@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+
+    <meta itemprop="sphinx_documatt_theme" content="0.0.5"><title>Directives in the C domain &mdash; Documatt</title>
+
+    
+        
+        
+            <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+        
+            <link rel="stylesheet" type="text/css" href="../../../_static/css/main.css" />
+        
+    
+
+    <script type="text/javascript" src="../../../_static/js/main.js"></script>
+
+        <script type="text/javascript" id="documentation_options"
+                data-url_root="../../../"
+                src="../../../_static/documentation_options.js"></script>
+
+        
+            <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+            <script src="../../../_static/jquery.js"></script>
+            <script src="../../../_static/underscore.js"></script>
+            <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+            <script src="../../../_static/doctools.js"></script>
+    
+
+    
+        
+        <link rel="shortcut icon" href="../../../_static/img/favicon.ico"/>
+    
+            <link rel="index" title="Index" href="../../../genindex/"/>
+            <link rel="search" title="Search" href="../../../search/"/>
+            <link rel="next" title="Directives in the C++ domain" href="../api_cpp_domain/"/>
+            <link rel="prev" title="API documentation" href="../../api/"/>
+
+    
+
+    
+</head>
+<body>
+
+
+    <header>
+        
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../../../">
+                            <img
+                                
+                                    src="../../../_static/img/logo.svg"
+                                
+                                alt="Logo"
+                                
+                                    style="width: 10rem;"
+                                
+                                />
+                            
+                        </a>
+                        <!--<a role="button" class="navbar-burger burger" aria-label="menu"
+                           aria-expanded="false"
+                           data-target="navbarMenu">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>-->
+                    </div>
+
+                    
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <!--
+                                <a class="navbar-item" href="https://documatt.com">Documatt</a>
+                                <a class="navbar-item"
+                                   href="https://snippets.documatt.com">Snippets</a>
+                                <a class="navbar-item is-active" href="https://blog.documatt.com">Blog</a>
+                                -->
+                            </div>
+                        </div>
+                    
+                </div>
+            </nav>
+        
+
+        
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li><a href="../../../">Sphinx Themes Sample</a></li>
+                        
+    <li><a href="../../" aria-current="page">Kitchen Sink</a>
+    </li>
+
+    <li><a href="../../api/" aria-current="page">API documentation</a>
+    </li>
+
+
+    <li class="is-active">Directives in the C domain</li>
+
+                    </ul>
+                </div>
+            </nav>
+        
+    </header>
+
+
+
+    <section class="section site-hero" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="columns">
+                <div class="column content is-8 is-offset-2">
+                        
+                            <h1 class="title is-2">
+                                <a href="../../../">Sphinx Themes Sample</a>
+                            </h1>
+                            <div class="motto subtitle is-4">
+                                
+                            </div>
+                        
+                    
+                </div>
+                <div class="column">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<hr>
+
+
+    
+        <section class="section is-paddingless" id="document">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-2 mt-2 is-family-sans-serif">
+                        
+<div class="content globaltoc">
+    <p class="has-text-weight-bold">Table of Contents</p>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+</div>
+                        
+                    </div>
+                    <div class="column is-8">
+                        
+                        <article class="content is-medium sphinx-body">
+                            
+  <section id="directives-in-the-c-domain">
+<h1>Directives in the C domain<a class="headerlink" href="#directives-in-the-c-domain" title="Permalink to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">c</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/c.html">https://www.sphinx-doc.org/en/master/usage/domains/c.html</a>.</p>
+<dl class="c member">
+<dt class="sig sig-object c" id="c.PyTypeObject.tp_bases">
+<span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">PyTypeObject</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">tp_bases</span></span></span><a class="headerlink" href="#c.PyTypeObject.tp_bases" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:member::</span></code> directive, showing a struct member.</p>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.my_var">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_var</span></span></span><a class="headerlink" href="#c.my_var" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:var::</span></code> directive, showing a variable.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyType_GenericAlloc">
+<span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyType_GenericAlloc</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyTypeObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">nitems</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:function::</span></code> directive, showing a function. The signature should be given as in C.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – description of the first parameter.</p></li>
+<li><p><strong>nitems</strong> – description of the second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a result.</p>
+</dd>
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NULL</strong> – under some conditions.</p></li>
+<li><p><strong>NULL</strong> – under some other conditions as well.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.MY_MACRO">
+<span class="sig-name descname"><span class="n"><span class="pre">MY_MACRO</span></span></span><a class="headerlink" href="#c.MY_MACRO" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::</span></code> directive, showing a macro, i.e., a C-language <code class="docutils literal notranslate"><span class="pre">#define</span></code>, without the replacement text.</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt class="sig sig-object c" id="c.MyStruct">
+<span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyStruct</span></span></span><a class="headerlink" href="#c.MyStruct" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:struct::</span></code> directive, showing a struct.</p>
+</dd></dl>
+
+<dl class="c union">
+<dt class="sig sig-object c" id="c.MyUnion">
+<span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyUnion</span></span></span><a class="headerlink" href="#c.MyUnion" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:union::</span></code> directive, showing a union.</p>
+</dd></dl>
+
+<dl class="c enum">
+<dt class="sig sig-object c" id="c.MyEnum">
+<span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyEnum</span></span></span><a class="headerlink" href="#c.MyEnum" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enum::</span></code> directive, showing an enum.</p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.myEnumerator">
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myEnumerator</span></span></span><a class="headerlink" href="#c.myEnumerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enumerator::</span></code> directive, showing an enumerator.</p>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.my_type">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_type</span></span></span><a class="headerlink" href="#c.my_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span></code> directive, showing a type.</p>
+</dd></dl>
+
+</section>
+
+
+
+                            
+                            
+                                <p class="has-text-weight-light is-size-6 my-4">
+                                    Previous:
+                                    <a href="../../api/"
+                                       title="previous chapter">API documentation</a>
+                                
+                                    |
+                                
+                                    Next:
+                                    <a href="../api_cpp_domain/"
+                                       title="next chapter">Directives in the C++ domain</a>
+                                </p>
+                            
+                        </article>
+                    </div>
+                    <div class="column is-2 mt-2  is-family-sans-serif">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered has-text-primary">
+                <a href="../../../">
+                    <img
+                        
+                            src="../../../_static/img/logo.svg"
+                        
+                        alt="Logo"
+                        
+                            style="width: 10rem;"
+                        
+                    />
+                 </a>
+                 <div class="footer-text">
+                
+                    <p></p>
+                
+                </div>
+
+                <p class="mt-4">Copyright &copy; 2021, Pradyun Gedam</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
