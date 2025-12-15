@@ -235,6 +235,18 @@ div.body pre {
     border: 1px solid #ac9;
 }
 
+div.body {
+    .good pre {
+        border-left: 3px solid var(--good-border);
+    }
+    .bad pre {
+        border-left: 3px solid var(--bad-border);
+    }
+    .maybe pre {
+        border-left: 3px solid var(--middle-border);
+    }
+}
+
 /* Admonitions */
 :root {
     --admonition-background: #eee;
