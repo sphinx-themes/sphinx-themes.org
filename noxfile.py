@@ -2,19 +2,19 @@ import nox
 
 
 @nox.session
-def update(session):
+def update(session: nox.Session) -> None:
     session.install("pip-tools")
     session.run("pip-compile", "requirements.in", "--upgrade")
 
 
 @nox.session(name="list", reuse_venv=True)
-def list_themes(session):
+def list_themes(session: nox.Session) -> None:
     session.install("rich")
     session.run("python", "-m", "src.themes")
 
 
 @nox.session(reuse_venv=True)
-def publish(session):
+def publish(session: nox.Session) -> None:
     session.install("-r", "requirements.txt")
     session.run("playwright", "install", "firefox")
     session.run("python", "-m", "src.generate_sample_sites", *session.posargs)
@@ -23,6 +23,6 @@ def publish(session):
 
 
 @nox.session(reuse_venv=True)
-def lint(session):
+def lint(session: nox.Session) -> None:
     session.install("pre-commit")
     session.run("pre-commit", "run", "--all-files")
