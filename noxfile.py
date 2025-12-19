@@ -24,5 +24,5 @@ def publish(session: nox.Session) -> None:
 
 @nox.session(reuse_venv=True)
 def lint(session: nox.Session) -> None:
-    session.install("pre-commit")
-    session.run("pre-commit", "run", "--all-files")
+    session.install("prek")
+    session.run("prek", "run", "--all-files")
