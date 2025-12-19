@@ -146,6 +146,5 @@ The GitHub Action job runs `nox -s publish` and pushes the generated site to the
 [`nox`]: https://pypi.org/project/nox/
 [`pipx`]: https://pypi.org/project/pipx/
 [`pre-commit`]: https://pypi.org/project/pre-commit/
-[`chromedriver`]: https://chromedriver.chromium.org/
 [`themes.json`]: ./themes.json
 [`tools/sort-json.py`]: ./tools/sort-json.py
