@@ -26,3 +26,5 @@ rich==13.9.4
     # via -r requirements.in
 typing-extensions==4.12.2
     # via pyee
+uv==0.9.18
+    # via -r requirements.in
