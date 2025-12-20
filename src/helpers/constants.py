@@ -1,6 +1,10 @@
-from pathlib import Path
+from __future__ import annotations
 
-from playwright.async_api import ViewportSize
+from pathlib import Path
+from typing import TYPE_CHECKING, TypedDict
+
+if TYPE_CHECKING:
+    from playwright.async_api import ViewportSize
 
 # -------------------------------------------------------------------------------
 # Locations
@@ -50,3 +54,13 @@ SCREENSHOT_OFFSETS = {
     "tablet": (2013, 90),
     "mobile": (2831, 269),
 }
+
+
+# -------------------------------------------------------------------------------
+# themes.json schema
+# -------------------------------------------------------------------------------
+class ThemeDict(TypedDict):
+    display: str
+    pypi: str
+    documentation: str | None
+    config: str | dict[str, str | list[str]]
