@@ -2,8 +2,8 @@
 
 import json
 import sys
-from dataclasses import dataclass, field
 from collections.abc import Iterator
+from dataclasses import dataclass, field
 
 from .constants import DESTINATION, FILES
 

@@ -1,7 +1,7 @@
 target-version = "py313"
 
 [lint]
-extend-select = ["FA", "TC", "UP"]
+extend-select = ["I", "FA", "TC", "UP"]
 exclude = [
   "sample-docs/kitchen-sink/all_in_one_restructuredtext.py",
 ]
