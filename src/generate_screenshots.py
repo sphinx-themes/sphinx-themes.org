@@ -3,7 +3,6 @@
 import asyncio
 import functools
 import io
-from typing import Dict, Tuple
 
 import rich.progress
 from PIL import Image
@@ -32,7 +31,7 @@ def get_template_image() -> Image.Image:
         print("Done")
 
 
-def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Image:
+def sanitize_screenshot(raw_png: bytes, real_size: tuple[int, int]) -> Image.Image:
     """Processing screenshots taken by the browser."""
     with io.BytesIO(raw_png) as f:
         image = Image.open(f).convert("RGB")
@@ -40,7 +39,7 @@ def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Ima
 
 
 def render_into_template(
-    screenshots: Dict[str, Image.Image],
+    screenshots: dict[str, Image.Image],
     template: Image.Image,
 ) -> Image.Image:
     """Place all the screenshots, into the correct place."""
@@ -62,7 +61,7 @@ def render_into_template(
 # --------------------------------------------------------------------------------------
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
-) -> Dict[str, Image.Image]:
+) -> dict[str, Image.Image]:
     screenshots = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
