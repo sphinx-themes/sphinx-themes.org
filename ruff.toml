@@ -2,3 +2,6 @@ target-version = "py314"
 
 [lint]
 extend-select = ["FA", "TC"]
+exclude = [
+  "sample-docs/kitchen-sink/all_in_one_restructuredtext.py",
+]
