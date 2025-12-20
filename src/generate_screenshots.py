@@ -7,13 +7,17 @@ from typing import Dict, Tuple
 
 import rich
 from PIL import Image
-from playwright.async_api import BrowserContext
+from playwright.async_api import BrowserContext, Page, async_playwright
 from playwright.async_api import Error as PlaywrightError
-from playwright.async_api import Page, async_playwright
 
-from .constants import DESTINATION, SCREENSHOT_OFFSETS, SCREENSHOT_SIZES, TEMPLATES
-from .output import run_for_themes_with_progress
-from .themes import Theme, get_themes
+from helpers.constants import (
+    DESTINATION,
+    SCREENSHOT_OFFSETS,
+    SCREENSHOT_SIZES,
+    TEMPLATES,
+)
+from helpers.output import run_for_themes_with_progress
+from helpers.themes import Theme, get_themes
 
 
 # --------------------------------------------------------------------------------------
@@ -131,3 +135,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+else:
+    raise RuntimeError("This module is intended to be run as a script.")

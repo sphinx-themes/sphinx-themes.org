@@ -114,10 +114,3 @@ class Theme:
                 yield f"{key} = {value!r}"
             else:
                 yield f"{key} = {value}"
-
-
-if __name__ == "__main__":
-    import rich
-
-    for theme in get_themes():
-        rich.print(theme)

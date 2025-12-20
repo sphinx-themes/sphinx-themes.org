@@ -4,8 +4,8 @@ import shutil
 
 from jinja2 import Template
 
-from .constants import BUILD, DESTINATION, TEMPLATES
-from .themes import get_themes
+from helpers.constants import BUILD, DESTINATION, TEMPLATES
+from helpers.themes import get_themes
 
 
 def main():
@@ -23,3 +23,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+else:
+    raise RuntimeError("This module is intended to be run as a script.")

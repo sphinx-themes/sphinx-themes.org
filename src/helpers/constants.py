@@ -3,7 +3,7 @@ from pathlib import Path
 # -------------------------------------------------------------------------------
 # Locations
 # -------------------------------------------------------------------------------
-_BASE = Path(__file__).parent.parent.relative_to(Path(".").resolve())
+_BASE = Path(__file__).parent.parent.parent.relative_to(Path(".").resolve())
 _PUBLIC = _BASE / "public"
 _TEMPLATES = _BASE / "src" / "templates"
 
