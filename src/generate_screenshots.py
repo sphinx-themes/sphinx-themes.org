@@ -1,19 +1,27 @@
 """Script to generate the screenshots for all the themes."""
 
+from __future__ import annotations
+
 import asyncio
 import functools
 import io
-from typing import Dict, Tuple
+from typing import TYPE_CHECKING
 
-import rich
 from PIL import Image
-from playwright.async_api import BrowserContext
+from playwright.async_api import Browser, Page, Playwright, async_playwright
 from playwright.async_api import Error as PlaywrightError
-from playwright.async_api import Page, async_playwright
 
-from .constants import DESTINATION, SCREENSHOT_OFFSETS, SCREENSHOT_SIZES, TEMPLATES
-from .output import run_for_themes_with_progress
-from .themes import Theme, get_themes
+from helpers.constants import (
+    DESTINATION,
+    SCREENSHOT_OFFSETS,
+    SCREENSHOT_SIZES,
+    TEMPLATES,
+)
+from helpers.output import run_for_themes_with_progress
+from helpers.themes import Theme, get_themes
+
+if TYPE_CHECKING:
+    import rich.progress
 
 
 # --------------------------------------------------------------------------------------
@@ -28,7 +36,7 @@ def get_template_image() -> Image.Image:
         print("Done")
 
 
-def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Image:
+def sanitize_screenshot(raw_png: bytes, real_size: tuple[int, int]) -> Image.Image:
     """Processing screenshots taken by the browser."""
     with io.BytesIO(raw_png) as f:
         image = Image.open(f).convert("RGB")
@@ -36,7 +44,7 @@ def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Ima
 
 
 def render_into_template(
-    screenshots: Dict[str, Image.Image],
+    screenshots: dict[str, Image.Image],
     template: Image.Image,
 ) -> Image.Image:
     """Place all the screenshots, into the correct place."""
@@ -58,8 +66,8 @@ def render_into_template(
 # --------------------------------------------------------------------------------------
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
-) -> Dict[str, Image.Image]:
-    screenshots = {}
+) -> dict[str, Image.Image]:
+    screenshots: dict[str, Image.Image] = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
         await page.set_viewport_size(resolution)
@@ -73,16 +81,15 @@ async def take_screenshots_at_all_resolutions(
 
 
 async def render_at_multiple_resolutions(
-    context: BrowserContext,
+    browser: Browser,
     original_template: Image.Image,
-    *,
     theme: Theme,
     progress: rich.progress.Progress,
 ) -> None:
     task = progress.add_task(theme.name, total=10)
     try:
         # progress.log(f"{theme.name}: Creating browser tab.")
-        page = await context.new_page()
+        page = await browser.new_page()
         progress.advance(task, 1)
 
         # progress.log(f"{theme.name}: Taking screenshots.")
@@ -107,7 +114,7 @@ async def render_at_multiple_resolutions(
 # --------------------------------------------------------------------------------------
 # Main entrypoint
 # --------------------------------------------------------------------------------------
-async def run(playwright) -> None:
+async def run(playwright: Playwright) -> None:
     print("Launching browser...", end=" ", flush=True)
     try:
         browser = await playwright.firefox.launch()
@@ -131,3 +138,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+else:
+    raise RuntimeError("This module is intended to be run as a script.")

@@ -118,20 +118,20 @@ Runs the linters and formats all the files in the repository. This uses [`pre-co
 `nox -s publish` generates the various parts of the website as follows:
 
 - Install the dependencies.
-- Run `python -m src.generate_sample_sites`
+- Run `python src/generate_sample_sites.py`
   - For every theme (with concurrency):
     - Create an isolated virtualenv in `build/`.
     - Install the latest sphinx pre-release, and then the theme's package.
     - Generate a `conf.py` for rendering documentation using this theme.
     - Call `sphinx-build` to generate the documentation using given theme.
-- Run `python -m src.generate_previews`
+- Run `python src/generate_screenshots.py`
   - Creates a webdriver for Firefox.
   - For every theme (with concurrency):
     - Open the generated sample site's root in the browser.
     - Take screenshots for various resolutions.
     - Place the screenshots appropriately in `src/assets/preview.template.png`.
     - Write the appropriately-modified-for-web-use preview image.
-- `python -m src.generate_scaffold`
+- `python src/generate_scaffold.py`
   - Renders `src/index.template.html`, with themes loaded from [`themes.json`].
   - Copies the illustration, which makes the site look pretty.
   - Write `CNAME` for GitHub Pages to serve the page correctly.
@@ -146,6 +146,5 @@ The GitHub Action job runs `nox -s publish` and pushes the generated site to the
 [`nox`]: https://pypi.org/project/nox/
 [`pipx`]: https://pypi.org/project/pipx/
 [`pre-commit`]: https://pypi.org/project/pre-commit/
-[`chromedriver`]: https://chromedriver.chromium.org/
 [`themes.json`]: ./themes.json
 [`tools/sort-json.py`]: ./tools/sort-json.py

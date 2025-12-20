@@ -1,10 +1,11 @@
-from __future__ import annotations
+"""sphinx-themes.org sample documentation configuration
+
+If you're reading this for sphinx-themes.org, you probably want to look at
+`src/templates/conf.template.py` instead, which will replace this file as the
+configuration file.
+"""
 
 import sys
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from sphinx.application import Sphinx
 
 sys.path.insert(0, "./kitchen-sink")
 
@@ -24,6 +25,7 @@ extensions = [
     "sphinx.ext.viewcode",
 ]
 
+
 # -- Options for extlinks -----------------------------------------------------
 extlinks = {
     "pypi": ("https://pypi.org/project/%s/", "%s"),
@@ -39,26 +41,3 @@ todo_include_todos = True
 
 # -- Options for HTML output --------------------------------------------------
 html_title = "Sample Documentation"
-
-# -- Theme-specific -----------------------------------------------------------
-# Everything above should be the same as the baseline `conf.py`.
-exec("""
-{{ theme.conf_py_snippet }}
-""")
-
-
-def replace_index(app: Sphinx, docname: str, source: list[str]) -> None:
-    """Replaces the contents of the `index` document with custom content."""
-    if docname != "index":
-        return
-
-    with open("{{ injected_index_rst }}") as fp:
-        source[0] = fp.read()
-
-
-def setup(app: Sphinx) -> dict[str, object]:
-    app.connect("source-read", replace_index)
-    return {
-        "parallel_read_safe": True,
-        "parallel_write_safe": True,
-    }

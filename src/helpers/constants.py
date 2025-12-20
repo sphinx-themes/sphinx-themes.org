@@ -1,9 +1,15 @@
+from __future__ import annotations
+
 from pathlib import Path
+from typing import TYPE_CHECKING, NotRequired, TypedDict
+
+if TYPE_CHECKING:
+    from playwright.async_api import ViewportSize
 
 # -------------------------------------------------------------------------------
 # Locations
 # -------------------------------------------------------------------------------
-_BASE = Path(__file__).parent.parent.relative_to(Path(".").resolve())
+_BASE = Path(__file__).parent.parent.parent.relative_to(Path.cwd()).resolve()
 _PUBLIC = _BASE / "public"
 _TEMPLATES = _BASE / "src" / "templates"
 
@@ -12,7 +18,8 @@ FILES = {
 }
 
 TEMPLATES = {
-    "configuration": _TEMPLATES / "conf.template.py",
+    "conf.py": _TEMPLATES / "conf.template.py",
+    "index.rst": _TEMPLATES / "index.template.rst",
     "preview-image": _TEMPLATES / "preview.template.png",
     "index.html": _TEMPLATES / "index.template.html",
     "error.html": _TEMPLATES / "error.template.html",
@@ -36,7 +43,7 @@ DESTINATION = {
 # Screenshot
 # -------------------------------------------------------------------------------
 # Size of the viewport
-SCREENSHOT_SIZES = {
+SCREENSHOT_SIZES: dict[str, ViewportSize] = {
     "desktop": {"width": 1920, "height": 1080 - 75},
     "tablet": {"width": 768, "height": 1024 - 75},
     "mobile": {"width": 375, "height": 667 - 75},
@@ -48,3 +55,19 @@ SCREENSHOT_OFFSETS = {
     "tablet": (2013, 90),
     "mobile": (2831, 269),
 }
+
+
+# -------------------------------------------------------------------------------
+# themes.json schema
+# -------------------------------------------------------------------------------
+class ThemeDictConfig(TypedDict):
+    html_theme: str
+    _imports: NotRequired[list[str]]
+    _extensions: NotRequired[list[str]]
+
+
+class ThemeDict(TypedDict):
+    display: str
+    pypi: str
+    documentation: str | None
+    config: str | ThemeDictConfig

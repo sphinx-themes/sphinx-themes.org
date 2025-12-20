@@ -1,6 +1,6 @@
 # [sphinx-themes.org](https://sphinx-themes.org)
 
-A Sphinx Themes Gallery, curated by [@pradyunsg] and [@shirou].
+A [Sphinx] Themes Gallery, curated by [@pradyunsg] and [@shirou].
 
 This project exists to be a showcase for Sphinx themes and we'd like to include all reusable themes available on PyPI.
 

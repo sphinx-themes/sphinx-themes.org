@@ -1,14 +1,16 @@
 """Generate the main site, other than the theme-specific generated pages."""
 
+from __future__ import annotations
+
 import shutil
 
 from jinja2 import Template
 
-from .constants import BUILD, DESTINATION, TEMPLATES
-from .themes import get_themes
+from helpers.constants import BUILD, DESTINATION, TEMPLATES
+from helpers.themes import get_themes
 
 
-def main():
+def main() -> None:
     # Render index.html
     template = Template(TEMPLATES["index.html"].read_text())
     rendered = template.render(themes=get_themes())
@@ -23,3 +25,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+else:
+    raise RuntimeError("This module is intended to be run as a script.")
