@@ -10,16 +10,16 @@ def update(session: nox.Session) -> None:
 @nox.session(name="list", reuse_venv=True)
 def list_themes(session: nox.Session) -> None:
     session.install("rich")
-    session.run("python", "-m", "src.themes")
+    session.run("python", "src/list_themes.py")
 
 
 @nox.session(reuse_venv=True)
 def publish(session: nox.Session) -> None:
     session.install("-r", "requirements.txt")
     session.run("playwright", "install", "firefox")
-    session.run("python", "-m", "src.generate_sample_sites", *session.posargs)
-    session.run("python", "-m", "src.generate_screenshots", *session.posargs)
-    session.run("python", "-m", "src.generate_scaffold")
+    session.run("python", "src/generate_sample_sites.py", *session.posargs)
+    session.run("python", "src/generate_screenshots.py", *session.posargs)
+    session.run("python", "src/generate_scaffold.py")
 
 
 @nox.session(reuse_venv=True)

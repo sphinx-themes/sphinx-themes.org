@@ -8,10 +8,10 @@ import rich.progress
 import rich.traceback
 from jinja2 import Template
 
-from .constants import BUILD, DESTINATION, TEMPLATES
-from .isolation import IsolatedEnvironment
-from .output import run_for_themes_with_progress
-from .themes import Theme, get_themes
+from helpers.constants import BUILD, DESTINATION, TEMPLATES
+from helpers.isolation import IsolatedEnvironment
+from helpers.output import run_for_themes_with_progress
+from helpers.themes import Theme, get_themes
 
 
 def get_error_page(theme: Theme, error: Exception) -> str:
@@ -97,3 +97,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+else:
+    raise RuntimeError("This module is intended to be run as a script.")
