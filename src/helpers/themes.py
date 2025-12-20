@@ -1,19 +1,25 @@
 """Handles parsing and loading of themes."""
 
+from __future__ import annotations
+
 import json
 import sys
 from collections.abc import Iterator
 from dataclasses import dataclass, field
+from typing import TYPE_CHECKING
 
-from .constants import DESTINATION, FILES
+from .constants import DESTINATION, FILES, ThemeDict
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 
-def get_themes() -> list["Theme"]:
+def get_themes() -> list[Theme]:
     allowed_names = sys.argv[1:]
 
     try:
         with FILES["themes.json"].open() as f:
-            data = json.load(f)
+            data: dict[str, list[ThemeDict]] = json.load(f)
     except Exception as e:
         raise Exception("Could not load themes.json") from e
 
@@ -21,7 +27,7 @@ def get_themes() -> list["Theme"]:
     assert "themes" in data, list(data.keys())
 
     # Use Theme objects
-    themes = []
+    themes: list[Theme] = []
     for di in data["themes"]:
         theme = Theme.from_json(di)
         # Filter themes, if only certain names are allowed
@@ -46,11 +52,11 @@ class Theme:
     imports: list[int] = field(default_factory=list)
     extensions: list[int] = field(default_factory=list)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Theme({self.name!r}, pypi_package={self.pypi_package!r})"
 
     @classmethod
-    def from_json(cls, di):
+    def from_json(cls, di: ThemeDict) -> Theme:
         """Determine a theme's information from JSON data."""
         assert "display" in di, di
         display = di["display"]

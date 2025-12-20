@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 import asyncio
 import os
 import shutil
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import rich.progress
 import rich.traceback
@@ -12,6 +15,9 @@ from helpers.constants import BUILD, DESTINATION, TEMPLATES
 from helpers.isolation import IsolatedEnvironment
 from helpers.output import run_for_themes_with_progress
 from helpers.themes import Theme, get_themes
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 def get_error_page(theme: Theme, error: Exception) -> str:
@@ -23,7 +29,7 @@ def get_error_page(theme: Theme, error: Exception) -> str:
     )
 
 
-def render_conf_template(theme: Theme, destination: Path):
+def render_conf_template(theme: Theme, destination: Path) -> None:
     template = Template(TEMPLATES["configuration"].read_text())
     rendered = template.render(theme=theme, sources=str(BUILD["sources"]))
 
@@ -31,7 +37,6 @@ def render_conf_template(theme: Theme, destination: Path):
 
 
 async def generate_site(
-    *,
     theme: Theme,
     progress: rich.progress.Progress,
 ) -> None:

@@ -1,9 +1,15 @@
+from __future__ import annotations
+
 import os
 import sys
+from typing import TYPE_CHECKING
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.statemachine import StringList
+
+if TYPE_CHECKING:
+    import sphinx.application
 
 # -- Common stuff -------------------------------------------------------------
 
@@ -64,7 +70,7 @@ class ThemeConfigurationDirective(Directive):
     required_arguments = 0
     optional_arguments = 0
 
-    def run(self):
+    def run(self) -> list[nodes.literal_block]:
         container = nodes.literal_block()
         translated_content = StringList(theme_configuration.splitlines(keepends=False))
         self.state.nested_parse(translated_content, 0, container)
@@ -76,13 +82,13 @@ class ThemeInstallDirective(Directive):
     required_arguments = 0
     optional_arguments = 0
 
-    def run(self):
+    def run(self) -> list[nodes.literal_block]:
         container = nodes.literal_block()
         translated_content = StringList(["$ pip install {{ theme.pypi_package }}"])
         self.state.nested_parse(translated_content, 0, container)
         return [container]
 
 
-def setup(app):
+def setup(app: sphinx.application.Sphinx) -> None:
     app.add_directive("theme-configuration", ThemeConfigurationDirective)
     app.add_directive("theme-install", ThemeInstallDirective)

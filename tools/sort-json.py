@@ -1,7 +1,13 @@
+from __future__ import annotations
+
 import json
 import re
 import sys
 from pathlib import Path
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from helpers.constants import ThemeDict
 
 # Only edit this if you're @pradyunsg or @shirou.
 _FEATURED = [
@@ -22,18 +28,18 @@ _FEATURED = [
 _canonicalize_regex = re.compile(r"[-_.]+")
 
 
-def canonicalize_name(name):
+def canonicalize_name(name: str) -> str:
     return _canonicalize_regex.sub("-", name).lower()
 
 
-def _get_index_or_default(li, value, *, default):
+def _get_index_or_default[T](li: list[T], value: object, *, default: int) -> int:
     try:
-        return li.index(value)
+        return li.index(value)  # type: ignore[arg-type]
     except ValueError:
         return default
 
 
-def sort_key(theme):
+def sort_key(theme: ThemeDict) -> tuple[int, str]:
     """Sort themes as "featured", "general", built-in."""
     # Normalize names
     theme["pypi"] = canonicalize_name(theme["pypi"])
@@ -54,8 +60,8 @@ def sort_key(theme):
     return (rank, theme["display"])
 
 
-def validate_display_names(data):
-    bad = set()
+def validate_display_names(data: dict[str, list[ThemeDict]]) -> None:
+    bad: set[str] = set()
     for theme in data["themes"]:
         if theme["pypi"] == "sphinx":
             continue
@@ -77,7 +83,7 @@ def validate_display_names(data):
         sys.exit(1)
 
 
-def main():
+def main() -> None:
     path = Path("themes.json")
 
     with path.open("r") as f:

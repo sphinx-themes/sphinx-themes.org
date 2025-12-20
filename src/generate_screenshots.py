@@ -1,12 +1,14 @@
 """Script to generate the screenshots for all the themes."""
 
+from __future__ import annotations
+
 import asyncio
 import functools
 import io
+from typing import TYPE_CHECKING
 
-import rich.progress
 from PIL import Image
-from playwright.async_api import BrowserContext, Page, async_playwright
+from playwright.async_api import Browser, Page, Playwright, async_playwright
 from playwright.async_api import Error as PlaywrightError
 
 from helpers.constants import (
@@ -17,6 +19,9 @@ from helpers.constants import (
 )
 from helpers.output import run_for_themes_with_progress
 from helpers.themes import Theme, get_themes
+
+if TYPE_CHECKING:
+    import rich.progress
 
 
 # --------------------------------------------------------------------------------------
@@ -62,7 +67,7 @@ def render_into_template(
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
 ) -> dict[str, Image.Image]:
-    screenshots = {}
+    screenshots: dict[str, Image.Image] = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
         await page.set_viewport_size(resolution)
@@ -76,16 +81,15 @@ async def take_screenshots_at_all_resolutions(
 
 
 async def render_at_multiple_resolutions(
-    context: BrowserContext,
+    browser: Browser,
     original_template: Image.Image,
-    *,
     theme: Theme,
     progress: rich.progress.Progress,
 ) -> None:
     task = progress.add_task(theme.name, total=10)
     try:
         # progress.log(f"{theme.name}: Creating browser tab.")
-        page = await context.new_page()
+        page = await browser.new_page()
         progress.advance(task, 1)
 
         # progress.log(f"{theme.name}: Taking screenshots.")
@@ -110,7 +114,7 @@ async def render_at_multiple_resolutions(
 # --------------------------------------------------------------------------------------
 # Main entrypoint
 # --------------------------------------------------------------------------------------
-async def run(playwright) -> None:
+async def run(playwright: Playwright) -> None:
     print("Launching browser...", end=" ", flush=True)
     try:
         browser = await playwright.firefox.launch()
