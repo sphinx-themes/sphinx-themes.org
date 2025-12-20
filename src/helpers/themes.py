@@ -49,8 +49,8 @@ class Theme:
     documentation_link: str | None
     configuration: dict[str, list[str] | str]
 
-    imports: list[int] = field(default_factory=list)
-    extensions: list[int] = field(default_factory=list)
+    imports: list[str] = field(default_factory=list[str])
+    extensions: list[str] = field(default_factory=list[str])
 
     def __repr__(self) -> str:
         return f"Theme({self.name!r}, pypi_package={self.pypi_package!r})"
@@ -108,7 +108,13 @@ class Theme:
         path = (DESTINATION["sites"] / self.name / "index.html").resolve()
         return path.as_uri()
 
-    def compute_python_configuration_lines(self) -> Iterator[str]:
+    @property
+    def conf_py_snippet(self) -> str:
+        return "\n".join(self._compute_python_configuration_lines())
+
+    def _compute_python_configuration_lines(self) -> Iterator[str]:
+        yield f'html_title = "{self.display} Sample Site"'
+
         for module in self.imports:
             yield f"import {module}"
 
