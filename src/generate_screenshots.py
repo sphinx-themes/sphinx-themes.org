@@ -4,7 +4,7 @@ import asyncio
 import functools
 import io
 
-import rich
+import rich.progress
 from PIL import Image
 from playwright.async_api import BrowserContext, Page, async_playwright
 from playwright.async_api import Error as PlaywrightError
