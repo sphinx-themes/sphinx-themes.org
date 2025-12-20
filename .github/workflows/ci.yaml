@@ -16,6 +16,7 @@ on:
 
 jobs:
   pre-commit:
+    name: pre-commit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -25,6 +26,7 @@ jobs:
       - run: uvx prek run --all-files --show-diff-on-failure
 
   build:
+    name: build
     runs-on: ubuntu-latest
     permissions:
       contents: write # Pushing to `gh-pages` requires write permission
