@@ -26,3 +26,19 @@ def publish(session: nox.Session) -> None:
 def lint(session: nox.Session) -> None:
     session.install("prek")
     session.run("prek", "run", "--all-files")
+    session.notify("typecheck")
+
+
+@nox.session(reuse_venv=True)
+def typecheck(session: nox.Session) -> None:
+    session.install("ty", "nox", "-r", "requirements.txt")
+    session.run(
+        "ty",
+        "check",
+        ".",
+        "--exclude",
+        "src/templates/",
+        "--exclude",
+        "sample-docs/",
+        *session.posargs,
+    )

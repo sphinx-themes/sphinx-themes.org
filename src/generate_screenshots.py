@@ -5,7 +5,7 @@ import functools
 import io
 from typing import Dict, Tuple
 
-import rich
+import rich.progress
 from PIL import Image
 from playwright.async_api import BrowserContext, Page, async_playwright
 from playwright.async_api import Error as PlaywrightError

@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from playwright.async_api import ViewportSize
+
 # -------------------------------------------------------------------------------
 # Locations
 # -------------------------------------------------------------------------------
@@ -36,7 +38,7 @@ DESTINATION = {
 # Screenshot
 # -------------------------------------------------------------------------------
 # Size of the viewport
-SCREENSHOT_SIZES = {
+SCREENSHOT_SIZES: dict[str, ViewportSize] = {
     "desktop": {"width": 1920, "height": 1080 - 75},
     "tablet": {"width": 768, "height": 1024 - 75},
     "mobile": {"width": 375, "height": 667 - 75},
