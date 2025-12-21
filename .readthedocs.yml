@@ -9,6 +9,6 @@ build:
       - nox -s publish --install-only
     build:
       html:
-        - nox -s publish -- default-alabaster furo sphinx-rtd-theme sphinx-book-theme pydata-sphinx-theme
+        - nox -s publish -- shibuya
         - mkdir -p $READTHEDOCS_OUTPUT/html/
         - mv public/* $READTHEDOCS_OUTPUT/html/
