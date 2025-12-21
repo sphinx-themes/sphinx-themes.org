@@ -1,7 +1,7 @@
 import nox
 
 
-@nox.session
+@nox.session(python="3.13")
 def update(session):
     session.install("pip-tools")
     session.run("pip-compile", "requirements.in", "--upgrade")
@@ -13,7 +13,7 @@ def list_themes(session):
     session.run("python", "-m", "src.themes")
 
 
-@nox.session(reuse_venv=True)
+@nox.session(reuse_venv=True, python="3.13")
 def publish(session):
     session.install("-r", "requirements.txt")
     session.run("playwright", "install", "firefox")
