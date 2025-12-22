@@ -124,7 +124,7 @@ Runs the linters and formats all the files in the repository. This uses [`pre-co
     - Install the latest sphinx pre-release, and then the theme's package.
     - Generate a `conf.py` for rendering documentation using this theme.
     - Call `sphinx-build` to generate the documentation using given theme.
-- Run `python -m src.generate_previews`
+- Run `python -m src.generate_screenshots`
   - Creates a webdriver for Firefox.
   - For every theme (with concurrency):
     - Open the generated sample site's root in the browser.
