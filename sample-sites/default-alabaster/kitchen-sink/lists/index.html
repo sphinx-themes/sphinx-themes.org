@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lists &#8212; Alabaster</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Really Long Page Title because we should test sidebar wrapping" href="../really-long/" />
+    <link rel="prev" title="Images &amp; Figures" href="../images/" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Link to this heading">¶</a></h1>
+<section id="enumerated-lists">
+<h2>Enumerated Lists<a class="headerlink" href="#enumerated-lists" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Arabic numerals.</p>
+<ol class="loweralpha simple">
+<li><p>lower alpha)</p>
+<ol class="lowerroman simple">
+<li><p>(lower roman)</p>
+<ol class="upperalpha simple">
+<li><p>upper alpha.</p>
+<ol class="upperroman simple">
+<li><p>upper roman)</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Lists that don’t start at 1:</p>
+<ol class="arabic simple" start="3">
+<li><p>Three</p></li>
+<li><p>Four</p></li>
+</ol>
+<ol class="upperalpha simple" start="3">
+<li><p>C</p></li>
+<li><p>D</p></li>
+</ol>
+<ol class="lowerroman simple" start="3">
+<li><p>iii</p></li>
+<li><p>iv</p></li>
+</ol>
+</li>
+<li><p>List items may also be auto-enumerated.</p></li>
+</ol>
+</section>
+<section id="definition-lists">
+<h2>Definition Lists<a class="headerlink" href="#definition-lists" title="Link to this heading">¶</a></h2>
+<dl>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+<dt>Term<span class="classifier">classifier</span></dt><dd><p>Definition paragraph 1.</p>
+<p>Definition paragraph 2.</p>
+</dd>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+<p>I have no clue why the definition list below is classified as a different style
+of definition list than the one above.</p>
+<dl class="simple">
+<dt>Is it the spaces in the term?</dt><dd><p>Maybe it was the multiple line paragraph
+in the line below that caused this?</p>
+</dd>
+<dt>Is it the paragraph above the list maybe?</dt><dd><p>I guess a lot of these lists don’t have leading paragraphs?</p>
+</dd>
+<dt>Is it everything all at once?</dt><dd><p>Who knows?!</p>
+</dd>
+</dl>
+</section>
+<section id="option-lists">
+<h2>Option Lists<a class="headerlink" href="#option-lists" title="Link to this heading">¶</a></h2>
+<p>For listing command-line options:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments
+and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">--very-long-option</span></kbd></dt>
+<dd><p>The description can also start on the next line.</p>
+<p>The description may contain multiple body elements,
+regardless of where it starts.</p>
+</dd>
+<dt><kbd><span class="option">-x</span>, <span class="option">-y</span>, <span class="option">-z</span></kbd></dt>
+<dd><p>Multiple options are an “option group”.</p>
+</dd>
+<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
+<dd><p>Commonly-seen: short &amp; long options.</p>
+</dd>
+<dt><kbd><span class="option">-1 <var>file</var></span>, <span class="option">--one=<var>file</var></span>, <span class="option">--two <var>file</var></span></kbd></dt>
+<dd><p>Multiple options with arguments.</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+<p>There must be at least two spaces between the option and the description.</p>
+</section>
+<section id="field-list">
+<h2>Field list<a class="headerlink" href="#field-list" title="Link to this heading">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">Address<span class="colon">:</span></dt>
+<dd class="field-odd"><p>123 Example Street
+Example, EX  Canada
+A1B 2C3</p>
+</dd>
+<dt class="field-even">Organization<span class="colon">:</span></dt>
+<dd class="field-even"><p>humankind</p>
+</dd>
+<dt class="field-odd">Status<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a “work in progress”</p>
+</dd>
+<dt class="field-even">Version<span class="colon">:</span></dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">Field name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a generic bibliographic field.</p>
+</dd>
+<dt class="field-even">Field name 2<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generic bibliographic fields may contain multiple body elements.</p>
+<p>Like this.</p>
+</dd>
+</dl>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading">¶</a></h2>
+<p>This is a glossary with definition terms for things like <a class="reference internal" href="#term-Writing"><span class="xref std std-term">Writing</span></a>:</p>
+<dl class="simple glossary">
+<dt id="term-Documentation">Documentation<a class="headerlink" href="#term-Documentation" title="Link to this term">¶</a></dt><dd><p>Provides users with the knowledge they need to use something.</p>
+</dd>
+<dt id="term-Reading">Reading<a class="headerlink" href="#term-Reading" title="Link to this term">¶</a></dt><dd><p>The process of taking information into ones mind through the use of eyes.</p>
+</dd>
+<dt id="term-Writing">Writing<a class="headerlink" href="#term-Writing" title="Link to this term">¶</a></dt><dd><p>The process of putting thoughts into a medium for other people to <a class="reference internal" href="#term-Reading"><span class="xref std std-term">read</span></a>.</p>
+</dd>
+</dl>
+<p>Here’s another glossary, with more detail. The important bit here is that the contents of the definition are multi-paragraph.</p>
+<dl class="glossary">
+<dt id="term-Import-Package">Import Package<a class="headerlink" href="#term-Import-Package" title="Link to this term">¶</a></dt><dd><p>A Python module which can contain other modules or recursively, other packages.</p>
+<p>An import package is more commonly referred to with the single word “package”, but this guide will use the expanded term when more clarity is needed to prevent confusion with a Distribution Package which is also commonly called a “package”.</p>
+</dd>
+<dt id="term-Package-Index">Package Index<a class="headerlink" href="#term-Package-Index" title="Link to this term">¶</a></dt><dd><p>A repository of distributions with a web interface to automate package discovery and consumption.</p>
+</dd>
+</dl>
+</section>
+<section id="bullet-lists">
+<h2>Bullet Lists<a class="headerlink" href="#bullet-lists" title="Link to this heading">¶</a></h2>
+<section id="simple">
+<h3>Simple<a class="headerlink" href="#simple" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>A simple list.</p></li>
+<li><p>There are no margins between list items.</p></li>
+<li><p>Simple lists do not contain multiple paragraphs. That’s a complex list.</p></li>
+<li><p>In the case of a nested list</p>
+<ul>
+<li><p>There are no margins between elements</p>
+<ul>
+<li><p>Still no margins</p>
+<ul>
+<li><p>Still no margins</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="complex">
+<h3>Complex<a class="headerlink" href="#complex" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>A bullet list</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p></li>
+</ul>
+</li>
+<li><p>Item 2.</p>
+<p>Paragraph 2 of item 2.</p>
+<ul class="simple">
+<li><p>Nested bullet list.</p></li>
+<li><p>Nested item 2.</p>
+<ul>
+<li><p>Third level.</p></li>
+<li><p>Item 2.</p></li>
+</ul>
+</li>
+<li><p>Nested item 3.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literal</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literal</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literal</span></code></p></li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+<li><p>This item has multiple paragraphs.</p>
+<p>This item has multiple paragraphs.</p>
+</li>
+</ul>
+</section>
+<section id="second-list-level">
+<h3>Second list level<a class="headerlink" href="#second-list-level" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>here is a list in a second-level section.</p></li>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a></p></li>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a></p></li>
+<li><p>here is an inner bullet <code class="docutils literal notranslate"><span class="pre">oh</span></code></p>
+<ul>
+<li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
+<p>heh heh. child. try to beat this embed:</p>
+</li>
+</ul>
+</li>
+<li><p>and another. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p></li>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+</ul>
+</li>
+<li><p>how about an admonition?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note nested in a list.</p>
+</div>
+</li>
+<li><p>and hehe</p></li>
+</ul>
+<section id="but-deeper-down-the-rabbit-hole">
+<h4>But deeper down the rabbit hole<a class="headerlink" href="#but-deeper-down-the-rabbit-hole" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>I kept saying that, “deeper down the rabbit hole”. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
+<ul>
+<li><p>I cackle at night <a class="reference external" href="https://www.yahoo.com/">yahoo</a>.</p></li>
+</ul>
+</li>
+<li><p>I’m so lonely here in GZ <code class="docutils literal notranslate"><span class="pre">guangzhou</span></code></p></li>
+<li><p>A man of python destiny, hopes and dreams. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.yahoo.com/">yahoo</a> <code class="docutils literal notranslate"><span class="pre">hi</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destiny</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="hlists">
+<h2>Hlists<a class="headerlink" href="#hlists" title="Link to this heading">¶</a></h2>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>First item</p></li>
+<li><p>Second item</p></li>
+<li><p>Third item</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Fourth item</p></li>
+<li><p>Fifth item</p></li>
+<li><p>Sixth item</p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Hlist with images</p>
+<table class="hlist"><tr><td><ul>
+<li><figure class="align-default" id="id11">
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<figcaption>
+<p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</td><td><ul>
+<li><figure class="align-default" id="id12">
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<figcaption>
+<p><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</td></tr></table>
+</section>
+<section id="numbered-list">
+<h2>Numbered List<a class="headerlink" href="#numbered-list" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>One,</p></li>
+<li><p>Two.</p></li>
+<li><p>Three with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed feugiat sagittis neque quis eleifend. Duis rutrum lectus sit amet mattis suscipit.</p></li>
+</ol>
+<ul class="simple">
+<li><ol class="upperalpha simple">
+<li><p>Using bullets and letters. (A)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Using bullets and letters. (B)</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="3">
+<li><p>Using bullets and letters. (C)</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">Sphinx Themes Sample</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+  <li><a href="../">Kitchen Sink</a><ul>
+      <li>Previous: <a href="../images/" title="previous chapter">Images &amp; Figures</a></li>
+      <li>Next: <a href="../really-long/" title="next chapter">Really Long Page Title because we should test sidebar wrapping</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021, Pradyun Gedam.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/kitchen-sink/lists.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

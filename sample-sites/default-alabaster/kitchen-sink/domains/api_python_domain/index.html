@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directives in the Python domain &#8212; Alabaster</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the reStructuredText domain" href="../api_restructuredtext_domain/" />
+    <link rel="prev" title="Directives in the JavaScript domain" href="../api_javascript_domain/" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="directives-in-the-python-domain">
+<h1>Directives in the Python domain<a class="headerlink" href="#directives-in-the-python-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">py</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/python.html">https://www.sphinx-doc.org/en/master/usage/domains/python.html</a>.</p>
+<p id="module-my_module">The <code class="docutils literal notranslate"><span class="pre">py:module</span></code> directive, showing the docstring for the whole module.</p>
+<p>The second line of the module docstring.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="my_module.my_function">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">default_value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="headerlink" href="#my_module.my_function" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:function</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_module.my_function_type_parameters">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_function_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></span><a class="headerlink" href="#my_module.my_function_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:function</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="my_module.my_data">
+<span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_data</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">type</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">initial_value</span></span><a class="headerlink" href="#my_module.my_data" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:data</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="my_module.MyException">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyException</span></span><a class="headerlink" href="#my_module.MyException" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:exception</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="my_module.MyExceptionFinal">
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyExceptionFinal</span></span><a class="headerlink" href="#my_module.MyExceptionFinal" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:exception</span></code> directive, <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="my_module.MyException_type_parameters">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyException_type_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.MyException_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:exception</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="my_module.MyExceptionTypeParameters">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyExceptionTypeParameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.MyExceptionTypeParameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:exception</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="my_module.MyClass">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyClass</span></span><a class="headerlink" href="#my_module.MyClass" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:class</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="my_module.MyClassFinal">
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyClassFinal</span></span><a class="headerlink" href="#my_module.MyClassFinal" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:class</span></code> directive, <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="my_module.MyClassParameters">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyClassParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.MyClassParameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:class</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="my_module.MyClassTypeParameters">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyClassTypeParameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.MyClassTypeParameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:class</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_module.my_attribute">
+<span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_attribute</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">type</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">initial_value</span></span><a class="headerlink" href="#my_module.my_attribute" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:attribute</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="my_module.my_property">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_property</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">type</span></span><a class="headerlink" href="#my_module.my_property" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:property</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="my_module.my_property2">
+<span class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_property2</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">type</span></span><a class="headerlink" href="#my_module.my_property2" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:property</span></code> directive,
+using the <code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> and <code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> flags.</p>
+</dd></dl>
+
+<dl class="py type">
+<dt class="sig sig-object py" id="my_module.MyType">
+<span class="property"><span class="k"><span class="pre">type</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">MyType</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#my_module.MyType" title="my_module.MyType"><span class="pre">my_module.MyType</span></a></span><a class="headerlink" href="#my_module.MyType" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:type</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_method">
+<span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="headerlink" href="#my_module.my_method" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:method</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_method_type_parameters">
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">async</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_method_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></span><a class="headerlink" href="#my_module.my_method_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:method</span></code> directive,
+using all of the <code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code>, <code class="docutils literal notranslate"><span class="pre">:async:</span></code>, <code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code>, <code class="docutils literal notranslate"><span class="pre">:final:</span></code>, and <code class="docutils literal notranslate"><span class="pre">:staticmethod:</span></code> flags,
+using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_staticmethod">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_staticmethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_staticmethod" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:staticmethod</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_staticmethod_type_parameters">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_staticmethod_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></span><a class="headerlink" href="#my_module.my_staticmethod_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:staticmethod</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_classmethod">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_classmethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_classmethod" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:classmethod</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_classmethod_type_parameters">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_classmethod_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></span><a class="headerlink" href="#my_module.my_classmethod_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:classmethod</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_module.my_decorator">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decorator</span></span><a class="headerlink" href="#my_module.my_decorator" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decorator</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_module.my_decorator_parameters">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decorator_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_decorator_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decorator</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_module.my_decorator_type_parameters">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decorator_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../api/#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_decorator_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decorator</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_decoratormethod">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decoratormethod</span></span><a class="headerlink" href="#my_module.my_decoratormethod" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decoratormethod</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_decoratormethod_signature">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decoratormethod_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_decoratormethod_signature" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decoratormethod</span></code> directive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_module.my_decoratormethod_signature_type_parameters">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">my_module.</span></span><span class="sig-name descname"><span class="pre">my_decoratormethod_signature_type_parameters</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">ParameterT</span></span></em><span class="sig-paren">]</span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_module.my_decoratormethod_signature_type_parameters" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">py:decoratormethod</span></code> directive, using Python 3.12 <em>type parameters</em>.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../">Sphinx Themes Sample</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../">Documentation overview</a><ul>
+  <li><a href="../../">Kitchen Sink</a><ul>
+  <li><a href="../../api/">API documentation</a><ul>
+      <li>Previous: <a href="../api_javascript_domain/" title="previous chapter">Directives in the JavaScript domain</a></li>
+      <li>Next: <a href="../api_restructuredtext_domain/" title="next chapter">Directives in the reStructuredText domain</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021, Pradyun Gedam.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../../_sources/kitchen-sink/domains/api_python_domain.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

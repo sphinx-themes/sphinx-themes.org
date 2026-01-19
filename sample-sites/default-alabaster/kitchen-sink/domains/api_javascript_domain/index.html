@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directives in the JavaScript domain &#8212; Alabaster</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the Python domain" href="../api_python_domain/" />
+    <link rel="prev" title="Directives in the C++ domain" href="../api_cpp_domain/" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="directives-in-the-javascript-domain">
+<h1>Directives in the JavaScript domain<a class="headerlink" href="#directives-in-the-javascript-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">js</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/javascript.html">https://www.sphinx-doc.org/en/master/usage/domains/javascript.html</a>.</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="myFunction">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myFunction</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myFunction" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code> directive, showing a JavaScript function or method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>href</strong> (<span><code class="xref js js-class docutils literal notranslate"><span class="pre">string</span></code></span>) – An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> – Gets called with the object.</p></li>
+<li><p><strong>errback</strong> – Gets called in case the request fails. And a lot of other
+text so we need multiple lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref js js-class docutils literal notranslate"><span class="pre">SomeError</span></code></span> – For whatever reason in that case.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Something.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js method">
+<dt class="sig sig-object js" id="myMethod">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">$</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">errback</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#myMethod" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::</span></code> directive (an alias for <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span></code>,
+showing a function that is implemented as a method on a class object.</p>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="MyClass">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyClass" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::</span></code> directive, showing a JavaScript object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-class docutils literal notranslate"><span class="pre">string</span></code></span>) – A name</p></li>
+<li><p><strong>num</strong> (<span><code class="xref js js-class docutils literal notranslate"><span class="pre">number</span></code></span>) – An optional number</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js data">
+<dt class="sig sig-object js" id="my_variable">
+<span class="sig-name descname"><span class="n"><span class="pre">my_variable</span></span></span><a class="headerlink" href="#my_variable" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::</span></code> directive, showing a global variable or constant.</p>
+</dd></dl>
+
+<dl class="js attribute">
+<dt class="sig sig-object js" id="object.name">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#object.name" title="Link to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::</span></code> directive, showing an attribute <em>name</em> of <em>object</em>.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../">Sphinx Themes Sample</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../">Documentation overview</a><ul>
+  <li><a href="../../">Kitchen Sink</a><ul>
+  <li><a href="../../api/">API documentation</a><ul>
+      <li>Previous: <a href="../api_cpp_domain/" title="previous chapter">Directives in the C++ domain</a></li>
+      <li>Next: <a href="../api_python_domain/" title="next chapter">Directives in the Python domain</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021, Pradyun Gedam.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../../_sources/kitchen-sink/domains/api_javascript_domain.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API documentation &#8212; Alabaster</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Directives in the C domain" href="../domains/api_c_domain/" />
+    <link rel="prev" title="Admonitions" href="../admonitions/" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../domains/api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../domains/api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../domains/api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../domains/api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</div>
+<section id="using-autodoc">
+<h2>Using autodoc<a class="headerlink" href="#using-autodoc" title="Link to this heading">¶</a></h2>
+<p>Using Sphinx’s <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc" title="(in Sphinx v9.1.0)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> plugin, it is possible to auto-generate documentation of a Python module.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Avoid having in-function-signature type annotations with autodoc,
+by setting the following options:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for autodoc ----------------------------------------------------</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration</span>
+
+<span class="c1"># Automatically extract typehints when specified and place them in</span>
+<span class="c1"># descriptions of the relevant function/method.</span>
+<span class="n">autodoc_typehints</span> <span class="o">=</span> <span class="s2">&quot;description&quot;</span>
+
+<span class="c1"># Don&#39;t show class signature with the class&#39; name.</span>
+<span class="n">autodoc_class_signature</span> <span class="o">=</span> <span class="s2">&quot;separated&quot;</span>
+</pre></div>
+</div>
+</div>
+<section id="the-automodule-directive-with-restructuredtext-markup">
+<h3>The <code class="docutils literal notranslate"><span class="pre">automodule</span></code> Directive with reStructuredText Markup<a class="headerlink" href="#the-automodule-directive-with-restructuredtext-markup" title="Link to this heading">¶</a></h3>
+<p>What follows is an example showing usage of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">automodule::</span></code> directive.</p>
+<p id="module-all_in_one_restructuredtext">This is the module-level docstring of the module <a class="reference internal" href="#module-all_in_one_restructuredtext" title="all_in_one_restructuredtext"><code class="xref py py-mod docutils literal notranslate"><span class="pre">all_in_one_restructuredtext</span></code></a>.</p>
+<p>The module’s docstrings use reStructuredText markup.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.ParameterT">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">ParameterT</span></span><a class="headerlink" href="#all_in_one_restructuredtext.ParameterT" title="Link to this definition">¶</a></dt>
+<dd><p>Docstring of type ParameterT</p>
+<p>alias of TypeVar(‘ParameterT’)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.ReturnT">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">ReturnT</span></span><a class="headerlink" href="#all_in_one_restructuredtext.ReturnT" title="Link to this definition">¶</a></dt>
+<dd><p>Docstring of type ReturnT.</p>
+<p>alias of TypeVar(‘ReturnT’)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.MyType">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">MyType</span></span><a class="headerlink" href="#all_in_one_restructuredtext.MyType" title="Link to this definition">¶</a></dt>
+<dd><p>The docstring.</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_module_level_variable">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_module_level_variable</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[0.0,</span> <span class="pre">1.1]</span></span><a class="headerlink" href="#all_in_one_restructuredtext.my_module_level_variable" title="Link to this definition">¶</a></dt>
+<dd><p>The docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_function_pure_sphinx">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_function_pure_sphinx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_function_pure_sphinx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_function_pure_sphinx" title="Link to this definition">¶</a></dt>
+<dd><p>This function accepts any number of arguments and keyword arguments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do <em>not</em> use <code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code>:</p>
+<p>In the source code,
+the docstring for this function is a “raw” docstring using <code class="docutils literal notranslate"><span class="pre">r&quot;&quot;&quot;...&quot;&quot;&quot;</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> below are escaped with a backslash
+(<code class="docutils literal notranslate"><span class="pre">\*args</span></code> and <code class="docutils literal notranslate"><span class="pre">\*\*kwargs</span></code>).</p>
+<p>See also <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/9893">https://github.com/sphinx-doc/sphinx/issues/9893</a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – Variable length argument list.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_function_google_style">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_function_google_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_function_google_style"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_function_google_style" title="Link to this definition">¶</a></dt>
+<dd><p>This function accepts any number of arguments and keyword arguments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do <em>not</em> use <code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code>:</p>
+<p>In the source code,
+the docstring for this function is a “raw” docstring using <code class="docutils literal notranslate"><span class="pre">r&quot;&quot;&quot;...&quot;&quot;&quot;</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> below are escaped with a backslash
+(<code class="docutils literal notranslate"><span class="pre">\*args</span></code> and <code class="docutils literal notranslate"><span class="pre">\*\*kwargs</span></code>).</p>
+<p>See also <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/9893">https://github.com/sphinx-doc/sphinx/issues/9893</a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – Variable length argument list.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_function_needs_napoleon">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_function_needs_napoleon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_function_needs_napoleon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_function_needs_napoleon" title="Link to this definition">¶</a></dt>
+<dd><p>This function accepts any number of arguments and keyword arguments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> (and only then),
+there is no need to escape <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> below.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – Variable length argument list.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_function2">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_function2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_function2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_function2" title="Link to this definition">¶</a></dt>
+<dd><p>A simple function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>foo</strong> – A regular argument.</p></li>
+<li><p><strong>bar</strong> – Another regular argument.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 2.0: </span>Use <a class="reference internal" href="#all_in_one_restructuredtext.my_function_pure_sphinx" title="all_in_one_restructuredtext.my_function_pure_sphinx"><code class="xref py py-func docutils literal notranslate"><span class="pre">my_function_pure_sphinx()</span></code></a> instead.</p>
+</div>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_generator">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_generator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_generator" title="Link to this definition">¶</a></dt>
+<dd><p>A generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.MyException">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">MyException</span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#MyException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.MyException" title="Link to this definition">¶</a></dt>
+<dd><p>Custom exception class.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">AllInOne</span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne" title="Link to this definition">¶</a></dt>
+<dd><p>This is a class that demonstrates various Python features.</p>
+<p>Uses Google-style docstrings
+(<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html">https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html</a>).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne._my_property">
+<span class="sig-name descname"><span class="pre">_my_property</span></span><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne._my_property" title="Link to this definition">¶</a></dt>
+<dd><p>A private property of the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_method">
+<span class="sig-name descname"><span class="pre">my_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default_value'</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword_only_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_method" title="Link to this definition">¶</a></dt>
+<dd><p>A normal method.</p>
+<p>We are using both positional-only and keyword-only syntax.</p>
+<p>Here is some code in a literal block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># assign ``True``</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not include the <em>self</em> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>my_param</strong> – Documenting <em>my_param</em>.
+Another sentence on the next docstring line, still belonging to <em>my_param</em>.</p></li>
+<li><p><strong>keyword_only_param</strong> – Documenting <em>keyword_only_param</em>.
+Another sentence on the next docstring line, still belonging to <em>keyword_only_param</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the local variable <code class="docutils literal notranslate"><span class="pre">my_var</span></code>.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#all_in_one_restructuredtext.MyException" title="all_in_one_restructuredtext.MyException"><strong>MyException</strong></a> – if something went wrong.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">retval</span> <span class="o">=</span> <span class="n">my_method</span><span class="p">()</span>  <span class="c1"># doctest format</span>
+<span class="go">&quot;return_value&quot;</span>
+</pre></div>
+</div>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_async_method">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_async_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default_value'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_async_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_async_method" title="Link to this definition">¶</a></dt>
+<dd><p>An <span class="xref std std-term">async</span> method.</p>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_abstractmethod">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_abstractmethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_abstractmethod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_abstractmethod" title="Link to this definition">¶</a></dt>
+<dd><p>An abstract method.</p>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_classmethod">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_classmethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default_value'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_classmethod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_classmethod" title="Link to this definition">¶</a></dt>
+<dd><p>A <code class="xref any docutils literal notranslate"><span class="pre">classmethod</span></code>.</p>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_staticmethod">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_staticmethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#all_in_one_restructuredtext.ParameterT" title="all_in_one_restructuredtext.ParameterT"><span class="pre">ParameterT</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default_value'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#all_in_one_restructuredtext.ReturnT" title="all_in_one_restructuredtext.ReturnT"><span class="pre">ReturnT</span></a></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_staticmethod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_staticmethod" title="Link to this definition">¶</a></dt>
+<dd><p>A <code class="xref any docutils literal notranslate"><span class="pre">staticmethod</span></code>.</p>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_property">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_property</span></span><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_property" title="Link to this definition">¶</a></dt>
+<dd><p>Getter for the private property <a class="reference internal" href="#all_in_one_restructuredtext.AllInOne._my_property" title="all_in_one_restructuredtext.AllInOne._my_property"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_my_property</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The value of <a class="reference internal" href="#all_in_one_restructuredtext.AllInOne._my_property" title="all_in_one_restructuredtext.AllInOne._my_property"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_my_property</span></code></a>.</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_decorator_method">
+<span class="sig-name descname"><span class="pre">my_decorator_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_decorator_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_decorator_method" title="Link to this definition">¶</a></dt>
+<dd><p>A decorator method that wraps the provided method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> – The method to decorate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decorated method.</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.AllInOne.my_decorated_method">
+<span class="sig-name descname"><span class="pre">my_decorated_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#AllInOne.my_decorated_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.AllInOne.my_decorated_method" title="Link to this definition">¶</a></dt>
+<dd><p>The decorated method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.MyFinalClass">
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">MyFinalClass</span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#MyFinalClass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.MyFinalClass" title="Link to this definition">¶</a></dt>
+<dd><p>A class that cannot be subclassed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.MyFinalClass.my_final_method">
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">my_final_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#MyFinalClass.my_final_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.MyFinalClass.my_final_method" title="Link to this definition">¶</a></dt>
+<dd><p>A method that cannot be overridden by subclasses.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_decorator_function">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_decorator_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_decorator_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_decorator_function" title="Link to this definition">¶</a></dt>
+<dd><p>A decorator function that wraps the provided function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>function</strong> – The function to decorate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decorated function.</p>
+</dd>
+</dl>
+<p>Text at end of docstring.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all_in_one_restructuredtext.my_decorated_function">
+<span class="sig-prename descclassname"><span class="pre">all_in_one_restructuredtext.</span></span><span class="sig-name descname"><span class="pre">my_decorated_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/all_in_one_restructuredtext/#my_decorated_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#all_in_one_restructuredtext.my_decorated_function" title="Link to this definition">¶</a></dt>
+<dd><p>The decorated function.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">Sphinx Themes Sample</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+  <li><a href="../">Kitchen Sink</a><ul>
+      <li>Previous: <a href="../admonitions/" title="previous chapter">Admonitions</a></li>
+      <li>Next: <a href="../domains/api_c_domain/" title="next chapter">Directives in the C domain</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021, Pradyun Gedam.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/kitchen-sink/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
