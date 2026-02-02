@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">19 Jan 2026 01:24:31 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">02 Feb 2026 01:49:46 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -35,25 +35,14 @@
 [01mloading translations [en]... [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 done
-Original exception:
-Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 550, in load_extension
-  File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
-  File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
-  File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 31, in &lt;module&gt;
-ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
-
+[01mmaking output directory... [39;49;00mdone
+locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
+loading intersphinx inventory &#39;sphinx&#39; from https://www.sphinx-doc.org/objects.inv ...
+intersphinx inventory has moved: https://www.sphinx-doc.org/objects.inv -&gt; https://www.sphinx-doc.org/en/master/objects.inv
 
 ======================================== stderr ========================================
 
-[91mExtension error![39;49;00m
+[91mExtension error (sphinx_immaterial.google_fonts)![39;49;00m
 
 Versions
 ========
@@ -79,32 +68,31 @@ Traceback
 =========
 
     Traceback (most recent call last):
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 550, in load_extension
-      File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
-        return _bootstrap._gcd_import(name[level:], package, level)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
-      File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 995, in exec_module
-      File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/linkcheck.py&#34;, line 31, in &lt;module&gt;
-        from sphinx.util._uri import encode_uri
-    ImportError: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py)
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/events.py&#34;, line 441, in emit
+        results.append(listener.handler(self._app, *args))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx_immaterial/google_fonts.py&#34;, line 208, in _builder_inited
+        font_options = app.config[&#34;html_theme_options&#34;][&#34;font&#34;]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+    KeyError: &#39;font&#39;
     
     The above exception was the direct cause of the following exception:
     
     Traceback (most recent call last):
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 414, in build_main
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 295, in __init__
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 505, in setup_extension
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 553, in load_extension
-    sphinx.errors.ExtensionError: Could not import extension sphinx.builders.linkcheck (exception: cannot import name &#39;requests&#39; from &#39;sphinx.util&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/util/__init__.py))
+        app = Sphinx(
+              ^^^^^^^
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 340, in __init__
+        self._init_builder()
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 430, in _init_builder
+        self.events.emit(&#39;builder-inited&#39;)
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/events.py&#34;, line 452, in emit
+        raise ExtensionError(
+    sphinx.errors.ExtensionError: Handler &lt;function _builder_inited at 0x7f9d09fc4a40&gt; for event &#39;builder-inited&#39; threw an exception (exception: &#39;font&#39;)
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-57mo4064.log
+/tmp/sphinx-err-0u_1thrj.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.

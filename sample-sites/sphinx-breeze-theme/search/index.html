@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search &#8212; Breeze</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/breeze.css?v=93f23127" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/breeze.css?v=d9ad5ecf" />
   <noscript>
     <style>
       .bz-js-only { display: none !important; }
@@ -15,22 +15,21 @@
   
   <meta name="robots" content="noindex" />
     <script defer src="../_static/documentation_options.js?v=187304be"></script>
-    <script defer src="../_static/doctools.js?v=9bcbadda"></script>
-    <script defer src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer src="../_static/scripts/breeze.js?v=8ef74970"></script>
+    <script defer src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script defer src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer src="../_static/scripts/breeze.js?v=5679e9bc"></script>
   <script defer src="../_static/searchtools.js"></script>
   <script defer src="../_static/language_data.js"></script>
-  <script defer src="../searchindex.js"></script>
-  <script data-cfasync="false">
-    const mode = localStorage.getItem("breeze-mode") || "auto";
-    document.documentElement.dataset.mode = mode;
-    if (mode === "auto") {
-      const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-      document.documentElement.dataset.theme = prefers;
-    } else {
-      document.documentElement.dataset.theme = mode;
-    }
-  </script>
+  <script defer src="../searchindex.js"></script><script data-cfasync="false">
+  const mode = localStorage.getItem("breeze-mode") || "auto";
+  document.documentElement.dataset.mode = mode;
+  if (mode === "auto") {
+    const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    document.documentElement.dataset.theme = prefers;
+  } else {
+    document.documentElement.dataset.theme = mode;
+  }
+</script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="#" /><meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -39,16 +38,50 @@
   <div class="bz-skip-to-content">
     <a href="#bz-main-content">Skip to main content</a>
   </div><header class="bz-header-main">
-  <div class="bz-header-start"><a class="bz-header-brand" href="../"><span>Breeze</span>
-</a></div>
-  <div class="bz-header-end"><div class="bz-search-button">
+  <div class="bz-header-start"><label
+  class="bz-sidebar-primary-toggle"
+  for="bz-sidebar-primary"
+  role="button"
+  tabindex="0"
+  aria-label="Toggle site navigation"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h12.5"
+    />
+  </svg>
+</label><a class="bz-header-brand" href="../"><span>Breeze</span>
+</a>
+  </div>
+  <div class="bz-header-end"><label
+  class="bz-sidebar-primary-toggle"
+  for="bz-sidebar-primary"
+  role="button"
+  tabindex="0"
+  aria-label="Toggle site navigation"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h12.5"
+    />
+  </svg>
+</label><div class="bz-search-button">
   <a
     href="#q"
     aria-label="Search the docs"
     data-tooltip="Search the docs"
   >
     <svg
-      class="sized"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 -1 24 24"
@@ -73,34 +106,17 @@
       <path d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"></path>
     </svg>
   </button>
-</div><div class="bz-external-links">
-  <a
-    href="https://github.com//"
-    aria-label="GitHub"
-    data-tooltip="GitHub"
-    target="_blank"
-  >
-    <svg
-      stroke="currentColor"
-      fill="currentColor"
-      stroke-width="0"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-      ></path>
-    </svg>
-  </a></div></div>
-</header><div class="bz-content"><aside class="bz-sidebar-primary" data-drawer="bz-sidebar-primary">
+</div>
+  </div>
+</header><hr class="bz-header-separator"><div class="bz-content"><aside class="bz-sidebar-primary" data-drawer="bz-sidebar-primary">
   
   
     <nav class="bz-sidebar-nav" aria-label="Section Navigation"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../kitchen-sink/">Kitchen Sink</a>
-<details><summary></summary><ul>
+<details><summary aria-label="Toggle submenu"></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/admonitions/">Admonitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/api/">API documentation</a>
-<details><summary></summary><ul>
+<details><summary aria-label="Toggle submenu"></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../kitchen-sink/domains/api_c_domain/">Directives in the C domain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../kitchen-sink/domains/api_cpp_domain/">Directives in the C++ domain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../kitchen-sink/domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
@@ -118,7 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/typography/">Typography</a></li>
 </ul></details></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../placeholder-one/">Placeholder Page One</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../placeholder-two/">Placeholder Page Two</a></li>
@@ -126,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../long-page/">Long Page</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Additional "hidden" Pages</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional "hidden" Pages</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../placeholder-three/">Placeholder Page Three</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../placeholder-four/">Placeholder Page Four</a></li>
@@ -150,42 +166,25 @@
   <p><span id="search-progress"></span></p>
   <div id="search-results"></div>
 </main>
-  </div><footer class="bz-footer">
+  </div>
+<footer class="bz-footer">
   <div class="bz-footer-copyright"><p class="bz-copyright">© Copyright 2021, Pradyun Gedam</p><p>
-    Made with
     
-    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
     
-    <a href="https://github.com/aksiome/breeze">Breeze theme</a>.
+    
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/aksiome/breeze">Breeze theme</a>.
+    
   </p>
-</div><div class="bz-external-links">
-  <a
-    href="https://github.com//"
-    aria-label="GitHub"
-    data-tooltip="GitHub"
-    target="_blank"
-  >
-    <svg
-      stroke="currentColor"
-      fill="currentColor"
-      stroke-width="0"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-      ></path>
-    </svg>
-  </a></div>
+</div>
 </footer><a href="#" class="bz-back-to-top">
-    <svg class="sized" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
     </svg>
     <span>Back to top</span>
   </a>
   <label class="bz-overlay bz-overlay-primary" for="bz-sidebar-primary"></label>
   <label class="bz-overlay bz-overlay-secondary" for="bz-sidebar-secondary"></label>
-  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle site navigation sidebar">
-  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="Toggle table of contents sidebar">
+  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle section navigation">
+  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="Toggle table of contents">
   </body>
 </html>

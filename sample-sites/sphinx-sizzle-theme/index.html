@@ -14,7 +14,7 @@
       Build Failed!
     </h1>
     <div class="mt-2">
-      <div class="text-gray-700 text-center font-semibold">19 Jan 2026 01:24:51 UTC</div>
+      <div class="text-gray-700 text-center font-semibold">02 Feb 2026 01:50:07 UTC</div>
     </div>
     <div class="mt-4">
       <div class="text-red-700 bg-red-100 border border-red-200 p-4 rounded text-center font-semibold">
@@ -31,7 +31,7 @@
     <div class="mt-4">
       <div class="text-gray-700 text-center font-semibold">Output</div>
       <pre class="bg-gray-50 border my-2 shadow rounded p-2 overflow-auto">======================================== stdout ========================================
-[01mRunning Sphinx v8.2.3[39;49;00m
+[01mRunning Sphinx v9.1.0[39;49;00m
 [01mloading translations [en]... [39;49;00mlocale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 done
@@ -39,7 +39,7 @@ done
 locale_dir /home/runner/work/sphinx-themes.org/sphinx-themes.org/sample-docs/locales/en/LC_MESSAGES does not exist
 Original exception:
 Traceback (most recent call last):
-  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+  File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 550, in load_extension
     mod = import_module(extname)
           ^^^^^^^^^^^^^^^^^^^^^^
   File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
@@ -65,8 +65,8 @@ Versions
 
 * Platform:         linux; (Linux-6.11.0-1018-azure-x86_64-with-glibc2.39)
 * Python version:   3.12.3 (CPython)
-* Sphinx version:   8.2.3
-* Docutils version: 0.21.2
+* Sphinx version:   9.1.0
+* Docutils version: 0.22.4
 * Jinja2 version:   3.1.6
 * Pygments version: 2.19.1
 
@@ -84,7 +84,7 @@ Traceback
 =========
 
     Traceback (most recent call last):
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 541, in load_extension
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 550, in load_extension
         mod = import_module(extname)
               ^^^^^^^^^^^^^^^^^^^^^^
       File &#34;/usr/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
@@ -106,28 +106,28 @@ Traceback
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/cmd/build.py&#34;, line 414, in build_main
         app = Sphinx(
               ^^^^^^^
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 332, in __init__
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 340, in __init__
         self._init_builder()
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 413, in _init_builder
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 429, in _init_builder
         self.builder.init()
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 176, in init
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 171, in init
         self.init_templates()
       File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/builders/html/__init__.py&#34;, line 232, in init_templates
         self.theme = theme_factory.create(theme_name)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/theming.py&#34;, line 226, in create
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/theming.py&#34;, line 256, in create
         entry_point_loader()
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/theming.py&#34;, line 188, in _load_theme_closure
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/theming.py&#34;, line 218, in _load_theme_closure
         app.setup_extension(theme_module)
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 489, in setup_extension
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/application.py&#34;, line 505, in setup_extension
         self.registry.load_extension(self, extname)
-      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 544, in load_extension
+      File &#34;/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 553, in load_extension
         raise ExtensionError(
     sphinx.errors.ExtensionError: Could not import extension sphinx_sizzle_theme (exception: cannot import name &#39;reprunicode&#39; from &#39;docutils.nodes&#39; (/home/runner/work/sphinx-themes.org/sphinx-themes.org/.nox/publish/lib/python3.12/site-packages/docutils/nodes.py))
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-d4kzj7_3.log
+/tmp/sphinx-err-6bqnple8.log
 
 To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
