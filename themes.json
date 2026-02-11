@@ -144,6 +144,12 @@
       "pypi": "sphinx-breeze-theme"
     },
     {
+      "config": "sphinx_clarity_theme",
+      "display": "Clarity",
+      "documentation": "https://readcraft.io/sphinx-clarity-theme/docs/en/latest/",
+      "pypi": "sphinx-clarity-theme"
+    },
+    {
       "config": "cloud",
       "display": "Cloud",
       "pypi": "cloud-sptheme"
