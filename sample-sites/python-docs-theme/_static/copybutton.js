@@ -62,6 +62,12 @@ const loadCopyButton = () => {
         + ".highlight-python3 .highlight,"
         + ".highlight-pycon .highlight,"
         + ".highlight-pycon3 .highlight,"
+        + ".highlight-bash .highlight,"
+        + ".highlight-console .highlight,"
+        + ".highlight-doscon .highlight,"
+        + ".highlight-ps1con .highlight,"
+        + ".highlight-sh .highlight,"
+        + ".highlight-shell-session .highlight,"
         + ".highlight-default .highlight"
     )
 

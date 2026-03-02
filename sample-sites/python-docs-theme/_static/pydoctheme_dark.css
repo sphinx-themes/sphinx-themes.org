@@ -97,6 +97,12 @@ div.body pre {
     border-color: #616161;
 }
 
+div.code-block-caption {
+    background-color: #333;
+    border-color: #616161;
+    color: white;
+}
+
 code {
     background-color: #424242;
 }
