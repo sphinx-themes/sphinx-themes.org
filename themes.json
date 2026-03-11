@@ -206,6 +206,12 @@
       "pypi": "maisie-sphinx-theme"
     },
     {
+      "config": "manticore_sphinx_theme",
+      "display": "Manticore",
+      "documentation": "https://manticore-projects.github.io/manticore-sphinx-theme/",
+      "pypi": "manticore-sphinx-theme"
+    },
+    {
       "config": {
         "_imports": [
           "murray"
