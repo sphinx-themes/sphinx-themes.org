@@ -448,7 +448,9 @@ div.footer a:hover {
 :root {
     --threadsafety-incompatible: var(--bad-color);
     --threadsafety-compatible: var(--middle-color);
-    --threadsafety-safe: var(--good-color);
+    --threadsafety-distinct: var(--middle-color);
+    --threadsafety-shared: var(--good-color);
+    --threadsafety-atomic: var(--good-color);
 }
 
 .threadsafety.threadsafety-incompatible {
@@ -459,8 +461,16 @@ div.footer a:hover {
     color: var(--threadsafety-compatible);
 }
 
-.threadsafety.threadsafety-safe {
-    color: var(--threadsafety-safe);
+.threadsafety.threadsafety-distinct {
+    color: var(--threadsafety-distinct);
+}
+
+.threadsafety.threadsafety-shared {
+    color: var(--threadsafety-shared);
+}
+
+.threadsafety.threadsafety-atomic {
+    color: var(--threadsafety-atomic);
 }
 
 
