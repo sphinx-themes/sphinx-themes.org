@@ -192,6 +192,12 @@
       "pypi": "kotti-docs-theme"
     },
     {
+      "config": "lumina",
+      "display": "Lumina",
+      "documentation": "https://r4sky0.github.io/sphinx-lumina-theme/",
+      "pypi": "sphinx-lumina-theme"
+    },
+    {
       "config": {
         "_extensions": [
           "maisie_sphinx_theme"
