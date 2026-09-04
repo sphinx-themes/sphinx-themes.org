@@ -142,356 +142,361 @@ data-aria-dark="Switch to auto color mode">
 </span><span data-line="4"><span class="sd">The module&#39;s docstrings use reStructuredText markup.</span>
 </span><span data-line="5"><span class="sd">&quot;&quot;&quot;</span>
 </span><span data-line="6">
-</span><span data-line="7"><span class="c1"># TODO:</span>
-</span><span data-line="8"><span class="c1"># - show roles to refer to elements</span>
-</span><span data-line="9"><span class="c1"># - async with</span>
-</span><span data-line="10"><span class="c1"># - async for</span>
-</span><span data-line="11"><span class="c1"># - add example of numpy-style docstrings</span>
-</span><span data-line="12">
-</span><span data-line="13"><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
-</span><span data-line="14"><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
-</span><span data-line="15">
-</span><span data-line="16"><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;ParameterT&quot;</span><span class="p">)</span>  <span class="c1">#: Docstring of type ParameterT</span>
-</span><span data-line="17">
-</span><span data-line="18"><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;ReturnT&quot;</span><span class="p">)</span>
-</span><span data-line="19"><span class="sd">&quot;&quot;&quot;Docstring of type ReturnT.&quot;&quot;&quot;</span>
-</span><span data-line="20">
-</span><span data-line="21"><span class="c1"># Python 3.12: type MyType = list[float]  #: The docstring.</span>
-</span><span data-line="22"><span class="n">MyType</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>  <span class="c1">#: The docstring.</span>
-</span><span data-line="23">
-</span><span data-line="24"><span class="n">my_module_level_variable</span><span class="p">:</span> <span class="n">MyType</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]</span>  <span class="c1">#: The docstring.</span>
-</span><span data-line="25">
-</span><span data-line="26">
+</span><span data-line="7"><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+</span><span data-line="8"><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+</span><span data-line="9">
+</span><span data-line="10"><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;ParameterT&quot;</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+</span><span data-line="11">
+</span><span data-line="12"><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;ReturnT&quot;</span><span class="p">)</span>
+</span><span data-line="13"><span class="sd">&quot;&quot;&quot;Docstring of type :any:`ReturnT`.&quot;&quot;&quot;</span>
+</span><span data-line="14">
+</span><span data-line="15"><span class="c1"># type MyType = list[</span>
+</span><span data-line="16"><span class="c1">#     float</span>
+</span><span data-line="17"><span class="c1"># ]  #: The docstring of :py:type:`MyType` using Python 3.12 syntax.</span>
+</span><span data-line="18">
+</span><span data-line="19"><span class="n">MyType</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span>
+</span><span data-line="20">    <span class="nb">float</span>
+</span><span data-line="21"><span class="p">]</span>  <span class="c1">#: The docstring of :py:type:`MyType` using an explicit ``TypeAlias``.</span>
+</span><span data-line="22">
+</span><span data-line="23"><span class="n">my_module_level_variable</span><span class="p">:</span> <span class="n">MyType</span> <span class="o">=</span> <span class="p">[</span>
+</span><span data-line="24">    <span class="mf">0.0</span><span class="p">,</span>
+</span><span data-line="25">    <span class="mf">1.1</span><span class="p">,</span>
+</span><span data-line="26"><span class="p">]</span>  <span class="c1">#: The docstring of :py:data:`my_module_level_variable`.</span>
+</span><span data-line="27">
+</span><span data-line="28">
 <div class="viewcode-block" id="my_function_pure_sphinx">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_pure_sphinx">[docs]</a>
-</span><span data-line="27"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_pure_sphinx</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span data-line="28"><span class="w">    </span><span class="sa">r</span><span class="sd">&#39;&#39;&#39;</span>
-</span><span data-line="29"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
-</span><span data-line="30">
-</span><span data-line="31"><span class="sd">    Note:</span>
-</span><span data-line="32"><span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
-</span><span data-line="33">
-</span><span data-line="34"><span class="sd">        In the source code,</span>
-</span><span data-line="35"><span class="sd">        the docstring for this function is a &quot;raw&quot; docstring using ``r&quot;&quot;&quot;...&quot;&quot;&quot;``,</span>
-</span><span data-line="36"><span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
-</span><span data-line="37"><span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
-</span><span data-line="38">
-</span><span data-line="39"><span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+</span><span data-line="29"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_pure_sphinx</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span data-line="30"><span class="w">    </span><span class="sa">r</span><span class="sd">&#39;&#39;&#39;</span>
+</span><span data-line="31"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+</span><span data-line="32">
+</span><span data-line="33"><span class="sd">    Note:</span>
+</span><span data-line="34"><span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
+</span><span data-line="35">
+</span><span data-line="36"><span class="sd">        In the source code,</span>
+</span><span data-line="37"><span class="sd">        the docstring for this function is a &quot;raw&quot; docstring using ``r&quot;&quot;&quot;...&quot;&quot;&quot;``,</span>
+</span><span data-line="38"><span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
+</span><span data-line="39"><span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
 </span><span data-line="40">
-</span><span data-line="41"><span class="sd">    :param \*args: Variable length argument list.</span>
-</span><span data-line="42"><span class="sd">    :param \*\*kwargs: Arbitrary keyword arguments.</span>
-</span><span data-line="43">
-</span><span data-line="44"><span class="sd">    :return: None</span>
+</span><span data-line="41"><span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+</span><span data-line="42">
+</span><span data-line="43"><span class="sd">    :param \*args: Variable length argument list.</span>
+</span><span data-line="44"><span class="sd">    :param \*\*kwargs: Arbitrary keyword arguments.</span>
 </span><span data-line="45">
-</span><span data-line="46"><span class="sd">    Text at end of docstring.</span>
-</span><span data-line="47"><span class="sd">    &#39;&#39;&#39;</span>
-</span><span data-line="48">    <span class="k">pass</span></div>
+</span><span data-line="46"><span class="sd">    :return: None</span>
+</span><span data-line="47">
+</span><span data-line="48"><span class="sd">    Text at end of docstring.</span>
+</span><span data-line="49"><span class="sd">    &#39;&#39;&#39;</span>
+</span><span data-line="50">    <span class="k">pass</span></div>
 
-</span><span data-line="49">
-</span><span data-line="50">
+</span><span data-line="51">
+</span><span data-line="52">
 <div class="viewcode-block" id="my_function_google_style">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_google_style">[docs]</a>
-</span><span data-line="51"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_google_style</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span data-line="52"><span class="w">    </span><span class="sa">r</span><span class="sd">&#39;&#39;&#39;</span>
-</span><span data-line="53"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
-</span><span data-line="54">
-</span><span data-line="55"><span class="sd">    Note:</span>
-</span><span data-line="56"><span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
-</span><span data-line="57">
-</span><span data-line="58"><span class="sd">        In the source code,</span>
-</span><span data-line="59"><span class="sd">        the docstring for this function is a &quot;raw&quot; docstring using ``r&quot;&quot;&quot;...&quot;&quot;&quot;``,</span>
-</span><span data-line="60"><span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
-</span><span data-line="61"><span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
-</span><span data-line="62">
-</span><span data-line="63"><span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+</span><span data-line="53"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_google_style</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span data-line="54"><span class="w">    </span><span class="sa">r</span><span class="sd">&#39;&#39;&#39;</span>
+</span><span data-line="55"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+</span><span data-line="56">
+</span><span data-line="57"><span class="sd">    Note:</span>
+</span><span data-line="58"><span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
+</span><span data-line="59">
+</span><span data-line="60"><span class="sd">        In the source code,</span>
+</span><span data-line="61"><span class="sd">        the docstring for this function is a &quot;raw&quot; docstring using ``r&quot;&quot;&quot;...&quot;&quot;&quot;``,</span>
+</span><span data-line="62"><span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
+</span><span data-line="63"><span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
 </span><span data-line="64">
-</span><span data-line="65"><span class="sd">    Args:</span>
-</span><span data-line="66"><span class="sd">        \*args: Variable length argument list.</span>
-</span><span data-line="67"><span class="sd">        \*\*kwargs: Arbitrary keyword arguments.</span>
-</span><span data-line="68">
-</span><span data-line="69"><span class="sd">    Returns:</span>
-</span><span data-line="70"><span class="sd">        None</span>
-</span><span data-line="71">
-</span><span data-line="72"><span class="sd">    Text at end of docstring.</span>
-</span><span data-line="73"><span class="sd">    &#39;&#39;&#39;</span>
-</span><span data-line="74">    <span class="k">pass</span></div>
+</span><span data-line="65"><span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+</span><span data-line="66">
+</span><span data-line="67"><span class="sd">    Args:</span>
+</span><span data-line="68"><span class="sd">        \*args: Variable length argument list.</span>
+</span><span data-line="69"><span class="sd">        \*\*kwargs: Arbitrary keyword arguments.</span>
+</span><span data-line="70">
+</span><span data-line="71"><span class="sd">    Returns:</span>
+</span><span data-line="72"><span class="sd">        None</span>
+</span><span data-line="73">
+</span><span data-line="74"><span class="sd">    Text at end of docstring.</span>
+</span><span data-line="75"><span class="sd">    &#39;&#39;&#39;</span>
+</span><span data-line="76">    <span class="k">pass</span></div>
 
-</span><span data-line="75">
-</span><span data-line="76">
+</span><span data-line="77">
+</span><span data-line="78">
 <div class="viewcode-block" id="my_function_needs_napoleon">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_needs_napoleon">[docs]</a>
-</span><span data-line="77"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_needs_napoleon</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span data-line="78"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="79"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
-</span><span data-line="80">
-</span><span data-line="81"><span class="sd">    Note:</span>
-</span><span data-line="82"><span class="sd">        If you use ``sphinx.ext.napoleon`` (and only then),</span>
-</span><span data-line="83"><span class="sd">        there is no need to escape ``*args`` and ``**kwargs`` below.</span>
-</span><span data-line="84">
-</span><span data-line="85"><span class="sd">    Args:</span>
-</span><span data-line="86"><span class="sd">        *args: Variable length argument list.</span>
-</span><span data-line="87"><span class="sd">        **kwargs: Arbitrary keyword arguments.</span>
-</span><span data-line="88">
-</span><span data-line="89"><span class="sd">    Returns:</span>
-</span><span data-line="90"><span class="sd">        None</span>
-</span><span data-line="91">
-</span><span data-line="92"><span class="sd">    Text at end of docstring.</span>
-</span><span data-line="93"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="94">    <span class="k">pass</span></div>
+</span><span data-line="79"><span class="k">def</span><span class="w"> </span><span class="nf">my_function_needs_napoleon</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span data-line="80"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="81"><span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+</span><span data-line="82">
+</span><span data-line="83"><span class="sd">    Note:</span>
+</span><span data-line="84"><span class="sd">        If you use ``sphinx.ext.napoleon`` (and only then),</span>
+</span><span data-line="85"><span class="sd">        there is no need to escape ``*args`` and ``**kwargs`` below.</span>
+</span><span data-line="86">
+</span><span data-line="87"><span class="sd">    Args:</span>
+</span><span data-line="88"><span class="sd">        *args: Variable length argument list.</span>
+</span><span data-line="89"><span class="sd">        **kwargs: Arbitrary keyword arguments.</span>
+</span><span data-line="90">
+</span><span data-line="91"><span class="sd">    Returns:</span>
+</span><span data-line="92"><span class="sd">        None</span>
+</span><span data-line="93">
+</span><span data-line="94"><span class="sd">    Text at end of docstring.</span>
+</span><span data-line="95"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="96">    <span class="k">pass</span></div>
 
-</span><span data-line="95">
-</span><span data-line="96">
+</span><span data-line="97">
+</span><span data-line="98">
 <div class="viewcode-block" id="my_function2">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function2">[docs]</a>
-</span><span data-line="97"><span class="k">def</span><span class="w"> </span><span class="nf">my_function2</span><span class="p">(</span><span class="n">foo</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bar</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-</span><span data-line="98"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="99"><span class="sd">    A simple function.</span>
-</span><span data-line="100">
-</span><span data-line="101"><span class="sd">    Args:</span>
-</span><span data-line="102"><span class="sd">        foo: A regular argument.</span>
-</span><span data-line="103"><span class="sd">        bar: Another regular argument.</span>
-</span><span data-line="104">
-</span><span data-line="105"><span class="sd">    Returns:</span>
-</span><span data-line="106"><span class="sd">        None</span>
-</span><span data-line="107">
-</span><span data-line="108"><span class="sd">    .. deprecated:: 2.0</span>
-</span><span data-line="109"><span class="sd">        Use :func:`my_function_pure_sphinx` instead.</span>
-</span><span data-line="110">
-</span><span data-line="111"><span class="sd">    Text at end of docstring.</span>
-</span><span data-line="112"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="113">    <span class="k">pass</span></div>
+</span><span data-line="99"><span class="k">def</span><span class="w"> </span><span class="nf">my_function2</span><span class="p">(</span><span class="n">foo</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bar</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span data-line="100"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="101"><span class="sd">    A simple function.</span>
+</span><span data-line="102">
+</span><span data-line="103"><span class="sd">    Args:</span>
+</span><span data-line="104"><span class="sd">        foo: A regular argument.</span>
+</span><span data-line="105"><span class="sd">        bar: Another regular argument.</span>
+</span><span data-line="106">
+</span><span data-line="107"><span class="sd">    Returns:</span>
+</span><span data-line="108"><span class="sd">        None</span>
+</span><span data-line="109">
+</span><span data-line="110"><span class="sd">    .. deprecated:: x.y</span>
+</span><span data-line="111"><span class="sd">        (This is an example of a deprecation admonition.)</span>
+</span><span data-line="112"><span class="sd">        Use :py:func:`my_function_pure_sphinx` instead.</span>
+</span><span data-line="113">
+</span><span data-line="114"><span class="sd">    Text at end of docstring.</span>
+</span><span data-line="115"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="116">    <span class="k">pass</span></div>
 
-</span><span data-line="114">
-</span><span data-line="115">
+</span><span data-line="117">
+</span><span data-line="118">
 <div class="viewcode-block" id="my_generator">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_generator">[docs]</a>
-</span><span data-line="116"><span class="k">def</span><span class="w"> </span><span class="nf">my_generator</span><span class="p">():</span>
-</span><span data-line="117"><span class="w">    </span><span class="sd">&quot;&quot;&quot;A generator.</span>
-</span><span data-line="118">
-</span><span data-line="119"><span class="sd">    Yields:</span>
-</span><span data-line="120"><span class="sd">        None</span>
-</span><span data-line="121"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="122">    <span class="k">yield</span> <span class="kc">None</span></div>
+</span><span data-line="119"><span class="k">def</span><span class="w"> </span><span class="nf">my_generator</span><span class="p">():</span>
+</span><span data-line="120"><span class="w">    </span><span class="sd">&quot;&quot;&quot;A generator.</span>
+</span><span data-line="121">
+</span><span data-line="122"><span class="sd">    Yields:</span>
+</span><span data-line="123"><span class="sd">        None</span>
+</span><span data-line="124"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="125">    <span class="k">yield</span> <span class="kc">None</span></div>
 
-</span><span data-line="123">
-</span><span data-line="124">
+</span><span data-line="126">
+</span><span data-line="127">
 <div class="viewcode-block" id="MyException">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyException">[docs]</a>
-</span><span data-line="125"><span class="k">class</span><span class="w"> </span><span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-</span><span data-line="126"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom exception class.&quot;&quot;&quot;</span>
-</span><span data-line="127">
-</span><span data-line="128">    <span class="k">pass</span></div>
-
-</span><span data-line="129">
+</span><span data-line="128"><span class="k">class</span><span class="w"> </span><span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+</span><span data-line="129"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom exception class.&quot;&quot;&quot;</span>
 </span><span data-line="130">
+</span><span data-line="131">    <span class="k">pass</span></div>
+
+</span><span data-line="132">
+</span><span data-line="133">
 <div class="viewcode-block" id="AllInOne">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne">[docs]</a>
-</span><span data-line="131"><span class="k">class</span><span class="w"> </span><span class="nc">AllInOne</span><span class="p">:</span>
-</span><span data-line="132"><span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a class that demonstrates various Python features.</span>
-</span><span data-line="133">
-</span><span data-line="134"><span class="sd">    Uses Google-style docstrings</span>
-</span><span data-line="135"><span class="sd">    (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).</span>
+</span><span data-line="134"><span class="k">class</span><span class="w"> </span><span class="nc">AllInOne</span><span class="p">:</span>
+</span><span data-line="135"><span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a class that demonstrates various Python features.</span>
 </span><span data-line="136">
-</span><span data-line="137"><span class="sd">    Attributes:</span>
-</span><span data-line="138"><span class="sd">        _my_property: A private property of the class.</span>
-</span><span data-line="139"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="140">
-</span><span data-line="141">    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
-</span><span data-line="142">
-</span><span data-line="143">    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span data-line="144"><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the :py:class:`AllInOne` class.&quot;&quot;&quot;</span>
-</span><span data-line="145">        <span class="k">pass</span>
-</span><span data-line="146">
+</span><span data-line="137"><span class="sd">    It uses Google-style docstrings</span>
+</span><span data-line="138"><span class="sd">    (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).</span>
+</span><span data-line="139">
+</span><span data-line="140"><span class="sd">    Attributes:</span>
+</span><span data-line="141"><span class="sd">        _my_property: A private property of the class.</span>
+</span><span data-line="142"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="143">
+</span><span data-line="144">    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
+</span><span data-line="145">
+</span><span data-line="146">    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span data-line="147"><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the :py:class:`AllInOne` class.&quot;&quot;&quot;</span>
+</span><span data-line="148">        <span class="k">pass</span>
+</span><span data-line="149">
 <div class="viewcode-block" id="AllInOne.my_method">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_method">[docs]</a>
-</span><span data-line="147">    <span class="k">def</span><span class="w"> </span><span class="nf">my_method</span><span class="p">(</span>
-</span><span data-line="148">        <span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_param</span><span class="o">=</span><span class="kc">None</span>
-</span><span data-line="149">    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
-</span><span data-line="150"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A normal method.</span>
-</span><span data-line="151">
-</span><span data-line="152"><span class="sd">        We are using both positional-only and keyword-only syntax.</span>
-</span><span data-line="153">
-</span><span data-line="154"><span class="sd">        Here is some code in a literal block::</span>
-</span><span data-line="155">
-</span><span data-line="156"><span class="sd">            foo = True  # assign ``True``</span>
-</span><span data-line="157">
-</span><span data-line="158"><span class="sd">        Note:</span>
-</span><span data-line="159"><span class="sd">            Do not include the *self* parameter in the ``Args`` section.</span>
+</span><span data-line="150">    <span class="k">def</span><span class="w"> </span><span class="nf">my_method</span><span class="p">(</span>
+</span><span data-line="151">        <span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_param</span><span class="o">=</span><span class="kc">None</span>
+</span><span data-line="152">    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+</span><span data-line="153"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A normal method.</span>
+</span><span data-line="154">
+</span><span data-line="155"><span class="sd">        We are using both positional-only and keyword-only syntax.</span>
+</span><span data-line="156">
+</span><span data-line="157"><span class="sd">        Here is some code in a literal block::</span>
+</span><span data-line="158">
+</span><span data-line="159"><span class="sd">            foo = True  # assign ``True``</span>
 </span><span data-line="160">
-</span><span data-line="161"><span class="sd">        Args:</span>
-</span><span data-line="162"><span class="sd">            my_param: Documenting *my_param*.</span>
-</span><span data-line="163"><span class="sd">                Another sentence on the next docstring line, still belonging to *my_param*.</span>
-</span><span data-line="164"><span class="sd">            keyword_only_param: Documenting *keyword_only_param*.</span>
-</span><span data-line="165"><span class="sd">                Another sentence on the next docstring line, still belonging to *keyword_only_param*.</span>
-</span><span data-line="166">
-</span><span data-line="167"><span class="sd">        Returns:</span>
-</span><span data-line="168"><span class="sd">            The value of the local variable ``my_var``.</span>
-</span><span data-line="169">
-</span><span data-line="170"><span class="sd">        Raises:</span>
-</span><span data-line="171"><span class="sd">            :py:exc:`MyException`: if something went wrong.</span>
-</span><span data-line="172">
-</span><span data-line="173"><span class="sd">        Example:</span>
-</span><span data-line="174"><span class="sd">            &gt;&gt;&gt; retval = my_method()  # doctest format</span>
-</span><span data-line="175"><span class="sd">            &quot;return_value&quot;</span>
-</span><span data-line="176">
-</span><span data-line="177"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="178"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="179">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
-</span><span data-line="180">        <span class="k">return</span> <span class="n">my_var</span></div>
-
+</span><span data-line="161"><span class="sd">        Note:</span>
+</span><span data-line="162"><span class="sd">            Do not include the *self* parameter in the ``Args`` section.</span>
+</span><span data-line="163">
+</span><span data-line="164"><span class="sd">        Args:</span>
+</span><span data-line="165"><span class="sd">            my_param: Documenting *my_param*.</span>
+</span><span data-line="166"><span class="sd">                This is another sentence on the next docstring line,</span>
+</span><span data-line="167"><span class="sd">                still belonging to *my_param*.</span>
+</span><span data-line="168"><span class="sd">            keyword_only_param: Documenting *keyword_only_param*.</span>
+</span><span data-line="169"><span class="sd">                This is another sentence on the next docstring line,</span>
+</span><span data-line="170"><span class="sd">                still belonging to *keyword_only_param*.</span>
+</span><span data-line="171">
+</span><span data-line="172"><span class="sd">        Returns:</span>
+</span><span data-line="173"><span class="sd">            The value of the local variable ``my_var``.</span>
+</span><span data-line="174">
+</span><span data-line="175"><span class="sd">        Raises:</span>
+</span><span data-line="176"><span class="sd">            :py:exc:`MyException`: if something went wrong.</span>
+</span><span data-line="177">
+</span><span data-line="178"><span class="sd">        Example:</span>
+</span><span data-line="179"><span class="sd">            &gt;&gt;&gt; retval = my_method()  # doctest format</span>
+</span><span data-line="180"><span class="sd">            &quot;return_value&quot;</span>
 </span><span data-line="181">
+</span><span data-line="182"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="183"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="184">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
+</span><span data-line="185">        <span class="k">return</span> <span class="n">my_var</span></div>
+
+</span><span data-line="186">
 <div class="viewcode-block" id="AllInOne.my_async_method">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_async_method">[docs]</a>
-</span><span data-line="182">    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">my_async_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
-</span><span data-line="183"><span class="w">        </span><span class="sd">&quot;&quot;&quot;An :term:`async` method.</span>
-</span><span data-line="184">
-</span><span data-line="185"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="186"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="187">        <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
-</span><span data-line="188">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span></div>
-
+</span><span data-line="187">    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">my_async_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+</span><span data-line="188"><span class="w">        </span><span class="sd">&quot;&quot;&quot;An :py:keyword:`async` method.</span>
 </span><span data-line="189">
+</span><span data-line="190"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="191"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="192">        <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
+</span><span data-line="193">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span></div>
+
+</span><span data-line="194">
 <div class="viewcode-block" id="AllInOne.my_abstractmethod">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_abstractmethod">[docs]</a>
-</span><span data-line="190">    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-</span><span data-line="191">    <span class="k">def</span><span class="w"> </span><span class="nf">my_abstractmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
-</span><span data-line="192"><span class="w">        </span><span class="sd">&quot;&quot;&quot;An abstract method.</span>
-</span><span data-line="193">
-</span><span data-line="194"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="195"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="196">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
-</span><span data-line="197">        <span class="k">return</span> <span class="n">my_var</span></div>
-
+</span><span data-line="195">    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+</span><span data-line="196">    <span class="k">def</span><span class="w"> </span><span class="nf">my_abstractmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+</span><span data-line="197"><span class="w">        </span><span class="sd">&quot;&quot;&quot;An abstract method.</span>
 </span><span data-line="198">
+</span><span data-line="199"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="200"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="201">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
+</span><span data-line="202">        <span class="k">return</span> <span class="n">my_var</span></div>
+
+</span><span data-line="203">
 <div class="viewcode-block" id="AllInOne.my_classmethod">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_classmethod">[docs]</a>
-</span><span data-line="199">    <span class="nd">@classmethod</span>
-</span><span data-line="200">    <span class="k">def</span><span class="w"> </span><span class="nf">my_classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
-</span><span data-line="201"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A :any:`classmethod`.</span>
-</span><span data-line="202">
-</span><span data-line="203"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="204"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="205">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
-</span><span data-line="206">        <span class="k">return</span> <span class="n">my_var</span></div>
-
+</span><span data-line="204">    <span class="nd">@classmethod</span>
+</span><span data-line="205">    <span class="k">def</span><span class="w"> </span><span class="nf">my_classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+</span><span data-line="206"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A :any:`classmethod`.</span>
 </span><span data-line="207">
+</span><span data-line="208"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="209"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="210">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
+</span><span data-line="211">        <span class="k">return</span> <span class="n">my_var</span></div>
+
+</span><span data-line="212">
 <div class="viewcode-block" id="AllInOne.my_staticmethod">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_staticmethod">[docs]</a>
-</span><span data-line="208">    <span class="nd">@staticmethod</span>
-</span><span data-line="209">    <span class="k">def</span><span class="w"> </span><span class="nf">my_staticmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
-</span><span data-line="210"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A :any:`staticmethod`.</span>
-</span><span data-line="211">
-</span><span data-line="212"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="213"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="214">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
-</span><span data-line="215">        <span class="k">return</span> <span class="n">my_var</span></div>
-
+</span><span data-line="213">    <span class="nd">@staticmethod</span>
+</span><span data-line="214">    <span class="k">def</span><span class="w"> </span><span class="nf">my_staticmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">&quot;default_value&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+</span><span data-line="215"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A :any:`staticmethod`.</span>
 </span><span data-line="216">
-</span><span data-line="217">    <span class="nd">@property</span>
-</span><span data-line="218">    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span data-line="219"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="220"><span class="sd">        Getter for the private property :py:attr:`_my_property`.</span>
+</span><span data-line="217"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="218"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="219">        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">&quot;return_value&quot;</span>
+</span><span data-line="220">        <span class="k">return</span> <span class="n">my_var</span></div>
+
 </span><span data-line="221">
-</span><span data-line="222"><span class="sd">        Returns:</span>
-</span><span data-line="223"><span class="sd">            The value of :py:attr:`_my_property`.</span>
-</span><span data-line="224">
-</span><span data-line="225"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="226"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="227">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span>
-</span><span data-line="228">
-</span><span data-line="229">    <span class="nd">@my_property</span><span class="o">.</span><span class="n">setter</span>
-</span><span data-line="230">    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-</span><span data-line="231"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="232"><span class="sd">        Setter for the private property :py:attr:`_my_property`.</span>
+</span><span data-line="222">    <span class="nd">@property</span>
+</span><span data-line="223">    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span data-line="224"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="225"><span class="sd">        Getter for the private property :py:attr:`_my_property`.</span>
+</span><span data-line="226">
+</span><span data-line="227"><span class="sd">        Returns:</span>
+</span><span data-line="228"><span class="sd">            The value of :py:attr:`_my_property`.</span>
+</span><span data-line="229">
+</span><span data-line="230"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="231"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="232">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span>
 </span><span data-line="233">
-</span><span data-line="234"><span class="sd">        Args:</span>
-</span><span data-line="235"><span class="sd">            value: The value to set :py:attr:`_my_property` to.</span>
-</span><span data-line="236">
-</span><span data-line="237"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="238"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="239">        <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span> <span class="o">=</span> <span class="n">value</span>
-</span><span data-line="240">
+</span><span data-line="234">    <span class="nd">@my_property</span><span class="o">.</span><span class="n">setter</span>
+</span><span data-line="235">    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span><span data-line="236"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="237"><span class="sd">        Setter for the private property :py:attr:`_my_property`.</span>
+</span><span data-line="238">
+</span><span data-line="239"><span class="sd">        Args:</span>
+</span><span data-line="240"><span class="sd">            value: The value to set :py:attr:`_my_property` to.</span>
+</span><span data-line="241">
+</span><span data-line="242"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="243"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="244">        <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span> <span class="o">=</span> <span class="n">value</span>
+</span><span data-line="245">
 <div class="viewcode-block" id="AllInOne.my_decorator_method">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_decorator_method">[docs]</a>
-</span><span data-line="241">    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_method</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
-</span><span data-line="242"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="243"><span class="sd">        A decorator method that wraps the provided method.</span>
-</span><span data-line="244">
-</span><span data-line="245"><span class="sd">        Args:</span>
-</span><span data-line="246"><span class="sd">            method: The method to decorate.</span>
-</span><span data-line="247">
-</span><span data-line="248"><span class="sd">        Returns:</span>
-</span><span data-line="249"><span class="sd">            The decorated method.</span>
-</span><span data-line="250">
-</span><span data-line="251"><span class="sd">        Text at end of docstring.</span>
-</span><span data-line="252"><span class="sd">        &quot;&quot;&quot;</span>
-</span><span data-line="253">
-</span><span data-line="254">        <span class="k">def</span><span class="w"> </span><span class="nf">decorate_method</span><span class="p">():</span>
-</span><span data-line="255"><span class="w">            </span><span class="sd">&quot;&quot;&quot;The decorated method.&quot;&quot;&quot;</span>
-</span><span data-line="256">            <span class="n">method</span><span class="p">()</span>
-</span><span data-line="257">
-</span><span data-line="258">        <span class="k">return</span> <span class="n">decorate_method</span></div>
-
-</span><span data-line="259">
-<div class="viewcode-block" id="AllInOne.my_decorated_method">
-<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_decorated_method">[docs]</a>
-</span><span data-line="260">    <span class="nd">@my_decorator_method</span>
-</span><span data-line="261">    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_method</span><span class="p">():</span>
-</span><span data-line="262"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A method that is decorated by :py:meth:`my_decorator_method`.&quot;&quot;&quot;</span>
-</span><span data-line="263">        <span class="k">pass</span></div>
-</div>
+</span><span data-line="246">    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_method</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+</span><span data-line="247"><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="248"><span class="sd">        A decorator method that wraps the provided method.</span>
+</span><span data-line="249">
+</span><span data-line="250"><span class="sd">        Args:</span>
+</span><span data-line="251"><span class="sd">            method: The method to decorate.</span>
+</span><span data-line="252">
+</span><span data-line="253"><span class="sd">        Returns:</span>
+</span><span data-line="254"><span class="sd">            The decorated method.</span>
+</span><span data-line="255">
+</span><span data-line="256"><span class="sd">        Text at end of docstring.</span>
+</span><span data-line="257"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="258">
+</span><span data-line="259">        <span class="k">def</span><span class="w"> </span><span class="nf">decorate_method</span><span class="p">():</span>
+</span><span data-line="260"><span class="w">            </span><span class="sd">&quot;&quot;&quot;The decorated method.&quot;&quot;&quot;</span>
+</span><span data-line="261">            <span class="n">method</span><span class="p">()</span>
+</span><span data-line="262">
+</span><span data-line="263">        <span class="k">return</span> <span class="n">decorate_method</span></div>
 
 </span><span data-line="264">
-</span><span data-line="265">
-<div class="viewcode-block" id="MyFinalClass">
-<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass">[docs]</a>
-</span><span data-line="266"><span class="nd">@final</span>
-</span><span data-line="267"><span class="k">class</span><span class="w"> </span><span class="nc">MyFinalClass</span><span class="p">:</span>
-</span><span data-line="268"><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class that cannot be subclassed.&quot;&quot;&quot;</span>
-</span><span data-line="269">
-<div class="viewcode-block" id="MyFinalClass.my_final_method">
-<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass.my_final_method">[docs]</a>
-</span><span data-line="270">    <span class="nd">@final</span>
-</span><span data-line="271">    <span class="k">def</span><span class="w"> </span><span class="nf">my_final_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span data-line="272"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A method that cannot be overridden by subclasses.&quot;&quot;&quot;</span>
-</span><span data-line="273">        <span class="k">pass</span></div>
+<div class="viewcode-block" id="AllInOne.my_decorated_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_decorated_method">[docs]</a>
+</span><span data-line="265">    <span class="nd">@my_decorator_method</span>
+</span><span data-line="266">    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_method</span><span class="p">():</span>
+</span><span data-line="267"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A method that is decorated by :py:meth:`my_decorator_method`.&quot;&quot;&quot;</span>
+</span><span data-line="268">        <span class="k">pass</span></div>
 </div>
 
+</span><span data-line="269">
+</span><span data-line="270">
+<div class="viewcode-block" id="MyFinalClass">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass">[docs]</a>
+</span><span data-line="271"><span class="nd">@final</span>
+</span><span data-line="272"><span class="k">class</span><span class="w"> </span><span class="nc">MyFinalClass</span><span class="p">:</span>
+</span><span data-line="273"><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class that cannot be subclassed.&quot;&quot;&quot;</span>
 </span><span data-line="274">
-</span><span data-line="275">
+<div class="viewcode-block" id="MyFinalClass.my_final_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass.my_final_method">[docs]</a>
+</span><span data-line="275">    <span class="nd">@final</span>
+</span><span data-line="276">    <span class="k">def</span><span class="w"> </span><span class="nf">my_final_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span data-line="277"><span class="w">        </span><span class="sd">&quot;&quot;&quot;A method that cannot be overridden by subclasses.&quot;&quot;&quot;</span>
+</span><span data-line="278">        <span class="k">pass</span></div>
+</div>
+
+</span><span data-line="279">
+</span><span data-line="280">
 <div class="viewcode-block" id="my_decorator_function">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_decorator_function">[docs]</a>
-</span><span data-line="276"><span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_function</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
-</span><span data-line="277"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="278"><span class="sd">    A decorator function that wraps the provided function.</span>
-</span><span data-line="279">
-</span><span data-line="280"><span class="sd">    Args:</span>
-</span><span data-line="281"><span class="sd">        function: The function to decorate.</span>
-</span><span data-line="282">
-</span><span data-line="283"><span class="sd">    Returns:</span>
-</span><span data-line="284"><span class="sd">        The decorated function.</span>
-</span><span data-line="285">
-</span><span data-line="286"><span class="sd">    Text at end of docstring.</span>
-</span><span data-line="287"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="288">
-</span><span data-line="289">    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_function</span><span class="p">():</span>
-</span><span data-line="290"><span class="w">        </span><span class="sd">&quot;&quot;&quot;The decorated function.&quot;&quot;&quot;</span>
-</span><span data-line="291">        <span class="n">function</span><span class="p">()</span>
-</span><span data-line="292">
-</span><span data-line="293">    <span class="k">return</span> <span class="n">decorate_function</span></div>
+</span><span data-line="281"><span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_function</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
+</span><span data-line="282"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="283"><span class="sd">    A decorator function that wraps the provided function.</span>
+</span><span data-line="284">
+</span><span data-line="285"><span class="sd">    Args:</span>
+</span><span data-line="286"><span class="sd">        function: The function to decorate.</span>
+</span><span data-line="287">
+</span><span data-line="288"><span class="sd">    Returns:</span>
+</span><span data-line="289"><span class="sd">        The decorated function.</span>
+</span><span data-line="290">
+</span><span data-line="291"><span class="sd">    Text at end of docstring.</span>
+</span><span data-line="292"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="293">
+</span><span data-line="294">    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_function</span><span class="p">():</span>
+</span><span data-line="295"><span class="w">        </span><span class="sd">&quot;&quot;&quot;The decorated function.&quot;&quot;&quot;</span>
+</span><span data-line="296">        <span class="n">function</span><span class="p">()</span>
+</span><span data-line="297">
+</span><span data-line="298">    <span class="k">return</span> <span class="n">decorate_function</span></div>
 
-</span><span data-line="294">
-</span><span data-line="295">
+</span><span data-line="299">
+</span><span data-line="300">
 <div class="viewcode-block" id="my_decorated_function">
 <a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_decorated_function">[docs]</a>
-</span><span data-line="296"><span class="nd">@my_decorator_function</span>
-</span><span data-line="297"><span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_function</span><span class="p">():</span>
-</span><span data-line="298"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span data-line="299"><span class="sd">    A function that is decorated by the :py:func:`my_decorator_function`.</span>
-</span><span data-line="300">
-</span><span data-line="301"><span class="sd">    This docstring is not shown, just the one of ``decorate_function()``.</span>
-</span><span data-line="302"><span class="sd">    &quot;&quot;&quot;</span>
-</span><span data-line="303">    <span class="k">pass</span></div>
+</span><span data-line="301"><span class="nd">@my_decorator_function</span>
+</span><span data-line="302"><span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_function</span><span class="p">():</span>
+</span><span data-line="303"><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span data-line="304"><span class="sd">    A function that is decorated by the :py:func:`my_decorator_function`.</span>
+</span><span data-line="305">
+</span><span data-line="306"><span class="sd">    This docstring is not shown, just the one of ``decorate_function()``.</span>
+</span><span data-line="307"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="308">    <span class="k">pass</span></div>
 
 </span></pre></div>
         </article><button class="back-to-top" type="button">
