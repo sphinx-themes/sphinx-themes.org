@@ -30,7 +30,8 @@ extlinks = {
 }
 
 intersphinx_mapping = {
-    "sphinx": ("https://www.sphinx-doc.org/", None),
+    "python": ("https://docs.python.org/3/", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
 
 todo_include_todos = True

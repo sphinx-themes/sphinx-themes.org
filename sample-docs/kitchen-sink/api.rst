@@ -7,6 +7,16 @@
 API documentation
 *****************
 
+A domain is a collection of markup, consisting of directives and roles,
+that describe and link to objects belonging together,
+such as elements of a programming language.
+
+.. seealso::
+
+    `Domains <https://www.sphinx-doc.org/en/master/usage/domains/index.html>`_
+
+The following sections show examples of the built-in domains of Sphinx.
+
 .. toctree::
     :titlesonly:
     :glob:
@@ -16,7 +26,8 @@ API documentation
 Using autodoc
 =============
 
-Using Sphinx's :any:`sphinx.ext.autodoc` plugin, it is possible to auto-generate documentation of a Python module.
+Using Sphinx's :any:`sphinx.ext.autodoc` plugin,
+it is possible to auto-generate documentation of a Python module.
 
 .. tip::
     Avoid having in-function-signature type annotations with autodoc,
@@ -38,7 +49,18 @@ Using Sphinx's :any:`sphinx.ext.autodoc` plugin, it is possible to auto-generate
 The ``automodule`` Directive with reStructuredText Markup
 ---------------------------------------------------------
 
-What follows is an example showing usage of the ``.. automodule::`` directive.
+The following markup is an example of the ``automodule`` directive.
+Note that the ``currentmodule`` directive sets the current module.
+
+.. code-block:: rst
+
+    .. currentmodule:: all_in_one_restructuredtext
+
+    .. automodule:: all_in_one_restructuredtext
+        :members:
+        :member-order: bysource
+
+The foregoing markup example renders as shown below.
 
 .. currentmodule:: all_in_one_restructuredtext
 
