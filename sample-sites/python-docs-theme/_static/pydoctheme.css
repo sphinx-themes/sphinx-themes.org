@@ -6,6 +6,7 @@
     --middle-border: rgb(244, 227, 76);
     --bad-color: rgb(159 49 51);
     --bad-border: rgb(244, 76, 78);
+    --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 /* unset some styles from the classic stylesheet */
@@ -108,13 +109,24 @@ div.related a:hover {
 }
 
 .switchers > div {
-    margin-right: 5px;
+    margin-inline-end: 5px;
 }
 
 div.related ul::after {
     content: '';
     clear: both;
     display: block;
+}
+
+div.related ul {
+    padding: 0;
+    padding-inline-start: 10px;
+}
+
+body[dir='rtl'] div.related ul li.right {
+    float: left;
+    margin-right: 0;
+    margin-left: 5px;
 }
 
 .inline-search,
@@ -142,6 +154,9 @@ span.pre {
 div.sphinxsidebar {
     display: flex;
     width: min(25vw, 350px);
+    flex-shrink: 0;
+    margin: 0;
+    order: 0;
     float: none;
     position: sticky;
     top: 0;
@@ -158,8 +173,14 @@ div.sphinxsidebar h4 {
     margin-top: 1.5em;
 }
 
-div.bodywrapper {
-    margin-left: min(25vw, 350px);
+div.document div.bodywrapper {
+    margin: 0;
+}
+
+div.documentwrapper {
+    flex: 1;
+    min-width: 0;
+    order: 1;
 }
 
 div.sphinxsidebarwrapper {
@@ -179,6 +200,11 @@ div.sphinxsidebarwrapper > ul > li > ul > li {
     margin-bottom: 0.4em;
 }
 
+div.sphinxsidebar ul ul {
+    margin-left: 0;
+    margin-inline-start: 20px;
+}
+
 div.sphinxsidebar a:hover {
     color: #0095c4;
 }
@@ -186,7 +212,7 @@ div.sphinxsidebar a:hover {
 form.inline-search input,
 div.sphinxsidebar input,
 div.related input {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    font-family: var(--sans-serif-font-stack);
     border: 1px solid #999999;
     font-size: smaller;
     border-radius: 3px;
@@ -206,16 +232,23 @@ div.sphinxsidebar input[type='text'] {
     border-left: none;
 }
 
+body[dir='rtl'] #sidebarbutton {
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    border-left: none;
+}
+
 #sidebarbutton:hover {
     background-color: #AAAAAA;
 }
 
 div.body {
-    padding: 0 0 0 1.2em;
+    padding: 0;
+    padding-inline-start: 1.2em;
 }
 
 div.body p, div.body dd, div.body li, div.body blockquote {
-    text-align: left;
+    text-align: start;
     line-height: 1.6;
 }
 div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
@@ -225,12 +258,55 @@ div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
 }
 div.body dl.field-list > dt {
     line-height: 1.6;
+    padding-left: 0;
+    padding-right: 0;
+    padding-inline-start: 0.5em;
+    padding-inline-end: 5px;
 }
 
 div.body hr {
     border: 0;
     background-color: #ccc;
     height: 1px;
+}
+
+/* Persian (fa) uses Vazirmatn, since the default system font stack renders
+   Arabic-script text poorly on many platforms. */
+@font-face {
+    font-family: "Vazirmatn NL";
+    src: url("fonts/Vazirmatn-NL-VF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:lang(fa) {
+    :is(div.body, div.sphinxsidebar, .menu-wrapper, div.footer),
+    :is(div.body, div.sphinxsidebar, .menu-wrapper) :is(h1, h2, h3, h4, h5, h6),
+    a,
+    input,
+    select,
+    textarea,
+    button:not(.copybutton),
+    label {
+        font-family: "Vazirmatn NL", var(--sans-serif-font-stack);
+    }
+}
+
+body[dir='rtl'] {
+    & pre,
+    & code,
+    & div.highlight,
+    & dl > dt span ~ em,
+    & .sig,
+    & .sig-param {
+        direction: ltr;
+        unicode-bidi: isolate;
+    }
+}
+
+body[dir='rtl'] .sig {
+    text-align: right;
 }
 
 div.body pre {
@@ -402,7 +478,7 @@ table.docutils th {
 
 table p,
 table li {
-    text-align: left !important;
+    text-align: start !important;
 }
 
 table.docutils th {
@@ -414,11 +490,37 @@ table.footnote td {
     border: 0 !important;
 }
 
+body[dir='rtl'] div#search-results,
+body[dir='rtl'] div#search-results ul.search li {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: isolate;
+}
+
+body[dir='rtl'] div#search-results ul.search li p {
+    text-align: right;
+}
+
+body[dir='rtl'] div.citation > span {
+    float: right;
+}
+
+body[dir='rtl'] aside.footnote > span {
+    float: right;
+    padding-right: 0;
+    padding-left: 0.5rem;
+}
+
+body[dir='rtl'] aside.footnote > p {
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
 div.footer {
     line-height: 150%;
-    text-align: right;
+    text-align: end;
     width: auto;
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 
 div.footer a {
@@ -476,18 +578,17 @@ div.footer a:hover {
     color: var(--threadsafety-atomic);
 }
 
-
 dl > dt span ~ em,
 .sig {
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 .toctree-wrapper ul {
-    padding-left: 20px;
+    padding-inline-start: 20px;
 }
 
 .theme-selector {
-    margin-left: .5em;
+    margin-inline-start: .5em;
 }
 
 div.genindex-jumpbox,
@@ -506,17 +607,17 @@ div.genindex-jumpbox a {
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0; /* physical right; always, even in RTL, since code is LTR */
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     font-size: 80%;
     padding-left: .5em;
     padding-right: .5em;
     height: 100%;
     max-height: min(100%, 2.4em);
-    border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0; /* physical — top-right corner, always */
     color: #000;
     background-color: #fff;
-    border: 1px solid #ac9; /* follows div.body pre */
+    border: 1px solid #ac9;
     display: none;
 }
 
@@ -564,9 +665,15 @@ div.genindex-jumpbox a {
         margin-inline-start: 1rem;
         margin-inline-end: 0;
     }
-    /* Remove sidebar and top related bar */
-    div.related, div.sphinxsidebar {
+    /* Remove sidebar and desktop-only related controls */
+    div.related li.right, div.related li.switchers, div.sphinxsidebar {
         display: none;
+    }
+    div.related .root-icon, div.related .root-icon + li {
+        display: none;
+    }
+    div.related {
+        line-height: 1.3;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
     html {
@@ -583,7 +690,7 @@ div.genindex-jumpbox a {
         width: 100%;
         position: fixed;
         top: 0;
-        left: 0;
+        inset-inline-start: 0;
         box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
         z-index: 1;
     }
@@ -605,7 +712,7 @@ div.genindex-jumpbox a {
         align-items: stretch;
     }
     .nav-logo {
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
         flex-shrink: 0;
         align-self: center;
     }
@@ -614,7 +721,7 @@ div.genindex-jumpbox a {
         width: 20px;
     }
     .version_switcher_placeholder {
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
     }
     .version_switcher_placeholder > select {
         height: 100%;
@@ -624,10 +731,11 @@ div.genindex-jumpbox a {
         flex: auto;
         border: 1px solid #a9a9a9;
         align-items: stretch;
+        position: relative;
     }
     .nav-content .search input[type=search] {
         border: 0;
-        padding-left: 24px;
+        padding-inline-start: 24px;
         width: 100%;
         flex: 1;
     }
@@ -635,14 +743,15 @@ div.genindex-jumpbox a {
         height: 100%;
         box-shadow: none;
         border: 0;
-        border-left: 1px solid #a9a9a9;
+        border-inline-start: 1px solid #a9a9a9;
         cursor: pointer;
-        margin-right: 0;
+        margin-inline-end: 0;
     }
     .nav-content .search svg {
         position: absolute;
-        align-self: center;
-        padding-left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-start: 4px;
     }
     .toggler__input {
         display: none;
@@ -674,7 +783,7 @@ div.genindex-jumpbox a {
         width: 100%;
         background: inherit;
         position: absolute;
-        left: 0;
+        inset-inline-start: 0;
         top: -8px;
     }
     .toggler__label > span::after {
@@ -695,7 +804,7 @@ div.genindex-jumpbox a {
     }
     .toggler__input:checked ~ .menu-wrapper {
         visibility: visible;
-        left: 0;
+        transform: translateX(0);
     }
 
     /* Sliding side menu */
@@ -703,8 +812,9 @@ div.genindex-jumpbox a {
         display: block;
         position: fixed;
         top: 0;
-        transition: left 400ms ease;
-        left: -310px;
+        inset-inline-start: 0;
+        transition: transform 400ms ease;
+        transform: translateX(calc(-100% - 10px));
         width: 300px;
         height: 100%;
         background-color: #eee;
@@ -712,12 +822,18 @@ div.genindex-jumpbox a {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         overflow-y: auto;
     }
+    body[dir='rtl'] .menu-wrapper {
+        transform: translateX(100%);
+    }
     .menu-wrapper.open {
         visibility: visible;
-        left: 0;
+        transform: translateX(0);
     }
     .menu {
-        padding: 40px 10px 30px 20px;
+        padding-block-start: 40px;
+        padding-inline-end: 10px;
+        padding-block-end: 30px;
+        padding-inline-start: 20px;
     }
     .menu-wrapper h3,
     .menu-wrapper h4 {
@@ -742,10 +858,10 @@ div.genindex-jumpbox a {
         list-style: none;
         line-height: 1.4;
         overflow-wrap: break-word;
-        padding-left: 0;
+        padding-inline-start: 0;
     }
     .menu ul ul {
-        margin-left: 20px;
+        margin-inline-start: 20px;
         list-style: square;
     }
     .menu ul li {
@@ -801,26 +917,26 @@ div.versionadded,
 div.versionchanged,
 div.deprecated,
 div.deprecated-removed {
-    border-left: 3px solid;
+    border-inline-start: 3px solid;
     padding: 0 1rem;
 }
 
 div.versionadded {
-    border-left-color: var(--versionadded-border);
+    border-inline-start-color: var(--versionadded-border);
 }
 
 div.versionchanged {
-    border-left-color: var(--versionchanged-border);
+    border-inline-start-color: var(--versionchanged-border);
 }
 
 div.deprecated,
 div.deprecated-removed,
 div.versionremoved {
-    border-left-color: var(--deprecated-border);
+    border-inline-start-color: var(--deprecated-border);
 }
 
 div.soft-deprecated {
-    border-left-color: var(--soft-deprecated-border);
+    border-inline-start-color: var(--soft-deprecated-border);
 }
 
 div.versionadded .versionmodified {
