@@ -1,6 +1,7 @@
 """Get good-looking output, thanks to rich."""
 
 import asyncio
+import os
 import random
 from typing import List
 
@@ -39,7 +40,7 @@ async def run_for_themes_with_progress(themes: List[Theme], async_function):
         tasks.append(async_function(theme=theme, progress=progress))
 
     with live_display:
-        await gather_with_limited_concurrency(8, *tasks)
+        await gather_with_limited_concurrency(os.cpu_count() or 1, *tasks)
 
 
 # --------------------------------------------------------------------------------------
