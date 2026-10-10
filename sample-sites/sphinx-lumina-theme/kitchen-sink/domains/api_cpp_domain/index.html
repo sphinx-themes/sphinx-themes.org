@@ -1,0 +1,905 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directives in the C++ domain &#8212; Lumina</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../_static/pygments_dark.css?v=5349f25f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/lumina.css?v=4cac56fd" />
+    <script defer="defer" src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script defer="defer" src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script defer="defer" src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="../../../_static/lumina.js?v=a42af810"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Directives in the JavaScript domain" href="../api_javascript_domain/" />
+    <link rel="prev" title="Directives in the C domain" href="../api_c_domain/" />
+
+    
+        <meta data-pagefind-filter="section[content]"
+              content="Kitchen Sink">
+    
+    
+        <meta data-pagefind-meta="breadcrumb[content]"
+              content="Kitchen Sink › API documentation">
+    
+    
+        
+            <link rel="icon"
+                  type="image/svg+xml"
+                  href="../../../_static/favicon.svg">
+        
+    
+    
+        
+        <meta name="description" content="The domain name is cpp. See https://www.sphinx-doc.org/en/master/usage/domains/cpp.html.">
+        
+        <meta name="theme-color" content="#10b981">
+        <meta property="og:title" content="Directives in the C++ domain">
+        <meta property="og:description" content="The domain name is cpp. See https://www.sphinx-doc.org/en/master/usage/domains/cpp.html.">
+        
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="Sphinx Themes Sample">
+        <meta property="og:locale" content="en_US">
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Directives in the C++ domain">
+        <meta name="twitter:description" content="The domain name is cpp. See https://www.sphinx-doc.org/en/master/usage/domains/cpp.html.">
+        
+        
+        
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Sink", "item": "../../"}, {"@type": "ListItem", "position": 2, "name": "API documentation", "item": "../../api/"}, {"@type": "ListItem", "position": 3, "name": "Directives in the C++ domain", "item": "/"}]}</script>
+        
+        
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Directives in the C++ domain", "author": {"@type": "Person", "name": "Pradyun Gedam"}, "publisher": {"@type": "Organization", "name": "Sphinx Themes Sample"}, "description": "The domain name is cpp. See https://www.sphinx-doc.org/en/master/usage/domains/cpp.html."}</script>
+        
+        
+    
+    <link rel="preload"
+          as="font"
+          type="font/woff2"
+          href="../../../_static/fonts/source-sans-3-regular-latin.woff2"
+          crossorigin>
+    
+    <script>
+(function() {
+  var stored = localStorage.getItem('lumina-theme');
+  
+  if (stored === 'dark' || stored === 'light') {
+    document.documentElement.setAttribute('data-theme', stored);
+    // Sphinx gates the dark highlight stylesheet on the OS color scheme only;
+    // a stored override must rewrite its media query before first paint.
+    var pygmentsDark = document.getElementById('pygments_dark_css');
+    if (pygmentsDark) {
+      pygmentsDark.media = stored === 'dark' ? 'screen' : 'not all';
+    }
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+  
+})();
+    </script>
+    
+    <meta name="lumina-search-backend" content="pagefind">
+    <meta name="lumina-base-url" content="../../../">
+    
+    
+    
+    
+        <script>document.documentElement.dataset.codeWrap = "true";</script>
+    
+    
+    
+    
+    
+
+
+  </head><body>
+
+
+
+
+    <a href="#lumina-content" class="lumina-skip-link">Skip to content</a>
+
+    <div id="lumina-header">
+
+        <header class="fixed top-0 left-0 right-0 z-50 border-b border-lumina-border bg-lumina-bg/80 backdrop-blur-sm">
+
+    
+
+    <div class="lumina-header-inner mx-auto flex h-14 max-w-[90rem] items-center justify-between px-4 lg:px-6">
+        
+        <div class="flex items-center gap-3">
+            <a href="../../../"
+               class="flex items-center gap-2 text-lumina-text no-underline hover:opacity-80 transition-opacity">
+                
+                    
+                    <svg class="lumina-logo h-7 w-7"
+                         viewBox="0 0 32 32"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true">
+                        <path d="M16 3L28 27H4L16 3Z" stroke="var(--lumina-accent)" stroke-width="2" fill="none" />
+                        <path class="lumina-logo-facet-l" d="M16 10L8 27H16" fill="var(--lumina-accent)" />
+                        <path class="lumina-logo-facet-r" d="M16 10L24 27H16" fill="var(--lumina-accent)" />
+                        <line x1="16" y1="3" x2="16" y2="10" stroke="var(--lumina-accent)" stroke-width="2" />
+                    </svg>
+                
+                
+                    <span class="font-semibold text-base">Sphinx Themes Sample</span>
+                
+            </a>
+
+            
+
+        </div>
+        
+        
+        
+        <div class="flex items-center gap-2">
+            
+            <button data-search-trigger
+                    class="flex items-center gap-2 rounded-lg border border-lumina-border bg-lumina-bg-secondary px-3 py-2 text-[0.8125rem] text-lumina-text-muted hover:border-lumina-accent transition-colors cursor-pointer lg:min-w-56"
+                    aria-label="Search documentation"
+                    aria-haspopup="dialog">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
+                <span class="hidden lg:inline flex-1 text-left">Search docs...</span>
+                <kbd data-search-shortcut
+                     class="hidden lg:inline rounded border border-lumina-border bg-lumina-bg px-1.5 py-0.5 text-[0.6875rem] font-[family-name:'JetBrains_Mono'] tracking-[0.02em]">⌘K</kbd>
+            </button>
+            
+            <button data-theme-toggle
+                    x-data="themeToggle()"
+                    @click="cycle()"
+                    class="relative flex h-9 w-9 items-center justify-center rounded-md text-lumina-text-muted hover:text-lumina-text hover:bg-lumina-bg-secondary transition-colors cursor-pointer"
+                    aria-label="Toggle color theme"
+                    title="Toggle color theme"
+                    :aria-label="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'"
+                    :title="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'">
+                
+                <svg x-show="mode === 'light'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 rotate-[-90deg] scale-0"
+                     x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                
+                <svg x-show="mode === 'dark'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 rotate-90 scale-0"
+                     x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
+                
+                <svg x-show="mode === 'auto'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 scale-0"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" />
+                </svg>
+            </button>
+            
+            
+            
+            
+            
+                <button data-sidebar-toggle
+                        class="rounded-md p-2 text-lumina-text-muted hover:text-lumina-text hover:bg-lumina-bg-secondary transition-colors lg:hidden cursor-pointer"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                        aria-controls="lumina-sidebar-drawer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg></button>
+            
+        </div>
+    </div>
+</header>
+
+    </div>
+    <div class="lumina-wrapper">
+        <aside id="lumina-sidebar">
+
+            <div x-data="sidebar()">
+    
+    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:flex">
+
+        
+
+
+        
+            <nav class="lumina-sidebar-nav"
+                 aria-label="Main navigation"
+                 x-data="sidebarNav()">
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+            </nav>
+        
+        
+            <div class="lumina-sidebar-footer">
+                Built with
+                <a href="https://github.com/r4sky0/sphinx-lumina-theme"
+                   target="_blank"
+                   rel="noopener">
+                    <svg class="lumina-sidebar-footer-icon"
+                         viewBox="0 0 32 32"
+                         fill="none"
+                         aria-hidden="true">
+                        <path d="M16 3L28 27H4L16 3Z" stroke="currentColor" stroke-width="2.5" fill="none" />
+                        <path d="M16 10L8 27H16" fill="currentColor" opacity="0.15" />
+                        <path d="M16 10L24 27H16" fill="currentColor" opacity="0.3" />
+                    </svg>
+                Lumina</a>
+                <span class="lumina-sidebar-footer-version">v2.9.4</span>
+            </div>
+        
+    </div>
+    
+    <template x-teleport="body">
+        <div>
+            
+            <div x-show="mobileOpen"
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"
+                 class="lumina-overlay-backdrop fixed inset-0 top-[var(--lumina-header-offset)] z-40 lg:hidden"
+                 @click="close()"></div>
+            
+            <div id="lumina-sidebar-drawer"
+                 x-show="mobileOpen"
+                 x-transition:enter="transition ease-out duration-250"
+                 x-transition:enter-start="-translate-x-full"
+                 x-transition:enter-end="translate-x-0"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="translate-x-0"
+                 x-transition:leave-end="-translate-x-full"
+                 @keydown.escape.window="close()"
+                 class="fixed inset-y-0 top-[var(--lumina-header-offset)] left-0 z-50 w-[min(280px,85vw)] overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:hidden">
+
+                
+                
+
+                    
+
+
+                
+
+                
+                
+                
+                    <nav class="lumina-sidebar-nav"
+                         aria-label="Main navigation"
+                         x-data="sidebarNav()">
+                        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api/">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+                    </nav>
+                
+                
+                    <div class="lumina-sidebar-footer">
+                        <a href="https://github.com/r4sky0/sphinx-lumina-theme"
+                           target="_blank"
+                           rel="noopener">Lumina</a>
+                        <span class="lumina-sidebar-footer-version">v2.9.4</span>
+                    </div>
+                
+            </div>
+        </div>
+    </template>
+</div>
+
+        </aside>
+        <main id="lumina-content" data-pagefind-body>
+            <div class="lumina-content-toolbar" data-pagefind-ignore>
+                
+                    <div class="min-w-0 flex-1">
+
+                        <nav class="flex items-center gap-2 overflow-x-auto text-sm text-lumina-text-muted"
+     style="scrollbar-width:none"
+     aria-label="Breadcrumb">
+    
+    
+        
+            
+            <a href="../../"
+               class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">Kitchen Sink</a>
+        
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            <a href="../../api/"
+               class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">API documentation</a>
+        
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+    <span class="whitespace-nowrap text-lumina-text" aria-current="page">Directives in the C++ domain</span>
+</nav>
+
+                    </div>
+                
+
+                <details class="lumina-page-actions"
+         x-data
+         @click.outside="$el.open = false"
+         @keydown.escape.stop="$el.open = false; $el.querySelector('summary').focus()">
+    <summary aria-label="Page actions" title="Page actions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg></summary>
+    <div class="lumina-page-action-list">
+        <button x-data="copyPage()"
+                @click="copy()"
+                type="button"
+                aria-label="Copy page as Markdown">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+            <span aria-live="polite" x-text="copied ? 'Copied!' : 'Copy as Markdown'">Copy as Markdown</span>
+        </button>
+        
+    </div>
+</details>
+
+            </div>
+            
+                <details class="lumina-mobile-outline" data-pagefind-ignore>
+                    <summary>On this page <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary>
+                    <nav aria-label="Page outline">
+                        <ul>
+<li><a class="reference internal" href="#">Directives in the C++ domain</a><ul>
+<li><a class="reference internal" href="#_CPPv47MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N10OuterScope8MyClass2E"><code class="docutils literal notranslate"><span class="pre">MyClass2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0_NSt6size_tEENSt5arrayE"><code class="docutils literal notranslate"><span class="pre">array</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4IENSt6array2IbXL256EEEE"><code class="docutils literal notranslate"><span class="pre">array2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0ENSt6array3I1TXL42EEEE"><code class="docutils literal notranslate"><span class="pre">array3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv48myMethodiNSt6stringE"><code class="docutils literal notranslate"><span class="pre">myMethod()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv49myMethod2id"><code class="docutils literal notranslate"><span class="pre">myMethod2()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK7MyClassixENSt6size_tE"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NKcvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv421my_constexpr_functionAL2E_RNSt6stringE"><code class="docutils literal notranslate"><span class="pre">my_constexpr_function()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass8MyClass4ERK7MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass4()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E20my_function_templatevRR1U"><code class="docutils literal notranslate"><span class="pre">my_function_template()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4IE35my_function_template_specialisationvi"><code class="docutils literal notranslate"><span class="pre">my_function_template_specialisation()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass8myMemberE"><code class="docutils literal notranslate"><span class="pre">myMember</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass13myOtherMemberE"><code class="docutils literal notranslate"><span class="pre">myOtherMember</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv418my_member_variable"><code class="docutils literal notranslate"><span class="pre">my_member_variable</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E12my_constexpr"><code class="docutils literal notranslate"><span class="pre">my_constexpr</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv410MyListType"><code class="docutils literal notranslate"><span class="pre">MyListType</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N15MyContainerType14const_iteratorE"><code class="docutils literal notranslate"><span class="pre">const_iterator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv411MyTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTypeAlias</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E20MyTemplatedTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTemplatedTypeAlias</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv46MyEnum"><code class="docutils literal notranslate"><span class="pre">MyEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv414MySpecificEnum"><code class="docutils literal notranslate"><span class="pre">MySpecificEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv412MyScopedEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv422MyScopedVisibilityEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedVisibilityEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6MyEnum12myEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myEnumerator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6MyEnum17myOtherEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myOtherEnumerator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv48my_union"><code class="docutils literal notranslate"><span class="pre">my_union</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0ENSt8IteratorE"><code class="docutils literal notranslate"><span class="pre">Iterator</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+                    </nav>
+                </details>
+            
+            <article class="lumina-article" x-data="headerLinks()">
+
+                
+
+    <section id="directives-in-the-c-domain">
+<h1 id="lumina-search-directives-in-the-c-domain">Directives in the C++ domain<a class="headerlink" href="#directives-in-the-c-domain" title="Link to this heading">¶</a></h1>
+<p>The domain name is <code class="docutils literal notranslate"><span class="pre">cpp</span></code>. See <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html">https://www.sphinx-doc.org/en/master/usage/domains/cpp.html</a>.</p>
+<p>The following directives are available. All declarations can start with a
+visibility statement, <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, or <code class="docutils literal notranslate"><span class="pre">protected</span></code>.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47MyClass">
+<span id="_CPPv37MyClass"></span><span id="_CPPv27MyClass"></span><span id="MyClass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyClass</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">MyBase</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">MyOtherBase</span></span><a class="headerlink" href="#_CPPv47MyClass" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10OuterScope8MyClass2E">
+<span id="_CPPv3N10OuterScope8MyClass2E"></span><span id="_CPPv2N10OuterScope8MyClass2E"></span><span id="OuterScope::MyClass2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">OuterScope</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MyClass2</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">MyBase</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">MyOtherBase</span></span><a class="headerlink" href="#_CPPv4N10OuterScope8MyClass2E" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0_NSt6size_tEENSt5arrayE">
+<span id="_CPPv3I0_NSt6size_tEENSt5arrayE"></span><span id="_CPPv2I0_NSt6size_tEENSt5arrayE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array</span></span></span><a class="headerlink" href="#_CPPv4I0_NSt6size_tEENSt5arrayE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4IENSt6array2IbXL256EEEE">
+<span id="_CPPv3IENSt6array2IbXL256EEEE"></span><span id="_CPPv2IENSt6array2IbX256EEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array2</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">256</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4IENSt6array2IbXL256EEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENSt6array3I1TXL42EEEE">
+<span id="_CPPv3I0ENSt6array3I1TXL42EEEE"></span><span id="_CPPv2I0ENSt6array3I1TX42EEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">array3</span></span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENSt6array3I1TXL42EEEE" title="std::array3&lt;T, 42&gt;::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0ENSt6array3I1TXL42EEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::</span></code> directive, showing a class or struct.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48myMethodiNSt6stringE">
+<span id="_CPPv38myMethodiNSt6stringE"></span><span id="_CPPv28myMethodiNSt6stringE"></span><span id="myMethod__i.ss"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myMethod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48myMethodiNSt6stringE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function or member function with parameters and types.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49myMethod2id">
+<span id="_CPPv39myMethod2id"></span><span id="_CPPv29myMethod2id"></span><span id="myMethod2__i.double"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">myMethod2</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span>, <span class="kt"><span class="pre">double</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49myMethod2id" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function or member function with unnamed parameters.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7MyClassixENSt6size_tE">
+<span id="_CPPv3NK7MyClassixENSt6size_tE"></span><span id="_CPPv2NK7MyClassixENSt6size_tE"></span><span id="MyClass::subscript-operator__std::sC"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7MyClassixENSt6size_tE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing an overload for the indexing operator.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKcvbEv">
+<span id="_CPPv3NKcvbEv"></span><span id="_CPPv2NKcvbEv"></span><span id="castto-b-operatorC"></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKcvbEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a casting operator.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421my_constexpr_functionAL2E_RNSt6stringE">
+<span id="_CPPv321my_constexpr_functionAL2E_RNSt6stringE"></span><span id="_CPPv221my_constexpr_functionA2_RNSt6stringE"></span><span id="my_constexpr_function__ssRACE"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_constexpr_function</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bar</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv421my_constexpr_functionAL2E_RNSt6stringE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> function.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass8MyClass4ERK7MyClass">
+<span id="_CPPv3N7MyClass8MyClass4ERK7MyClass"></span><span id="_CPPv2N7MyClass8MyClass4ERK7MyClass"></span><span id="MyClass::MyClass4__MyClassCR"></span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MyClass4</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N7MyClass8MyClass4ERK7MyClass" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a copy constructor with default implementation.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0E20my_function_templatevRR1U">
+<span id="_CPPv3I0E20my_function_templateRR1U"></span><span id="_CPPv2I0E20my_function_templateRR1U"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_function_template</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0E20my_function_templatevRR1U" title="my_function_template::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0E20my_function_templatevRR1U" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function template.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IE35my_function_template_specialisationvi">
+<span id="_CPPv3IE35my_function_template_specialisationi"></span><span id="_CPPv2IE35my_function_template_specialisationi"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_function_template_specialisation</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IE35my_function_template_specialisationvi" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:function::</span></code> directive, showing a function template specialisation.</p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass8myMemberE">
+<span id="_CPPv3N7MyClass8myMemberE"></span><span id="_CPPv2N7MyClass8myMemberE"></span><span id="MyClass::myMember__ss"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myMember</span></span></span><a class="headerlink" href="#_CPPv4N7MyClass8myMemberE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a variable or member variable.</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MyClass13myOtherMemberE">
+<span id="_CPPv3N7MyClass13myOtherMemberE"></span><span id="_CPPv2N7MyClass13myOtherMemberE"></span><span id="MyClass::myOtherMember__ssAA"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv47MyClass" title="MyClass"><span class="n"><span class="pre">MyClass</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myOtherMember</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N7MyClass13myOtherMemberE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:var::</span></code> directive, showing a variable.</p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv418my_member_variable">
+<span id="_CPPv318my_member_variable"></span><span id="_CPPv218my_member_variable"></span><span id="my_member_variable__i"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_member_variable</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#_CPPv418my_member_variable" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a member variable.</p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt class="sig sig-object cpp" id="_CPPv4I0E12my_constexpr">
+<span id="_CPPv3I0E12my_constexpr"></span><span id="_CPPv2I0E12my_constexpr"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E12my_constexpr" title="my_constexpr::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_constexpr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E12my_constexpr" title="my_constexpr::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">3.1415926535897932385</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4I0E12my_constexpr" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:member::</span></code> directive, showing a variable template.</p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410MyListType">
+<span id="_CPPv310MyListType"></span><span id="_CPPv210MyListType"></span><span id="MyListType"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyListType</span></span></span><a class="headerlink" href="#_CPPv410MyListType" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a <code class="docutils literal notranslate"><span class="pre">typedef</span></code>-like declaration of a type.</p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N15MyContainerType14const_iteratorE">
+<span id="_CPPv3N15MyContainerType14const_iteratorE"></span><span id="_CPPv2N15MyContainerType14const_iteratorE"></span><span id="MyContainerType::const_iterator"></span><span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">MyContainerType</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">const_iterator</span></span></span><a class="headerlink" href="#_CPPv4N15MyContainerType14const_iteratorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a declaration of a type alias with unspecified type.</p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv411MyTypeAlias">
+<span id="_CPPv311MyTypeAlias"></span><span id="_CPPv211MyTypeAlias"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyTypeAlias</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv411MyTypeAlias" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a declaration of a type alias.</p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0E20MyTemplatedTypeAlias">
+<span id="_CPPv3I0E20MyTemplatedTypeAlias"></span><span id="_CPPv2I0E20MyTemplatedTypeAlias"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyTemplatedTypeAlias</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0E20MyTemplatedTypeAlias" title="MyTemplatedTypeAlias::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0E20MyTemplatedTypeAlias" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:type::</span></code> directive, showing a templated type alias.</p>
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv46MyEnum">
+<span id="_CPPv36MyEnum"></span><span id="_CPPv26MyEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyEnum</span></span></span><a class="headerlink" href="#_CPPv46MyEnum" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum::</span></code> directive, showing an unscoped enum.</p>
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv414MySpecificEnum">
+<span id="_CPPv314MySpecificEnum"></span><span id="_CPPv214MySpecificEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MySpecificEnum</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><a class="headerlink" href="#_CPPv414MySpecificEnum" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum::</span></code> directive, showing an unscoped enum with specified underlying type.</p>
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv412MyScopedEnum">
+<span id="_CPPv312MyScopedEnum"></span><span id="_CPPv212MyScopedEnum"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyScopedEnum</span></span></span><a class="headerlink" href="#_CPPv412MyScopedEnum" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum-class::</span></code> directive, showing a scoped enum.</p>
+</dd></dl>
+
+<dl class="cpp enum-struct">
+<dt class="sig sig-object cpp" id="_CPPv422MyScopedVisibilityEnum">
+<span id="_CPPv322MyScopedVisibilityEnum"></span><span id="_CPPv222MyScopedVisibilityEnum"></span><span class="k"><span class="pre">protected</span></span><span class="w"> </span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyScopedVisibilityEnum</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">underlying_type</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv414MySpecificEnum" title="MySpecificEnum"><span class="n"><span class="pre">MySpecificEnum</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><a class="headerlink" href="#_CPPv422MyScopedVisibilityEnum" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enum-struct::</span></code> directive, showing a scoped enum with non-default visibility, and with a specified underlying type.</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6MyEnum12myEnumeratorE">
+<span id="_CPPv3N6MyEnum12myEnumeratorE"></span><span id="_CPPv2N6MyEnum12myEnumeratorE"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv46MyEnum" title="MyEnum"><span class="n"><span class="pre">MyEnum</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myEnumerator</span></span></span><a class="headerlink" href="#_CPPv4N6MyEnum12myEnumeratorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enumerator::</span></code> directive, showing an enumerator.</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6MyEnum17myOtherEnumeratorE">
+<span id="_CPPv3N6MyEnum17myOtherEnumeratorE"></span><span id="_CPPv2N6MyEnum17myOtherEnumeratorE"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv46MyEnum" title="MyEnum"><span class="n"><span class="pre">MyEnum</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">myOtherEnumerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#_CPPv4N6MyEnum17myOtherEnumeratorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:enumerator::</span></code> directive, showing a enumerator with a value.</p>
+</dd></dl>
+
+<dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv48my_union">
+<span id="_CPPv38my_union"></span><span id="_CPPv28my_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">my_union</span></span></span><a class="headerlink" href="#_CPPv48my_union" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:union::</span></code> directive, showing a union.</p>
+</dd></dl>
+
+<dl class="cpp concept">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENSt8IteratorE">
+<span id="_CPPv3I0ENSt8IteratorE"></span><span id="_CPPv2I0ENSt8IteratorE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">It</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Iterator</span></span></span><a class="headerlink" href="#_CPPv4I0ENSt8IteratorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:concept::</span></code> directive, showing a proxy to an element of a notional sequence.</p>
+<ul class="simple">
+<li><p><span class="cpp-expr sig sig-inline cpp"><span class="o">*</span><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v9.1.1)"><span class="n">r</span></a></span>, when <span class="cpp-expr sig sig-inline cpp"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v9.1.1)"><span class="n">r</span></a></span> is dereferenceable.</p></li>
+<li><p><span class="cpp-expr sig sig-inline cpp"><span class="o">++</span><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v9.1.1)"><span class="n">r</span></a></span>, with return type <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="#_CPPv4I0ENSt8IteratorE" title="std::Iterator::It"><span class="n">It</span></a><span class="p">&amp;</span></span>, when
+<span class="cpp-expr sig sig-inline cpp"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/domains/cpp.html#_CPPv4NSt8Iterator1rE" title="(in Sphinx v9.1.1)"><span class="n">r</span></a></span> is incrementable.</p></li>
+</ul>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="kt"><span class="pre">bool</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv48myMethodiNSt6stringE" title="myMethod"><span class="n"><span class="pre">myMethod</span></span></a><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">)</span></span><br /></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:alias::</span></code> directive, showing an alias declaration.</p>
+</dd></dl>
+
+</section>
+
+
+
+
+            </article>
+            
+
+                <div data-pagefind-ignore>
+
+                    <footer class="mt-10 border-t border-lumina-border pt-6">
+    
+    
+        <nav class="flex justify-between gap-4 mb-8" aria-label="Page navigation">
+            
+                <a href="../api_c_domain/"
+                   class="group flex flex-col items-start gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
+                    <span class="text-xs text-lumina-text-muted">Previous</span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">&larr; Directives in the C domain</span>
+                </a>
+            
+            
+                <a href="../api_javascript_domain/"
+                   class="group flex flex-col items-end gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
+                    <span class="text-xs text-lumina-text-muted">Next</span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">Directives in the JavaScript domain &rarr;</span>
+                </a>
+            
+        </nav>
+    
+    
+    
+    
+    
+</footer>
+
+                </div>
+
+
+            
+        </main>
+        
+            <aside id="lumina-toc">
+
+                
+    <div class="lumina-toc-container sticky top-[var(--lumina-header-offset)] hidden h-[calc(100vh-var(--lumina-header-offset))] w-[220px] shrink-0 py-6 pr-4 xl:block">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-lumina-text-muted">On this page</p>
+        <div class="lumina-toc-scroll">
+            
+            <nav class="lumina-toc-nav"
+                 aria-label="Table of contents"
+                 x-data="scrollspy()">
+                <ul>
+<li><a class="reference internal" href="#">Directives in the C++ domain</a><ul>
+<li><a class="reference internal" href="#_CPPv47MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N10OuterScope8MyClass2E"><code class="docutils literal notranslate"><span class="pre">MyClass2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0_NSt6size_tEENSt5arrayE"><code class="docutils literal notranslate"><span class="pre">array</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4IENSt6array2IbXL256EEEE"><code class="docutils literal notranslate"><span class="pre">array2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0ENSt6array3I1TXL42EEEE"><code class="docutils literal notranslate"><span class="pre">array3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv48myMethodiNSt6stringE"><code class="docutils literal notranslate"><span class="pre">myMethod()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv49myMethod2id"><code class="docutils literal notranslate"><span class="pre">myMethod2()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK7MyClassixENSt6size_tE"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NKcvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv421my_constexpr_functionAL2E_RNSt6stringE"><code class="docutils literal notranslate"><span class="pre">my_constexpr_function()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass8MyClass4ERK7MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass4()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E20my_function_templatevRR1U"><code class="docutils literal notranslate"><span class="pre">my_function_template()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4IE35my_function_template_specialisationvi"><code class="docutils literal notranslate"><span class="pre">my_function_template_specialisation()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass8myMemberE"><code class="docutils literal notranslate"><span class="pre">myMember</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7MyClass13myOtherMemberE"><code class="docutils literal notranslate"><span class="pre">myOtherMember</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv418my_member_variable"><code class="docutils literal notranslate"><span class="pre">my_member_variable</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E12my_constexpr"><code class="docutils literal notranslate"><span class="pre">my_constexpr</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv410MyListType"><code class="docutils literal notranslate"><span class="pre">MyListType</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N15MyContainerType14const_iteratorE"><code class="docutils literal notranslate"><span class="pre">const_iterator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv411MyTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTypeAlias</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0E20MyTemplatedTypeAlias"><code class="docutils literal notranslate"><span class="pre">MyTemplatedTypeAlias</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv46MyEnum"><code class="docutils literal notranslate"><span class="pre">MyEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv414MySpecificEnum"><code class="docutils literal notranslate"><span class="pre">MySpecificEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv412MyScopedEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv422MyScopedVisibilityEnum"><code class="docutils literal notranslate"><span class="pre">MyScopedVisibilityEnum</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6MyEnum12myEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myEnumerator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6MyEnum17myOtherEnumeratorE"><code class="docutils literal notranslate"><span class="pre">myOtherEnumerator</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv48my_union"><code class="docutils literal notranslate"><span class="pre">my_union</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0ENSt8IteratorE"><code class="docutils literal notranslate"><span class="pre">Iterator</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+
+
+            </aside>
+        
+    </div>
+
+    
+        <button id="lumina-back-to-top"
+                x-data="backToTop()"
+                x-show="visible"
+                x-cloak
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-2"
+                @click="scrollToTop()"
+                class="lumina-back-to-top z-40 hover:border-lumina-accent transition-colors"
+                aria-label="Back to top"
+                type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6" /></svg></button>
+    
+
+    <dialog id="lumina-search-modal"
+        x-data="searchModal()"
+        @cancel.prevent="close()"
+        @keydown.escape.stop.prevent="close()"
+        @keydown.meta.k.window.prevent="toggle()"
+        @keydown.ctrl.k.window.prevent="toggle()"
+        @click.self="close()"
+        class="lumina-overlay-backdrop fixed inset-0 z-[100] m-0 h-full w-full max-h-none max-w-none border-0 p-0"
+        aria-modal="true"
+        aria-label="Search documentation">
+    
+    <div class="relative mx-auto mt-[5vh] flex max-h-[90dvh] w-[calc(100%-2rem)] max-w-xl flex-col sm:mt-[12vh] sm:max-h-[80dvh] cursor-auto rounded-xl border border-lumina-border bg-lumina-bg shadow-2xl">
+        
+        <div class="flex items-center border-b border-lumina-border px-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-lumina-text-muted" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
+            <input type="search"
+                   x-ref="searchInput"
+                   x-model="query"
+                   @input.debounce.150ms="search()"
+                   @keydown.arrow-down.prevent="moveDown()"
+                   @keydown.arrow-up.prevent="moveUp()"
+                   @keydown.enter.prevent="goToSelected()"
+                   class="w-full border-0 bg-transparent px-3 py-4 text-lumina-text placeholder-lumina-text-muted outline-none"
+                   aria-label="Search documentation"
+                   placeholder="Search docs..."
+                   autocomplete="off">
+            <kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1.5 py-0.5 text-xs text-lumina-text-muted">esc</kbd>
+        </div>
+        <template x-if="loaded && scopes.length > 1 && pagefind">
+            <div class="flex shrink-0 items-center gap-3 border-b border-lumina-border px-4 py-2">
+                <label for="lumina-search-scope"
+                       class="shrink-0 text-xs text-lumina-text-muted">Search in</label>
+                <select id="lumina-search-scope"
+                        x-model="scope"
+                        @change="search()"
+                        class="min-w-0 flex-1 rounded border border-lumina-border bg-lumina-bg px-2 py-2 text-sm text-lumina-text focus-visible:outline-2 focus-visible:outline-lumina-accent">
+                    <option value="">All docs</option>
+                    <template x-for="name in scopes" :key="name">
+                        <option :value="name" x-text="name"></option>
+                    </template>
+                </select>
+            </div>
+        </template>
+        
+        <div class="min-h-0 overflow-y-auto p-2" :aria-busy="searching">
+            <template x-if="!loaded || searching">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">
+                    <span x-text="loaded ? 'Searching…' : 'Loading search index…'"></span>
+                </p>
+            </template>
+            <template x-if="loaded && !searching && !error && query.trim().length > 0 && results.length === 0">
+                <div class="px-3 py-8 text-center text-sm text-lumina-text-muted">
+                    <p x-text="scope ? 'No results in ' + scope + '.' : 'No results found.'"></p>
+                    <template x-if="scope">
+                        <button type="button"
+                                @click="searchAll()"
+                                class="mt-2 rounded px-3 py-2 text-lumina-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-lumina-accent">
+                            Search all docs
+                        </button>
+                    </template>
+                </div>
+            </template>
+            <template x-if="error">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted"
+                   x-text="error"></p>
+            </template>
+            <template x-for="(result, index) in results" :key="result.url">
+                <a :href="result.url"
+                   data-search-result
+                   class="flex flex-col gap-1 rounded-lg px-3 py-2.5 no-underline transition-colors focus-visible:outline-2 focus-visible:outline-lumina-accent"
+                   :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ml-4 border-l border-lumina-border' : 'mt-1']"
+                   @mouseenter="selectedIndex = index"
+                   @focus="selectedIndex = index">
+                    <template x-if="result.breadcrumb">
+                        <span class="truncate text-xs text-lumina-text-muted"
+                              x-text="result.breadcrumb"></span>
+                    </template>
+                    <span class="break-words text-sm"
+                          :class="result.isHeading ? '' : 'font-semibold'"
+                          x-text="result.title"></span>
+                    <span class="line-clamp-2 text-xs text-lumina-text-muted"
+                          x-html="result.excerpt"></span>
+                </a>
+            </template>
+            <template x-if="loaded && !error && query.trim().length === 0">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">Type to search...</p>
+            </template>
+        </div>
+        
+        <div class="sr-only"
+             role="status"
+             x-text="searching ? 'Searching…' : loaded && query.trim().length > 0 ? results.length + ' links' + (scope ? ' in ' + scope : ' across all docs') : ''">
+        </div>
+        
+        <div class="flex shrink-0 items-center gap-3 border-t border-lumina-border px-4 py-2.5 text-xs text-lumina-text-muted">
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&uarr;&darr;</kbd> Navigate</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&crarr;</kbd> Open</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">esc</kbd> Close</span>
+        </div>
+    </div>
+</dialog>
+
+    
+
+
+
+
+  </body>
+</html>

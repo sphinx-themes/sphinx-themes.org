@@ -1,0 +1,949 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generic items &#8212; Lumina</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=5349f25f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/lumina.css?v=4cac56fd" />
+    <script defer="defer" src="../../_static/documentation_options.js?v=187304be"></script>
+    <script defer="defer" src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script defer="defer" src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script defer="defer" src="../../_static/lumina.js?v=a42af810"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Images &amp; Figures" href="../images/" />
+    <link rel="prev" title="Blocks" href="../blocks/" />
+
+    
+        <meta data-pagefind-filter="section[content]"
+              content="Kitchen Sink">
+    
+    
+        <meta data-pagefind-meta="breadcrumb[content]"
+              content="Kitchen Sink">
+    
+    
+        
+            <link rel="icon"
+                  type="image/svg+xml"
+                  href="../../_static/favicon.svg">
+        
+    
+    
+        
+        <meta name="description" content="These are the things that don’t quite fit into other groupings.">
+        
+        <meta name="theme-color" content="#10b981">
+        <meta property="og:title" content="Generic items">
+        <meta property="og:description" content="These are the things that don’t quite fit into other groupings.">
+        
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="Sphinx Themes Sample">
+        <meta property="og:locale" content="en_US">
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Generic items">
+        <meta name="twitter:description" content="These are the things that don’t quite fit into other groupings.">
+        
+        
+        
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Sink", "item": "../"}, {"@type": "ListItem", "position": 2, "name": "Generic items", "item": "/"}]}</script>
+        
+        
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Generic items", "author": {"@type": "Person", "name": "Pradyun Gedam"}, "publisher": {"@type": "Organization", "name": "Sphinx Themes Sample"}, "description": "These are the things that don’t quite fit into other groupings."}</script>
+        
+        
+    
+    <link rel="preload"
+          as="font"
+          type="font/woff2"
+          href="../../_static/fonts/source-sans-3-regular-latin.woff2"
+          crossorigin>
+    
+    <script>
+(function() {
+  var stored = localStorage.getItem('lumina-theme');
+  
+  if (stored === 'dark' || stored === 'light') {
+    document.documentElement.setAttribute('data-theme', stored);
+    // Sphinx gates the dark highlight stylesheet on the OS color scheme only;
+    // a stored override must rewrite its media query before first paint.
+    var pygmentsDark = document.getElementById('pygments_dark_css');
+    if (pygmentsDark) {
+      pygmentsDark.media = stored === 'dark' ? 'screen' : 'not all';
+    }
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+  
+})();
+    </script>
+    
+    <meta name="lumina-search-backend" content="pagefind">
+    <meta name="lumina-base-url" content="../../">
+    
+    
+    
+    
+        <script>document.documentElement.dataset.codeWrap = "true";</script>
+    
+    
+    
+    
+    
+
+
+  </head><body>
+
+
+
+
+    <a href="#lumina-content" class="lumina-skip-link">Skip to content</a>
+
+    <div id="lumina-header">
+
+        <header class="fixed top-0 left-0 right-0 z-50 border-b border-lumina-border bg-lumina-bg/80 backdrop-blur-sm">
+
+    
+
+    <div class="lumina-header-inner mx-auto flex h-14 max-w-[90rem] items-center justify-between px-4 lg:px-6">
+        
+        <div class="flex items-center gap-3">
+            <a href="../../"
+               class="flex items-center gap-2 text-lumina-text no-underline hover:opacity-80 transition-opacity">
+                
+                    
+                    <svg class="lumina-logo h-7 w-7"
+                         viewBox="0 0 32 32"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true">
+                        <path d="M16 3L28 27H4L16 3Z" stroke="var(--lumina-accent)" stroke-width="2" fill="none" />
+                        <path class="lumina-logo-facet-l" d="M16 10L8 27H16" fill="var(--lumina-accent)" />
+                        <path class="lumina-logo-facet-r" d="M16 10L24 27H16" fill="var(--lumina-accent)" />
+                        <line x1="16" y1="3" x2="16" y2="10" stroke="var(--lumina-accent)" stroke-width="2" />
+                    </svg>
+                
+                
+                    <span class="font-semibold text-base">Sphinx Themes Sample</span>
+                
+            </a>
+
+            
+
+        </div>
+        
+        
+        
+        <div class="flex items-center gap-2">
+            
+            <button data-search-trigger
+                    class="flex items-center gap-2 rounded-lg border border-lumina-border bg-lumina-bg-secondary px-3 py-2 text-[0.8125rem] text-lumina-text-muted hover:border-lumina-accent transition-colors cursor-pointer lg:min-w-56"
+                    aria-label="Search documentation"
+                    aria-haspopup="dialog">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
+                <span class="hidden lg:inline flex-1 text-left">Search docs...</span>
+                <kbd data-search-shortcut
+                     class="hidden lg:inline rounded border border-lumina-border bg-lumina-bg px-1.5 py-0.5 text-[0.6875rem] font-[family-name:'JetBrains_Mono'] tracking-[0.02em]">⌘K</kbd>
+            </button>
+            
+            <button data-theme-toggle
+                    x-data="themeToggle()"
+                    @click="cycle()"
+                    class="relative flex h-9 w-9 items-center justify-center rounded-md text-lumina-text-muted hover:text-lumina-text hover:bg-lumina-bg-secondary transition-colors cursor-pointer"
+                    aria-label="Toggle color theme"
+                    title="Toggle color theme"
+                    :aria-label="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'"
+                    :title="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'">
+                
+                <svg x-show="mode === 'light'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 rotate-[-90deg] scale-0"
+                     x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                
+                <svg x-show="mode === 'dark'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 rotate-90 scale-0"
+                     x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
+                
+                <svg x-show="mode === 'auto'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 scale-0"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-150"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0 scale-0"
+                     class="h-5 w-5 absolute"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" />
+                </svg>
+            </button>
+            
+            
+            
+            
+            
+                <button data-sidebar-toggle
+                        class="rounded-md p-2 text-lumina-text-muted hover:text-lumina-text hover:bg-lumina-bg-secondary transition-colors lg:hidden cursor-pointer"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                        aria-controls="lumina-sidebar-drawer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg></button>
+            
+        </div>
+    </div>
+</header>
+
+    </div>
+    <div class="lumina-wrapper">
+        <aside id="lumina-sidebar">
+
+            <div x-data="sidebar()">
+    
+    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:flex">
+
+        
+
+
+        
+            <nav class="lumina-sidebar-nav"
+                 aria-label="Main navigation"
+                 x-data="sidebarNav()">
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+            </nav>
+        
+        
+            <div class="lumina-sidebar-footer">
+                Built with
+                <a href="https://github.com/r4sky0/sphinx-lumina-theme"
+                   target="_blank"
+                   rel="noopener">
+                    <svg class="lumina-sidebar-footer-icon"
+                         viewBox="0 0 32 32"
+                         fill="none"
+                         aria-hidden="true">
+                        <path d="M16 3L28 27H4L16 3Z" stroke="currentColor" stroke-width="2.5" fill="none" />
+                        <path d="M16 10L8 27H16" fill="currentColor" opacity="0.15" />
+                        <path d="M16 10L24 27H16" fill="currentColor" opacity="0.3" />
+                    </svg>
+                Lumina</a>
+                <span class="lumina-sidebar-footer-version">v2.9.4</span>
+            </div>
+        
+    </div>
+    
+    <template x-teleport="body">
+        <div>
+            
+            <div x-show="mobileOpen"
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"
+                 class="lumina-overlay-backdrop fixed inset-0 top-[var(--lumina-header-offset)] z-40 lg:hidden"
+                 @click="close()"></div>
+            
+            <div id="lumina-sidebar-drawer"
+                 x-show="mobileOpen"
+                 x-transition:enter="transition ease-out duration-250"
+                 x-transition:enter-start="-translate-x-full"
+                 x-transition:enter-end="translate-x-0"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="translate-x-0"
+                 x-transition:leave-end="-translate-x-full"
+                 @keydown.escape.window="close()"
+                 class="fixed inset-y-0 top-[var(--lumina-header-offset)] left-0 z-50 w-[min(280px,85vw)] overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:hidden">
+
+                
+                
+
+                    
+
+
+                
+
+                
+                
+                
+                    <nav class="lumina-sidebar-nav"
+                         aria-label="Main navigation"
+                         x-data="sidebarNav()">
+                        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_c_domain/">Directives in the C domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_cpp_domain/">Directives in the C++ domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_javascript_domain/">Directives in the JavaScript domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_python_domain/">Directives in the Python domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domains/api_restructuredtext_domain/">Directives in the reStructuredText domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+                    </nav>
+                
+                
+                    <div class="lumina-sidebar-footer">
+                        <a href="https://github.com/r4sky0/sphinx-lumina-theme"
+                           target="_blank"
+                           rel="noopener">Lumina</a>
+                        <span class="lumina-sidebar-footer-version">v2.9.4</span>
+                    </div>
+                
+            </div>
+        </div>
+    </template>
+</div>
+
+        </aside>
+        <main id="lumina-content" data-pagefind-body>
+            <div class="lumina-content-toolbar" data-pagefind-ignore>
+                
+                    <div class="min-w-0 flex-1">
+
+                        <nav class="flex items-center gap-2 overflow-x-auto text-sm text-lumina-text-muted"
+     style="scrollbar-width:none"
+     aria-label="Breadcrumb">
+    
+    
+        
+            
+            <a href="../"
+               class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">Kitchen Sink</a>
+        
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+    <span class="whitespace-nowrap text-lumina-text" aria-current="page">Generic items</span>
+</nav>
+
+                    </div>
+                
+
+                <details class="lumina-page-actions"
+         x-data
+         @click.outside="$el.open = false"
+         @keydown.escape.stop="$el.open = false; $el.querySelector('summary').focus()">
+    <summary aria-label="Page actions" title="Page actions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg></summary>
+    <div class="lumina-page-action-list">
+        <button x-data="copyPage()"
+                @click="copy()"
+                type="button"
+                aria-label="Copy page as Markdown">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+            <span aria-live="polite" x-text="copied ? 'Copied!' : 'Copy as Markdown'">Copy as Markdown</span>
+        </button>
+        
+    </div>
+</details>
+
+            </div>
+            
+                <details class="lumina-mobile-outline" data-pagefind-ignore>
+                    <summary>On this page <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary>
+                    <nav aria-label="Page outline">
+                        <ul>
+<li><a class="reference internal" href="#">Generic items</a><ul>
+<li><a class="reference internal" href="#inline-markup">Inline Markup</a><ul>
+<li><a class="reference internal" href="#hyperlinks">Hyperlinks</a></li>
+<li><a class="reference internal" href="#interpreted-text">Interpreted text</a><ul>
+<li><a class="reference internal" href="#gui-labels">GUI labels</a></li>
+<li><a class="reference internal" href="#keys-menu-labels">Keys / Menu labels</a></li>
+<li><a class="reference internal" href="#long-inline-code-wrapping">Long inline code wrapping</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#math">Math</a></li>
+<li><a class="reference internal" href="#sidebar">Sidebar</a><ul>
+<li><a class="reference internal" href="#code-with-sidebar">Code with Sidebar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a><ul>
+<li><a class="reference internal" href="#footnotes">Footnotes</a></li>
+<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#targets">Targets</a></li>
+<li><a class="reference internal" href="#target-footnotes">Target Footnotes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#centered-text">Centered text</a></li>
+<li><a class="reference internal" href="#rubric">Rubric</a><ul>
+<li><a class="reference internal" href="#sidebars-and-rubrics">Sidebars and Rubrics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#download-links">Download Links</a></li>
+</ul>
+</li>
+</ul>
+
+                    </nav>
+                </details>
+            
+            <article class="lumina-article" x-data="headerLinks()">
+
+                
+
+    <section id="generic-items">
+<h1 id="lumina-search-generic-items">Generic items<a class="headerlink" href="#generic-items" title="Link to this heading">¶</a></h1>
+<p>These are the things that don’t quite fit into other groupings.</p>
+<section id="inline-markup">
+<h2 id="lumina-search-inline-markup">Inline Markup<a class="headerlink" href="#inline-markup" title="Link to this heading">¶</a></h2>
+<p>One of the nice things about markup languages is the ability to have inline
+markup. This makes the presentation <em>much</em> nicer. The <strong>bold</strong> text shouldn’t
+be too overbearing. It is very common to have <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">code</span></code> as well. It is
+important to ensure that the inline code doesn’t have a line height that is
+greater than the regular prose; otherwise the spacing looks weird.</p>
+<p>It is also possible to use explicit roles to do things like a <sub>subscript</sub>,
+a <sup>superscript</sup>, <em>emphasis</em>, <strong>strong</strong>, and
+<code class="docutils literal notranslate"><span class="pre">literal</span></code>.</p>
+<section id="hyperlinks">
+<h3 id="lumina-search-hyperlinks">Hyperlinks<a class="headerlink" href="#hyperlinks" title="Link to this heading">¶</a></h3>
+<p>It is a website, so it’ll have hyperlinks like <a class="reference external" href="https://www.python.org/">https://www.python.org/</a> (inline),
+or <a class="reference external" href="https://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> (external reference), <a class="reference internal" href="#example">example</a> (internal reference),
+<a class="reference external" href="https://www.python.org/">Python web site</a> (external hyperlinks with embedded
+URI), footnote references (manually numbered <a class="footnote-reference brackets" href="#id6" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>,
+labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>*<span class="fn-bracket">]</span></a>), citation references (<a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>),
+substitution references (<a class="reference internal" href="https://picsum.photos/16/16"><img alt="EXAMPLE" src="https://picsum.photos/16/16" style="width: 1em;" /></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
+(see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here).</p>
+<p>reStructuredText has character-level inline markup too. It’s ugly to write, but
+someone might be using it, so here’s an example: <strong>re</strong><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>.</p>
+<p>It is also possible to link to documented items, such as
+<code class="xref py py-class docutils literal notranslate"><span class="pre">api_sample.RandomNumberGenerator</span></code>.</p>
+</section>
+<section id="interpreted-text">
+<h3 id="lumina-search-interpreted-text">Interpreted text<a class="headerlink" href="#interpreted-text" title="Link to this heading">¶</a></h3>
+<p>The default role for “interpreted text” (AKA single backticks) is
+<cite>Title Reference</cite>. There are other reference syntaxes as well: <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0287/"><strong>PEP 287</strong></a> and
+<span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2822.html"><strong>RFC 2822</strong></a>.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">--pep-references</span></code> option was supplied, there should be a live link to
+PEP 258 here.</p>
+<section id="gui-labels">
+<h4 id="lumina-search-gui-labels">GUI labels<a class="headerlink" href="#gui-labels" title="Link to this heading">¶</a></h4>
+<p>According to the RST demo, GUI labels (like <span class="guilabel">this label</span>) are a way to
+indicate that some action is to be taken by the user. Like inline code literals,
+GUI labels should not run over line height.</p>
+</section>
+<section id="keys-menu-labels">
+<h4 id="lumina-search-keys-menu-labels">Keys / Menu labels<a class="headerlink" href="#keys-menu-labels" title="Link to this heading">¶</a></h4>
+<p>Key-bindings indicate that the read is to press a button on the keyboard or
+mouse, for example <kbd class="kbd docutils literal notranslate">MMB</kbd>, <kbd class="kbd docutils literal notranslate">⌘</kbd>+<kbd class="kbd docutils literal notranslate">⇧</kbd>+<kbd class="kbd docutils literal notranslate">M</kbd> and <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">MMB</kbd>. Another
+useful way is <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> to show menus:
+<span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ Some sub menu 2 ‣ Some sub menu 3</span></p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> should break when it is too long to fit on a
+single line.</p>
+</section>
+<section id="long-inline-code-wrapping">
+<h4 id="lumina-search-long-inline-code-wrapping">Long inline code wrapping<a class="headerlink" href="#long-inline-code-wrapping" title="Link to this heading">¶</a></h4>
+<p>Let’s test wrapping and whitespace significance in inline literals:
+<code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">of</span> <span class="pre">--inline-literal</span> <span class="pre">--text,</span> <span class="pre">--including</span> <span class="pre">some--</span>
+<span class="pre">strangely--hyphenated-words.</span>&#160; <span class="pre">Adjust-the-width-of-your-browser-window</span>
+<span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">is</span> <span class="pre">wrapped.</span>&#160; <span class="pre">--</span> <span class="pre">----</span> <span class="pre">--------</span>&#160; <span class="pre">Now</span> <span class="pre">note</span>&#160;&#160;&#160; <span class="pre">the</span>
+<span class="pre">spacing</span>&#160;&#160;&#160; <span class="pre">between</span> <span class="pre">the</span>&#160;&#160;&#160; <span class="pre">words</span> <span class="pre">of</span>&#160;&#160;&#160; <span class="pre">this</span> <span class="pre">sentence</span>&#160;&#160;&#160; <span class="pre">(words</span>
+<span class="pre">should</span>&#160;&#160;&#160; <span class="pre">be</span> <span class="pre">grouped</span>&#160;&#160;&#160; <span class="pre">in</span> <span class="pre">pairs).</span></code></p>
+</section>
+</section>
+</section>
+<section id="math">
+<h2 id="lumina-search-math">Math<a class="headerlink" href="#math" title="Link to this heading">¶</a></h2>
+<p>This is a test. Here is an equation:
+<span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
+Here is another:</p>
+<div class="math notranslate nohighlight" id="equation-this-is-a-label">
+<span class="eqno">(1)<a class="headerlink" href="#equation-this-is-a-label" title="Link to this equation">¶</a></span>\[\nabla^2 f =
+\frac{1}{r^2} \frac{\partial}{\partial r}
+\left( r^2 \frac{\partial f}{\partial r} \right) +
+\frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
+\left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
+\frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}\]</div>
+<p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using
+<code class="docutils literal notranslate"><span class="pre">:eq:</span></code>.</p>
+</section>
+<section id="sidebar">
+<h2 id="lumina-search-sidebar">Sidebar<a class="headerlink" href="#sidebar" title="Link to this heading">¶</a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Ch’ien / The Creative</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</aside>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<section id="code-with-sidebar">
+<h3 id="lumina-search-code-with-sidebar">Code with Sidebar<a class="headerlink" href="#code-with-sidebar" title="Link to this heading">¶</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">A code example</p>
+<p>With a sidebar on the right.</p>
+</aside>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Code blocks can also have captions.</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;two&quot;</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;three&quot;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;four&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;five&quot;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;six&quot;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;seven&quot;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eight&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nine&quot;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ten&quot;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eleven&quot;</span><span class="p">)</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;twelve&quot;</span><span class="p">)</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;thirteen&quot;</span><span class="p">)</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fourteen&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2 id="lumina-search-references">References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<section id="footnotes">
+<h3 id="lumina-search-footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">¶</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>A footnote contains body elements, consistently indented by at
+least 3 spaces.</p>
+<p>This is the footnote’s second paragraph.</p>
+</aside>
+<aside class="footnote brackets" id="label" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<p>Footnotes may be numbered, either manually (as in <a class="footnote-reference brackets" href="#id6" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>) or
+automatically using a “#”-prefixed label.  This footnote has a
+label so it can be referred to from multiple places, both as a
+footnote reference (<a class="footnote-reference brackets" href="#label" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>) and as a hyperlink reference
+(<a class="reference internal" href="#label">label</a>).</p>
+</aside>
+<aside class="footnote brackets" id="id9" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">3</a><span class="fn-bracket">]</span></span>
+<p>This footnote is numbered automatically and anonymously using a
+label of “#” only.</p>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">*</a><span class="fn-bracket">]</span></span>
+<p>Footnotes may also use symbols, specified with a “*” label.
+Here’s a reference to the next footnote: <a class="footnote-reference brackets" href="#id12" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>†<span class="fn-bracket">]</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">†</a><span class="fn-bracket">]</span></span>
+<p>This footnote shows the next symbol in the sequence.</p>
+</aside>
+</aside>
+</section>
+<section id="citations">
+<h3 id="lumina-search-citations">Citations<a class="headerlink" href="#citations" title="Link to this heading">¶</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id16">2</a>)</span>
+<p>This citation has some <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">blocks</span></code> in it, maybe some <strong>bold</strong> and
+<em>italics</em> too. Heck, lets put a link to a meta citation <a class="footnote-reference brackets" href="#id15" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> too.</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">13</a><span class="fn-bracket">]</span></span>
+<p>This citation will have one backlink.</p>
+</aside>
+</aside>
+<p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id13" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> citation.</p>
+<p>Here is another type of citation: <cite>citation</cite></p>
+</section>
+<section id="targets">
+<h3 id="lumina-search-targets">Targets<a class="headerlink" href="#targets" title="Link to this heading">¶</a></h3>
+<p id="example">This paragraph is pointed to by the explicit “example” target.
+A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
+hyperlink targets</a> are also possible.</p>
+<p>Section headers are implicit targets, referred to by name. See
+<a class="reference internal" href="#targets">Targets</a>.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="https://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>”.</p>
+<p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
+refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
+</section>
+<section id="target-footnotes">
+<h3 id="lumina-search-target-footnotes">Target Footnotes<a class="headerlink" href="#target-footnotes" title="Link to this heading">¶</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id19" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id20">1</a>,<a role="doc-backlink" href="#id21">2</a>)</span>
+<p><a class="reference external" href="https://www.python.org/">https://www.python.org/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="centered-text">
+<h2 id="lumina-search-centered-text">Centered text<a class="headerlink" href="#centered-text" title="Link to this heading">¶</a></h2>
+<p>You can create a statement with centered text with <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">centered::</span></code></p>
+<p class="centered">
+<strong>This is centered text!</strong></p></section>
+<section id="rubric">
+<h2 id="lumina-search-rubric">Rubric<a class="headerlink" href="#rubric" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>A rubric is like an informal heading that doesn’t correspond to the document’s structure.</p>
+<p class="attribution">—<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric">https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric</a></p>
+</div></blockquote>
+<p>Wikipedia says it is something different:</p>
+<blockquote>
+<div><p>A rubric is a word or section of text that is traditionally written or printed in red ink for emphasis.</p>
+<p class="attribution">—<a class="reference external" href="https://en.wikipedia.org/wiki/Rubric">https://en.wikipedia.org/wiki/Rubric</a></p>
+</div></blockquote>
+<p>This is stylized as docutils tells us to stylize it, since it is used for footnote headers (see end of <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html">https://docs.python.org/3/reference/lexical_analysis.html</a>)</p>
+<p class="rubric">This is a rubric</p>
+<section id="sidebars-and-rubrics">
+<h3 id="lumina-search-sidebars-and-rubrics">Sidebars and Rubrics<a class="headerlink" href="#sidebars-and-rubrics" title="Link to this heading">¶</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Sidebar Title</p>
+<p class="sidebar-subtitle">Optional Subtitle</p>
+<p>This is a sidebar.  It is for text outside the flow of the main
+text.</p>
+<p class="rubric">This is a rubric inside a sidebar</p>
+<p>Sidebars often appears beside the main text with a border and
+background color.</p>
+</aside>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
+voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
+</section>
+</section>
+<section id="download-links">
+<h2 id="lumina-search-download-links">Download Links<a class="headerlink" href="#download-links" title="Link to this heading">¶</a></h2>
+<p><a class="reference download external" download="" href="https://picsum.photos/200/200"><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span> <span class="pre">link</span> <span class="pre">should</span> <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></a></p>
+</section>
+</section>
+
+
+
+
+            </article>
+            
+
+                <div data-pagefind-ignore>
+
+                    <footer class="mt-10 border-t border-lumina-border pt-6">
+    
+    
+        <nav class="flex justify-between gap-4 mb-8" aria-label="Page navigation">
+            
+                <a href="../blocks/"
+                   class="group flex flex-col items-start gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
+                    <span class="text-xs text-lumina-text-muted">Previous</span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">&larr; Blocks</span>
+                </a>
+            
+            
+                <a href="../images/"
+                   class="group flex flex-col items-end gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
+                    <span class="text-xs text-lumina-text-muted">Next</span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">Images &amp; Figures &rarr;</span>
+                </a>
+            
+        </nav>
+    
+    
+    
+    
+    
+</footer>
+
+                </div>
+
+
+            
+        </main>
+        
+            <aside id="lumina-toc">
+
+                
+    <div class="lumina-toc-container sticky top-[var(--lumina-header-offset)] hidden h-[calc(100vh-var(--lumina-header-offset))] w-[220px] shrink-0 py-6 pr-4 xl:block">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-lumina-text-muted">On this page</p>
+        <div class="lumina-toc-scroll">
+            
+            <nav class="lumina-toc-nav"
+                 aria-label="Table of contents"
+                 x-data="scrollspy()">
+                <ul>
+<li><a class="reference internal" href="#">Generic items</a><ul>
+<li><a class="reference internal" href="#inline-markup">Inline Markup</a><ul>
+<li><a class="reference internal" href="#hyperlinks">Hyperlinks</a></li>
+<li><a class="reference internal" href="#interpreted-text">Interpreted text</a><ul>
+<li><a class="reference internal" href="#gui-labels">GUI labels</a></li>
+<li><a class="reference internal" href="#keys-menu-labels">Keys / Menu labels</a></li>
+<li><a class="reference internal" href="#long-inline-code-wrapping">Long inline code wrapping</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#math">Math</a></li>
+<li><a class="reference internal" href="#sidebar">Sidebar</a><ul>
+<li><a class="reference internal" href="#code-with-sidebar">Code with Sidebar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a><ul>
+<li><a class="reference internal" href="#footnotes">Footnotes</a></li>
+<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#targets">Targets</a></li>
+<li><a class="reference internal" href="#target-footnotes">Target Footnotes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#centered-text">Centered text</a></li>
+<li><a class="reference internal" href="#rubric">Rubric</a><ul>
+<li><a class="reference internal" href="#sidebars-and-rubrics">Sidebars and Rubrics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#download-links">Download Links</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+
+
+            </aside>
+        
+    </div>
+
+    
+        <button id="lumina-back-to-top"
+                x-data="backToTop()"
+                x-show="visible"
+                x-cloak
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-2"
+                @click="scrollToTop()"
+                class="lumina-back-to-top z-40 hover:border-lumina-accent transition-colors"
+                aria-label="Back to top"
+                type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6" /></svg></button>
+    
+
+    <dialog id="lumina-search-modal"
+        x-data="searchModal()"
+        @cancel.prevent="close()"
+        @keydown.escape.stop.prevent="close()"
+        @keydown.meta.k.window.prevent="toggle()"
+        @keydown.ctrl.k.window.prevent="toggle()"
+        @click.self="close()"
+        class="lumina-overlay-backdrop fixed inset-0 z-[100] m-0 h-full w-full max-h-none max-w-none border-0 p-0"
+        aria-modal="true"
+        aria-label="Search documentation">
+    
+    <div class="relative mx-auto mt-[5vh] flex max-h-[90dvh] w-[calc(100%-2rem)] max-w-xl flex-col sm:mt-[12vh] sm:max-h-[80dvh] cursor-auto rounded-xl border border-lumina-border bg-lumina-bg shadow-2xl">
+        
+        <div class="flex items-center border-b border-lumina-border px-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-lumina-text-muted" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
+            <input type="search"
+                   x-ref="searchInput"
+                   x-model="query"
+                   @input.debounce.150ms="search()"
+                   @keydown.arrow-down.prevent="moveDown()"
+                   @keydown.arrow-up.prevent="moveUp()"
+                   @keydown.enter.prevent="goToSelected()"
+                   class="w-full border-0 bg-transparent px-3 py-4 text-lumina-text placeholder-lumina-text-muted outline-none"
+                   aria-label="Search documentation"
+                   placeholder="Search docs..."
+                   autocomplete="off">
+            <kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1.5 py-0.5 text-xs text-lumina-text-muted">esc</kbd>
+        </div>
+        <template x-if="loaded && scopes.length > 1 && pagefind">
+            <div class="flex shrink-0 items-center gap-3 border-b border-lumina-border px-4 py-2">
+                <label for="lumina-search-scope"
+                       class="shrink-0 text-xs text-lumina-text-muted">Search in</label>
+                <select id="lumina-search-scope"
+                        x-model="scope"
+                        @change="search()"
+                        class="min-w-0 flex-1 rounded border border-lumina-border bg-lumina-bg px-2 py-2 text-sm text-lumina-text focus-visible:outline-2 focus-visible:outline-lumina-accent">
+                    <option value="">All docs</option>
+                    <template x-for="name in scopes" :key="name">
+                        <option :value="name" x-text="name"></option>
+                    </template>
+                </select>
+            </div>
+        </template>
+        
+        <div class="min-h-0 overflow-y-auto p-2" :aria-busy="searching">
+            <template x-if="!loaded || searching">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">
+                    <span x-text="loaded ? 'Searching…' : 'Loading search index…'"></span>
+                </p>
+            </template>
+            <template x-if="loaded && !searching && !error && query.trim().length > 0 && results.length === 0">
+                <div class="px-3 py-8 text-center text-sm text-lumina-text-muted">
+                    <p x-text="scope ? 'No results in ' + scope + '.' : 'No results found.'"></p>
+                    <template x-if="scope">
+                        <button type="button"
+                                @click="searchAll()"
+                                class="mt-2 rounded px-3 py-2 text-lumina-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-lumina-accent">
+                            Search all docs
+                        </button>
+                    </template>
+                </div>
+            </template>
+            <template x-if="error">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted"
+                   x-text="error"></p>
+            </template>
+            <template x-for="(result, index) in results" :key="result.url">
+                <a :href="result.url"
+                   data-search-result
+                   class="flex flex-col gap-1 rounded-lg px-3 py-2.5 no-underline transition-colors focus-visible:outline-2 focus-visible:outline-lumina-accent"
+                   :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ml-4 border-l border-lumina-border' : 'mt-1']"
+                   @mouseenter="selectedIndex = index"
+                   @focus="selectedIndex = index">
+                    <template x-if="result.breadcrumb">
+                        <span class="truncate text-xs text-lumina-text-muted"
+                              x-text="result.breadcrumb"></span>
+                    </template>
+                    <span class="break-words text-sm"
+                          :class="result.isHeading ? '' : 'font-semibold'"
+                          x-text="result.title"></span>
+                    <span class="line-clamp-2 text-xs text-lumina-text-muted"
+                          x-html="result.excerpt"></span>
+                </a>
+            </template>
+            <template x-if="loaded && !error && query.trim().length === 0">
+                <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">Type to search...</p>
+            </template>
+        </div>
+        
+        <div class="sr-only"
+             role="status"
+             x-text="searching ? 'Searching…' : loaded && query.trim().length > 0 ? results.length + ' links' + (scope ? ' in ' + scope : ' across all docs') : ''">
+        </div>
+        
+        <div class="flex shrink-0 items-center gap-3 border-t border-lumina-border px-4 py-2.5 text-xs text-lumina-text-muted">
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&uarr;&darr;</kbd> Navigate</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&crarr;</kbd> Open</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">esc</kbd> Close</span>
+        </div>
+    </div>
+</dialog>
+
+    
+
+
+
+
+  </body>
+</html>
