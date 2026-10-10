@@ -1,0 +1,50 @@
+# Read the Docs configuration, used for pull request previews.
+# https://docs.readthedocs.com/platform/stable/config-file/v2.html
+#
+# This website is not a Sphinx project, so the build is overridden completely:
+# `nox -s publish` generates the site into `public/`, which is then copied to
+# the directory that Read the Docs publishes from.
+
+version: 2
+
+build:
+  # Pinned, since the apt package names below are specific to this release.
+  os: ubuntu-24.04
+  tools:
+    python: "3.13"
+  # Shared libraries needed by the Firefox that Playwright downloads for taking
+  # the preview screenshots. The build image ships no GUI libraries.
+  apt_packages:
+    - libasound2t64
+    - libatk1.0-0t64
+    - libcairo-gobject2
+    - libcairo2
+    - libgdk-pixbuf-2.0-0
+    - libglib2.0-0t64
+    - libgtk-3-0t64
+    - libpango-1.0-0
+    - libpangocairo-1.0-0
+    - libx11-xcb1
+    - libxcb-shm0
+    - libxcomposite1
+    - libxcursor1
+    - libxdamage1
+    - libxfixes3
+    - libxi6
+    - libxrandr2
+    - libxrender1
+  jobs:
+    install:
+      # `uv` is invoked directly by src/isolation.py, so it has to be on PATH.
+      - pip install nox uv
+    build:
+      html:
+        # Only the featured themes, to keep preview builds quick.
+        - >-
+          nox --default-venv-backend uv -s publish --
+          default-alabaster furo sphinx-rtd-theme sphinx-book-theme
+          pydata-sphinx-theme
+        - mkdir --parents $READTHEDOCS_OUTPUT/html
+        - cp --recursive public/. $READTHEDOCS_OUTPUT/html/
+        # Only meaningful for GitHub Pages.
+        - rm --force $READTHEDOCS_OUTPUT/html/CNAME

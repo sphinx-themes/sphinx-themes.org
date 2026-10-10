@@ -56,6 +56,14 @@ def render_into_template(
 # --------------------------------------------------------------------------------------
 # Browser Interactions
 # --------------------------------------------------------------------------------------
+# Pages occasionally stop responding, most often right after the browser is launched.
+# Playwright's own timeouts do not fire when that happens -- the call simply never
+# returns -- so every attempt gets a deadline of its own. That way a wedged page costs
+# us one theme's preview image, instead of hanging the entire run.
+ATTEMPT_TIMEOUT = 120  # seconds
+ATTEMPTS = 2
+
+
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
 ) -> Dict[str, Image.Image]:
@@ -72,6 +80,34 @@ async def take_screenshots_at_all_resolutions(
     return screenshots
 
 
+async def render_preview_image(
+    context: BrowserContext,
+    original_template: Image.Image,
+    *,
+    theme: Theme,
+    progress: rich.progress.Progress,
+    task: rich.progress.TaskID,
+) -> None:
+    """A single attempt at rendering a theme's preview image."""
+    # progress.log(f"{theme.name}: Creating browser tab.")
+    page = await context.new_page()
+    progress.advance(task, 1)
+
+    # progress.log(f"{theme.name}: Taking screenshots.")
+    screenshots = await take_screenshots_at_all_resolutions(page, theme.url)
+    progress.advance(task, 5)
+
+    # A wedged page is never closed, since closing it would wedge us as well.
+    await page.close()
+
+    # progress.log(f"{theme.name}: Rendering to template.")
+    rendered_image = render_into_template(screenshots, original_template.copy())
+    progress.advance(task, 1)
+
+    rendered_image.save(theme.image, "JPEG", optimize=True, quality=80)
+    progress.advance(task, 1)
+
+
 async def render_at_multiple_resolutions(
     context: BrowserContext,
     original_template: Image.Image,
@@ -81,21 +117,26 @@ async def render_at_multiple_resolutions(
 ) -> None:
     task = progress.add_task(theme.name, total=10)
     try:
-        # progress.log(f"{theme.name}: Creating browser tab.")
-        page = await context.new_page()
-        progress.advance(task, 1)
-
-        # progress.log(f"{theme.name}: Taking screenshots.")
-        screenshots = await take_screenshots_at_all_resolutions(page, theme.url)
-        progress.advance(task, 5)
-
-        # progress.log(f"{theme.name}: Rendering to template.")
-        rendered_image = render_into_template(screenshots, original_template.copy())
-        progress.advance(task, 1)
-
-        rendered_image.save(theme.image, "JPEG", optimize=True, quality=80)
-        progress.advance(task, 1)
-    except PlaywrightError as e:
+        for attempt in range(1, ATTEMPTS + 1):
+            try:
+                await asyncio.wait_for(
+                    render_preview_image(
+                        context,
+                        original_template,
+                        theme=theme,
+                        progress=progress,
+                        task=task,
+                    ),
+                    timeout=ATTEMPT_TIMEOUT,
+                )
+            except (PlaywrightError, asyncio.TimeoutError) as e:
+                if attempt == ATTEMPTS:
+                    raise
+                progress.log(f"Retry: [yellow]{theme.name}[reset] ({type(e).__name__})")
+                progress.reset(task)
+            else:
+                break
+    except (PlaywrightError, asyncio.TimeoutError) as e:
         progress.log(f"Fail: [red]{theme.name}[reset]\n{e}")
         progress.update(task, description="FAILED")
     else:
@@ -107,12 +148,26 @@ async def render_at_multiple_resolutions(
 # --------------------------------------------------------------------------------------
 # Main entrypoint
 # --------------------------------------------------------------------------------------
+async def warm_up(context: BrowserContext) -> None:
+    page = await context.new_page()
+    await page.goto("about:blank")
+    await page.close()
+
+
 async def run(playwright) -> None:
     print("Launching browser...", end=" ", flush=True)
     try:
         browser = await playwright.firefox.launch()
     finally:
         print("Done")
+
+    # It is the pages opened right after the launch that get wedged, so open and
+    # discard one before fanning out. Failing at this is not interesting: the
+    # per-theme guard below is what we actually rely on.
+    try:
+        await asyncio.wait_for(warm_up(browser), timeout=ATTEMPT_TIMEOUT)
+    except (PlaywrightError, asyncio.TimeoutError):
+        pass
 
     original_template = get_template_image()
     themes = get_themes()
