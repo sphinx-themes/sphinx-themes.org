@@ -10,11 +10,11 @@
     <title>Directives in the JavaScript domain &#8212; Lumina</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../_static/pygments_dark.css?v=5349f25f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/lumina.css?v=f1306b5b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/lumina.css?v=1f08c7ba" />
     <script defer="defer" src="../../../_static/documentation_options.js?v=187304be"></script>
     <script defer="defer" src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script defer="defer" src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="../../../_static/lumina.js?v=9781dbc8"></script>
+    <script defer="defer" src="../../../_static/lumina.js?v=cdc4b938"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Directives in the Python domain" href="../api_python_domain/" />
@@ -97,6 +97,7 @@
     
     
     
+    
 
 
   </head><body>
@@ -159,8 +160,8 @@
                     class="relative flex h-9 w-9 items-center justify-center rounded-md text-lumina-text-muted hover:text-lumina-text hover:bg-lumina-bg-secondary transition-colors cursor-pointer"
                     aria-label="Toggle color theme"
                     title="Toggle color theme"
-                    :aria-label="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'"
-                    :title="mode === 'light' ? 'Switch to dark mode' : mode === 'dark' ? 'Switch to system theme' : 'Switch to light mode'">
+                    :aria-label="mode === 'light' ? $t('Switch to dark mode') : mode === 'dark' ? $t('Switch to system theme') : $t('Switch to light mode')"
+                    :title="mode === 'light' ? $t('Switch to dark mode') : mode === 'dark' ? $t('Switch to system theme') : $t('Switch to light mode')">
                 
                 <svg x-show="mode === 'light'"
                      x-transition:enter="transition ease-out duration-200"
@@ -301,7 +302,7 @@
                         <path d="M16 10L24 27H16" fill="currentColor" opacity="0.3" />
                     </svg>
                 Lumina</a>
-                <span class="lumina-sidebar-footer-version">v2.9.9</span>
+                <span class="lumina-sidebar-footer-version">v2.12.0</span>
             </div>
         
     </div>
@@ -389,7 +390,7 @@
                         <a href="https://github.com/r4sky0/sphinx-lumina-theme"
                            target="_blank"
                            rel="noopener">Lumina</a>
-                        <span class="lumina-sidebar-footer-version">v2.9.9</span>
+                        <span class="lumina-sidebar-footer-version">v2.12.0</span>
                     </div>
                 
             </div>
@@ -398,7 +399,7 @@
 </div>
 
         </aside>
-        <main id="lumina-content" data-pagefind-body>
+        <main id="lumina-content" role="main" data-pagefind-body>
             <div class="lumina-content-toolbar" data-pagefind-ignore>
                 
                     <div class="min-w-0 flex-1">
@@ -410,16 +411,19 @@
     
         
             
+            
             <a href="../../"
-               class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">Kitchen Sink</a>
+               class="shrink-0 whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">Kitchen Sink</a>
         
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            
             <a href="../../api/"
-               class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">API documentation</a>
+               class="min-w-0 truncate hover:text-lumina-accent no-underline transition-colors">API documentation</a>
         
     
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-    <span class="whitespace-nowrap text-lumina-text" aria-current="page">Directives in the JavaScript domain</span>
+    <span class="shrink-0 whitespace-nowrap text-lumina-text"
+          aria-current="page">Directives in the JavaScript domain</span>
 </nav>
 
                     </div>
@@ -429,14 +433,17 @@
          x-data
          @click.outside="$el.open = false"
          @keydown.escape.stop="$el.open = false; $el.querySelector('summary').focus()">
-    <summary aria-label="Page actions" title="Page actions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg></summary>
+    <summary aria-label="Page actions" title="Page actions">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg>
+    </summary>
     <div class="lumina-page-action-list">
         <button x-data="copyPage()"
                 @click="copy()"
                 type="button"
                 aria-label="Copy page as Markdown">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
-            <span aria-live="polite" x-text="copied ? 'Copied!' : 'Copy as Markdown'">Copy as Markdown</span>
+            <span aria-live="polite"
+                  x-text="copied ? $t('Copied!') : $t('Copy as Markdown')">Copy as Markdown</span>
         </button>
         
     </div>
@@ -453,7 +460,7 @@
 <li><a class="reference internal" href="#myMethod"><code class="docutils literal notranslate"><span class="pre">$.myMethod()</span></code></a></li>
 <li><a class="reference internal" href="#MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
 <li><a class="reference internal" href="#my_variable"><code class="docutils literal notranslate"><span class="pre">my_variable</span></code></a></li>
-<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.name</span></code></a></li>
+<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.<wbr>name</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -536,7 +543,8 @@ showing a function that is implemented as a method on a class object.</p>
                     <footer class="mt-10 border-t border-lumina-border pt-6">
     
     
-        <nav class="flex justify-between gap-4 mb-8" aria-label="Page navigation">
+        <nav class="flex justify-between gap-4 mb-8"
+             aria-label="Page navigation">
             
                 <a href="../api_cpp_domain/"
                    class="group flex flex-col items-start gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
@@ -581,7 +589,7 @@ showing a function that is implemented as a method on a class object.</p>
 <li><a class="reference internal" href="#myMethod"><code class="docutils literal notranslate"><span class="pre">$.myMethod()</span></code></a></li>
 <li><a class="reference internal" href="#MyClass"><code class="docutils literal notranslate"><span class="pre">MyClass</span></code></a></li>
 <li><a class="reference internal" href="#my_variable"><code class="docutils literal notranslate"><span class="pre">my_variable</span></code></a></li>
-<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.name</span></code></a></li>
+<li><a class="reference internal" href="#object.name"><code class="docutils literal notranslate"><span class="pre">object.<wbr>name</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -659,12 +667,12 @@ showing a function that is implemented as a method on a class object.</p>
         <div class="min-h-0 overflow-y-auto p-2" :aria-busy="searching">
             <template x-if="!loaded || searching">
                 <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">
-                    <span x-text="loaded ? 'Searching…' : 'Loading search index…'"></span>
+                    <span x-text="loaded ? $t('Searching…') : $t('Loading search index…')"></span>
                 </p>
             </template>
             <template x-if="loaded && !searching && !error && query.trim().length > 0 && results.length === 0">
                 <div class="px-3 py-8 text-center text-sm text-lumina-text-muted">
-                    <p x-text="scope ? 'No results in ' + scope + '.' : 'No results found.'"></p>
+                    <p x-text="scope ? $t('No results in {scope}.', { scope }) : $t('No results found.')"></p>
                     <template x-if="scope">
                         <button type="button"
                                 @click="searchAll()"
@@ -690,9 +698,10 @@ showing a function that is implemented as a method on a class object.</p>
                               x-text="result.breadcrumb"></span>
                     </template>
                     <span class="break-words text-sm"
-                          :class="result.isHeading ? '' : 'font-semibold'"
+                          :class="result.isSymbol ? 'font-mono' : result.isHeading ? '' : 'font-semibold'"
                           x-text="result.title"></span>
-                    <span class="line-clamp-2 text-xs text-lumina-text-muted"
+                    <span x-show="result.excerpt"
+                          class="line-clamp-2 text-xs text-lumina-text-muted"
                           x-html="result.excerpt"></span>
                 </a>
             </template>
@@ -703,7 +712,7 @@ showing a function that is implemented as a method on a class object.</p>
         
         <div class="sr-only"
              role="status"
-             x-text="searching ? 'Searching…' : loaded && query.trim().length > 0 ? results.length + ' links' + (scope ? ' in ' + scope : ' across all docs') : ''">
+             x-text="searching ? $t('Searching…') : loaded && query.trim().length > 0 ? (scope ? $t('{count} links in {scope}', { count: results.length, scope }) : $t('{count} links across all docs', { count: results.length })) : ''">
         </div>
         
         <div class="flex shrink-0 items-center gap-3 border-t border-lumina-border px-4 py-2.5 text-xs text-lumina-text-muted">
