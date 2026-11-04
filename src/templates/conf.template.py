@@ -56,7 +56,7 @@ theme_configuration = """
 {%- endfor %}
 """
 
-exec(theme_configuration)
+exec(theme_configuration)  # noqa: S102 -- Execute trusted theme configuration from the repository.
 
 
 # -- Directives to include theme-specific stuff -------------------------------
