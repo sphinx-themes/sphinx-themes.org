@@ -75,8 +75,8 @@ async def generate_site(
                 " stderr ".center(88, "="),
                 stderr.decode(),
             ]
-            raise Exception("\n".join(message))
-    except Exception as e:
+            raise RuntimeError("\n".join(message))
+    except Exception as e:  # noqa: BLE001 -- Render failures per theme so other builds can continue.
         progress.log(f"Fail: [red]{theme.name}[reset]", rich.traceback.Traceback())
         destination_path.mkdir(parents=True, exist_ok=True)
         (destination_path / "index.html").write_text(get_error_page(theme, e))

@@ -14,8 +14,8 @@ def get_themes() -> list["Theme"]:
     try:
         with FILES["themes.json"].open() as f:
             data = json.load(f)
-    except Exception as e:
-        raise Exception("Could not load themes.json") from e
+    except (OSError, ValueError) as e:
+        raise RuntimeError("Could not load themes.json") from e
 
     assert isinstance(data, dict)
     assert "themes" in data, list(data.keys())
@@ -29,7 +29,7 @@ def get_themes() -> list["Theme"]:
             themes.append(theme)
 
     if not themes:
-        raise Exception(f"No themes match given names: {allowed_names!r}.")
+        raise ValueError(f"No themes match given names: {allowed_names!r}.")
 
     return themes
 
