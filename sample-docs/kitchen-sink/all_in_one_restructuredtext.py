@@ -47,7 +47,6 @@ def my_function_pure_sphinx(*args, **kwargs):
 
     Text at end of docstring.
     '''
-    pass
 
 
 def my_function_google_style(*args, **kwargs):
@@ -73,7 +72,6 @@ def my_function_google_style(*args, **kwargs):
 
     Text at end of docstring.
     '''
-    pass
 
 
 def my_function_needs_napoleon(*args, **kwargs):
@@ -93,7 +91,6 @@ def my_function_needs_napoleon(*args, **kwargs):
 
     Text at end of docstring.
     """
-    pass
 
 
 def my_function2(foo: int, bar: str):
@@ -113,7 +110,6 @@ def my_function2(foo: int, bar: str):
 
     Text at end of docstring.
     """
-    pass
 
 
 def my_generator():
@@ -127,8 +123,6 @@ def my_generator():
 
 class MyException(Exception):
     """Custom exception class."""
-
-    pass
 
 
 class AllInOne:
@@ -145,7 +139,6 @@ class AllInOne:
 
     def __init__(self):
         """Initialize the :py:class:`AllInOne` class."""
-        pass
 
     def my_method(
         self, my_param: ParameterT = "default_value", /, *, keyword_only_param=None
@@ -265,7 +258,6 @@ class AllInOne:
     @my_decorator_method
     def my_decorated_method():
         """A method that is decorated by :py:meth:`my_decorator_method`."""
-        pass
 
 
 @final
@@ -275,7 +267,6 @@ class MyFinalClass:
     @final
     def my_final_method(self) -> None:
         """A method that cannot be overridden by subclasses."""
-        pass
 
 
 def my_decorator_function(function):
@@ -305,4 +296,3 @@ def my_decorated_function():
 
     This docstring is not shown, just the one of ``decorate_function()``.
     """
-    pass

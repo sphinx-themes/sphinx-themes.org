@@ -3,13 +3,11 @@
 import asyncio
 import functools
 import io
-from typing import Dict, Tuple
 
 import rich
 from PIL import Image
-from playwright.async_api import BrowserContext
+from playwright.async_api import BrowserContext, Page, async_playwright
 from playwright.async_api import Error as PlaywrightError
-from playwright.async_api import Page, async_playwright
 
 from .constants import DESTINATION, SCREENSHOT_OFFSETS, SCREENSHOT_SIZES, TEMPLATES
 from .output import run_for_themes_with_progress
@@ -28,7 +26,7 @@ def get_template_image() -> Image.Image:
         print("Done")
 
 
-def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Image:
+def sanitize_screenshot(raw_png: bytes, real_size: tuple[int, int]) -> Image.Image:
     """Processing screenshots taken by the browser."""
     with io.BytesIO(raw_png) as f:
         image = Image.open(f).convert("RGB")
@@ -36,7 +34,7 @@ def sanitize_screenshot(raw_png: bytes, real_size: Tuple[int, int]) -> Image.Ima
 
 
 def render_into_template(
-    screenshots: Dict[str, Image.Image],
+    screenshots: dict[str, Image.Image],
     template: Image.Image,
 ) -> Image.Image:
     """Place all the screenshots, into the correct place."""
@@ -66,7 +64,7 @@ ATTEMPTS = 2
 
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
-) -> Dict[str, Image.Image]:
+) -> dict[str, Image.Image]:
     screenshots = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
@@ -129,14 +127,14 @@ async def render_at_multiple_resolutions(
                     ),
                     timeout=ATTEMPT_TIMEOUT,
                 )
-            except (PlaywrightError, asyncio.TimeoutError) as e:
+            except (TimeoutError, PlaywrightError) as e:
                 if attempt == ATTEMPTS:
                     raise
                 progress.log(f"Retry: [yellow]{theme.name}[reset] ({type(e).__name__})")
                 progress.reset(task)
             else:
                 break
-    except (PlaywrightError, asyncio.TimeoutError) as e:
+    except (TimeoutError, PlaywrightError) as e:
         progress.log(f"Fail: [red]{theme.name}[reset]\n{e}")
         progress.update(task, description="FAILED")
     else:
@@ -166,7 +164,7 @@ async def run(playwright) -> None:
     # per-theme guard below is what we actually rely on.
     try:
         await asyncio.wait_for(warm_up(browser), timeout=ATTEMPT_TIMEOUT)
-    except (PlaywrightError, asyncio.TimeoutError):
+    except (TimeoutError, PlaywrightError):
         pass
 
     original_template = get_template_image()
