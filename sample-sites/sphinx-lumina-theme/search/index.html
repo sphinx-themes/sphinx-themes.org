@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search &#8212; Lumina</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
-    <link rel="stylesheet" type="text/css" href="../_static/lumina.css?v=1f08c7ba" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=0fc419ee" />
+    <link rel="stylesheet" type="text/css" href="../_static/lumina.css?v=57f05a8c" />
     
     <script defer="defer" src="../_static/documentation_options.js?v=187304be"></script>
     <script defer="defer" src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script defer="defer" src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="../_static/lumina.js?v=cdc4b938"></script>
+    <script defer="defer" src="../_static/lumina.js?v=6596cdac"></script>
     <script defer="defer" src="../_static/searchtools.js"></script>
     <script defer="defer" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
@@ -84,8 +84,9 @@
 })();
     </script>
     
-    <meta name="lumina-search-backend" content="pagefind">
+    <meta name="lumina-search-backend" content="sphinx">
     <meta name="lumina-base-url" content="../">
+    
     
     
     
@@ -147,9 +148,9 @@
                     aria-label="Search documentation"
                     aria-haspopup="dialog">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
-                <span class="hidden lg:inline flex-1 text-left">Search docs...</span>
+                <span class="hidden lg:inline flex-1 text-start">Search docs...</span>
                 <kbd data-search-shortcut
-                     class="hidden lg:inline rounded border border-lumina-border bg-lumina-bg px-1.5 py-0.5 text-[0.6875rem] font-[family-name:'JetBrains_Mono'] tracking-[0.02em]">⌘K</kbd>
+                     class="hidden lg:inline rounded border border-lumina-border bg-lumina-bg px-1.5 py-0.5 text-[0.6875rem] font-[family-name:var(--lumina-font-mono)] tracking-[0.02em]">⌘K</kbd>
             </button>
             
             <button data-theme-toggle
@@ -236,7 +237,7 @@
 
             <div x-data="sidebar()">
     
-    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:flex">
+    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-e border-lumina-border bg-lumina-bg px-4 py-6 lg:flex">
 
         
 
@@ -300,7 +301,7 @@
                         <path d="M16 10L24 27H16" fill="currentColor" opacity="0.3" />
                     </svg>
                 Lumina</a>
-                <span class="lumina-sidebar-footer-version">v2.12.0</span>
+                <span class="lumina-sidebar-footer-version">v2.19.1</span>
             </div>
         
     </div>
@@ -321,13 +322,13 @@
             <div id="lumina-sidebar-drawer"
                  x-show="mobileOpen"
                  x-transition:enter="transition ease-out duration-250"
-                 x-transition:enter-start="-translate-x-full"
+                 x-transition:enter-start="-translate-x-full rtl:translate-x-full"
                  x-transition:enter-end="translate-x-0"
                  x-transition:leave="transition ease-in duration-200"
                  x-transition:leave-start="translate-x-0"
-                 x-transition:leave-end="-translate-x-full"
+                 x-transition:leave-end="-translate-x-full rtl:translate-x-full"
                  @keydown.escape.window="close()"
-                 class="fixed inset-y-0 top-[var(--lumina-header-offset)] left-0 z-50 w-[min(280px,85vw)] overflow-y-auto border-r border-lumina-border bg-lumina-bg px-4 py-6 lg:hidden">
+                 class="fixed inset-y-0 top-[var(--lumina-header-offset)] start-0 z-50 w-[min(280px,85vw)] overflow-y-auto border-e border-lumina-border bg-lumina-bg px-4 py-6 lg:hidden">
 
                 
                 
@@ -388,7 +389,7 @@
                         <a href="https://github.com/r4sky0/sphinx-lumina-theme"
                            target="_blank"
                            rel="noopener">Lumina</a>
-                        <span class="lumina-sidebar-footer-version">v2.12.0</span>
+                        <span class="lumina-sidebar-footer-version">v2.19.1</span>
                     </div>
                 
             </div>
@@ -398,7 +399,10 @@
 
         </aside>
         <main id="lumina-content" role="main" data-pagefind-body>
-            <div class="lumina-content-toolbar" data-pagefind-ignore>
+            
+            
+            <div class="lumina-content-toolbar"
+                 data-pagefind-ignore>
                 
                     <div class="min-w-0 flex-1">
 
@@ -410,7 +414,7 @@
            class="whitespace-nowrap hover:text-lumina-accent no-underline transition-colors">Lumina</a>
     
     
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 rtl:-scale-x-100" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
     <span class="shrink-0 whitespace-nowrap text-lumina-text"
           aria-current="page">Search</span>
 </nav>
@@ -599,7 +603,7 @@
                 <a :href="result.url"
                    data-search-result
                    class="flex flex-col gap-1 rounded-lg px-3 py-2.5 no-underline transition-colors focus-visible:outline-2 focus-visible:outline-lumina-accent"
-                   :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ml-4 border-l border-lumina-border' : 'mt-1']"
+                   :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ms-4 border-s border-lumina-border' : 'mt-1']"
                    @mouseenter="selectedIndex = index"
                    @focus="selectedIndex = index">
                     <template x-if="result.breadcrumb">
@@ -625,9 +629,9 @@
         </div>
         
         <div class="flex shrink-0 items-center gap-3 border-t border-lumina-border px-4 py-2.5 text-xs text-lumina-text-muted">
-            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&uarr;&darr;</kbd> Navigate</span>
-            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">&crarr;</kbd> Open</span>
-            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[10px]">esc</kbd> Close</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">&uarr;&darr;</kbd> Navigate</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">&crarr;</kbd> Open</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">esc</kbd> Close</span>
         </div>
     </div>
 </dialog>

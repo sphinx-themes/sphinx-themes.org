@@ -24,14 +24,14 @@
 .dark .highlight .gd { color: #FF4689 } /* Generic.Deleted */
 .dark .highlight .ge { color: #F8F8F2; font-style: italic } /* Generic.Emph */
 .dark .highlight .ges { color: #F8F8F2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.dark .highlight .gr { color: #F8F8F2 } /* Generic.Error */
+.dark .highlight .gr { color: #FF4689 } /* Generic.Error */
 .dark .highlight .gh { color: #F8F8F2 } /* Generic.Heading */
 .dark .highlight .gi { color: #A6E22E } /* Generic.Inserted */
 .dark .highlight .go { color: #66D9EF } /* Generic.Output */
 .dark .highlight .gp { color: #FF4689; font-weight: bold } /* Generic.Prompt */
 .dark .highlight .gs { color: #F8F8F2; font-weight: bold } /* Generic.Strong */
 .dark .highlight .gu { color: #959077 } /* Generic.Subheading */
-.dark .highlight .gt { color: #F8F8F2 } /* Generic.Traceback */
+.dark .highlight .gt { color: #66D9EF } /* Generic.Traceback */
 .dark .highlight .kc { color: #66D9EF } /* Keyword.Constant */
 .dark .highlight .kd { color: #66D9EF } /* Keyword.Declaration */
 .dark .highlight .kn { color: #FF4689 } /* Keyword.Namespace */
@@ -42,7 +42,7 @@
 .dark .highlight .m { color: #AE81FF } /* Literal.Number */
 .dark .highlight .s { color: #E6DB74 } /* Literal.String */
 .dark .highlight .na { color: #A6E22E } /* Name.Attribute */
-.dark .highlight .nb { color: #F8F8F2 } /* Name.Builtin */
+.dark .highlight .nb { color: #A6E22E } /* Name.Builtin */
 .dark .highlight .nc { color: #A6E22E } /* Name.Class */
 .dark .highlight .no { color: #66D9EF } /* Name.Constant */
 .dark .highlight .nd { color: #A6E22E } /* Name.Decorator */
@@ -76,7 +76,7 @@
 .dark .highlight .sr { color: #E6DB74 } /* Literal.String.Regex */
 .dark .highlight .s1 { color: #E6DB74 } /* Literal.String.Single */
 .dark .highlight .ss { color: #E6DB74 } /* Literal.String.Symbol */
-.dark .highlight .bp { color: #F8F8F2 } /* Name.Builtin.Pseudo */
+.dark .highlight .bp { color: #A6E22E } /* Name.Builtin.Pseudo */
 .dark .highlight .fm { color: #A6E22E } /* Name.Function.Magic */
 .dark .highlight .vc { color: #F8F8F2 } /* Name.Variable.Class */
 .dark .highlight .vg { color: #F8F8F2 } /* Name.Variable.Global */
