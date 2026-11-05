@@ -2,7 +2,6 @@
 
 import asyncio
 import random
-from typing import List
 
 import rich.live
 import rich.progress
@@ -23,7 +22,7 @@ async def gather_with_limited_concurrency(n, *tasks):
     return await asyncio.gather(*(sem_task(task) for task in tasks))
 
 
-async def run_for_themes_with_progress(themes: List[Theme], async_function):
+async def run_for_themes_with_progress(themes: list[Theme], async_function):
     progress = rich.progress.Progress(
         "[progress.description]{task.description}",
         rich.progress.BarColumn(),

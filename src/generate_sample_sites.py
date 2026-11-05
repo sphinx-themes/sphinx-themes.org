@@ -1,7 +1,7 @@
 import asyncio
 import os
 import shutil
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import rich.progress
@@ -19,7 +19,7 @@ def get_error_page(theme: Theme, error: Exception) -> str:
     return template.render(
         theme=theme,
         error=error,
-        now=datetime.now(tz=timezone.utc),
+        now=datetime.now(tz=UTC),
     )
 
 
@@ -75,8 +75,8 @@ async def generate_site(
                 " stderr ".center(88, "="),
                 stderr.decode(),
             ]
-            raise Exception("\n".join(message))
-    except Exception as e:
+            raise RuntimeError("\n".join(message))
+    except Exception as e:  # noqa: BLE001 -- Render failures per theme so other builds can continue.
         progress.log(f"Fail: [red]{theme.name}[reset]", rich.traceback.Traceback())
         destination_path.mkdir(parents=True, exist_ok=True)
         (destination_path / "index.html").write_text(get_error_page(theme, e))

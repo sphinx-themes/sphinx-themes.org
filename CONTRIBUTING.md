@@ -70,6 +70,8 @@ Certain themes require additional values to be set in `conf.py`, to be able to u
 
 This will result in a conf.py containing:
 
+<!-- fmt:off -->
+
 ```py
 import sys
 extensions.append("sphinx_tabs")
@@ -78,6 +80,8 @@ my_theme_colors = ['blue', 'indigo']
 my_theme_number = 1
 html_context = {'executable': sys.executable}
 ```
+
+<!-- fmt:on -->
 
 Notice that:
 

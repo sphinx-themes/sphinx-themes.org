@@ -2,20 +2,20 @@
 
 import json
 import sys
+from collections.abc import Iterator
 from dataclasses import dataclass, field
-from typing import Dict, Iterator, List, Optional, Union
 
 from .constants import DESTINATION, FILES
 
 
-def get_themes() -> List["Theme"]:
+def get_themes() -> list["Theme"]:
     allowed_names = sys.argv[1:]
 
     try:
         with FILES["themes.json"].open() as f:
             data = json.load(f)
-    except Exception as e:
-        raise Exception("Could not load themes.json") from e
+    except (OSError, ValueError) as e:
+        raise RuntimeError("Could not load themes.json") from e
 
     assert isinstance(data, dict)
     assert "themes" in data, list(data.keys())
@@ -29,7 +29,7 @@ def get_themes() -> List["Theme"]:
             themes.append(theme)
 
     if not themes:
-        raise Exception(f"No themes match given names: {allowed_names!r}.")
+        raise ValueError(f"No themes match given names: {allowed_names!r}.")
 
     return themes
 
@@ -40,11 +40,11 @@ class Theme:
 
     display: str
     pypi_package: str
-    documentation_link: Optional[str]
-    configuration: Dict[str, Union[List[str], str]]
+    documentation_link: str | None
+    configuration: dict[str, list[str] | str]
 
-    imports: List[int] = field(default_factory=list)
-    extensions: List[int] = field(default_factory=list)
+    imports: list[int] = field(default_factory=list)
+    extensions: list[int] = field(default_factory=list)
 
     def __repr__(self):
         return f"Theme({self.name!r}, pypi_package={self.pypi_package!r})"
