@@ -109,7 +109,13 @@ class Theme:
         path = (DESTINATION["sites"] / self.name / "index.html").resolve()
         return path.as_uri()
 
-    def compute_python_configuration_lines(self) -> Iterator[str]:
+    @property
+    def conf_py_snippet(self) -> str:
+        return "\n".join(self._compute_python_configuration_lines())
+
+    def _compute_python_configuration_lines(self) -> Iterator[str]:
+        yield f'html_title = "{self.display} Sample Site"'
+
         for module in self.imports:
             yield f"import {module}"
 

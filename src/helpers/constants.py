@@ -18,7 +18,8 @@ FILES = {
 }
 
 TEMPLATES = {
-    "configuration": _TEMPLATES / "conf.template.py",
+    "conf.py": _TEMPLATES / "conf.template.py",
+    "index.rst": _TEMPLATES / "index.template.rst",
     "preview-image": _TEMPLATES / "preview.template.png",
     "index.html": _TEMPLATES / "index.template.html",
     "error.html": _TEMPLATES / "error.template.html",

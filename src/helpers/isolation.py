@@ -5,8 +5,12 @@ from __future__ import annotations
 import asyncio
 import os
 import sys
+from typing import TYPE_CHECKING
 
 from .constants import BUILD
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 class IsolatedEnvironment:
@@ -40,12 +44,14 @@ class IsolatedEnvironment:
             raise RuntimeError("Could not create virtual environment.")
 
     async def install(self, *args: str, env: dict[str, str] | None = None) -> None:
-        returncode, _ = await self.run("uv", "pip", "install", *args, env=env)
+        returncode, _ = await self.run(
+            "uv", "pip", "install", *args, env=env, cwd=self.path
+        )
         if returncode:
             raise RuntimeError(f"Could not install: {' '.join(args)}")
 
     async def run(
-        self, *args: str, env: dict[str, str] | None = None
+        self, *args: str, cwd: Path | None, env: dict[str, str] | None = None
     ) -> tuple[int | None, tuple[bytes, bytes]]:
         process_env = os.environ.copy()
         if env is not None:
@@ -62,6 +68,7 @@ class IsolatedEnvironment:
             env=process_env,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
+            cwd=cwd,
         )
 
         outputs = await process.communicate()

@@ -123,6 +123,16 @@ $ nox -s typecheck
 
 Runs `ty` to check the types in the website generation code.
 
+### Building the sample documentation independently
+
+The `sample-docs` directory is also a standalone Sphinx project. With Sphinx installed, run:
+
+```sh
+$ sphinx-build -b dirhtml sample-docs build/sample-docs
+```
+
+The gallery generates a theme-specific index and configuration for each theme, while the standalone build uses `sample-docs/index.rst` and `sample-docs/conf.py`.
+
 ### Site generation pipeline
 
 `nox -s publish` generates the various parts of the website as follows:
@@ -132,7 +142,7 @@ Runs `ty` to check the types in the website generation code.
   - For every theme (with concurrency):
     - Create an isolated virtualenv in `build/`.
     - Install the latest sphinx pre-release, and then the theme's package.
-    - Generate a `conf.py` for rendering documentation using this theme.
+    - Generate an `index.rst` and `conf.py` for rendering documentation using this theme.
     - Call `sphinx-build` to generate the documentation using given theme.
 - Run `python src/generate_screenshots.py`
   - Creates a webdriver for Firefox.
