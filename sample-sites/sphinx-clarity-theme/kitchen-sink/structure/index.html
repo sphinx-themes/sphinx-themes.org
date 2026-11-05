@@ -1,0 +1,650 @@
+
+<!doctype html>
+<html
+  lang="en"
+  data-content_root="../../"
+  class="scroll-smooth [--header-height:calc(var(--spacing)*18)] [--header-padding:calc(var(--spacing)*12)]"
+  id="top"
+  
+>
+  <head>
+    <title>Structural Elements &mdash; Clarity Sample Site</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="generator"
+  content="Sphinx 9.2.0, Clarity Theme for Sphinx 2.1.0 (https://readcraft.io/sphinx-clarity-theme/)"
+/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<script src="../../_static/scripts/dark-mode.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=75810a84" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=a5519fdd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/output.css?v=f62a8d1b" />
+
+
+
+    
+    
+  </head>
+
+  <body >
+    
+  <!-- ============================================================== -->
+  <!-- Primary drawer before markup -->
+  <!-- ============================================================== -->
+  <div class="drawer">
+    <input id="primary-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
+      <!-- ========================================================== -->
+      <!-- Secondary drawer before markup -->
+      <!-- ========================================================== -->
+      <div class="drawer drawer-end">
+        <input id="secondary-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- ====================================================== -->
+          <!-- Page content -->
+          <!-- ====================================================== -->
+          <div class="bg-base-100 divide-base-200 divide-y">
+            
+<!-- Header -->
+<header id="main-header" class="bg-base-100 sticky top-0 z-50">
+  <!-- Announcement banner -->
+
+<!-- .Announcement banner -->
+
+  <div
+    class="container mx-auto flex h-[var(--header-height)] items-center px-4 md:px-0"
+  >
+    <!-- Left side -->
+    <div class="min-w-0 flex-1">
+      <div class="flex items-center gap-1 overflow-hidden md:gap-4">
+        <div class="min-w-0">
+<a
+  href="../../"
+  class="header-branding flex items-center gap-4"
+>
+  
+  
+
+  
+    <span
+      class="header-branding__title text-primary-content font-heading hidden overflow-hidden text-2xl font-normal whitespace-nowrap md:inline"
+    >
+      
+        Clarity Sample Site
+      
+    </span>
+  
+</a></div>
+        <div class="flex-shrink-0">
+          <!-- #Version select -->
+
+<!-- .#Version select -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="flex min-w-0 flex-1 items-center justify-end">
+      
+      <!-- .#Header menu (desktop) -->
+
+      <!-- #Search button -->
+      <div class="tooltip tooltip-bottom" data-tip="Search">
+        <button
+          class="btn btn-ghost btn-secondary"
+          onclick="searchModal.showModal()"
+        >
+          <span class="icon-[prime--search] text-2xl"></span>
+        </button>
+      </div>
+      <!-- .#Search button -->
+
+      
+<!-- #Language select -->
+
+<!-- .#Language select -->
+      
+<!-- #Mode select -->
+<div class="mode-select hidden md:block">
+  <div class="tooltip tooltip-bottom" data-tip="Light/dark mode">
+    <button class="btn btn-ghost btn-secondary">
+      <label class="swap swap-rotate">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" onclick="toggleMode()" />
+        <!-- light mode icon -->
+        <span class="icon-[prime--sun] swap-on text-2xl"></span>
+        <!-- dark mode icon -->
+        <span class="icon-[prime--moon] swap-off text-2xl"></span>
+      </label>
+    </button>
+  </div>
+</div>
+<!-- .#Mode select -->
+
+      <!-- #Header menu (mobile) -->
+      
+      <!-- .#Header menu (mobile) -->
+    </div>
+  </div>
+</header>
+            
+<!-- #Sidebar toggles (mobile) -->
+<nav class="p-4 lg:hidden">
+  <div class="container mx-auto flex items-center justify-between text-sm">
+    <!-- Left side -->
+    <div>
+      
+        <button
+          class="btn btn-secondary btn-sm text-secondary-content/80 font-normal"
+        >
+          <label
+            for="primary-drawer"
+            class="flex cursor-pointer items-center gap-1"
+          >
+            <span class="icon-[prime--align-left] text-xl"></span>
+            Table of Contents
+          </label>
+        </button>
+      
+    </div>
+    <!-- .Left side -->
+    <!-- Right side -->
+    <div>
+      
+        <button
+          class="btn btn-secondary btn-sm text-secondary-content/80 font-normal"
+        >
+          <label
+            for="secondary-drawer"
+            class="flex cursor-pointer items-center gap-1"
+          >
+            This page
+            <span class="icon-[prime--align-right] text-xl"></span>
+          </label>
+        </button>
+      
+    </div>
+    <!-- .Right side -->
+  </div>
+</nav>
+<!-- .#Sidebar toggles (mobile) -->
+
+            <main class="p-4 lg:pt-[var(--header-padding)]">
+              <div class="container mx-auto lg:flex lg:items-start">
+                <article class="lg:order-2 lg:w-8/12 lg:flex-none lg:px-12">
+                  
+<!-- #Breadcrumb -->
+<nav class="flex flex-wrap items-center gap-1 text-sm">
+  
+  <a
+    href="../../"
+    class="text-secondary-content/80 hover:text-accent-content hover:underline"
+  >
+    Clarity Sample Site
+  </a>
+
+  
+    <span
+      class="icon-[prime--arrow-right] text-secondary-content/50"
+    ></span>
+    <a
+      class="text-secondary-content/80 hover:text-accent-content hover:underline"
+      href="../"
+      >Kitchen Sink</a
+    >
+
+  
+  <span
+    class="icon-[prime--arrow-right] text-secondary-content/50"
+  ></span>
+  <span class="text-secondary-content/80">Structural Elements</span>
+</nav>
+<!-- .#Breadcrumb -->
+
+                  
+                  <main role="main">
+  <section id="structural-elements">
+<h1>Structural Elements<a class="headerlink" href="#structural-elements" title="Link to this heading">¶</a></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
+finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+gravida nisl. Praesent aliquet odio eget libero elementum, quis rhoncus tellus tincidunt.
+Suspendisse quis volutpat ipsum. Sed lobortis scelerisque tristique. Aenean condimentum risus tellus,
+quis accumsan ipsum laoreet ut. Integer porttitor maximus suscipit. Mauris in posuere sapien.
+Aliquam accumsan feugiat ligula, nec fringilla libero commodo sed. Proin et erat pharetra.</p>
+<hr class="docutils" />
+<p>Etiam turpis ante, luctus sed velit tristique, finibus volutpat dui. Nam sagittis vel ante nec malesuada.
+Praesent dignissim mi nec ornare elementum. Nunc eu augue vel sem dignissim cursus sed et nulla.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Pellentesque dictum dui sem, non placerat tortor rhoncus in. Sed placerat nulla at rhoncus iaculis.</p>
+<section id="document-section">
+<h2>Document Section<a class="headerlink" href="#document-section" title="Link to this heading">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
+nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
+Fusce aliquet auctor cursus. Phasellus ex neque, vestibulum non est vitae, viverra fringilla tortor.
+Donec vestibulum convallis justo, a faucibus lorem vulputate vel. Aliquam cursus odio eu felis sodales aliquet.
+Aliquam erat volutpat. Maecenas eget dictum mauris. Suspendisse arcu eros, condimentum eget risus sed,
+luctus efficitur arcu. Cras ut dictum mi. Nulla congue interdum lorem, semper semper enim commodo nec.</p>
+<section id="document-subsection">
+<h3>Document Subsection<a class="headerlink" href="#document-subsection" title="Link to this heading">¶</a></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
+nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
+Duis auctor rutrum orci, in ornare lacus condimentum quis. Quisque arcu velit, facilisis quis interdum ac,
+hendrerit auctor mauris. Curabitur urna nibh, porttitor at ante sit amet, vestibulum interdum dolor.
+Duis dictum elit orci, tincidunt imperdiet sem pellentesque et. In vehicula pellentesque varius.
+Phasellus a turpis sollicitudin, bibendum massa et, imperdiet neque. Integer quis sapien in magna rutrum bibendum.
+Integer cursus ex sed magna vehicula finibus. Proin tempus orci quis dolor tempus, nec condimentum odio vestibulum.
+Etiam efficitur sollicitudin libero, tincidunt volutpat ligula interdum sed.</p>
+<section id="document-subsubsection">
+<h4>Document Subsubsection<a class="headerlink" href="#document-subsubsection" title="Link to this heading">¶</a></h4>
+<p>Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
+pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
+Integer at leo vitae felis pretium aliquam fringilla quis odio. Sed pharetra enim accumsan feugiat pretium.
+Maecenas at pharetra tortor. Morbi semper eget mi vel finibus. Cras rutrum nulla eros, id feugiat arcu pellentesque ut.
+Sed finibus tortor ac nisi ultrices viverra. Duis feugiat malesuada sapien, at commodo ante porttitor ac.
+Curabitur posuere mauris mi, vel ornare orci scelerisque sit amet. Suspendisse nec fringilla dui.</p>
+<section id="document-paragraph">
+<h5>Document Paragraph<a class="headerlink" href="#document-paragraph" title="Link to this heading">¶</a></h5>
+<p>Pellentesque nec est in odio ultrices elementum. Vestibulum et hendrerit sapien, quis vulputate turpis.
+Suspendisse potenti. Curabitur tristique sit amet lectus non viverra. Phasellus rutrum dapibus turpis sed imperdiet.
+Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
+Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="structural-elements-2">
+<h1>Structural Elements 2<a class="headerlink" href="#structural-elements-2" title="Link to this heading">¶</a></h1>
+<p>Etiam turpis ante, luctus sed velit tristique, finibus volutpat dui. Nam sagittis vel ante nec malesuada.
+Praesent dignissim mi nec ornare elementum. Nunc eu augue vel sem dignissim cursus sed et nulla.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Pellentesque dictum dui sem, non placerat tortor rhoncus in. Sed placerat nulla at rhoncus iaculis.</p>
+<section id="id1">
+<h2>Document Section<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
+nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
+Fusce aliquet auctor cursus. Phasellus ex neque, vestibulum non est vitae, viverra fringilla tortor.
+Donec vestibulum convallis justo, a faucibus lorem vulputate vel. Aliquam cursus odio eu felis sodales aliquet.
+Aliquam erat volutpat. Maecenas eget dictum mauris. Suspendisse arcu eros, condimentum eget risus sed,
+luctus efficitur arcu. Cras ut dictum mi. Nulla congue interdum lorem, semper semper enim commodo nec.</p>
+<section id="id2">
+<h3>Document Subsection<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<figure class="align-right" id="id3" style="width: 200px">
+<img alt="https://picsum.photos/200/200" src="https://picsum.photos/200/200" />
+<figcaption>
+<p><span class="caption-text">This is a caption for a figure. Text should wrap around the caption.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
+nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
+Duis auctor rutrum orci, in ornare lacus condimentum quis. Quisque arcu velit, facilisis quis interdum ac,
+hendrerit auctor mauris. Curabitur urna nibh, porttitor at ante sit amet, vestibulum interdum dolor.
+Duis dictum elit orci, tincidunt imperdiet sem pellentesque et. In vehicula pellentesque varius.
+Phasellus a turpis sollicitudin, bibendum massa et, imperdiet neque. Integer quis sapien in magna rutrum bibendum.
+Integer cursus ex sed magna vehicula finibus. Proin tempus orci quis dolor tempus, nec condimentum odio vestibulum.
+Etiam efficitur sollicitudin libero, tincidunt volutpat ligula interdum sed. Praesent congue sagittis nisl et suscipit.
+Vivamus sagittis risus et egestas commodo.Cras venenatis arcu in pharetra interdum.
+Donec quis metus porttitor tellus cursus lobortis. Quisque et orci magna. Fusce rhoncus mi mi,
+at vehicula massa rhoncus quis. Mauris augue leo, pretium eget molestie vitae, efficitur nec nulla.
+In hac habitasse platea dictumst. Sed sit amet imperdiet purus.</p>
+</section>
+</section>
+</section>
+
+</main>
+
+                  
+<!-- #Article navigation -->
+<nav class="clear-both py-8">
+  <ul class="text-secondary-content flex justify-between gap-4">
+    <li class="flex flex-col gap-1">
+      
+        <span class="flex items-center text-xs font-light">
+          <span class="icon-[prime--angle-left]"></span>
+          Previous
+        </span>
+        <a
+          class="hover:text-accent-content pl-1 text-sm underline"
+          href="../really-long/"
+          title="Previous article"
+          >Really Long Page Title because we should test sidebar wrapping</a
+        >
+      
+    </li>
+    <li class="flex flex-col gap-1 lg:items-end">
+      
+        <span class="flex items-center text-xs font-light">
+          Next
+          <span class="icon-[prime--angle-right]"></span>
+        </span>
+        <a
+          class="hover:text-accent-content pr-1 text-sm underline"
+          href="../tables/"
+          title="Next article"
+          >Tables</a
+        >
+      
+    </li>
+  </ul>
+</nav>
+<!-- .#Article navigation -->
+                  
+<!-- #Article footer -->
+<footer
+  class="article-footer border-base-200 text-secondary-content/80 my-4 border-t pt-8 text-sm"
+>
+  <div class="flex flex-col justify-between gap-4 lg:flex-row">
+    <div class="article-footer__left">
+      
+      
+    </div>
+    <div class="article-footer__right flex items-center gap-2">
+      
+        
+  <a
+    href="../../_sources/kitchen-sink/structure.rst.txt"
+    rel="nofollow"
+    class="show-page-source"
+    >Show page source</a
+  >
+        
+
+      
+    </div>
+  </div>
+</footer>
+<!-- .#Article footer -->
+                </article>
+
+                <!-- #Primary drawer (desktop) -->
+                <nav
+                  class="lg:sticky lg:top-[calc(var(--header-height)+var(--announcement-height,0px)+var(--header-padding))] lg:h-[calc(100vh-var(--header-height)-var(--announcement-height,0px)-calc(var(--header-padding)*2))] lg:overflow-y-auto scrollbar-overlay hidden lg:order-1 lg:block lg:w-2/12 lg:flex-none"
+                >
+                  
+<div class="global-toc">
+  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+</div>
+                </nav>
+                <!-- .#Primary drawer (desktop) -->
+
+                <!-- #Secondary drawer (desktop) -->
+                <aside
+                  class="lg:sticky lg:top-[calc(var(--header-height)+var(--announcement-height,0px)+var(--header-padding))] lg:h-[calc(100vh-var(--header-height)-var(--announcement-height,0px)-calc(var(--header-padding)*2))] lg:overflow-y-auto scrollbar-overlay hidden lg:order-3 lg:block lg:w-2/12 lg:flex-none"
+                >
+                  
+
+  <div class="local-toc">
+    <p class="local-toc__caption mt-0 mb-4 font-semibold uppercase">
+      On this page
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">Structural Elements</a><ul>
+<li><a class="reference internal" href="#document-section">Document Section</a><ul>
+<li><a class="reference internal" href="#document-subsection">Document Subsection</a><ul>
+<li><a class="reference internal" href="#document-subsubsection">Document Subsubsection</a><ul>
+<li><a class="reference internal" href="#document-paragraph">Document Paragraph</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#structural-elements-2">Structural Elements 2</a><ul>
+<li><a class="reference internal" href="#id1">Document Section</a><ul>
+<li><a class="reference internal" href="#id2">Document Subsection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+                </aside>
+                <!-- .#Secondary drawer (desktop) -->
+              </div>
+            </main>
+
+            
+<footer class="p-4">
+  <div
+    class="text-secondary-content container mx-auto flex h-8 items-center justify-center text-center text-sm"
+  >
+    <div>
+        Copyright &copy;
+        2021, Pradyun Gedam.
+      <br class="lg:hidden" />
+      Made with
+      <a
+        href="https://www.sphinx-doc.org"
+        class="hover:text-accent-content underline"
+        >Sphinx</a
+      >
+      and
+      <a
+        href="https://readcraft.io/sphinx-clarity-theme/?utm_source=sphinx_clarity_theme"
+        class="hover:text-accent-content underline"
+        >Clarity Theme for Sphinx </a
+      >.
+    </div>
+  </div>
+</footer>
+          </div>
+
+          
+<!-- #Scroll to top -->
+<div id="scroll-to-top" class="toast toast-end">
+  <a
+    class="btn btn-secondary btn-sm"
+    href="#top"
+    aria-label="Scroll to top"
+  >
+    Back to top
+    <span class="icon-[prime--arrow-up] text-base"></span>
+  </a>
+</div>
+<!-- .#Scroll to top -->
+          
+<!-- #Search dialog -->
+<dialog id="searchModal" class="modal">
+  <div class="modal-box absolute top-8 lg:top-16">
+    <search>
+      <form action="../../search/" method="get">
+        <label class="input input-xl w-full">
+          <span class="icon-[prime--search] text-4xl"></span>
+          <input
+            type="search"
+            class="grow"
+            placeholder="Search the docs"
+            name="q"
+            placeholder="Search the documentation"
+            aria-label="Search the documentation"
+          />
+          <kbd class="kbd kbd-lg p-4">Enter</kbd>
+        </label>
+      </form>
+    </search>
+    <p class="mt-4 text-sm">
+      Press <kbd class="kbd">Enter</kbd> to search. Press
+      <kbd class="kbd">Esc</kbd> or click outside to close.
+    </p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+<!-- .#Search dialog -->
+
+          <!-- ====================================================== -->
+          <!-- .Page content -->
+          <!-- ====================================================== -->
+
+          <!-- ====================================================== -->
+          <!-- Secondary drawer after markup -->
+          <!-- ====================================================== -->
+        </div>
+        <div class="drawer-side">
+          <label
+            for="secondary-drawer"
+            class="drawer-overlay"
+            aria-label="Close secondary sidebar"
+          ></label>
+          
+          <div
+            class="bg-base-100 text-base-content mt-[calc(var(--header-height)+var(--announcement-height,0px))] min-h-full w-80 overflow-y-auto p-4"
+          >
+            <!-- ==================================================== -->
+            <!-- Secondary drawer (mobile) content -->
+            <!-- ==================================================== -->
+            <div class="text-xs">
+
+  <div class="local-toc">
+    <p class="local-toc__caption mt-0 mb-4 font-semibold uppercase">
+      On this page
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">Structural Elements</a><ul>
+<li><a class="reference internal" href="#document-section">Document Section</a><ul>
+<li><a class="reference internal" href="#document-subsection">Document Subsection</a><ul>
+<li><a class="reference internal" href="#document-subsubsection">Document Subsubsection</a><ul>
+<li><a class="reference internal" href="#document-paragraph">Document Paragraph</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#structural-elements-2">Structural Elements 2</a><ul>
+<li><a class="reference internal" href="#id1">Document Section</a><ul>
+<li><a class="reference internal" href="#id2">Document Subsection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================== -->
+      <!-- Primary drawer after markup -->
+      <!-- ========================================================== -->
+    </div>
+
+    <div class="drawer-side">
+      <label
+        for="primary-drawer"
+        aria-label="Close primary sidebar"
+        class="drawer-overlay"
+      ></label>
+      
+      <div
+        class="bg-base-100 text-base-content mt-[calc(var(--header-height)+var(--announcement-height,0px))] min-h-full w-80 overflow-y-auto p-4"
+      >
+        <!-- ===================================================== -->
+        <!-- Primary drawer (mobile) content -->
+        <!-- ===================================================== -->
+        <div class="text-xs">
+<div class="global-toc">
+  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Kitchen Sink</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is a caption</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-one/">Placeholder Page One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-two/">Placeholder Page Two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../really-long-title/">This is just a page with a really long title for checking how the theme handles these situations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../long-page/">Long Page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sphinx-doc.org">External Link</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional &quot;hidden&quot; Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-three/">Placeholder Page Three</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../placeholder-four/">Placeholder Page Four</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-themes.org">Sphinx Theme Gallery</a></li>
+</ul>
+
+</div></div>
+      </div>
+    </div>
+  </div>
+
+
+    
+    <script
+  defer
+  src="../../_static/scripts/scroll-to-top.js"
+></script>
+
+<script>
+  window.ScrollspyConfig = {
+    rootMargin: "-120px 0px -60% 0px",
+  };
+</script>
+<script defer src="../../_static/scripts/scrollspy.js"></script>
+
+
+
+
+  <script src="../../_static/documentation_options.js?v=86c0dea4"></script>
+  <script src="../../_static/doctools.js?v=c73fddf3"></script>
+  <script src="../../_static/sphinx_highlight.js?v=36527ec2"></script>
+    </body>
+</html>

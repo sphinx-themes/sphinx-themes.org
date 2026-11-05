@@ -1,0 +1,66 @@
+/*
+ * Sphinx Tabs extension styles for Clarity Theme.
+ *
+ * This file is conditionally injected by the theme's setup() only when the
+ * sphinx_tabs extension is present in the documentation project, so it is
+ * never loaded unnecessarily.
+ *
+ * Written in plain CSS (CSS custom properties) rather than Tailwind @apply
+ * so it can be served as a standalone file without a build step.
+ *
+ * Visual design mirrors sphinx-design tabs: each label carries its own
+ * border-bottom (no shared strip), asymmetric padding, bold weight, and a
+ * hairline box-shadow framing the panel.
+ */
+
+article main .sphinx-tabs {
+  margin: 1em 0;
+}
+
+/* Tab strip — no shared bottom border; each button owns its underline */
+article main .sphinx-tabs [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Tab button – base */
+article main .sphinx-tabs .sphinx-tabs-tab {
+  padding: 1em 1.25em 0.5em;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary-content);
+  background: transparent;
+  border: none;
+  border-bottom: 0.125rem solid transparent;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+/* Hover on inactive tab */
+article main .sphinx-tabs .sphinx-tabs-tab:hover:not([aria-selected="true"]) {
+  color: var(--color-accent-content);
+  border-bottom-color: var(--color-base-200);
+}
+
+/* Focus ring */
+article main .sphinx-tabs .sphinx-tabs-tab:focus-visible {
+  border-radius: 0.125rem;
+  outline: 2px solid var(--color-accent-content);
+  outline-offset: 2px;
+}
+
+/* Active tab */
+article main .sphinx-tabs .sphinx-tabs-tab[aria-selected="true"] {
+  border-bottom-color: var(--color-accent-content);
+  color: var(--color-accent-content);
+}
+
+/* Tab panel — hairline top/bottom matching sphinx-design's box-shadow treatment */
+article main .sphinx-tabs .sphinx-tabs-panel {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow:
+    0 -0.0625rem var(--color-base-200),
+    0 0.0625rem var(--color-base-200);
+}
