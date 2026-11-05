@@ -11,11 +11,8 @@ _FEATURED = [
     "shibuya",
     "sphinx-book-theme",
     "pydata-sphinx-theme",
-    "sphinx-press-theme",
     "piccolo-theme",
-    "insegel",
     "insipid-sphinx-theme",
-    "sphinx-immaterial",
 ]
 
 

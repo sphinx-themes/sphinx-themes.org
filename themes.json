@@ -37,22 +37,10 @@
       "pypi": "pydata-sphinx-theme"
     },
     {
-      "config": "press",
-      "display": "Press",
-      "documentation": "https://schettino72.github.io/sphinx_press_site/",
-      "pypi": "sphinx-press-theme"
-    },
-    {
       "config": "piccolo_theme",
       "display": "Piccolo",
       "documentation": "https://piccolo-theme.readthedocs.io/en/latest/",
       "pypi": "piccolo-theme"
-    },
-    {
-      "config": "insegel",
-      "display": "Insegel",
-      "documentation": "https://insegel.readthedocs.io/en/latest/",
-      "pypi": "insegel"
     },
     {
       "config": {
@@ -62,12 +50,6 @@
       "display": "Insipid",
       "documentation": "https://insipid-sphinx-theme.readthedocs.io/",
       "pypi": "insipid-sphinx-theme"
-    },
-    {
-      "config": "sphinx_immaterial",
-      "display": "Immaterial",
-      "documentation": "https://jbms.github.io/sphinx-immaterial/",
-      "pypi": "sphinx-immaterial"
     },
     {
       "config": {
@@ -176,6 +158,18 @@
       "pypi": "hachibee-sphinx-theme"
     },
     {
+      "config": "sphinx_immaterial",
+      "display": "Immaterial",
+      "documentation": "https://jbms.github.io/sphinx-immaterial/",
+      "pypi": "sphinx-immaterial"
+    },
+    {
+      "config": "insegel",
+      "display": "Insegel",
+      "documentation": "https://insegel.readthedocs.io/en/latest/",
+      "pypi": "insegel"
+    },
+    {
       "config": "karma_sphinx_theme",
       "display": "Karma",
       "pypi": "karma-sphinx-theme"
@@ -260,6 +254,12 @@
       },
       "display": "PDJ",
       "pypi": "sphinx-pdj-theme"
+    },
+    {
+      "config": "press",
+      "display": "Press",
+      "documentation": "https://schettino72.github.io/sphinx_press_site/",
+      "pypi": "sphinx-press-theme"
     },
     {
       "config": "python_docs_theme",
