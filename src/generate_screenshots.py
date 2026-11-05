@@ -22,7 +22,7 @@ from helpers.themes import Theme, get_themes
 
 if TYPE_CHECKING:
     import rich.progress
-    from playwright.async_api import Page, Playwright
+    from playwright.async_api import Page
 
 
 # --------------------------------------------------------------------------------------
@@ -157,21 +157,16 @@ async def render_at_multiple_resolutions(
 # Main entrypoint
 # --------------------------------------------------------------------------------------
 async def warm_up(browser: Browser) -> None:
+    """Warm up the browser by opening and closing a blank page.
+
+    Discard the first page, which is most likely to get stuck.
+    """
     page = await browser.new_page()
     await page.goto("about:blank")
     await page.close()
 
 
-async def run(playwright: Playwright) -> None:
-    print("Launching browser...", end=" ", flush=True)
-    try:
-        browser = await playwright.firefox.launch()
-    finally:
-        print("Done")
-
-    # It is the pages opened right after the launch that get wedged, so open and
-    # discard one before fanning out. Failing at this is not interesting: the
-    # per-theme guard below is what we actually rely on.
+async def run(browser: Browser) -> None:
     try:
         await asyncio.wait_for(warm_up(browser), timeout=ATTEMPT_TIMEOUT)
     except TimeoutError, PlaywrightError:
@@ -189,7 +184,13 @@ async def run(playwright: Playwright) -> None:
 
 async def main() -> None:
     async with async_playwright() as playwright:
-        await run(playwright)
+        print("Launching browser...", end=" ", flush=True)
+        browser = await playwright.firefox.launch()
+        print("Done")
+        try:
+            await run(browser)
+        finally:
+            await browser.close()
 
 
 if __name__ == "__main__":
