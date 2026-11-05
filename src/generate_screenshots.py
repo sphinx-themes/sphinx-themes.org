@@ -5,7 +5,12 @@ from __future__ import annotations
 import asyncio
 import functools
 import io
+import os
+import sys
+import tempfile
+from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING
+from unittest.mock import patch
 
 from PIL import Image
 from playwright.async_api import Browser, async_playwright
@@ -21,8 +26,10 @@ from helpers.output import run_for_themes_with_progress
 from helpers.themes import Theme, get_themes
 
 if TYPE_CHECKING:
+    from collections.abc import AsyncGenerator
+
     import rich.progress
-    from playwright.async_api import Page, Playwright
+    from playwright.async_api import Page
 
 
 # --------------------------------------------------------------------------------------
@@ -71,6 +78,24 @@ def render_into_template(
 # us one theme's preview image, instead of hanging the entire run.
 ATTEMPT_TIMEOUT = 120  # seconds
 ATTEMPTS = 2
+
+
+@asynccontextmanager
+async def firefox_on_macos_27_workaround() -> AsyncGenerator[None]:
+    # Isolate Firefox app data on macOS 27; remove with Firefox 158+.
+    # https://github.com/gaurav/prcoder/issues/80
+    if sys.platform != "darwin":
+        yield
+        return
+
+    with tempfile.TemporaryDirectory(prefix="firefox-data-") as root:
+        app = os.path.join(root, "app")
+        local = os.path.join(root, "local")
+        os.mkdir(app)
+        os.mkdir(local)
+
+        with patch.dict(os.environ, MOZ_APP_DATA=app, MOZ_LOCAL_APP_DATA=local):
+            yield
 
 
 async def take_screenshots_at_all_resolutions(
@@ -157,21 +182,16 @@ async def render_at_multiple_resolutions(
 # Main entrypoint
 # --------------------------------------------------------------------------------------
 async def warm_up(browser: Browser) -> None:
+    """Warm up the browser by opening and closing a blank page.
+
+    Discard the first page, which is most likely to get stuck.
+    """
     page = await browser.new_page()
     await page.goto("about:blank")
     await page.close()
 
 
-async def run(playwright: Playwright) -> None:
-    print("Launching browser...", end=" ", flush=True)
-    try:
-        browser = await playwright.firefox.launch()
-    finally:
-        print("Done")
-
-    # It is the pages opened right after the launch that get wedged, so open and
-    # discard one before fanning out. Failing at this is not interesting: the
-    # per-theme guard below is what we actually rely on.
+async def run(browser: Browser) -> None:
     try:
         await asyncio.wait_for(warm_up(browser), timeout=ATTEMPT_TIMEOUT)
     except TimeoutError, PlaywrightError:
@@ -188,8 +208,17 @@ async def run(playwright: Playwright) -> None:
 
 
 async def main() -> None:
-    async with async_playwright() as playwright:
-        await run(playwright)
+    async with (
+        firefox_on_macos_27_workaround(),
+        async_playwright() as playwright,
+    ):
+        print("Launching browser...", end=" ", flush=True)
+        browser = await playwright.firefox.launch()
+        print("Done")
+        try:
+            await run(browser)
+        finally:
+            await browser.close()
 
 
 if __name__ == "__main__":

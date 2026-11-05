@@ -4,43 +4,107 @@
       "config": "alabaster",
       "display": "Alabaster",
       "documentation": "https://alabaster.readthedocs.io/en/latest/",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "sphinx_rtd_theme",
       "display": "Read the Docs",
       "documentation": "https://sphinx-rtd-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-rtd-theme"
+      "pypi": "sphinx-rtd-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Language switcher",
+        "Responsive",
+        "Two columns",
+        "Version switcher"
+      ]
     },
     {
       "config": "furo",
       "display": "Furo",
       "documentation": "https://pradyunsg.me/furo/",
-      "pypi": "furo"
+      "pypi": "furo",
+      "tags": [
+        "Announcement banner",
+        "Centered",
+        "Dark mode",
+        "Responsive",
+        "RTL support",
+        "Three columns",
+        "Version switcher"
+      ]
     },
     {
       "config": "shibuya",
       "display": "Shibuya",
       "documentation": "https://shibuya.lepture.com/",
-      "pypi": "shibuya"
+      "pypi": "shibuya",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Language switcher",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": "sphinx_book_theme",
       "display": "Book",
       "documentation": "https://sphinx-book-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-book-theme"
+      "pypi": "sphinx-book-theme",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": "pydata_sphinx_theme",
       "display": "PyData",
       "documentation": "https://pydata-sphinx-theme.readthedocs.io/en/latest/",
-      "pypi": "pydata-sphinx-theme"
+      "pypi": "pydata-sphinx-theme",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": "piccolo_theme",
       "display": "Piccolo",
       "documentation": "https://piccolo-theme.readthedocs.io/en/latest/",
-      "pypi": "piccolo-theme"
+      "pypi": "piccolo-theme",
+      "tags": [
+        "Announcement banner",
+        "Centered",
+        "Dark mode",
+        "Responsive",
+        "Three columns",
+        "Top bar"
+      ]
     },
     {
       "config": {
@@ -49,7 +113,14 @@
       },
       "display": "Insipid",
       "documentation": "https://insipid-sphinx-theme.readthedocs.io/",
-      "pypi": "insipid-sphinx-theme"
+      "pypi": "insipid-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -60,7 +131,13 @@
         "html_theme_path": "[sphinx_adc_theme.get_html_theme_path()]"
       },
       "display": "ADC",
-      "pypi": "sphinx-adc-theme"
+      "pypi": "sphinx-adc-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns",
+        "Version switcher"
+      ]
     },
     {
       "config": {
@@ -69,7 +146,16 @@
       },
       "display": "Awesome",
       "documentation": "https://sphinxawesome.xyz",
-      "pypi": "sphinxawesome-theme"
+      "pypi": "sphinxawesome-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Responsive",
+        "Three columns",
+        "Top bar"
+      ]
     },
     {
       "config": {
@@ -79,7 +165,13 @@
         "html_theme": "basicstrap"
       },
       "display": "Basicstrap",
-      "pypi": "sphinxjp-themes-basicstrap"
+      "pypi": "sphinxjp-themes-basicstrap",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -90,7 +182,12 @@
         "html_theme_path": "[sphinx_bernard_theme.get_html_theme_path()]"
       },
       "display": "Bernard",
-      "pypi": "sphinx-bernard-theme"
+      "pypi": "sphinx-bernard-theme",
+      "tags": [
+        "Centered",
+        "Responsive",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -101,7 +198,14 @@
         "html_theme_path": "[better.better_theme_path]"
       },
       "display": "Better",
-      "pypi": "sphinx-better-theme"
+      "pypi": "sphinx-better-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -112,7 +216,14 @@
         "html_theme_path": "sphinx_bootstrap_theme.get_html_theme_path()"
       },
       "display": "Bootstrap",
-      "pypi": "sphinx-bootstrap-theme"
+      "pypi": "sphinx-bootstrap-theme",
+      "tags": [
+        "Centered",
+        "Header navigation",
+        "Responsive",
+        "Single column",
+        "Top bar"
+      ]
     },
     {
       "config": {
@@ -123,34 +234,84 @@
       },
       "display": "Breeze",
       "documentation": "https://sphinx-breeze-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-breeze-theme"
+      "pypi": "sphinx-breeze-theme",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Language switcher",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": "sphinx_clarity_theme",
       "display": "Clarity",
       "documentation": "https://readcraft.io/sphinx-clarity-theme/docs/en/latest/",
-      "pypi": "sphinx-clarity-theme"
+      "pypi": "sphinx-clarity-theme",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Language switcher",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Two columns",
+        "Version switcher"
+      ]
     },
     {
       "config": "cloud",
       "display": "Cloud",
-      "pypi": "cloud-sptheme"
+      "pypi": "cloud-sptheme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "conestack",
       "display": "Conestack",
       "documentation": "https://sphinx-conestack-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-conestack-theme"
+      "pypi": "sphinx-conestack-theme",
+      "tags": [
+        "Centered",
+        "Dark mode",
+        "Responsive",
+        "Three columns",
+        "Top bar"
+      ]
     },
     {
       "config": "sphinx_documatt_theme",
       "display": "Documatt",
-      "pypi": "sphinx-documatt-theme"
+      "pypi": "sphinx-documatt-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Three columns",
+        "Top bar"
+      ]
     },
     {
       "config": "groundwork",
       "display": "Groundwork",
-      "pypi": "groundwork-sphinx-theme"
+      "pypi": "groundwork-sphinx-theme",
+      "tags": [
+        "Centered",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -161,24 +322,54 @@
         "html_theme_path": "[hachibee_sphinx_theme.get_html_themes_path()]"
       },
       "display": "Hachibee",
-      "pypi": "hachibee-sphinx-theme"
+      "pypi": "hachibee-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "sphinx_immaterial",
       "display": "Immaterial",
       "documentation": "https://jbms.github.io/sphinx-immaterial/",
-      "pypi": "sphinx-immaterial"
+      "pypi": "sphinx-immaterial",
+      "tags": [
+        "Announcement banner",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Language switcher",
+        "Responsive",
+        "RTL support",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": "insegel",
       "display": "Insegel",
       "documentation": "https://insegel.readthedocs.io/en/latest/",
-      "pypi": "insegel"
+      "pypi": "insegel",
+      "tags": [
+        "Centered",
+        "Responsive",
+        "Two columns"
+      ]
     },
     {
       "config": "karma_sphinx_theme",
       "display": "Karma",
-      "pypi": "karma-sphinx-theme"
+      "pypi": "karma-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -189,13 +380,32 @@
         "html_theme_path": "[kotti_docs_theme.get_theme_dir()]"
       },
       "display": "Kotti",
-      "pypi": "kotti-docs-theme"
+      "pypi": "kotti-docs-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "lumina",
       "display": "Lumina",
       "documentation": "https://r4sky0.github.io/sphinx-lumina-theme/",
-      "pypi": "sphinx-lumina-theme"
+      "pypi": "sphinx-lumina-theme",
+      "tags": [
+        "Announcement banner",
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Responsive",
+        "RTL support",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": {
@@ -209,7 +419,13 @@
         "html_theme_path": "maisie_sphinx_theme.html_theme_path()"
       },
       "display": "Maisie",
-      "pypi": "maisie-sphinx-theme"
+      "pypi": "maisie-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -220,7 +436,12 @@
         "html_theme_path": "[murray.get_html_theme_path()]"
       },
       "display": "Murray",
-      "pypi": "murray"
+      "pypi": "murray",
+      "tags": [
+        "Centered",
+        "Responsive",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -231,13 +452,31 @@
         "html_theme_path": "[sphinx_nameko_theme.get_html_theme_path()]"
       },
       "display": "Nameko",
-      "pypi": "sphinx-nameko-theme"
+      "pypi": "sphinx-nameko-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "sphinx_nefertiti",
       "display": "Nefertiti",
       "documentation": "https://sphinx-nefertiti.readthedocs.io/en/latest/",
-      "pypi": "sphinx-nefertiti"
+      "pypi": "sphinx-nefertiti",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Dark mode",
+        "Header navigation",
+        "Language switcher",
+        "Responsive",
+        "Three columns",
+        "Top bar",
+        "Version switcher"
+      ]
     },
     {
       "config": {
@@ -248,7 +487,13 @@
         "html_theme_path": "[sphinx_theme_pd.get_html_theme_path()]"
       },
       "display": "PD",
-      "pypi": "sphinx-theme-pd"
+      "pypi": "sphinx-theme-pd",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -259,18 +504,39 @@
         "html_theme_path": "[sphinx_pdj_theme.get_html_theme_path()]"
       },
       "display": "PDJ",
-      "pypi": "sphinx-pdj-theme"
+      "pypi": "sphinx-pdj-theme",
+      "tags": [
+        "Dark mode",
+        "Responsive",
+        "Two columns"
+      ]
     },
     {
       "config": "press",
       "display": "Press",
       "documentation": "https://schettino72.github.io/sphinx_press_site/",
-      "pypi": "sphinx-press-theme"
+      "pypi": "sphinx-press-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Dark mode",
+        "Header navigation",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "python_docs_theme",
       "display": "Python Documentation",
-      "pypi": "python-docs-theme"
+      "pypi": "python-docs-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Dark mode",
+        "Responsive",
+        "RTL support",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -281,7 +547,14 @@
         "html_theme_path": "[sphinx_readable_theme.get_html_theme_path()]"
       },
       "display": "Readable",
-      "pypi": "sphinx-readable-theme"
+      "pypi": "sphinx-readable-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Centered",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -292,12 +565,24 @@
         "html_theme_path": "[sphinx_redactor_theme.get_html_theme_path()]"
       },
       "display": "Redactor",
-      "pypi": "sphinx-redactor-theme"
+      "pypi": "sphinx-redactor-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Two columns"
+      ]
     },
     {
       "config": "renku",
       "display": "Renku",
-      "pypi": "renku-sphinx-theme"
+      "pypi": "renku-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Language switcher",
+        "Responsive",
+        "Two columns",
+        "Version switcher"
+      ]
     },
     {
       "config": {
@@ -309,13 +594,21 @@
         "html_theme_path": "[os.path.dirname(mozilla_sphinx_theme.__file__)]"
       },
       "display": "Sandstone",
-      "pypi": "mozilla-sphinx-theme"
+      "pypi": "mozilla-sphinx-theme",
+      "tags": [
+        "Two columns"
+      ]
     },
     {
       "config": "sizzle",
       "display": "Sizzle",
       "documentation": "https://docs.red-dove.com/sphinx_sizzle_theme/index.html",
-      "pypi": "sphinx-sizzle-theme"
+      "pypi": "sphinx-sizzle-theme",
+      "tags": [
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -326,7 +619,12 @@
         "html_theme_path": "[solar_theme.theme_path]"
       },
       "display": "Solar",
-      "pypi": "solar-theme"
+      "pypi": "solar-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -337,12 +635,22 @@
         "html_theme_path": "[sphinx_theme.get_html_theme_path('stanford-theme')]"
       },
       "display": "Stanford",
-      "pypi": "sphinx-theme"
+      "pypi": "sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Two columns",
+        "Version switcher"
+      ]
     },
     {
       "config": "topos-theme",
       "display": "Topos",
-      "pypi": "topos-theme"
+      "pypi": "topos-theme",
+      "tags": [
+        "Responsive",
+        "Three columns"
+      ]
     },
     {
       "config": {
@@ -353,12 +661,27 @@
       },
       "display": "Wagtail",
       "documentation": "https://sphinx-wagtail-theme.readthedocs.io/en/latest/",
-      "pypi": "sphinx-wagtail-theme"
+      "pypi": "sphinx-wagtail-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Dark mode",
+        "Header navigation",
+        "Responsive",
+        "Three columns",
+        "Top bar"
+      ]
     },
     {
       "config": "yummy_sphinx_theme",
       "display": "Yummy",
-      "pypi": "yummy-sphinx-theme"
+      "pypi": "yummy-sphinx-theme",
+      "tags": [
+        "Centered",
+        "Header navigation",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -369,7 +692,12 @@
         "html_theme_path": "[zerovm_sphinx_theme.theme_path]"
       },
       "display": "ZeroVM",
-      "pypi": "zerovm-sphinx-theme"
+      "pypi": "zerovm-sphinx-theme",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": {
@@ -381,52 +709,104 @@
         "html_theme_path": "[tibas.tt.get_path(), alabaster.get_path()]"
       },
       "display": "tibas.tt",
-      "pypi": "tibas-tt"
+      "pypi": "tibas-tt",
+      "tags": [
+        "Centered",
+        "Responsive",
+        "Single column"
+      ]
     },
     {
       "config": "agogo",
       "display": "agogo",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Centered",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "bizstyle",
       "display": "bizstyle",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Responsive",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "classic",
       "display": "classic",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "haiku",
       "display": "haiku",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Centered",
+        "Single column",
+        "Top bar"
+      ]
     },
     {
       "config": "nature",
       "display": "nature",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "pyramid",
       "display": "pyramid",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "scrolls",
       "display": "scrolls",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Centered",
+        "Responsive",
+        "Single column",
+        "Top bar"
+      ]
     },
     {
       "config": "sphinxdoc",
       "display": "sphinxdoc",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     },
     {
       "config": "traditional",
       "display": "traditional",
-      "pypi": "sphinx"
+      "pypi": "sphinx",
+      "tags": [
+        "Breadcrumbs",
+        "Top bar",
+        "Two columns"
+      ]
     }
   ]
 }
