@@ -6,14 +6,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>Blocks &mdash; Wagtail</title>
+        <title>Blocks &mdash; Wagtail Sample Site</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=9cdaa676" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
             <link rel="index" title="Index" href="../../genindex/" />
             <link rel="search" title="Search" href="../../search/" />
-            <link rel="top" title="Wagtail" href="#" />
+            <link rel="top" title="Wagtail Sample Site" href="#" />
             <link rel="up" title="Kitchen Sink" href="../" />
             <link rel="next" title="Generic items" href="../generic/" />
             <link rel="prev" title="Directives in the reStructuredText domain" href="../domains/api_restructuredtext_domain/" />
@@ -261,6 +261,18 @@ annoying.</p>
 &gt; Why didn't I think of that?
 </pre></div>
 </div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ParameterT"</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ReturnT"</span><span class="p">)</span>
+<span class="linenos">7</span><span class="sd">"""Docstring of type :any:`ReturnT`."""</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Link to this heading">¶</a></h3>
@@ -319,8 +331,8 @@ annoying.</p>
 </div>
 <section id="with-caption">
 <h4>With caption<a class="headerlink" href="#with-caption" title="Link to this heading">¶</a></h4>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id2" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">"session_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shorthands"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>

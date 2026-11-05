@@ -135,11 +135,11 @@ They can be quoted without indentation::
 >
 > Why didn't I think of that?
 
-.. literalinclude:: ../../../src/furo/__init__.py
+.. literalinclude:: all_in_one_restructuredtext.py
     :language: python
     :caption: Literal includes can also have captions.
     :linenos:
-    :lines: 10-20
+    :lines: 7-13
 
 Doctest Blocks
 --------------

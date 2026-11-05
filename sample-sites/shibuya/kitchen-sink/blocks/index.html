@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="violet" data-content_root="../../">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Blocks - Shibuya</title><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Generic items" href="../generic/" /><link rel="prev" title="Directives in the reStructuredText domain" href="../domains/api_restructuredtext_domain/" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Blocks - Shibuya Sample Site</title><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Generic items" href="../generic/" /><link rel="prev" title="Directives in the reStructuredText domain" href="../domains/api_restructuredtext_domain/" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=e1a1ceaf" />
@@ -275,6 +275,18 @@ annoying.</p>
 </span><span data-line="3">&gt; Why didn't I think of that?
 </span></pre></div>
 </div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="linenos">1</span><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+</span><span data-line="2"><span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+</span><span data-line="3"><span class="linenos">3</span>
+</span><span data-line="4"><span class="linenos">4</span><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ParameterT"</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+</span><span data-line="5"><span class="linenos">5</span>
+</span><span data-line="6"><span class="linenos">6</span><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ReturnT"</span><span class="p">)</span>
+</span><span data-line="7"><span class="linenos">7</span><span class="sd">"""Docstring of type :any:`ReturnT`."""</span>
+</span></pre></div>
+</div>
+</div>
 </section>
 <section id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Link to this heading">#</a></h3>
@@ -333,8 +345,8 @@ annoying.</p>
 </div>
 <section id="with-caption">
 <h4>With caption<a class="headerlink" href="#with-caption" title="Link to this heading">#</a></h4>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions, which also adds a link to it.</span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">{</span>
 </span><span data-line="2"><span class="w">  </span><span class="nt">"session_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shorthands"</span><span class="p">,</span>
 </span><span data-line="3"><span class="w">  </span><span class="nt">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>

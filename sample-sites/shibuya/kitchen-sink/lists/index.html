@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="violet" data-content_root="../../">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lists - Shibuya</title><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Really Long Page Title because we should test sidebar wrapping" href="../really-long/" /><link rel="prev" title="Images &amp; Figures" href="../images/" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lists - Shibuya Sample Site</title><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Really Long Page Title because we should test sidebar wrapping" href="../really-long/" /><link rel="prev" title="Images &amp; Figures" href="../images/" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=e1a1ceaf" />
@@ -367,6 +367,15 @@ A1B 2C3</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="linenos">1</span><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+</span><span data-line="2"><span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+</span><span data-line="3"><span class="linenos">3</span>
+</span><span data-line="4"><span class="linenos">4</span><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ParameterT"</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+</span><span data-line="5"><span class="linenos">5</span>
+</span><span data-line="6"><span class="linenos">6</span><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ReturnT"</span><span class="p">)</span>
+</span><span data-line="7"><span class="linenos">7</span><span class="sd">"""Docstring of type :any:`ReturnT`."""</span>
+</span></pre></div>
+</div>
 </li>
 </ul>
 </li>

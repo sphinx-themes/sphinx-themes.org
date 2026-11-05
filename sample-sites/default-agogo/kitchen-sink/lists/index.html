@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lists &#8212; agogo</title>
+    <title>Lists &#8212; agogo Sample Site</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/agogo.css?v=08520df9" />
     <script src="../../_static/documentation_options.js?v=187304be"></script>
@@ -19,7 +19,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../">agogo</a></div>
+          href="../../">agogo Sample Site</a></div>
         <div class="rel" role="navigation" aria-label="Related">
           <a href="../images/" title="Images &amp; Figures"
              accesskey="P">previous</a> |
@@ -255,6 +255,15 @@ A1B 2C3</p>
 <ul>
 <li><p>one more <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">an</span> <span class="pre">inline</span> <span class="pre">literally</span></code>. <a class="reference external" href="https://www.yahoo.com/">yahoo</a></p>
 <p>heh heh. child. try to beat this embed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ParameterT"</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ReturnT"</span><span class="p">)</span>
+<span class="linenos">7</span><span class="sd">"""Docstring of type :any:`ReturnT`."""</span>
+</pre></div>
+</div>
 </li>
 </ul>
 </li>

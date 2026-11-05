@@ -199,10 +199,10 @@ Second list level
 
       heh heh. child. try to beat this embed:
 
-      .. literalinclude:: ../../../src/furo/__init__.py
+      .. literalinclude:: all_in_one_restructuredtext.py
           :language: python
           :linenos:
-          :lines: 10-20
+          :lines: 7-13
 
   - and another. `yahoo <https://www.yahoo.com/>`_
   - `yahoo <https://www.yahoo.com/>`_
