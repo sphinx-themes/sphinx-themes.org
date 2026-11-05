@@ -50,6 +50,7 @@ class Theme:
 
     imports: list[str] = field(default_factory=list)
     extensions: list[str] = field(default_factory=list)
+    tags: tuple[str, ...] = ()
 
     def __repr__(self) -> str:
         return f"Theme({self.name!r}, pypi_package={self.pypi_package!r})"
@@ -64,6 +65,7 @@ class Theme:
         pypi_package = di["pypi"]
 
         documentation_link = di.get("documentation", None)
+        tags = tuple(di.get("tags", []))
 
         assert "config" in di, di
         if isinstance(di["config"], str):
@@ -72,6 +74,7 @@ class Theme:
                 pypi_package=pypi_package,
                 documentation_link=documentation_link,
                 configuration={"html_theme": di["config"]},
+                tags=tags,
             )
 
         assert isinstance(di["config"], dict), di
@@ -90,6 +93,7 @@ class Theme:
             configuration=configuration,
             imports=imports,
             extensions=extensions,
+            tags=tags,
         )
 
     @property

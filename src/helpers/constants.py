@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, NotRequired, TypedDict
 
 if TYPE_CHECKING:
     from playwright.async_api import ViewportSize
@@ -65,3 +65,4 @@ class ThemeDict(TypedDict):
     pypi: str
     documentation: str | None
     config: str | dict[str, str | list[str]]
+    tags: NotRequired[list[str]]
