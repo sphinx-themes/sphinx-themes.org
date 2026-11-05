@@ -1,2 +1,4 @@
+target-version = "py314"
+
 [lint]
 extend-select = ["FA", "TC"]
