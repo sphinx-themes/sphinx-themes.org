@@ -19,6 +19,12 @@ repos:
       - id: forbid-new-submodules
       - id: trailing-whitespace
 
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.32.0
+    hooks:
+      - id: zizmor
+        args: [--offline]
+
   - repo: local
     hooks:
       - id: sort-json

@@ -117,6 +117,8 @@ $ nox -s lint
 
 Runs the linters and formats all the files in the repository. This uses [`prek`] for running the linters, then runs the `typecheck` session. Notably, [`tools/sort-json.py`] is also run as part of these linters and formats [`themes.json`].
 
+The linters include [zizmor] to check GitHub Actions workflows for security issues. It runs offline through the same `prek` configuration locally and in CI. To run just this check, use `prek run zizmor --all-files`.
+
 ```sh
 $ nox -s typecheck
 ```
@@ -166,5 +168,6 @@ The GitHub Action job runs `nox -s publish` and pushes the generated site to the
 [`nox`]: https://pypi.org/project/nox/
 [`pipx`]: https://pypi.org/project/pipx/
 [`prek`]: https://prek.j178.dev/
+[zizmor]: https://docs.zizmor.sh/
 [`themes.json`]: ./themes.json
 [`tools/sort-json.py`]: ./tools/sort-json.py
