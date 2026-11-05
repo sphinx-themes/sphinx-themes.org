@@ -94,7 +94,7 @@ Notice that:
 
 If you want to build this website locally, you need:
 
-- Python 3.8 or newer
+- Python 3.14 or newer
 - [`nox`] installed in a virtualenv or with [`pipx`]
 
 ### Workflow Commands
@@ -115,27 +115,45 @@ Generates the site in `public/`, while only generating assets (sample-site and p
 $ nox -s lint
 ```
 
-Runs the linters and formats all the files in the repository. This uses [`pre-commit`] for running the linters. Notably, [`tools/sort-json.py`] is also run as part of these linters and formats [`themes.json`].
+Runs the linters and formats all the files in the repository. This uses [`prek`] for running the linters, then runs the `typecheck` session. Notably, [`tools/sort-json.py`] is also run as part of these linters and formats [`themes.json`].
+
+The linters include [zizmor] to check GitHub Actions workflows for security issues. It runs offline through the same `prek` configuration locally and in CI. To run just this check, use `prek run zizmor --all-files`.
+
+```sh
+$ nox -s typecheck
+```
+
+Runs `ty` to check the types in the website generation code.
+
+### Building the sample documentation independently
+
+The `sample-docs` directory is also a standalone Sphinx project. With Sphinx installed, run:
+
+```sh
+$ sphinx-build -b dirhtml sample-docs build/sample-docs
+```
+
+The gallery generates a theme-specific index and configuration for each theme, while the standalone build uses `sample-docs/index.rst` and `sample-docs/conf.py`.
 
 ### Site generation pipeline
 
 `nox -s publish` generates the various parts of the website as follows:
 
 - Install the dependencies.
-- Run `python -m src.generate_sample_sites`
+- Run `python src/generate_sample_sites.py`
   - For every theme (with concurrency):
     - Create an isolated virtualenv in `build/`.
     - Install the latest sphinx pre-release, and then the theme's package.
-    - Generate a `conf.py` for rendering documentation using this theme.
+    - Generate an `index.rst` and `conf.py` for rendering documentation using this theme.
     - Call `sphinx-build` to generate the documentation using given theme.
-- Run `python -m src.generate_previews`
+- Run `python src/generate_screenshots.py`
   - Creates a webdriver for Firefox.
   - For every theme (with concurrency):
     - Open the generated sample site's root in the browser.
     - Take screenshots for various resolutions.
     - Place the screenshots appropriately in `src/assets/preview.template.png`.
     - Write the appropriately-modified-for-web-use preview image.
-- `python -m src.generate_scaffold`
+- `python src/generate_scaffold.py`
   - Renders `src/index.template.html`, with themes loaded from [`themes.json`].
   - Copies the illustration, which makes the site look pretty.
   - Write `CNAME` for GitHub Pages to serve the page correctly.
@@ -149,7 +167,7 @@ The GitHub Action job runs `nox -s publish` and pushes the generated site to the
 [pypi]: https://pypi.org/
 [`nox`]: https://pypi.org/project/nox/
 [`pipx`]: https://pypi.org/project/pipx/
-[`pre-commit`]: https://pypi.org/project/pre-commit/
-[`chromedriver`]: https://chromedriver.chromium.org/
+[`prek`]: https://prek.j178.dev/
+[zizmor]: https://docs.zizmor.sh/
 [`themes.json`]: ./themes.json
 [`tools/sort-json.py`]: ./tools/sort-json.py

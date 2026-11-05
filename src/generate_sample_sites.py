@@ -1,17 +1,22 @@
+from __future__ import annotations
+
 import asyncio
 import os
 import shutil
 from datetime import UTC, datetime
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import rich.progress
 import rich.traceback
 from jinja2 import Template
 
-from .constants import BUILD, DESTINATION, TEMPLATES
-from .isolation import IsolatedEnvironment
-from .output import run_for_themes_with_progress
-from .themes import Theme, get_themes
+from helpers.constants import BUILD, DESTINATION, TEMPLATES
+from helpers.isolation import IsolatedEnvironment
+from helpers.output import run_for_themes_with_progress
+from helpers.themes import Theme, get_themes
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 def get_error_page(theme: Theme, error: Exception) -> str:
@@ -23,19 +28,17 @@ def get_error_page(theme: Theme, error: Exception) -> str:
     )
 
 
-def render_conf_template(theme: Theme, destination: Path):
-    template = Template(TEMPLATES["configuration"].read_text())
-    rendered = template.render(theme=theme, sources=str(BUILD["sources"]))
-
-    destination.write_text(rendered)
+def render_template(name: str, dest_dir: Path, **kwargs: object) -> None:
+    template = Template(TEMPLATES[name].read_text())
+    rendered = template.render(**kwargs)
+    (dest_dir / name).write_text(rendered)
 
 
 async def generate_site(
-    *,
     theme: Theme,
     progress: rich.progress.Progress,
 ) -> None:
-    task = progress.add_task(theme.name, total=5)
+    task = progress.add_task(theme.name, total=6)
 
     env = IsolatedEnvironment(theme.name)
     destination_path = DESTINATION["sites"] / theme.name
@@ -50,7 +53,18 @@ async def generate_site(
         await env.install(theme.pypi_package)
         progress.advance(task, 1)
 
-        render_conf_template(theme, env.path / "conf.py")
+        render_template(
+            "index.rst", env.path, theme=theme, today=datetime.now(tz=UTC).date()
+        )
+        progress.advance(task, 1)
+
+        render_template(
+            "conf.py",
+            env.path,
+            theme=theme,
+            sources=os.fsdecode(BUILD["sources"]),
+            injected_index_rst=os.fsdecode(env.path / "index.rst"),
+        )
         progress.advance(task, 1)
 
         if destination_path.exists():
@@ -62,8 +76,9 @@ async def generate_site(
             "-v",
             "-b=dirhtml",
             f"-c={env.path}",
-            str(BUILD["sources"]),
-            str(destination_path),
+            ".",
+            os.fsdecode(destination_path),
+            cwd=BUILD["sources"],
         )
         progress.advance(task, 1)
 
@@ -97,3 +112,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+else:
+    raise RuntimeError("This module is intended to be run as a script.")

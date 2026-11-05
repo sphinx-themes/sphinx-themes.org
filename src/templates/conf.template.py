@@ -1,20 +1,20 @@
-import os
+from __future__ import annotations
+
 import sys
+from pathlib import Path
+from typing import TYPE_CHECKING
 
-from docutils import nodes
-from docutils.parsers.rst import Directive
-from docutils.statemachine import StringList
+if TYPE_CHECKING:
+    from sphinx.application import Sphinx
 
-# -- Common stuff -------------------------------------------------------------
+sys.path.insert(0, str(Path(r"{{ sources }}") / "kitchen-sink"))
 
+# -- Project information ------------------------------------------------------
 project = "Sphinx Themes Sample"
 copyright = "2021, Pradyun Gedam"
 author = "Pradyun Gedam"
 
-html_title = "{{ theme.display }}"
-
-sys.path.insert(0, os.path.join("{{ sources }}", "kitchen-sink"))
-
+# -- General configuration ----------------------------------------------------
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.extlinks",
@@ -25,65 +25,43 @@ extensions = [
     "sphinx.ext.viewcode",
 ]
 
+# -- Options for extlinks -----------------------------------------------------
 extlinks = {
     "pypi": ("https://pypi.org/project/%s/", "%s"),
 }
 
+# -- Options for intersphinx --------------------------------------------------
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
 
+# -- Options for TODOs --------------------------------------------------------
 todo_include_todos = True
 
+# -- Options for HTML output --------------------------------------------------
+html_title = "Sample Documentation"
+
 # -- Theme-specific -----------------------------------------------------------
-
-rst_prolog = """
-.. |theme_package| replace:: {{ theme.pypi_package }}
-.. |theme_pypi_link| replace:: :pypi:`{{ theme.pypi_package }}`
-.. |theme_name| replace:: {{ theme.name }}
-.. |theme_display| replace:: {{ theme.display }}
-{% if theme.documentation_link -%}
-.. |theme_documentation_message| replace:: You can find this theme's documentation at {{ theme.documentation_link }}.
-{% else %}
-.. |theme_documentation_message| replace:: This theme does not have any hosted-on-the-web documentation.
-{%- endif %}
-"""
-
+# Settings above mirror the baseline `sample-docs/conf.py`.
 theme_configuration = """
-{% for line in theme.compute_python_configuration_lines() %}
-{{ line }}
-{%- endfor %}
+{{ theme.conf_py_snippet }}
 """
-
 exec(theme_configuration)  # noqa: S102 -- Execute trusted theme configuration from the repository.
 
 
-# -- Directives to include theme-specific stuff -------------------------------
-class ThemeConfigurationDirective(Directive):
-    has_content = False
-    required_arguments = 0
-    optional_arguments = 0
+def replace_index(app: Sphinx, docname: str, source: list[str]) -> None:
+    """Replaces the contents of the `index` document with custom content."""
+    if docname != "index":
+        return
 
-    def run(self):
-        container = nodes.literal_block()
-        translated_content = StringList(theme_configuration.splitlines(keepends=False))
-        self.state.nested_parse(translated_content, 0, container)
-        return [container]
+    with open(r"{{ injected_index_rst }}") as fp:
+        source[0] = fp.read()
 
 
-class ThemeInstallDirective(Directive):
-    has_content = False
-    required_arguments = 0
-    optional_arguments = 0
-
-    def run(self):
-        container = nodes.literal_block()
-        translated_content = StringList(["$ pip install {{ theme.pypi_package }}"])
-        self.state.nested_parse(translated_content, 0, container)
-        return [container]
-
-
-def setup(app):
-    app.add_directive("theme-configuration", ThemeConfigurationDirective)
-    app.add_directive("theme-install", ThemeInstallDirective)
+def setup(app: Sphinx) -> dict[str, object]:
+    app.connect("source-read", replace_index)
+    return {
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }

@@ -1,17 +1,28 @@
 """Script to generate the screenshots for all the themes."""
 
+from __future__ import annotations
+
 import asyncio
 import functools
 import io
+from typing import TYPE_CHECKING
 
-import rich
 from PIL import Image
-from playwright.async_api import BrowserContext, Page, async_playwright
+from playwright.async_api import Browser, async_playwright
 from playwright.async_api import Error as PlaywrightError
 
-from .constants import DESTINATION, SCREENSHOT_OFFSETS, SCREENSHOT_SIZES, TEMPLATES
-from .output import run_for_themes_with_progress
-from .themes import Theme, get_themes
+from helpers.constants import (
+    DESTINATION,
+    SCREENSHOT_OFFSETS,
+    SCREENSHOT_SIZES,
+    TEMPLATES,
+)
+from helpers.output import run_for_themes_with_progress
+from helpers.themes import Theme, get_themes
+
+if TYPE_CHECKING:
+    import rich.progress
+    from playwright.async_api import Page, Playwright
 
 
 # --------------------------------------------------------------------------------------
@@ -65,7 +76,7 @@ ATTEMPTS = 2
 async def take_screenshots_at_all_resolutions(
     page: Page, url: str
 ) -> dict[str, Image.Image]:
-    screenshots = {}
+    screenshots: dict[str, Image.Image] = {}
 
     for name, resolution in SCREENSHOT_SIZES.items():
         await page.set_viewport_size(resolution)
@@ -79,7 +90,7 @@ async def take_screenshots_at_all_resolutions(
 
 
 async def render_preview_image(
-    context: BrowserContext,
+    browser: Browser,
     original_template: Image.Image,
     *,
     theme: Theme,
@@ -88,7 +99,7 @@ async def render_preview_image(
 ) -> None:
     """A single attempt at rendering a theme's preview image."""
     # progress.log(f"{theme.name}: Creating browser tab.")
-    page = await context.new_page()
+    page = await browser.new_page()
     progress.advance(task, 1)
 
     # progress.log(f"{theme.name}: Taking screenshots.")
@@ -107,9 +118,8 @@ async def render_preview_image(
 
 
 async def render_at_multiple_resolutions(
-    context: BrowserContext,
+    browser: Browser,
     original_template: Image.Image,
-    *,
     theme: Theme,
     progress: rich.progress.Progress,
 ) -> None:
@@ -119,7 +129,7 @@ async def render_at_multiple_resolutions(
             try:
                 await asyncio.wait_for(
                     render_preview_image(
-                        context,
+                        browser,
                         original_template,
                         theme=theme,
                         progress=progress,
@@ -146,13 +156,13 @@ async def render_at_multiple_resolutions(
 # --------------------------------------------------------------------------------------
 # Main entrypoint
 # --------------------------------------------------------------------------------------
-async def warm_up(context: BrowserContext) -> None:
-    page = await context.new_page()
+async def warm_up(browser: Browser) -> None:
+    page = await browser.new_page()
     await page.goto("about:blank")
     await page.close()
 
 
-async def run(playwright) -> None:
+async def run(playwright: Playwright) -> None:
     print("Launching browser...", end=" ", flush=True)
     try:
         browser = await playwright.firefox.launch()
@@ -164,7 +174,7 @@ async def run(playwright) -> None:
     # per-theme guard below is what we actually rely on.
     try:
         await asyncio.wait_for(warm_up(browser), timeout=ATTEMPT_TIMEOUT)
-    except (TimeoutError, PlaywrightError):
+    except TimeoutError, PlaywrightError:
         pass
 
     original_template = get_template_image()
@@ -184,3 +194,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+else:
+    raise RuntimeError("This module is intended to be run as a script.")

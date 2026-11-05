@@ -35,7 +35,7 @@ build:
     - libxrender1
   jobs:
     install:
-      # `uv` is invoked directly by src/isolation.py, so it has to be on PATH.
+      # `uv` is invoked directly by src/helpers/isolation.py, so it has to be on PATH.
       - pip install nox uv
     build:
       html:
