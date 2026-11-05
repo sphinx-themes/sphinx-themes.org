@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import os
 import sys
 
 from .constants import BUILD
@@ -46,9 +47,19 @@ class IsolatedEnvironment:
     async def run(
         self, *args: str, env: dict[str, str] | None = None
     ) -> tuple[int | None, tuple[bytes, bytes]]:
+        process_env = os.environ.copy()
+        if env is not None:
+            process_env.update(env)
+        process_env["VIRTUAL_ENV"] = os.fsdecode(self.path)
+        process_env["PATH"] = os.pathsep.join(
+            [
+                *(os.fsdecode(path) for path in self.bin_paths),
+                process_env.get("PATH", ""),
+            ]
+        )
         process = await asyncio.create_subprocess_exec(
             *args,
-            env=env,
+            env=process_env,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
