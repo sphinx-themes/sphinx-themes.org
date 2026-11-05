@@ -94,7 +94,7 @@ Notice that:
 
 If you want to build this website locally, you need:
 
-- Python 3.8 or newer
+- Python 3.14 or newer
 - [`nox`] installed in a virtualenv or with [`pipx`]
 
 ### Workflow Commands
@@ -115,7 +115,13 @@ Generates the site in `public/`, while only generating assets (sample-site and p
 $ nox -s lint
 ```
 
-Runs the linters and formats all the files in the repository. This uses [`pre-commit`] for running the linters. Notably, [`tools/sort-json.py`] is also run as part of these linters and formats [`themes.json`].
+Runs the linters and formats all the files in the repository. This uses [`prek`] for running the linters, then runs the `typecheck` session. Notably, [`tools/sort-json.py`] is also run as part of these linters and formats [`themes.json`].
+
+```sh
+$ nox -s typecheck
+```
+
+Runs `ty` to check the types in the website generation code.
 
 ### Site generation pipeline
 
@@ -149,6 +155,6 @@ The GitHub Action job runs `nox -s publish` and pushes the generated site to the
 [pypi]: https://pypi.org/
 [`nox`]: https://pypi.org/project/nox/
 [`pipx`]: https://pypi.org/project/pipx/
-[`pre-commit`]: https://pypi.org/project/pre-commit/
+[`prek`]: https://prek.j178.dev/
 [`themes.json`]: ./themes.json
 [`tools/sort-json.py`]: ./tools/sort-json.py
