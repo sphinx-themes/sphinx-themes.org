@@ -10,11 +10,11 @@
     <title>Kitchen Sink &#8212; Lumina Sample Site</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=0fc419ee" />
-    <link rel="stylesheet" type="text/css" href="../_static/lumina.css?v=57f05a8c" />
+    <link rel="stylesheet" type="text/css" href="../_static/lumina.css?v=6512492e" />
     <script defer="defer" src="../_static/documentation_options.js?v=187304be"></script>
     <script defer="defer" src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script defer="defer" src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="../_static/lumina.js?v=6596cdac"></script>
+    <script defer="defer" src="../_static/lumina.js?v=e39a7ba2"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Admonitions" href="admonitions/" />
@@ -38,7 +38,9 @@
         
         <meta name="theme-color" content="#10b981">
         <meta property="og:title" content="Kitchen Sink">
-        <meta property="og:description" content="This section exists as a dump of all the things that Sphinx has.">
+        
+            <meta property="og:description" content="This section exists as a dump of all the things that Sphinx has.">
+        
         
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="Sphinx Themes Sample">
@@ -46,7 +48,9 @@
         
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Kitchen Sink">
-        <meta name="twitter:description" content="This section exists as a dump of all the things that Sphinx has.">
+        
+            <meta name="twitter:description" content="This section exists as a dump of all the things that Sphinx has.">
+        
         
         
         
@@ -69,18 +73,19 @@
   
   if (stored === 'dark' || stored === 'light') {
     document.documentElement.setAttribute('data-theme', stored);
-    // Sphinx gates the dark highlight stylesheet on the OS color scheme only;
-    // a stored override must rewrite its media query before first paint.
-    var pygmentsDark = document.getElementById('pygments_dark_css');
-    if (pygmentsDark) {
-      pygmentsDark.media = stored === 'dark' ? 'screen' : 'not all';
-    }
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
   }
   
+  // Sphinx gates the dark highlight stylesheet on the OS color scheme only;
+  // a stored override or dark_mode_default must rewrite its media query
+  // before first paint.
+  var pygmentsDark = document.getElementById('pygments_dark_css');
+  if (pygmentsDark) {
+    pygmentsDark.media = document.documentElement.getAttribute('data-theme') === 'dark' ? 'screen' : 'not all';
+  }
 })();
     </script>
     
@@ -99,6 +104,7 @@
 
 
   </head><body>
+
 
 
 
@@ -236,7 +242,7 @@
 
             <div x-data="sidebar()">
     
-    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-e border-lumina-border bg-lumina-bg px-4 py-6 lg:flex">
+    <div class="lumina-sidebar-desktop hidden flex-col overflow-y-auto border-e border-lumina-border/45 bg-lumina-bg px-4 py-6 lg:flex">
 
         
 
@@ -300,7 +306,7 @@
                         <path d="M16 10L24 27H16" fill="currentColor" opacity="0.3" />
                     </svg>
                 Lumina</a>
-                <span class="lumina-sidebar-footer-version">v2.19.1</span>
+                <span class="lumina-sidebar-footer-version">v2.21.0</span>
             </div>
         
     </div>
@@ -388,7 +394,7 @@
                         <a href="https://github.com/r4sky0/sphinx-lumina-theme"
                            target="_blank"
                            rel="noopener">Lumina</a>
-                        <span class="lumina-sidebar-footer-version">v2.19.1</span>
+                        <span class="lumina-sidebar-footer-version">v2.21.0</span>
                     </div>
                 
             </div>
@@ -444,8 +450,10 @@
             </div>
             
             <article class="lumina-article" x-data="headerLinks()">
-
                 
+                <div class="body">
+
+                    
 
     <section id="kitchen-sink">
 <h1 id="lumina-search-kitchen-sink">Kitchen Sink<a class="headerlink" href="#kitchen-sink" title="Link to this heading">¶</a></h1>
@@ -478,6 +486,7 @@
 
 
 
+                </div>
             </article>
             
 
@@ -492,14 +501,14 @@
                 <a href="../"
                    class="group flex flex-col items-start gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
                     <span class="text-xs text-lumina-text-muted">Previous</span>
-                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors"><span class="inline-block rtl:-scale-x-100">&larr;</span> Lumina Sample</span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors"><span class="inline-block rtl:-scale-x-100">←</span> Lumina Sample</span>
                 </a>
             
             
                 <a href="admonitions/"
                    class="group flex flex-col items-end gap-1 rounded-lg border border-lumina-border p-4 no-underline hover:border-lumina-accent hover:bg-lumina-bg-secondary active:bg-lumina-accent-light transition-colors duration-150 flex-1">
                     <span class="text-xs text-lumina-text-muted">Next</span>
-                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">Admonitions <span class="inline-block rtl:-scale-x-100">&rarr;</span></span>
+                    <span class="text-sm font-medium text-lumina-text group-hover:text-lumina-accent transition-colors">Admonitions <span class="inline-block rtl:-scale-x-100">→</span></span>
                 </a>
             
         </nav>
@@ -563,6 +572,11 @@
                    @keydown.arrow-down.prevent="moveDown()"
                    @keydown.arrow-up.prevent="moveUp()"
                    @keydown.enter.prevent="goToSelected()"
+                   role="combobox"
+                   aria-autocomplete="list"
+                   aria-controls="lumina-search-results"
+                   :aria-expanded="results.length > 0"
+                   :aria-activedescendant="results.length > 0 ? 'lumina-search-result-' + selectedIndex : ''"
                    class="w-full border-0 bg-transparent px-3 py-4 text-lumina-text placeholder-lumina-text-muted outline-none"
                    aria-label="Search documentation"
                    placeholder="Search docs..."
@@ -607,25 +621,33 @@
                 <p class="px-3 py-8 text-center text-sm text-lumina-text-muted"
                    x-text="error"></p>
             </template>
-            <template x-for="(result, index) in results" :key="result.url">
-                <a :href="result.url"
-                   data-search-result
-                   class="flex flex-col gap-1 rounded-lg px-3 py-2.5 no-underline transition-colors focus-visible:outline-2 focus-visible:outline-lumina-accent"
-                   :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ms-4 border-s border-lumina-border' : 'mt-1']"
-                   @mouseenter="selectedIndex = index"
-                   @focus="selectedIndex = index">
-                    <template x-if="result.breadcrumb">
-                        <span class="truncate text-xs text-lumina-text-muted"
-                              x-text="result.breadcrumb"></span>
-                    </template>
-                    <span class="break-words text-sm"
-                          :class="result.isSymbol ? 'font-mono' : result.isHeading ? '' : 'font-semibold'"
-                          x-text="result.title"></span>
-                    <span x-show="result.excerpt"
-                          class="line-clamp-2 text-xs text-lumina-text-muted"
-                          x-html="result.excerpt"></span>
-                </a>
-            </template>
+            <div id="lumina-search-results"
+                 role="listbox"
+                 aria-label="Search documentation">
+                <template x-for="(result, index) in results" :key="result.url">
+                    <a :id="'lumina-search-result-' + index"
+                       :href="result.url"
+                       role="option"
+                       :aria-selected="index === selectedIndex"
+                       data-search-result
+                       class="flex flex-col gap-1 rounded-lg px-3 py-2.5 no-underline transition-colors focus-visible:outline-2 focus-visible:outline-lumina-accent"
+                       :class="[index === selectedIndex ? 'bg-lumina-accent-light text-lumina-accent' : 'hover:bg-lumina-bg-secondary text-lumina-text', result.isHeading ? 'ms-4 border-s border-lumina-border' : 'mt-1']"
+                       @click="rememberQuery()"
+                       @mouseenter="selectedIndex = index"
+                       @focus="selectedIndex = index">
+                        <template x-if="result.breadcrumb">
+                            <span class="truncate text-xs text-lumina-text-muted"
+                                  x-text="result.breadcrumb"></span>
+                        </template>
+                        <span class="break-words text-sm"
+                              :class="result.isSymbol ? 'font-mono' : result.isHeading ? '' : 'font-semibold'"
+                              x-text="result.title"></span>
+                        <span x-show="result.excerpt"
+                              class="line-clamp-2 text-xs text-lumina-text-muted"
+                              x-html="result.excerpt"></span>
+                    </a>
+                </template>
+            </div>
             <template x-if="loaded && !error && query.trim().length === 0">
                 <p class="px-3 py-8 text-center text-sm text-lumina-text-muted">Type to search...</p>
             </template>
@@ -637,8 +659,8 @@
         </div>
         
         <div class="flex shrink-0 items-center gap-3 border-t border-lumina-border px-4 py-2.5 text-xs text-lumina-text-muted">
-            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">&uarr;&darr;</kbd> Navigate</span>
-            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">&crarr;</kbd> Open</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">↑↓</kbd> Navigate</span>
+            <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">↵</kbd> Open</span>
             <span class="flex items-center gap-1"><kbd class="rounded border border-lumina-border bg-lumina-bg-secondary px-1 py-0.5 font-mono text-[11px]">esc</kbd> Close</span>
         </div>
     </div>
