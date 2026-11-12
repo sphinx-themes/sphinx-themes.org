@@ -264,11 +264,6 @@
       "pypi": "sphinx-wagtail-theme"
     },
     {
-      "config": "yummy_sphinx_theme",
-      "display": "Yummy",
-      "pypi": "yummy-sphinx-theme"
-    },
-    {
       "config": {
         "_imports": [
           "zerovm_sphinx_theme"
