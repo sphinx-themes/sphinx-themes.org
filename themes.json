@@ -138,17 +138,6 @@
       "pypi": "insegel"
     },
     {
-      "config": {
-        "_imports": [
-          "kotti_docs_theme"
-        ],
-        "html_theme": "kotti_docs_theme",
-        "html_theme_path": "[kotti_docs_theme.get_theme_dir()]"
-      },
-      "display": "Kotti",
-      "pypi": "kotti-docs-theme"
-    },
-    {
       "config": "lumina",
       "display": "Lumina",
       "documentation": "https://r4sky0.github.io/sphinx-lumina-theme/",
