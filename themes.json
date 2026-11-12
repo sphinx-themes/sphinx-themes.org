@@ -62,16 +62,6 @@
     },
     {
       "config": {
-        "_extensions": [
-          "sphinxjp.themes.basicstrap"
-        ],
-        "html_theme": "basicstrap"
-      },
-      "display": "Basicstrap",
-      "pypi": "sphinxjp-themes-basicstrap"
-    },
-    {
-      "config": {
         "_imports": [
           "sphinx_bernard_theme"
         ],
