@@ -53,17 +53,6 @@
     },
     {
       "config": {
-        "_imports": [
-          "sphinx_adc_theme"
-        ],
-        "html_theme": "sphinx_adc_theme",
-        "html_theme_path": "[sphinx_adc_theme.get_html_theme_path()]"
-      },
-      "display": "ADC",
-      "pypi": "sphinx-adc-theme"
-    },
-    {
-      "config": {
         "html_permalinks_icon": "'<span>#</span>'",
         "html_theme": "sphinxawesome_theme"
       },
