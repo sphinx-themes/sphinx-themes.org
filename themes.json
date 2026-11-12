@@ -253,11 +253,6 @@
       "pypi": "solar-theme"
     },
     {
-      "config": "topos-theme",
-      "display": "Topos",
-      "pypi": "topos-theme"
-    },
-    {
       "config": {
         "_extensions": [
           "sphinx_wagtail_theme"
