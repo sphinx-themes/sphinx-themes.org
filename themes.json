@@ -122,17 +122,6 @@
     },
     {
       "config": {
-        "_imports": [
-          "hachibee_sphinx_theme"
-        ],
-        "html_theme": "hachibee",
-        "html_theme_path": "[hachibee_sphinx_theme.get_html_themes_path()]"
-      },
-      "display": "Hachibee",
-      "pypi": "hachibee-sphinx-theme"
-    },
-    {
-      "config": {
         "_extensions": [
           "sphinx_immaterial"
         ],
