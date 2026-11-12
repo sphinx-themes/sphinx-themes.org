@@ -160,17 +160,6 @@
     {
       "config": {
         "_imports": [
-          "murray"
-        ],
-        "html_theme": "murray",
-        "html_theme_path": "[murray.get_html_theme_path()]"
-      },
-      "display": "Murray",
-      "pypi": "murray"
-    },
-    {
-      "config": {
-        "_imports": [
           "sphinx_nameko_theme"
         ],
         "html_theme": "nameko",
