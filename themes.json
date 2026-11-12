@@ -138,11 +138,6 @@
       "pypi": "insegel"
     },
     {
-      "config": "karma_sphinx_theme",
-      "display": "Karma",
-      "pypi": "karma-sphinx-theme"
-    },
-    {
       "config": {
         "_imports": [
           "kotti_docs_theme"
