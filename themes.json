@@ -53,44 +53,12 @@
     },
     {
       "config": {
-        "_imports": [
-          "sphinx_adc_theme"
-        ],
-        "html_theme": "sphinx_adc_theme",
-        "html_theme_path": "[sphinx_adc_theme.get_html_theme_path()]"
-      },
-      "display": "ADC",
-      "pypi": "sphinx-adc-theme"
-    },
-    {
-      "config": {
         "html_permalinks_icon": "'<span>#</span>'",
         "html_theme": "sphinxawesome_theme"
       },
       "display": "Awesome",
       "documentation": "https://sphinxawesome.xyz",
       "pypi": "sphinxawesome-theme"
-    },
-    {
-      "config": {
-        "_extensions": [
-          "sphinxjp.themes.basicstrap"
-        ],
-        "html_theme": "basicstrap"
-      },
-      "display": "Basicstrap",
-      "pypi": "sphinxjp-themes-basicstrap"
-    },
-    {
-      "config": {
-        "_imports": [
-          "sphinx_bernard_theme"
-        ],
-        "html_theme": "sphinx_bernard_theme",
-        "html_theme_path": "[sphinx_bernard_theme.get_html_theme_path()]"
-      },
-      "display": "Bernard",
-      "pypi": "sphinx-bernard-theme"
     },
     {
       "config": {
@@ -154,17 +122,6 @@
     },
     {
       "config": {
-        "_imports": [
-          "hachibee_sphinx_theme"
-        ],
-        "html_theme": "hachibee",
-        "html_theme_path": "[hachibee_sphinx_theme.get_html_themes_path()]"
-      },
-      "display": "Hachibee",
-      "pypi": "hachibee-sphinx-theme"
-    },
-    {
-      "config": {
         "_extensions": [
           "sphinx_immaterial"
         ],
@@ -179,22 +136,6 @@
       "display": "Insegel",
       "documentation": "https://insegel.readthedocs.io/en/latest/",
       "pypi": "insegel"
-    },
-    {
-      "config": "karma_sphinx_theme",
-      "display": "Karma",
-      "pypi": "karma-sphinx-theme"
-    },
-    {
-      "config": {
-        "_imports": [
-          "kotti_docs_theme"
-        ],
-        "html_theme": "kotti_docs_theme",
-        "html_theme_path": "[kotti_docs_theme.get_theme_dir()]"
-      },
-      "display": "Kotti",
-      "pypi": "kotti-docs-theme"
     },
     {
       "config": "lumina",
@@ -215,17 +156,6 @@
       },
       "display": "Maisie",
       "pypi": "maisie-sphinx-theme"
-    },
-    {
-      "config": {
-        "_imports": [
-          "murray"
-        ],
-        "html_theme": "murray",
-        "html_theme_path": "[murray.get_html_theme_path()]"
-      },
-      "display": "Murray",
-      "pypi": "murray"
     },
     {
       "config": {
@@ -289,17 +219,6 @@
       "pypi": "sphinx-readable-theme"
     },
     {
-      "config": {
-        "_imports": [
-          "sphinx_redactor_theme"
-        ],
-        "html_theme": "sphinx_redactor_theme",
-        "html_theme_path": "[sphinx_redactor_theme.get_html_theme_path()]"
-      },
-      "display": "Redactor",
-      "pypi": "sphinx-redactor-theme"
-    },
-    {
       "config": "renku",
       "display": "Renku",
       "pypi": "renku-sphinx-theme"
@@ -335,22 +254,6 @@
     },
     {
       "config": {
-        "_imports": [
-          "sphinx_theme"
-        ],
-        "html_theme": "stanford_theme",
-        "html_theme_path": "[sphinx_theme.get_html_theme_path('stanford-theme')]"
-      },
-      "display": "Stanford",
-      "pypi": "sphinx-theme"
-    },
-    {
-      "config": "topos-theme",
-      "display": "Topos",
-      "pypi": "topos-theme"
-    },
-    {
-      "config": {
         "_extensions": [
           "sphinx_wagtail_theme"
         ],
@@ -359,11 +262,6 @@
       "display": "Wagtail",
       "documentation": "https://sphinx-wagtail-theme.readthedocs.io/en/latest/",
       "pypi": "sphinx-wagtail-theme"
-    },
-    {
-      "config": "yummy_sphinx_theme",
-      "display": "Yummy",
-      "pypi": "yummy-sphinx-theme"
     },
     {
       "config": {
