@@ -45,6 +45,8 @@ For themes which only need `html_theme` to be set, the entry would be something 
 - `display` is the name presented on the website
 - `documentation` is the link to the theme's "latest" documentation
 - `pypi` is the package installed for the theme from [PyPI]
+- `tags` is an optional list of features supported by the theme
+  - The allowed tags are listed in `src/templates/index.template.html`
 
 #### Complex Configuration
 

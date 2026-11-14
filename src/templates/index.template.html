@@ -15,18 +15,70 @@
         scroll-behavior: smooth;
       }
 
+      #theme-filters {
+        border-bottom: 1px solid transparent;
+      }
+
+      #theme-filters.is-stuck {
+        border-bottom-color: #d1d5db;
+      }
+
+      #theme-list > [data-tags] {
+        scroll-margin-top: calc(var(--filter-height, 0px) + 1rem);
+      }
+
+      #filter-heading > span {
+        display: block;
+        white-space: nowrap;
+      }
+
+      #filter-heading > span {
+        transition: transform 400ms cubic-bezier(.1, .7, .1, 1), opacity 150ms,
+          visibility 400ms;
+      }
+
+      #sticky-gallery-title {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+      }
+
+      #theme-filters.is-stuck #sticky-gallery-title {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .tag-button:hover {
+        border-color: #b91c1c;
+      }
+
+      .tag-button[aria-pressed="true"] {
+        border-color: #b91c1c;
+        background: #b91c1c;
+        color: white;
+      }
+
+      .tag-button:focus-visible {
+        outline: 2px solid #b91c1c;
+        outline-offset: 3px;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
       @media screen and (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
         }
+
+        #filter-heading > span {
+          transition: none;
+        }
       }
 
     </style>
-    <script>
-      window.addEventListener('DOMContentLoaded', (event) => {
-        console.log("Hi!");
-      });
-    </script>
   </head>
 
   <body class="font-sans antialiased border-t-4 border-red-700">
@@ -54,11 +106,50 @@
           alt="Illustration">
       </div>
     </div>
-    {# Theme Listing #}
+    {# Keep this list as JSON: tools/sort-json.py reads it to validate tags. #}
+    {% set tags = [
+      "Responsive",
+      "Dark mode",
+      "Single column",
+      "Two columns",
+      "Three columns",
+      "Version switcher",
+      "Language switcher",
+      "RTL support",
+      "Announcement banner",
+      "Centered",
+      "Top bar",
+      "Header navigation",
+      "Breadcrumbs"
+    ] %}
+    {% macro tag_button(tag) -%}
+      <button type="button" class="tag-button rounded-full border border-gray-300 bg-white px-2 py-1 text-xs text-gray-700" data-tag="{{ tag | e }}" aria-pressed="false" aria-controls="theme-list">
+        {{ tag | e }}
+      </button>
+    {%- endmacro %}
     <div id="themes" class="bg-gray-50 p-2 lg:p-8">
-      <main class="grid grid-cols-1 xl:grid-cols-2 gap-2 lg:gap-8">
+      <section id="theme-filters" class="sticky top-0 z-10 bg-gray-50 -mx-2 -mt-2 px-2 py-3 mb-4 lg:-mx-8 lg:-mt-8 lg:px-8" aria-labelledby="filter-heading" hidden>
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
+          <h2 id="filter-heading" class="text-sm font-semibold mr-auto" aria-label="Sphinx Themes Gallery">
+            <span id="sticky-gallery-title">Sphinx Themes Gallery</span>
+          </h2>
+          <p id="theme-count" class="invisible text-xs text-gray-600" role="status" aria-live="polite" aria-atomic="true"></p>
+          <button id="clear-filters" type="button" class="invisible text-xs text-red-800 underline hover:text-red-500" disabled>
+            Clear filters
+          </button>
+        </div>
+        <div role="group" aria-labelledby="filter-heading" class="flex flex-wrap items-center justify-between gap-1">
+          {% for tag in tags %}
+          {{ tag_button(tag) }}
+          {% endfor %}
+        </div>
+      </section>
+      <p id="no-themes" class="text-center py-8 text-gray-600" hidden>
+        No themes match all selected tags. Try removing a tag or clearing the filters.
+      </p>
+      <main id="theme-list" class="grid grid-cols-1 xl:grid-cols-2 gap-2 lg:gap-8">
         {% for theme in themes %}
-        <div id="theme-{{ theme.name }}"
+        <div id="theme-{{ theme.name }}" data-tags='{{ theme.tags | tojson }}'
           class="rounded-lg border transform transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-lg bg-white p-2">
           <div class="px-3">
             <span class="inline-block text-lg font-semibold hover:underline">
@@ -73,7 +164,14 @@
             </span>
             <span class="float-right text-gray-400 font-light text-xs">click image to see more</span>
           </div>
-          <a href="sample-sites/{{ theme.name }}/" data-tags="{{ theme.tags }}"
+          {% if theme.tags %}
+          <div class="flex flex-wrap gap-2 px-3 py-2" role="group" aria-label="Theme features">
+            {% for tag in tags if tag in theme.tags %}
+            {{ tag_button(tag) }}
+            {% endfor %}
+          </div>
+          {% endif %}
+          <a href="sample-sites/{{ theme.name }}/"
             title="Sample documentation generated with {{ theme.display }}">
             <img class="text-center" src="preview-images/{{ theme.name }}.jpg" width="1625" height="550"
               alt="Screenshot for {{ theme.display }}">
@@ -95,6 +193,69 @@
         <a class="underline hover:text-blue-600" href="https://icons8.com/illustrations">Ouch!</a>
       </span>
     </footer>
+    <script>
+      "use strict";
+
+      const filters = document.getElementById("theme-filters");
+      const buttons = document.querySelectorAll(".tag-button");
+      const selected = new Set();
+      const cards = Array.from(document.querySelectorAll("#theme-list > [data-tags]"),
+        (card) => ({ card, tags: JSON.parse(card.dataset.tags) }));
+      const clearButton = document.getElementById("clear-filters");
+      const count = document.getElementById("theme-count");
+      const emptyState = document.getElementById("no-themes");
+
+      function updateThemes() {
+        const selectedTags = [...selected];
+        for (const button of buttons) {
+          button.setAttribute("aria-pressed", selected.has(button.dataset.tag));
+        }
+        let visible = 0;
+
+        for (const { card, tags } of cards) {
+          card.hidden = !selectedTags.every((tag) => tags.includes(tag));
+          if (!card.hidden) visible += 1;
+        }
+
+        count.textContent = `Showing ${visible} of ${cards.length} themes`;
+        emptyState.hidden = visible !== 0;
+        clearButton.disabled = selected.size === 0;
+        count.classList.toggle("invisible", selected.size === 0);
+        clearButton.classList.toggle("invisible", selected.size === 0);
+      }
+
+      document.getElementById("themes").addEventListener("click", (event) => {
+        const button = event.target.closest(".tag-button");
+        if (!button) return;
+        const tag = button.dataset.tag;
+        if (selected.has(tag)) selected.delete(tag);
+        else selected.add(tag);
+        updateThemes();
+      });
+
+      clearButton.addEventListener("click", () => {
+        selected.clear();
+        updateThemes();
+      });
+
+      updateThemes();
+      filters.hidden = false;
+
+      function updateFilterHeight() {
+        document.documentElement.style.setProperty("--filter-height", `${filters.offsetHeight}px`);
+      }
+
+      updateFilterHeight();
+      new ResizeObserver(updateFilterHeight).observe(filters);
+
+      function updateStickyHeader() {
+        filters.classList.toggle("is-stuck", filters.getBoundingClientRect().top <= 0);
+      }
+
+      window.addEventListener("scroll", updateStickyHeader, { passive: true });
+      window.addEventListener("resize", updateStickyHeader);
+      updateStickyHeader();
+    </script>
   </body>
 
 </html>
