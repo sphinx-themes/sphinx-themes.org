@@ -164,7 +164,12 @@
       "pypi": "hachibee-sphinx-theme"
     },
     {
-      "config": "sphinx_immaterial",
+      "config": {
+        "_extensions": [
+          "sphinx_immaterial"
+        ],
+        "html_theme": "sphinx_immaterial"
+      },
       "display": "Immaterial",
       "documentation": "https://jbms.github.io/sphinx-immaterial/",
       "pypi": "sphinx-immaterial"
