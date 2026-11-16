@@ -1,0 +1,927 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>all_in_one_restructuredtext - Immaterial Sample Site</title>
+      
+    
+    
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.52c4e8fabf605a32c.min.css?v=d165d98b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Immaterial Sample Site" class="md-header__button md-logo" aria-label="Immaterial Sample Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Immaterial Sample Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              all_in_one_restructuredtext
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Immaterial Sample Site" class="md-nav__button md-logo" aria-label="Immaterial Sample Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+    </a>
+    Immaterial Sample Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kitchen-sink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Kitchen Sink</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    <span>This is a caption</span>
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            <span>This is a caption</span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder-one/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Placeholder Page One</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder-two/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Placeholder Page Two</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../really-long-title/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>This is just a page with a really long title for checking how the theme handles these situations</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../long-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Long Page</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.sphinx-doc.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>External Link</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    <span>Additional &#34;hidden&#34; Pages</span>
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            <span>Additional &#34;hidden&#34; Pages</span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder-three/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Placeholder Page Three</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder-four/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Placeholder Page Four</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://sphinx-themes.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Sphinx Theme Gallery</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1>Source code for all_in_one_restructuredtext</h1><div class="highlight"><pre>
+<span></span><code><span class="sd">"""</span>
+<span class="sd">This is the module-level docstring of the module :py:mod:`all_in_one_restructuredtext`.</span>
+
+<span class="sd">The module's docstrings use reStructuredText markup.</span>
+<span class="sd">"""</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">abc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">final</span>
+
+<span class="n">ParameterT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ParameterT"</span><span class="p">)</span>  <span class="c1">#: Docstring of type :py:type:`ParameterT`</span>
+
+<span class="n">ReturnT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ReturnT"</span><span class="p">)</span>
+<span class="sd">"""Docstring of type :any:`ReturnT`."""</span>
+
+<span class="c1"># type MyType = list[</span>
+<span class="c1">#     float</span>
+<span class="c1"># ]  #: The docstring of :py:type:`MyType` using Python 3.12 syntax.</span>
+
+<span class="n">MyType</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span>
+    <span class="nb">float</span>
+<span class="p">]</span>  <span class="c1">#: The docstring of :py:type:`MyType` using an explicit ``TypeAlias``.</span>
+
+<span class="n">my_module_level_variable</span><span class="p">:</span> <span class="n">MyType</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">1.1</span><span class="p">,</span>
+<span class="p">]</span>  <span class="c1">#: The docstring of :py:data:`my_module_level_variable`.</span>
+
+
+<div class="viewcode-block" id="my_function_pure_sphinx">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_pure_sphinx">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_function_pure_sphinx</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">'''</span>
+<span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
+
+<span class="sd">        In the source code,</span>
+<span class="sd">        the docstring for this function is a "raw" docstring using ``r"""..."""``,</span>
+<span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
+<span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
+
+<span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+
+<span class="sd">    :param \*args: Variable length argument list.</span>
+<span class="sd">    :param \*\*kwargs: Arbitrary keyword arguments.</span>
+
+<span class="sd">    :return: None</span>
+
+<span class="sd">    Text at end of docstring.</span>
+<span class="sd">    '''</span></div>
+
+
+
+<div class="viewcode-block" id="my_function_google_style">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_google_style">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_function_google_style</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">'''</span>
+<span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        If you do *not* use ``sphinx.ext.napoleon``:</span>
+
+<span class="sd">        In the source code,</span>
+<span class="sd">        the docstring for this function is a "raw" docstring using ``r"""..."""``,</span>
+<span class="sd">        and ``*args`` and ``**kwargs`` below are escaped with a backslash</span>
+<span class="sd">        (``\*args`` and ``\*\*kwargs``).</span>
+
+<span class="sd">        See also https://github.com/sphinx-doc/sphinx/issues/9893.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        \*args: Variable length argument list.</span>
+<span class="sd">        \*\*kwargs: Arbitrary keyword arguments.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Text at end of docstring.</span>
+<span class="sd">    '''</span></div>
+
+
+
+<div class="viewcode-block" id="my_function_needs_napoleon">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function_needs_napoleon">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_function_needs_napoleon</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    This function accepts any number of arguments and keyword arguments.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        If you use ``sphinx.ext.napoleon`` (and only then),</span>
+<span class="sd">        there is no need to escape ``*args`` and ``**kwargs`` below.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *args: Variable length argument list.</span>
+<span class="sd">        **kwargs: Arbitrary keyword arguments.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Text at end of docstring.</span>
+<span class="sd">    """</span></div>
+
+
+
+<div class="viewcode-block" id="my_function2">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_function2">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_function2</span><span class="p">(</span><span class="n">foo</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bar</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    A simple function.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        foo: A regular argument.</span>
+<span class="sd">        bar: Another regular argument.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    .. deprecated:: x.y</span>
+<span class="sd">        (This is an example of a deprecation admonition.)</span>
+<span class="sd">        Use :py:func:`my_function_pure_sphinx` instead.</span>
+
+<span class="sd">    Text at end of docstring.</span>
+<span class="sd">    """</span></div>
+
+
+
+<div class="viewcode-block" id="my_generator">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_generator">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_generator</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""A generator.</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        None</span>
+<span class="sd">    """</span>
+    <span class="k">yield</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="MyException">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyException">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Custom exception class."""</span></div>
+
+
+
+<div class="viewcode-block" id="AllInOne">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AllInOne</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""This is a class that demonstrates various Python features.</span>
+
+<span class="sd">    It uses Google-style docstrings</span>
+<span class="sd">    (https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html).</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        _my_property: A private property of the class.</span>
+<span class="sd">    """</span>
+
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Initialize the :py:class:`AllInOne` class."""</span>
+
+<div class="viewcode-block" id="AllInOne.my_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_method</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">"default_value"</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_param</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""A normal method.</span>
+
+<span class="sd">        We are using both positional-only and keyword-only syntax.</span>
+
+<span class="sd">        Here is some code in a literal block::</span>
+
+<span class="sd">            foo = True  # assign ``True``</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Do not include the *self* parameter in the ``Args`` section.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            my_param: Documenting *my_param*.</span>
+<span class="sd">                This is another sentence on the next docstring line,</span>
+<span class="sd">                still belonging to *my_param*.</span>
+<span class="sd">            keyword_only_param: Documenting *keyword_only_param*.</span>
+<span class="sd">                This is another sentence on the next docstring line,</span>
+<span class="sd">                still belonging to *keyword_only_param*.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The value of the local variable ``my_var``.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            :py:exc:`MyException`: if something went wrong.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; retval = my_method()  # doctest format</span>
+<span class="sd">            "return_value"</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">"return_value"</span>
+        <span class="k">return</span> <span class="n">my_var</span></div>
+
+
+<div class="viewcode-block" id="AllInOne.my_async_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_async_method">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">my_async_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">"default_value"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""An :py:keyword:`async` method.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">"return_value"</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_var</span></div>
+
+
+<div class="viewcode-block" id="AllInOne.my_abstractmethod">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_abstractmethod">[docs]</a>
+    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_abstractmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">"default_value"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""An abstract method.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">"return_value"</span>
+        <span class="k">return</span> <span class="n">my_var</span></div>
+
+
+<div class="viewcode-block" id="AllInOne.my_classmethod">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_classmethod">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">"default_value"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""A :any:`classmethod`.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">"return_value"</span>
+        <span class="k">return</span> <span class="n">my_var</span></div>
+
+
+<div class="viewcode-block" id="AllInOne.my_staticmethod">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_staticmethod">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_staticmethod</span><span class="p">(</span><span class="n">my_param</span><span class="p">:</span> <span class="n">ParameterT</span> <span class="o">=</span> <span class="s2">"default_value"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ReturnT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""A :any:`staticmethod`.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="n">my_var</span><span class="p">:</span> <span class="n">ReturnT</span> <span class="o">=</span> <span class="s2">"return_value"</span>
+        <span class="k">return</span> <span class="n">my_var</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Getter for the private property :py:attr:`_my_property`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The value of :py:attr:`_my_property`.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span>
+
+    <span class="nd">@my_property</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Setter for the private property :py:attr:`_my_property`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            value: The value to set :py:attr:`_my_property` to.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_my_property</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="AllInOne.my_decorator_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_decorator_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_method</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        A decorator method that wraps the provided method.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            method: The method to decorate.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The decorated method.</span>
+
+<span class="sd">        Text at end of docstring.</span>
+<span class="sd">        """</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">decorate_method</span><span class="p">():</span>
+<span class="w">            </span><span class="sd">"""The decorated method."""</span>
+            <span class="n">method</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">decorate_method</span></div>
+
+
+<div class="viewcode-block" id="AllInOne.my_decorated_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.AllInOne.my_decorated_method">[docs]</a>
+    <span class="nd">@my_decorator_method</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_method</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">"""A method that is decorated by :py:meth:`my_decorator_method`."""</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="MyFinalClass">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass">[docs]</a>
+<span class="nd">@final</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyFinalClass</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""A class that cannot be subclassed."""</span>
+
+<div class="viewcode-block" id="MyFinalClass.my_final_method">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.MyFinalClass.my_final_method">[docs]</a>
+    <span class="nd">@final</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_final_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""A method that cannot be overridden by subclasses."""</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="my_decorator_function">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_decorator_function">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_decorator_function</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    A decorator function that wraps the provided function.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        function: The function to decorate.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The decorated function.</span>
+
+<span class="sd">    Text at end of docstring.</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_function</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">"""The decorated function."""</span>
+        <span class="n">function</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">decorate_function</span></div>
+
+
+
+<div class="viewcode-block" id="my_decorated_function">
+<a class="viewcode-back" href="../../kitchen-sink/api/#all_in_one_restructuredtext.my_decorated_function">[docs]</a>
+<span class="nd">@my_decorator_function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_decorated_function</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    A function that is decorated by the :py:func:`my_decorator_function`.</span>
+
+<span class="sd">    This docstring is not shown, just the one of ``decorate_function()``.</span>
+<span class="sd">    """</span></div>
+
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2021, Pradyun Gedam.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    9.2.0.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    
+  </body>
+</html>
